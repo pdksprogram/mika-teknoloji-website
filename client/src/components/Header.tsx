@@ -25,11 +25,11 @@ export default function Header() {
   }, [location]);
 
   const navigationItems = [
-    { href: "/", label: "Ana Sayfa" },
+    { href: "/", label: "Ürünler" },
     { href: "/hakkimizda", label: "Hakkımızda" },
-    { href: "/cozumler", label: "Çözümler" },
-    { href: "/urunler", label: "Ürünler" },
-    { href: "/iletisim", label: "İletişim" }
+    { href: "/urunler", label: "Referanslar" },
+    { href: "/iletisim", label: "İletişim" },
+    { href: "/blog", label: "Blog" }
   ];
 
   const isActiveLink = (href: string) => {
@@ -41,29 +41,19 @@ export default function Header() {
 
   return (
     <>
-      {/* Top Bar */}
-      <div className="bg-slate-800 text-white py-2 text-sm">
+      {/* Promotional Banner */}
+      <div className="bg-primary text-white py-2 text-sm">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center">
-            <span className="hidden sm:block">1993'den beri güvenilir PDKS çözümleri</span>
-            <div className="flex items-center space-x-4">
-              <a 
-                href="tel:+902122219476" 
-                className="flex items-center space-x-1 hover:text-primary transition-colors"
-                data-testid="phone-link"
-              >
-                <Phone className="h-3 w-3" />
-                <span>+90 212 221 94 76</span>
-              </a>
-              <a 
-                href="mailto:info@ozgurzaman.com" 
-                className="flex items-center space-x-1 hover:text-primary transition-colors"
-                data-testid="email-link"
-              >
-                <Mail className="h-3 w-3" />
-                <span className="hidden sm:inline">info@ozgurzaman.com</span>
-              </a>
-            </div>
+          <div className="flex justify-center items-center">
+            <a 
+              href="https://wa.link/vblc5g" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="font-bold hover:text-white/90 transition-colors"
+              data-testid="promo-banner"
+            >
+              Bu haftaya özel iskontolarımızı öğrenin!
+            </a>
           </div>
         </div>
       </div>
@@ -110,14 +100,23 @@ export default function Header() {
               ))}
             </nav>
 
-            {/* CTA Button */}
-            <div className="hidden lg:block">
+            {/* Special Buttons */}
+            <div className="hidden lg:flex items-center space-x-3">
               <Button 
                 asChild 
-                className="bg-primary hover:bg-primary/90 text-white px-6"
-                data-testid="cta-button"
+                size="sm"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4"
+                data-testid="webpdks-button"
               >
-                <Link href="/iletisim">Teklif İste</Link>
+                <Link href="/web-pdks">WebPDKS</Link>
+              </Button>
+              <Button 
+                asChild 
+                size="sm"
+                className="bg-green-600 hover:bg-green-700 text-white px-4"
+                data-testid="qr-patrol-button"
+              >
+                <Link href="/qr-patrol">QR-Patrol</Link>
               </Button>
             </div>
 
@@ -156,13 +155,20 @@ export default function Header() {
                     {item.label}
                   </Link>
                 ))}
-                <div className="pt-4 border-t">
+                <div className="pt-4 border-t space-y-3">
                   <Button 
                     asChild 
-                    className="w-full bg-primary hover:bg-primary/90 text-white"
-                    data-testid="mobile-cta-button"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                    data-testid="mobile-webpdks-button"
                   >
-                    <Link href="/iletisim">Teklif İste</Link>
+                    <Link href="/web-pdks">WebPDKS</Link>
+                  </Button>
+                  <Button 
+                    asChild 
+                    className="w-full bg-green-600 hover:bg-green-700 text-white"
+                    data-testid="mobile-qr-patrol-button"
+                  >
+                    <Link href="/qr-patrol">QR-Patrol</Link>
                   </Button>
                 </div>
               </nav>
