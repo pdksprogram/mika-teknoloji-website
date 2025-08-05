@@ -7,6 +7,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isProductsMenuOpen, setIsProductsMenuOpen] = useState(false);
   const [location] = useLocation();
   const isMobile = useIsMobile();
 
@@ -25,12 +26,48 @@ export default function Header() {
   }, [location]);
 
   const navigationItems = [
-    { href: "/", label: "Ürünler" },
+    { href: "/", label: "Ürünler", hasDropdown: true },
     { href: "/hakkimizda", label: "Hakkımızda" },
     { href: "/urunler", label: "Referanslar" },
     { href: "/iletisim", label: "İletişim" },
     { href: "/blog", label: "Blog" }
   ];
+
+  const megaMenuData = {
+    "Çözümler": [
+      { name: "PDKS (Personel Devam Kontrol)", href: "/pdks" },
+      { name: "Access Geçiş Kontrol Sistemleri", href: "/access-control" },
+      { name: "Bekçi Tur Kontrol Sistemi", href: "/bekci-tur" },
+      { name: "QR Bekçi Sistemi", href: "/qr-bekci" },
+      { name: "Turnike Sistemleri", href: "/turnike" },
+      { name: "Otel Kapı Kilit Sistemleri", href: "/otel-kilit" },
+      { name: "Anahtar/Dolap Takip Sistemi", href: "/anahtar-takip" }
+    ],
+    "Donanımlar": [
+      { name: "Biyometrik Yüz Tanıma Sistemi", href: "/yuz-tanima" },
+      { name: "Parmak İzi Okuyucu", href: "/parmak-izi" },
+      { name: "Kartlı Geçiş Sistemi (RFID)", href: "/rfid" },
+      { name: "Şifreli Passcode Sistemleri", href: "/passcode" },
+      { name: "Bekçi Tur Kontrol Sistemi", href: "/bekci-kontrol" },
+      { name: "Turnike Sistemleri", href: "/turnike-donanim" },
+      { name: "Bariyer Sistemleri", href: "/bariyer" }
+    ],
+    "Yazılımlar": [
+      { name: "Web PDKS", href: "/web-pdks" },
+      { name: "Access Kontrol Programı", href: "/access-program" },
+      { name: "Startıp Puanlama Yazılımı", href: "/startup-puanlama" },
+      { name: "Ogar Puanlama Yazılımı", href: "/ogar-puanlama" },
+      { name: "Yemekahane Takip Sistemi", href: "/yemekhane" },
+      { name: "Turnike Takip Programı", href: "/turnike-program" },
+      { name: "Üye Takip Programı", href: "/uye-takip" }
+    ],
+    "Tüm Programlar": [
+      { name: "HRCapakus Tanıma Sistemi", href: "/hrcapakus" },
+      { name: "X-Ray Cihazları", href: "/xray" },
+      { name: "Öğretmen Takip Sistemi", href: "/ogretmen-takip" },
+      { name: "Turnike Takip Sistemi", href: "/turnike-takip" }
+    ]
+  };
 
   const isActiveLink = (href: string) => {
     if (href === "/") {
@@ -82,21 +119,60 @@ export default function Header() {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
               {navigationItems.map((item) => (
-                <Link
+                <div
                   key={item.href}
-                  href={item.href}
-                  className={`relative font-medium transition-colors duration-200 hover:text-primary group ${
-                    isActiveLink(item.href) ? "text-primary" : "text-slate-700"
-                  }`}
-                  data-testid={`nav-link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="relative"
+                  onMouseEnter={() => item.hasDropdown && setIsProductsMenuOpen(true)}
+                  onMouseLeave={() => item.hasDropdown && setIsProductsMenuOpen(false)}
                 >
-                  {item.label}
-                  <span 
-                    className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-200 ${
-                      isActiveLink(item.href) ? "w-full" : "w-0 group-hover:w-full"
+                  <Link
+                    href={item.href}
+                    className={`relative font-medium transition-colors duration-200 hover:text-primary group ${
+                      isActiveLink(item.href) ? "text-primary" : "text-slate-700"
                     }`}
-                  />
-                </Link>
+                    data-testid={`nav-link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                  >
+                    {item.label}
+                    <span 
+                      className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-200 ${
+                        isActiveLink(item.href) ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
+                    />
+                  </Link>
+                  
+                  {/* Mega Menu Dropdown */}
+                  {item.hasDropdown && isProductsMenuOpen && (
+                    <div className="absolute top-full left-0 w-screen max-w-5xl bg-white shadow-2xl border-t-4 border-primary z-50 transform -translate-x-1/4">
+                      <div className="grid grid-cols-4 gap-6 p-8">
+                        {Object.entries(megaMenuData).map(([category, items]) => (
+                          <div key={category} className="space-y-4">
+                            <h3 className="font-bold text-gray-900 text-lg border-b-2 border-primary pb-2">
+                              {category}
+                            </h3>
+                            <ul className="space-y-2">
+                              {items.map((product) => (
+                                <li key={product.href}>
+                                  <Link
+                                    href={product.href}
+                                    className="text-gray-600 hover:text-primary transition-colors text-sm block py-1"
+                                    data-testid={`mega-menu-${product.name.toLowerCase().replace(/\s+/g, '-')}`}
+                                  >
+                                    {product.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="bg-gray-50 px-8 py-4 border-t">
+                        <p className="text-sm text-gray-600">
+                          Popüler Ürünler: Kartlı Kapı PDKS, Personel Puanlama Programı, Kapı Kilit Sistemleri, Şifreli Kapı Kilidi, Bell Tipi Turnike, Geçiş Kontrol Paneli, Big Turnike, İnce Geçiş Turnike, Mobımre Turnike, Elektronik Kilit Muhsasırılık, polis programı
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </div>
               ))}
             </nav>
 

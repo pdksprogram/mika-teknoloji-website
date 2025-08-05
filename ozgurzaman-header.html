@@ -108,6 +108,10 @@
             gap: 30px;
         }
 
+        .nav-item {
+            position: relative;
+        }
+
         .nav-link {
             text-decoration: none;
             color: #2c3e50;
@@ -115,6 +119,7 @@
             padding: 10px 0;
             transition: color 0.3s ease;
             position: relative;
+            display: block;
         }
 
         .nav-link:hover,
@@ -136,6 +141,80 @@
         .nav-link:hover::after,
         .nav-link.active::after {
             width: 100%;
+        }
+
+        /* Mega Menu */
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 1000px;
+            background: white;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-top: 4px solid #e74c3c;
+            z-index: 1000;
+            transform: translateX(-25%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .mega-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mega-menu-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            padding: 40px;
+        }
+
+        .mega-menu-column h3 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e74c3c;
+        }
+
+        .mega-menu-column ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mega-menu-column li {
+            margin-bottom: 12px;
+        }
+
+        .mega-menu-column a {
+            color: #7f8c8d;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 4px 0;
+        }
+
+        .mega-menu-column a:hover {
+            color: #e74c3c;
+            padding-left: 5px;
+        }
+
+        .mega-menu-footer {
+            background: #f8f9fa;
+            padding: 20px 40px;
+            border-top: 1px solid #eee;
+        }
+
+        .mega-menu-footer p {
+            margin: 0;
+            font-size: 13px;
+            color: #7f8c8d;
+            line-height: 1.5;
         }
 
         /* Special Buttons */
@@ -341,7 +420,62 @@
                 <!-- Desktop Navigation -->
                 <nav>
                     <ul class="nav-menu">
-                        <li><a href="/" class="nav-link active">Ürünler</a></li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link active">Ürünler</a>
+                            <!-- Mega Menu -->
+                            <div class="mega-menu" id="megaMenu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h3>Çözümler</h3>
+                                        <ul>
+                                            <li><a href="/pdks">PDKS (Personel Devam Kontrol)</a></li>
+                                            <li><a href="/access-control">Access Geçiş Kontrol Sistemleri</a></li>
+                                            <li><a href="/bekci-tur">Bekçi Tur Kontrol Sistemi</a></li>
+                                            <li><a href="/qr-bekci">QR Bekçi Sistemi</a></li>
+                                            <li><a href="/turnike">Turnike Sistemleri</a></li>
+                                            <li><a href="/otel-kilit">Otel Kapı Kilit Sistemleri</a></li>
+                                            <li><a href="/anahtar-takip">Anahtar/Dolap Takip Sistemi</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-column">
+                                        <h3>Donanımlar</h3>
+                                        <ul>
+                                            <li><a href="/yuz-tanima">Biyometrik Yüz Tanıma Sistemi</a></li>
+                                            <li><a href="/parmak-izi">Parmak İzi Okuyucu</a></li>
+                                            <li><a href="/rfid">Kartlı Geçiş Sistemi (RFID)</a></li>
+                                            <li><a href="/passcode">Şifreli Passcode Sistemleri</a></li>
+                                            <li><a href="/bekci-kontrol">Bekçi Tur Kontrol Sistemi</a></li>
+                                            <li><a href="/turnike-donanim">Turnike Sistemleri</a></li>
+                                            <li><a href="/bariyer">Bariyer Sistemleri</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-column">
+                                        <h3>Yazılımlar</h3>
+                                        <ul>
+                                            <li><a href="/web-pdks">Web PDKS</a></li>
+                                            <li><a href="/access-program">Access Kontrol Programı</a></li>
+                                            <li><a href="/startup-puanlama">Startıp Puanlama Yazılımı</a></li>
+                                            <li><a href="/ogar-puanlama">Ogar Puanlama Yazılımı</a></li>
+                                            <li><a href="/yemekhane">Yemekahane Takip Sistemi</a></li>
+                                            <li><a href="/turnike-program">Turnike Takip Programı</a></li>
+                                            <li><a href="/uye-takip">Üye Takip Programı</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-column">
+                                        <h3>Tüm Programlar</h3>
+                                        <ul>
+                                            <li><a href="/hrcapakus">HRCapakus Tanıma Sistemi</a></li>
+                                            <li><a href="/xray">X-Ray Cihazları</a></li>
+                                            <li><a href="/ogretmen-takip">Öğretmen Takip Sistemi</a></li>
+                                            <li><a href="/turnike-takip">Turnike Takip Sistemi</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="mega-menu-footer">
+                                    <p>Popüler Ürünler: Kartlı Kapı PDKS, Personel Puanlama Programı, Kapı Kilit Sistemleri, Şifreli Kapı Kilidi, Bell Tipi Turnike, Geçiş Kontrol Paneli, Big Turnike, İnce Geçiş Turnike, Mobımre Turnike, Elektronik Kilit Muhsasırılık, polis programı</p>
+                                </div>
+                            </div>
+                        </li>
                         <li><a href="/hakkimizda" class="nav-link">Hakkımızda</a></li>
                         <li><a href="/referanslar" class="nav-link">Referanslar</a></li>
                         <li><a href="/iletisim" class="nav-link">İletişim</a></li>
@@ -432,6 +566,20 @@
                 
                 lastScrollY = currentScrollY;
             });
+
+            // Mega Menu functionality
+            const megaMenu = document.getElementById('megaMenu');
+            const productsNavItem = document.querySelector('.nav-item');
+            
+            if (productsNavItem && megaMenu) {
+                productsNavItem.addEventListener('mouseenter', () => {
+                    megaMenu.classList.add('active');
+                });
+                
+                productsNavItem.addEventListener('mouseleave', () => {
+                    megaMenu.classList.remove('active');
+                });
+            }
 
             // Active link highlighting based on current page
             function setActiveLink() {
