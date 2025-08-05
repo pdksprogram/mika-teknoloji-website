@@ -89,7 +89,7 @@ export default function Header() {
               className="font-bold hover:text-white/90 transition-colors"
               data-testid="promo-banner"
             >
-              Bu haftaya özel iskontolarımızı öğrenin!
+Mika Teknoloji ile işletmenizi dijitalleştirin!
             </a>
           </div>
         </div>
@@ -107,10 +107,10 @@ export default function Header() {
             <Link href="/" className="flex items-center space-x-3" data-testid="logo-link">
               <div className="flex items-center">
                 <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">ÖZ</span>
+                  <span className="text-white font-bold text-lg">MT</span>
                 </div>
                 <div className="ml-3">
-                  <div className="font-bold text-xl text-slate-800">Özgür Zaman</div>
+                  <div className="font-bold text-xl text-slate-800">Mika Teknoloji</div>
                   <div className="text-xs text-slate-500 hidden sm:block">Kontrol Sistemleri</div>
                 </div>
               </div>
