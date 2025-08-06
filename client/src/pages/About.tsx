@@ -47,15 +47,15 @@ export default function About() {
             </CardHeader>
             <CardContent className="prose max-w-none">
               <p className="text-slate-600 mb-6">
-                Özgür Zaman Kontrol Sistemleri 1993 yılında İstanbul'da kuruldu. İstanbul Avrupa yakasındaki 
-                merkez ofisi ile müşterilerine hizmet sunmaktadır.
+                Mika Teknoloji Kontrol Sistemleri, modern teknoloji çözümleri sunan yenilikçi bir şirkettir. İstanbul 
+                merkezli ofisimizden müşterilerimize en güncel dijital çözümler sunmaktayız.
               </p>
               <p className="text-slate-600 mb-6">
-                100,000'in üzerinde müşteri portföyü ile Türkiye'nin kurumsal işgücü ve erişim kontrol yönetimine 
-                yönelik çözümler sunan en büyük firmasıdır.
+                Binlerce müşteri portföyü ile Türkiye'nin kurumsal işgücü ve erişim kontrol yönetimine 
+                yönelik çözümler sunan güvenilir teknoloji ortağınızdır.
               </p>
               <p className="text-slate-600">
-                Özgür Zaman, geliştirdiği yazılım ve donanım çözümleri ile işletmelerin işgücünü daha verimli 
+                Mika Teknoloji, geliştirdiği yazılım ve donanım çözümleri ile işletmelerin işgücünü daha verimli 
                 kullanmasına, çalışan maliyetlerinin kontrol altında tutulmasına, zamandan tasarruf edilmesine 
                 ve operasyonel verimliliğin artmasına yardımcı oluyor.
               </p>

@@ -1,12 +1,22 @@
-# Özgür Zaman Kontrol Sistemleri Website
+# Mika Teknoloji Kontrol Sistemleri Website
 
 ## Overview
 
-This is a corporate website for Özgür Zaman Kontrol Sistemleri, a Turkish company specializing in Personnel Attendance Control Systems (PDKS) and security solutions since 1993. The website serves as a marketing platform showcasing their products and services including WebPDKS, QR-Patrol, access control systems, face recognition, and RFID solutions.
+This is a corporate website for Mika Teknoloji Kontrol Sistemleri, a modern Turkish technology company specializing in Personnel Attendance Control Systems (PDKS) and security solutions. The website serves as a marketing platform showcasing their products and services including WebPDKS, QR-Patrol, access control systems, face recognition, and RFID solutions.
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+
+## Recent Changes (Latest)
+
+- **Company Rebranding (January 2025)**: Complete rebrand from "Özgür Zaman" to "Mika Teknoloji"
+  - Updated all company names, logos, and branding elements
+  - Changed color scheme to modern pink/coral theme (hsl(355, 84%, 65%))
+  - Updated email addresses from @ozgurzaman.com to @mikateknoloji.com
+  - Renamed files from ozgurzaman-* to mikateknoloji-*
+  - Updated promotional messaging and company descriptions
+  - Logo initials changed from "ÖZ" to "MT"
 
 ## System Architecture
 

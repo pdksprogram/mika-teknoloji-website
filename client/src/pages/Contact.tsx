@@ -27,8 +27,8 @@ export default function Contact() {
       icon: Mail,
       title: "E-posta",
       details: [
-        "info@ozgurzaman.com",
-        "satis@ozgurzaman.com"
+        "info@mikateknoloji.com",
+        "satis@mikateknoloji.com"
       ]
     },
     {

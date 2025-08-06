@@ -29,8 +29,8 @@ export default function Home() {
     "100,000'in üzerinde müşteri portföyü",
     "%100 Web tabanlı çözümler",
     "Her yerden, her cihazdan erişim",
-    "1993'den beri güvenilir hizmet",
-    "Türkiye'nin en büyük PDKS firması",
+    "Modern teknoloji çözümleri",
+    "Güvenilir PDKS çözümleri",
     "Uzman teknik destek"
   ];
 
@@ -42,18 +42,18 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-6">
               <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-                1993'ten bugüne...
+                Modern çözümler...
               </span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6" data-testid="hero-title">
-              Özgür Zaman <br />
+              Mika Teknoloji <br />
               <span className="text-primary">Kontrol Sistemleri</span>
             </h1>
             <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto" data-testid="hero-description">
               %100 Web tabanlı, her yerden, her cihazdan erişim imkanı sunan güncel teknolojiler sunuyoruz.
             </p>
             <p className="text-lg text-slate-500 mb-10" data-testid="hero-subtitle">
-              100,000'in üzerinde müşteri portföyü ile Türkiye'nin kurumsal işgücü ve erişim kontrol yönetimine yönelik çözümler sunan en büyük firmasıdır.
+              Modern işletmeler için dijital çözümler sunan güvenilir teknoloji ortağınız.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
