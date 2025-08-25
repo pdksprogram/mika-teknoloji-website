@@ -6,7 +6,7 @@ const customers = [
   {
     id: 1,
     name: "Lufian",
-    logo: "@assets/image_1756136436559.png",
+    logo: "@assets/image_1756136474129.png",
     employees: 400,
     locations: 80,
     sector: "Tekstil & Moda",
