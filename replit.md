@@ -10,6 +10,14 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes (Latest)
 
+- **Page Loading Animations (January 2025)**: Added comprehensive loading and motion animations
+  - Created LoadingScreen component with progress bar and company logo animation
+  - Implemented smooth page transitions using Framer Motion with fade-in effects
+  - Added scroll-triggered animations for all page sections (Hero, Features, CTA)
+  - Enhanced card hover effects with lift animations and icon scaling
+  - Added button hover effects with scale transforms
+  - Implemented staggered animation sequences for better visual flow
+
 - **Company Rebranding (January 2025)**: Complete rebrand from "Özgür Zaman" to "Mika Teknoloji"
   - Updated all company names, logos, and branding elements
   - Changed color scheme to modern pink/coral theme (hsl(355, 84%, 65%))
