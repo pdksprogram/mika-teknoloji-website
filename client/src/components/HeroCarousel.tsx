@@ -5,6 +5,12 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, ChevronLeft, ChevronRight, CheckCircle, Smartphone, Shield, Eye, Scan } from 'lucide-react';
 import { Link } from 'wouter';
 
+// Import generated images
+import qrTrackingImage from '@assets/generated_images/QR_personnel_tracking_system_26b366a7.png';
+import turnstileImage from '@assets/generated_images/Modern_turnstile_security_system_b933269f.png';
+import securityPatrolImage from '@assets/generated_images/Security_guard_patrol_tracking_5c5b9b52.png';
+import xrayImage from '@assets/generated_images/X-ray_security_scanner_system_9ebbd7d1.png';
+
 interface CarouselSlide {
   id: number;
   title: string;
@@ -12,6 +18,7 @@ interface CarouselSlide {
   description: string;
   features: string[];
   icon: any;
+  image: string;
   href: string;
   bgGradient: string;
   overlayColor: string;
@@ -30,6 +37,7 @@ const slides: CarouselSlide[] = [
       "%100 MÜŞTERİ MEMNUNİYETİ"
     ],
     icon: Smartphone,
+    image: qrTrackingImage,
     href: "/cozumler/qr-personel",
     bgGradient: "from-blue-600 via-purple-600 to-cyan-500",
     overlayColor: "bg-blue-900/40"
@@ -46,6 +54,7 @@ const slides: CarouselSlide[] = [
       "7/24 TEKNİK DESTEK HİZMETİ"
     ],
     icon: Shield,
+    image: turnstileImage,
     href: "/cozumler/turnike",
     bgGradient: "from-emerald-600 via-teal-600 to-green-500",
     overlayColor: "bg-emerald-900/40"
@@ -62,6 +71,7 @@ const slides: CarouselSlide[] = [
       "iOS & ANDROID UYUMLU"
     ],
     icon: Eye,
+    image: securityPatrolImage,
     href: "/cozumler/bekci-kontrol",
     bgGradient: "from-purple-600 via-pink-600 to-violet-500",
     overlayColor: "bg-purple-900/40"
@@ -78,6 +88,7 @@ const slides: CarouselSlide[] = [
       "ULUSLARARASI STANDARTLAR"
     ],
     icon: Scan,
+    image: xrayImage,
     href: "/cozumler/xray",
     bgGradient: "from-orange-600 via-red-600 to-pink-500",
     overlayColor: "bg-red-900/40"
@@ -232,16 +243,27 @@ export default function HeroCarousel() {
                       }}
                       transition={{ duration: 0.8 }}
                     >
-                      {/* Large Icon */}
                       <div className="relative">
-                        <div className="w-64 h-64 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-lg border border-white/20 shadow-2xl">
-                          <slide.icon className="w-32 h-32 text-white" />
+                        {/* Technology Image */}
+                        <div className="relative w-96 h-64 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
+                          <img 
+                            src={slide.image} 
+                            alt={slide.title}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                          
+                          {/* Icon Overlay */}
+                          <div className="absolute bottom-4 right-4 w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+                            <slide.icon className="w-8 h-8 text-slate-700" />
+                          </div>
                         </div>
                         
                         {/* Floating Elements */}
-                        <div className="absolute -top-4 -right-4 w-16 h-16 bg-white/20 rounded-full animate-pulse"></div>
-                        <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-white/20 rounded-full animate-pulse delay-300"></div>
-                        <div className="absolute top-1/2 -right-8 w-8 h-8 bg-white/20 rounded-full animate-bounce delay-500"></div>
+                        <div className="absolute -top-4 -right-4 w-16 h-16 bg-white/20 rounded-full animate-pulse backdrop-blur-sm"></div>
+                        <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-white/20 rounded-full animate-pulse delay-300 backdrop-blur-sm"></div>
+                        <div className="absolute top-1/2 -right-8 w-8 h-8 bg-white/20 rounded-full animate-bounce delay-500 backdrop-blur-sm"></div>
+                        <div className="absolute bottom-1/2 -left-8 w-10 h-10 bg-white/20 rounded-full animate-pulse delay-700 backdrop-blur-sm"></div>
                       </div>
                     </motion.div>
                   </div>
