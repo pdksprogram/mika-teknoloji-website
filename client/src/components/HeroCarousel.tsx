@@ -163,107 +163,95 @@ export default function HeroCarousel() {
                 <div className="absolute bottom-1/3 left-10 w-18 h-18 border border-white transform rotate-45"></div>
               </div>
 
-              {/* Content */}
+              {/* Full Background Image */}
+              <div className="absolute inset-0 z-10">
+                <img 
+                  src={slide.image} 
+                  alt={slide.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/50"></div>
+              </div>
+
+              {/* Content Overlay */}
               <div className="relative z-20 min-h-screen flex items-center">
                 <div className="container mx-auto px-4">
-                  <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    {/* Left Content */}
+                  <div className="max-w-4xl">
+                    {/* Main Title Banner - properzaman style */}
                     <motion.div 
-                      className="text-white space-y-6"
-                      initial={{ opacity: 0, x: -50 }}
+                      className="mb-8"
+                      initial={{ opacity: 0, y: -50 }}
                       animate={{ 
-                        opacity: selectedIndex === index ? 1 : 0.8, 
-                        x: selectedIndex === index ? 0 : -20 
+                        opacity: selectedIndex === index ? 1 : 0, 
+                        y: selectedIndex === index ? 0 : -30 
                       }}
-                      transition={{ duration: 0.8, ease: "easeOut" }}
+                      transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                      {/* Red Banner like properzaman */}
-                      <div className="inline-block bg-primary px-6 py-3 transform -skew-x-12">
-                        <span className="block transform skew-x-12 font-bold text-lg tracking-wide">
+                      <div className="inline-block bg-primary px-8 py-4 transform -skew-x-12 mb-6">
+                        <span className="block transform skew-x-12 font-bold text-xl md:text-2xl tracking-wide text-white">
                           {slide.title}
                         </span>
                       </div>
-
-                      <h2 className="text-2xl md:text-3xl font-semibold leading-tight">
-                        {slide.subtitle}
-                      </h2>
-
-                      <p className="text-lg text-white/90 leading-relaxed">
-                        {slide.description}
-                      </p>
-
-                      {/* Features List */}
-                      <div className="space-y-3">
-                        {slide.features.map((feature, idx) => (
-                          <motion.div 
-                            key={idx}
-                            className="flex items-center space-x-3"
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ 
-                              opacity: selectedIndex === index ? 1 : 0.7, 
-                              x: selectedIndex === index ? 0 : -10 
-                            }}
-                            transition={{ duration: 0.6, delay: idx * 0.1 }}
-                          >
-                            <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
-                            <span className="text-white/90">{feature}</span>
-                          </motion.div>
-                        ))}
-                      </div>
-
-                      {/* CTA Button */}
-                      <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ 
-                          opacity: selectedIndex === index ? 1 : 0.8, 
-                          y: selectedIndex === index ? 0 : 10 
-                        }}
-                        transition={{ duration: 0.6, delay: 0.4 }}
-                      >
-                        <Button 
-                          asChild 
-                          size="lg" 
-                          className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full font-semibold transform hover:scale-105 transition-all duration-200 shadow-xl"
-                          data-testid="hero-detail-button"
-                        >
-                          <Link href={slide.href}>
-                            DETAYLI BİLGİ
-                          </Link>
-                        </Button>
-                      </motion.div>
                     </motion.div>
 
-                    {/* Right Content - Visual Elements */}
+                    {/* Features List - Slide from top one by one */}
+                    <div className="space-y-4 mb-8">
+                      {slide.features.map((feature, idx) => (
+                        <motion.div 
+                          key={idx}
+                          className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-lg px-6 py-4 border border-white/20"
+                          initial={{ opacity: 0, y: -30 }}
+                          animate={{ 
+                            opacity: selectedIndex === index ? 1 : 0, 
+                            y: selectedIndex === index ? 0 : -20 
+                          }}
+                          transition={{ 
+                            duration: 0.6, 
+                            delay: selectedIndex === index ? 0.4 + (idx * 0.15) : 0 
+                          }}
+                        >
+                          <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
+                          <span className="text-white text-lg font-medium">{feature}</span>
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    {/* CTA Button */}
+                    <motion.div
+                      initial={{ opacity: 0, y: -30 }}
+                      animate={{ 
+                        opacity: selectedIndex === index ? 1 : 0, 
+                        y: selectedIndex === index ? 0 : -20 
+                      }}
+                      transition={{ 
+                        duration: 0.6, 
+                        delay: selectedIndex === index ? 0.4 + (slide.features.length * 0.15) : 0 
+                      }}
+                    >
+                      <Button 
+                        asChild 
+                        size="lg" 
+                        className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-none font-bold text-lg tracking-wide transform hover:scale-105 transition-all duration-200 shadow-xl"
+                        data-testid="hero-detail-button"
+                      >
+                        <Link href={slide.href}>
+                          ÜCRETSİZ TEKLİF AL
+                        </Link>
+                      </Button>
+                    </motion.div>
+
+                    {/* Technology Badge */}
                     <motion.div 
-                      className="relative hidden lg:flex justify-center items-center"
+                      className="absolute bottom-8 right-8 hidden lg:block"
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ 
-                        opacity: selectedIndex === index ? 1 : 0.6, 
+                        opacity: selectedIndex === index ? 1 : 0, 
                         scale: selectedIndex === index ? 1 : 0.9 
                       }}
-                      transition={{ duration: 0.8 }}
+                      transition={{ duration: 0.8, delay: 0.6 }}
                     >
-                      <div className="relative">
-                        {/* Technology Image - Much Larger */}
-                        <div className="relative w-[500px] h-[350px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
-                          <img 
-                            src={slide.image} 
-                            alt={slide.title}
-                            className="w-full h-full object-cover"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                          
-                          {/* Icon Overlay */}
-                          <div className="absolute bottom-6 right-6 w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-                            <slide.icon className="w-10 h-10 text-slate-700" />
-                          </div>
-                        </div>
-                        
-                        {/* Floating Elements */}
-                        <div className="absolute -top-6 -right-6 w-20 h-20 bg-white/20 rounded-full animate-pulse backdrop-blur-sm"></div>
-                        <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-white/20 rounded-full animate-pulse delay-300 backdrop-blur-sm"></div>
-                        <div className="absolute top-1/2 -right-10 w-12 h-12 bg-white/20 rounded-full animate-bounce delay-500 backdrop-blur-sm"></div>
-                        <div className="absolute bottom-1/2 -left-10 w-14 h-14 bg-white/20 rounded-full animate-pulse delay-700 backdrop-blur-sm"></div>
+                      <div className="bg-white/90 rounded-full p-4 shadow-2xl">
+                        <slide.icon className="w-12 h-12 text-slate-700" />
                       </div>
                     </motion.div>
                   </div>
