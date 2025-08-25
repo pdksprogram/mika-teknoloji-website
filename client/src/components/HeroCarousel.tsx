@@ -244,8 +244,8 @@ export default function HeroCarousel() {
                       transition={{ duration: 0.8 }}
                     >
                       <div className="relative">
-                        {/* Technology Image */}
-                        <div className="relative w-96 h-64 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
+                        {/* Technology Image - Much Larger */}
+                        <div className="relative w-[500px] h-[350px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
                           <img 
                             src={slide.image} 
                             alt={slide.title}
@@ -254,16 +254,16 @@ export default function HeroCarousel() {
                           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                           
                           {/* Icon Overlay */}
-                          <div className="absolute bottom-4 right-4 w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-                            <slide.icon className="w-8 h-8 text-slate-700" />
+                          <div className="absolute bottom-6 right-6 w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+                            <slide.icon className="w-10 h-10 text-slate-700" />
                           </div>
                         </div>
                         
                         {/* Floating Elements */}
-                        <div className="absolute -top-4 -right-4 w-16 h-16 bg-white/20 rounded-full animate-pulse backdrop-blur-sm"></div>
-                        <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-white/20 rounded-full animate-pulse delay-300 backdrop-blur-sm"></div>
-                        <div className="absolute top-1/2 -right-8 w-8 h-8 bg-white/20 rounded-full animate-bounce delay-500 backdrop-blur-sm"></div>
-                        <div className="absolute bottom-1/2 -left-8 w-10 h-10 bg-white/20 rounded-full animate-pulse delay-700 backdrop-blur-sm"></div>
+                        <div className="absolute -top-6 -right-6 w-20 h-20 bg-white/20 rounded-full animate-pulse backdrop-blur-sm"></div>
+                        <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-white/20 rounded-full animate-pulse delay-300 backdrop-blur-sm"></div>
+                        <div className="absolute top-1/2 -right-10 w-12 h-12 bg-white/20 rounded-full animate-bounce delay-500 backdrop-blur-sm"></div>
+                        <div className="absolute bottom-1/2 -left-10 w-14 h-14 bg-white/20 rounded-full animate-pulse delay-700 backdrop-blur-sm"></div>
                       </div>
                     </motion.div>
                   </div>
