@@ -28,9 +28,9 @@ export default function Header() {
   const navigationItems = [
     { href: "/", label: "Ürünler", hasDropdown: true },
     { href: "/hakkimizda", label: "Hakkımızda" },
-    { href: "/urunler", label: "Referanslar" },
-    { href: "/iletisim", label: "İletişim" },
-    { href: "/blog", label: "Blog" }
+    { href: "/cozumler", label: "Çözümler" },
+    { href: "/referanslar", label: "Referanslar" },
+    { href: "/iletisim", label: "İletişim" }
   ];
 
   const megaMenuData = {
