@@ -18,14 +18,14 @@ const customers = [
   {
     id: 2,
     name: "Adore Mobilya",
-    logo: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop",
+    logo: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop&q=80",
     employees: 1200,
     locations: 65,
     sector: "Mobilya & Dekorasyon",
-    testimonial: "Fabrika ve showroom alanlarımızda güvenlik kontrolünü üst seviyede tutmak için Mika Teknoloji'nin X-Ray güvenlik sistemlerini tercih ettik. Teknik ekipleri 7/24 destek veriyor ve sistemin verimliliği çok yüksek. Personel giriş-çıkış kontrolünde de RFID çözümlerini kullanıyoruz.",
+    testimonial: "Mobilya sektöründe üretim ve satış ekiplerinin koordinasyonu kritik önemde. Mika Teknoloji'nin mobil PDKS sistemi sayesinde fabrika ve mağaza shift planlarımızı kolayca yönetiyoruz. Vardiya amiri planlamayı yapıyor, bölge müdürü onaylıyor ve 1200 çalışanımız mobil uygulama üzerinden kendi vardiyalarını görüp bildirim alıyor. 65 lokasyonumuzda bu dijital çözüm ile iş gücü verimliliğimiz %20 arttı.",
     person: "Selma Özkan",
     position: "Operasyon Müdürü",
-    solutions: ["X-Ray Güvenlik", "RFID Sistem", "Güvenlik Kontrol"]
+    solutions: ["Mobil PDKS", "Shift Yönetimi", "Vardiya Planlama"]
   },
   {
     id: 3,
