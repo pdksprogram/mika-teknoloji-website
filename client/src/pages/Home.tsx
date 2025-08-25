@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
+import HeroCarousel from "@/components/HeroCarousel";
 
 export default function Home() {
   const services = [
@@ -52,72 +53,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-50 to-slate-100 py-20 overflow-hidden">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="max-w-4xl mx-auto text-center"
-            variants={staggerContainer}
-            initial="initial"
-            animate="animate"
-          >
-            <motion.div 
-              className="mb-6"
-              variants={fadeInUp}
-            >
-              <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-                Modern çözümler...
-              </span>
-            </motion.div>
-            <motion.h1 
-              className="text-4xl md:text-6xl font-bold text-slate-800 mb-6" 
-              data-testid="hero-title"
-              variants={fadeInUp}
-            >
-              Mika Teknoloji <br />
-              <span className="text-primary">Kontrol Sistemleri</span>
-            </motion.h1>
-            <motion.p 
-              className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto" 
-              data-testid="hero-description"
-              variants={fadeInUp}
-            >
-              %100 Web tabanlı, her yerden, her cihazdan erişim imkanı sunan güncel teknolojiler sunuyoruz.
-            </motion.p>
-            <motion.p 
-              className="text-lg text-slate-500 mb-10" 
-              data-testid="hero-subtitle"
-              variants={fadeInUp}
-            >
-              Modern işletmeler için dijital çözümler sunan güvenilir teknoloji ortağınız.
-            </motion.p>
-            <motion.div 
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-              variants={fadeInUp}
-            >
-              <Button 
-                asChild 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-white px-8 transform hover:scale-105 transition-transform duration-200"
-                data-testid="hero-contact-button"
-              >
-                <Link href="/iletisim">
-                  İletişime Geçin! <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button 
-                asChild 
-                variant="outline" 
-                size="lg" 
-                className="px-8 transform hover:scale-105 transition-transform duration-200"
-                data-testid="hero-about-button"
-              >
-                <Link href="/hakkimizda">Hakkımızda</Link>
-              </Button>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+      {/* Hero Carousel Section */}
+      <HeroCarousel />
 
       {/* Features Section */}
       <section className="py-20 bg-white">
