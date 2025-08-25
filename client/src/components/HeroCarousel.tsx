@@ -163,23 +163,25 @@ export default function HeroCarousel() {
                 <div className="absolute bottom-1/3 left-10 w-18 h-18 border border-white transform rotate-45"></div>
               </div>
 
-              {/* Full Background Image */}
+              {/* Professional Background Image */}
               <div className="absolute inset-0 z-10">
                 <img 
                   src={slide.image} 
                   alt={slide.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black/50"></div>
+                {/* Professional overlay with gradient */}
+                <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
               </div>
 
               {/* Content Overlay */}
               <div className="relative z-20 min-h-screen flex items-center">
                 <div className="container mx-auto px-4">
                   <div className="max-w-4xl">
-                    {/* Main Title Banner - properzaman style */}
+                    {/* Corporate Header Section */}
                     <motion.div 
-                      className="mb-8"
+                      className="mb-12"
                       initial={{ opacity: 0, y: -50 }}
                       animate={{ 
                         opacity: selectedIndex === index ? 1 : 0, 
@@ -187,60 +189,100 @@ export default function HeroCarousel() {
                       }}
                       transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                      <div className="inline-block bg-primary px-8 py-4 transform -skew-x-12 mb-6">
-                        <span className="block transform skew-x-12 font-bold text-xl md:text-2xl tracking-wide text-white">
-                          {slide.title}
+                      {/* Corporate Badge */}
+                      <div className="inline-flex items-center bg-primary/90 backdrop-blur-sm px-6 py-2 rounded-full mb-6 border border-white/20">
+                        <div className="w-3 h-3 bg-white rounded-full mr-3 animate-pulse"></div>
+                        <span className="text-white font-medium text-sm tracking-wider uppercase">
+                          Mika Teknoloji Çözümleri
                         </span>
+                      </div>
+                      
+                      {/* Main Title */}
+                      <div className="bg-gradient-to-r from-primary via-primary to-primary/80 inline-block px-8 py-4 transform -skew-x-6 shadow-2xl">
+                        <h1 className="transform skew-x-6 font-bold text-2xl md:text-3xl tracking-wide text-white">
+                          {slide.title}
+                        </h1>
+                      </div>
+                      
+                      {/* Subtitle */}
+                      <div className="mt-4 bg-black/40 backdrop-blur-sm inline-block px-6 py-3 rounded-lg border-l-4 border-primary">
+                        <h2 className="text-white/95 text-xl font-semibold">
+                          {slide.subtitle}
+                        </h2>
                       </div>
                     </motion.div>
 
-                    {/* Features List - Slide from top one by one */}
-                    <div className="space-y-4 mb-8">
+                    {/* Professional Features Grid */}
+                    <div className="grid md:grid-cols-2 gap-4 mb-10">
                       {slide.features.map((feature, idx) => (
                         <motion.div 
                           key={idx}
-                          className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-lg px-6 py-4 border border-white/20"
+                          className="group bg-white/95 backdrop-blur-sm rounded-xl px-6 py-5 border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300"
                           initial={{ opacity: 0, y: -30 }}
                           animate={{ 
                             opacity: selectedIndex === index ? 1 : 0, 
                             y: selectedIndex === index ? 0 : -20 
                           }}
                           transition={{ 
-                            duration: 0.6, 
-                            delay: selectedIndex === index ? 0.4 + (idx * 0.15) : 0 
+                            duration: 0.7, 
+                            delay: selectedIndex === index ? 0.5 + (idx * 0.2) : 0,
+                            ease: "easeOut"
                           }}
+                          whileHover={{ scale: 1.02, y: -2 }}
                         >
-                          <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
-                          <span className="text-white text-lg font-medium">{feature}</span>
+                          <div className="flex items-center space-x-4">
+                            <div className="bg-gradient-to-br from-primary to-primary/80 rounded-full p-2 shadow-md group-hover:scale-110 transition-transform duration-300">
+                              <CheckCircle className="h-5 w-5 text-white" />
+                            </div>
+                            <span className="text-slate-800 font-semibold text-base leading-relaxed">
+                              {feature}
+                            </span>
+                          </div>
+                          
+                          {/* Corporate accent line */}
+                          <div className="mt-3 h-0.5 bg-gradient-to-r from-primary/60 to-transparent rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                         </motion.div>
                       ))}
                     </div>
 
-                    {/* CTA Button */}
+                    {/* Corporate CTA Section */}
                     <motion.div
+                      className="flex flex-col sm:flex-row gap-4 items-start"
                       initial={{ opacity: 0, y: -30 }}
                       animate={{ 
                         opacity: selectedIndex === index ? 1 : 0, 
                         y: selectedIndex === index ? 0 : -20 
                       }}
                       transition={{ 
-                        duration: 0.6, 
-                        delay: selectedIndex === index ? 0.4 + (slide.features.length * 0.15) : 0 
+                        duration: 0.8, 
+                        delay: selectedIndex === index ? 0.5 + (slide.features.length * 0.2) : 0 
                       }}
                     >
                       <Button 
                         asChild 
                         size="lg" 
-                        className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-none font-bold text-lg tracking-wide transform hover:scale-105 transition-all duration-200 shadow-xl"
+                        className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-10 py-4 rounded-lg font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border border-green-500/50"
                         data-testid="hero-detail-button"
                       >
-                        <Link href={slide.href}>
-                          ÜCRETSİZ TEKLİF AL
+                        <Link href={slide.href} className="flex items-center">
+                          <span>PROFESYONEL ÇÖZÜM AL</span>
+                          <ArrowRight className="ml-3 h-5 w-5" />
                         </Link>
                       </Button>
+                      
+                      <div className="text-white/80 text-sm mt-2">
+                        <div className="flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                          <span>7/24 Teknik Destek</span>
+                        </div>
+                        <div className="flex items-center space-x-2 mt-1">
+                          <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                          <span>Ücretsiz Kurulum & Eğitim</span>
+                        </div>
+                      </div>
                     </motion.div>
 
-                    {/* Technology Badge */}
+                    {/* Corporate Technology Badge */}
                     <motion.div 
                       className="absolute bottom-8 right-8 hidden lg:block"
                       initial={{ opacity: 0, scale: 0.8 }}
@@ -248,10 +290,13 @@ export default function HeroCarousel() {
                         opacity: selectedIndex === index ? 1 : 0, 
                         scale: selectedIndex === index ? 1 : 0.9 
                       }}
-                      transition={{ duration: 0.8, delay: 0.6 }}
+                      transition={{ duration: 0.8, delay: 0.8 }}
                     >
-                      <div className="bg-white/90 rounded-full p-4 shadow-2xl">
-                        <slide.icon className="w-12 h-12 text-slate-700" />
+                      <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border border-white/50">
+                        <slide.icon className="w-14 h-14 text-primary mb-2" />
+                        <div className="text-xs text-slate-600 font-medium text-center">
+                          Sertifikalı<br/>Çözüm
+                        </div>
                       </div>
                     </motion.div>
                   </div>
