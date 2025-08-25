@@ -6,9 +6,9 @@ const customers = [
   {
     id: 1,
     name: "Lufian",
-    logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop",
-    employees: 850,
-    locations: 45,
+    logo: "@assets/image_1756136054003.png",
+    employees: 400,
+    locations: 80,
     sector: "Tekstil & Moda",
     testimonial: "Mika Teknoloji'nin PDKS çözümleri sayesinde tüm mağazalarımızda personel takibini tek merkezden yönetebiliyoruz. QR kod sistemi ile çalışanlarımızın giriş-çıkış işlemleri çok kolaylaştı. Vardiya planlamasından izin takiplerine kadar tüm süreçlerimizi dijitalleştirdik.",
     person: "Ahmet Kaya",
