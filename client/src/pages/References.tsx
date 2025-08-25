@@ -126,209 +126,250 @@ const customers = [
 ];
 
 const References: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+
+  // Auto-slide effect
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % customers.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20">
-      {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-primary via-primary/95 to-purple-600 overflow-hidden">
-        {/* Animated Background Elements */}
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-slate-100">
+      {/* Premium Customer Carousel */}
+      <section className="relative h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden">
+        {/* Dynamic Background */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-24 h-24 bg-blue-300/20 rounded-full blur-lg animate-bounce delay-300"></div>
-          <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-indigo-300/15 rounded-full blur-2xl animate-pulse delay-700"></div>
-          <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-pink-300/20 rounded-full blur-xl animate-bounce delay-1000"></div>
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-blue-500/15 rounded-full blur-3xl animate-pulse delay-700"></div>
+          <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-300"></div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            className="text-center text-white max-w-5xl mx-auto"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-          >
-            {/* Premium Badge */}
-            <motion.div 
-              className="inline-flex items-center bg-white/15 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/20"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+
+        {/* Sliding Customer Background Images */}
+        <div className="absolute inset-0">
+          {customers.map((customer, index) => (
+            <motion.div
+              key={customer.id}
+              className="absolute inset-0"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: index === currentSlide ? 0.3 : 0 }}
+              transition={{ duration: 1.5 }}
             >
-              <Award className="w-5 h-5 mr-2 text-yellow-300" />
-              <span className="text-sm font-semibold tracking-wider uppercase">Güvenilir Teknoloji Ortağı</span>
+              <img 
+                src={customer.logo} 
+                alt={customer.name}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30"></div>
             </motion.div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-blue-100 to-indigo-200 bg-clip-text text-transparent leading-tight">
-              Müşteri Başarı
-              <br />
-              <span className="text-yellow-300">Hikayeleri</span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed max-w-3xl mx-auto">
-              Bizimle çalışmayı seven, beraber büyüdüğümüz işletmelerin{" "}
-              <span className="font-bold text-yellow-300">başarı hikâyelerini</span> sizlerle paylaşıyoruz.
-            </p>
-            
-            {/* Premium Stats */}
-            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              {[
-                { icon: Users, label: "Çalışan", value: "25,000+", color: "text-blue-300" },
-                { icon: MapPin, label: "Lokasyon", value: "800+", color: "text-green-300" },
-                { icon: Award, label: "Sektör", value: "10", color: "text-yellow-300" }
-              ].map((stat, index) => (
+          ))}
+        </div>
+
+        <div className="relative z-10 h-full flex items-center">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              {/* Content */}
+              <motion.div 
+                className="text-white space-y-8"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }}
+              >
+                <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
+                  <Award className="w-5 h-5 mr-3 text-yellow-400" />
+                  <span className="font-semibold text-sm uppercase tracking-wider">Güvenilen Teknoloji Ortağı</span>
+                </div>
+
+                <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+                  <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                    Sektör Liderleri
+                  </span>
+                  <br />
+                  <span className="text-primary">Bizi Tercih Ediyor</span>
+                </h1>
+
+                <p className="text-xl text-gray-300 leading-relaxed max-w-lg">
+                  Türkiye'nin önde gelen şirketleri, personel takip ve güvenlik çözümlerinde 
+                  <span className="text-yellow-400 font-semibold"> Mika Teknoloji'ye güveniyor.</span>
+                </p>
+
+                {/* Current Customer Info */}
                 <motion.div 
-                  key={index}
+                  key={currentSlide}
                   className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.5 + index * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -5 }}
+                  transition={{ duration: 0.8 }}
                 >
-                  <stat.icon className={`w-8 h-8 mx-auto mb-3 ${stat.color}`} />
-                  <div className="text-3xl font-bold mb-1">{stat.value}</div>
-                  <div className="text-sm font-medium text-white/80">{stat.label}</div>
+                  <h3 className="text-2xl font-bold mb-2">{customers[currentSlide].name}</h3>
+                  <p className="text-primary font-semibold mb-4">{customers[currentSlide].sector}</p>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-yellow-400">{customers[currentSlide].employees.toLocaleString()}</div>
+                      <div className="text-sm text-gray-400">Çalışan</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-blue-400">{customers[currentSlide].locations}</div>
+                      <div className="text-sm text-gray-400">Lokasyon</div>
+                    </div>
+                  </div>
                 </motion.div>
-              ))}
+
+                {/* Navigation Dots */}
+                <div className="flex space-x-3">
+                  {customers.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentSlide(index)}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        index === currentSlide ? 'bg-primary scale-125' : 'bg-white/30 hover:bg-white/50'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Floating Customer Logos */}
+              <div className="relative hidden lg:block">
+                <motion.div 
+                  className="grid grid-cols-3 gap-6"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 1, delay: 0.3 }}
+                >
+                  {customers.slice(0, 9).map((customer, index) => (
+                    <motion.div
+                      key={customer.id}
+                      className={`bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border border-white/50 cursor-pointer ${
+                        index === currentSlide ? 'ring-4 ring-primary scale-110' : 'hover:scale-105'
+                      }`}
+                      onClick={() => setCurrentSlide(index)}
+                      whileHover={{ y: -5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className="aspect-square bg-gray-100 rounded-xl overflow-hidden mb-3">
+                        <img 
+                          src={customer.logo} 
+                          alt={customer.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <h4 className="font-bold text-gray-900 text-sm text-center">{customer.name}</h4>
+                      <p className="text-gray-600 text-xs text-center mt-1">{customer.sector}</p>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Customer Stories */}
-      <section className="py-24 relative">
-        {/* Decorative Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/20 to-transparent"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
+      {/* Corporate Customer Grid */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
           {/* Section Header */}
           <motion.div 
-            className="text-center mb-20"
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="inline-flex items-center bg-primary/10 rounded-full px-6 py-2 mb-6">
+            <div className="inline-flex items-center bg-gray-100 rounded-full px-6 py-2 mb-6">
               <CheckCircle className="w-5 h-5 text-primary mr-2" />
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider">Başarı Hikayeleri</span>
+              <span className="text-gray-700 font-semibold text-sm uppercase tracking-wider">Müşteri Portföyümüz</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Güvenilen <span className="text-primary">Teknoloji Ortağı</span>
+              Başarı <span className="text-primary">Hikayeleri</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Sektör lideri firmalar neden Mika Teknoloji'yi tercih ediyor?
+              Her sektörden önde gelen firmalar, teknoloji ihtiyaçlarında Mika Teknoloji'yi tercih ediyor.
             </p>
           </motion.div>
 
-          <div className="space-y-32">
+          {/* Customer Cards Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {customers.map((customer, index) => (
               <motion.div
                 key={customer.id}
-                className="relative"
-                initial={{ opacity: 0, y: 80 }}
+                className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100"
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: index * 0.1, ease: "easeOut" }}
-                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -8 }}
               >
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
-                  {/* Image */}
-                  <motion.div 
-                    className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}
-                    whileHover={{ scale: 1.03 }}
-                    transition={{ duration: 0.4 }}
-                  >
-                    <div className="relative group">
-                      {/* Main Image */}
-                      <div className="aspect-[5/4] rounded-3xl overflow-hidden shadow-2xl">
-                        <img 
-                          src={customer.logo} 
-                          alt={customer.name}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                      </div>
-                      
-                      {/* Floating Company Badge */}
-                      <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-2xl border border-gray-100">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-1">{customer.name}</h3>
-                        <p className="text-primary font-semibold">{customer.sector}</p>
-                        <div className="flex items-center mt-3 space-x-4">
-                          <div className="flex text-yellow-400">
-                            {[...Array(5)].map((_, i) => (
-                              <Star key={i} className="w-4 h-4 fill-current" />
-                            ))}
-                          </div>
-                          <span className="text-xs text-gray-500 font-medium">5.0 Memnuniyet</span>
-                        </div>
-                      </div>
-                      
-                      {/* Decorative Elements */}
-                      <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-full blur-xl"></div>
-                      <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br from-purple-500/15 to-pink-500/15 rounded-full blur-2xl"></div>
+                {/* Image Header */}
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={customer.logo} 
+                    alt={customer.name}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  
+                  {/* Company Info Overlay */}
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-xl font-bold text-white mb-1">{customer.name}</h3>
+                    <p className="text-primary-light font-medium text-sm">{customer.sector}</p>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6 space-y-4">
+                  {/* Stats */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="text-center bg-gray-50 rounded-xl py-3">
+                      <div className="text-2xl font-bold text-primary">{customer.employees.toLocaleString()}</div>
+                      <div className="text-sm text-gray-600">Çalışan</div>
                     </div>
-                  </motion.div>
+                    <div className="text-center bg-gray-50 rounded-xl py-3">
+                      <div className="text-2xl font-bold text-blue-600">{customer.locations}</div>
+                      <div className="text-sm text-gray-600">Lokasyon</div>
+                    </div>
+                  </div>
 
-                  {/* Content */}
-                  <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                    <div className="space-y-8">
-                      {/* Premium Stats */}
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="bg-gradient-to-br from-primary/10 to-blue-50 rounded-2xl p-6 border border-primary/20">
-                          <div className="flex items-center justify-between mb-2">
-                            <Users className="w-6 h-6 text-primary" />
-                            <div className="text-right">
-                              <div className="text-2xl font-bold text-primary">{customer.employees.toLocaleString()}</div>
-                              <div className="text-sm text-gray-600 font-medium">Çalışan</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-200">
-                          <div className="flex items-center justify-between mb-2">
-                            <MapPin className="w-6 h-6 text-blue-600" />
-                            <div className="text-right">
-                              <div className="text-2xl font-bold text-blue-600">{customer.locations}</div>
-                              <div className="text-sm text-gray-600 font-medium">Lokasyon</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                  {/* Solutions */}
+                  <div className="space-y-2">
+                    <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Çözümler</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {customer.solutions.slice(0, 2).map((solution, idx) => (
+                        <span 
+                          key={idx}
+                          className="bg-primary/10 text-primary px-3 py-1 rounded-lg text-xs font-medium"
+                        >
+                          {solution}
+                        </span>
+                      ))}
+                      {customer.solutions.length > 2 && (
+                        <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-lg text-xs font-medium">
+                          +{customer.solutions.length - 2}
+                        </span>
+                      )}
+                    </div>
+                  </div>
 
-                      {/* Premium Solutions */}
-                      <div className="space-y-3">
-                        <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Kullanılan Çözümler</h4>
-                        <div className="flex flex-wrap gap-3">
-                          {customer.solutions.map((solution, idx) => (
-                            <span 
-                              key={idx}
-                              className="bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 px-4 py-2 rounded-xl text-sm font-semibold border border-green-200 shadow-sm"
-                            >
-                              {solution}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
+                  {/* Rating */}
+                  <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-current" />
+                      ))}
+                    </div>
+                    <span className="text-sm text-gray-500 font-medium">5.0 Memnuniyet</span>
+                  </div>
 
-                      {/* Premium Testimonial */}
-                      <div className="relative bg-gradient-to-br from-white via-gray-50/50 to-blue-50/30 rounded-3xl p-8 border border-gray-200/50 shadow-xl">
-                        {/* Quote Icon */}
-                        <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-primary to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
-                          <span className="text-white text-2xl font-bold">"</span>
-                        </div>
-                        
-                        <blockquote className="text-gray-700 text-lg leading-relaxed mb-8 font-medium pl-6">
-                          {customer.testimonial}
-                        </blockquote>
-                        
-                        <div className="flex items-center space-x-4 pl-6">
-                          <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center">
-                            <span className="text-white font-bold text-lg">{customer.person.charAt(0)}</span>
-                          </div>
-                          <div>
-                            <p className="font-bold text-gray-900">{customer.person}</p>
-                            <p className="text-gray-600">{customer.position}</p>
-                            <p className="text-primary font-semibold text-sm">{customer.name}</p>
-                          </div>
-                        </div>
-                      </div>
+                  {/* Contact Person */}
+                  <div className="flex items-center space-x-3 pt-2">
+                    <div className="w-10 h-10 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">{customer.person.charAt(0)}</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900 text-sm">{customer.person}</p>
+                      <p className="text-gray-600 text-xs">{customer.position}</p>
                     </div>
                   </div>
                 </div>
