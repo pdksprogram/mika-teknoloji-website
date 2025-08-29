@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Users, MapPin, Award, CheckCircle, Star } from 'lucide-react';
 import lufianImage from '@assets/lufian_1756448337411.jpg';
 import adoreImage from '@assets/Adore_1756448779641.jpeg';
+import kolumanImage from '@assets/Koluman_1756449232926.jpg';
 
 const customers = [
   {
@@ -32,7 +33,7 @@ const customers = [
   {
     id: 3,
     name: "Koluman Mercedes",
-    logo: "https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=400&h=300&fit=crop",
+    logo: kolumanImage,
     employees: 2500,
     locations: 28,
     sector: "Otomotiv",
