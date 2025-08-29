@@ -4,6 +4,7 @@ import { Users, MapPin, Award, CheckCircle, Star } from 'lucide-react';
 import lufianImage from '@assets/lufian_1756448337411.jpg';
 import adoreImage from '@assets/Adore_1756448779641.jpeg';
 import kolumanImage from '@assets/Koluman_1756449232926.jpg';
+import hastaneImage from '@assets/HastaneAnlatlya_1756449609923.jpg';
 
 const customers = [
   {
@@ -45,11 +46,11 @@ const customers = [
   {
     id: 4,
     name: "Antalya Devlet Hastanesi",
-    logo: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop",
+    logo: hastaneImage,
     employees: 3200,
     locations: 12,
     sector: "Sağlık",
-    testimonial: "Hastane güvenliği için en gelişmiş teknolojileri kullanıyoruz. Mika Teknoloji'nin X-Ray güvenlik sistemleri ve personel takip çözümleri ile hasta ve personel güvenliğini maksimum seviyede tutuyoruz. 3200 çalışanımızın tüm giriş-çıkış işlemlerini sorunsuz yönetiyoruz.",
+    testimonial: "Antalya Şehir Hastanesi olarak güvenlik ve erişim kontrol sistemlerimizde en ileri teknolojileri kullanıyoruz. Mika Teknoloji ve çözüm ortağımız Sentez Bilgisayar Güvenlik Sistemleri ile birlikte kartlı şifreli geçiş sistemi ve barkod sistemi entegrasyonunu başarıyla hayata geçirdik. Bu entegre güvenlik çözümü sayesinde 3200 personelimizin ve ziyaretçilerimizin hastane içindeki hareketlerini güvenli ve kontrollü bir şekilde yönetiyoruz. Sistem hem güvenlik hem de operasyonel verimlilik açısından beklentilerimizi fazlasıyla karşıladı.",
     person: "Dr. Fatma Yılmaz",
     position: "Başhekim Yardımcısı",
     solutions: ["X-Ray Güvenlik", "PDKS", "Güvenlik Kontrol"]
