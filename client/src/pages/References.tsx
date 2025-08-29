@@ -12,8 +12,8 @@ const customers = [
     locations: 80,
     sector: "Tekstil & Moda",
     testimonial: "Mika Teknoloji'nin PDKS sistemi sayesinde vardiya yönetimimiz tamamen dijitalleşti. Süreç çok pratik: Mağaza müdürümüz shift planını yapıyor, bölge müdürümüz onaylıyor ve personelimiz kendi vardiyasını cep telefonu üzerinden anında görebiliyor. Bildirim sistemi ile herkes zamanında haberdar oluyor. 80 lokasyonumuzda bu mobil çözüm sayesinde iş gücü yönetimimiz hem hızlandı hem de hatasız hale geldi.",
-    person: "Ahmet Kaya",
-    position: "İnsan Kaynakları Müdürü",
+    person: "Satiye YILDIZ",
+    position: "İK Direktörü",
     solutions: ["WebPDKS", "QR Personel Takip", "Vardiya Yönetimi"]
   },
   {
