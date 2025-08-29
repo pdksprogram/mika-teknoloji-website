@@ -37,7 +37,7 @@ const customers = [
     employees: 2500,
     locations: 28,
     sector: "Otomotiv",
-    testimonial: "Otomotiv sektöründe güvenlik kritik öneme sahip. Mika Teknoloji'nin turnike sistemleri ve güvenlik kontrolü çözümleri ile fabrikalarımızın güvenliğini en üst düzeyde tutuyoruz. Çalışan takip sistemi sayesinde üretim verimliliğimiz %15 arttı.",
+    testimonial: "28 şubemize ve üretim tesislerimize PDKS kartlı geçiş sistemi ile yemekhane sistemini kurduk. 4 yıldır Mika Teknoloji ile başarılı bir şekilde çalışmaktayız. Çözüm ortağımız PARMATEK ile birlikte hayata geçirdiğimiz bu entegre sistem, hem güvenlik hem de operasyonel verimliliğimizi önemli ölçüde artırdı.",
     person: "Mehmet Demir",
     position: "Güvenlik ve İK Direktörü",
     solutions: ["Turnike Sistemleri", "Güvenlik Guard Kontrol", "PDKS"]
