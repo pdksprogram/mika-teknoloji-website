@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, MapPin, Award, CheckCircle, Star } from 'lucide-react';
 import lufianImage from '@assets/lufian_1756448337411.jpg';
+import adoreImage from '@assets/Adore_1756448779641.jpeg';
 
 const customers = [
   {
@@ -19,7 +20,7 @@ const customers = [
   {
     id: 2,
     name: "Adore Mobilya",
-    logo: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop&q=80",
+    logo: adoreImage,
     employees: 1200,
     locations: 65,
     sector: "Mobilya & Dekorasyon",
