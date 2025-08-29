@@ -24,7 +24,7 @@ const customers = [
     employees: 1200,
     locations: 65,
     sector: "Mobilya & Dekorasyon",
-    testimonial: "Mobilya sektöründe üretim ve satış ekiplerinin koordinasyonu kritik önemde. Mika Teknoloji'nin mobil PDKS sistemi sayesinde fabrika ve mağaza shift planlarımızı kolayca yönetiyoruz. Vardiya amiri planlamayı yapıyor, bölge müdürü onaylıyor ve 1200 çalışanımız mobil uygulama üzerinden kendi vardiyalarını görüp bildirim alıyor. 65 lokasyonumuzda bu dijital çözüm ile iş gücü verimliliğimiz %20 arttı.",
+    testimonial: "Mika Teknoloji'nin kapsamlı Mobil PDKS çözümü ile insan kaynakları süreçlerimizi tamamen dijitalleştirdik. Çalışanlarımız artık mobil uygulama üzerinden izin taleplerini, avans taleplerini kolayca oluşturabiliyor ve anlık onay alıyor. Şikayet ve Anket Portalı sayesinde çalışan memnuniyetini sürekli takip ediyoruz. Ayrıca bordro gönderme işlemlerimiz otomatikleşti, 1200 çalışanımız bordrolarını mobil uygulamadan güvenli şekilde görüntüleyebiliyor. 65 lokasyonumuzda bu entegre sistem ile hem operasyonel verimlilik hem de çalışan memnuniyeti önemli ölçüde arttı.",
     person: "Selma Özkan",
     position: "Operasyon Müdürü",
     solutions: ["Mobil PDKS", "Shift Yönetimi", "Vardiya Planlama"]
