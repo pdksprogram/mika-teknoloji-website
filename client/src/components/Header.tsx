@@ -107,7 +107,7 @@ Mika Teknoloji ile işletmenizi dijitalleştirin!
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3" data-testid="logo-link">
               <div className="flex items-center">
-                <div className="w-10 h-10 rounded-lg overflow-hidden">
+                <div className="w-14 h-14 rounded-lg overflow-hidden">
                   <img src={mikaLogo} alt="Mika Teknoloji Logo" className="w-full h-full object-contain" />
                 </div>
                 <div className="ml-3">
