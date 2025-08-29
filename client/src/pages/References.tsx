@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, MapPin, Award, CheckCircle, Star } from 'lucide-react';
+import lufianImage from '@assets/lufian_1756448337411.jpg';
 
 const customers = [
   {
     id: 1,
     name: "Lufian",
-    logo: "/attached_assets/lufian_1756448337411.jpg",
+    logo: lufianImage,
     employees: 400,
     locations: 80,
     sector: "Tekstil & Moda",
