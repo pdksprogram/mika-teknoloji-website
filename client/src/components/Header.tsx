@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
+import mikaLogo from "@assets/mika_1756450206871.jpg";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -106,8 +107,8 @@ Mika Teknoloji ile işletmenizi dijitalleştirin!
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3" data-testid="logo-link">
               <div className="flex items-center">
-                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">MT</span>
+                <div className="w-10 h-10 rounded-lg overflow-hidden">
+                  <img src={mikaLogo} alt="Mika Teknoloji Logo" className="w-full h-full object-contain" />
                 </div>
                 <div className="ml-3">
                   <div className="font-bold text-xl text-slate-800">Mika Teknoloji</div>
