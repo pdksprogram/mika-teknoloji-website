@@ -5,6 +5,7 @@ import lufianImage from '@assets/lufian_1756448337411.jpg';
 import adoreImage from '@assets/Adore_1756448779641.jpeg';
 import kolumanImage from '@assets/Koluman_1756449232926.jpg';
 import hastaneImage from '@assets/HastaneAnlatlya_1756449609923.jpg';
+import cerrahpasaImage from '@assets/istanbulcrrrahpasa_1756450001262.jpg';
 
 const customers = [
   {
@@ -57,15 +58,15 @@ const customers = [
   },
   {
     id: 5,
-    name: "Çilek Mobilya",
-    logo: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=300&fit=crop",
-    employees: 950,
-    locations: 78,
-    sector: "Mobilya & Tasarım",
-    testimonial: "Mağaza zincirimizde personel takibini kolaylaştıran QR kod sistemini kullanıyoruz. Çalışanlarımız sadece QR kodlarını okutarak giriş-çıkış yapabiliyor. Bu sayede yönetim süreçlerimiz hızlandı ve hata oranımız minimize oldu.",
-    person: "Serkan Ateş",
-    position: "Operasyon Koordinatörü",
-    solutions: ["QR Personel Takip", "WebPDKS", "Mağaza Yönetimi"]
+    name: "Cerrahpaşa Üniversite Hastanesi",
+    logo: cerrahpasaImage,
+    employees: 7000,
+    locations: 1,
+    sector: "Sağlık & Eğitim",
+    testimonial: "İstanbul Üniversitesi Cerrahpaşa Tıp Fakültesi olarak 7000 kişilik büyük ünitemizde yemekhane sistemini başarıyla kurarak operasyonel verimliliğimizi önemli ölçüde artırdık. Mika Teknoloji'nin sunduğu entegre yemekhane çözümü ile öğrenci, akademisyen ve personelimizin yemek hizmetlerini dijitalleştirdik. Sistem, kartlı ödeme altyapısı, mönü yönetimi ve raporlama modülleri ile tam entegre çalışıyor. 7000 kişilik kapasitemizde günlük yemek operasyonlarımızı sorunsuz ve verimli bir şekilde yürütebiliyoruz.",
+    person: "Prof. Dr. Murat Karadayı",
+    position: "İdari ve Mali İşler Direktörü",
+    solutions: ["Yemekhane Sistemi", "Kartlı Ödeme", "Entegre Çözümler"]
   },
   {
     id: 6,
