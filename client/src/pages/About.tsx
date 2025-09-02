@@ -141,7 +141,7 @@ export default function About() {
         {/* Company Hierarchy */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">
-            Şirket Hiyerarşisi
+            Arge Ve Üretim Müdürü
           </h2>
           
           <div className="max-w-3xl mx-auto">
@@ -158,12 +158,10 @@ export default function About() {
                 <div className="space-y-4">
                   <div>
                     <h3 className="text-xl font-bold text-slate-800 mb-2">
-                      Operasyonel Yönetim
+                      Tolga Yel Aldı
                     </h3>
                     <p className="text-slate-600">
-                      Gamze Deniz Toksoy liderliğinde teknik ekibimiz, 
-                      donanım tasarımından yazılım geliştirmeye kadar 
-                      tüm projelerimizi yönetiyor.
+                      Arge Ve Üretim Müdürü
                     </p>
                   </div>
                   
