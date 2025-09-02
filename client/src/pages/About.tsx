@@ -87,7 +87,7 @@ export default function About() {
                           Uzmanlık Alanı:
                         </h4>
                         <p className="text-slate-600">
-                          Elektronik Mühendisi, Anakart Tasarımı ve Kontrol Sistemleri Uzmanı
+                          Yazılım Mühendisi ve Full Web Stack Uzmanı
                         </p>
                       </div>
                       
@@ -146,9 +146,14 @@ export default function About() {
                     <h3 className="text-xl font-bold text-slate-800 mb-2">
                       Tolga Yel Aldı
                     </h3>
-                    <p className="text-slate-600 mb-4">
-                      Arge Ve Üretim Müdürü
-                    </p>
+                    <div className="space-y-2 mb-4">
+                      <p className="text-lg font-semibold text-primary">
+                        Arge Ve Üretim Müdürü
+                      </p>
+                      <p className="text-slate-600">
+                        Elektronik Mühendisi, Anakart Tasarımı ve Kontrol Sistemleri Uzmanı
+                      </p>
+                    </div>
                     
                     <div className="space-y-3">
                       <div>
