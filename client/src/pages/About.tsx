@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import teamPhoto from "@assets/image_1756822202470.png";
 import gamzePhoto from "@assets/image_1756823252649.png";
+import hierarchyPhoto from "@assets/image_1756823893243.png";
 
 export default function About() {
   const stats = [
@@ -76,7 +77,7 @@ export default function About() {
                         Gamze Deniz Toksoy
                       </h3>
                       <p className="text-lg font-semibold text-primary mb-4">
-                        Yazılım Müdürü
+                        Mika Teknoloji
                       </p>
                     </div>
                     
@@ -86,7 +87,7 @@ export default function About() {
                           Uzmanlık Alanı:
                         </h4>
                         <p className="text-slate-600">
-                          Yazılım Mühendisi ve Personel Devam Kontrol Sistemleri (PDKS) Uzmanı
+                          Elektronik Mühendisi, Anakart Tasarımı ve Kontrol Sistemleri Uzmanı
                         </p>
                       </div>
                       
@@ -95,6 +96,12 @@ export default function About() {
                           Teknoloji Yetkinlikleri:
                         </h4>
                         <div className="flex flex-wrap gap-2">
+                          <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">
+                            C++
+                          </span>
+                          <span className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">
+                            Java
+                          </span>
                           <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
                             ASP.NET
                           </span>
@@ -108,11 +115,78 @@ export default function About() {
                       </div>
                       
                       <div className="pt-2">
-                        <p className="text-slate-600 italic">
-                          "PDKS teknolojileri alanında uzman kadromuzun lideri olarak, 
-                          müşterilerimize en güncel yazılım çözümlerini sunmak için çalışıyoruz."
+                        <div className="space-y-2">
+                          <h4 className="font-semibold text-slate-700 mb-1">
+                            Geliştirdiği Ürünler:
+                          </h4>
+                          <ul className="text-slate-600 space-y-1">
+                            <li>• Access Control Panel (Erişim Kontrol Paneli)</li>
+                            <li>• Guard MX Bekçi Kontrol Sistemi</li>
+                            <li>• Anakart Tasarımı ve PCB Geliştirme</li>
+                          </ul>
+                        </div>
+                        <p className="text-slate-600 italic pt-2">
+                          "Elektronik mühendisliği bilgimle donanım tasarımından yazılım geliştirmeye 
+                          kadar tüm kontrol sistemlerini tasarlıyor ve geliştiriyoruz."
                         </p>
                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+
+        {/* Company Hierarchy */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">
+            Şirket Hiyerarşisi
+          </h2>
+          
+          <div className="max-w-3xl mx-auto">
+            <Card className="border-0 shadow-xl overflow-hidden">
+              <div className="p-8 text-center bg-gradient-to-br from-slate-50 to-slate-100">
+                <div className="mb-6">
+                  <img 
+                    src={hierarchyPhoto} 
+                    alt="Şirket Hiyerarşisi" 
+                    className="w-48 h-48 rounded-full mx-auto object-cover shadow-lg"
+                    data-testid="hierarchy-photo"
+                  />
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-800 mb-2">
+                      Operasyonel Yönetim
+                    </h3>
+                    <p className="text-slate-600">
+                      Gamze Deniz Toksoy liderliğinde teknik ekibimiz, 
+                      donanım tasarımından yazılım geliştirmeye kadar 
+                      tüm projelerimizi yönetiyor.
+                    </p>
+                  </div>
+                  
+                  <div className="grid md:grid-cols-2 gap-4 mt-6">
+                    <div className="bg-white p-4 rounded-lg shadow-sm">
+                      <h4 className="font-semibold text-slate-700 mb-2">
+                        Teknik Departman
+                      </h4>
+                      <ul className="text-sm text-slate-600 space-y-1">
+                        <li>• Elektronik Tasarım</li>
+                        <li>• Anakart Geliştirme</li>
+                        <li>• Sistem Entegrasyonu</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg shadow-sm">
+                      <h4 className="font-semibold text-slate-700 mb-2">
+                        Yazılım Departmanı  
+                      </h4>
+                      <ul className="text-sm text-slate-600 space-y-1">
+                        <li>• PDKS Sistemleri</li>
+                        <li>• Web Uygulamaları</li>
+                        <li>• Mobil Çözümler</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
