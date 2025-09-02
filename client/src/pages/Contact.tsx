@@ -19,8 +19,7 @@ export default function Contact() {
       icon: Phone,
       title: "Telefon",
       details: [
-        "+90 212 221 94 76",
-        "+90 850 711 01 46"
+        "0546 712 22 96"
       ]
     },
     {
@@ -96,7 +95,7 @@ export default function Contact() {
                 className="w-full"
                 data-testid="phone-call-button"
               >
-                <a href="tel:+902122219476">
+                <a href="tel:+905467122296">
                   <Phone className="mr-2 h-4 w-4" />
                   Hemen Ara
                 </a>
