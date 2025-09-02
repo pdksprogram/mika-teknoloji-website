@@ -1,4 +1,4 @@
-import { Building, Users, Award, Globe, Settings, Timer, Smartphone, ArrowRight } from "lucide-react";
+import { Building, Users, Award, Globe, Settings, Timer, Smartphone, ArrowRight, Shield, Zap, Database, Wifi, Lock, Eye, Fingerprint, BarChart3, Network, Cpu, HardDrive, MonitorSpeaker, Gauge } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -62,62 +62,255 @@ export default function About() {
                 </motion.div>
               </motion.div>
 
-              {/* Tech Visual */}
+              {/* Advanced Tech Visual */}
               <motion.div
                 className="relative"
                 initial={{ opacity: 0, x: 40 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <div className="relative flex justify-center items-center min-h-[400px]">
-                  {/* Central Clock */}
+                <div className="relative flex justify-center items-center min-h-[500px] overflow-hidden">
+                  
+                  {/* Main Central Hub */}
                   <div className="relative z-20">
-                    <div className="w-32 h-32 border-4 border-slate-300 rounded-full flex items-center justify-center bg-white shadow-lg">
-                      <Timer className="h-16 w-16 text-slate-600" />
-                    </div>
-                    {/* Clock hands */}
-                    <div className="absolute top-1/2 left-1/2 w-12 h-0.5 bg-slate-600 origin-left transform -translate-y-0.5 rotate-45"></div>
-                    <div className="absolute top-1/2 left-1/2 w-8 h-0.5 bg-primary origin-left transform -translate-y-0.5 rotate-12"></div>
+                    <motion.div 
+                      className="w-40 h-40 bg-gradient-to-br from-primary/90 to-pink-600/90 rounded-full flex items-center justify-center shadow-2xl"
+                      animate={{ rotate: 360 }}
+                      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                    >
+                      <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center">
+                        <Timer className="h-16 w-16 text-primary" />
+                      </div>
+                      {/* Orbiting dots */}
+                      <motion.div 
+                        className="absolute w-4 h-4 bg-yellow-400 rounded-full"
+                        animate={{ rotate: -360 }}
+                        transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                        style={{ top: '-8px', left: '50%', transformOrigin: '50% 88px' }}
+                      />
+                      <motion.div 
+                        className="absolute w-3 h-3 bg-blue-400 rounded-full"
+                        animate={{ rotate: -360 }}
+                        transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+                        style={{ bottom: '-6px', right: '20%', transformOrigin: '50% -76px' }}
+                      />
+                    </motion.div>
                   </div>
 
-                  {/* Surrounding Tech Elements */}
-                  <div className="absolute top-16 right-16 z-10 opacity-80">
-                    <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Settings className="h-8 w-8 text-primary animate-spin" style={{ animationDuration: '10s' }} />
-                    </div>
-                  </div>
-
-                  <div className="absolute bottom-16 left-16 z-10 opacity-80">
-                    <div className="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center">
-                      <div className="relative">
-                        <div className="w-12 h-12 border-2 border-slate-400 rounded-full"></div>
-                        <div className="absolute inset-2 bg-slate-400 rounded-full"></div>
-                        <div className="absolute inset-3 bg-white rounded-full"></div>
+                  {/* Tech Ecosystem Elements */}
+                  
+                  {/* Database Cluster */}
+                  <motion.div 
+                    className="absolute top-12 left-8 z-15"
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                  >
+                    <div className="relative">
+                      <div className="w-20 h-20 bg-blue-500/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-blue-200">
+                        <Database className="h-10 w-10 text-blue-600" />
+                      </div>
+                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                      <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                        <div className="flex space-x-1">
+                          <div className="w-1 h-6 bg-blue-400 rounded-full animate-pulse"></div>
+                          <div className="w-1 h-4 bg-blue-300 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                          <div className="w-1 h-8 bg-blue-500 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
 
-                  {/* Smartphone */}
-                  <div className="absolute top-8 right-8 z-30">
-                    <div className="w-20 h-32 bg-slate-800 rounded-lg shadow-lg p-2">
-                      <div className="w-full h-full bg-slate-100 rounded-md relative">
-                        <div className="absolute top-2 left-2 right-2 h-8 bg-primary/20 rounded flex items-center justify-center">
-                          <Smartphone className="h-4 w-4 text-primary" />
-                        </div>
-                        <div className="absolute bottom-2 left-2 right-2">
-                          <div className="space-y-1">
-                            <div className="h-2 bg-primary/30 rounded"></div>
-                            <div className="h-2 bg-slate-300 rounded"></div>
-                            <div className="h-2 bg-slate-300 rounded"></div>
+                  {/* Security Shield */}
+                  <motion.div 
+                    className="absolute top-8 right-12 z-15"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.7 }}
+                  >
+                    <div className="relative">
+                      <div className="w-24 h-24 bg-red-500/20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-red-200 rotate-12">
+                        <Shield className="h-12 w-12 text-red-600" />
+                      </div>
+                      <motion.div 
+                        className="absolute inset-0 border-2 border-red-400 rounded-2xl"
+                        animate={{ scale: [1, 1.1, 1] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                      />
+                      <div className="absolute -top-2 right-2 flex space-x-1">
+                        <div className="w-2 h-2 bg-red-400 rounded-full animate-ping"></div>
+                        <div className="w-2 h-2 bg-orange-400 rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* Smart Device */}
+                  <motion.div 
+                    className="absolute bottom-12 right-16 z-25"
+                    initial={{ opacity: 0, rotateY: 90 }}
+                    animate={{ opacity: 1, rotateY: 0 }}
+                    transition={{ duration: 0.8, delay: 0.9 }}
+                  >
+                    <div className="relative">
+                      <div className="w-24 h-40 bg-slate-900 rounded-xl shadow-2xl p-2 border-2 border-slate-700">
+                        {/* Screen */}
+                        <div className="w-full h-full bg-gradient-to-b from-slate-100 to-slate-200 rounded-lg relative overflow-hidden">
+                          {/* Status bar */}
+                          <div className="absolute top-1 left-2 right-2 h-2 bg-primary/30 rounded-full"></div>
+                          
+                          {/* App icons */}
+                          <div className="absolute top-6 left-2 right-2 grid grid-cols-3 gap-2">
+                            <div className="w-3 h-3 bg-blue-500 rounded-sm flex items-center justify-center">
+                              <Smartphone className="w-2 h-2 text-white" />
+                            </div>
+                            <div className="w-3 h-3 bg-green-500 rounded-sm flex items-center justify-center">
+                              <Gauge className="w-2 h-2 text-white" />
+                            </div>
+                            <div className="w-3 h-3 bg-purple-500 rounded-sm flex items-center justify-center">
+                              <BarChart3 className="w-2 h-2 text-white" />
+                            </div>
+                          </div>
+                          
+                          {/* Content lines */}
+                          <div className="absolute bottom-6 left-2 right-2 space-y-1">
+                            <motion.div 
+                              className="h-1 bg-primary/60 rounded-full"
+                              animate={{ width: ['60%', '80%', '60%'] }}
+                              transition={{ duration: 3, repeat: Infinity }}
+                            />
+                            <div className="h-1 bg-slate-400 rounded-full w-3/4"></div>
+                            <div className="h-1 bg-slate-300 rounded-full w-1/2"></div>
+                          </div>
+                          
+                          {/* Fingerprint scanner */}
+                          <div className="absolute bottom-1 right-1 w-4 h-4 bg-primary/20 rounded-full flex items-center justify-center">
+                            <Fingerprint className="w-2 h-2 text-primary" />
                           </div>
                         </div>
                       </div>
+                      
+                      {/* Signal waves */}
+                      <motion.div 
+                        className="absolute -top-4 left-1/2 transform -translate-x-1/2"
+                        animate={{ opacity: [0.3, 1, 0.3] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                      >
+                        <Wifi className="w-6 h-6 text-green-500" />
+                      </motion.div>
                     </div>
-                  </div>
+                  </motion.div>
 
-                  {/* Background Pattern */}
-                  <div className="absolute inset-0 opacity-5">
-                    <div className="w-full h-full bg-gradient-to-br from-primary to-pink-600"></div>
+                  {/* Network Nodes */}
+                  <motion.div 
+                    className="absolute bottom-8 left-12 z-15"
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6, delay: 1.1 }}
+                  >
+                    <div className="relative">
+                      <div className="w-18 h-18 bg-purple-500/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-purple-200">
+                        <Network className="h-8 w-8 text-purple-600" />
+                      </div>
+                      {/* Connection lines */}
+                      <svg className="absolute inset-0 w-full h-full" style={{ overflow: 'visible' }}>
+                        <motion.line 
+                          x1="50%" y1="50%" x2="200%" y2="10%"
+                          stroke="rgba(168, 85, 247, 0.4)" 
+                          strokeWidth="2"
+                          strokeDasharray="4,4"
+                          animate={{ strokeDashoffset: [0, 8] }}
+                          transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                        />
+                        <motion.line 
+                          x1="50%" y1="50%" x2="150%" y2="200%"
+                          stroke="rgba(168, 85, 247, 0.4)" 
+                          strokeWidth="2"
+                          strokeDasharray="4,4"
+                          animate={{ strokeDashoffset: [0, 8] }}
+                          transition={{ duration: 2, repeat: Infinity, ease: "linear", delay: 0.5 }}
+                        />
+                      </svg>
+                      {/* Pulse effect */}
+                      <motion.div 
+                        className="absolute inset-0 border-2 border-purple-400 rounded-full"
+                        animate={{ scale: [1, 2], opacity: [1, 0] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                      />
+                    </div>
+                  </motion.div>
+
+                  {/* CPU Processing Unit */}
+                  <motion.div 
+                    className="absolute top-20 right-8 z-10"
+                    initial={{ opacity: 0, rotateZ: 45 }}
+                    animate={{ opacity: 1, rotateZ: 0 }}
+                    transition={{ duration: 0.8, delay: 1.3 }}
+                  >
+                    <div className="relative">
+                      <div className="w-16 h-16 bg-green-500/20 rounded-lg flex items-center justify-center backdrop-blur-sm border border-green-200">
+                        <Cpu className="h-8 w-8 text-green-600" />
+                      </div>
+                      {/* Processing indicators */}
+                      <div className="absolute -inset-2 grid grid-cols-2 gap-1">
+                        <motion.div 
+                          className="w-1 h-1 bg-green-400 rounded-full"
+                          animate={{ opacity: [1, 0, 1] }}
+                          transition={{ duration: 0.8, repeat: Infinity }}
+                        />
+                        <motion.div 
+                          className="w-1 h-1 bg-green-400 rounded-full"
+                          animate={{ opacity: [1, 0, 1] }}
+                          transition={{ duration: 0.8, repeat: Infinity, delay: 0.2 }}
+                        />
+                        <motion.div 
+                          className="w-1 h-1 bg-green-400 rounded-full"
+                          animate={{ opacity: [1, 0, 1] }}
+                          transition={{ duration: 0.8, repeat: Infinity, delay: 0.4 }}
+                        />
+                        <motion.div 
+                          className="w-1 h-1 bg-green-400 rounded-full"
+                          animate={{ opacity: [1, 0, 1] }}
+                          transition={{ duration: 0.8, repeat: Infinity, delay: 0.6 }}
+                        />
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* Floating Particles */}
+                  {[...Array(8)].map((_, i) => (
+                    <motion.div
+                      key={i}
+                      className="absolute w-1 h-1 bg-primary/40 rounded-full"
+                      style={{
+                        left: `${20 + (i * 10) % 60}%`,
+                        top: `${15 + (i * 15) % 70}%`,
+                      }}
+                      animate={{
+                        y: [-10, 10, -10],
+                        opacity: [0.2, 0.8, 0.2],
+                      }}
+                      transition={{
+                        duration: 3 + i * 0.5,
+                        repeat: Infinity,
+                        delay: i * 0.3,
+                      }}
+                    />
+                  ))}
+
+                  {/* Background Gradient Orbs */}
+                  <div className="absolute inset-0 overflow-hidden">
+                    <motion.div 
+                      className="absolute w-32 h-32 bg-gradient-to-br from-primary/10 to-pink-500/10 rounded-full blur-xl"
+                      style={{ top: '10%', left: '15%' }}
+                      animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
+                      transition={{ duration: 8, repeat: Infinity }}
+                    />
+                    <motion.div 
+                      className="absolute w-24 h-24 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-xl"
+                      style={{ bottom: '20%', right: '20%' }}
+                      animate={{ scale: [1.2, 1, 1.2], rotate: [360, 180, 0] }}
+                      transition={{ duration: 10, repeat: Infinity }}
+                    />
                   </div>
                 </div>
               </motion.div>
