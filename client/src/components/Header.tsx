@@ -54,7 +54,7 @@ export default function Header() {
       { name: "Bariyer Sistemleri", href: "/bariyer" }
     ],
     "Yazılımlar": [
-      { name: "Web PDKS", href: "/web-pdks" },
+      { name: "Web PDKS", href: "https://pdkspersoneltakip.com/" },
       { name: "Access Kontrol Programı", href: "/access-program" },
       { name: "Startıp Puanlama Yazılımı", href: "/startup-puanlama" },
       { name: "Ogar Puanlama Yazılımı", href: "/ogar-puanlama" },
@@ -185,7 +185,7 @@ Mika Teknoloji ile işletmenizi dijitalleştirin!
                 className="bg-blue-600 hover:bg-blue-700 text-white px-4"
                 data-testid="webpdks-button"
               >
-                <Link href="/web-pdks">WebPDKS</Link>
+                <a href="https://pdkspersoneltakip.com/" target="_blank" rel="noopener noreferrer">WebPDKS</a>
               </Button>
               <Button 
                 asChild 
@@ -238,7 +238,7 @@ Mika Teknoloji ile işletmenizi dijitalleştirin!
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white"
                     data-testid="mobile-webpdks-button"
                   >
-                    <Link href="/web-pdks">WebPDKS</Link>
+                    <a href="https://pdkspersoneltakip.com/" target="_blank" rel="noopener noreferrer">WebPDKS</a>
                   </Button>
                   <Button 
                     asChild 

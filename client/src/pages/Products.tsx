@@ -31,7 +31,7 @@ export default function Products() {
     {
       title: "Yazılımlar",
       items: [
-        { name: "Web PDKS", href: "/yazilim/web-pdks" },
+        { name: "Web PDKS", href: "https://pdkspersoneltakip.com/" },
         { name: "Access Kontrol Programı", href: "/yazilim/access" },
         { name: "StartUp Puantaj Yazılımı", href: "/yazilim/startup" },
         { name: "Öğretmen Takip Yazılımı", href: "/yazilim/ogretmen" },
