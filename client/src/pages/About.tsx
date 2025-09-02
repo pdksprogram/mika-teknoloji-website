@@ -5,6 +5,7 @@ import teamPhoto from "@assets/image_1756822202470.png";
 import gamzePhoto from "@assets/image_1756823252649.png";
 import hierarchyPhoto from "@assets/image_1756823893243.png";
 import suphiPhoto from "@assets/image_1756824630814.png";
+import yasinPhoto from "@assets/image_1756824767420.png";
 
 export default function About() {
   const stats = [
@@ -279,6 +280,91 @@ export default function About() {
                         <p className="text-slate-600 italic">
                           "PDKS mobil uygulamalarında kullanıcı deneyimini en üst seviyede tutarak, 
                           her platformda kesintisiz çalışan çözümler geliştiriyorum."
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+
+        {/* Sales Manager Section */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">
+            Satış Müdürü
+          </h2>
+          
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-0 shadow-xl overflow-hidden">
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="aspect-square md:aspect-auto">
+                  <img 
+                    src={yasinPhoto} 
+                    alt="Yasin Atılgan - Satış Müdürü" 
+                    className="w-full h-full object-cover"
+                    data-testid="yasin-photo"
+                  />
+                </div>
+                <div className="p-8 flex flex-col justify-center bg-gradient-to-br from-green-50 to-green-100">
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="text-2xl font-bold text-slate-800 mb-2">
+                        Yasin Atılgan
+                      </h3>
+                      <p className="text-lg font-semibold text-green-600 mb-4">
+                        Satış Müdürü
+                      </p>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <div>
+                        <h4 className="font-semibold text-slate-700 mb-1">
+                          Uzmanlık Alanı:
+                        </h4>
+                        <p className="text-slate-600">
+                          Kurumsal Satış ve Müşteri İlişkileri Yönetimi
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h4 className="font-semibold text-slate-700 mb-1">
+                          Satış Alanları:
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                            PDKS Sistemleri
+                          </span>
+                          <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
+                            Erişim Kontrol
+                          </span>
+                          <span className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">
+                            Guard MX
+                          </span>
+                          <span className="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-medium">
+                            Turnike Sistemleri
+                          </span>
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <h4 className="font-semibold text-slate-700 mb-1">
+                          Hizmet Alanları:
+                        </h4>
+                        <ul className="text-slate-600 space-y-1 text-sm">
+                          <li>• Kurumsal Çözüm Danışmanlığı</li>
+                          <li>• Teknik Ürün Sunumları</li>
+                          <li>• Proje Yönetimi ve Koordinasyon</li>
+                          <li>• Müşteri Destek ve İlişki Yönetimi</li>
+                          <li>• Satış Sonrası Teknik Destek</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="pt-2">
+                        <p className="text-slate-600 italic">
+                          "Müşterilerimizin ihtiyaçlarını anlamak ve doğru teknoloji çözümlerini sunmak 
+                          bizim en önemli önceliğimiz. Her projede uzun vadeli ortaklık hedefliyoruz."
                         </p>
                       </div>
                     </div>
