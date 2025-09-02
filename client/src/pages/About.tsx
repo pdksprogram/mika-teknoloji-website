@@ -1,4 +1,4 @@
-import { Building, Users, Award, Globe, Settings, Timer, Smartphone, ArrowRight, Shield, Zap, Database, Wifi, Lock, Eye, Fingerprint, BarChart3, Network, Cpu, HardDrive, MonitorSpeaker, Gauge } from "lucide-react";
+import { Building, Users, Award, Globe, Timer, Smartphone, ArrowRight, Shield, Database, Wifi, Fingerprint, BarChart3, Network, Cpu, Gauge } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -69,18 +69,39 @@ export default function About() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <div className="relative flex justify-center items-center min-h-[500px] overflow-hidden">
+                <div className="relative flex justify-center items-center min-h-[500px] overflow-hidden" style={{ perspective: '1000px' }}>
                   
                   {/* Main Central Hub */}
                   <div className="relative z-20">
                     <motion.div 
                       className="w-40 h-40 bg-gradient-to-br from-primary/90 to-pink-600/90 rounded-full flex items-center justify-center shadow-2xl"
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                      animate={{ 
+                        rotate: 360,
+                        rotateY: [0, 180, 360],
+                        scale: [1, 1.05, 1]
+                      }}
+                      transition={{ 
+                        rotate: { duration: 20, repeat: Infinity, ease: "linear" },
+                        rotateY: { duration: 15, repeat: Infinity, ease: "easeInOut" },
+                        scale: { duration: 8, repeat: Infinity, ease: "easeInOut" }
+                      }}
+                      style={{ transformStyle: 'preserve-3d' }}
                     >
-                      <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center">
-                        <Timer className="h-16 w-16 text-primary" />
-                      </div>
+                      <motion.div 
+                        className="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-inner"
+                        animate={{
+                          rotateX: [0, 15, -15, 0]
+                        }}
+                        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                        style={{ transformStyle: 'preserve-3d' }}
+                      >
+                        <motion.div
+                          animate={{ rotateZ: [0, 360] }}
+                          transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                        >
+                          <Timer className="h-16 w-16 text-primary" />
+                        </motion.div>
+                      </motion.div>
                       {/* Orbiting dots */}
                       <motion.div 
                         className="absolute w-4 h-4 bg-yellow-400 rounded-full"
@@ -107,9 +128,22 @@ export default function About() {
                     transition={{ duration: 0.6, delay: 0.5 }}
                   >
                     <div className="relative">
-                      <div className="w-20 h-20 bg-blue-500/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-blue-200">
-                        <Database className="h-10 w-10 text-blue-600" />
-                      </div>
+                      <motion.div 
+                        className="w-20 h-20 bg-blue-500/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-blue-200"
+                        animate={{
+                          rotateY: [0, 15, -15, 0],
+                          rotateX: [0, -10, 10, 0]
+                        }}
+                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                        style={{ transformStyle: 'preserve-3d' }}
+                      >
+                        <motion.div
+                          animate={{ scale: [1, 1.1, 1] }}
+                          transition={{ duration: 2, repeat: Infinity }}
+                        >
+                          <Database className="h-10 w-10 text-blue-600" />
+                        </motion.div>
+                      </motion.div>
                       <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                       <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                         <div className="flex space-x-1">
@@ -129,9 +163,22 @@ export default function About() {
                     transition={{ duration: 0.6, delay: 0.7 }}
                   >
                     <div className="relative">
-                      <div className="w-24 h-24 bg-red-500/20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-red-200 rotate-12">
-                        <Shield className="h-12 w-12 text-red-600" />
-                      </div>
+                      <motion.div 
+                        className="w-24 h-24 bg-red-500/20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-red-200"
+                        animate={{
+                          rotateZ: [12, 25, -5, 12],
+                          rotateY: [0, 20, -20, 0]
+                        }}
+                        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                        style={{ transformStyle: 'preserve-3d' }}
+                      >
+                        <motion.div
+                          animate={{ rotateX: [0, 10, -10, 0] }}
+                          transition={{ duration: 3, repeat: Infinity }}
+                        >
+                          <Shield className="h-12 w-12 text-red-600" />
+                        </motion.div>
+                      </motion.div>
                       <motion.div 
                         className="absolute inset-0 border-2 border-red-400 rounded-2xl"
                         animate={{ scale: [1, 1.1, 1] }}
@@ -152,7 +199,15 @@ export default function About() {
                     transition={{ duration: 0.8, delay: 0.9 }}
                   >
                     <div className="relative">
-                      <div className="w-24 h-40 bg-slate-900 rounded-xl shadow-2xl p-2 border-2 border-slate-700">
+                      <motion.div 
+                        className="w-24 h-40 bg-slate-900 rounded-xl shadow-2xl p-2 border-2 border-slate-700"
+                        animate={{
+                          rotateY: [0, -15, 15, 0],
+                          rotateX: [0, 5, -5, 0]
+                        }}
+                        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                        style={{ transformStyle: 'preserve-3d' }}
+                      >
                         {/* Screen */}
                         <div className="w-full h-full bg-gradient-to-b from-slate-100 to-slate-200 rounded-lg relative overflow-hidden">
                           {/* Status bar */}
@@ -187,7 +242,7 @@ export default function About() {
                             <Fingerprint className="w-2 h-2 text-primary" />
                           </div>
                         </div>
-                      </div>
+                      </motion.div>
                       
                       {/* Signal waves */}
                       <motion.div 
@@ -208,9 +263,20 @@ export default function About() {
                     transition={{ duration: 0.6, delay: 1.1 }}
                   >
                     <div className="relative">
-                      <div className="w-18 h-18 bg-purple-500/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-purple-200">
+                      <motion.div 
+                        className="w-18 h-18 bg-purple-500/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-purple-200"
+                        animate={{
+                          rotateX: [0, 360],
+                          rotateY: [0, -180]
+                        }}
+                        transition={{ 
+                          rotateX: { duration: 12, repeat: Infinity, ease: "linear" },
+                          rotateY: { duration: 8, repeat: Infinity, ease: "easeInOut" }
+                        }}
+                        style={{ transformStyle: 'preserve-3d' }}
+                      >
                         <Network className="h-8 w-8 text-purple-600" />
-                      </div>
+                      </motion.div>
                       {/* Connection lines */}
                       <svg className="absolute inset-0 w-full h-full" style={{ overflow: 'visible' }}>
                         <motion.line 
@@ -247,9 +313,25 @@ export default function About() {
                     transition={{ duration: 0.8, delay: 1.3 }}
                   >
                     <div className="relative">
-                      <div className="w-16 h-16 bg-green-500/20 rounded-lg flex items-center justify-center backdrop-blur-sm border border-green-200">
-                        <Cpu className="h-8 w-8 text-green-600" />
-                      </div>
+                      <motion.div 
+                        className="w-16 h-16 bg-green-500/20 rounded-lg flex items-center justify-center backdrop-blur-sm border border-green-200"
+                        animate={{
+                          rotateZ: [0, 90, 180, 270, 360],
+                          rotateX: [0, 20, -20, 0]
+                        }}
+                        transition={{ 
+                          rotateZ: { duration: 10, repeat: Infinity, ease: "linear" },
+                          rotateX: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+                        }}
+                        style={{ transformStyle: 'preserve-3d' }}
+                      >
+                        <motion.div
+                          animate={{ scale: [1, 1.2, 1] }}
+                          transition={{ duration: 1.5, repeat: Infinity }}
+                        >
+                          <Cpu className="h-8 w-8 text-green-600" />
+                        </motion.div>
+                      </motion.div>
                       {/* Processing indicators */}
                       <div className="absolute -inset-2 grid grid-cols-2 gap-1">
                         <motion.div 
@@ -276,40 +358,82 @@ export default function About() {
                     </div>
                   </motion.div>
 
-                  {/* Floating Particles */}
-                  {[...Array(8)].map((_, i) => (
+                  {/* 3D Floating Particles */}
+                  {[...Array(12)].map((_, i) => (
                     <motion.div
                       key={i}
-                      className="absolute w-1 h-1 bg-primary/40 rounded-full"
+                      className="absolute w-2 h-2 bg-primary/50 rounded-full shadow-lg"
                       style={{
-                        left: `${20 + (i * 10) % 60}%`,
-                        top: `${15 + (i * 15) % 70}%`,
+                        left: `${15 + (i * 8) % 70}%`,
+                        top: `${10 + (i * 12) % 80}%`,
+                        transformStyle: 'preserve-3d'
                       }}
                       animate={{
-                        y: [-10, 10, -10],
-                        opacity: [0.2, 0.8, 0.2],
+                        y: [-15, 20, -15],
+                        x: [-8, 8, -8],
+                        z: [-50, 50, -50],
+                        rotateX: [0, 360],
+                        rotateY: [0, -360],
+                        scale: [0.5, 1.2, 0.5],
+                        opacity: [0.3, 0.9, 0.3],
                       }}
                       transition={{
-                        duration: 3 + i * 0.5,
+                        duration: 4 + i * 0.5,
                         repeat: Infinity,
-                        delay: i * 0.3,
+                        delay: i * 0.2,
+                        ease: "easeInOut"
                       }}
                     />
                   ))}
 
-                  {/* Background Gradient Orbs */}
-                  <div className="absolute inset-0 overflow-hidden">
+                  {/* 3D Background Gradient Orbs */}
+                  <div className="absolute inset-0 overflow-hidden" style={{ transformStyle: 'preserve-3d' }}>
                     <motion.div 
-                      className="absolute w-32 h-32 bg-gradient-to-br from-primary/10 to-pink-500/10 rounded-full blur-xl"
-                      style={{ top: '10%', left: '15%' }}
-                      animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
-                      transition={{ duration: 8, repeat: Infinity }}
+                      className="absolute w-32 h-32 bg-gradient-to-br from-primary/15 to-pink-500/15 rounded-full blur-xl shadow-2xl"
+                      style={{ top: '10%', left: '15%', transformStyle: 'preserve-3d' }}
+                      animate={{ 
+                        scale: [1, 1.3, 1], 
+                        rotate: [0, 180, 360],
+                        rotateX: [0, 45, -45, 0],
+                        rotateY: [0, -90, 90, 0],
+                        z: [-100, 100, -100]
+                      }}
+                      transition={{ 
+                        duration: 12, 
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
                     />
                     <motion.div 
-                      className="absolute w-24 h-24 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-xl"
-                      style={{ bottom: '20%', right: '20%' }}
-                      animate={{ scale: [1.2, 1, 1.2], rotate: [360, 180, 0] }}
-                      transition={{ duration: 10, repeat: Infinity }}
+                      className="absolute w-28 h-28 bg-gradient-to-br from-blue-500/12 to-purple-500/12 rounded-full blur-xl shadow-xl"
+                      style={{ bottom: '20%', right: '20%', transformStyle: 'preserve-3d' }}
+                      animate={{ 
+                        scale: [1.2, 0.8, 1.2], 
+                        rotate: [360, 180, 0],
+                        rotateX: [0, -60, 60, 0],
+                        rotateZ: [0, 270, -270, 0],
+                        z: [50, -150, 50]
+                      }}
+                      transition={{ 
+                        duration: 15, 
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    />
+                    <motion.div 
+                      className="absolute w-20 h-20 bg-gradient-to-br from-green-500/8 to-cyan-500/8 rounded-full blur-lg"
+                      style={{ top: '60%', left: '5%', transformStyle: 'preserve-3d' }}
+                      animate={{ 
+                        scale: [0.8, 1.5, 0.8], 
+                        rotateY: [0, 360],
+                        rotateZ: [0, -180, 0],
+                        z: [-80, 120, -80]
+                      }}
+                      transition={{ 
+                        duration: 18, 
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
                     />
                   </div>
                 </div>
