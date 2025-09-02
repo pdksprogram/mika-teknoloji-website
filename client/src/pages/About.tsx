@@ -2,6 +2,7 @@ import { Building, Users, Award, Globe } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import teamPhoto from "@assets/image_1756822202470.png";
+import gamzePhoto from "@assets/image_1756823252649.png";
 
 export default function About() {
   const stats = [
@@ -49,6 +50,75 @@ export default function About() {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Leadership Section */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">
+            Üst Düzey Yönetim
+          </h2>
+          
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-0 shadow-xl overflow-hidden">
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="aspect-square md:aspect-auto">
+                  <img 
+                    src={gamzePhoto} 
+                    alt="Gamze Deniz Toksoy - Yazılım Müdürü" 
+                    className="w-full h-full object-cover"
+                    data-testid="leadership-photo"
+                  />
+                </div>
+                <div className="p-8 flex flex-col justify-center bg-gradient-to-br from-slate-50 to-slate-100">
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="text-2xl font-bold text-slate-800 mb-2">
+                        Gamze Deniz Toksoy
+                      </h3>
+                      <p className="text-lg font-semibold text-primary mb-4">
+                        Yazılım Müdürü
+                      </p>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <div>
+                        <h4 className="font-semibold text-slate-700 mb-1">
+                          Uzmanlık Alanı:
+                        </h4>
+                        <p className="text-slate-600">
+                          Yazılım Mühendisi ve Personel Devam Kontrol Sistemleri (PDKS) Uzmanı
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h4 className="font-semibold text-slate-700 mb-1">
+                          Teknoloji Yetkinlikleri:
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                            ASP.NET
+                          </span>
+                          <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                            SQL
+                          </span>
+                          <span className="px-3 py-1 bg-cyan-100 text-cyan-800 rounded-full text-sm font-medium">
+                            React
+                          </span>
+                        </div>
+                      </div>
+                      
+                      <div className="pt-2">
+                        <p className="text-slate-600 italic">
+                          "PDKS teknolojileri alanında uzman kadromuzun lideri olarak, 
+                          müşterilerimize en güncel yazılım çözümlerini sunmak için çalışıyoruz."
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
         </div>
 
         {/* Team Section */}
