@@ -115,20 +115,6 @@ export default function About() {
                       </div>
                       
                       <div className="pt-2">
-                        <div className="space-y-2">
-                          <h4 className="font-semibold text-slate-700 mb-1">
-                            Geliştirdiği Ürünler:
-                          </h4>
-                          <ul className="text-slate-600 space-y-1">
-                            <li>• Access Control Panel (Erişim Kontrol Paneli)</li>
-                            <li>• Guard MX Bekçi Kontrol Sistemi</li>
-                            <li>• Anakart Tasarımı ve PCB Geliştirme</li>
-                          </ul>
-                        </div>
-                        <p className="text-slate-600 italic pt-2">
-                          "Elektronik mühendisliği bilgimle donanım tasarımından yazılım geliştirmeye 
-                          kadar tüm kontrol sistemlerini tasarlıyor ve geliştiriyoruz."
-                        </p>
                       </div>
                     </div>
                   </div>
@@ -160,9 +146,27 @@ export default function About() {
                     <h3 className="text-xl font-bold text-slate-800 mb-2">
                       Tolga Yel Aldı
                     </h3>
-                    <p className="text-slate-600">
+                    <p className="text-slate-600 mb-4">
                       Arge Ve Üretim Müdürü
                     </p>
+                    
+                    <div className="space-y-3">
+                      <div>
+                        <h4 className="font-semibold text-slate-700 mb-1">
+                          Geliştirdiği Ürünler:
+                        </h4>
+                        <ul className="text-slate-600 space-y-1">
+                          <li>• Access Control Panel (Erişim Kontrol Paneli)</li>
+                          <li>• Guard MX Bekçi Kontrol Sistemi</li>
+                          <li>• Anakart Tasarımı ve PCB Geliştirme</li>
+                        </ul>
+                      </div>
+                      
+                      <p className="text-slate-600 italic pt-2">
+                        "Elektronik mühendisliği bilgimle donanım tasarımından yazılım geliştirmeye 
+                        kadar tüm kontrol sistemlerini tasarlıyor ve geliştiriyoruz."
+                      </p>
+                    </div>
                   </div>
                   
                   <div className="grid md:grid-cols-2 gap-4 mt-6">
