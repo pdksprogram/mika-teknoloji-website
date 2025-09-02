@@ -82,16 +82,29 @@ export default function Header() {
       {/* Promotional Banner */}
       <div className="bg-primary text-white py-2 text-sm">
         <div className="container mx-auto px-4">
-          <div className="flex justify-center items-center">
-            <a 
-              href="https://wa.link/vblc5g" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="font-bold hover:text-white/90 transition-colors"
-              data-testid="promo-banner"
-            >
-Mika Teknoloji ile işletmenizi dijitalleştirin!
-            </a>
+          <div className="flex justify-between items-center">
+            <div className="flex-1 flex justify-center">
+              <a 
+                href="https://wa.link/vblc5g" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="font-bold hover:text-white/90 transition-colors"
+                data-testid="promo-banner"
+              >
+                Mika Teknoloji ile işletmenizi dijitalleştirin!
+              </a>
+            </div>
+            <div className="flex-shrink-0">
+              <Button 
+                asChild 
+                size="sm"
+                variant="ghost"
+                className="text-white hover:text-white/90 hover:bg-white/10 px-3 py-1 h-auto text-xs"
+                data-testid="top-privacy-button"
+              >
+                <Link href="/mobil-gizlilik-sozlesmesi">Gizlilik</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -182,15 +195,6 @@ Mika Teknoloji ile işletmenizi dijitalleştirin!
               <Button 
                 asChild 
                 size="sm"
-                variant="outline"
-                className="border-slate-300 hover:bg-slate-50 text-slate-700 px-3"
-                data-testid="privacy-policy-button"
-              >
-                <Link href="/mobil-gizlilik-sozlesmesi">Gizlilik</Link>
-              </Button>
-              <Button 
-                asChild 
-                size="sm"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-4"
                 data-testid="webpdks-button"
               >
@@ -242,14 +246,6 @@ Mika Teknoloji ile işletmenizi dijitalleştirin!
                   </Link>
                 ))}
                 <div className="pt-4 border-t space-y-3">
-                  <Button 
-                    asChild 
-                    variant="outline"
-                    className="w-full border-slate-300 hover:bg-slate-50 text-slate-700"
-                    data-testid="mobile-privacy-policy-button"
-                  >
-                    <Link href="/mobil-gizlilik-sozlesmesi">Gizlilik Sözleşmesi</Link>
-                  </Button>
                   <Button 
                     asChild 
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white"
