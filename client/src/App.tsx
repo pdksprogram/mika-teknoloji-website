@@ -13,6 +13,7 @@ import Solutions from "@/pages/Solutions";
 import Products from "@/pages/Products";
 import Contact from "@/pages/Contact";
 import References from "@/pages/References";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -24,6 +25,7 @@ function Router() {
       <Route path="/urunler" component={Products} />
       <Route path="/referanslar" component={References} />
       <Route path="/iletisim" component={Contact} />
+      <Route path="/mobil-gizlilik-sozlesmesi" component={PrivacyPolicy} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
