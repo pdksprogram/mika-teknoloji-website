@@ -11,7 +11,7 @@ export default function Contact() {
       icon: MapPin,
       title: "Adres",
       details: [
-        "Perpa Ticaret Merkezi B Blok 12.Kat No:2119",
+        "Perpa Ticaret Merkezi A Blok 4-5.Kat No:0158",
         "34384 Şişli/İstanbul"
       ]
     },
