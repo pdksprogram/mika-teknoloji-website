@@ -1,6 +1,7 @@
-import { Building, Users, Award, Globe } from "lucide-react";
+import { Building, Users, Award, Globe, Settings, Timer, Smartphone, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 import teamPhoto from "@assets/image_1756822202470.png";
 import gamzePhoto from "@assets/image_1756823252649.png";
 import hierarchyPhoto from "@assets/image_1756823893243.png";
@@ -18,25 +19,111 @@ export default function About() {
   return (
     <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
-        {/* Vision Statement */}
-        <div className="text-center mb-20">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-8 leading-tight" data-testid="about-title">
-              Türkiye'nin Güvenilir PDKS ve Kontrol Sistemleri Uzmanı
-            </h1>
-            <p className="text-xl text-slate-600 mb-8">
-              İnovatif teknoloji çözümleri ile işletmelerin dijital dönüşümüne öncülük ediyoruz
-            </p>
-            <Button 
-              asChild 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-3"
-              data-testid="contact-button"
-            >
-              <a href="/iletisim">İletişime Geçin</a>
-            </Button>
+        {/* Corporate Hero Section - Idenfit Style */}
+        <section className="mb-20">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Quote Content */}
+              <motion.div
+                initial={{ opacity: 0, x: -40 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="relative">
+                  <div className="text-6xl text-primary/20 font-serif absolute -top-6 -left-4">"</div>
+                  <blockquote className="text-2xl md:text-3xl font-semibold text-slate-700 leading-relaxed mb-8 relative z-10">
+                    <span className="text-primary">Hedefimiz</span>, Türkiye'nin en güvenilir teknoloji 
+                    markalarından biri olup, <span className="text-primary">mobil PDKS</span> ve 
+                    kontrol sistemleri sektöründe <span className="text-primary">inovatif, yenilikçi</span> ve 
+                    lider kimliğimizle yeni başarılara imza atmak.
+                  </blockquote>
+                  <div className="flex items-center mb-8">
+                    <div className="w-12 h-1 bg-primary mr-4"></div>
+                    <cite className="text-lg font-medium text-slate-600 not-italic">Mika Teknoloji Ekibi</cite>
+                  </div>
+                </div>
+                
+                <motion.div 
+                  className="mt-8"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                  <Button 
+                    asChild 
+                    size="lg"
+                    className="bg-primary hover:bg-primary/90 text-white px-8 py-3 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+                    data-testid="contact-button"
+                  >
+                    <a href="/iletisim">
+                      Hemen Başvur <ArrowRight className="ml-2 h-5 w-5" />
+                    </a>
+                  </Button>
+                </motion.div>
+              </motion.div>
+
+              {/* Tech Visual */}
+              <motion.div
+                className="relative"
+                initial={{ opacity: 0, x: 40 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <div className="relative flex justify-center items-center min-h-[400px]">
+                  {/* Central Clock */}
+                  <div className="relative z-20">
+                    <div className="w-32 h-32 border-4 border-slate-300 rounded-full flex items-center justify-center bg-white shadow-lg">
+                      <Timer className="h-16 w-16 text-slate-600" />
+                    </div>
+                    {/* Clock hands */}
+                    <div className="absolute top-1/2 left-1/2 w-12 h-0.5 bg-slate-600 origin-left transform -translate-y-0.5 rotate-45"></div>
+                    <div className="absolute top-1/2 left-1/2 w-8 h-0.5 bg-primary origin-left transform -translate-y-0.5 rotate-12"></div>
+                  </div>
+
+                  {/* Surrounding Tech Elements */}
+                  <div className="absolute top-16 right-16 z-10 opacity-80">
+                    <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center">
+                      <Settings className="h-8 w-8 text-primary animate-spin" style={{ animationDuration: '10s' }} />
+                    </div>
+                  </div>
+
+                  <div className="absolute bottom-16 left-16 z-10 opacity-80">
+                    <div className="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center">
+                      <div className="relative">
+                        <div className="w-12 h-12 border-2 border-slate-400 rounded-full"></div>
+                        <div className="absolute inset-2 bg-slate-400 rounded-full"></div>
+                        <div className="absolute inset-3 bg-white rounded-full"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Smartphone */}
+                  <div className="absolute top-8 right-8 z-30">
+                    <div className="w-20 h-32 bg-slate-800 rounded-lg shadow-lg p-2">
+                      <div className="w-full h-full bg-slate-100 rounded-md relative">
+                        <div className="absolute top-2 left-2 right-2 h-8 bg-primary/20 rounded flex items-center justify-center">
+                          <Smartphone className="h-4 w-4 text-primary" />
+                        </div>
+                        <div className="absolute bottom-2 left-2 right-2">
+                          <div className="space-y-1">
+                            <div className="h-2 bg-primary/30 rounded"></div>
+                            <div className="h-2 bg-slate-300 rounded"></div>
+                            <div className="h-2 bg-slate-300 rounded"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Background Pattern */}
+                  <div className="absolute inset-0 opacity-5">
+                    <div className="w-full h-full bg-gradient-to-br from-primary to-pink-600"></div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
-        </div>
+        </section>
 
         {/* Stats */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
