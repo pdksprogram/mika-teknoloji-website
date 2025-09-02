@@ -5,10 +5,10 @@ import teamPhoto from "@assets/image_1756821522514.png";
 
 export default function About() {
   const stats = [
-    { icon: Users, value: "10,000+", label: "Müşteri Portföyü" },
-    { icon: Building, value: "15+", label: "Yıllık Deneyim" },
-    { icon: Globe, value: "Türkiye", label: "Çapında Hizmet" },
-    { icon: Award, value: "#1", label: "PDKS Çözümleri" }
+    { icon: Users, value: "10,000+", label: "Kurumsal Müşteri" },
+    { icon: Building, value: "15+", label: "Yıllık Tecrübe" },
+    { icon: Globe, value: "Türkiye", label: "Genelinde Hizmet" },
+    { icon: Award, value: "#1", label: "Sektör Lideri" }
   ];
 
   return (
@@ -17,11 +17,11 @@ export default function About() {
         {/* Vision Statement */}
         <div className="text-center mb-20">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-slate-800 mb-8 leading-tight" data-testid="about-title">
-              "Hedefimiz, Türkiye'nin en güvenilir teknoloji markalarından biri olup, PDKS sektöründe inovatif, yenilikçi ve lider kimliğimizle yeni başarılara imza atmak."
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-8 leading-tight" data-testid="about-title">
+              Türkiye'nin Güvenilir PDKS ve Kontrol Sistemleri Uzmanı
             </h1>
             <p className="text-xl text-slate-600 mb-8">
-              Mika Teknoloji Ekibi
+              İnovatif teknoloji çözümleri ile işletmelerin dijital dönüşümüne öncülük ediyoruz
             </p>
             <Button 
               asChild 
@@ -29,7 +29,7 @@ export default function About() {
               className="bg-primary hover:bg-primary/90 text-white px-8 py-3"
               data-testid="contact-button"
             >
-              <a href="/iletisim">Hemen İletişime Geç</a>
+              <a href="/iletisim">İletişime Geçin</a>
             </Button>
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function About() {
         {/* Team Section */}
         <div className="text-center mb-20">
           <h2 className="text-3xl font-bold text-slate-800 mb-12">
-            burada çalışmayı seviyoruz =)
+            Uzman Ekibimiz
           </h2>
           <div className="max-w-5xl mx-auto">
             <img 
@@ -69,37 +69,49 @@ export default function About() {
         {/* Story Section */}
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-slate-800 mb-12 text-center">
-            hikayemiz
+            Kurumsal Hikayemiz
           </h2>
           
           <div className="space-y-8 text-lg text-slate-600 leading-relaxed">
             <p>
               Mika Teknoloji Kontrol Sistemleri, 2008 yılında İstanbul'da kurulan ve PDKS (Personel Devam Kontrol Sistemi) 
-              alanında uzmanlaşmış yenilikçi bir teknoloji şirketidir. Kuruluşumuzdan bu yana, işletmelerin insan kaynakları 
-              yönetimini dijitalleştirmek ve verimliliğini artırmak için çalışıyoruz.
+              alanında uzmanlaşmış bir teknoloji şirketidir. Kuruluşumuzdan bu yana, kurumsal müşterilerimizin insan kaynakları 
+              yönetim süreçlerini dijitalleştirmek ve operasyonel verimliliği artırmak amacıyla kapsamlı çözümler sunmaktayız.
             </p>
             
             <p>
-              Binlerce müşteri portföyü ile Türkiye'nin kurumsal işgücü ve erişim kontrol yönetimine yönelik çözümler 
-              sunan güvenilir teknoloji ortağınızdır. Perpa Ticaret Merkezi'ndeki modern ofisimizden, ülke genelindeki 
-              müşterilerimize 7/24 hizmet vermekteyiz.
+              Türkiye genelinde 10.000'den fazla kurumsal müşteri portföyü ile iş gücü yönetimi ve erişim kontrol sistemleri 
+              alanında güvenilir teknoloji ortağı konumundayız. Perpa Ticaret Merkezi A Blok'taki modern merkez ofisimizden 
+              ülke çapındaki tüm müşterilerimize kesintisiz hizmet sağlamaktayız.
             </p>
             
             <p>
-              Web tabanlı PDKS çözümlerimiz, QR kodlu bekçi kontrol sistemlerimiz, turnike entegrasyonlarımız ve 
-              biyometrik erişim kontrol sistemlerimizle işletmelerin dijital dönüşüm sürecinde yanlarında yer alıyoruz. 
-              Mika Teknoloji olarak, teknolojinin gücünü insan kaynaklarının hizmetine sunarak, daha verimli ve 
-              şeffaf iş süreçleri oluşturuyoruz.
+              Web tabanlı PDKS çözümlerimiz, QR teknolojili bekçi kontrol sistemlerimiz, turnike entegrasyonları ve 
+              biyometrik erişim kontrol sistemlerimiz ile kurumların dijital dönüşüm projelerinde stratejik ortak rolü 
+              üstlenmekteyiz. Mika Teknoloji olarak, ileri teknoloji altyapısını kurumsal ihtiyaçlarla buluşturarak 
+              verimli ve güvenilir iş süreçleri geliştirmekteyiz.
             </p>
 
-            <div className="bg-slate-50 p-8 rounded-xl mt-12">
-              <h3 className="text-2xl font-bold text-slate-800 mb-4">
-                Vizyonumuz
-              </h3>
-              <p className="text-slate-600">
-                İnsan kaynakları ve iş gücü planlama alanında Türkiye'nin en güvenilir yazılım çözümlerinden biri olmak 
-                ve müşterilerimizin dijital dönüşüm sürecinde öncü teknolojiler sunmak.
-              </p>
+            <div className="grid md:grid-cols-2 gap-8 mt-12">
+              <div className="bg-slate-50 p-8 rounded-xl">
+                <h3 className="text-2xl font-bold text-slate-800 mb-4">
+                  Misyonumuz
+                </h3>
+                <p className="text-slate-600">
+                  Kurumsal müşterilerimize PDKS ve erişim kontrol sistemleri alanında en güncel teknoloji çözümlerini sunarak, 
+                  insan kaynakları yönetiminde verimliliği artırmak ve operasyonel süreçleri optimize etmek.
+                </p>
+              </div>
+              
+              <div className="bg-primary/5 p-8 rounded-xl">
+                <h3 className="text-2xl font-bold text-slate-800 mb-4">
+                  Vizyonumuz
+                </h3>
+                <p className="text-slate-600">
+                  İnsan kaynakları ve iş gücü yönetimi teknolojileri alanında Türkiye'nin lider yazılım şirketi olmak 
+                  ve uluslararası pazarlarda tanınan güvenilir bir marka haline gelmek.
+                </p>
+              </div>
             </div>
           </div>
         </div>
