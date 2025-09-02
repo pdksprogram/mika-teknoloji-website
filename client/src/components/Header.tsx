@@ -182,6 +182,15 @@ Mika Teknoloji ile işletmenizi dijitalleştirin!
               <Button 
                 asChild 
                 size="sm"
+                variant="outline"
+                className="border-slate-300 hover:bg-slate-50 text-slate-700 px-3"
+                data-testid="privacy-policy-button"
+              >
+                <Link href="/mobil-gizlilik-sozlesmesi">Gizlilik</Link>
+              </Button>
+              <Button 
+                asChild 
+                size="sm"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-4"
                 data-testid="webpdks-button"
               >
@@ -233,6 +242,14 @@ Mika Teknoloji ile işletmenizi dijitalleştirin!
                   </Link>
                 ))}
                 <div className="pt-4 border-t space-y-3">
+                  <Button 
+                    asChild 
+                    variant="outline"
+                    className="w-full border-slate-300 hover:bg-slate-50 text-slate-700"
+                    data-testid="mobile-privacy-policy-button"
+                  >
+                    <Link href="/mobil-gizlilik-sozlesmesi">Gizlilik Sözleşmesi</Link>
+                  </Button>
                   <Button 
                     asChild 
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white"
