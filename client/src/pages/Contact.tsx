@@ -210,7 +210,7 @@ export default function Contact() {
                 Konum
               </CardTitle>
               <CardDescription>
-                Perpa Ticaret Merkezi'nde merkez ofisimiz
+                Perpa Ticaret Merkezi A Blok 4-5. Kat'ta merkez ofisimiz
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -224,7 +224,7 @@ export default function Contact() {
                   data-testid="map-button"
                 >
                   <a 
-                    href="https://maps.app.goo.gl/kn83Z499DR7uEu3u9" 
+                    href="https://www.google.com/maps/place/41.015137,28.979530" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
