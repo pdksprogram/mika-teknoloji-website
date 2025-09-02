@@ -1,7 +1,7 @@
 import { Building, Users, Award, Globe } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import teamPhoto from "@assets/image_1756821522514.png";
+import teamPhoto from "@assets/image_1756822202470.png";
 
 export default function About() {
   const stats = [
