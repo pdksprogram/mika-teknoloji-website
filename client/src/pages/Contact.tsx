@@ -214,8 +214,18 @@ export default function Contact() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="aspect-video bg-slate-200 rounded-lg flex items-center justify-center">
-                <p className="text-slate-500">Harita buraya gelecek</p>
+              <div className="aspect-video bg-slate-200 rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.8665934891897!2d28.977043315528033!3d41.01513797930165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab765c7f55555%3A0x5d7e8e4e8e4e8e4e!2sPerpa%20Ticaret%20Merkezi%20A%20Blok!5e0!3m2!1str!2str!4v1692123456789!5m2!1str!2str"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Mika Teknoloji Konum - Perpa Ticaret Merkezi A Blok"
+                  data-testid="google-map"
+                ></iframe>
               </div>
               <div className="mt-4 flex justify-center">
                 <Button 
