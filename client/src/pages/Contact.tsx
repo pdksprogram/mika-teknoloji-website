@@ -34,8 +34,7 @@ export default function Contact() {
       icon: Clock,
       title: "Çalışma Saatleri",
       details: [
-        "Pazartesi - Cuma: 08:00 - 18:00",
-        "Cumartesi: 09:00 - 17:00"
+        "Pazartesi - Cuma: 09:00 - 18:00"
       ]
     }
   ];
