@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import LoadingScreen from "@/components/LoadingScreen";
+import { LanguageProvider } from "@/hooks/useLanguage";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Solutions from "@/pages/Solutions";
@@ -46,7 +47,8 @@ function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
+      <LanguageProvider>
+        <TooltipProvider>
         <AnimatePresence mode="wait">
           {isLoading ? (
             <LoadingScreen key="loading" onComplete={() => setIsLoading(false)} />
@@ -66,7 +68,8 @@ function App() {
           )}
         </AnimatePresence>
         <Toaster />
-      </TooltipProvider>
+        </TooltipProvider>
+      </LanguageProvider>
     </QueryClientProvider>
   );
 }

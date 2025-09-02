@@ -3,38 +3,34 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/hooks/useLanguage";
 import HeroCarousel from "@/components/HeroCarousel";
 
 export default function Home() {
+  const { t } = useLanguage();
+  
   const services = [
     {
       icon: Shield,
-      title: "WebPDKS",
-      description: "%100 Web Tabanlı Personel Devam Kontrol Sistemi",
+      title: t.home.services.webpdks.title,
+      description: t.home.services.webpdks.description,
       href: "/cozumler/webpdks"
     },
     {
       icon: Clock,
-      title: "QR-Patrol",
-      description: "Online Bekçi Devriye Tur Kontrol Uygulaması (iOS & Android)",
+      title: t.home.services.qrPatrol.title,
+      description: t.home.services.qrPatrol.description,
       href: "/cozumler/qr-patrol"
     },
     {
       icon: Users,
-      title: "Access Kontrol",
-      description: "Giriş çıkış kontrol ve otomasyon projelendirme",
+      title: t.home.services.accessControl.title,
+      description: t.home.services.accessControl.description,
       href: "/cozumler/access-kontrol"
     }
   ];
 
-  const features = [
-    "100,000'in üzerinde müşteri portföyü",
-    "%100 Web tabanlı çözümler",
-    "Her yerden, her cihazdan erişim",
-    "Modern teknoloji çözümleri",
-    "Güvenilir PDKS çözümleri",
-    "Uzman teknik destek"
-  ];
+  const features = t.home.features;
 
   // Animation variants
   const fadeInUp = {
@@ -67,10 +63,10 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4" data-testid="features-title">
-              Size özelleştirilmiş çözümler
+              {t.home.featuresTitle}
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Uzman ve tecrübeli kadromuz ile her zaman yanınızdayız.
+              {t.home.featuresSubtitle}
             </p>
           </motion.div>
           
