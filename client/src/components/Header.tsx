@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { useIsMobile } from "@/hooks/use-mobile";
 import mikaLogo from "@assets/mika_1756450206871.jpg";
 
@@ -9,8 +15,14 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isProductsMenuOpen, setIsProductsMenuOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState("tr");
   const [location] = useLocation();
   const isMobile = useIsMobile();
+
+  const languages = [
+    { code: "tr", name: "Türkçe", flag: "🇹🇷" },
+    { code: "en", name: "English", flag: "🇺🇸" }
+  ];
 
   // Handle scroll effect for sticky header
   useEffect(() => {
@@ -25,6 +37,13 @@ export default function Header() {
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
+
+  // Handle language change
+  const handleLanguageChange = (langCode: string) => {
+    setSelectedLanguage(langCode);
+    // Here you can add logic to change the actual website language
+    console.log("Language changed to:", langCode);
+  };
 
   const navigationItems = [
     { href: "/", label: "Ürünler", hasDropdown: true },
@@ -192,6 +211,38 @@ export default function Header() {
 
             {/* Special Buttons */}
             <div className="hidden lg:flex items-center space-x-3">
+              {/* Language Selector */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="flex items-center space-x-2 px-3"
+                    data-testid="language-selector"
+                  >
+                    <Globe className="h-4 w-4" />
+                    <span>{languages.find(lang => lang.code === selectedLanguage)?.flag}</span>
+                    <span className="hidden sm:inline">{languages.find(lang => lang.code === selectedLanguage)?.name}</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  {languages.map((language) => (
+                    <DropdownMenuItem
+                      key={language.code}
+                      onClick={() => handleLanguageChange(language.code)}
+                      className="flex items-center space-x-2 cursor-pointer"
+                      data-testid={`lang-option-${language.code}`}
+                    >
+                      <span>{language.flag}</span>
+                      <span>{language.name}</span>
+                      {selectedLanguage === language.code && (
+                        <span className="ml-auto text-primary">✓</span>
+                      )}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+
               <Button 
                 asChild 
                 size="sm"
@@ -246,6 +297,29 @@ export default function Header() {
                   </Link>
                 ))}
                 <div className="pt-4 border-t space-y-3">
+                  {/* Mobile Language Selector */}
+                  <div className="space-y-2">
+                    <p className="text-sm font-medium text-slate-600">Dil Seçimi</p>
+                    <div className="grid grid-cols-2 gap-2">
+                      {languages.map((language) => (
+                        <Button
+                          key={language.code}
+                          variant={selectedLanguage === language.code ? "default" : "outline"}
+                          size="sm"
+                          onClick={() => handleLanguageChange(language.code)}
+                          className="flex items-center space-x-2 justify-center"
+                          data-testid={`mobile-lang-${language.code}`}
+                        >
+                          <span>{language.flag}</span>
+                          <span>{language.name}</span>
+                          {selectedLanguage === language.code && (
+                            <span className="text-xs">✓</span>
+                          )}
+                        </Button>
+                      ))}
+                    </div>
+                  </div>
+                  
                   <Button 
                     asChild 
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white"
