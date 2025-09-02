@@ -84,7 +84,7 @@ export default function Contact() {
                 className="w-full bg-green-600 hover:bg-green-700 text-white"
                 data-testid="whatsapp-button"
               >
-                <a href="https://wa.link/j312qg" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/905467122296" target="_blank" rel="noopener noreferrer">
                   WhatsApp ile İletişim
                 </a>
               </Button>
