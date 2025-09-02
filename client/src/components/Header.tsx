@@ -82,7 +82,7 @@ export default function Header() {
       {/* Promotional Banner */}
       <div className="bg-primary text-white py-2 text-sm">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center">
+          <div className="flex items-center relative">
             <div className="flex-1 flex justify-center">
               <a 
                 href="https://wa.link/vblc5g" 
@@ -94,7 +94,7 @@ export default function Header() {
                 Mika Teknoloji ile işletmenizi dijitalleştirin!
               </a>
             </div>
-            <div className="flex-shrink-0">
+            <div className="absolute right-0">
               <Button 
                 asChild 
                 size="sm"
