@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import teamPhoto from "@assets/image_1756822202470.png";
 import gamzePhoto from "@assets/image_1756823252649.png";
 import hierarchyPhoto from "@assets/image_1756823893243.png";
+import suphiPhoto from "@assets/image_1756824630814.png";
 
 export default function About() {
   const stats = [
@@ -194,6 +195,92 @@ export default function About() {
                         <li>• Web Uygulamaları</li>
                         <li>• Mobil Çözümler</li>
                       </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+
+        {/* Mobile Development Section */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">
+            Mobil Yazılım Uzmanı
+          </h2>
+          
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-0 shadow-xl overflow-hidden">
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="aspect-square md:aspect-auto">
+                  <img 
+                    src={suphiPhoto} 
+                    alt="Suphi Gezgin - Mobil Yazılım Uzmanı" 
+                    className="w-full h-full object-cover"
+                    data-testid="suphi-photo"
+                  />
+                </div>
+                <div className="p-8 flex flex-col justify-center bg-gradient-to-br from-blue-50 to-blue-100">
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="text-2xl font-bold text-slate-800 mb-2">
+                        Suphi Gezgin
+                      </h3>
+                      <p className="text-lg font-semibold text-blue-600 mb-4">
+                        Mobil Programlama Uzmanı
+                      </p>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <div>
+                        <h4 className="font-semibold text-slate-700 mb-1">
+                          Uzmanlık Alanı:
+                        </h4>
+                        <p className="text-slate-600">
+                          ESoft PDKS Mobil Yazılım Mühendisi
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h4 className="font-semibold text-slate-700 mb-1">
+                          Mobil Teknolojileri:
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                            Android
+                          </span>
+                          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                            iOS
+                          </span>
+                          <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
+                            React Native
+                          </span>
+                          <span className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">
+                            Flutter
+                          </span>
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <h4 className="font-semibold text-slate-700 mb-1">
+                          Mobil Uygulama Özellikleri:
+                        </h4>
+                        <ul className="text-slate-600 space-y-1 text-sm">
+                          <li>• Offline Çalışma Desteği</li>
+                          <li>• GPS Konum Takibi</li>
+                          <li>• Push Notification</li>
+                          <li>• Biyometrik Kimlik Doğrulama</li>
+                          <li>• QR Code Tarama</li>
+                          <li>• Real-time Senkronizasyon</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="pt-2">
+                        <p className="text-slate-600 italic">
+                          "PDKS mobil uygulamalarında kullanıcı deneyimini en üst seviyede tutarak, 
+                          her platformda kesintisiz çalışan çözümler geliştiriyorum."
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
