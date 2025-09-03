@@ -17,6 +17,7 @@ import References from "@/pages/References";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import PDKSPage from "@/pages/PDKSPage";
 import AccessControlPage from "@/pages/AccessControlPage";
+import FingerprintSystemPage from "@/pages/FingerprintSystemPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -28,6 +29,7 @@ function Router() {
       <Route path="/urunler" component={Products} />
       <Route path="/cozumler/pdks" component={PDKSPage} />
       <Route path="/access-control" component={AccessControlPage} />
+      <Route path="/urunler/parmak-izi-tanima" component={FingerprintSystemPage} />
       <Route path="/referanslar" component={References} />
       <Route path="/iletisim" component={Contact} />
       <Route path="/mobil-gizlilik-sozlesmesi" component={PrivacyPolicy} />
