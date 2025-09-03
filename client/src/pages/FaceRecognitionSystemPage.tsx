@@ -141,6 +141,216 @@ export default function FaceRecognitionSystemPage() {
           </div>
       </section>
 
+      {/* SEO Content Section */}
+      <section className="container mx-auto px-4 py-16 bg-white">
+        <div className="max-w-6xl mx-auto">
+          
+          {/* Main SEO Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="prose prose-lg max-w-none"
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              Yüz Tanıma Sistemleri ile Gelişmiş Güvenlik ve Personel Takip Çözümleri
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-12 mb-12">
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                  Neden Mika Teknoloji Yüz Tanıma Sistemleri?
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  <strong>Mika Teknoloji</strong> olarak, son teknoloji <strong>yüz tanıma sistemleri</strong> ile işletmenizin güvenlik ihtiyaçlarını karşılıyoruz. 
+                  MTFD15, MTFP15, MTFDP50 ve MTFDP200 modellerimiz ile <strong>1.500'den 20.000'e kadar kullanıcı kapasitesi</strong> sunuyoruz.
+                </p>
+                <p className="text-gray-600">
+                  <strong>Wi-Fi desteği, TCP/IP bağlantı</strong> ve <strong>500.000'e kadar log kapasitesi</strong> ile modern işletmeler için 
+                  ideal <strong>PDKS çözümleri</strong> sağlıyoruz. Hem <strong>parmak izi hem de yüz tanıma</strong> teknolojilerini 
+                  tek cihazda birleştiren hibrit modellerimiz sayesinde maksimum güvenlik elde edebilirsiniz.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                  Yüz Tanıma Teknolojisinin Avantajları
+                </h3>
+                <ul className="space-y-3 text-gray-600">
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span><strong>Temassız güvenlik:</strong> Hijyenik ve hızlı geçiş kontrolü (0.1-0.2 saniye)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span><strong>Kart kaybı riski yok:</strong> Personel kartı taşıma zorunluluğu ortadan kalkar</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span><strong>Proxy geçiş önleme:</strong> Başkası adına geçiş yapılması engellenebilir</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span><strong>Geniş çalışma koşulları:</strong> -20°C ile +50°C arası sıcaklık aralığında çalışma</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span><strong>Çoklu entegrasyon:</strong> Turnike, bariyer ve kapı kilit sistemleri ile uyumlu</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Usage Areas */}
+            <div className="bg-gray-50 rounded-xl p-8 mb-12">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
+                Yüz Tanıma Sistemleri Kullanım Alanları
+              </h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-8 h-8 text-primary" />
+                  </div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Kurumsal Güvenlik</h4>
+                  <p className="text-sm text-gray-600">Fabrikalar, hastaneler, holding binalar, plazalar için gelişmiş personel takip sistemi</p>
+                </div>
+                <div className="text-center">
+                  <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-8 h-8 text-primary" />
+                  </div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Eğitim Kurumları</h4>
+                  <p className="text-sm text-gray-600">Okul, üniversite, kurs merkezleri için öğrenci ve öğretmen takip sistemi</p>
+                </div>
+                <div className="text-center">
+                  <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-8 h-8 text-primary" />
+                  </div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Hizmet Sektörü</h4>
+                  <p className="text-sm text-gray-600">Spor salonları, restoranlar, oteller için üye ve personel takip uygulamaları</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Technical Comparison */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
+                Mika Teknoloji Yüz Tanıma Cihazları Karşılaştırması
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-300 bg-white rounded-lg">
+                  <thead>
+                    <tr className="bg-primary text-white">
+                      <th className="border border-gray-300 px-4 py-3 text-left">Model</th>
+                      <th className="border border-gray-300 px-4 py-3 text-center">Yüz Kapasitesi</th>
+                      <th className="border border-gray-300 px-4 py-3 text-center">Parmak İzi</th>
+                      <th className="border border-gray-300 px-4 py-3 text-center">Log Kapasitesi</th>
+                      <th className="border border-gray-300 px-4 py-3 text-center">Özel Özellik</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border border-gray-300 px-4 py-3 font-semibold">MTFD15</td>
+                      <td className="border border-gray-300 px-4 py-3 text-center">1.500</td>
+                      <td className="border border-gray-300 px-4 py-3 text-center">-</td>
+                      <td className="border border-gray-300 px-4 py-3 text-center">150.000</td>
+                      <td className="border border-gray-300 px-4 py-3 text-center">3,5" Dokunmatik Ekran</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 px-4 py-3 font-semibold">MTFP15</td>
+                      <td className="border border-gray-300 px-4 py-3 text-center">1.000</td>
+                      <td className="border border-gray-300 px-4 py-3 text-center">1.000</td>
+                      <td className="border border-gray-300 px-4 py-3 text-center">100.000</td>
+                      <td className="border border-gray-300 px-4 py-3 text-center">2,4" TFT LCD + Klavye</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 px-4 py-3 font-semibold">MTFDP50</td>
+                      <td className="border border-gray-300 px-4 py-3 text-center">5.000</td>
+                      <td className="border border-gray-300 px-4 py-3 text-center">5.000</td>
+                      <td className="border border-gray-300 px-4 py-3 text-center">500.000</td>
+                      <td className="border border-gray-300 px-4 py-3 text-center">Modern Tasarım</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 px-4 py-3 font-semibold">MTFDP200</td>
+                      <td className="border border-gray-300 px-4 py-3 text-center">20.000</td>
+                      <td className="border border-gray-300 px-4 py-3 text-center">20.000</td>
+                      <td className="border border-gray-300 px-4 py-3 text-center">500.000</td>
+                      <td className="border border-gray-300 px-4 py-3 text-center">Enterprise Çözüm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* FAQ Section */}
+            <div className="bg-white border rounded-xl p-8">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-8 text-center">
+                Sıkça Sorulan Sorular - Yüz Tanıma Sistemleri
+              </h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Yüz tanıma sistemi nasıl çalışır?</h4>
+                  <p className="text-gray-600 mb-4">
+                    Yüz tanıma teknolojisi, yüzün alın, burun ve çene bölgelerindeki benzersiz geometrik noktaları analiz eder. 
+                    Bu matematiksel algoritmalar sayesinde her kişi için eşsiz bir kimlik oluşturulur.
+                  </p>
+
+                  <h4 className="font-semibold text-gray-800 mb-2">Makyaj veya gözlük takınca çalışır mı?</h4>
+                  <p className="text-gray-600 mb-4">
+                    Evet, gelişmiş algoritmalarımız makyaj, gözlük, bıyık veya sakal gibi değişiklikleri tolere edebilir. 
+                    Sistem yüzün değişmeyen anatomik özelliklerini baz alır.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Hangi aydınlatma koşullarında çalışır?</h4>
+                  <p className="text-gray-600 mb-4">
+                    Mika Teknoloji yüz tanıma cihazları, karanlık ve çok aydınlık ortamlar dahil geniş bir aydınlatma 
+                    spektrumunda çalışabilir. IR ışık desteği sayesinde gece görüş özelliği sunar.
+                  </p>
+
+                  <h4 className="font-semibold text-gray-800 mb-2">PDKS yazılımı ile nasıl entegre olur?</h4>
+                  <p className="text-gray-600 mb-4">
+                    Cihazlarımız TCP/IP ve USB bağlantısı ile var olan PDKS yazılımınıza kolayca entegre edilebilir. 
+                    Real-time data transferi ve raporlama yapabilirsiniz.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="text-center mt-12 bg-gradient-to-r from-primary to-pink-600 text-white rounded-xl p-8">
+              <h3 className="text-2xl font-bold mb-4">
+                Yüz Tanıma Sistemi Fiyatları ve Teklif Almak İçin
+              </h3>
+              <p className="text-lg mb-6 opacity-90">
+                İşletmenize en uygun yüz tanıma PDKS çözümünü öğrenmek ve detaylı fiyat bilgisi almak için bizimle iletişime geçin.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  asChild 
+                  size="lg"
+                  className="bg-white text-primary hover:bg-gray-100 font-semibold px-8"
+                  data-testid="cta-contact-button"
+                >
+                  <Link href="/iletisim">📞 Hemen Teklif Al</Link>
+                </Button>
+                <Button 
+                  asChild 
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-primary font-semibold px-8"
+                  data-testid="cta-whatsapp-button"
+                >
+                  <a href="https://wa.link/vblc5g" target="_blank" rel="noopener noreferrer">
+                    💬 WhatsApp Destek
+                  </a>
+                </Button>
+              </div>
+            </div>
+
+          </motion.div>
+        </div>
+      </section>
+
     </div>
   );
 }
