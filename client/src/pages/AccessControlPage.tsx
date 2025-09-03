@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 
-// Access Control Panel images
-const accessControlPanel = "/attached_assets/image_1756893802044.png";
+// Access Control Panel images  
+const accessControlPanel = "/access-control-panel.png";
 
 export default function AccessControlPage() {
   const { selectedLanguage } = useLanguage();
