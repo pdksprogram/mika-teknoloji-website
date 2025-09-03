@@ -77,6 +77,22 @@ export default function FingerprintSystemPage() {
                       </div>
                     </div>
                   )}
+                  
+                  {/* Wi-Fi Badge - 2. ve 3. cihaz için */}
+                  {(device.id === 2 || device.id === 3) && (
+                    <div className="absolute -top-3 -left-3 z-10">
+                      <div className="relative">
+                        <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-2 rounded-full text-xs font-bold shadow-xl transform -rotate-12 animate-pulse">
+                          <div className="flex items-center gap-1">
+                            <span>📶</span>
+                            <span>Wi-Fi</span>
+                          </div>
+                        </div>
+                        {/* Glow effect */}
+                        <div className="absolute inset-0 bg-green-400 rounded-full blur-sm opacity-75 animate-ping"></div>
+                      </div>
+                    </div>
+                  )}
                   <CardContent className="p-6">
                     <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden border border-gray-200">
                       {device.image && device.image !== "/placeholder-device.jpg" ? (
