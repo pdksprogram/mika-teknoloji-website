@@ -9,7 +9,7 @@ const devices = [
     id: 1,
     name: "MT1100",
     description: "Yüz Tanıma ve Parmak İzi Sistemi",
-    image: "@assets/image_1756900443600.png",
+    image: "/mt1100-device.png",
     features: ["4.3\" TFT Renkli Ekran", "Yüz Tanıma Teknolojisi", "Parmak İzi Okuyucu", "TCP/IP Bağlantı"]
   },
   {
@@ -79,9 +79,9 @@ export default function FingerprintSystemPage() {
                   )}
                   <CardContent className="p-6">
                     <div className="aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                      {device.image.startsWith('@assets/') ? (
+                      {device.image && device.image !== "/placeholder-device.jpg" ? (
                         <img 
-                          src={device.image.replace('@assets/', '/attached_assets/')} 
+                          src={device.image} 
                           alt={device.name}
                           className="w-full h-full object-contain"
                         />
