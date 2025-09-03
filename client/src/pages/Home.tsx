@@ -85,14 +85,62 @@ export default function Home() {
           {JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Mika Teknoloji",
+              "@type": "LocalBusiness",
+              "@id": "https://mikateknoloji.com/#organization",
+              "name": "Mika Teknoloji Kontrol Sistemleri",
+              "alternateName": "Mika Teknoloji",
               "url": "https://mikateknoloji.com",
               "logo": "https://mikateknoloji.com/mika-logo.jpg",
+              "image": "https://mikateknoloji.com/mika-logo.jpg",
               "description": "1990'dan beri PDKS sistemi sağlayıcısı. Personel devam kontrol, parmak izi takip, yüz tanıma çözümleri.",
               "foundingDate": "1990",
               "industry": "Security Systems",
-              "serviceArea": "Turkey"
+              "email": "info@mikateknoloji.com",
+              "telephone": "+90-546-712-22-96",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Perpa Ticaret Merkezi A Blok 4-5.Kat No:0158",
+                "addressLocality": "Şişli",
+                "addressRegion": "İstanbul",
+                "postalCode": "34384",
+                "addressCountry": "TR"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "41.0602",
+                "longitude": "28.9847"
+              },
+              "openingHours": ["Mo-Fr 09:00-18:00"],
+              "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
+              "priceRange": "$$",
+              "areaServed": {
+                "@type": "Country",
+                "name": "Turkey"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "PDKS ve Güvenlik Sistemleri",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "PDKS Sistemleri"
+                    }
+                  },
+                  {
+                    "@type": "Offer", 
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Güvenlik Sistemleri"
+                    }
+                  }
+                ]
+              },
+              "sameAs": [
+                "https://www.linkedin.com/company/mika-teknoloji",
+                "https://www.facebook.com/mikateknoloji"
+              ]
             },
             {
               "@context": "https://schema.org",
