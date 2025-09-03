@@ -10,8 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 // import { useIsMobile } from "@/hooks/use-mobile"; // Not used currently
 import { useLanguage } from "@/hooks/useLanguage";
-// import mikaLogo from "@assets/mika_1756450206871.jpg";
-const mikaLogo = "/mika_logo.png"; // Placeholder for now
+const mikaLogo = "/mika-logo.jpg"; // Real Mika logo
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

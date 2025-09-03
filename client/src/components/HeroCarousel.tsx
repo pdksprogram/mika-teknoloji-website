@@ -5,11 +5,11 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, ChevronLeft, ChevronRight, CheckCircle, Smartphone, Shield, Eye, Scan } from 'lucide-react';
 import { Link } from 'wouter';
 
-// Import generated images
-import qrTrackingImage from '@assets/generated_images/QR_personnel_tracking_system_26b366a7.png';
-import turnstileImage from '@assets/generated_images/Modern_turnstile_security_system_b933269f.png';
-import securityPatrolImage from '@assets/generated_images/Security_guard_patrol_tracking_5c5b9b52.png';
-import xrayImage from '@assets/generated_images/X-ray_security_scanner_system_9ebbd7d1.png';
+// Carousel images from public folder
+const qrTrackingImage = '/QR_personnel_tracking_system_26b366a7.png';
+const turnstileImage = '/Modern_turnstile_security_system_b933269f.png';
+const securityPatrolImage = '/Security_guard_patrol_tracking_5c5b9b52.png';
+const xrayImage = '/X-ray_security_scanner_system_9ebbd7d1.png';
 
 interface CarouselSlide {
   id: number;

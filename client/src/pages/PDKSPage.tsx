@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 
-// Device images - using placeholders for now
-const facialRecognitionDevice = "https://images.unsplash.com/photo-1553672825-24ec37ac1af1?w=400&h=400&fit=crop&crop=center";
-const qrPdksDevice1 = "https://images.unsplash.com/photo-1581092336223-69e7c1f11673?w=400&h=400&fit=crop&crop=center";
-const qrPdksDevice2 = "https://images.unsplash.com/photo-1581092336223-69e7c1f11673?w=400&h=400&fit=crop&crop=center";
-const fingerprintDevice = "https://images.unsplash.com/photo-1564519219525-4d3f0be51b1b?w=400&h=400&fit=crop&crop=center";
+// Real device images
+const facialRecognitionDevice = "/facial-device.png";
+const qrPdksDevice1 = "/qr-device-1.png";
+const qrPdksDevice2 = "/qr-device-2.png";
+const fingerprintDevice = "/fingerprint-device.png";
 
 export default function PDKSPage() {
   const { selectedLanguage } = useLanguage();
