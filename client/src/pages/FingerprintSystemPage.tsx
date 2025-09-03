@@ -7,9 +7,9 @@ import { Link } from "wouter";
 const devices = [
   {
     id: 1,
-    name: "OP-FDP200",
+    name: "MT1100",
     description: "Yüz Tanıma ve Parmak İzi Sistemi",
-    image: "/placeholder-device.jpg",
+    image: "@assets/image_1756900443600.png",
     features: ["4.3\" TFT Renkli Ekran", "Yüz Tanıma Teknolojisi", "Parmak İzi Okuyucu", "TCP/IP Bağlantı"]
   },
   {
@@ -78,13 +78,21 @@ export default function FingerprintSystemPage() {
                     </div>
                   )}
                   <CardContent className="p-6">
-                    <div className="aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-                      <div className="text-gray-400 text-center">
-                        <div className="w-16 h-16 bg-primary/10 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                          <Shield className="w-8 h-8 text-primary" />
+                    <div className="aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                      {device.image.startsWith('@assets/') ? (
+                        <img 
+                          src={device.image.replace('@assets/', '/attached_assets/')} 
+                          alt={device.name}
+                          className="w-full h-full object-contain"
+                        />
+                      ) : (
+                        <div className="text-gray-400 text-center">
+                          <div className="w-16 h-16 bg-primary/10 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                            <Shield className="w-8 h-8 text-primary" />
+                          </div>
+                          <p className="text-sm">Cihaz Görseli</p>
                         </div>
-                        <p className="text-sm">Cihaz Görseli</p>
-                      </div>
+                      )}
                     </div>
                     
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{device.name}</h3>
