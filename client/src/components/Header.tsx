@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Phone, Mail, Globe } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -8,16 +8,17 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useIsMobile } from "@/hooks/use-mobile";
+// import { useIsMobile } from "@/hooks/use-mobile"; // Not used currently
 import { useLanguage } from "@/hooks/useLanguage";
-import mikaLogo from "@assets/mika_1756450206871.jpg";
+// import mikaLogo from "@assets/mika_1756450206871.jpg";
+const mikaLogo = "/mika_logo.png"; // Placeholder for now
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isProductsMenuOpen, setIsProductsMenuOpen] = useState(false);
   const [location] = useLocation();
-  const isMobile = useIsMobile();
+  // const isMobile = useIsMobile(); // Not used currently
   const { selectedLanguage, setSelectedLanguage, t } = useLanguage();
 
   const languages = [
@@ -55,7 +56,7 @@ export default function Header() {
 
   const megaMenuData = {
     "Çözümler": [
-      { name: "PDKS (Personel Devam Kontrol)", href: "/pdks" },
+      { name: "PDKS (Personel Devam Kontrol)", href: "/cozumler/pdks" },
       { name: "Access Geçiş Kontrol Sistemleri", href: "/access-control" },
       { name: "Bekçi Tur Kontrol Sistemi", href: "/bekci-tur" },
       { name: "QR Bekçi Sistemi", href: "/qr-bekci" },
