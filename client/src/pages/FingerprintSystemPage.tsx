@@ -32,34 +32,6 @@ const devices = [
     description: "Standalone Parmak İzi Okuyucu",
     image: "/placeholder-device.jpg",
     features: ["Küçük Boyut", "Düşük Güç", "RS485 Bağlantı", "Pratik Kullanım"]
-  },
-  {
-    id: 5,
-    name: "OP-P1000",
-    description: "Parmak İzi Okuyucu Terminal",
-    image: "/placeholder-device.jpg",
-    features: ["TFT Ekran", "Ses Uyarısı", "Wiegand Çıkış", "Dayanıklı Yapı"]
-  },
-  {
-    id: 6,
-    name: "OP-P1100",
-    description: "Parmak İzi Okuyucu Cihazı",
-    image: "/placeholder-device.jpg",
-    features: ["Gelişmiş Algoritma", "Hızlı İşlem", "USB/RS232", "Güvenli Saklama"]
-  },
-  {
-    id: 7,
-    name: "OP-P1100W",
-    description: "Parmak İzi Okuyucu (WiFi)",
-    image: "/placeholder-device.jpg",
-    features: ["WiFi Bağlantı", "Kablosuz İletişim", "Uzaktan Yönetim", "Kolay Entegrasyon"]
-  },
-  {
-    id: 8,
-    name: "OP-PA1000",
-    description: "Parmak İzi Okuyucu Terminal",
-    image: "/placeholder-device.jpg",
-    features: ["Profesyonel Seri", "Yüksek Kapasiteli", "Web Tabanlı", "Multi-Modal"]
   }
 ];
 
