@@ -99,10 +99,10 @@ export default function FaceRecognitionSystemPage() {
                         <img 
                           src={device.image} 
                           alt={device.name}
-                          className={`w-full h-full object-contain ${device.id === 4 ? 'scale-125' : ''}`}
+                          className={`w-full h-full object-contain ${device.id === 1 ? 'scale-150' : device.id === 4 ? 'scale-125' : ''}`}
                           style={{
                             backgroundColor: '#ffffff',
-                            padding: device.id === 4 ? '4px' : '8px'
+                            padding: device.id === 1 ? '2px' : device.id === 4 ? '4px' : '8px'
                           }}
                         />
                       ) : (
