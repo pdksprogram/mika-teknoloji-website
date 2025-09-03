@@ -61,8 +61,8 @@ export default function FingerprintSystemPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full hover:shadow-lg transition-shadow duration-300 relative">
-                  {/* YENİ Badge - sadece ilk 2 cihaz için */}
-                  {device.id <= 2 && (
+                  {/* YENİ Badge - 2. ve 3. cihaz için */}
+                  {(device.id === 2 || device.id === 3) && (
                     <div className="absolute -top-3 -right-3 z-10">
                       <div className="relative">
                         <div className="bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl transform rotate-12 animate-bounce">
