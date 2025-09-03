@@ -21,10 +21,10 @@ const devices = [
   },
   {
     id: 3,
-    name: "OP-S100",
-    description: "Standalone Parmak İzi Terminal",
-    image: "/placeholder-device.jpg",
-    features: ["Bağımsız Çalışma", "Kompakt Tasarım", "USB Bağlantı", "Kolay Kurulum"]
+    name: "MT35",
+    description: "Yüz Tanıma Terminal",
+    image: "/mt35-device.png",
+    features: ["3.000 yüz tanıma kullanıcı kapasitesi", "5.000 kart desteği", "200.000'e kadar geçiş kaydı hafızası", "Yüz tanıma, kart ve şifre ile giriş imkânı", "TCP/IP, USB ve Wi-Fi bağlantı desteği"]
   },
   {
     id: 4,
