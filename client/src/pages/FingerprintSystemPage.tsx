@@ -99,7 +99,7 @@ export default function FingerprintSystemPage() {
                         <img 
                           src={device.image} 
                           alt={device.name}
-                          className={`w-full h-full object-contain ${device.id === 4 ? 'scale-110' : ''}`}
+                          className={`w-full h-full object-contain ${device.id === 4 ? 'scale-125' : ''}`}
                           style={{
                             backgroundColor: '#ffffff',
                             padding: device.id === 4 ? '4px' : '8px'
