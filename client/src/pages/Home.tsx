@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/hooks/useLanguage";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import HeroCarousel from "@/components/HeroCarousel";
 
 export default function Home() {
@@ -52,6 +52,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Helmet>
         <title>PDKS - Personel Devam Kontrol Sistemi | Mika Teknoloji - 30+ Yıl Deneyim, 50.000+ Kullanıcı</title>
+        <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
         <meta name="description" content="1990'dan beri Türkiye'nin lider PDKS sistemi! Personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem. 20.000 kapasite, TCP/IP, Wi-Fi desteği. Binlerce referans!" />
         <meta name="keywords" content="PDKS, personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem, pdks programı, PDKS yazılımı, personel takip sistemi, biyometrik güvenlik sistemleri, QR kod PDKS, RFID kart sistemi, mesai hesaplama, vardiya takibi, bordro entegrasyonu, zaman kontrol sistemi, geçiş kontrol sistemi, turnike sistemleri, güvenlik sistemleri" />
         
@@ -79,85 +80,46 @@ export default function Home() {
         <meta name="twitter:title" content="PDKS - Personel Devam Kontrol Sistemi | Mika Teknoloji" />
         <meta name="twitter:description" content="1990'dan beri Türkiye'nin lider PDKS sistemi! 20.000 kapasite, TCP/IP, Wi-Fi desteği." />
         
-        {/* Structured Data - Enhanced following Meyer approach */}
+        {/* Enhanced JSON-LD Structured Data */}
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "Organization",
-                "name": "Mika Teknoloji Kontrol Sistemleri",
-                "alternateName": "Mika Teknoloji",
-                "url": "https://mikateknoloji.com",
-                "logo": "https://mikateknoloji.com/mika-logo.jpg",
-                "description": "1990'dan beri Türkiye'nin lider PDKS sistemi sağlayıcısı. Personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem çözümleri.",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressCountry": "TR",
-                  "addressLocality": "Istanbul"
-                },
-                "contactPoint": [
-                  {
-                    "@type": "ContactPoint",
-                    "telephone": "+90-xxx-xxx-xxxx",
-                    "contactType": "customer support",
-                    "availableLanguage": ["tr", "en"],
-                    "areaServed": "TR"
-                  },
-                  {
-                    "@type": "ContactPoint",
-                    "email": "info@mikateknoloji.com",
-                    "contactType": "sales",
-                    "availableLanguage": ["tr", "en"]
-                  }
-                ],
-                "foundingDate": "1990",
-                "numberOfEmployees": "50-100",
-                "industry": ["Security Systems", "Personnel Tracking Systems", "Biometric Technology"],
-                "serviceArea": "Turkey",
-                "hasCredential": ["ISO 27001", "ISO 9001", "CE", "FCC"],
-                "knowsAbout": ["PDKS", "Personnel Attendance Control", "Biometric Systems", "Fingerprint Recognition", "Facial Recognition", "RFID Systems"],
-                "sameAs": [
-                  "https://www.linkedin.com/company/mika-teknoloji",
-                  "https://twitter.com/mikateknoloji"
-                ]
-              },
-              {
-                "@type": "Product",
-                "name": "Mika PDKS - Personel Devam Kontrol Sistemi",
-                "description": "Profesyonel PDKS yazılımı ve donanım çözümleri. Parmak izi, yüz tanıma, QR kod, RFID kart desteği.",
-                "brand": "Mika Teknoloji",
-                "category": "Security Software",
-                "offers": {
-                  "@type": "Offer",
-                  "availability": "InStock",
-                  "priceCurrency": "TRY",
-                  "seller": {
-                    "@type": "Organization",
-                    "name": "Mika Teknoloji"
-                  }
-                },
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.8",
-                  "reviewCount": "500",
-                  "bestRating": "5",
-                  "worstRating": "1"
-                }
-              },
-              {
-                "@type": "WebSite",
-                "url": "https://mikateknoloji.com",
-                "name": "Mika Teknoloji",
-                "description": "PDKS, Personel Devam Kontrol Sistemi ve Güvenlik Çözümleri",
-                "potentialAction": {
-                  "@type": "SearchAction",
-                  "target": "https://mikateknoloji.com/search?q={search_term_string}",
-                  "query-input": "required name=search_term_string"
-                }
+          {JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Mika Teknoloji",
+              "url": "https://mikateknoloji.com",
+              "logo": "https://mikateknoloji.com/mika-logo.jpg",
+              "description": "1990'dan beri PDKS sistemi sağlayıcısı. Personel devam kontrol, parmak izi takip, yüz tanıma çözümleri.",
+              "foundingDate": "1990",
+              "industry": "Security Systems",
+              "serviceArea": "Turkey"
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "url": "https://mikateknoloji.com/",
+              "name": "Mika Teknoloji",
+              "description": "PDKS, Personel Devam Kontrol Sistemi ve Güvenlik Çözümleri",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://mikateknoloji.com/search?q={query}",
+                "query-input": "required name=query"
               }
-            ]
-          })}
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "Mika PDKS - Personel Devam Kontrol Sistemi",
+              "description": "Web tabanlı PDKS sistemi. Parmak izi, yüz tanıma, QR kod desteği.",
+              "applicationCategory": "SecurityApplication",
+              "operatingSystem": "Web Browser",
+              "offers": {
+                "@type": "Offer",
+                "availability": "InStock",
+                "priceCurrency": "TRY"
+              }
+            }
+          ])}
         </script>
       </Helmet>
       

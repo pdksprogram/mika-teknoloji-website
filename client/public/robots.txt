@@ -19,6 +19,10 @@ Allow: /referanslar
 
 # Block unnecessary pages
 Disallow: /admin/
+Disallow: /login/
+Disallow: /account/
+Disallow: /devices
+Disallow: /ViewOnlineDevices.aspx
 Disallow: /private/
 Disallow: /*?*
 
