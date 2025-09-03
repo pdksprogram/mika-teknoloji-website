@@ -8,7 +8,7 @@ import { Link } from "wouter";
 // Real device images
 const facialRecognitionDevice = "/facial-device.png";
 const qrPdksDevice1 = "/qr-hand-mockup.png";
-const qrPdksDevice2 = "/qr-device-2.png";
+const qrPdksDevice2 = "/rfid-turnstile-system.png";
 const fingerprintDevice = "/fingerprint-device.png";
 
 export default function PDKSPage() {
@@ -462,7 +462,7 @@ export default function PDKSPage() {
                   <div className="relative group">
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300" />
                     <div className="relative bg-white p-8 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300">
-                      <div className={`${system.id === 'qr' ? 'aspect-[3/4] max-w-xs' : 'aspect-square max-w-md'} mx-auto overflow-hidden rounded-lg`}>
+                      <div className={`${system.id === 'qr' ? 'aspect-[3/4] max-w-xs' : system.id === 'rfid' ? 'aspect-[4/3] max-w-lg' : 'aspect-square max-w-md'} mx-auto overflow-hidden rounded-lg`}>
                         <img 
                           src={system.image} 
                           alt={system.data.title}
