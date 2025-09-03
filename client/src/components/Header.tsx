@@ -143,11 +143,11 @@ export default function Header() {
   const productsMenuData = {
     "Ürünler": [
       { name: "Parmak İzi Tanıma Sistemleri", href: "/urunler/parmak-izi-tanima" },
+      { name: "Yüz Tanıma Sistemleri", href: "/urunler/yuz-tanima" },
       { name: "Geçiş Kontrol Sistemleri", href: "/urunler/gecis-kontrol" },
       { name: "Turnike Sistemleri", href: "/urunler/turnike" },
       { name: "Personel Takip Sistemleri", href: "/urunler/personel-takip" },
       { name: "QR Kodlu PDKS Sistemi", href: "/urunler/qr-pdks" },
-      { name: "Yüz Tanıma Sistemleri", href: "/urunler/yuz-tanima" },
       { name: "Bariyer Sistemleri", href: "/urunler/bariyer" },
       { name: "Plaka Tanıma Sistemleri", href: "/urunler/plaka-tanima" },
       { name: "OGS & HGS Geçiş Sistemleri", href: "/urunler/ogs-hgs" },
