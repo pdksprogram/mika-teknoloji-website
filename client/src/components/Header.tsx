@@ -9,13 +9,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
 // import { useIsMobile } from "@/hooks/use-mobile"; // Not used currently
 import { useLanguage } from "@/hooks/useLanguage";
 const mikaLogo = "/mika-logo.jpg"; // Real Mika logo
@@ -297,53 +290,15 @@ export default function Header() {
                 <span className="text-slate-400">|</span>
                 
                 {/* Site İçi Arama */}
-                <Dialog open={isSearchOpen} onOpenChange={setIsSearchOpen}>
-                  <DialogTrigger asChild>
-                    <Button 
-                      variant="ghost" 
-                      size="sm"
-                      className="bg-primary hover:bg-primary/90 text-white px-2 py-1 h-auto"
-                      data-testid="search-button"
-                    >
-                      <Search className="h-4 w-4" />
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-md">
-                    <DialogHeader>
-                      <DialogTitle>Site İçi Arama</DialogTitle>
-                    </DialogHeader>
-                    <div className="space-y-4">
-                      <Input
-                        placeholder="Aranacak kelimeyi yazın..."
-                        value={searchQuery}
-                        onChange={(e) => handleSearch(e.target.value)}
-                        className="w-full"
-                        autoFocus
-                        data-testid="search-input"
-                      />
-                      {searchResults.length > 0 && (
-                        <div className="max-h-60 overflow-y-auto space-y-2">
-                          {searchResults.map((result, index) => (
-                            <div 
-                              key={index}
-                              className="p-3 hover:bg-slate-50 rounded-lg cursor-pointer border border-slate-200"
-                              onClick={() => handleSearchResult(result.url)}
-                              data-testid={`search-result-${index}`}
-                            >
-                              <h4 className="font-medium text-slate-900">{result.title}</h4>
-                              <p className="text-sm text-slate-600">{result.description}</p>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                      {searchQuery && searchResults.length === 0 && (
-                        <p className="text-sm text-slate-500 py-4 text-center">
-                          Aramanızla eşleşen sonuç bulunamadı.
-                        </p>
-                      )}
-                    </div>
-                  </DialogContent>
-                </Dialog>
+                <Button 
+                  variant="ghost" 
+                  size="sm"
+                  className="bg-primary hover:bg-primary/90 text-white px-2 py-1 h-auto"
+                  onClick={() => setIsSearchOpen(true)}
+                  data-testid="search-button"
+                >
+                  <Search className="h-4 w-4" />
+                </Button>
               </div>
             </nav>
 
@@ -428,6 +383,104 @@ export default function Header() {
           </div>
         )}
       </header>
+      
+      {/* Fullscreen Search Overlay */}
+      {isSearchOpen && (
+        <div className="fixed inset-0 z-[9999] bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center p-4">
+          {/* Close Button */}
+          <button
+            onClick={() => {
+              setIsSearchOpen(false);
+              setSearchQuery("");
+              setSearchResults([]);
+            }}
+            className="absolute top-8 right-8 text-white/80 hover:text-white transition-colors"
+            data-testid="search-close-button"
+          >
+            <X className="h-8 w-8" />
+          </button>
+          
+          {/* Search Content */}
+          <div className="w-full max-w-3xl text-center">
+            {/* Title */}
+            <h2 className="text-white text-3xl md:text-4xl font-bold mb-12">
+              NE ARAMIŞTINIZ?
+            </h2>
+            
+            {/* Search Input */}
+            <div className="relative mb-8">
+              <div className="flex items-center bg-white/10 backdrop-blur border border-white/20 rounded-lg overflow-hidden">
+                <Input
+                  placeholder="Aranacak kelimeyi yazın..."
+                  value={searchQuery}
+                  onChange={(e) => handleSearch(e.target.value)}
+                  className="flex-1 bg-transparent border-none text-white placeholder:text-white/70 text-lg px-6 py-4 focus-visible:ring-0 focus-visible:ring-offset-0"
+                  autoFocus
+                  data-testid="fullscreen-search-input"
+                />
+                <Button 
+                  variant="ghost" 
+                  size="lg"
+                  className="text-white hover:bg-white/10 px-6"
+                  data-testid="fullscreen-search-submit"
+                >
+                  <Search className="h-6 w-6" />
+                </Button>
+              </div>
+            </div>
+            
+            {/* Search Results */}
+            {searchResults.length > 0 && (
+              <div className="max-w-2xl mx-auto space-y-3 max-h-80 overflow-y-auto">
+                {searchResults.map((result, index) => (
+                  <div 
+                    key={index}
+                    className="bg-white/10 backdrop-blur border border-white/20 rounded-lg p-4 hover:bg-white/20 cursor-pointer transition-colors text-left"
+                    onClick={() => handleSearchResult(result.url)}
+                    data-testid={`fullscreen-search-result-${index}`}
+                  >
+                    <h4 className="font-semibold text-white text-lg mb-2">{result.title}</h4>
+                    <p className="text-white/80">{result.description}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+            
+            {/* No Results */}
+            {searchQuery && searchResults.length === 0 && (
+              <div className="bg-white/10 backdrop-blur border border-white/20 rounded-lg p-8 max-w-xl mx-auto">
+                <p className="text-white/90 text-lg">
+                  Aramanızla eşleşen sonuç bulunamadı.
+                </p>
+                <p className="text-white/70 text-sm mt-2">
+                  Farklı kelimeler deneyebilir veya daha genel terimler kullanabilirsiniz.
+                </p>
+              </div>
+            )}
+            
+            {/* Search Suggestions when empty */}
+            {!searchQuery && (
+              <div className="max-w-2xl mx-auto">
+                <p className="text-white/80 mb-6 text-lg">
+                  Popüler aramalar:
+                </p>
+                <div className="flex flex-wrap gap-3 justify-center">
+                  {['PDKS', 'Personel Takip', 'Yüz Tanıma', 'Parmak İzi', 'QR Kod', 'RFID Kart', 'WebPDKS'].map((suggestion) => (
+                    <button
+                      key={suggestion}
+                      onClick={() => handleSearch(suggestion)}
+                      className="bg-white/10 backdrop-blur border border-white/20 rounded-full px-4 py-2 text-white hover:bg-white/20 transition-colors"
+                      data-testid={`search-suggestion-${suggestion.toLowerCase()}`}
+                    >
+                      {suggestion}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </>
   );
 }
