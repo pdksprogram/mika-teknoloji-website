@@ -21,10 +21,10 @@ const devices = [
   },
   {
     id: 3,
-    name: "MT35",
+    name: "MTFDP200",
     description: "Yüz Tanıma ve Parmak İzi Terminal",
-    image: "/mt35-real.png",
-    features: ["3.000 yüz tanıma kullanıcı kapasitesi", "5.000 kart desteği", "200.000'e kadar geçiş kaydı hafızası", "Yüz tanıma, kart ve şifre ile giriş imkânı", "TCP/IP, USB ve Wi-Fi bağlantı desteği"]
+    image: "/mtfdp200-device.png",
+    features: ["Yüz Kayıt Kapasitesi : 20000", "Parmak İzi Kapasitesi : 20000", "Hareket Kayıp Kapasitesi : 500.000"]
   },
   {
     id: 4,
