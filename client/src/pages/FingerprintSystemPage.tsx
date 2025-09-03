@@ -14,10 +14,10 @@ const devices = [
   },
   {
     id: 2,
-    name: "OP-FDP50",
+    name: "MTP50",
     description: "Yüz Tanıma ve Parmak İzi Terminal",
-    image: "/placeholder-device.jpg",
-    features: ["Çift Doğrulama", "Renkli Ekran", "Hızlı Tanıma", "Ethernet Desteği"]
+    image: "/mtp50-device.png",
+    features: ["Yüz Kayıt Kapasitesi : 1000", "Parmak İzi Kayıt Kapasitesi : 1000", "Log Kapasitesi : 100.000", "Ekran Boyutu : 2,4 inç TFT LCD", "Röle : Var", "Haberleşme : TCP/IP, USB"]
   },
   {
     id: 3,
