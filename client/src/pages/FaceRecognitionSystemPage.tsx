@@ -28,10 +28,10 @@ const devices = [
   },
   {
     id: 4,
-    name: "MT-FR400",
-    description: "Yüz Tanıma ve Kart Okuyucu",
-    image: "/placeholder-device.jpg",
-    features: ["Cihaz özelliği 1", "Cihaz özelliği 2", "Cihaz özelliği 3", "Cihaz özelliği 4", "Cihaz özelliği 5"]
+    name: "MTFDP200",
+    description: "Yüz Tanıma ve Parmak İzi Terminal",
+    image: "/mtfdp200-yuz-device.png",
+    features: ["Yüz Kayıt Kapasitesi : 20000", "Parmak İzi Kayıt Kapasitesi : 20000", "Log Kapasitesi : 500.000", "Röle : Var", "Haberleşme : TCP/IP, USB"]
   }
 ];
 
