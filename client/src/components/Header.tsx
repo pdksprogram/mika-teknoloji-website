@@ -228,9 +228,9 @@ export default function Header() {
                   key={item.href}
                   className="relative"
                   onMouseEnter={() => {
-                    if (item.hasDropdown) {
+                    if (item.hasDropdown && item.menuType) {
                       setIsDropdownOpen(true);
-                      setActiveMenuType(item.menuType as 'solutions' | 'products' || null);
+                      setActiveMenuType(item.menuType as 'solutions' | 'products');
                     }
                   }}
                   onMouseLeave={() => {
@@ -256,7 +256,7 @@ export default function Header() {
                   </Link>
                   
                   {/* Mega Menu Dropdown */}
-                  {item.hasDropdown && isDropdownOpen && activeMenuType && (
+                  {item.hasDropdown && isDropdownOpen && activeMenuType && item.menuType === activeMenuType && (
                     <div className="absolute top-full left-0 w-screen max-w-5xl bg-white shadow-2xl border-t-4 border-primary z-50 transform -translate-x-1/4">
                       <div className={`grid ${activeMenuType === 'products' ? 'grid-cols-1' : 'grid-cols-4'} gap-6 p-8`}>
                         {Object.entries(activeMenuType === 'products' ? productsMenuData : solutionsMenuData).map(([category, items]) => (
