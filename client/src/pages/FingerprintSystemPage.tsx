@@ -23,7 +23,7 @@ const devices = [
     id: 3,
     name: "MT35",
     description: "Yüz Tanıma Terminal",
-    image: "/mt35-white-bg.png",
+    image: "/mt35-real.png",
     features: ["3.000 yüz tanıma kullanıcı kapasitesi", "5.000 kart desteği", "200.000'e kadar geçiş kaydı hafızası", "Yüz tanıma, kart ve şifre ile giriş imkânı", "TCP/IP, USB ve Wi-Fi bağlantı desteği"]
   },
   {
@@ -78,12 +78,16 @@ export default function FingerprintSystemPage() {
                     </div>
                   )}
                   <CardContent className="p-6">
-                    <div className="aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                    <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden border border-gray-200">
                       {device.image && device.image !== "/placeholder-device.jpg" ? (
                         <img 
                           src={device.image} 
                           alt={device.name}
                           className="w-full h-full object-contain"
+                          style={{
+                            backgroundColor: '#ffffff',
+                            padding: '8px'
+                          }}
                         />
                       ) : (
                         <div className="text-gray-400 text-center">
