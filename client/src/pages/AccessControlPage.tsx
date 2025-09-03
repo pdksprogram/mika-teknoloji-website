@@ -10,6 +10,7 @@ const accessControlPanel = "/access-control-panel.png";
 const accessControlProfessional = "/access-control-professional.png";
 const qrMobileAccess = "/qr-mobile-access.png";
 const mikaMobileApp = "/mika-mobile-app.png";
+const mikaQRApp = "/mika-qr-app.png";
 
 export default function AccessControlPage() {
   const { selectedLanguage } = useLanguage();
@@ -338,55 +339,26 @@ export default function AccessControlPage() {
                   className="text-center"
                 >
                   <div className="relative inline-block">
-                    {/* Clean Phone Mockup */}
-                    <div className="w-32 h-56 bg-slate-800 rounded-xl mx-auto relative overflow-hidden">
-                      <div className="absolute inset-2 bg-white rounded-lg">
-                        {/* App Interface */}
-                        <div className="p-3 h-full flex flex-col">
-                          {/* Status Bar */}
-                          <div className="flex justify-between items-center mb-3">
-                            <div className="text-xs font-semibold text-primary">MIKA</div>
-                            <div className="text-xs text-slate-400">●●●</div>
-                          </div>
-                          
-                          {/* QR Code Area */}
-                          <div className="flex-1 flex items-center justify-center">
-                            <motion.div
-                              animate={{ scale: [1, 1.05, 1] }}
-                              transition={{ duration: 2, repeat: Infinity, delay: 2.5 }}
-                              className="w-16 h-16 border-2 border-slate-800 relative"
-                            >
-                              {/* QR Pattern */}
-                              <div className="grid grid-cols-4 gap-0.5 p-1 h-full">
-                                {[...Array(16)].map((_, i) => (
-                                  <div 
-                                    key={i} 
-                                    className={`bg-slate-800 ${i % 3 === 0 ? 'opacity-100' : 'opacity-60'}`}
-                                  ></div>
-                                ))}
-                              </div>
-                              
-                              {/* Scan Effect */}
-                              <motion.div
-                                animate={{ opacity: [0, 1, 0] }}
-                                transition={{ duration: 1.5, repeat: Infinity, delay: 3 }}
-                                className="absolute inset-0 bg-primary/20 border-2 border-primary"
-                              ></motion.div>
-                            </motion.div>
-                          </div>
-                          
-                          {/* Button */}
-                          <div className="mt-3">
-                            <motion.div
-                              animate={{ backgroundColor: ['rgb(64 64 64)', 'rgb(34 197 94)', 'rgb(64 64 64)'] }}
-                              transition={{ duration: 2, repeat: Infinity, delay: 4 }}
-                              className="h-6 bg-slate-600 rounded text-white text-xs flex items-center justify-center"
-                            >
-                              ACCESS
-                            </motion.div>
-                          </div>
-                        </div>
-                      </div>
+                    {/* Real Mika QR App Photo */}
+                    <div className="relative">
+                      <img 
+                        src={mikaQRApp} 
+                        alt="Mika QR Mobile App"
+                        className="w-48 h-auto mx-auto rounded-2xl shadow-xl"
+                      />
+                      
+                      {/* QR Scan Animation Overlay */}
+                      <motion.div
+                        animate={{ opacity: [0, 0.8, 0] }}
+                        transition={{ duration: 2, repeat: Infinity, delay: 2.5 }}
+                        className="absolute inset-0 flex items-center justify-center"
+                      >
+                        <motion.div
+                          animate={{ scale: [1, 1.1, 1] }}
+                          transition={{ duration: 2, repeat: Infinity, delay: 2.5 }}
+                          className="w-24 h-24 border-4 border-primary rounded-lg bg-primary/10"
+                        ></motion.div>
+                      </motion.div>
                     </div>
                     <p className="text-sm text-slate-600 mt-3 font-medium">Mika Mobile App</p>
                     
