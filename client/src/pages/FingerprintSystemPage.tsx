@@ -24,7 +24,7 @@ const devices = [
     name: "MTFDP200",
     description: "Yüz Tanıma ve Parmak İzi Terminal",
     image: "/mtfdp200-device.png",
-    features: ["Yüz Kayıt Kapasitesi : 20000", "Parmak İzi Kapasitesi : 20000", "Hareket Kayıp Kapasitesi : 500.000"]
+    features: ["Yüz Kayıt Kapasitesi : 20000", "Parmak İzi Kayıt Kapasitesi : 20000", "Log Kapasitesi : 500.000", "Röle : Var", "Haberleşme : TCP/IP, USB"]
   },
   {
     id: 4,
