@@ -27,7 +27,7 @@ function Router() {
       <Route path="/cozumler" component={Solutions} />
       <Route path="/urunler" component={Products} />
       <Route path="/cozumler/pdks" component={PDKSPage} />
-      <Route path="/cozumler/access" component={AccessControlPage} />
+      <Route path="/access-control" component={AccessControlPage} />
       <Route path="/referanslar" component={References} />
       <Route path="/iletisim" component={Contact} />
       <Route path="/mobil-gizlilik-sozlesmesi" component={PrivacyPolicy} />
