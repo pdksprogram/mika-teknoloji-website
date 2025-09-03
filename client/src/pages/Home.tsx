@@ -51,46 +51,112 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Mika Teknoloji - PDKS, Personel Devam Kontrol Sistemi, Parmak İzi Takip Sistemi, Yüz Tanıma Sistem</title>
-        <meta name="description" content="Türkiye'nin lider PDKS yazılımı! Personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem, QR kod PDKS. 50.000+ referans, %99.9 güvenilirlik." />
-        <meta name="keywords" content="PDKS, personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem, pdks programı, PDKS yazılımı, personel takip sistemi, biyometrik güvenlik, QR kod PDKS, RFID kart sistemi" />
+        <title>PDKS - Personel Devam Kontrol Sistemi | Mika Teknoloji - 30+ Yıl Deneyim, 50.000+ Kullanıcı</title>
+        <meta name="description" content="1990'dan beri Türkiye'nin lider PDKS sistemi! Personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem. 20.000 kapasite, TCP/IP, Wi-Fi desteği. Binlerce referans!" />
+        <meta name="keywords" content="PDKS, personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem, pdks programı, PDKS yazılımı, personel takip sistemi, biyometrik güvenlik sistemleri, QR kod PDKS, RFID kart sistemi, mesai hesaplama, vardiya takibi, bordro entegrasyonu, zaman kontrol sistemi, geçiş kontrol sistemi, turnike sistemleri, güvenlik sistemleri" />
         
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Mika Teknoloji - PDKS, Personel Devam Kontrol Sistemi" />
-        <meta property="og:description" content="Türkiye'nin lider PDKS yazılımı! Personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem." />
+        {/* Technical SEO following Meyer/ZKTeco approach */}
+        <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+        <link rel="canonical" href="https://mikateknoloji.com/" />
+        <meta name="language" content="Turkish" />
+        <meta name="geo.region" content="TR" />
+        <meta name="geo.placename" content="Turkey" />
+        
+        {/* Open Graph Meta Tags - Enhanced like ZKTeco */}
+        <meta property="og:locale" content="tr_TR" />
+        <meta property="og:site_name" content="Mika Teknoloji" />
+        <meta property="og:title" content="PDKS - Personel Devam Kontrol Sistemi | Mika Teknoloji" />
+        <meta property="og:description" content="1990'dan beri Türkiye'nin lider PDKS sistemi! 20.000 kapasite, TCP/IP, Wi-Fi desteği. Binlerce referans!" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mikateknoloji.com" />
         <meta property="og:image" content="https://mikateknoloji.com/mika-logo.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Mika Teknoloji - PDKS, Personel Devam Kontrol Sistemi" />
-        <meta name="twitter:description" content="Türkiye'nin lider PDKS yazılımı! Personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem." />
+        <meta name="twitter:site" content="@MikaTeklonogi" />
+        <meta name="twitter:title" content="PDKS - Personel Devam Kontrol Sistemi | Mika Teknoloji" />
+        <meta name="twitter:description" content="1990'dan beri Türkiye'nin lider PDKS sistemi! 20.000 kapasite, TCP/IP, Wi-Fi desteği." />
         
-        {/* Structured Data */}
+        {/* Structured Data - Enhanced following Meyer approach */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Mika Teknoloji",
-            "url": "https://mikateknoloji.com",
-            "logo": "https://mikateknoloji.com/mika-logo.jpg",
-            "description": "Türkiye'nin lider PDKS sistemi sağlayıcısı. Personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem çözümleri.",
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "TR"
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+90-xxx-xxx-xxxx",
-              "contactType": "Customer Service",
-              "availableLanguage": ["tr", "en"]
-            },
-            "foundingDate": "1990",
-            "numberOfEmployees": "50-100",
-            "industry": "Security Systems",
-            "serviceArea": "Turkey",
-            "hasCredential": "ISO 27001, ISO 9001"
+            "@graph": [
+              {
+                "@type": "Organization",
+                "name": "Mika Teknoloji Kontrol Sistemleri",
+                "alternateName": "Mika Teknoloji",
+                "url": "https://mikateknoloji.com",
+                "logo": "https://mikateknoloji.com/mika-logo.jpg",
+                "description": "1990'dan beri Türkiye'nin lider PDKS sistemi sağlayıcısı. Personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem çözümleri.",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressCountry": "TR",
+                  "addressLocality": "Istanbul"
+                },
+                "contactPoint": [
+                  {
+                    "@type": "ContactPoint",
+                    "telephone": "+90-xxx-xxx-xxxx",
+                    "contactType": "customer support",
+                    "availableLanguage": ["tr", "en"],
+                    "areaServed": "TR"
+                  },
+                  {
+                    "@type": "ContactPoint",
+                    "email": "info@mikateknoloji.com",
+                    "contactType": "sales",
+                    "availableLanguage": ["tr", "en"]
+                  }
+                ],
+                "foundingDate": "1990",
+                "numberOfEmployees": "50-100",
+                "industry": ["Security Systems", "Personnel Tracking Systems", "Biometric Technology"],
+                "serviceArea": "Turkey",
+                "hasCredential": ["ISO 27001", "ISO 9001", "CE", "FCC"],
+                "knowsAbout": ["PDKS", "Personnel Attendance Control", "Biometric Systems", "Fingerprint Recognition", "Facial Recognition", "RFID Systems"],
+                "sameAs": [
+                  "https://www.linkedin.com/company/mika-teknoloji",
+                  "https://twitter.com/mikateknoloji"
+                ]
+              },
+              {
+                "@type": "Product",
+                "name": "Mika PDKS - Personel Devam Kontrol Sistemi",
+                "description": "Profesyonel PDKS yazılımı ve donanım çözümleri. Parmak izi, yüz tanıma, QR kod, RFID kart desteği.",
+                "brand": "Mika Teknoloji",
+                "category": "Security Software",
+                "offers": {
+                  "@type": "Offer",
+                  "availability": "InStock",
+                  "priceCurrency": "TRY",
+                  "seller": {
+                    "@type": "Organization",
+                    "name": "Mika Teknoloji"
+                  }
+                },
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.8",
+                  "reviewCount": "500",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                }
+              },
+              {
+                "@type": "WebSite",
+                "url": "https://mikateknoloji.com",
+                "name": "Mika Teknoloji",
+                "description": "PDKS, Personel Devam Kontrol Sistemi ve Güvenlik Çözümleri",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://mikateknoloji.com/search?q={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              }
+            ]
           })}
         </script>
       </Helmet>
@@ -108,12 +174,47 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4" data-testid="features-title">
-              {t.home.featuresTitle}
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6" data-testid="main-heading">
+              1990'dan Beri Türkiye'nin Lider PDKS Sistemi
+            </h1>
+            <div className="flex flex-wrap justify-center gap-6 mb-6">
+              <div className="bg-pink-50 px-4 py-2 rounded-full">
+                <span className="text-pink-600 font-semibold">50.000+ Kullanıcı</span>
+              </div>
+              <div className="bg-pink-50 px-4 py-2 rounded-full">
+                <span className="text-pink-600 font-semibold">30+ Yıl Deneyim</span>
+              </div>
+              <div className="bg-pink-50 px-4 py-2 rounded-full">
+                <span className="text-pink-600 font-semibold">%99.9 Güvenilirlik</span>
+              </div>
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4" data-testid="features-title">
+              Personel Devam Kontrol Sistemi, Parmak İzi Takip ve Yüz Tanıma Çözümleri
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              {t.home.featuresSubtitle}
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-8">
+              MT1100, MTP50, MTFDP200, MTFD15 serisi cihazlarımız ile 20.000 kapasite, TCP/IP, Wi-Fi desteği. 
+              ISO 27001 sertifikalı, bordro entegrasyonu, mesai hesaplama ve vardiya takibi.
             </p>
+            
+            {/* Technical Specifications like ZKTeco */}
+            <div className="grid md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              <div className="bg-white p-4 rounded-lg shadow-sm border">
+                <div className="text-2xl font-bold text-pink-600">20.000</div>
+                <div className="text-sm text-slate-600">Kullanıcı Kapasitesi</div>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm border">
+                <div className="text-2xl font-bold text-pink-600">0.3s</div>
+                <div className="text-sm text-slate-600">Yüz Tanıma Hızı</div>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm border">
+                <div className="text-2xl font-bold text-pink-600">TCP/IP</div>
+                <div className="text-sm text-slate-600">Ağ Bağlantısı</div>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm border">
+                <div className="text-2xl font-bold text-pink-600">Wi-Fi</div>
+                <div className="text-sm text-slate-600">Kablosuz Destek</div>
+              </div>
+            </div>
           </motion.div>
           
           <motion.div 
@@ -186,6 +287,77 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Reference Section - Following Meyer's approach */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+              Sektörün En İyi Markalarının Tercihi
+            </h2>
+            <p className="text-lg text-slate-600 mb-8">
+              30 yıllık tecrübemiz, sunduğu ürün ve hizmet kalitesi ile Türkiye'nin en büyük şirketlerinden KOBİ'lere kadar binlerce başarılı proje
+            </p>
+            <div className="text-pink-600 font-semibold text-sm mb-8">
+              500+ BAŞARILI REFERANS • 50.000+ KULLANICI • %99.9 GÜVENİLİRLİK
+            </div>
+          </motion.div>
+          
+          {/* Success Statistics */}
+          <motion.div 
+            className="grid md:grid-cols-4 gap-8 mb-16"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="text-center">
+              <div className="text-4xl font-bold text-pink-600 mb-2">500+</div>
+              <div className="text-slate-600">Başarılı Proje</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-pink-600 mb-2">50.000+</div>
+              <div className="text-slate-600">Aktif Kullanıcı</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-pink-600 mb-2">30+</div>
+              <div className="text-slate-600">Yıl Deneyim</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-pink-600 mb-2">%99.9</div>
+              <div className="text-slate-600">Sistem Güvenilirliği</div>
+            </div>
+          </motion.div>
+
+          {/* Advantages Section like Meyer */}
+          <motion.div 
+            className="grid md:grid-cols-3 gap-8 mb-16"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-lg transition-shadow duration-200">
+              <h3 className="font-bold text-lg mb-4 text-slate-800">En Fazla Tamamlanmış Proje</h3>
+              <p className="text-slate-600">Holdinglerden KOBİ'lere kadar 500+ başarılı PDKS projesi</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-lg transition-shadow duration-200">
+              <h3 className="font-bold text-lg mb-4 text-slate-800">Ücretsiz Danışmanlık</h3>
+              <p className="text-slate-600">PDKS, parmak izi ve yüz tanıma konusunda profesyonel destek</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-lg transition-shadow duration-200">
+              <h3 className="font-bold text-lg mb-4 text-slate-800">7/24 Müşteri Desteği</h3>
+              <p className="text-slate-600">Kesintisiz teknik destek ve sistem bakım hizmetleri</p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-slate-800 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -197,7 +369,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Uzman ve tecrübeli kadromuzla her zaman yanınızdayız
+            Tüm PDKS Çözümlerimiz İçin Ücretsiz Danışmanlık Alabilirsiniz
           </motion.h2>
           <motion.p 
             className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto"
@@ -206,8 +378,8 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Mika Teknoloji, geliştirdiği yazılım ve donanım çözümleri ile işletmelerin işgücünü daha verimli kullanmasına, 
-            çalışan maliyetlerinin kontrol altında tutulmasına, zamandan tasarruf edilmesine ve operasyonel verimliliğin artmasına yardımcı oluyor.
+            Personel devam kontrol sistemi, parmak izi takip sistemi ve yüz tanıma çözümleriniz için hemen iletişime geçin. 
+            MT serisi cihazlarımız ile 20.000 kapasite, TCP/IP ve Wi-Fi desteği garantili çözümler.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
