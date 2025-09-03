@@ -16,9 +16,9 @@ export default function PDKSPage() {
 
   const pdksTranslations = {
     tr: {
-      title: "Personel Devam Kontrol Sistemleri (PDKS)",
-      subtitle: "Modern İşgücü Yönetimi için Kapsamlı Çözümler",
-      description: "Mika Teknoloji olarak, işletmenizin personel takip ihtiyaçlarını karşılamak için en son teknoloji ürünlerini sunuyoruz. PDKS sistemlerimiz ile çalışan giriş-çıkış kontrolü, mesai takibi ve vardiya yönetimini dijital platformda gerçekleştirebilirsiniz.",
+      title: "Personel Devam Kontrol Sistemleri (PDKS) - Türkiye'nin Lider PDKS Çözümleri",
+      subtitle: "Biyometrik Personel Takip Sistemi | Yüz Tanıma | Parmak İzi | RFID | QR Kod PDKS",
+      description: "Mika Teknoloji, Türkiye'de 30+ yıllık deneyimle 100.000+ kullanıcıya hizmet veren lider PDKS sistemi sağlayıcısıdır. Fabrika, hastane, okul ve SME'ler için biyometrik personel giriş çıkış takip sistemi, mesai hesaplama, vardiya yönetimi ve bordro entegrasyonlu PDKS yazılımı çözümleri. KVKK uyumlu, bulut tabanlı ve mobil destekli personel devam kontrol sistemleri ile işgücü verimliliğinizi %40'a kadar artırın.",
       seoDescription: "Türkiye'nin önde gelen PDKS sistemleri ve personel devam kontrol çözümleri. Yüz tanıma, parmak izi, QR kod ve RFID kart teknolojileri ile modern işgücü yönetimi.",
       whatIsPdks: {
         title: "PDKS Nedir?",
