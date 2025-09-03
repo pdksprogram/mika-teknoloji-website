@@ -16,8 +16,7 @@ const mikaLogo = "/mika-logo.jpg"; // Real Mika logo
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [activeMenuType, setActiveMenuType] = useState<'solutions' | 'products' | null>(null);
+  const [isProductsMenuOpen, setIsProductsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<any[]>([]);
@@ -56,8 +55,6 @@ export default function Header() {
   // Close mobile menu when location changes
   useEffect(() => {
     setIsMenuOpen(false);
-    setIsDropdownOpen(false);
-    setActiveMenuType(null);
   }, [location]);
 
   // Handle language change
@@ -95,15 +92,14 @@ export default function Header() {
   };
 
   const navigationItems = [
-    { href: "/", label: t.nav.products, hasDropdown: true, menuType: 'solutions' },
+    { href: "/", label: t.nav.products, hasDropdown: true },
     { href: "/hakkimizda", label: t.nav.about },
-    { href: "/cozumler", label: t.nav.solutions, hasDropdown: true, menuType: 'products' },
+    { href: "/cozumler", label: t.nav.solutions },
     { href: "/referanslar", label: t.nav.references },
     { href: "/iletisim", label: t.nav.contact }
   ];
 
-  // Çözümler menüsü (şimdi Ürünler butonunda açılacak)
-  const solutionsMenuData = {
+  const megaMenuData = {
     "Çözümler": [
       { name: "PDKS (Personel Devam Kontrol)", href: "/cozumler/pdks" },
       { name: "Access Geçiş Kontrol Sistemleri", href: "/access-control" },
@@ -112,11 +108,7 @@ export default function Header() {
       { name: "Turnike Sistemleri", href: "/turnike" },
       { name: "Otel Kapı Kilit Sistemleri", href: "/otel-kilit" },
       { name: "Anahtar/Dolap Takip Sistemi", href: "/anahtar-takip" }
-    ]
-  };
-
-  // Ürünler menüsü (şimdi Çözümler butonunda açılacak)
-  const productsMenuData = {
+    ],
     "Donanımlar": [
       { name: "Biyometrik Yüz Tanıma Sistemi", href: "/yuz-tanima" },
       { name: "Parmak İzi Okuyucu", href: "/parmak-izi" },
@@ -211,18 +203,8 @@ export default function Header() {
                 <div
                   key={item.href}
                   className="relative"
-                  onMouseEnter={() => {
-                    if (item.hasDropdown) {
-                      setIsDropdownOpen(true);
-                      setActiveMenuType(item.menuType || null);
-                    }
-                  }}
-                  onMouseLeave={() => {
-                    if (item.hasDropdown) {
-                      setIsDropdownOpen(false);
-                      setActiveMenuType(null);
-                    }
-                  }}
+                  onMouseEnter={() => item.hasDropdown && setIsProductsMenuOpen(true)}
+                  onMouseLeave={() => item.hasDropdown && setIsProductsMenuOpen(false)}
                 >
                   <Link
                     href={item.href}
@@ -240,10 +222,10 @@ export default function Header() {
                   </Link>
                   
                   {/* Mega Menu Dropdown */}
-                  {item.hasDropdown && isDropdownOpen && activeMenuType && (
+                  {item.hasDropdown && isProductsMenuOpen && (
                     <div className="absolute top-full left-0 w-screen max-w-5xl bg-white shadow-2xl border-t-4 border-primary z-50 transform -translate-x-1/4">
-                      <div className={`grid ${activeMenuType === 'solutions' ? 'grid-cols-1' : 'grid-cols-3'} gap-6 p-8`}>
-                        {Object.entries(activeMenuType === 'solutions' ? solutionsMenuData : productsMenuData).map(([category, items]) => (
+                      <div className="grid grid-cols-4 gap-6 p-8">
+                        {Object.entries(megaMenuData).map(([category, items]) => (
                           <div key={category} className="space-y-4">
                             <h3 className="font-bold text-gray-900 text-lg border-b-2 border-primary pb-2">
                               {category}
@@ -266,10 +248,7 @@ export default function Header() {
                       </div>
                       <div className="bg-gray-50 px-8 py-4 border-t">
                         <p className="text-sm text-gray-600">
-                          {activeMenuType === 'solutions' 
-                            ? "Popüler Çözümler: PDKS Sistemi, Access Control, Bekçi Kontrol, Turnike Sistemleri, QR Devriye Takip"
-                            : "Popüler Ürünler: Kartlı Kapı PDKS, Personel Puanlama Programı, Kapı Kilit Sistemleri, Şifreli Kapı Kilidi, Bell Tipi Turnike, Geçiş Kontrol Paneli, Big Turnike, İnce Geçiş Turnike, Mobımre Turnike, Elektronik Kilit Muhsasırılık, polis programı"
-                          }
+                          Popüler Ürünler: Kartlı Kapı PDKS, Personel Puanlama Programı, Kapı Kilit Sistemleri, Şifreli Kapı Kilidi, Bell Tipi Turnike, Geçiş Kontrol Paneli, Big Turnike, İnce Geçiş Turnike, Mobımre Turnike, Elektronik Kilit Muhsasırılık, polis programı
                         </p>
                       </div>
                     </div>
