@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/hooks/useLanguage";
-import { CheckCircle, Shield, Eye, ArrowRight, Users, Lock, Zap, Clock } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { useEffect } from "react";
 
@@ -10,7 +9,6 @@ import { useEffect } from "react";
 const accessControlPanel = "/access-control-panel.png";
 const accessControlProfessional = "/access-control-professional.png";
 const qrMobileAccess = "/qr-mobile-access.png";
-const mikaMobileApp = "/mika-mobile-app.png";
 const mikaQRApp = "/mika-qr-app.png";
 
 export default function AccessControlPage() {
@@ -52,6 +50,57 @@ export default function AccessControlPage() {
       metaKeywords.setAttribute('content', keywords);
       document.head.appendChild(metaKeywords);
     }
+  }, [selectedLanguage]);
+
+  // Schema Markup for SEO
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Mika Teknoloji",
+          "url": "https://mikateknoloji.com",
+          "description": "Profesyonel access control sistemleri ve güvenlik teknolojileri uzmanı",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "TR"
+          }
+        },
+        {
+          "@type": "Product",
+          "name": "Access Control Sistemleri",
+          "description": "RFID kartlı geçiş, biyometrik parmak izi, yüz tanıma ve QR kodlu mobil erişim sistemleri",
+          "brand": {
+            "@type": "Brand",
+            "name": "Mika Teknoloji"
+          },
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": "2025-12-31"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "Geçiş Kontrol Sistemi Nedir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Geçiş kontrol sistemi; kimlerin, ne zaman, hangi kapıdan geçiş yapabileceğini belirleyen, elektronik cihazlar ve yazılımlar bütünüdür."
+            }
+          }]
+        }
+      ]
+    });
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
   }, [selectedLanguage]);
 
   const accessControlTranslations = {
@@ -408,12 +457,15 @@ export default function AccessControlPage() {
                   Access kontrol panelleri ile kapsamlı güvenlik sistemleri kurabilirsiniz. Mika PDKS yazılımı, tüm ERP ve İK yazılımları ile entegre çalışmaktadır.
                 </p>
                 
-                <div className="bg-slate-50 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold text-slate-800 mb-3">
+                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 border-l-4 border-primary">
+                  <h3 className="text-xl font-bold text-slate-800 mb-4 flex items-center">
+                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-3">
+                      <span className="text-white text-sm font-bold">?</span>
+                    </div>
                     Geçiş Kontrol Sistemi Nedir?
                   </h3>
-                  <p className="text-slate-600">
-                    Geçiş kontrol sistemi; kimlerin, ne zaman, hangi kapıdan geçiş yapabileceğini belirleyen, elektronik cihazlar ve yazılımlar bütünüdür. Bireylerin veya araçların belirli bir alana giriş ve çıkış yetkisini sınırlandırmak, izlemek ve yönetmek amacıyla kullanılır.
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    Geçiş kontrol sistemi; <strong>kimlerin, ne zaman, hangi kapıdan geçiş yapabileceğini</strong> belirleyen elektronik cihazlar ve yazılımlar bütünüdür. Bireylerin veya araçların belirli bir alana giriş ve çıkış yetkisini sınırlandırmak, izlemek ve yönetmek amacıyla kullanılır.
                   </p>
                 </div>
               </div>"
@@ -851,6 +903,51 @@ export default function AccessControlPage() {
                   </p>
                 </motion.div>
               ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">
+              Sık Sorulan Sorular
+            </h2>
+            
+            <div className="max-w-4xl mx-auto space-y-6">
+              <div className="bg-slate-50 rounded-xl p-6 border-l-4 border-primary">
+                <h3 className="text-lg font-semibold text-slate-800 mb-3">
+                  Access control sistemleri hangi kartları okuyabilir?
+                </h3>
+                <p className="text-slate-600">
+                  Mika access control panelleri HID, EM, Mifare, Desfire, Iclass teknolojilerini destekler. Çoklu platform desteği ile farklı kart türlerini okuyabilir.
+                </p>
+              </div>
+              
+              <div className="bg-slate-50 rounded-xl p-6 border-l-4 border-primary">
+                <h3 className="text-lg font-semibold text-slate-800 mb-3">
+                  PDKS yazılımı ile entegrasyon nasıl çalışır?
+                </h3>
+                <p className="text-slate-600">
+                  Mika PDKS yazılımı tüm ERP ve İK programları ile entegre çalışır. Online sistemlerde direk entegrasyon yapılabilir ve geçiş kayıtları anlık aktarılır.
+                </p>
+              </div>
+              
+              <div className="bg-slate-50 rounded-xl p-6 border-l-4 border-primary">
+                <h3 className="text-lg font-semibold text-slate-800 mb-3">
+                  Garanti süresi ve teknik destek nasıl?
+                </h3>
+                <p className="text-slate-600">
+                  2 yıl tam garanti, 7/24 teknik destek ve ücretsiz kurulum hizmetimiz bulunmaktadır. Profesyonel ekibimiz kurulum sonrası eğitim de vermektedir.
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
