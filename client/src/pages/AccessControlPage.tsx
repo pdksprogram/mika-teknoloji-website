@@ -19,8 +19,8 @@ export default function AccessControlPage() {
   // SEO Meta Tags
   useEffect(() => {
     const title = selectedLanguage === 'tr' 
-      ? 'Access Control Sistemleri | Mika Teknoloji - Türkiye\'nin Lider Geçiş Kontrol Çözümleri'
-      : 'Access Control Systems | Mika Technology - Turkey\'s Leading Access Control Solutions';
+      ? 'Profesyonel Access Control Sistemleri | Mika Teknoloji - Kurumsal Güvenlik Teknolojileri'
+      : 'Professional Access Control Systems | Mika Technology - Corporate Security Technologies';
     
     const description = selectedLanguage === 'tr'
       ? 'Mika Teknoloji RFID kartlı geçiş, biyometrik parmak izi, yüz tanıma ve QR kodlu mobil erişim sistemleri ile kapsamlı access control çözümleri. PDKS entegrasyonu, turnike sistemleri.'
@@ -56,8 +56,9 @@ export default function AccessControlPage() {
 
   const accessControlTranslations = {
     tr: {
-      title: "Access Control Sistemleri | Mika Teknoloji - Türkiye'nin Lider Geçiş Kontrol Çözümleri",
-      subtitle: "Modern Güvenlik Anlayışının Temel Taşı: Geçiş Kontrol Uzmanı",
+      title: "Profesyonel Access Control Sistemleri",
+      subtitle: "Kurumsal Güvenlik Teknolojilerinde İleri Çözümler",
+      brandMessage: "Mika Teknoloji - Türkiye'nin Güvenilir Teknoloji Ortağı",
       description: "Mika Teknoloji olarak RFID kartlı geçiş, biyometrik parmak izi, yüz tanıma ve QR kodlu mobil erişim sistemleri ile kapsamlı access control çözümleri sunuyoruz. HID, EM, Mifare, Desfire, Iclass kart teknolojileri ve PDKS entegrasyonu ile işletmenizin güvenliğini maksimum seviyeye çıkarıyoruz.",
       breadcrumb: "Anasayfa > Geçiş Kontrol Sistemleri > Access Control",
       devices: {
@@ -210,8 +211,9 @@ export default function AccessControlPage() {
       }
     },
     en: {
-      title: "Access Control Systems | Mika Technology - Turkey's Leading Access Control Solutions",
-      subtitle: "Foundation of Modern Security Approach: Access Control Expert",
+      title: "Professional Access Control Systems",
+      subtitle: "Advanced Solutions in Corporate Security Technologies",
+      brandMessage: "Mika Technology - Turkey's Trusted Technology Partner",
       description: "Mika Technology offers comprehensive access control solutions with RFID card access, biometric fingerprint, face recognition and QR mobile access systems. With HID, EM, Mifare, Desfire, Iclass card technologies and PDKS integration, we maximize your business security.",
       breadcrumb: "Home > Access Control Systems > Professional Solutions",
       devices: {
@@ -383,11 +385,17 @@ export default function AccessControlPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+              <div className="mb-4">
+                <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold tracking-wide">
+                  {t.brandMessage}
+                </span>
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight">
                 {t.title}
               </h1>
               
-              <h2 className="text-xl md:text-2xl text-slate-700 font-medium mb-6">
+              <h2 className="text-xl md:text-2xl text-slate-600 font-light mb-6 leading-relaxed">
                 {t.subtitle}
               </h2>
 
