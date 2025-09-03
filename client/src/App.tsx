@@ -20,6 +20,10 @@ import PDKSPage from "@/pages/PDKSPage";
 import AccessControlPage from "@/pages/AccessControlPage";
 import FingerprintSystemPage from "@/pages/FingerprintSystemPage";
 import FaceRecognitionSystemPage from "@/pages/FaceRecognitionSystemPage";
+import CardAccessSystemPage from "@/pages/CardAccessSystemPage";
+import QRAccessPage from "@/pages/QRAccessPage";
+import TurnstileSystemsPage from "@/pages/TurnstileSystemsPage";
+import ParkingAutomationPage from "@/pages/ParkingAutomationPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -39,6 +43,12 @@ function Router() {
       <Route path="/parmak-izi-takip-sistemi" component={FingerprintSystemPage} />
       <Route path="/yuz-tanima-sistem" component={FaceRecognitionSystemPage} />
       <Route path="/pdks-programi" component={PDKSPage} />
+      
+      {/* Additional Landing Pages */}
+      <Route path="/kartli-gecis-sistemi" component={CardAccessSystemPage} />
+      <Route path="/qr-gecis" component={QRAccessPage} />
+      <Route path="/turnike-sistemleri" component={TurnstileSystemsPage} />
+      <Route path="/otopark-otomasyon" component={ParkingAutomationPage} />
       
       <Route path="/referanslar" component={References} />
       <Route path="/iletisim" component={Contact} />
