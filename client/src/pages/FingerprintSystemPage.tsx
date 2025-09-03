@@ -8,9 +8,9 @@ const devices = [
   {
     id: 1,
     name: "MT1100",
-    description: "Yüz Tanıma ve Parmak İzi Sistemi",
+    description: "Parmak İzi Sistemi",
     image: "/mt1100-device.png",
-    features: ["4.3\" TFT Renkli Ekran", "Yüz Tanıma Teknolojisi", "Parmak İzi Okuyucu", "TCP/IP Bağlantı"]
+    features: ["Parmak izi Kapasitesi : 3.000", "Kayıt Kapasitesi : 100.000", "Parmak izi + Proximity Kart + Şifre Tanımlama", "Kapı Açma Özelliği", "Zil Çaldırma Özelliği"]
   },
   {
     id: 2,
