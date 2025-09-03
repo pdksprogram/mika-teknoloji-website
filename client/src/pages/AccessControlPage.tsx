@@ -264,185 +264,143 @@ export default function AccessControlPage() {
               </div>
             </motion.div>
 
-            {/* Right Animation - Professional Access Control Demo */}
+            {/* Right Side - Professional Demo */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative lg:flex lg:justify-center"
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative"
             >
-              <div className="relative">
-                {/* Background Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 blur-3xl scale-110"></div>
+              {/* Clean Demo Container */}
+              <div className="bg-white rounded-lg shadow-lg border border-slate-200 p-8 max-w-lg mx-auto">
                 
-                {/* Main Demo Container */}
-                <div className="relative bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-12 border border-slate-200/50">
-                  
-                  {/* Access Control Panel */}
-                  <motion.div
-                    initial={{ scale: 0.9, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.5 }}
-                    className="text-center mb-12"
-                  >
-                    <div className="relative mx-auto">
-                      <img 
-                        src={accessControlProfessional} 
-                        alt="Access Control Panel"
-                        className="w-48 h-auto mx-auto rounded-xl shadow-lg"
-                      />
-                      {/* Status LED */}
-                      <motion.div
-                        animate={{ 
-                          opacity: [0.3, 1, 0.3],
-                          scale: [1, 1.2, 1] 
-                        }}
-                        transition={{ 
-                          duration: 2, 
-                          repeat: Infinity,
-                          ease: "easeInOut" 
-                        }}
-                        className="absolute top-4 right-4 w-4 h-4 bg-green-400 rounded-full shadow-lg"
-                      >
-                        <div className="absolute inset-0 bg-green-400 rounded-full animate-ping opacity-75"></div>
-                      </motion.div>
+                {/* Access Control Panel Section */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                  className="text-center mb-8"
+                >
+                  <div className="relative inline-block">
+                    {/* Clean Panel Representation */}
+                    <div className="w-48 h-32 bg-slate-800 rounded-lg mx-auto relative overflow-hidden">
+                      <div className="absolute inset-3 bg-slate-700 rounded-md">
+                        {/* Clean Interface */}
+                        <div className="p-3">
+                          <div className="flex justify-between items-center mb-2">
+                            <div className="text-green-400 text-xs font-mono">MIKA</div>
+                            <motion.div
+                              animate={{ opacity: [0.5, 1, 0.5] }}
+                              transition={{ duration: 2, repeat: Infinity }}
+                              className="w-2 h-2 bg-green-400 rounded-full"
+                            ></motion.div>
+                          </div>
+                          <div className="space-y-1">
+                            <div className="h-1 bg-slate-600 rounded w-3/4"></div>
+                            <div className="h-1 bg-slate-600 rounded w-1/2"></div>
+                          </div>
+                          {/* Card Reader Slot */}
+                          <div className="mt-3 h-3 bg-slate-900 rounded-sm mx-auto w-16 relative">
+                            <motion.div
+                              animate={{ x: [-20, 0, -20] }}
+                              transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+                              className="absolute inset-y-0 right-0 w-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-sm"
+                            ></motion.div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <motion.p 
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 1 }}
-                      className="text-sm font-medium text-slate-700 mt-4"
-                    >
-                      Mika Access Control Panel
-                    </motion.p>
-                  </motion.div>
+                    <p className="text-sm text-slate-600 mt-3 font-medium">Access Control Panel</p>
+                  </div>
+                </motion.div>
 
-                  {/* Connection Line */}
-                  <motion.div
-                    initial={{ scaleY: 0 }}
-                    animate={{ scaleY: 1 }}
-                    transition={{ duration: 1, delay: 1.5 }}
-                    className="w-0.5 h-16 bg-gradient-to-b from-primary to-primary/50 mx-auto mb-8"
-                  ></motion.div>
+                {/* Connection Indicator */}
+                <motion.div
+                  initial={{ scaleY: 0 }}
+                  animate={{ scaleY: 1 }}
+                  transition={{ duration: 0.8, delay: 1.5 }}
+                  className="flex items-center justify-center mb-8"
+                >
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <div className="w-8 h-0.5 bg-primary"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <div className="w-8 h-0.5 bg-primary"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  </div>
+                </motion.div>
 
-                  {/* Mobile App Demo */}
-                  <motion.div
-                    initial={{ y: 50, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 1, delay: 2 }}
-                    className="text-center relative"
-                  >
-                    {/* Phone Container with Professional Styling */}
-                    <div className="relative mx-auto w-40">
-                      <img 
-                        src={mikaMobileApp} 
-                        alt="Mika Mobile App QR Access"
-                        className="w-full h-auto rounded-2xl shadow-2xl"
-                      />
-                      
-                      {/* QR Scan Animation Overlay */}
-                      <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: [0, 0.8, 0] }}
-                        transition={{ 
-                          duration: 3, 
-                          repeat: Infinity, 
-                          delay: 3,
-                          ease: "easeInOut"
-                        }}
-                        className="absolute inset-0 bg-primary/10 rounded-2xl flex items-center justify-center"
-                      >
-                        <motion.div
-                          animate={{ scale: [1, 1.1, 1] }}
-                          transition={{ 
-                            duration: 1.5, 
-                            repeat: Infinity,
-                            ease: "easeInOut"
-                          }}
-                          className="w-16 h-16 border-4 border-primary rounded-lg"
-                        >
-                          <div className="w-full h-full bg-primary/20 rounded"></div>
-                        </motion.div>
-                      </motion.div>
-
-                      {/* Floating Labels */}
-                      <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 2.5 }}
-                        className="absolute -left-16 top-8 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-lg shadow-lg border border-slate-200/50"
-                      >
-                        <span className="text-xs font-medium text-slate-700">QR Code</span>
-                      </motion.div>
-                      
-                      <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 3 }}
-                        className="absolute -right-20 bottom-12 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-lg shadow-lg border border-slate-200/50"
-                      >
-                        <span className="text-xs font-medium text-primary">Mika App</span>
-                      </motion.div>
+                {/* Mobile App Section */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 2 }}
+                  className="text-center"
+                >
+                  <div className="relative inline-block">
+                    {/* Clean Phone Mockup */}
+                    <div className="w-32 h-56 bg-slate-800 rounded-xl mx-auto relative overflow-hidden">
+                      <div className="absolute inset-2 bg-white rounded-lg">
+                        {/* App Interface */}
+                        <div className="p-3 h-full flex flex-col">
+                          {/* Status Bar */}
+                          <div className="flex justify-between items-center mb-3">
+                            <div className="text-xs font-semibold text-primary">MIKA</div>
+                            <div className="text-xs text-slate-400">●●●</div>
+                          </div>
+                          
+                          {/* QR Code Area */}
+                          <div className="flex-1 flex items-center justify-center">
+                            <motion.div
+                              animate={{ scale: [1, 1.05, 1] }}
+                              transition={{ duration: 2, repeat: Infinity, delay: 2.5 }}
+                              className="w-16 h-16 border-2 border-slate-800 relative"
+                            >
+                              {/* QR Pattern */}
+                              <div className="grid grid-cols-4 gap-0.5 p-1 h-full">
+                                {[...Array(16)].map((_, i) => (
+                                  <div 
+                                    key={i} 
+                                    className={`bg-slate-800 ${i % 3 === 0 ? 'opacity-100' : 'opacity-60'}`}
+                                  ></div>
+                                ))}
+                              </div>
+                              
+                              {/* Scan Effect */}
+                              <motion.div
+                                animate={{ opacity: [0, 1, 0] }}
+                                transition={{ duration: 1.5, repeat: Infinity, delay: 3 }}
+                                className="absolute inset-0 bg-primary/20 border-2 border-primary"
+                              ></motion.div>
+                            </motion.div>
+                          </div>
+                          
+                          {/* Button */}
+                          <div className="mt-3">
+                            <motion.div
+                              animate={{ backgroundColor: ['rgb(64 64 64)', 'rgb(34 197 94)', 'rgb(64 64 64)'] }}
+                              transition={{ duration: 2, repeat: Infinity, delay: 4 }}
+                              className="h-6 bg-slate-600 rounded text-white text-xs flex items-center justify-center"
+                            >
+                              ACCESS
+                            </motion.div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                    <p className="text-sm text-slate-600 mt-3 font-medium">Mika Mobile App</p>
                     
-                    <motion.p 
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 2.5 }}
-                      className="text-sm font-medium text-slate-700 mt-6"
-                    >
-                      Mobil QR Erişim Sistemi
-                    </motion.p>
-                  </motion.div>
-
-                  {/* Success Indicator */}
-                  <motion.div
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ 
-                      duration: 0.8, 
-                      delay: 5,
-                      type: "spring",
-                      bounce: 0.5
-                    }}
-                    className="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-r from-green-400 to-green-500 rounded-full flex items-center justify-center text-white shadow-2xl"
-                  >
-                    <motion.svg
-                      animate={{ rotate: [0, 360] }}
-                      transition={{ duration: 1, delay: 5 }}
-                      className="w-8 h-8"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </motion.svg>
-                  </motion.div>
-
-                  {/* Floating Particles */}
-                  {[...Array(6)].map((_, i) => (
+                    {/* Success Badge */}
                     <motion.div
-                      key={i}
-                      initial={{ opacity: 0 }}
-                      animate={{ 
-                        opacity: [0, 1, 0],
-                        y: [0, -20, -40],
-                        x: [0, Math.random() * 20 - 10]
-                      }}
-                      transition={{ 
-                        duration: 3, 
-                        repeat: Infinity,
-                        delay: i * 0.5 + 4,
-                        ease: "easeOut"
-                      }}
-                      className={`absolute w-2 h-2 bg-primary/40 rounded-full`}
-                      style={{
-                        left: `${20 + i * 10}%`,
-                        top: `${60 + (i % 2) * 20}%`
-                      }}
-                    ></motion.div>
-                  ))}
-                </div>
+                      initial={{ scale: 0, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 5, type: "spring" }}
+                      className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm"
+                    >
+                      ✓
+                    </motion.div>
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
           </div>
