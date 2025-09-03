@@ -14,10 +14,10 @@ const devices = [
   },
   {
     id: 2,
-    name: "MT-FR200",
+    name: "MTFP15",
     description: "Yüz Tanıma ve Parmak İzi Terminal",
-    image: "/placeholder-device.jpg",
-    features: ["Cihaz özelliği 1", "Cihaz özelliği 2", "Cihaz özelliği 3", "Cihaz özelliği 4", "Cihaz özelliği 5"]
+    image: "/mtfp15-device.png",
+    features: ["Yüz Kayıt Kapasitesi : 1000", "Parmak İzi Kayıt Kapasitesi : 1000", "Log Kapasitesi : 100.000", "Ekran Boyutu : 2,4 inç TFT LCD", "Röle : Var", "Haberleşme : TCP/IP, USB"]
   },
   {
     id: 3,
