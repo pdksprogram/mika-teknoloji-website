@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# SEO-optimized pages for target keywords
+Allow: /personel-devam-kontrol-sistemi
+Allow: /parmak-izi-takip-sistemi
+Allow: /yuz-tanima-sistem
+Allow: /pdks-programi
+
+# Main product pages
+Allow: /urunler/parmak-izi-tanima
+Allow: /urunler/yuz-tanima
+Allow: /cozumler/pdks
+
+# Important pages
+Allow: /hakkimizda
+Allow: /iletisim
+Allow: /referanslar
+
+# Block unnecessary pages
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*?*
+
+# Sitemap
+Sitemap: https://mikateknoloji.com/sitemap.xml
+
+# Crawl-delay for search engines
+Crawl-delay: 1

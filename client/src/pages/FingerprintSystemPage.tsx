@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Shield } from "lucide-react";
 import { Link } from "wouter";
+import { Helmet } from "react-helmet";
 
 const devices = [
   {
@@ -38,6 +39,31 @@ const devices = [
 export default function FingerprintSystemPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-8">
+      <Helmet>
+        <title>Parmak İzi Takip Sistemi | Mika Teknoloji - Biyometrik PDKS Cihazları MT1100, MTP50, MTFDP200</title>
+        <meta name="description" content="Profesyonel parmak izi takip sistemi ve PDKS cihazları. MT1100, MTP50, MTFDP200, MT4051 modelleri. 20.000 kapasite, Wi-Fi desteği, TCP/IP bağlantı. Hemen teklif alın!" />
+        <meta name="keywords" content="parmak izi takip sistemi, parmak izi okuyucu, PDKS cihazı, biyometrik güvenlik, personel takip sistemi, MT1100, MTP50, MTFDP200, MT4051, Wi-Fi parmak izi" />
+        
+        <meta property="og:title" content="Parmak İzi Takip Sistemi | Mika Teknoloji" />
+        <meta property="og:description" content="Profesyonel parmak izi takip sistemi ve PDKS cihazları. 20.000 kapasite, Wi-Fi desteği." />
+        <meta property="og:url" content="https://mikateknoloji.com/parmak-izi-takip-sistemi" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Mika Teknoloji Parmak İzi Takip Sistemi",
+            "description": "Profesyonel parmak izi okuyucu ve PDKS cihazları. MT1100, MTP50, MTFDP200, MT4051 modelleri.",
+            "brand": "Mika Teknoloji",
+            "category": "Security Systems",
+            "offers": {
+              "@type": "Offer",
+              "availability": "InStock",
+              "priceCurrency": "TRY"
+            }
+          })}
+        </script>
+      </Helmet>
 
       {/* Devices Grid */}
       <section className="container mx-auto px-4">

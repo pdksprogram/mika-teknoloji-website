@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import LoadingScreen from "@/components/LoadingScreen";
 import { LanguageProvider } from "@/hooks/useLanguage";
@@ -32,6 +33,13 @@ function Router() {
       <Route path="/access-control" component={AccessControlPage} />
       <Route path="/urunler/parmak-izi-tanima" component={FingerprintSystemPage} />
       <Route path="/urunler/yuz-tanima" component={FaceRecognitionSystemPage} />
+      
+      {/* SEO Landing Pages for Target Keywords */}
+      <Route path="/personel-devam-kontrol-sistemi" component={PDKSPage} />
+      <Route path="/parmak-izi-takip-sistemi" component={FingerprintSystemPage} />
+      <Route path="/yuz-tanima-sistem" component={FaceRecognitionSystemPage} />
+      <Route path="/pdks-programi" component={PDKSPage} />
+      
       <Route path="/referanslar" component={References} />
       <Route path="/iletisim" component={Contact} />
       <Route path="/mobil-gizlilik-sozlesmesi" component={PrivacyPolicy} />

@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/hooks/useLanguage";
+import { Helmet } from "react-helmet";
 import HeroCarousel from "@/components/HeroCarousel";
 
 export default function Home() {
@@ -49,6 +50,51 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Mika Teknoloji - PDKS, Personel Devam Kontrol Sistemi, Parmak İzi Takip Sistemi, Yüz Tanıma Sistem</title>
+        <meta name="description" content="Türkiye'nin lider PDKS yazılımı! Personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem, QR kod PDKS. 50.000+ referans, %99.9 güvenilirlik." />
+        <meta name="keywords" content="PDKS, personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem, pdks programı, PDKS yazılımı, personel takip sistemi, biyometrik güvenlik, QR kod PDKS, RFID kart sistemi" />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Mika Teknoloji - PDKS, Personel Devam Kontrol Sistemi" />
+        <meta property="og:description" content="Türkiye'nin lider PDKS yazılımı! Personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mikateknoloji.com" />
+        <meta property="og:image" content="https://mikateknoloji.com/mika-logo.jpg" />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Mika Teknoloji - PDKS, Personel Devam Kontrol Sistemi" />
+        <meta name="twitter:description" content="Türkiye'nin lider PDKS yazılımı! Personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem." />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Mika Teknoloji",
+            "url": "https://mikateknoloji.com",
+            "logo": "https://mikateknoloji.com/mika-logo.jpg",
+            "description": "Türkiye'nin lider PDKS sistemi sağlayıcısı. Personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem çözümleri.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "TR"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+90-xxx-xxx-xxxx",
+              "contactType": "Customer Service",
+              "availableLanguage": ["tr", "en"]
+            },
+            "foundingDate": "1990",
+            "numberOfEmployees": "50-100",
+            "industry": "Security Systems",
+            "serviceArea": "Turkey",
+            "hasCredential": "ISO 27001, ISO 9001"
+          })}
+        </script>
+      </Helmet>
+      
       {/* Hero Carousel Section */}
       <HeroCarousel />
 

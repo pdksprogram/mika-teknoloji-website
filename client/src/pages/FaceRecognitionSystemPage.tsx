@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Shield } from "lucide-react";
 import { Link } from "wouter";
+import { Helmet } from "react-helmet";
 
 const devices = [
   {
@@ -38,6 +39,31 @@ const devices = [
 export default function FaceRecognitionSystemPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-8">
+      <Helmet>
+        <title>Yüz Tanıma Sistem | Mika Teknoloji - Temassız PDKS Cihazları MTFD15, MTFP15, MTFDP50</title>
+        <meta name="description" content="Gelişmiş yüz tanıma sistem ve temassız PDKS cihazları. MTFD15, MTFP15, MTFDP50, MTFDP200 modelleri. 20.000 kapasite, Wi-Fi desteği, TCP/IP bağlantı. Ücretsiz demo!" />
+        <meta name="keywords" content="yüz tanıma sistem, yüz tanıma PDKS, temassız personel takip, facial recognition, MTFD15, MTFP15, MTFDP50, MTFDP200, biyometrik güvenlik sistemi" />
+        
+        <meta property="og:title" content="Yüz Tanıma Sistem | Mika Teknoloji" />
+        <meta property="og:description" content="Gelişmiş yüz tanıma sistem ve temassız PDKS cihazları. 20.000 kapasite, Wi-Fi desteği." />
+        <meta property="og:url" content="https://mikateknoloji.com/yuz-tanima-sistem" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Mika Teknoloji Yüz Tanıma Sistem",
+            "description": "Gelişmiş yüz tanıma sistemi ve temassız PDKS cihazları. MTFD15, MTFP15, MTFDP50, MTFDP200 modelleri.",
+            "brand": "Mika Teknoloji",
+            "category": "Security Systems",
+            "offers": {
+              "@type": "Offer",
+              "availability": "InStock",
+              "priceCurrency": "TRY"
+            }
+          })}
+        </script>
+      </Helmet>
 
       {/* Devices Grid */}
       <section className="container mx-auto px-4">
