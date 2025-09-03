@@ -7,7 +7,7 @@ import { Link } from "wouter";
 
 // Real device images
 const facialRecognitionDevice = "/facial-device.png";
-const qrPdksDevice1 = "/qr-phone-mockup.png";
+const qrPdksDevice1 = "/qr-hand-mockup.png";
 const qrPdksDevice2 = "/qr-device-2.png";
 const fingerprintDevice = "/fingerprint-device.png";
 
