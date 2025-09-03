@@ -16,7 +16,8 @@ const mikaLogo = "/mika-logo.jpg"; // Real Mika logo
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isProductsMenuOpen, setIsProductsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [activeMenuType, setActiveMenuType] = useState<'solutions' | 'products' | null>(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<any[]>([]);
@@ -55,6 +56,8 @@ export default function Header() {
   // Close mobile menu when location changes
   useEffect(() => {
     setIsMenuOpen(false);
+    setIsDropdownOpen(false);
+    setActiveMenuType(null);
   }, [location]);
 
   // Handle language change
@@ -92,14 +95,15 @@ export default function Header() {
   };
 
   const navigationItems = [
-    { href: "/", label: t.nav.products },
+    { href: "/", label: t.nav.products, hasDropdown: true, menuType: 'products' },
     { href: "/hakkimizda", label: t.nav.about },
-    { href: "/cozumler", label: t.nav.solutions, hasDropdown: true },
+    { href: "/cozumler", label: t.nav.solutions, hasDropdown: true, menuType: 'solutions' },
     { href: "/referanslar", label: t.nav.references },
     { href: "/iletisim", label: t.nav.contact }
   ];
 
-  const megaMenuData = {
+  // Çözümler menüsü
+  const solutionsMenuData = {
     "Çözümler": [
       { name: "PDKS (Personel Devam Kontrol)", href: "/cozumler/pdks" },
       { name: "Access Geçiş Kontrol Sistemleri", href: "/access-control" },
@@ -132,6 +136,26 @@ export default function Header() {
       { name: "X-Ray Cihazları", href: "/xray" },
       { name: "Öğretmen Takip Sistemi", href: "/ogretmen-takip" },
       { name: "Turnike Takip Sistemi", href: "/turnike-takip" }
+    ]
+  };
+
+  // Ürünler menüsü
+  const productsMenuData = {
+    "Ürünler": [
+      { name: "Parmak İzi Tanıma Sistemleri", href: "/urunler/parmak-izi-tanima" },
+      { name: "Geçiş Kontrol Sistemleri", href: "/urunler/gecis-kontrol" },
+      { name: "Turnike Sistemleri", href: "/urunler/turnike" },
+      { name: "Personel Takip Sistemleri", href: "/urunler/personel-takip" },
+      { name: "QR Kodlu PDKS Sistemi", href: "/urunler/qr-pdks" },
+      { name: "Yüz Tanıma Sistemleri", href: "/urunler/yuz-tanima" },
+      { name: "Bariyer Sistemleri", href: "/urunler/bariyer" },
+      { name: "Plaka Tanıma Sistemleri", href: "/urunler/plaka-tanima" },
+      { name: "OGS & HGS Geçiş Sistemleri", href: "/urunler/ogs-hgs" },
+      { name: "AR-GE Takip Sistemi", href: "/urunler/arge-takip" },
+      { name: "Bekçi & Devriye Tur Sistemleri", href: "/urunler/bekci-devriye" },
+      { name: "Yemekhane Takip Sistemi", href: "/urunler/yemekhane" },
+      { name: "Üye Takip Sistemi", href: "/urunler/uye-takip" },
+      { name: "Kablosuz Alarm Sistemleri", href: "/urunler/kablosuz-alarm" }
     ]
   };
 
@@ -203,8 +227,18 @@ export default function Header() {
                 <div
                   key={item.href}
                   className="relative"
-                  onMouseEnter={() => item.hasDropdown && setIsProductsMenuOpen(true)}
-                  onMouseLeave={() => item.hasDropdown && setIsProductsMenuOpen(false)}
+                  onMouseEnter={() => {
+                    if (item.hasDropdown) {
+                      setIsDropdownOpen(true);
+                      setActiveMenuType(item.menuType as 'solutions' | 'products' || null);
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (item.hasDropdown) {
+                      setIsDropdownOpen(false);
+                      setActiveMenuType(null);
+                    }
+                  }}
                 >
                   <Link
                     href={item.href}
@@ -222,10 +256,10 @@ export default function Header() {
                   </Link>
                   
                   {/* Mega Menu Dropdown */}
-                  {item.hasDropdown && isProductsMenuOpen && (
+                  {item.hasDropdown && isDropdownOpen && activeMenuType && (
                     <div className="absolute top-full left-0 w-screen max-w-5xl bg-white shadow-2xl border-t-4 border-primary z-50 transform -translate-x-1/4">
-                      <div className="grid grid-cols-4 gap-6 p-8">
-                        {Object.entries(megaMenuData).map(([category, items]) => (
+                      <div className={`grid ${activeMenuType === 'products' ? 'grid-cols-1' : 'grid-cols-4'} gap-6 p-8`}>
+                        {Object.entries(activeMenuType === 'products' ? productsMenuData : solutionsMenuData).map(([category, items]) => (
                           <div key={category} className="space-y-4">
                             <h3 className="font-bold text-gray-900 text-lg border-b-2 border-primary pb-2">
                               {category}
@@ -248,7 +282,10 @@ export default function Header() {
                       </div>
                       <div className="bg-gray-50 px-8 py-4 border-t">
                         <p className="text-sm text-gray-600">
-                          Popüler Ürünler: Kartlı Kapı PDKS, Personel Puanlama Programı, Kapı Kilit Sistemleri, Şifreli Kapı Kilidi, Bell Tipi Turnike, Geçiş Kontrol Paneli, Big Turnike, İnce Geçiş Turnike, Mobımre Turnike, Elektronik Kilit Muhsasırılık, polis programı
+                          {activeMenuType === 'products' 
+                            ? "Popüler Ürünler: Parmak İzi Tanıma, Yüz Tanıma, PDKS Sistemleri, Turnike, Bariyer, Plaka Tanıma, QR Kodlu Sistem"
+                            : "Popüler Çözümler: PDKS, Access Control, Bekçi Kontrol, Turnike Sistemleri, QR Devriye Takip"
+                          }
                         </p>
                       </div>
                     </div>
