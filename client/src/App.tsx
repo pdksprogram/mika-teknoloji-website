@@ -16,6 +16,7 @@ import Contact from "@/pages/Contact";
 import References from "@/pages/References";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import PDKSPage from "@/pages/PDKSPage";
+import AccessControlPage from "@/pages/AccessControlPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -26,6 +27,7 @@ function Router() {
       <Route path="/cozumler" component={Solutions} />
       <Route path="/urunler" component={Products} />
       <Route path="/cozumler/pdks" component={PDKSPage} />
+      <Route path="/cozumler/access" component={AccessControlPage} />
       <Route path="/referanslar" component={References} />
       <Route path="/iletisim" component={Contact} />
       <Route path="/mobil-gizlilik-sozlesmesi" component={PrivacyPolicy} />
