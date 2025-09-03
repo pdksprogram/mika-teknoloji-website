@@ -23,7 +23,7 @@ const devices = [
     id: 3,
     name: "MT35",
     description: "Yüz Tanıma Terminal",
-    image: "/mt35-device.png",
+    image: "/mt35-professional.png",
     features: ["3.000 yüz tanıma kullanıcı kapasitesi", "5.000 kart desteği", "200.000'e kadar geçiş kaydı hafızası", "Yüz tanıma, kart ve şifre ile giriş imkânı", "TCP/IP, USB ve Wi-Fi bağlantı desteği"]
   },
   {
