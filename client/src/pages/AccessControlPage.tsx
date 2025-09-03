@@ -7,6 +7,8 @@ import { Link } from "wouter";
 
 // Access Control Panel images  
 const accessControlPanel = "/access-control-panel.png";
+const accessControlProfessional = "/access-control-professional.png";
+const qrMobileAccess = "/qr-mobile-access.png";
 
 export default function AccessControlPage() {
   const { selectedLanguage } = useLanguage();
@@ -18,31 +20,31 @@ export default function AccessControlPage() {
       description: "Mika Teknoloji kartlı geçiş sisteminde dünya lideri teknoloji ile RFID Personel Kart Okuyucular tercih etmektedir. Çoklu platform desteği ile personel kartlarının cinsine göre cihazlar HID, EM, Mifare, Desfire, Iclass özellikli kartları okuyabilmektedir. Kart okuyucu cihazlar; turnike geçişlerini ve kapı kilitlerini kontrol eden röleler içermektedir.",
       breadcrumb: "Anasayfa > Kartlı Geçiş Sistemleri",
       devices: {
-        title: "Access Kontrol Panelleri",
+        title: "Mika Teknoloji Access Kontrol Panelleri",
         items: [
           {
-            title: "16'lı Access Kontrol Paneli",
-            subtitle: "Profesyonel kart okuyucu + NFC + BLE + Şifre + Mobil Giriş",
-            image: accessControlPanel,
-            href: "/access-kontrol-paneli"
+            title: "2'li Access Kontrol Paneli",
+            subtitle: "Mika Teknoloji Üretimi - Profesyonel 2 Kanal Kart Okuyucu",
+            image: accessControlProfessional,
+            href: "/2li-access-kontrol-paneli"
           },
           {
-            title: "16'lı Access Kontrol Paneli Kutusu", 
-            subtitle: "Access Kontrol Paneli ile Kutu Sistemi",
+            title: "4'lü Access Kontrol Paneli", 
+            subtitle: "Mika Teknoloji Üretimi - 4 Kanal Access Kontrol Sistemi",
+            image: accessControlPanel,
+            href: "/4lu-access-kontrol-paneli"
+          },
+          {
+            title: "QR Mobil Access Sistemi",
+            subtitle: "Mika Teknoloji Üretimi - QR Kod + Mobil Giriş Sistemi", 
+            image: qrMobileAccess,
+            href: "/qr-mobil-access"
+          },
+          {
+            title: "Access Kontrol Paneli Kutusu",
+            subtitle: "Mika Teknoloji Üretimi - Korumalı Kutu Sistemi",
             image: accessControlPanel,
             href: "/access-kontrol-kutu"
-          },
-          {
-            title: "Access Kontrol Paneli QR",
-            subtitle: "Access Kontrol Paneli + QR okuyucu + Mobil giriş", 
-            image: accessControlPanel,
-            href: "/access-kontrol-qr"
-          },
-          {
-            title: "Access Kontrol Paneli Slim",
-            subtitle: "Kompakt Access Kontrol Paneli Cihazı",
-            image: accessControlPanel,
-            href: "/access-kontrol-slim"
           }
         ]
       },
@@ -114,31 +116,31 @@ export default function AccessControlPage() {
       description: "Mika Technology prefers world-leading RFID Personnel Card Readers in card access systems. With multi-platform support, devices can read HID, EM, Mifare, Desfire, Iclass cards according to personnel card types. Card reader devices contain relays that control turnstile passages and door locks.",
       breadcrumb: "Home > Card Access Systems",
       devices: {
-        title: "Access Control Panels",
+        title: "Mika Technology Access Control Panels",
         items: [
           {
-            title: "16-Channel Access Control Panel",
-            subtitle: "Professional card reader + NFC + BLE + Password + Mobile Entry",
-            image: accessControlPanel,
-            href: "/access-control-panel"
+            title: "2-Channel Access Control Panel",
+            subtitle: "Mika Technology Production - Professional 2 Channel Card Reader",
+            image: accessControlProfessional,
+            href: "/2-channel-access-control"
           },
           {
-            title: "16-Channel Access Control Panel Box", 
-            subtitle: "Access Control Panel with Box System",
+            title: "4-Channel Access Control Panel", 
+            subtitle: "Mika Technology Production - 4 Channel Access Control System",
+            image: accessControlPanel,
+            href: "/4-channel-access-control"
+          },
+          {
+            title: "QR Mobile Access System",
+            subtitle: "Mika Technology Production - QR Code + Mobile Entry System", 
+            image: qrMobileAccess,
+            href: "/qr-mobile-access"
+          },
+          {
+            title: "Access Control Panel Box",
+            subtitle: "Mika Technology Production - Protected Box System",
             image: accessControlPanel,
             href: "/access-control-box"
-          },
-          {
-            title: "Access Control Panel QR",
-            subtitle: "Access Control Panel + QR reader + Mobile entry", 
-            image: accessControlPanel,
-            href: "/access-control-qr"
-          },
-          {
-            title: "Access Control Panel Slim",
-            subtitle: "Compact Access Control Panel Device",
-            image: accessControlPanel,
-            href: "/access-control-slim"
           }
         ]
       },
