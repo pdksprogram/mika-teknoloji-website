@@ -15,10 +15,10 @@ export default function AccessControlPage() {
 
   const accessControlTranslations = {
     tr: {
-      title: "Kartlı Geçiş Sistemleri",
-      subtitle: "Kart Okuyucular ile Kartlı Geçiş Sistemi",
-      description: "Mika Teknoloji kartlı geçiş sisteminde dünya lideri teknoloji ile RFID Personel Kart Okuyucular tercih etmektedir. Çoklu platform desteği ile personel kartlarının cinsine göre cihazlar HID, EM, Mifare, Desfire, Iclass özellikli kartları okuyabilmektedir. Kart okuyucu cihazlar; turnike geçişlerini ve kapı kilitlerini kontrol eden röleler içermektedir.",
-      breadcrumb: "Anasayfa > Kartlı Geçiş Sistemleri",
+      title: "Access Control Sistemleri",
+      subtitle: "Kurumsal Güvenlik ve Erişim Kontrol Çözümleri",
+      description: "Mika Teknoloji access control sistemlerinde dünya lideri teknoloji ile RFID, QR kod ve mobil teknolojileri bir araya getirmektedir. Çoklu platform desteği ile personel kartlarının cinsine göre cihazlar HID, EM, Mifare, Desfire, Iclass özellikli kartları okuyabilmektedir. Access control panelleri; turnike geçişlerini ve kapı kilitlerini kontrol eden röleler içermektedir.",
+      breadcrumb: "Anasayfa > Access Control Sistemleri",
       devices: {
         title: "Mika Teknoloji Access Kontrol Panelleri",
         items: [
@@ -111,10 +111,10 @@ export default function AccessControlPage() {
       }
     },
     en: {
-      title: "Card Access Systems",
-      subtitle: "Card Readers for Card Access System",
-      description: "Mika Technology prefers world-leading RFID Personnel Card Readers in card access systems. With multi-platform support, devices can read HID, EM, Mifare, Desfire, Iclass cards according to personnel card types. Card reader devices contain relays that control turnstile passages and door locks.",
-      breadcrumb: "Home > Card Access Systems",
+      title: "Access Control Systems",
+      subtitle: "Corporate Security and Access Control Solutions",
+      description: "Mika Technology combines world-leading RFID, QR code and mobile technologies in access control systems. With multi-platform support, devices can read HID, EM, Mifare, Desfire, Iclass cards according to personnel card types. Access control panels contain relays that control turnstile passages and door locks.",
+      breadcrumb: "Home > Access Control Systems",
       devices: {
         title: "Mika Technology Access Control Panels",
         items: [
@@ -212,34 +212,147 @@ export default function AccessControlPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Breadcrumb & Header */}
-      <section className="py-8 bg-slate-50">
+      {/* Hero Section with Animation */}
+      <section className="relative py-20 bg-gradient-to-br from-primary/5 via-white to-primary/10 overflow-hidden">
         <div className="container mx-auto px-4">
-          <nav className="text-sm text-slate-600 mb-6">
+          <nav className="text-sm text-slate-600 mb-8">
             {t.breadcrumb}
           </nav>
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
-              {t.title}
-            </h1>
-            
-            <h2 className="text-xl md:text-2xl text-slate-700 font-medium mb-4">
-              {t.subtitle}
-            </h2>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+                {t.title}
+              </h1>
+              
+              <h2 className="text-xl md:text-2xl text-slate-700 font-medium mb-6">
+                {t.subtitle}
+              </h2>
 
-            <p className="text-lg text-slate-600 max-w-4xl leading-relaxed mb-4">
-              {t.description}
-            </p>
-            
-            <p className="text-lg text-slate-600 max-w-4xl leading-relaxed">
-              Access kontrol panelleri ile kapsamlı güvenlik sistemleri kurabilirsiniz. Türkiye'deki ilk 500 şirketin %80'nin kullandığı Mika PDKS yazılımı, piyasada bilinen tüm Kurumsal Kaynak Planlama (ERP) ve İnsan Kaynakları yazılımları ile entegre çalışabilmektedir.
-            </p>
-          </motion.div>
+              <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                {t.description}
+              </p>
+              
+              <p className="text-lg text-slate-600 leading-relaxed mb-8">
+                Access kontrol panelleri ile kapsamlı güvenlik sistemleri kurabilirsiniz. Mika PDKS yazılımı, tüm ERP ve İK yazılımları ile entegre çalışmaktadır.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  asChild
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-white px-8 py-3"
+                >
+                  <Link href="/iletisim">
+                    Ücretsiz Keşif Talep Edin
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="border-primary text-primary hover:bg-primary/5 px-8 py-3"
+                >
+                  Teknik Bilgi Alın
+                </Button>
+              </div>
+            </motion.div>
+
+            {/* Right Animation */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="relative bg-white rounded-2xl shadow-2xl p-8 mx-auto max-w-md">
+                {/* Card Reader Animation */}
+                <motion.div
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  className="text-center mb-8"
+                >
+                  <div className="w-32 h-20 bg-slate-800 rounded-lg mx-auto mb-4 relative overflow-hidden">
+                    <div className="absolute inset-2 bg-slate-700 rounded flex items-center justify-center">
+                      <div className="w-16 h-3 bg-green-400 rounded"></div>
+                    </div>
+                    {/* LED Light Animation */}
+                    <motion.div
+                      animate={{ opacity: [0, 1, 0] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                      className="absolute top-2 right-2 w-2 h-2 bg-green-400 rounded-full"
+                    ></motion.div>
+                  </div>
+                  <p className="text-sm text-slate-600">Access Control Panel</p>
+                </motion.div>
+
+                {/* Card Swipe Animation */}
+                <motion.div
+                  initial={{ x: -100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 1, delay: 1 }}
+                  className="relative mb-6"
+                >
+                  <motion.div
+                    animate={{ x: [0, 50, 0] }}
+                    transition={{ duration: 3, repeat: Infinity, delay: 2 }}
+                    className="w-16 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg shadow-lg"
+                  >
+                    <div className="text-white text-xs p-2 font-mono">RFID</div>
+                  </motion.div>
+                  <p className="text-xs text-slate-500 mt-2">Kart Okutma</p>
+                </motion.div>
+
+                {/* Mobile QR Animation */}
+                <motion.div
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 1, delay: 1.5 }}
+                  className="text-center"
+                >
+                  <div className="w-20 h-32 bg-slate-800 rounded-lg mx-auto relative">
+                    <div className="absolute inset-2 bg-white rounded flex flex-col items-center justify-center">
+                      {/* QR Code Animation */}
+                      <motion.div
+                        animate={{ scale: [1, 1.1, 1] }}
+                        transition={{ duration: 2, repeat: Infinity, delay: 3 }}
+                        className="w-10 h-10 border-2 border-slate-800"
+                      >
+                        <div className="grid grid-cols-3 gap-0.5 p-1">
+                          {[...Array(9)].map((_, i) => (
+                            <div key={i} className="bg-slate-800 w-1 h-1"></div>
+                          ))}
+                        </div>
+                      </motion.div>
+                      <div className="text-xs mt-1">QR</div>
+                    </div>
+                  </div>
+                  <p className="text-xs text-slate-500 mt-2">Mika Mobil App</p>
+                </motion.div>
+
+                {/* Success Animation */}
+                <motion.div
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 4 }}
+                  className="absolute -top-4 -right-4 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white"
+                >
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 0.5, delay: 4 }}
+                  >
+                    ✓
+                  </motion.div>
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
