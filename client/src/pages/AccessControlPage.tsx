@@ -5,11 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 
-// Device images (using same PDKS images for now, can be updated with access control specific images)
-const accessDevice1 = "/facial-device.png";
-const accessDevice2 = "/qr-hand-mockup.png";
-const accessDevice3 = "/fingerprint-device.png";
-const accessDevice4 = "/rfid-turnstile-system.png";
+// Access Control Panel images
+const accessControlPanel = "/attached_assets/image_1756893802044.png";
 
 export default function AccessControlPage() {
   const { selectedLanguage } = useLanguage();
@@ -21,31 +18,31 @@ export default function AccessControlPage() {
       description: "Mika Teknoloji kartlı geçiş sisteminde dünya lideri teknoloji ile RFID Personel Kart Okuyucular tercih etmektedir. Çoklu platform desteği ile personel kartlarının cinsine göre cihazlar HID, EM, Mifare, Desfire, Iclass özellikli kartları okuyabilmektedir. Kart okuyucu cihazlar; turnike geçişlerini ve kapı kilitlerini kontrol eden röleler içermektedir.",
       breadcrumb: "Anasayfa > Kartlı Geçiş Sistemleri",
       devices: {
-        title: "Mika/Suprema Personel Kart Okuyucular",
+        title: "Access Kontrol Panelleri",
         items: [
           {
-            title: "XPass 2",
-            subtitle: "Suprema Xpass2 Personel Kart okuyucu + NFC + BLE + Şifre + Mobil Giriş",
-            image: accessDevice1,
-            href: "/xpass2-kart-okuyucu"
+            title: "16'lı Access Kontrol Paneli",
+            subtitle: "Profesyonel kart okuyucu + NFC + BLE + Şifre + Mobil Giriş",
+            image: accessControlPanel,
+            href: "/access-kontrol-paneli"
           },
           {
-            title: "X-Station 2", 
-            subtitle: "Suprema X-station 2 Kart Okuyucu",
-            image: accessDevice2,
-            href: "/xstation2-personel-kart"
+            title: "16'lı Access Kontrol Paneli Kutusu", 
+            subtitle: "Access Kontrol Paneli ile Kutu Sistemi",
+            image: accessControlPanel,
+            href: "/access-kontrol-kutu"
           },
           {
-            title: "X-Station 2 QR",
-            subtitle: "Suprema Xstation 2 QR Personel Kart + QR okuyucu + Mobil giriş", 
-            image: accessDevice3,
-            href: "/xstation2-kart-okuyucu"
+            title: "Access Kontrol Paneli QR",
+            subtitle: "Access Kontrol Paneli + QR okuyucu + Mobil giriş", 
+            image: accessControlPanel,
+            href: "/access-kontrol-qr"
           },
           {
-            title: "XPass S2",
-            subtitle: "Suprema Xpass S2 Personel Kart Okuyucu Cihaz",
-            image: accessDevice4,
-            href: "/xpass-slim-personel-kart-okuyucu"
+            title: "Access Kontrol Paneli Slim",
+            subtitle: "Kompakt Access Kontrol Paneli Cihazı",
+            image: accessControlPanel,
+            href: "/access-kontrol-slim"
           }
         ]
       },
@@ -121,26 +118,26 @@ export default function AccessControlPage() {
         items: [
           {
             title: "16-Channel Access Control Panel",
-            subtitle: "Card reader + NFC + BLE + Password + Mobile Entry",
-            image: "/attached_assets/image_1756893433148.png",
+            subtitle: "Professional card reader + NFC + BLE + Password + Mobile Entry",
+            image: accessControlPanel,
             href: "/access-control-panel"
           },
           {
             title: "16-Channel Access Control Panel Box", 
             subtitle: "Access Control Panel with Box System",
-            image: "/attached_assets/image_1756893433148.png",
+            image: accessControlPanel,
             href: "/access-control-box"
           },
           {
             title: "Access Control Panel QR",
             subtitle: "Access Control Panel + QR reader + Mobile entry", 
-            image: "/attached_assets/image_1756893433148.png",
+            image: accessControlPanel,
             href: "/access-control-qr"
           },
           {
             title: "Access Control Panel Slim",
             subtitle: "Compact Access Control Panel Device",
-            image: "/attached_assets/image_1756893433148.png",
+            image: accessControlPanel,
             href: "/access-control-slim"
           }
         ]
