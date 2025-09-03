@@ -78,8 +78,8 @@ export default function FaceRecognitionSystemPage() {
                     </div>
                   )}
                   
-                  {/* Wi-Fi Badge - 2. ve 3. cihaz için */}
-                  {(device.id === 2 || device.id === 3) && (
+                  {/* Wi-Fi Badge - Tüm cihazlar için */}
+                  {(device.id === 1 || device.id === 2 || device.id === 3 || device.id === 4) && (
                     <div className="absolute -bottom-3 -left-3 z-10">
                       <div className="relative">
                         <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-2 rounded-full text-xs font-bold shadow-xl transform -rotate-12 animate-pulse">
