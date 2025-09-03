@@ -21,10 +21,10 @@ const devices = [
   },
   {
     id: 3,
-    name: "MT-FR300",
+    name: "MTFDP50",
     description: "Yüz Tanıma ve Parmak İzi Terminal",
-    image: "/placeholder-device.jpg",
-    features: ["Cihaz özelliği 1", "Cihaz özelliği 2", "Cihaz özelliği 3", "Cihaz özelliği 4", "Cihaz özelliği 5"]
+    image: "/mtfdp50-device.png",
+    features: ["Yüz Kayıt Kapasitesi : 5000", "Parmak İzi Kayıt Kapasitesi : 5000", "Log Kapasitesi : 500.000", "Röle : Var", "Haberleşme : TCP/IP, USB"]
   },
   {
     id: 4,
