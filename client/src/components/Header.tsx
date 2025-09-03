@@ -92,9 +92,9 @@ export default function Header() {
   };
 
   const navigationItems = [
-    { href: "/", label: t.nav.products, hasDropdown: true },
+    { href: "/", label: t.nav.products },
     { href: "/hakkimizda", label: t.nav.about },
-    { href: "/cozumler", label: t.nav.solutions },
+    { href: "/cozumler", label: t.nav.solutions, hasDropdown: true },
     { href: "/referanslar", label: t.nav.references },
     { href: "/iletisim", label: t.nav.contact }
   ];
