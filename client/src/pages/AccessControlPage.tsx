@@ -103,7 +103,7 @@ export default function AccessControlPage() {
       },
       systemProgram: {
         title: "Kartlı Geçiş Sistemi Programı",
-        description: "İşe giriş çıkış noktalarına, tespit edilen kapı, turnike yada geçiş noktası gibi alanlara yerleştirilen kart okuyucu personelin kartını okutmasıyla birlikte personel kart ID'ler zaman damgalı şekilde yazılıma aktarılmaktadır. Bu zaman damgaları ile gelen kart ID'leri PDKS \"personel devam kontrol sistemi\" ve GKS \"geçiş kontrol sistemi\" yazılımlarına aktarılır.",
+        description: "İşe giriş çıkış noktalarına, tespit edilen kapı, turnike yada geçiş noktası gibi alanlara yerleştirilen kart okuyucu personelin kartını okutmasıyla birlikte personel kart ID'ler zaman damgalı şekilde yazılıma aktarılmaktadır. Bu zaman damgaları ile gelen kart ID'leri PDKS 'personel devam kontrol sistemi' ve GKS 'geçiş kontrol sistemi' yazılımlarına aktarılır.",
         description2: "Mika Kartlı geçiş sistemi üstün performanslı kart okuyucu, Mika PDKS ve personel geçiş takip sistemi yazılımları ile entegre olarak çalışmaktadır. Aynı zamanda piyasada bilinen tüm insan kaynakları ile entegre olabilmektedir.",
         image: "/rfid-turnstile-system.png"
       },
