@@ -7,10 +7,10 @@ import { Link } from "wouter";
 const devices = [
   {
     id: 1,
-    name: "MT-FR100",
+    name: "MTFD15",
     description: "Yüz Tanıma Sistemi",
-    image: "/placeholder-device.jpg",
-    features: ["Cihaz özelliği 1", "Cihaz özelliği 2", "Cihaz özelliği 3", "Cihaz özelliği 4", "Cihaz özelliği 5"]
+    image: "/mtfd15-device.png",
+    features: ["Yüz Kayıt Kapasitesi : 1500", "Log Kapasitesi : 150.000", "Ekran Boyutu : 3,5 inç Elektronik Kapasiteli Dokunmatik Ekran", "Röle : Var", "Haberleşme : TCP/IP, USB"]
   },
   {
     id: 2,
