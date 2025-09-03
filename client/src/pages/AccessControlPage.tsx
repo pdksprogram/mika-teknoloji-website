@@ -4,6 +4,7 @@ import { CheckCircle, Shield, Eye, ArrowRight, Users, Lock, Zap, Clock } from "l
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
+import { useEffect } from "react";
 
 // Access Control Panel images  
 const accessControlPanel = "/access-control-panel.png";
@@ -15,12 +16,50 @@ const mikaQRApp = "/mika-qr-app.png";
 export default function AccessControlPage() {
   const { selectedLanguage } = useLanguage();
 
+  // SEO Meta Tags
+  useEffect(() => {
+    const title = selectedLanguage === 'tr' 
+      ? 'Access Control Sistemleri | Mika Teknoloji - Türkiye\'nin Lider Geçiş Kontrol Çözümleri'
+      : 'Access Control Systems | Mika Technology - Turkey\'s Leading Access Control Solutions';
+    
+    const description = selectedLanguage === 'tr'
+      ? 'Mika Teknoloji RFID kartlı geçiş, biyometrik parmak izi, yüz tanıma ve QR kodlu mobil erişim sistemleri ile kapsamlı access control çözümleri. PDKS entegrasyonu, turnike sistemleri.'
+      : 'Mika Technology comprehensive access control solutions with RFID card access, biometric fingerprint, face recognition and QR mobile access systems. PDKS integration, turnstile systems.';
+      
+    document.title = title;
+    
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', description);
+    } else {
+      metaDesc = document.createElement('meta');
+      metaDesc.setAttribute('name', 'description');
+      metaDesc.setAttribute('content', description);
+      document.head.appendChild(metaDesc);
+    }
+
+    // Keywords
+    const keywords = selectedLanguage === 'tr'
+      ? 'access control, geçiş kontrol sistemleri, RFID kartlı geçiş, parmak izi sistemi, yüz tanıma, QR mobil erişim, PDKS, turnike sistemleri, güvenlik sistemleri, personel takip'
+      : 'access control systems, RFID card access, fingerprint systems, face recognition, QR mobile access, PDKS, turnstile systems, security systems, personnel tracking';
+    
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', keywords);
+    } else {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.setAttribute('name', 'keywords');
+      metaKeywords.setAttribute('content', keywords);
+      document.head.appendChild(metaKeywords);
+    }
+  }, [selectedLanguage]);
+
   const accessControlTranslations = {
     tr: {
-      title: "Access Control Sistemleri",
-      subtitle: "Kurumsal Güvenlik ve Erişim Kontrol Çözümleri",
-      description: "Mika Teknoloji access control sistemlerinde dünya lideri teknoloji ile RFID, QR kod ve mobil teknolojileri bir araya getirmektedir. Çoklu platform desteği ile personel kartlarının cinsine göre cihazlar HID, EM, Mifare, Desfire, Iclass özellikli kartları okuyabilmektedir. Access control panelleri; turnike geçişlerini ve kapı kilitlerini kontrol eden röleler içermektedir.",
-      breadcrumb: "Anasayfa > Access Control Sistemleri",
+      title: "Access Control Sistemleri | Mika Teknoloji - Türkiye'nin Lider Geçiş Kontrol Çözümleri",
+      subtitle: "Modern Güvenlik Anlayışının Temel Taşı: Geçiş Kontrol Uzmanı",
+      description: "Mika Teknoloji olarak RFID kartlı geçiş, biyometrik parmak izi, yüz tanıma ve QR kodlu mobil erişim sistemleri ile kapsamlı access control çözümleri sunuyoruz. HID, EM, Mifare, Desfire, Iclass kart teknolojileri ve PDKS entegrasyonu ile işletmenizin güvenliğini maksimum seviyeye çıkarıyoruz.",
+      breadcrumb: "Anasayfa > Geçiş Kontrol Sistemleri > Access Control",
       devices: {
         title: "Mika Teknoloji Access Kontrol Panelleri",
         items: [
@@ -80,30 +119,88 @@ export default function AccessControlPage() {
           { name: "Yataş", logo: "/logo-placeholder.png" }
         ]
       },
-      otherSystems: {
-        title: "Personel Geçiş Kontrol Sistemleri",
-        description: "Kartla geçiş sistemi şeklinde olduğu gibi farklı biyometrik çözümlerle de geçiş kontrolü yapılabilir.",
-        description2: "Personel Geçiş Sistemleri : Parmak izi tanıma, Yüz tanıma, Yüz + Parmak İzi Tanıma, Damar Tanıma, Göz İrisi Tanıma ve QR okuyucu / Mobil giriş entegrasyonu olabilmektedir. Mika PDKS ve GKS yazılımı ile çalışan bu cihazlar piyasada bilinen tüm ERP, CRM yazılımlarıyla tam entegre şekilde çalışabilmektedir."
+      technologies: {
+        title: "Geçiş Kontrol Teknolojileri Nelerdir?",
+        items: [
+          "RFID Kartlı Geçiş Sistemi",
+          "Parmak İzli Geçiş Sistemi", 
+          "Yüz Tanımalı Sistemler",
+          "QR Kodu & Mobil Girişe Dayalı Geçiş Kontrolü",
+          "Turnike Sistemleri",
+          "Access Control Panelleri"
+        ]
+      },
+      usageAreas: {
+        title: "Geçiş Kontrol Sistemleri Kullanılan Alanlar",
+        description: "Access control sistemleri her alanda kullanılmaktadır. Bunlardan bazıları ise;",
+        areas: [
+          "Plaza, İş Yeri ve Ofis Binaları",
+          "Hastane / Sağlık Merkezleri", 
+          "Üniversite ve Okullar",
+          "Oteller ve Tatil Köyleri",
+          "Alışveriş Merkezi ve Mağazalar",
+          "Banka / Finans Kuruluşları",
+          "Sanayi, Üretim ve Endüstriyel Tesisler",
+          "Lojistik / Depolama Merkezleri",
+          "Araştırma / Geliştirme Laboratuvarları",
+          "Yüksek Güvenlikli Tesisler",
+          "Veri Merkezi ve Bulut Hizmet Sağlayıcıları",
+          "Spor ve Fitness Tesisleri"
+        ]
+      },
+      benefits: {
+        title: "Access Control Sistemlerinin Faydaları",
+        items: [
+          "Yetkisiz girişleri engeller",
+          "Personel hareketlerini izler ve raporlar",
+          "Kurumsal verimliliği artırır",
+          "Güvenlik seviyesi yüksek tutulur",
+          "PDKS entegrasyonu ile devam kontrolü",
+          "Gerçek zamanlı izleme ve raporlama",
+          "Coğrafi ve zamansal erişim kısıtlamaları",
+          "Maliyet etkili güvenlik çözümü"
+        ]
+      },
+      process: {
+        title: "Mika Access Control Süreci",
+        steps: [
+          {
+            title: "Keşif ve İhtiyaç Analizi",
+            description: "Projenize özel alan ve ihtiyaç analizi yapılır."
+          },
+          {
+            title: "Sistem Tasarımı",
+            description: "Cihaz tipi, yazılım modülleri ve entegrasyonlar belirlenir."
+          },
+          {
+            title: "Montaj ve Devreye Alma",
+            description: "Profesyonel ekibimizce kurulum yapılır."
+          },
+          {
+            title: "Eğitim ve Destek",
+            description: "Kullanıcı eğitimi ve sürekli teknik destek sağlanır."
+          }
+        ]
       },
       advantages: {
-        title: "Kartlı Geçiş Teknolojisi ve Avantajları",
-        description: "Kartlı geçiş sistemi, bir kurum veya kuruluşta çalışanların erişimini kontrol etmek için kullanılan kart tabanlı geçiş sistemleri teknolojisidir.",
+        title: "Neden Mika Access Control Sistemleri?",
+        description: "Türkiye'nin önde gelen access control uzmanı olarak sektördeki deneyimimiz ve teknoloji liderliğimizle öne çıkıyoruz.",
         items: [
           {
-            title: "Erişim Kontrolü",
-            description: "Kartlı geçiş, yetkisiz erişimi engellemek için etkili bir erişim kontrolü sağlar."
+            title: "500+ Başarılı Proje",
+            description: "Türkiye'nin önde gelen şirketlerinde başarılı access control uygulamaları."
           },
           {
-            title: "Kimlik Doğrulama",
-            description: "Kartlı giriş sistemi, kullanıcıların kimliklerini doğrulamak için kullanılır."
+            title: "50.000+ Aktif Kullanıcı",
+            description: "Günlük güvenli geçiş sağlanan personel sayısı ile kanıtlanmış güvenilirlik."
           },
           {
-            title: "Geçiş İzinleri",
-            description: "Kartlı personel geçiş, personellere özelleştirilmiş geçiş izinleri tanımlamayı sağlar."
+            title: "7/24 Teknik Destek",
+            description: "Kesintisiz hizmet için sürekli teknik destek ve bakım hizmeti."
           },
           {
-            title: "İzleme ve Kayıt Tutma",
-            description: "Geçiş kayıtlarını tutarak izleme ve kayıt süreçlerini sağlar."
+            title: "%99.9 Sistem Güvenilirliği",
+            description: "Yüksek performans ve kararlı çalışma garantisi ile iş sürekliği."
           }
         ]
       },
@@ -113,10 +210,10 @@ export default function AccessControlPage() {
       }
     },
     en: {
-      title: "Access Control Systems",
-      subtitle: "Corporate Security and Access Control Solutions",
-      description: "Mika Technology combines world-leading RFID, QR code and mobile technologies in access control systems. With multi-platform support, devices can read HID, EM, Mifare, Desfire, Iclass cards according to personnel card types. Access control panels contain relays that control turnstile passages and door locks.",
-      breadcrumb: "Home > Access Control Systems",
+      title: "Access Control Systems | Mika Technology - Turkey's Leading Access Control Solutions",
+      subtitle: "Foundation of Modern Security Approach: Access Control Expert",
+      description: "Mika Technology offers comprehensive access control solutions with RFID card access, biometric fingerprint, face recognition and QR mobile access systems. With HID, EM, Mifare, Desfire, Iclass card technologies and PDKS integration, we maximize your business security.",
+      breadcrumb: "Home > Access Control Systems > Professional Solutions",
       devices: {
         title: "Mika Technology Access Control Panels",
         items: [
@@ -176,30 +273,88 @@ export default function AccessControlPage() {
           { name: "Yataş", logo: "/logo-placeholder.png" }
         ]
       },
-      otherSystems: {
-        title: "Personnel Access Control Systems",
-        description: "Access control can also be performed with different biometric solutions, just like card access systems.",
-        description2: "Personnel Access Systems: Fingerprint recognition, Face recognition, Face + Fingerprint Recognition, Vein Recognition, Eye Iris Recognition and QR reader / Mobile entry integration. These devices working with Mika PDKS and GKS software can work fully integrated with all known ERP and CRM software in the market."
+      technologies: {
+        title: "What Are Access Control Technologies?",
+        items: [
+          "RFID Card Access System",
+          "Fingerprint Access System", 
+          "Face Recognition Systems",
+          "QR Code & Mobile Entry Based Access Control",
+          "Turnstile Systems",
+          "Access Control Panels"
+        ]
+      },
+      usageAreas: {
+        title: "Access Control Systems Usage Areas",
+        description: "Access control systems are used in every field. Some of these are;",
+        areas: [
+          "Plaza, Business and Office Buildings",
+          "Hospital / Health Centers", 
+          "Universities and Schools",
+          "Hotels and Holiday Villages",
+          "Shopping Centers and Stores",
+          "Bank / Financial Institutions",
+          "Industrial, Manufacturing and Industrial Facilities",
+          "Logistics / Storage Centers",
+          "Research / Development Laboratories",
+          "High Security Facilities",
+          "Data Centers and Cloud Service Providers",
+          "Sports and Fitness Facilities"
+        ]
+      },
+      benefits: {
+        title: "Benefits of Access Control Systems",
+        items: [
+          "Prevents unauthorized access",
+          "Tracks and reports personnel movements",
+          "Increases corporate efficiency",
+          "Maintains high security level",
+          "PDKS integration for attendance control",
+          "Real-time monitoring and reporting",
+          "Geographic and temporal access restrictions",
+          "Cost-effective security solution"
+        ]
+      },
+      process: {
+        title: "Mika Access Control Process",
+        steps: [
+          {
+            title: "Discovery and Needs Analysis",
+            description: "Project-specific area and needs analysis is performed."
+          },
+          {
+            title: "System Design",
+            description: "Device type, software modules and integrations are determined."
+          },
+          {
+            title: "Installation and Commissioning",
+            description: "Installation is carried out by our professional team."
+          },
+          {
+            title: "Training and Support",
+            description: "User training and continuous technical support are provided."
+          }
+        ]
       },
       advantages: {
-        title: "Card Access Technology and Advantages",
-        description: "Card access system is card-based access systems technology used to control employees' access in an institution or organization.",
+        title: "Why Mika Access Control Systems?",
+        description: "As Turkey's leading access control expert, we stand out with our industry experience and technology leadership.",
         items: [
           {
-            title: "Access Control",
-            description: "Card access provides effective access control to prevent unauthorized access."
+            title: "500+ Successful Projects",
+            description: "Successful access control implementations in Turkey's leading companies."
           },
           {
-            title: "Identity Verification",
-            description: "Card entry system is used to verify users' identities."
+            title: "50,000+ Active Users",
+            description: "Proven reliability with the number of personnel provided with daily secure access."
           },
           {
-            title: "Access Permissions",
-            description: "Card personnel access enables defining customized access permissions for personnel."
+            title: "7/24 Technical Support",
+            description: "Continuous technical support and maintenance service for uninterrupted service."
           },
           {
-            title: "Monitoring and Record Keeping",
-            description: "Provides monitoring and recording processes by keeping access records."
+            title: "99.9% System Reliability",
+            description: "Business continuity with high performance and stable operation guarantee."
           }
         ]
       },
@@ -240,9 +395,20 @@ export default function AccessControlPage() {
                 {t.description}
               </p>
               
-              <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                Access kontrol panelleri ile kapsamlı güvenlik sistemleri kurabilirsiniz. Mika PDKS yazılımı, tüm ERP ve İK yazılımları ile entegre çalışmaktadır.
-              </p>
+              <div className="space-y-6 mb-8">
+                <p className="text-lg text-slate-600 leading-relaxed">
+                  Access kontrol panelleri ile kapsamlı güvenlik sistemleri kurabilirsiniz. Mika PDKS yazılımı, tüm ERP ve İK yazılımları ile entegre çalışmaktadır.
+                </p>
+                
+                <div className="bg-slate-50 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-slate-800 mb-3">
+                    Geçiş Kontrol Sistemi Nedir?
+                  </h3>
+                  <p className="text-slate-600">
+                    Geçiş kontrol sistemi; kimlerin, ne zaman, hangi kapıdan geçiş yapabileceğini belirleyen, elektronik cihazlar ve yazılımlar bütünüdür. Bireylerin veya araçların belirli bir alana giriş ve çıkış yetkisini sınırlandırmak, izlemek ve yönetmek amacıyla kullanılır.
+                  </p>
+                </div>
+              </div>"
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
@@ -535,7 +701,7 @@ export default function AccessControlPage() {
         </div>
       </section>
       
-      {/* Other Systems */}
+      {/* Technologies Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <motion.div
@@ -544,22 +710,139 @@ export default function AccessControlPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-6">
-              {t.otherSystems.title}
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-8">
+              {t.technologies.title}
             </h2>
             
-            <div className="max-w-4xl space-y-6">
-              <p className="text-slate-700 leading-relaxed text-lg">
-                {t.otherSystems.description}
-              </p>
-              
-              <p className="text-slate-700 leading-relaxed text-lg">
-                {t.otherSystems.description2}
-              </p>
-              
-              <p className="text-lg font-semibold text-slate-800 mt-8">
-                Hemen bizimle iletişime geçerek en uygun kartlı geçiş sistemini belirleyelim.
-              </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {t.technologies.items.map((tech, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white border border-slate-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+                >
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <div className="w-6 h-6 bg-primary rounded"></div>
+                  </div>
+                  <h3 className="font-semibold text-slate-800 text-lg">{tech}</h3>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Usage Areas */}
+      <section className="py-16 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-6">
+              {t.usageAreas.title}
+            </h2>
+            
+            <p className="text-lg text-slate-600 mb-8">
+              {t.usageAreas.description}
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {t.usageAreas.areas.map((area, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.05 }}
+                  viewport={{ once: true }}
+                  className="flex items-center p-4 bg-white rounded-lg shadow-sm"
+                >
+                  <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></div>
+                  <span className="text-slate-700">{area}</span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-8">
+              {t.benefits.title}
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              {t.benefits.items.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="flex items-start space-x-4"
+                >
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-slate-700 leading-relaxed">{benefit}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="py-16 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-12 text-center">
+              {t.process.title}
+            </h2>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {t.process.steps.map((step, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span className="text-white font-bold text-xl">{index + 1}</span>
+                  </div>
+                  <h3 className="font-semibold text-slate-800 text-lg mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    {step.description}
+                  </p>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
