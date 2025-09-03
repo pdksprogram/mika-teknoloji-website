@@ -114,37 +114,6 @@ export default function Header() {
               </a>
             </div>
             <div className="absolute right-0 flex items-center space-x-2">
-              {/* Language Selector in Top Banner */}
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    className="text-white hover:text-white/90 hover:bg-white/10 px-2 py-1 h-auto text-xs flex items-center space-x-1"
-                    data-testid="top-language-selector"
-                  >
-                    <Globe className="h-3 w-3" />
-                    <span>{languages.find(lang => lang.code === selectedLanguage)?.flag}</span>
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="min-w-32">
-                  {languages.map((language) => (
-                    <DropdownMenuItem
-                      key={language.code}
-                      onClick={() => handleLanguageChange(language.code)}
-                      className="flex items-center space-x-2 cursor-pointer text-xs"
-                      data-testid={`top-lang-option-${language.code}`}
-                    >
-                      <span>{language.flag}</span>
-                      <span>{language.name}</span>
-                      {selectedLanguage === language.code && (
-                        <span className="ml-auto text-primary">✓</span>
-                      )}
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
-
               <Button 
                 asChild 
                 size="sm"
@@ -240,6 +209,38 @@ export default function Header() {
                   )}
                 </div>
               ))}
+              
+              {/* Language Selector next to Contact */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="text-slate-700 hover:text-primary px-2 py-1 h-auto text-sm flex items-center space-x-1 font-medium"
+                    data-testid="main-language-selector"
+                  >
+                    <Globe className="h-4 w-4" />
+                    <span>{languages.find(lang => lang.code === selectedLanguage)?.flag}</span>
+                    <span className="hidden xl:inline">{languages.find(lang => lang.code === selectedLanguage)?.name}</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="min-w-32">
+                  {languages.map((language) => (
+                    <DropdownMenuItem
+                      key={language.code}
+                      onClick={() => handleLanguageChange(language.code)}
+                      className="flex items-center space-x-2 cursor-pointer text-sm"
+                      data-testid={`main-lang-option-${language.code}`}
+                    >
+                      <span>{language.flag}</span>
+                      <span>{language.name}</span>
+                      {selectedLanguage === language.code && (
+                        <span className="ml-auto text-primary">✓</span>
+                      )}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </nav>
 
             {/* Special Buttons */}
@@ -251,14 +252,6 @@ export default function Header() {
                 data-testid="webpdks-button"
               >
                 <a href="https://pdkspersoneltakip.com/" target="_blank" rel="noopener noreferrer">WebPDKS</a>
-              </Button>
-              <Button 
-                asChild 
-                size="sm"
-                className="bg-green-600 hover:bg-green-700 text-white px-4"
-                data-testid="qr-patrol-button"
-              >
-                <Link href="/qr-patrol">QR-Patrol</Link>
               </Button>
             </div>
 
@@ -305,13 +298,26 @@ export default function Header() {
                   >
                     <a href="https://pdkspersoneltakip.com/" target="_blank" rel="noopener noreferrer">WebPDKS</a>
                   </Button>
-                  <Button 
-                    asChild 
-                    className="w-full bg-green-600 hover:bg-green-700 text-white"
-                    data-testid="mobile-qr-patrol-button"
-                  >
-                    <Link href="/qr-patrol">QR-Patrol</Link>
-                  </Button>
+                  
+                  {/* Mobile Language Selector */}
+                  <div className="pt-2">
+                    <div className="text-sm font-medium text-slate-600 mb-2">Dil / Language</div>
+                    <div className="flex space-x-2">
+                      {languages.map((language) => (
+                        <Button
+                          key={language.code}
+                          variant={selectedLanguage === language.code ? "default" : "outline"}
+                          size="sm"
+                          onClick={() => handleLanguageChange(language.code)}
+                          className="flex-1 flex items-center justify-center space-x-2"
+                          data-testid={`mobile-lang-${language.code}`}
+                        >
+                          <span>{language.flag}</span>
+                          <span>{language.name}</span>
+                        </Button>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </nav>
             </div>
