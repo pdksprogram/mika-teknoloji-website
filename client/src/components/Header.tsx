@@ -386,7 +386,7 @@ export default function Header() {
       
       {/* Fullscreen Search Overlay */}
       {isSearchOpen && (
-        <div className="fixed inset-0 z-[9999] bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-[9999] bg-gradient-to-br from-primary via-primary to-pink-600 flex items-center justify-center p-4">
           {/* Close Button */}
           <button
             onClick={() => {
@@ -394,53 +394,53 @@ export default function Header() {
               setSearchQuery("");
               setSearchResults([]);
             }}
-            className="absolute top-8 right-8 text-white/80 hover:text-white transition-colors"
+            className="absolute top-8 right-8 text-white hover:text-white/90 transition-colors bg-white/10 hover:bg-white/20 rounded-full p-2"
             data-testid="search-close-button"
           >
-            <X className="h-8 w-8" />
+            <X className="h-6 w-6" />
           </button>
           
           {/* Search Content */}
-          <div className="w-full max-w-3xl text-center">
+          <div className="w-full max-w-4xl text-center">
             {/* Title */}
-            <h2 className="text-white text-3xl md:text-4xl font-bold mb-12">
+            <h2 className="text-white text-4xl md:text-5xl font-bold mb-16 tracking-wide">
               NE ARAMIŞTINIZ?
             </h2>
             
             {/* Search Input */}
-            <div className="relative mb-8">
-              <div className="flex items-center bg-white/10 backdrop-blur border border-white/20 rounded-lg overflow-hidden">
+            <div className="relative mb-12">
+              <div className="flex items-center bg-white rounded-xl shadow-2xl overflow-hidden border-4 border-white/20">
                 <Input
                   placeholder="Aranacak kelimeyi yazın..."
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
-                  className="flex-1 bg-transparent border-none text-white placeholder:text-white/70 text-lg px-6 py-4 focus-visible:ring-0 focus-visible:ring-offset-0"
+                  className="flex-1 bg-white border-none text-slate-800 placeholder:text-slate-500 text-xl px-8 py-6 focus-visible:ring-0 focus-visible:ring-offset-0 font-medium"
                   autoFocus
                   data-testid="fullscreen-search-input"
                 />
                 <Button 
                   variant="ghost" 
                   size="lg"
-                  className="text-white hover:bg-white/10 px-6"
+                  className="text-primary hover:bg-primary/10 px-8 py-6"
                   data-testid="fullscreen-search-submit"
                 >
-                  <Search className="h-6 w-6" />
+                  <Search className="h-7 w-7" />
                 </Button>
               </div>
             </div>
             
             {/* Search Results */}
             {searchResults.length > 0 && (
-              <div className="max-w-2xl mx-auto space-y-3 max-h-80 overflow-y-auto">
+              <div className="max-w-3xl mx-auto space-y-4 max-h-96 overflow-y-auto">
                 {searchResults.map((result, index) => (
                   <div 
                     key={index}
-                    className="bg-white/10 backdrop-blur border border-white/20 rounded-lg p-4 hover:bg-white/20 cursor-pointer transition-colors text-left"
+                    className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl cursor-pointer transition-all duration-300 text-left border-l-4 border-primary hover:border-l-6"
                     onClick={() => handleSearchResult(result.url)}
                     data-testid={`fullscreen-search-result-${index}`}
                   >
-                    <h4 className="font-semibold text-white text-lg mb-2">{result.title}</h4>
-                    <p className="text-white/80">{result.description}</p>
+                    <h4 className="font-bold text-slate-800 text-xl mb-3">{result.title}</h4>
+                    <p className="text-slate-600 text-lg leading-relaxed">{result.description}</p>
                   </div>
                 ))}
               </div>
@@ -448,11 +448,11 @@ export default function Header() {
             
             {/* No Results */}
             {searchQuery && searchResults.length === 0 && (
-              <div className="bg-white/10 backdrop-blur border border-white/20 rounded-lg p-8 max-w-xl mx-auto">
-                <p className="text-white/90 text-lg">
+              <div className="bg-white rounded-xl shadow-lg p-10 max-w-2xl mx-auto border-l-4 border-orange-400">
+                <p className="text-slate-800 text-xl font-semibold mb-3">
                   Aramanızla eşleşen sonuç bulunamadı.
                 </p>
-                <p className="text-white/70 text-sm mt-2">
+                <p className="text-slate-600 text-lg">
                   Farklı kelimeler deneyebilir veya daha genel terimler kullanabilirsiniz.
                 </p>
               </div>
@@ -460,16 +460,16 @@ export default function Header() {
             
             {/* Search Suggestions when empty */}
             {!searchQuery && (
-              <div className="max-w-2xl mx-auto">
-                <p className="text-white/80 mb-6 text-lg">
-                  Popüler aramalar:
+              <div className="max-w-3xl mx-auto">
+                <p className="text-white mb-8 text-xl font-semibold">
+                  Popüler Aramalar
                 </p>
-                <div className="flex flex-wrap gap-3 justify-center">
-                  {['PDKS', 'Personel Takip', 'Yüz Tanıma', 'Parmak İzi', 'QR Kod', 'RFID Kart', 'WebPDKS'].map((suggestion) => (
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {['PDKS', 'Personel Takip', 'Yüz Tanıma', 'Parmak İzi', 'QR Kod', 'RFID Kart', 'WebPDKS', 'Referanslar'].map((suggestion) => (
                     <button
                       key={suggestion}
                       onClick={() => handleSearch(suggestion)}
-                      className="bg-white/10 backdrop-blur border border-white/20 rounded-full px-4 py-2 text-white hover:bg-white/20 transition-colors"
+                      className="bg-white text-primary font-semibold rounded-xl px-6 py-4 hover:bg-white/90 hover:shadow-lg transition-all duration-300 hover:scale-105"
                       data-testid={`search-suggestion-${suggestion.toLowerCase()}`}
                     >
                       {suggestion}
