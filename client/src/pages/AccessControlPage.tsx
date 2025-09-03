@@ -50,13 +50,13 @@ export default function AccessControlPage() {
         ]
       },
       generalFeatures: {
-        title: "Kart Okuyucu Genel Özellikleri",
+        title: "Access Kontrol Paneli Genel Özellikleri",
         items: [
           "Proje özelliklerine göre IP65 standartında suya ve toza dayanıklı dış ortam ve iç ortam cihaz seçenekleri.",
-          "Kart okuyucu cihaz lokalde turnike yada kapı açmak için kullanılabilir. Lokalde yapılan bu işlemler cihazların içinde zaman damgaları ile birlikte loglanır istenildiği zaman yazılım aracılığı ile incelenebilir, ayar değişiklikleri yapılabilir.",
+          "Access kontrol paneli lokalde turnike yada kapı açmak için kullanılabilir. Lokalde yapılan bu işlemler cihazların içinde zaman damgaları ile birlikte loglanır istenildiği zaman yazılım aracılığı ile incelenebilir, ayar değişiklikleri yapılabilir.",
           "Online kullanılacak sistemlerde PDKS ve GKS yazılımlarına direk entegrasyon yapılabilir turnike, kapı geçişleri direk röleye verilebilir.",
           "ERP ve İK programları ile entegrasyon.",
-          "Mika kart okuyucuları; PDKS, geçiş kontrol, yemekhane takip, ziyaretçi takibi ve kantin sistemlerimizde kullanılmaktadır.",
+          "Mika access kontrol panelleri; PDKS, geçiş kontrol, yemekhane takip, ziyaretçi takibi ve kantin sistemlerimizde kullanılmaktadır.",
           "Yüksek kalite, Yedek parça, 2 yıl garanti ve Hızlı destek"
         ]
       },
@@ -117,42 +117,42 @@ export default function AccessControlPage() {
       description: "Mika Technology prefers world-leading RFID Personnel Card Readers in card access systems. With multi-platform support, devices can read HID, EM, Mifare, Desfire, Iclass cards according to personnel card types. Card reader devices contain relays that control turnstile passages and door locks.",
       breadcrumb: "Home > Card Access Systems",
       devices: {
-        title: "Mika/Suprema Personnel Card Readers",
+        title: "Access Control Panels",
         items: [
           {
-            title: "XPass 2",
-            subtitle: "Suprema Xpass2 Personnel Card reader + NFC + BLE + Password + Mobile Entry",
-            image: accessDevice1,
-            href: "/xpass2-card-reader"
+            title: "16-Channel Access Control Panel",
+            subtitle: "Card reader + NFC + BLE + Password + Mobile Entry",
+            image: "/attached_assets/image_1756893433148.png",
+            href: "/access-control-panel"
           },
           {
-            title: "X-Station 2", 
-            subtitle: "Suprema X-station 2 Card Reader",
-            image: accessDevice2,
-            href: "/xstation2-personnel-card"
+            title: "16-Channel Access Control Panel Box", 
+            subtitle: "Access Control Panel with Box System",
+            image: "/attached_assets/image_1756893433148.png",
+            href: "/access-control-box"
           },
           {
-            title: "X-Station 2 QR",
-            subtitle: "Suprema Xstation 2 QR Personnel Card + QR reader + Mobile entry", 
-            image: accessDevice3,
-            href: "/xstation2-card-reader"
+            title: "Access Control Panel QR",
+            subtitle: "Access Control Panel + QR reader + Mobile entry", 
+            image: "/attached_assets/image_1756893433148.png",
+            href: "/access-control-qr"
           },
           {
-            title: "XPass S2",
-            subtitle: "Suprema Xpass S2 Personnel Card Reader Device",
-            image: accessDevice4,
-            href: "/xpass-slim-personnel-card-reader"
+            title: "Access Control Panel Slim",
+            subtitle: "Compact Access Control Panel Device",
+            image: "/attached_assets/image_1756893433148.png",
+            href: "/access-control-slim"
           }
         ]
       },
       generalFeatures: {
-        title: "Card Reader General Features",
+        title: "Access Control Panel General Features",
         items: [
           "IP65 standard water and dust resistant outdoor and indoor device options according to project features.",
-          "Card reader device can be used locally to open turnstiles or doors. These local operations are logged in the devices with timestamps and can be examined and settings changed via software when desired.",
+          "Access control panel can be used locally to open turnstiles or doors. These local operations are logged in the devices with timestamps and can be examined and settings changed via software when desired.",
           "In systems to be used online, direct integration can be made to PDKS and GKS software, turnstile and door passages can be given directly to the relay.",
           "Integration with ERP and HR programs.",
-          "Mika card readers are used in our PDKS, access control, cafeteria tracking, visitor tracking and canteen systems.",
+          "Mika access control panels are used in our PDKS, access control, cafeteria tracking, visitor tracking and canteen systems.",
           "High quality, Spare parts, 2-year warranty and Fast support"
         ]
       },
@@ -238,7 +238,7 @@ export default function AccessControlPage() {
             </p>
             
             <p className="text-lg text-slate-600 max-w-4xl leading-relaxed">
-              Türkiye'deki ilk 500 şirketin %80'nin kullandığı Mika PDKS yazılımı, piyasada bilinen tüm Kurumsal Kaynak Planlama (ERP) ve İnsan Kaynakları yazılımları ile entegre çalışabilmektedir.
+              Access kontrol panelleri ile kapsamlı güvenlik sistemleri kurabilirsiniz. Türkiye'deki ilk 500 şirketin %80'nin kullandığı Mika PDKS yazılımı, piyasada bilinen tüm Kurumsal Kaynak Planlama (ERP) ve İnsan Kaynakları yazılımları ile entegre çalışabilmektedir.
             </p>
           </motion.div>
         </div>
