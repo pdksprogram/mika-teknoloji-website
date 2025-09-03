@@ -4,6 +4,7 @@ import { CheckCircle, Shield, CreditCard, Eye, Fingerprint, Smartphone, Star, Ar
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
+import { useEffect } from "react";
 
 // Real device images
 const facialRecognitionDevice = "/facial-device.png";
@@ -14,10 +15,99 @@ const fingerprintDevice = "/fingerprint-device.png";
 export default function PDKSPage() {
   const { selectedLanguage } = useLanguage();
 
+  // SEO Meta Tags
+  useEffect(() => {
+    const title = selectedLanguage === 'tr' 
+      ? 'Profesyonel PDKS Sistemleri | Mika Teknoloji - Personel Devam Kontrol Çözümleri'
+      : 'Professional PDKS Systems | Mika Technology - Personnel Attendance Control Solutions';
+    
+    const description = selectedLanguage === 'tr'
+      ? 'Türkiye\'nin lider PDKS sistemi sağlayıcısı. Yüz tanıma, parmak izi, QR kod ve RFID kartlı personel devam kontrol sistemleri. 30+ yıl deneyim, 100.000+ kullanıcı.'
+      : 'Turkey\'s leading PDKS system provider. Facial recognition, fingerprint, QR code and RFID card personnel attendance control systems. 30+ years experience, 100,000+ users.';
+      
+    document.title = title;
+    
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', description);
+    } else {
+      metaDesc = document.createElement('meta');
+      metaDesc.setAttribute('name', 'description');
+      metaDesc.setAttribute('content', description);
+      document.head.appendChild(metaDesc);
+    }
+
+    // Keywords
+    const keywords = selectedLanguage === 'tr'
+      ? 'PDKS, personel devam kontrol sistemi, yüz tanıma PDKS, parmak izi sistemi, QR kod personel takip, RFID kart sistemi, mesai hesaplama, vardiya yönetimi, bordro entegrasyonu'
+      : 'PDKS, personnel attendance control system, facial recognition PDKS, fingerprint system, QR code personnel tracking, RFID card system, working time calculation, shift management, payroll integration';
+    
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', keywords);
+    } else {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.setAttribute('name', 'keywords');
+      metaKeywords.setAttribute('content', keywords);
+      document.head.appendChild(metaKeywords);
+    }
+  }, [selectedLanguage]);
+
+  // Schema Markup for SEO
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Mika Teknoloji",
+          "url": "https://mikateknoloji.com",
+          "description": "Türkiye'nin lider PDKS sistemi sağlayıcısı - 30+ yıl deneyim",
+          "foundingDate": "1990",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "TR"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Mika PDKS Sistemi",
+          "description": "Personel devam kontrol sistemi - Yüz tanıma, parmak izi, QR kod, RFID teknolojileri",
+          "operatingSystem": "Web-based, iOS, Android",
+          "applicationCategory": "BusinessApplication",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": "2025-12-31"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "PDKS Nedir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Personel Devam Kontrol Sistemi (PDKS), çalışanların iş yerindeki giriş-çıkış saatlerini, mesai sürelerini ve vardiya bilgilerini otomatik olarak kaydeden dijital sistemlerdir."
+            }
+          }]
+        }
+      ]
+    });
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, [selectedLanguage]);
+
   const pdksTranslations = {
     tr: {
-      title: "Personel Devam Kontrol Sistemleri (PDKS) - Türkiye'nin Lider PDKS Çözümleri",
-      subtitle: "Biyometrik Personel Takip Sistemi | Yüz Tanıma | Parmak İzi | RFID | QR Kod PDKS",
+      title: "Profesyonel PDKS Sistemleri",
+      subtitle: "Modern İşgücü Yönetimi için Kapsamlı Çözümler",
+      brandMessage: "Mika Teknoloji - Türkiye'nin PDKS Uzmanı",
       description: "Mika Teknoloji, Türkiye'de 30+ yıllık deneyimle 100.000+ kullanıcıya hizmet veren lider PDKS sistemi sağlayıcısıdır. Fabrika, hastane, okul ve SME'ler için biyometrik personel giriş çıkış takip sistemi, mesai hesaplama, vardiya yönetimi ve bordro entegrasyonlu PDKS yazılımı çözümleri. KVKK uyumlu, bulut tabanlı ve mobil destekli personel devam kontrol sistemleri ile işgücü verimliliğinizi %40'a kadar artırın.",
       seoDescription: "Türkiye'nin önde gelen PDKS sistemleri ve personel devam kontrol çözümleri. Yüz tanıma, parmak izi, QR kod ve RFID kart teknolojileri ile modern işgücü yönetimi.",
       whatIsPdks: {
@@ -164,8 +254,9 @@ export default function PDKSPage() {
       }
     },
     en: {
-      title: "Personnel Attendance Control Systems (PDKS)",
+      title: "Professional PDKS Systems",
       subtitle: "Comprehensive Solutions for Modern Workforce Management",
+      brandMessage: "Mika Technology - Turkey's PDKS Expert",
       description: "As Mika Technology, we offer the latest technology products to meet your business personnel tracking needs. With our PDKS systems, you can perform employee entry-exit control, shift tracking and shift management on a digital platform.",
       seoDescription: "Turkey's leading PDKS systems and personnel attendance control solutions. Modern workforce management with facial recognition, fingerprint, QR code and RFID card technologies.",
       whatIsPdks: {
@@ -372,12 +463,18 @@ export default function PDKSPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight">
+            <div className="mb-6">
+              <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold tracking-wide">
+                {pdks.brandMessage}
+              </span>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-800 mb-6 leading-tight">
               {pdks.title}
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed">
+            <h2 className="text-xl md:text-2xl text-slate-600 font-light mb-8 leading-relaxed">
               {pdks.subtitle}
-            </p>
+            </h2>
             <p className="text-lg text-slate-700 mb-12 max-w-3xl mx-auto">
               {pdks.description}
             </p>
@@ -385,19 +482,35 @@ export default function PDKSPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg"
+                className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white font-bold px-8 py-4 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
                 data-testid="pdks-demo-button"
               >
-                <Link href="/iletisim">{pdks.cta.buttons.demo}</Link>
+                <Link href="/iletisim">ÜCRETSİZ DEMO + KEŞİF</Link>
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg"
+                className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300"
                 data-testid="pdks-contact-button"
               >
-                <Link href="/iletisim">{pdks.cta.buttons.contact}</Link>
+                <Link href="/iletisim">FİYAT TEKLİFİ AL</Link>
               </Button>
+            </div>
+            
+            {/* Trust Signals */}
+            <div className="flex items-center justify-center gap-8 mt-8 text-sm text-slate-600">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <span>30+ Yıl Deneyim</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                <span>100.000+ Kullanıcı</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                <span>7/24 Destek</span>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -413,12 +526,25 @@ export default function PDKSPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 border-l-4 border-primary">
+              <h2 className="text-3xl font-bold text-slate-800 mb-6 flex items-center">
+                <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-4">
+                  <span className="text-white text-lg font-bold">?</span>
+                </div>
                 {pdks.whatIsPdks.title}
               </h2>
               <p className="text-lg text-slate-700 leading-relaxed">
-                {pdks.whatIsPdks.content}
+                <strong>Personel Devam Kontrol Sistemi (PDKS)</strong>, çalışanların iş yerindeki giriş-çıkış saatlerini, mesai sürelerini ve vardiya bilgilerini otomatik olarak kaydeden dijital sistemlerdir. Modern PDKS çözümleri, sadece basit puantaj kayıtları tutmakla kalmaz, aynı zamanda <strong>bordro entegrasyonu, raporlama, analiz ve insan kaynakları yönetimi</strong> için kapsamlı veriler sunar.
+              </p>
+            </div>
+            
+            {/* Cross-linking to related services */}
+            <div className="mt-8 p-6 bg-slate-50 rounded-lg">
+              <p className="text-slate-600 text-center">
+                <strong>İlgili Çözümlerimiz:</strong> 
+                <Link href="/access-control" className="text-primary hover:underline ml-2">Access Control Sistemleri</Link> |
+                <Link href="/cozumler/turnike" className="text-primary hover:underline ml-2">Turnike Sistemleri</Link> |
+                <Link href="/cozumler/bekci-kontrol" className="text-primary hover:underline ml-2">Bekçi Kontrol</Link>
               </p>
             </div>
           </motion.div>
@@ -594,6 +720,60 @@ export default function PDKSPage() {
                   <span className="text-slate-700">{feature}</span>
                 </motion.div>
               ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">
+              Sık Sorulan Sorular
+            </h2>
+            
+            <div className="max-w-4xl mx-auto space-y-6">
+              <div className="bg-slate-50 rounded-xl p-6 border-l-4 border-primary">
+                <h3 className="text-lg font-semibold text-slate-800 mb-3">
+                  Hangi PDKS sistemi işletmem için en uygun?
+                </h3>
+                <p className="text-slate-600">
+                  İşletmenizin büyüklüğü, güvenlik ihtiyaçları ve bütçesine göre yüz tanıma (hijyenik), parmak izi (güvenli), QR kod (maliyet etkin) veya RFID kart (praktik) sistemlerinden birini önerebiliriz.
+                </p>
+              </div>
+              
+              <div className="bg-slate-50 rounded-xl p-6 border-l-4 border-primary">
+                <h3 className="text-lg font-semibold text-slate-800 mb-3">
+                  PDKS sistemi mevcut bordro yazılımımla entegre olur mu?
+                </h3>
+                <p className="text-slate-600">
+                  Evet, Mika PDKS tüm popüler ERP ve İK yazılımları ile API entegrasyonu yapabilir. Logo, SAP, Mikro gibi sistemlerle tam uyumlu çalışır.
+                </p>
+              </div>
+              
+              <div className="bg-slate-50 rounded-xl p-6 border-l-4 border-primary">
+                <h3 className="text-lg font-semibold text-slate-800 mb-3">
+                  Kurulum süreci ne kadar sürer?
+                </h3>
+                <p className="text-slate-600">
+                  Sistem büyüklüğüne göre 1-5 iş günü arasında kurulum tamamlanır. Ücretsiz eğitim ve 30 günlük adaptasyon desteği dahildir.
+                </p>
+              </div>
+              
+              <div className="bg-slate-50 rounded-xl p-6 border-l-4 border-primary">
+                <h3 className="text-lg font-semibold text-slate-800 mb-3">
+                  KVKK uyumluluğu nasıl sağlanıyor?
+                </h3>
+                <p className="text-slate-600">
+                  Tüm biyometrik veriler şifrelenmiş formatta saklanır, veri minimizasyonu ilkesi uygulanır ve kullanıcı rıza yönetimi otomatik olarak yapılır.
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
