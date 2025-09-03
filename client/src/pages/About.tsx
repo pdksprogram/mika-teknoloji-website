@@ -550,7 +550,7 @@ export default function About() {
                 <div className="space-y-4">
                   <div>
                     <h3 className="text-xl font-bold text-slate-800 mb-2">
-                      Tolga Yel Aldı
+                      Tolga Akal
                     </h3>
                     <div className="space-y-2 mb-4">
                       <p className="text-lg font-semibold text-primary">
