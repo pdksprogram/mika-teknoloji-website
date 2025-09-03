@@ -1,13 +1,21 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 // import { useIsMobile } from "@/hooks/use-mobile"; // Not used currently
 import { useLanguage } from "@/hooks/useLanguage";
 const mikaLogo = "/mika-logo.jpg"; // Real Mika logo
@@ -16,6 +24,9 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isProductsMenuOpen, setIsProductsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<any[]>([]);
   const [location] = useLocation();
   // const isMobile = useIsMobile(); // Not used currently
   const { selectedLanguage, setSelectedLanguage, t } = useLanguage();
@@ -23,6 +34,20 @@ export default function Header() {
   const languages = [
     { code: "tr", name: "Türkçe", flag: "🇹🇷" },
     { code: "en", name: "English", flag: "🇺🇸" }
+  ];
+
+  // Site içi arama verileri
+  const searchableContent = [
+    { title: "PDKS Sistemleri", url: "/cozumler/pdks", description: "Personel devam kontrol sistemleri, yüz tanıma, parmak izi" },
+    { title: "Yüz Tanıma PDKS", url: "/cozumler/pdks#facial", description: "Temassız yüz tanıma teknolojisi ile personel takibi" },
+    { title: "Parmak İzi PDKS", url: "/cozumler/pdks#fingerprint", description: "Biyometrik parmak izi ile güvenli personel kontrolü" },
+    { title: "QR Tabanlı PDKS", url: "/cozumler/pdks#qr", description: "Mobil uygulama destekli QR kod sistemi" },
+    { title: "RFID Kartlı PDKS", url: "/cozumler/pdks#rfid", description: "Temassız kart teknolojisi ile personel takibi" },
+    { title: "WebPDKS", url: "https://pdkspersoneltakip.com/", description: "Web tabanlı personel takip sistemi" },
+    { title: "Hakkımızda", url: "/hakkimizda", description: "Mika Teknoloji kurumsal bilgileri" },
+    { title: "Çözümler", url: "/cozumler", description: "Teknoloji çözümlerimiz ve hizmetlerimiz" },
+    { title: "Referanslar", url: "/referanslar", description: "Müşteri referanslarımız ve projelerimiz" },
+    { title: "İletişim", url: "/iletisim", description: "İletişim bilgileri ve adres" },
   ];
 
   // Handle scroll effect for sticky header
@@ -43,6 +68,34 @@ export default function Header() {
   const handleLanguageChange = (langCode: string) => {
     setSelectedLanguage(langCode as 'tr' | 'en');
     console.log("Language changed to:", langCode);
+  };
+
+  // Site içi arama fonksiyonu
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+    if (query.trim() === "") {
+      setSearchResults([]);
+      return;
+    }
+
+    const filtered = searchableContent.filter(item => 
+      item.title.toLowerCase().includes(query.toLowerCase()) ||
+      item.description.toLowerCase().includes(query.toLowerCase())
+    );
+    
+    setSearchResults(filtered.slice(0, 5)); // İlk 5 sonucu göster
+  };
+
+  // Arama sonucuna tıklandığında
+  const handleSearchResult = (url: string) => {
+    setIsSearchOpen(false);
+    setSearchQuery("");
+    setSearchResults([]);
+    if (url.startsWith('http')) {
+      window.open(url, '_blank');
+    } else {
+      window.location.href = url;
+    }
   };
 
   const navigationItems = [
@@ -210,37 +263,88 @@ export default function Header() {
                 </div>
               ))}
               
-              {/* Language Selector next to Contact */}
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    className="text-slate-700 hover:text-primary px-2 py-1 h-auto text-sm flex items-center space-x-1 font-medium"
-                    data-testid="main-language-selector"
-                  >
-                    <Globe className="h-4 w-4" />
-                    <span>{languages.find(lang => lang.code === selectedLanguage)?.flag}</span>
-                    <span className="hidden xl:inline">{languages.find(lang => lang.code === selectedLanguage)?.name}</span>
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="min-w-32">
-                  {languages.map((language) => (
-                    <DropdownMenuItem
-                      key={language.code}
-                      onClick={() => handleLanguageChange(language.code)}
-                      className="flex items-center space-x-2 cursor-pointer text-sm"
-                      data-testid={`main-lang-option-${language.code}`}
+              {/* Language & Search Section - İLETİŞİM | EN | Search */}
+              <div className="flex items-center space-x-1 text-sm font-medium">
+                <span className="text-slate-400">|</span>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      className="text-slate-700 hover:text-primary px-2 py-1 h-auto text-sm font-medium"
+                      data-testid="main-language-selector"
                     >
-                      <span>{language.flag}</span>
-                      <span>{language.name}</span>
-                      {selectedLanguage === language.code && (
-                        <span className="ml-auto text-primary">✓</span>
+                      {selectedLanguage.toUpperCase()}
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end" className="min-w-32">
+                    {languages.map((language) => (
+                      <DropdownMenuItem
+                        key={language.code}
+                        onClick={() => handleLanguageChange(language.code)}
+                        className="flex items-center space-x-2 cursor-pointer text-sm"
+                        data-testid={`main-lang-option-${language.code}`}
+                      >
+                        <span>{language.flag}</span>
+                        <span>{language.name}</span>
+                        {selectedLanguage === language.code && (
+                          <span className="ml-auto text-primary">✓</span>
+                        )}
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+                <span className="text-slate-400">|</span>
+                
+                {/* Site İçi Arama */}
+                <Dialog open={isSearchOpen} onOpenChange={setIsSearchOpen}>
+                  <DialogTrigger asChild>
+                    <Button 
+                      variant="ghost" 
+                      size="sm"
+                      className="bg-primary hover:bg-primary/90 text-white px-2 py-1 h-auto"
+                      data-testid="search-button"
+                    >
+                      <Search className="h-4 w-4" />
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-md">
+                    <DialogHeader>
+                      <DialogTitle>Site İçi Arama</DialogTitle>
+                    </DialogHeader>
+                    <div className="space-y-4">
+                      <Input
+                        placeholder="Aranacak kelimeyi yazın..."
+                        value={searchQuery}
+                        onChange={(e) => handleSearch(e.target.value)}
+                        className="w-full"
+                        autoFocus
+                        data-testid="search-input"
+                      />
+                      {searchResults.length > 0 && (
+                        <div className="max-h-60 overflow-y-auto space-y-2">
+                          {searchResults.map((result, index) => (
+                            <div 
+                              key={index}
+                              className="p-3 hover:bg-slate-50 rounded-lg cursor-pointer border border-slate-200"
+                              onClick={() => handleSearchResult(result.url)}
+                              data-testid={`search-result-${index}`}
+                            >
+                              <h4 className="font-medium text-slate-900">{result.title}</h4>
+                              <p className="text-sm text-slate-600">{result.description}</p>
+                            </div>
+                          ))}
+                        </div>
                       )}
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
+                      {searchQuery && searchResults.length === 0 && (
+                        <p className="text-sm text-slate-500 py-4 text-center">
+                          Aramanızla eşleşen sonuç bulunamadı.
+                        </p>
+                      )}
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
             </nav>
 
             {/* Special Buttons */}
