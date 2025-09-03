@@ -28,10 +28,10 @@ const devices = [
   },
   {
     id: 4,
-    name: "OP-S20",
-    description: "Standalone Parmak İzi Okuyucu",
-    image: "/placeholder-device.jpg",
-    features: ["Küçük Boyut", "Düşük Güç", "RS485 Bağlantı", "Pratik Kullanım"]
+    name: "MT4051",
+    description: "Parmak İzi ve Kart Okuyucu",
+    image: "/mt4051-device.png",
+    features: ["Parmak İzi Kapasite : 1000 - 3000", "Log Kapasitesi : 100.000", "Kart Kapasitesi : 500", "Kart : Proximity", "Şifre : Var", "Ethernet : Var", "İletişim Portalı : TCP / IP , USB , RS485", "Röle : Var"]
   }
 ];
 
