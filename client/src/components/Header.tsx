@@ -257,8 +257,8 @@ export default function Header() {
                   
                   {/* Mega Menu Dropdown */}
                   {item.hasDropdown && isDropdownOpen && activeMenuType && item.menuType === activeMenuType && (
-                    <div className="absolute top-full left-0 w-screen max-w-5xl bg-white shadow-2xl border-t-4 border-primary z-50 transform -translate-x-1/4">
-                      <div className={`grid ${activeMenuType === 'products' ? 'grid-cols-1' : 'grid-cols-4'} gap-6 p-8`}>
+                    <div className={`absolute top-full left-0 w-screen ${activeMenuType === 'products' ? 'max-w-2xl' : 'max-w-5xl'} bg-white shadow-2xl border-t-4 border-primary z-50 transform -translate-x-1/4`}>
+                      <div className={`grid ${activeMenuType === 'products' ? 'grid-cols-2' : 'grid-cols-4'} gap-6 p-8`}>
                         {Object.entries(activeMenuType === 'products' ? productsMenuData : solutionsMenuData).map(([category, items]) => (
                           <div key={category} className="space-y-4">
                             <h3 className="font-bold text-gray-900 text-lg border-b-2 border-primary pb-2">
