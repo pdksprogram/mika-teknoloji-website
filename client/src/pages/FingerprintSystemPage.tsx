@@ -60,7 +60,23 @@ export default function FingerprintSystemPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+                <Card className="h-full hover:shadow-lg transition-shadow duration-300 relative">
+                  {/* YENİ Badge - sadece ilk 2 cihaz için */}
+                  {device.id <= 2 && (
+                    <div className="absolute -top-3 -right-3 z-10">
+                      <div className="relative">
+                        <div className="bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl transform rotate-12 animate-bounce">
+                          <div className="flex items-center gap-1">
+                            <span className="animate-pulse">✨</span>
+                            <span>YENİ</span>
+                            <span className="animate-pulse">✨</span>
+                          </div>
+                        </div>
+                        {/* Glow effect */}
+                        <div className="absolute inset-0 bg-red-400 rounded-full blur-sm opacity-75 animate-ping"></div>
+                      </div>
+                    </div>
+                  )}
                   <CardContent className="p-6">
                     <div className="aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
                       <div className="text-gray-400 text-center">
