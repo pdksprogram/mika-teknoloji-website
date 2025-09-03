@@ -89,7 +89,7 @@ export default function PDKSPage() {
           ]
         },
         rfid: {
-          title: "RFID Kartlı PDKS Sistemi",
+          title: "RFID Kartlı Ve QR Turnike PDKS Sistemi",
           description: "Temassız kart teknolojisi ile pratik ve hızlı personel giriş-çıkış kontrolü",
           features: [
             "125 kHz / 13.56 MHz frekans desteği",
