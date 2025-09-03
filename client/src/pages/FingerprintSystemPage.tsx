@@ -1,7 +1,67 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Shield, Clock, Users } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { ArrowRight, CheckCircle, Shield, Clock, Users, Phone, Mail } from "lucide-react";
 import { Link } from "wouter";
+
+const devices = [
+  {
+    id: 1,
+    name: "OP-FDP200",
+    description: "Yüz Tanıma ve Parmak İzi Sistemi",
+    image: "/placeholder-device.jpg",
+    features: ["4.3\" TFT Renkli Ekran", "Yüz Tanıma Teknolojisi", "Parmak İzi Okuyucu", "TCP/IP Bağlantı"]
+  },
+  {
+    id: 2,
+    name: "OP-FDP50",
+    description: "Yüz Tanıma ve Parmak İzi Terminal",
+    image: "/placeholder-device.jpg",
+    features: ["Çift Doğrulama", "Renkli Ekran", "Hızlı Tanıma", "Ethernet Desteği"]
+  },
+  {
+    id: 3,
+    name: "OP-S100",
+    description: "Standalone Parmak İzi Terminal",
+    image: "/placeholder-device.jpg",
+    features: ["Bağımsız Çalışma", "Kompakt Tasarım", "USB Bağlantı", "Kolay Kurulum"]
+  },
+  {
+    id: 4,
+    name: "OP-S20",
+    description: "Standalone Parmak İzi Okuyucu",
+    image: "/placeholder-device.jpg",
+    features: ["Küçük Boyut", "Düşük Güç", "RS485 Bağlantı", "Pratik Kullanım"]
+  },
+  {
+    id: 5,
+    name: "OP-P1000",
+    description: "Parmak İzi Okuyucu Terminal",
+    image: "/placeholder-device.jpg",
+    features: ["TFT Ekran", "Ses Uyarısı", "Wiegand Çıkış", "Dayanıklı Yapı"]
+  },
+  {
+    id: 6,
+    name: "OP-P1100",
+    description: "Parmak İzi Okuyucu Cihazı",
+    image: "/placeholder-device.jpg",
+    features: ["Gelişmiş Algoritma", "Hızlı İşlem", "USB/RS232", "Güvenli Saklama"]
+  },
+  {
+    id: 7,
+    name: "OP-P1100W",
+    description: "Parmak İzi Okuyucu (WiFi)",
+    image: "/placeholder-device.jpg",
+    features: ["WiFi Bağlantı", "Kablosuz İletişim", "Uzaktan Yönetim", "Kolay Entegrasyon"]
+  },
+  {
+    id: 8,
+    name: "OP-PA1000",
+    description: "Parmak İzi Okuyucu Terminal",
+    image: "/placeholder-device.jpg",
+    features: ["Profesyonel Seri", "Yüksek Kapasiteli", "Web Tabanlı", "Multi-Modal"]
+  }
+];
 
 const benefits = [
   {
@@ -102,6 +162,124 @@ export default function FingerprintSystemPage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Devices Grid */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Parmak İzi Okuyucu Cihazlarımız
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Her ihtiyaca uygun, kaliteli ve güvenilir parmak izi okuyucu modelleri
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {devices.map((device, index) => (
+              <motion.div
+                key={device.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+                  <CardContent className="p-6">
+                    <div className="aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                      <div className="text-gray-400 text-center">
+                        <div className="w-16 h-16 bg-primary/10 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                          <Shield className="w-8 h-8 text-primary" />
+                        </div>
+                        <p className="text-sm">Cihaz Görseli</p>
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{device.name}</h3>
+                    <p className="text-primary font-semibold mb-4">{device.description}</p>
+                    
+                    <ul className="space-y-2 mb-6">
+                      {device.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <Button 
+                      className="w-full"
+                      variant="outline"
+                      data-testid={`device-info-${device.name.toLowerCase().replace(/\s+/g, '-')}`}
+                    >
+                      <Link href="/iletisim">Detaylı Bilgi Al</Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-gradient-to-r from-primary to-pink-600 text-white py-16">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Parmak İzi Sisteminizi Hemen Kurun
+            </h2>
+            <p className="text-xl mb-12 max-w-2xl mx-auto">
+              Ücretsiz keşif ve demo için bizimle iletişime geçin. Size en uygun cihazı seçelim.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Button 
+                size="lg" 
+                className="bg-white text-primary hover:bg-slate-100 px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                data-testid="fingerprint-final-cta-demo"
+              >
+                <Link href="/iletisim" className="flex items-center">
+                  ÜCRETSİZ KEŞİF + DEMO
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                data-testid="fingerprint-final-cta-contact"
+              >
+                <Link href="/iletisim">TEKNİK BİLGİ AL</Link>
+              </Button>
+            </div>
+
+            {/* Contact Info */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-white/80">
+              <div className="flex items-center gap-2">
+                <Phone className="w-5 h-5" />
+                <span>0850 450 15 30</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-5 h-5" />
+                <span>info@mikateknoloji.com</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-5 h-5" />
+                <span>2 Yıl Garanti</span>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
