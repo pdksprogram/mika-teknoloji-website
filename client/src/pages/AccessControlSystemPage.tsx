@@ -8,6 +8,8 @@ import SEO from "@/seo/SEO";
 // Real product images paths  
 const controlPanelImage = "/attached_assets/image_1757935900507.png";
 const controlCardImage = "/attached_assets/image_1757935911490.png";
+const dashboardImage = "/attached_assets/image_1757937450064.png";
+const phoneQrImage = "/attached_assets/image_1757937454126.png";
 
 const components = [
   "Sisteme entegre edilmiş kart okuyucular",
@@ -457,7 +459,7 @@ export default function AccessControlSystemPage() {
       <section className="py-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left - Cloud Illustration */}
+            {/* Left - Dashboard Image */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -465,29 +467,29 @@ export default function AccessControlSystemPage() {
               viewport={{ once: true }}
             >
               <div className="relative">
-                <div className="w-full max-w-lg mx-auto">
-                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-12 text-center">
-                    <div className="space-y-8">
-                      <div className="text-6xl">☁️</div>
-                      <div className="space-y-4">
-                        <div className="bg-white rounded-2xl p-4 shadow-sm">
-                          <div className="text-2xl">🏢</div>
-                          <div className="text-sm text-gray-700">Ofis Binaları</div>
-                        </div>
-                        <div className="grid grid-cols-2 gap-4">
-                          <div className="bg-white rounded-2xl p-4 shadow-sm">
-                            <div className="text-xl">🏪</div>
-                            <div className="text-xs text-gray-700">AVM</div>
-                          </div>
-                          <div className="bg-white rounded-2xl p-4 shadow-sm">
-                            <div className="text-xl">🏠</div>
-                            <div className="text-xs text-gray-700">Konut</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div className="w-full max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
+                  <img 
+                    src={dashboardImage} 
+                    alt="Bulut Tabanlı Yönetim Dashboard"
+                    className="w-full h-auto object-contain"
+                    width="800"
+                    height="600"
+                  />
                 </div>
+                {/* Phone QR Image - Floating */}
+                <motion.div 
+                  className="absolute -bottom-8 -right-8 w-64 h-auto"
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                >
+                  <img 
+                    src={phoneQrImage} 
+                    alt="QR Kod ile Mobil Geçiş"
+                    className="w-full h-auto object-contain drop-shadow-2xl"
+                    width="300"
+                    height="200"
+                  />
+                </motion.div>
               </div>
             </motion.div>
 
@@ -503,13 +505,15 @@ export default function AccessControlSystemPage() {
                   <span className="text-blue-600">Bulut Tabanlı</span><br />
                   Geçiş Kontrol Sistemi
                 </h2>
-                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                   Binalarınızı, çalışanlarınızı, ziyaretçilerinizi, müşterilerinizi, bina sakinlerinizi 
                   ve tüm varlıklarınızı Mika bulut yazılımları ile koruyabilirsiniz.
                 </p>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  Tüm yaşam alanlarınızı BT altyapı maliyetine gereksinim duymadan güvenle yönetebilirsiniz.
-                </p>
+                <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-8 rounded-lg">
+                  <p className="text-lg text-gray-700 leading-relaxed font-medium">
+                    Tüm yaşam alanlarınızı BT altyapı maliyetine gereksinim duymadan güvenle yönetebilirsiniz.
+                  </p>
+                </div>
               </div>
 
               <div className="grid grid-cols-2 gap-6">
