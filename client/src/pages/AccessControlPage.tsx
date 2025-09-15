@@ -3,8 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Shield, ArrowRight, Key, Building } from "lucide-react";
 import { Link } from "wouter";
-import SEO from "@/seo/SEO";
-import SmartImg from "@/components/SmartImg";
 
 const accessPanels = [
   {
@@ -102,66 +100,9 @@ const usageAreas = [
   "Lojistik ve Depolama Merkezleri"
 ];
 
-const faqs = [
-  {
-    question: "Access Panel ile kaç kapı kontrol edilebilir?",
-    answer: "Access Panel 16'lı ile 16 kapıya kadar, Access Panel 2'li ile 2 kapıya kadar kontrol yapabilirsiniz. Proximity ve Mifare okuyucular desteklenir."
-  },
-  {
-    question: "Hangi kart teknolojileri desteklenir?",
-    answer: "Proximity (125KHz) ve Mifare (13.56MHz) kart teknolojileri desteklenir. Wiegand 26/34 bit protokolleri ile çalışır."
-  },
-  {
-    question: "PDKS yazılımı ile entegrasyon yapılabilir mi?",
-    answer: "Evet, tüm access panellerimiz PDKS, GKS ve ERP yazılımları ile entegre çalışabilir. TCP/IP üzerinden gerçek zamanlı veri aktarımı yapılır."
-  },
-  {
-    question: "Uzaktan yönetim imkanı var mı?",
-    answer: "Evet, internet üzerinden uzaktan erişim ile yetki tanımlamaları, log görüntüleme ve sistem ayarları yapılabilir."
-  },
-  {
-    question: "Kurulum ne kadar sürer?",
-    answer: "Access Panel 2'li için 1-2 saat, Access Panel 16'lı için 4-6 saat sürmektedir. Profesyonel ekibimiz kurulum ve devreye alma işlemlerini gerçekleştirir."
-  }
-];
-
-const productJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Geçiş Kontrol Panelleri",
-  "description": "Access Panel 16'lı ve 2'li ile proximity ve mifare kart okuyuculu profesyonel geçiş kontrol sistemleri. PDKS entegrasyonu ve uzaktan yönetim imkanı.",
-  "brand": "Mika Teknoloji",
-  "category": "Access Control Systems",
-  "offers": {
-    "@type": "Offer",
-    "availability": "InStock",
-    "priceCurrency": "TRY"
-  }
-};
-
-const faqJsonLd = {
-  "@context": "https://schema.org", 
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(faq => ({
-    "@type": "Question",
-    "name": faq.question,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.answer
-    }
-  }))
-};
-
 export default function AccessControlPage() {
   return (
-    <div className="min-h-screen">
-      <SEO 
-        title="Geçiş Kontrol Panelleri - Access Panel 16'lı ve 2'li | Mika Teknoloji"
-        description="Access Panel 16'lı ve 2'li ile proximity ve mifare kart okuyuculu profesyonel geçiş kontrol sistemleri. PDKS entegrasyonu ve uzaktan yönetim imkanı."
-        canonical="https://mikateknoloji.com/gecis-kontrol"
-        jsonLd={[productJsonLd, faqJsonLd]}
-      />
-      
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-900 to-blue-700 text-white">
         <div className="container mx-auto px-4">
@@ -223,13 +164,9 @@ export default function AccessControlPage() {
                 <Card className="h-full hover:shadow-xl transition-shadow duration-300">
                   <CardHeader>
                     <div className="text-center mb-4">
-                      <SmartImg 
-                        src={panel.image}
-                        alt={panel.name}
-                        width={300}
-                        height={200}
-                        className="mx-auto rounded-lg"
-                      />
+                      <div className="w-48 h-32 bg-slate-200 rounded-lg mx-auto flex items-center justify-center">
+                        <span className="text-slate-500">Panel Görseli</span>
+                      </div>
                     </div>
                     <CardTitle className="text-2xl text-center text-slate-800">
                       {panel.name}
@@ -381,42 +318,6 @@ export default function AccessControlPage() {
               >
                 <Building className="h-5 w-5 text-blue-600 flex-shrink-0" />
                 <span className="text-slate-700">{area}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              Sıkça Sorulan Sorular
-            </h2>
-            <p className="text-lg text-slate-600">
-              Access control panelleri hakkında merak edilenler
-            </p>
-          </motion.div>
-
-          <div className="max-w-3xl mx-auto space-y-6">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                className="bg-gray-50 rounded-lg p-6"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="font-bold text-lg text-slate-800 mb-3">{faq.question}</h3>
-                <p className="text-slate-600">{faq.answer}</p>
               </motion.div>
             ))}
           </div>
