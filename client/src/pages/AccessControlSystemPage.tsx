@@ -114,370 +114,610 @@ export default function AccessControlSystemPage() {
         jsonLd={[productJsonLd, faqJsonLd]}
       />
       
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-700 text-white">
+      {/* Hero Section - Armongate Style */}
+      <section className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
+        <div className="container mx-auto px-4 py-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+            {/* Left Content */}
+            <motion.div 
+              className="text-left"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="mb-8">
+                <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                  <span className="text-blue-600">MikaPass</span><br />
+                  Akıllı, Temassız,<br />
+                  Güvenli Geçiş
+                </h1>
+                <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                  Akıllı telefon, RFID kart veya QR kod ile temassız, güvenli, 
+                  KVKK uyumlu geçiş kontrolü
+                </p>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Link href="/iletisim">
+                    <Button 
+                      size="lg" 
+                      className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg"
+                    >
+                      Başla
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                  </Link>
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Link href="/iletisim">
+                    <Button 
+                      variant="outline"
+                      size="lg" 
+                      className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-xl"
+                    >
+                      Demo Talep Et
+                    </Button>
+                  </Link>
+                </motion.div>
+              </div>
+
+              {/* Features Tags */}
+              <div className="flex flex-wrap gap-3">
+                <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
+                  📱 Mobil Uygulama
+                </div>
+                <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
+                  🔒 KVKK Uyumlu
+                </div>
+                <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
+                  ⚡ Anında Kurulum
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Content - Device Mockup */}
+            <motion.div 
+              className="relative flex justify-center items-center"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="relative">
+                {/* Phone Mockup */}
+                <div className="w-80 h-[600px] bg-gray-900 rounded-[3rem] shadow-2xl p-2 relative">
+                  <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
+                    {/* Phone Screen Content */}
+                    <div className="p-8 h-full flex flex-col justify-center bg-gradient-to-b from-blue-50 to-white">
+                      <div className="text-center mb-8">
+                        <div className="w-20 h-20 bg-blue-600 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                          <span className="text-white font-bold text-2xl">MT</span>
+                        </div>
+                        <h3 className="font-bold text-gray-900 mb-2">MikaPass</h3>
+                        <p className="text-sm text-gray-600">Dijital Anahtarınız</p>
+                      </div>
+                      
+                      {/* QR Code Area */}
+                      <div className="bg-white p-6 rounded-2xl shadow-lg mb-6">
+                        <div className="w-32 h-32 bg-gray-900 mx-auto rounded-lg flex items-center justify-center">
+                          <div className="text-white text-xs font-mono">QR</div>
+                        </div>
+                      </div>
+
+                      <div className="space-y-3">
+                        <div className="bg-green-100 text-green-800 p-3 rounded-xl text-sm text-center">
+                          ✅ Erişim Onaylandı
+                        </div>
+                        <div className="text-xs text-center text-gray-500">
+                          Son erişim: Bugün 14:30
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Floating Elements */}
+                <motion.div 
+                  className="absolute -top-8 -right-8 bg-white rounded-2xl shadow-lg p-4"
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                >
+                  <Shield className="h-8 w-8 text-blue-600" />
+                </motion.div>
+                
+                <motion.div 
+                  className="absolute -bottom-4 -left-8 bg-blue-600 rounded-2xl shadow-lg p-4"
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+                >
+                  <Users className="h-8 w-8 text-white" />
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Digital Key Section */}
+      <section className="py-32 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="mb-8">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  Akıllı Telefonunuz<br />
+                  <span className="text-blue-600">Dijital Anahtarınız</span>
+                </h2>
+                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                  Akıllı telefonlarınız ile hızlı, güvenli, kartsız geçiş sağlayın.
+                </p>
+                <Link href="/kartli-gecis-sistemi">
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-base">
+                    Daha Fazla Bilgi
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Right - Phone and Device Images */}
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="relative flex justify-center">
+                {/* Large Phone Mockup */}
+                <div className="w-64 h-96 bg-gray-900 rounded-[2rem] shadow-2xl p-1 rotate-3 hover:rotate-0 transition-transform duration-500">
+                  <div className="w-full h-full bg-gradient-to-b from-blue-50 to-white rounded-[1.5rem] p-6">
+                    <div className="text-center">
+                      <div className="w-12 h-12 bg-blue-600 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                        <span className="text-white font-bold">MT</span>
+                      </div>
+                      <h4 className="font-bold text-gray-900 mb-2">MikaPass</h4>
+                      <div className="w-24 h-24 bg-gray-900 mx-auto rounded-lg mt-8 mb-8"></div>
+                      <div className="space-y-2">
+                        <div className="bg-green-100 text-green-800 p-2 rounded-lg text-xs">
+                          ✓ Aktif
+                        </div>
+                        <div className="text-xs text-gray-500">Hazır</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Hardware Section */}
+      <section className="py-32 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div 
-            className="text-center max-w-4xl mx-auto"
+            className="text-center mb-20"
             initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Geçiş Kontrol Sistemleri
-            </h1>
-            <p className="text-xl text-gray-200 mb-8">
-              RFID kartlı geçiş, biyometrik parmak izi, yüz tanıma ve QR kod teknolojileri ile 
-              profesyonel access control çözümleri. Güvenli erişim kontrolü ve PDKS entegrasyonu.
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Donanımlar
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Eşi görülmemiş bir geçiş kontrol deneyimi yaşarken sınırları aşın. 
+              Mika donanımları ile yüksek sayıda noktayı tek bir arayüz ile kontrol edebilir.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="bg-pink-600 px-4 py-2 rounded-full">
-                <span className="font-semibold">RFID Teknolojisi</span>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
+            {/* Control Panel */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="group"
+            >
+              <div className="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-all duration-500 group-hover:scale-105">
+                <div className="mb-8">
+                  <div className="w-full max-w-sm mx-auto bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl">
+                    <img 
+                      src={controlPanelImage} 
+                      alt="Güvenlik Kontrol Paneli"
+                      className="w-full h-auto object-contain"
+                      width="300"
+                      height="300"
+                    />
+                  </div>
+                </div>
+                
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Güvenlik Kontrol Paneli
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    İşyerleri, AVM ve binalarda güvenli geçiş kontrolü sağlayan 
+                    profesyonel metal kasa sistemi.
+                  </p>
+                  
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="bg-blue-50 p-3 rounded-xl">
+                      <div className="font-semibold text-blue-900">Metal Kasa</div>
+                      <div className="text-blue-700">Güvenli Yapı</div>
+                    </div>
+                    <div className="bg-blue-50 p-3 rounded-xl">
+                      <div className="font-semibold text-blue-900">Kilit Sistemi</div>
+                      <div className="text-blue-700">Anahtarlı Güvenlik</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="bg-pink-600 px-4 py-2 rounded-full">
-                <span className="font-semibold">Biyometrik Okuma</span>
+            </motion.div>
+
+            {/* Control Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="group"
+            >
+              <div className="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-all duration-500 group-hover:scale-105">
+                <div className="mb-8">
+                  <div className="w-full max-w-sm mx-auto bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl">
+                    <img 
+                      src={controlCardImage} 
+                      alt="Geçiş Kontrol Kartı"
+                      className="w-full h-auto object-contain"
+                      width="300"
+                      height="300"
+                    />
+                  </div>
+                </div>
+                
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Akıllı Kontrol Kartı
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Çoklu bağlantı portları ve LCD ekran ile 
+                    gelişmiş kontrol kartı teknolojisi.
+                  </p>
+                  
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="bg-blue-50 p-3 rounded-xl">
+                      <div className="font-semibold text-blue-900">LCD Ekran</div>
+                      <div className="text-blue-700">Anlık Bilgi</div>
+                    </div>
+                    <div className="bg-blue-50 p-3 rounded-xl">
+                      <div className="font-semibold text-blue-900">Modüler</div>
+                      <div className="text-blue-700">Genişletilebilir</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="bg-pink-600 px-4 py-2 rounded-full">
-                <span className="font-semibold">PDKS Entegrasyonu</span>
+            </motion.div>
+          </div>
+
+          {/* Tech Specs */}
+          <motion.div 
+            className="text-center mt-16"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-white rounded-3xl shadow-xl p-12 max-w-4xl mx-auto">
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">Mika Serisi Okuyucular</h3>
+              <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+                Mika okuyucuları üstün güvenlik standartlarına uygunlukla birlikte kullanıcı deneyimini 
+                hızlı ve kullanışlı bir alışkanlığa çevirir. Cep telefonuna tanımlanan dijital kimlik 
+                ile kart taşıma gereksinimini rafa kaldırabilirsiniz.
+              </p>
+              
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center p-6 bg-blue-50 rounded-2xl">
+                  <div className="text-3xl mb-3">📱</div>
+                  <div className="font-semibold text-gray-900">Bluetooth & NFC</div>
+                  <div className="text-sm text-gray-600 mt-2">Çoklu bağlantı seçeneği</div>
+                </div>
+                <div className="text-center p-6 bg-blue-50 rounded-2xl">
+                  <div className="text-3xl mb-3">🔐</div>
+                  <div className="font-semibold text-gray-900">QR Kod</div>
+                  <div className="text-sm text-gray-600 mt-2">Hızlı ve güvenli geçiş</div>
+                </div>
+                <div className="text-center p-6 bg-blue-50 rounded-2xl">
+                  <div className="text-3xl mb-3">⚡</div>
+                  <div className="font-semibold text-gray-900">Dijital Kimlik</div>
+                  <div className="text-sm text-gray-600 mt-2">Akıllı telefon entegrasyonu</div>
+                </div>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Product Showcase Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-50 to-blue-50">
+      {/* Cloud Based System */}
+      <section className="py-32 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              Access Control Sistem Bileşenleri
-            </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Profesyonel güvenlik sistemlerimizin ana bileşenleri
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Güvenlik Kontrol Paneli */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left - Cloud Illustration */}
             <motion.div
-              initial={{ opacity: 0, x: -40 }}
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center"
             >
-              <Card className="p-8 h-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-0 bg-gradient-to-br from-white to-gray-50">
-                <div className="mb-8">
-                  <div className="w-full max-w-md mx-auto bg-white p-6 rounded-xl shadow-lg">
-                    <img 
-                      src={controlPanelImage} 
-                      alt="Güvenlik Kontrol Paneli - Metal Kasa"
-                      className="w-full h-auto object-contain rounded-lg"
-                      width="400"
-                      height="400"
-                    />
-                  </div>
-                </div>
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-2xl text-slate-800 mb-3">
-                    Güvenlik Kontrol Paneli
-                  </CardTitle>
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    İşyerleri, AVM ve binalarda güvenliği sağlama işlevinin yanı sıra 
-                    giriş-çıkışların kontrol edilmesi ve uzaktan izlenmesini sağlayan panel sistemi.
-                  </p>
-                </CardHeader>
-                <CardContent>
-                  <ul className="text-slate-600 space-y-3 text-left">
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Güvenli metal kasa yapısı</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Anahtarlı güvenlik kilidi</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Dış etkenlere dayanıklı yapı</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Kolay montaj ve bakım</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Geçiş Kontrol Kartı */}
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <Card className="p-8 h-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-0 bg-gradient-to-br from-white to-gray-50">
-                <div className="mb-8">
-                  <div className="w-full max-w-md mx-auto bg-white p-6 rounded-xl shadow-lg">
-                    <img 
-                      src={controlCardImage} 
-                      alt="Geçiş Kontrol Kartı - Çoklu Bağlantı Noktası"
-                      className="w-full h-auto object-contain rounded-lg"
-                      width="400"
-                      height="400"
-                    />
-                  </div>
-                </div>
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-2xl text-slate-800 mb-3">
-                    Geçiş Kontrol Kartı
-                  </CardTitle>
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    Çoklu bağlantı noktalarına sahip profesyonel kontrol kartı. 
-                    Entegre LCD ekran ve genişleme imkanı sunan modüler yapı.
-                  </p>
-                </CardHeader>
-                <CardContent>
-                  <ul className="text-slate-600 space-y-3 text-left">
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Çoklu yeşil bağlantı portları</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>LCD ekran ve kontrol paneli</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Modüler genişleme desteği</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Profesyonel PCB tasarımı</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              Geçiş Kontrol Sistem Özellikleri
-            </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Güvenlik ihtiyaçlarınıza uygun çözümler
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
-                  <CardHeader>
-                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
-                      <feature.icon className="h-8 w-8 text-gray-600" />
+              <div className="relative">
+                <div className="w-full max-w-lg mx-auto">
+                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-12 text-center">
+                    <div className="space-y-8">
+                      <div className="text-6xl">☁️</div>
+                      <div className="space-y-4">
+                        <div className="bg-white rounded-2xl p-4 shadow-sm">
+                          <div className="text-2xl">🏢</div>
+                          <div className="text-sm text-gray-700">Ofis Binaları</div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div className="bg-white rounded-2xl p-4 shadow-sm">
+                            <div className="text-xl">🏪</div>
+                            <div className="text-xs text-gray-700">AVM</div>
+                          </div>
+                          <div className="bg-white rounded-2xl p-4 shadow-sm">
+                            <div className="text-xl">🏠</div>
+                            <div className="text-xs text-gray-700">Konut</div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <CardTitle className="text-xl text-slate-800">{feature.title}</CardTitle>
-                    <p className="text-slate-600">{feature.description}</p>
-                  </CardHeader>
-                </Card>
-              </motion.div>
-            ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="mb-8">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  <span className="text-blue-600">Bulut Tabanlı</span><br />
+                  Geçiş Kontrol Sistemi
+                </h2>
+                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                  Binalarınızı, çalışanlarınızı, ziyaretçilerinizi, müşterilerinizi, bina sakinlerinizi 
+                  ve tüm varlıklarınızı Mika bulut yazılımları ile koruyabilirsiniz.
+                </p>
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                  Tüm yaşam alanlarınızı BT altyapı maliyetine gereksinim duymadan güvenle yönetebilirsiniz.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-6">
+                <div className="bg-blue-50 p-6 rounded-2xl">
+                  <Shield className="h-8 w-8 text-blue-600 mb-3" />
+                  <h4 className="font-bold text-gray-900 mb-2">Güvenli Erişim</h4>
+                  <p className="text-sm text-gray-600">SSL şifreleme ile güvenli bağlantı</p>
+                </div>
+                <div className="bg-blue-50 p-6 rounded-2xl">
+                  <Users className="h-8 w-8 text-blue-600 mb-3" />
+                  <h4 className="font-bold text-gray-900 mb-2">Merkezi Yönetim</h4>
+                  <p className="text-sm text-gray-600">Tüm lokasyonları tek arayüzden kontrol</p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Components Section */}
-      <section className="py-20 bg-gray-50">
+      {/* Fast and Secure Access */}
+      <section className="py-32 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-20"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              Geçiş Kontrol Panellerinin Bileşenleri
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Mika ile hızlı, güvenli,<br />
+              <span className="text-blue-600">kontrollü geçiş</span>
             </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Geçiş kontrol panelleri pratik ve hızlı bir kurulum imkanına sahiptir. 
-              En çok faydanın alınacağı yerin tespitinden sonra uzman çalışanların gerekli kontrolleri 
-              sağlayarak kurulmasının ardından hemen kullanımına başlanmaktadır.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Günlük hayatın her alanında rahat geçiş. Mika okuyucularının yer aldığı 
+              tüm yaşam alanlarında kolaylıkla mobil uygulama ile geçiş sağlayabilirsiniz.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {components.map((component, index) => (
-              <motion.div 
-                key={index}
-                className="flex items-start space-x-4 p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Shield className="h-4 w-4 text-pink-600" />
-                </div>
-                <span className="text-slate-700 font-medium">{component}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Features */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              className="text-center p-8 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-6">
-                Teknik Özellikler ve Program Desteği
-              </h3>
-              <p className="text-slate-600 mb-6 leading-relaxed">
-                Geçiş kontrol panellerinin genel olarak teknik özellikleri, 
-                sistem problem oluşturmadan çalışması ile aksaklıkların önüne geçmekte 
-                ve bakım onarım maliyetlerini en az seviyeye indirmektedir.
-              </p>
-              <ul className="space-y-4">
-                {technicalFeatures.map((feature, index) => (
-                  <li key={index} className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-slate-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="w-16 h-16 bg-blue-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+                <div className="text-2xl">👥</div>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Ziyaretçi Yönetimi</h3>
+              <p className="text-gray-600 text-sm">Misafir erişim kontrolleri</p>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              className="text-center p-8 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-16 h-16 bg-blue-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+                <div className="text-2xl">💳</div>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Ödemeli Geçiş</h3>
+              <p className="text-gray-600 text-sm">Ücret tabanlı erişim</p>
+            </motion.div>
+
+            <motion.div
+              className="text-center p-8 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-6">
-                Kullanımının Sağladığı Faydalar
-              </h3>
-              <p className="text-slate-600 mb-6 leading-relaxed">
-                Geçiş kontrol panelleri kurulacağı alanda amacına en uygun şekilde çalışmaktadır. 
-                İstenen verimin yükselmesini sağlayan panellerin kullanılması ile sağlanan faydalar:
-              </p>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-slate-700">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="w-16 h-16 bg-blue-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+                <div className="text-2xl">📱</div>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Mobil İnterkom</h3>
+              <p className="text-gray-600 text-sm">Görüntülü konuşma sistemi</p>
+            </motion.div>
+
+            <motion.div
+              className="text-center p-8 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-16 h-16 bg-blue-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+                <div className="text-2xl">🔐</div>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Geçiş Kontrol</h3>
+              <p className="text-gray-600 text-sm">Akıllı erişim yönetimi</p>
             </motion.div>
           </div>
-        </div>
-      </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+          {/* Architecture Info */}
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mt-20 max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              Sıkça Sorulan Sorular
-            </h2>
-            <p className="text-lg text-slate-600">
-              Geçiş kontrol sistemleri hakkında merak edilenler
-            </p>
+            <div className="bg-white rounded-3xl shadow-xl p-12">
+              <p className="text-gray-600 text-lg leading-relaxed">
+                Mika, bulutta ve tesiste barındırılan çözümleri ile her türlü mimariye uyarlanabilir. 
+                İstemci sertifikasyonu ve SSL şifreleme ile VPN gerektirmeksizin güvenli ve merkezi bir altyapı sağlar. 
+                Geçiş kontrolün yanında sunulan modülleri ile kullanıcı ihtiyaçlarına göre şekillenebilen uygulamalar sunar.
+              </p>
+            </div>
           </motion.div>
-
-          <div className="max-w-3xl mx-auto space-y-6">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                className="bg-gray-50 rounded-lg p-6"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="font-bold text-lg text-slate-800 mb-3">{faq.question}</h3>
-                <p className="text-slate-600">{faq.answer}</p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gray-600 text-white">
-        <div className="container mx-auto px-4 text-center">
+      {/* CTA Section - Armongate Style */}
+      <section className="py-32 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full translate-x-1/2 translate-y-1/2"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Geçiş Kontrol Sistemi İçin Teklif Alın
+            <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
+              Hızlı ve Basit<br />
+              <span className="text-blue-200">Geçiş Kontrolü</span>
             </h2>
-            <p className="text-xl text-gray-100 mb-8 max-w-2xl mx-auto">
-              RFID kartlı geçiş ve biyometrik teknolojiler ile güvenli erişim kontrolü için ücretsiz keşif ve teklif hizmeti
+            <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
+              MikaPass ile akıllı telefonunuzu dijital anahtarınız haline getirin. 
+              Temassız, güvenli ve hızlı geçiş deneyimi.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/iletisim">
-                <Button 
-                  size="lg" 
-                  variant="secondary"
-                  className="bg-white text-gray-600 hover:bg-gray-50"
-                >
-                  Ücretsiz Teklif Al
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/kartli-gecis-sistemi">
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link href="/iletisim">
+                  <Button 
+                    size="lg" 
+                    className="bg-white text-blue-600 hover:bg-blue-50 px-12 py-6 text-xl font-bold rounded-2xl shadow-2xl border-0"
+                  >
+                    Ücretsiz Demo
+                    <ArrowRight className="ml-3 h-6 w-6" />
+                  </Button>
+                </Link>
+              </motion.div>
+              
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-gray-600"
+                  className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-12 py-6 text-xl font-bold rounded-2xl"
                 >
-                  Kartlı Geçiş Sistemleri
+                  Daha Fazla Bilgi
                 </Button>
-              </Link>
+              </motion.div>
+            </div>
+
+            {/* Benefits Grid */}
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <motion.div
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-3xl mb-4">🚀</div>
+                <div className="font-bold text-lg text-white mb-2">Anında Kurulum</div>
+                <div className="text-blue-200 text-sm">15 dakikada kurulum tamamlanır</div>
+              </motion.div>
+
+              <motion.div
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-3xl mb-4">💰</div>
+                <div className="font-bold text-lg text-white mb-2">Düşük Maliyet</div>
+                <div className="text-blue-200 text-sm">BT altyapı yatırımı gerektirmez</div>
+              </motion.div>
+
+              <motion.div
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-3xl mb-4">🔒</div>
+                <div className="font-bold text-lg text-white mb-2">KVKK Uyumlu</div>
+                <div className="text-blue-200 text-sm">Tam güvenlik ve gizlilik</div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
