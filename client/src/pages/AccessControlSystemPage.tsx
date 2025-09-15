@@ -5,59 +5,71 @@ import { CheckCircle, ArrowRight, Shield, Users, Clock } from "lucide-react";
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
 
+const components = [
+  "Sisteme entegre edilmiş kart okuyucular",
+  "Elektrikli kilit karşılıkları ve manyetik kilitler",
+  "Biyometrik okuyucu ve kontrol paneli",
+  "İzleme ve kontrol etme üzerine yazılımlar",
+  "Çeşitli boyutlardaki bariyer ve turnikeler"
+];
+
 const benefits = [
-  "RFID kartlı geçiş sistemi",
-  "Biyometrik parmak izi okuma", 
-  "Yüz tanıma teknolojisi",
-  "QR kod mobil erişim",
-  "Zaman bazlı erişim kontrolü",
-  "Anti-passback sistemi",
-  "Çoklu kart formatı desteği",
-  "TCP/IP ağ bağlantısı",
-  "Kapı kontrol rölesi",
-  "Alarm entegrasyonu",
-  "Video kamera senkronizasyonu",
-  "Merkezi yönetim yazılımı"
+  "Giriş kapılarında hızlı ve kolay geçiş imkanı",
+  "Pratik ve kontrollü şekilde yetki kontrolü",
+  "Yetki genişletilmesi ve kısıtlanması tanımlama olanağı",
+  "Personelin işe geliş-gidiş takibi",
+  "Mobil cihazlara kolay entegre edilebilir",
+  "Sağlık ve hijyen gereksinimlerini karşılama",
+  "Uzaktan kontrol ve izleme imkanı",
+  "Güvenlik ve takip ön planda olan sistem"
+];
+
+const technicalFeatures = [
+  "Son teknolojik destekli veri tabanı",
+  "Kanun değişikliklerine karşı otomatik güncelleme",
+  "İnternet üzerinden kolay erişim",
+  "Çoklu programa entegre kurulum",
+  "Kolay ve hızlı bakım-onarım"
 ];
 
 const features = [
   {
     icon: Shield,
     title: "Güvenli Erişim Kontrolü",
-    description: "Yetkisiz girişlere karşı maksimum güvenlik sağlayan access control panelleri"
+    description: "İşyerleri, AVM ve binalarda güvenliği sağlama işlevinin yanı sıra giriş-çıkışların kontrol edilmesi"
   },
   {
     icon: Users,
-    title: "Çoklu Kullanıcı Yönetimi",
-    description: "Binlerce kullanıcı ve farklı yetki seviyelerini rahatlıkla yönetin"
+    title: "Pratik Kurulum",
+    description: "En çok faydanın alınacağı yerin tespiti sonrası uzman çalışanlarla hızlı kurulum"
   },
   {
     icon: Clock,
-    title: "7/24 Sürekli İzleme",
-    description: "Tüm giriş-çıkışları anlık takip edin ve detaylı raporlar alın"
+    title: "7/24 İzleme",
+    description: "Uzaktan basit şekilde izleme ve kontrol edilebilir sirkülasyon takibi"
   }
 ];
 
 const faqs = [
   {
-    question: "Geçiş kontrol sistemi nedir?",
-    answer: "Belirli alanlara girişi kontrol eden, yetkili kişilerin güvenli geçişini sağlayan elektronik sistemlerdir. Kartlı geçiş, biyometrik okuma veya QR kod teknolojileri kullanır."
+    question: "Geçiş kontrol paneli nedir ve ne işe yarar?",
+    answer: "Geçiş kontrol panelleri, işyerleri, AVM ve binalarda ilk olarak güvenliği sağlama işlevinin yanı sıra giriş ve çıkışların kontrol edilmesi ve uzaktan basit bir şekilde izlenmesini sağlayan sistemlerdir. Kontrolü elden bırakmadan sirkülasyon takip edilir."
   },
   {
-    question: "Hangi kart türlerini destekler?",
-    answer: "RFID Proximity (125kHz), MIFARE (13.56MHz), UHF RFID ve tüm standart kartlar desteklenir. Ayrıca mobil QR kod erişimi de mevcuttur."
+    question: "Geçiş kontrol panellerinin temel bileşenleri nelerdir?",
+    answer: "Sisteme entegre edilmiş kart okuyucular, elektrikli kilit karşılıkları ve manyetik kilitler, biyometrik okuyucu ve kontrol paneli, izleme-kontrol yazılımları ve çeşitli boyutlardaki bariyer ve turnikeler bulunur."
   },
   {
-    question: "PDKS ile entegrasyon mümkün mü?",
-    answer: "Evet, geçiş kontrol sistemlerimiz PDKS yazılımları ile tam entegre çalışır. Personel giriş-çıkışları otomatik olarak PDKS'ye aktarılır."
+    question: "Hangi alanlarda kullanım avantajı sağlar?",
+    answer: "Giriş kapılarında hızlı geçiş, pratik yetki kontrolü, personel takibi, mobil entegrasyon, sağlık-hijyen gereksinimleri ve uzaktan kontrol gibi birçok alanda fayda sağlar."
   },
   {
-    question: "Kaç kullanıcıyı destekler?",
-    answer: "Sistemimiz 100.000'e kadar kullanıcıyı destekler. Modüler yapısı sayesinde ihtiyaca göre genişletilebilir."
+    question: "Teknik özellikleri nelerdir?",
+    answer: "Son teknolojik veri tabanı, kanun değişikliklerine otomatik güncelleme, internet üzerinden kolay erişim, çoklu program entegrasyonu ve kolay bakım-onarım özelliklerine sahiptir."
   },
   {
-    question: "Uzaktan yönetim imkanı var mı?",
-    answer: "TCP/IP bağlantısı ile uzaktan yönetim, kart tanımları ve sistem ayarları web üzerinden yapılabilir. Mobil uygulama desteği mevcuttur."
+    question: "Kurulum ve bakım süreci nasıl işler?",
+    answer: "Pratik ve hızlı kurulum imkanına sahiptir. En verimli yerin tespiti sonrası uzman çalışanlarla kurulum yapılır. Bakım ve onarımı kolay ve hızlı şekilde gerçekleştirilir."
   }
 ];
 
@@ -293,7 +305,7 @@ export default function AccessControlSystemPage() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Components Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div 
@@ -304,24 +316,85 @@ export default function AccessControlSystemPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              Access Control Sistem Avantajları
+              Geçiş Kontrol Panellerinin Bileşenleri
             </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Geçiş kontrol panelleri pratik ve hızlı bir kurulum imkanına sahiptir. 
+              En çok faydanın alınacağı yerin tespitinden sonra uzman çalışanların gerekli kontrolleri 
+              sağlayarak kurulmasının ardından hemen kullanımına başlanmaktadır.
+            </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {components.map((component, index) => (
               <motion.div 
                 key={index}
-                className="flex items-center space-x-3 p-4 bg-white rounded-lg shadow-sm"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                className="flex items-start space-x-4 p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Shield className="h-5 w-5 text-gray-600 flex-shrink-0" />
-                <span className="text-slate-700">{benefit}</span>
+                <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Shield className="h-4 w-4 text-pink-600" />
+                </div>
+                <span className="text-slate-700 font-medium">{component}</span>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technical Features */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-6">
+                Teknik Özellikler ve Program Desteği
+              </h3>
+              <p className="text-slate-600 mb-6 leading-relaxed">
+                Geçiş kontrol panellerinin genel olarak teknik özellikleri, 
+                sistem problem oluşturmadan çalışması ile aksaklıkların önüne geçmekte 
+                ve bakım onarım maliyetlerini en az seviyeye indirmektedir.
+              </p>
+              <ul className="space-y-4">
+                {technicalFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-slate-700">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-6">
+                Kullanımının Sağladığı Faydalar
+              </h3>
+              <p className="text-slate-600 mb-6 leading-relaxed">
+                Geçiş kontrol panelleri kurulacağı alanda amacına en uygun şekilde çalışmaktadır. 
+                İstenen verimin yükselmesini sağlayan panellerin kullanılması ile sağlanan faydalar:
+              </p>
+              <ul className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-slate-700">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </div>
         </div>
       </section>
