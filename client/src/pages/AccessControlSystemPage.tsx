@@ -527,42 +527,6 @@ export default function AccessControlSystemPage() {
               </div>
             </motion.div>
 
-            {/* Right Content */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="mb-8">
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  <span className="text-blue-600">Bulut Tabanlı</span><br />
-                  Geçiş Kontrol Sistemi
-                </h2>
-                <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                  Binalarınızı, çalışanlarınızı, ziyaretçilerinizi, müşterilerinizi, bina sakinlerinizi 
-                  ve tüm varlıklarınızı Mika bulut yazılımları ile koruyabilirsiniz.
-                </p>
-                <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-8 rounded-lg">
-                  <p className="text-lg text-gray-700 leading-relaxed font-medium">
-                    Tüm yaşam alanlarınızı BT altyapı maliyetine gereksinim duymadan güvenle yönetebilirsiniz.
-                  </p>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-6">
-                <div className="bg-blue-50 p-6 rounded-2xl">
-                  <Shield className="h-8 w-8 text-blue-600 mb-3" />
-                  <h4 className="font-bold text-gray-900 mb-2">Güvenli Erişim</h4>
-                  <p className="text-sm text-gray-600">SSL şifreleme ile güvenli bağlantı</p>
-                </div>
-                <div className="bg-blue-50 p-6 rounded-2xl">
-                  <Users className="h-8 w-8 text-blue-600 mb-3" />
-                  <h4 className="font-bold text-gray-900 mb-2">Merkezi Yönetim</h4>
-                  <p className="text-sm text-gray-600">Tüm lokasyonları tek arayüzden kontrol</p>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
