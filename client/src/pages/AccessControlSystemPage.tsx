@@ -87,57 +87,32 @@ export default function AccessControlSystemPage() {
               <div className="mb-8">
                 <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                   <span className="text-blue-600">MikaPass</span><br />
-                  Akıllı, Temassız,<br />
-                  Güvenli Geçiş
+                  Akıllı Erişim<br />
+                  Kontrol Sistemi
                 </h1>
-                <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                  Akıllı telefon, RFID kart veya QR kod ile temassız, güvenli, 
-                  KVKK uyumlu geçiş kontrolü
+                <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+                  Bina içindeki kapıları yetki seviyesine göre geçiş kontrol yapabilirsiniz. 
+                  Antipassback ve Global Antipassback özelliği ile bir kapı kapanmadan 
+                  diğer kapıdan geçiş engellenebilir.
+                </p>
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                  Üstelik limit kontör ve saat aralıkları tanımlayarak, Mika Teknoloji 
+                  üretimi profesyonel access kontrol panelleri ile tam güvenlik kontrolü 
+                  sağlayabilirsiniz.
                 </p>
               </div>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Link href="/iletisim">
-                    <Button 
-                      size="lg" 
-                      className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg"
-                    >
-                      Başla
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Button>
-                  </Link>
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Link href="/iletisim">
-                    <Button 
-                      variant="outline"
-                      size="lg" 
-                      className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-xl"
-                    >
-                      Demo Talep Et
-                    </Button>
-                  </Link>
-                </motion.div>
-              </div>
 
               {/* Features Tags */}
               <div className="flex flex-wrap gap-3">
                 <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
-                  📱 Mobil Uygulama
+                  🏢 Yetki Seviyeli Kontrol
                 </div>
                 <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
-                  🔒 KVKK Uyumlu
+                  🚪 Antipassback Sistemi
                 </div>
                 <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
-                  ⚡ Anında Kurulum
+                  ⏰ Saat Aralığı Kontrolü
                 </div>
               </div>
             </motion.div>
