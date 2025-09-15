@@ -9,9 +9,8 @@ const controlPanelImage = "/control-panel.png";
 const controlCardImage = "/control-card.png";
 const dashboardImage = "/dashboard-panel.png";
 const phoneQrImage = "/phone-qr-system.png";
-const mobileAppInterface = "/mobile-app-interface.png";
 const cardAccessSystem = "/card-access-system.png";
-const mikaPassPhoneImage = "/mikapass-phone.png";
+const mikaPassPhoneImage = "/mobile-app-interface.png";
 const mobileAppImage = "/mika-mobile-app-qr.png";
 
 
@@ -231,26 +230,21 @@ export default function AccessControlSystemPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="relative">
-                {/* Mobile App Interface - Top */}
-                <motion.div 
-                  className="w-full max-w-lg mx-auto mb-8"
-                  animate={{ scale: [1, 1.02, 1] }}
-                  transition={{ duration: 4, repeat: Infinity }}
-                >
+                {/* Real Dashboard Image */}
+                <div className="w-full max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
                   <img 
-                    src={mobileAppInterface} 
-                    alt="MikaPass Mobil Uygulama Arayüzü"
-                    className="w-full h-auto object-contain drop-shadow-2xl"
-                    width="500"
+                    src={dashboardImage} 
+                    alt="Bulut Tabanlı Yönetim Dashboard"
+                    className="w-full h-auto object-contain"
+                    width="800"
                     height="600"
                   />
-                </motion.div>
-                
-                {/* Card Access System - Bottom with Animation */}
+                </div>
+                {/* Card Access System - Floating with Animation */}
                 <motion.div 
-                  className="w-full max-w-md mx-auto"
+                  className="absolute -bottom-8 -right-8 w-64 h-auto"
                   animate={{ 
-                    y: [0, -8, 0],
+                    y: [0, -10, 0],
                     rotateY: [0, 5, 0]
                   }}
                   transition={{ 
@@ -262,9 +256,9 @@ export default function AccessControlSystemPage() {
                   <img 
                     src={cardAccessSystem} 
                     alt="Kartlı Geçiş Kontrol Sistemi"
-                    className="w-full h-auto object-contain drop-shadow-xl rounded-2xl"
-                    width="400"
-                    height="300"
+                    className="w-full h-auto object-contain drop-shadow-2xl rounded-xl"
+                    width="300"
+                    height="200"
                   />
                 </motion.div>
               </div>
