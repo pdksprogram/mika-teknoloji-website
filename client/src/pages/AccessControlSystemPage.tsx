@@ -10,7 +10,6 @@ const controlCardImage = "/control-card.png";
 const dashboardImage = "/new-dashboard-table.png";
 const phoneQrImage = "/phone-qr-system.png";
 const cardAccessSystem = "/card-access-system.png";
-const advancedDashboard = "/advanced-dashboard.png";
 const mikaPassPhoneImage = "/qr-hand-mockup.png";
 const mobileAppImage = "/mika-mobile-app-qr.png";
 
@@ -283,21 +282,22 @@ export default function AccessControlSystemPage() {
       <section className="py-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left Content - Advanced Dashboard */}
+            {/* Left Content - Text Content */}
             <motion.div
               className="relative"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="w-full max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
-                <img 
-                  src={advancedDashboard} 
-                  alt="Gelişmiş Yönetim Dashboard Sistemi"
-                  className="w-full h-auto object-contain"
-                  width="800"
-                  height="600"
-                />
+              <div className="mb-8">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                  Mika ile hızlı, güvenli,<br />
+                  <span className="text-blue-600">kontrollü geçiş</span>
+                </h2>
+                <p className="text-xl text-gray-600 leading-relaxed">
+                  Günlük hayatın her alanında rahat geçiş. Mika okuyucularının yer aldığı 
+                  tüm yaşam alanlarında kolaylıkla mobil uygulama ile geçiş sağlayabilirsiniz.
+                </p>
               </div>
             </motion.div>
 
