@@ -147,8 +147,8 @@ export default function AccessControlSystemPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            {/* Access Control Panel */}
+          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Güvenlik Kontrol Paneli */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -156,47 +156,49 @@ export default function AccessControlSystemPage() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <Card className="p-8 h-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <div className="mb-6">
-                  <div className="w-80 h-80 mx-auto bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl relative shadow-2xl overflow-hidden">
-                    <div className="absolute inset-6 border-2 border-gray-700 rounded-lg"></div>
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-gray-300 rounded-full border-4 border-gray-600 flex items-center justify-center">
-                      <div className="w-3 h-3 bg-gray-500 rounded-full"></div>
-                    </div>
-                    <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 text-sm font-mono">
-                      ACCESS CONTROL
-                    </div>
+              <Card className="p-8 h-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-0 bg-gradient-to-br from-white to-gray-50">
+                <div className="mb-8">
+                  <div className="w-full max-w-md mx-auto bg-white p-6 rounded-xl shadow-lg">
+                    <img 
+                      src="/api/assets/attached_assets/image_1757935900507.png" 
+                      alt="Güvenlik Kontrol Paneli - Metal Kasa"
+                      className="w-full h-auto object-contain rounded-lg"
+                    />
                   </div>
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-2xl text-slate-800 mb-4">
-                    Access Control Panel
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-2xl text-slate-800 mb-3">
+                    Güvenlik Kontrol Paneli
                   </CardTitle>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    İşyerleri, AVM ve binalarda güvenliği sağlama işlevinin yanı sıra 
+                    giriş-çıkışların kontrol edilmesi ve uzaktan izlenmesini sağlayan panel sistemi.
+                  </p>
                 </CardHeader>
                 <CardContent>
                   <ul className="text-slate-600 space-y-3 text-left">
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0" />
-                      <span>Merkezi kontrol ünitesi</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0" />
-                      <span>TCP/IP iletişim desteği</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0" />
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-0.5 flex-shrink-0" />
                       <span>Güvenli metal kasa yapısı</span>
                     </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0" />
-                      <span>Acil durum bypass sistemi</span>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Anahtarlı güvenlik kilidi</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Dış etkenlere dayanıklı yapı</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Kolay montaj ve bakım</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
             </motion.div>
 
-            {/* Access Control Board */}
+            {/* Geçiş Kontrol Kartı */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -204,56 +206,42 @@ export default function AccessControlSystemPage() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <Card className="p-8 h-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <div className="mb-6">
-                  <div className="w-80 h-80 mx-auto bg-gradient-to-br from-gray-900 to-black rounded-xl relative shadow-2xl overflow-hidden p-4">
-                    <div className="absolute inset-4 border-2 border-gray-700 rounded"></div>
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-12 bg-gray-300 rounded-full border-4 border-blue-500 flex items-center justify-center">
-                      <div className="w-16 h-6 bg-blue-400 rounded-full flex items-center justify-center">
-                        <div className="text-xs text-white font-bold">LCD</div>
-                      </div>
-                    </div>
-                    <div className="absolute left-4 top-12 space-y-2">
-                      {[...Array(8)].map((_, i) => (
-                        <div key={i} className="w-6 h-6 bg-green-500 rounded-full border-2 border-green-400 shadow-lg">
-                          <div className="w-2 h-2 bg-green-300 rounded-full mx-auto mt-2"></div>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="absolute right-4 top-12 space-y-2">
-                      {[...Array(8)].map((_, i) => (
-                        <div key={i} className="w-6 h-6 bg-green-500 rounded-full border-2 border-green-400 shadow-lg">
-                          <div className="w-2 h-2 bg-green-300 rounded-full mx-auto mt-2"></div>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-gray-400 text-xs font-mono">
-                      ACCESS 16'LI PANEL
-                    </div>
+              <Card className="p-8 h-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-0 bg-gradient-to-br from-white to-gray-50">
+                <div className="mb-8">
+                  <div className="w-full max-w-md mx-auto bg-white p-6 rounded-xl shadow-lg">
+                    <img 
+                      src="/api/assets/attached_assets/image_1757935911490.png" 
+                      alt="Geçiş Kontrol Kartı - Çoklu Bağlantı Noktası"
+                      className="w-full h-auto object-contain rounded-lg"
+                    />
                   </div>
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-2xl text-slate-800 mb-4">
-                    Access 16'lı Panel Kartı
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-2xl text-slate-800 mb-3">
+                    Geçiş Kontrol Kartı
                   </CardTitle>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    Çoklu bağlantı noktalarına sahip profesyonel kontrol kartı. 
+                    Entegre LCD ekran ve genişleme imkanı sunan modüler yapı.
+                  </p>
                 </CardHeader>
                 <CardContent>
                   <ul className="text-slate-600 space-y-3 text-left">
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0" />
-                      <span>16 kapı kontrol kapasitesi</span>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Çoklu yeşil bağlantı portları</span>
                     </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0" />
-                      <span>Modüler genişleme imkanı</span>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>LCD ekran ve kontrol paneli</span>
                     </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0" />
-                      <span>Yüksek kalite PCB kartı</span>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Modüler genişleme desteği</span>
                     </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0" />
-                      <span>RS-485 iletişim protokolü</span>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-pink-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Profesyonel PCB tasarımı</span>
                     </li>
                   </ul>
                 </CardContent>
