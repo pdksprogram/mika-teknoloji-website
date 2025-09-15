@@ -9,8 +9,6 @@ import SEO from "@/seo/SEO";
 // Real product images paths  
 const dashboardImage = "/new-dashboard-table.png";
 const cardAccessSystem = "/card-access-system.png";
-const mikaPassPhoneImage = "/qr-hand-mockup.png";
-const mobileAppImage = "/mika-mobile-app-qr.png";
 
 
 const faqs = [
@@ -73,57 +71,64 @@ export default function AccessControlSystemPage() {
         jsonLd={[productJsonLd, faqJsonLd]}
       />
       
-      {/* [S1] Hero Section - Armongate Style */}
+      {/* [S1] Hero Section - Corporate Style */}
       <section id="s1" data-section="S1" className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
         <div className="pointer-events-none select-none absolute top-4 left-4 z-20 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">S1</div>
+        
         <div className="container mx-auto px-4 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-            {/* Left Content */}
-            <motion.div 
-              className="text-left"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
+          {/* Main Hero Content */}
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="mb-8">
-                <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                  <span className="text-blue-600">MikaPass</span><br />
-                  Akıllı Erişim<br />
-                  Kontrol Sistemi
-                </h1>
-                <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                  Bina içindeki kapıları yetki seviyesine göre geçiş kontrol yapabilirsiniz. 
-                  Antipassback ve Global Antipassback özelliği ile bir kapı kapanmadan 
-                  diğer kapıdan geçiş engellenebilir.
-                </p>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  Üstelik limit kontör ve saat aralıkları tanımlayarak, Mika Teknoloji 
-                  üretimi profesyonel access kontrol panelleri ile tam güvenlik kontrolü 
-                  sağlayabilirsiniz.
-                </p>
+              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+                <span className="text-blue-600">MikaPass</span><br />
+                <span className="text-gray-800">Akıllı Erişim Kontrol Sistemi</span>
+              </h1>
+              <p className="text-2xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed">
+                Bina içindeki kapıları yetki seviyesine göre geçiş kontrol yapın.
+              </p>
+              <p className="text-lg text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+                Antipassback ve Global Antipassback özelliği ile bir kapı kapanmadan diğer kapıdan geçiş engelleyin. 
+                Limit kontör ve saat aralıkları ile tam güvenlik kontrolü sağlayın.
+              </p>
+            </motion.div>
+
+            {/* Features Tags */}
+            <motion.div 
+              className="flex flex-wrap justify-center gap-4 mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="bg-white shadow-lg text-blue-700 px-6 py-3 rounded-full text-base font-semibold border border-blue-100">
+                🏢 Yetki Seviyeli Kontrol
               </div>
-
-
-              {/* Features Tags */}
-              <div className="flex flex-wrap gap-3 mb-8">
-                <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
-                  🏢 Yetki Seviyeli Kontrol
-                </div>
-                <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
-                  🚪 Antipassback Sistemi
-                </div>
-                <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
-                  ⏰ Saat Aralığı Kontrolü
-                </div>
+              <div className="bg-white shadow-lg text-blue-700 px-6 py-3 rounded-full text-base font-semibold border border-blue-100">
+                🚪 Antipassback Sistemi
               </div>
+              <div className="bg-white shadow-lg text-blue-700 px-6 py-3 rounded-full text-base font-semibold border border-blue-100">
+                ⏰ Saat Aralığı Kontrolü
+              </div>
+            </motion.div>
+          </div>
 
-              {/* Video */}
-              <motion.div 
-                className="bg-white rounded-2xl p-4 shadow-xl max-w-md"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
+          {/* Content Grid */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left - Video Demo */}
+            <motion.div 
+              className="order-2 lg:order-1"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <div className="bg-white rounded-3xl p-8 shadow-2xl">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Canlı Demo</h3>
+                  <p className="text-gray-600">MikaPass sisteminin gerçek zamanlı çalışmasını izleyin</p>
+                </div>
                 <video
                   autoPlay
                   loop
@@ -131,81 +136,60 @@ export default function AccessControlSystemPage() {
                   controls={true}
                   playsInline
                   preload="auto"
-                  className="w-full h-auto rounded-xl object-cover"
+                  className="w-full h-auto rounded-2xl object-cover shadow-lg"
                   onError={(e) => console.log('Video yükleme hatası:', e)}
                   onLoad={() => console.log('Video yüklendi')}
                 >
                   <source src="/access-hero-video.mp4" type="video/mp4" />
                   <p className="text-center text-gray-600 p-4">Video yüklenemiyor...</p>
                 </video>
-                <div className="text-center mt-3">
-                  <p className="text-sm text-gray-600 font-medium">MikaPass Access Control Demo</p>
-                </div>
-              </motion.div>
+              </div>
             </motion.div>
 
-            {/* Right Content - Professional Phone Images */}
+            {/* Right - Professional Features */}
             <motion.div 
-              className="relative flex justify-center items-center"
+              className="order-1 lg:order-2"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <div className="relative">
-                {/* Main MikaPass Phone */}
-                <motion.div 
-                  className="relative z-10"
-                  animate={{ 
-                    y: [0, -15, 0],
-                    rotate: [0, 2, -2, 0]
-                  }}
-                  transition={{ 
-                    duration: 4, 
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                >
-                  <img 
-                    src={mikaPassPhoneImage} 
-                    alt="MikaPass Dijital Anahtar Uygulaması"
-                    className="w-80 h-auto object-contain drop-shadow-2xl"
-                    width="320"
-                    height="600"
-                  />
-                </motion.div>
+              <div className="space-y-8">
+                {/* Feature Cards */}
+                <div className="bg-white rounded-2xl p-6 shadow-xl border border-blue-50">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
+                      <span className="text-2xl">🔐</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900">Global Antipassback</h3>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed">
+                    Bir kapı kapanmadan diğer kapıdan geçişi engeller. Güvenlik açıklarını tamamen kapatır.
+                  </p>
+                </div>
 
-                {/* Secondary Mobile App Image - Floating */}
-                <motion.div 
-                  className="absolute -top-8 -right-12 z-20 w-48"
-                  animate={{ y: [0, -15, 0] }}
-                  transition={{ duration: 4, repeat: Infinity }}
-                >
-                  <img 
-                    src={mobileAppImage} 
-                    alt="Mika Mobile App QR Kod"
-                    className="w-full h-auto object-contain drop-shadow-xl"
-                    width="200"
-                    height="240"
-                  />
-                </motion.div>
+                <div className="bg-white rounded-2xl p-6 shadow-xl border border-blue-50">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
+                      <span className="text-2xl">⏱️</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900">Saat Aralığı Kontrolü</h3>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed">
+                    Belirli saatlerde geçiş izinleri tanımlayın. Mesai saatleri dışında otomatik kısıtlama.
+                  </p>
+                </div>
 
-                {/* Floating Security Badge */}
-                <motion.div 
-                  className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 z-10"
-                  animate={{ y: [0, 12, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-                >
-                  <Shield className="h-8 w-8 text-blue-600" />
-                </motion.div>
-
-                {/* Floating Users Badge */}
-                <motion.div 
-                  className="absolute top-12 -left-8 bg-blue-600 rounded-2xl shadow-xl p-4 z-10"
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{ duration: 3.5, repeat: Infinity }}
-                >
-                  <Users className="h-8 w-8 text-white" />
-                </motion.div>
+                <div className="bg-white rounded-2xl p-6 shadow-xl border border-blue-50">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
+                      <span className="text-2xl">👥</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900">Yetki Seviyeli Erişim</h3>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed">
+                    Her personele özel yetki tanımlaması. Departman bazlı erişim kontrolü ve izleme.
+                  </p>
+                </div>
               </div>
             </motion.div>
           </div>
