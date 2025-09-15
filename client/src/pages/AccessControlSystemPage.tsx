@@ -7,8 +7,6 @@ import SEO from "@/seo/SEO";
 // Simple section numbering for clear identification
 
 // Real product images paths  
-const controlPanelImage = "/control-panel.png";
-const controlCardImage = "/control-card.png";
 const dashboardImage = "/new-dashboard-table.png";
 const cardAccessSystem = "/card-access-system.png";
 const mikaPassPhoneImage = "/qr-hand-mockup.png";
@@ -404,8 +402,8 @@ export default function AccessControlSystemPage() {
                 <div className="mb-8">
                   <div className="w-full max-w-sm mx-auto bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl">
                     <img 
-                      src={controlPanelImage} 
-                      alt="Güvenlik Kontrol Paneli"
+                      src="/access-control-panels.png" 
+                      alt="Access Kontrol Panelleri"
                       className="w-full h-auto object-contain"
                       width="300"
                       height="300"
@@ -448,8 +446,8 @@ export default function AccessControlSystemPage() {
                 <div className="mb-8">
                   <div className="w-full max-w-sm mx-auto bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl">
                     <img 
-                      src={controlCardImage} 
-                      alt="Geçiş Kontrol Kartı"
+                      src="/professional-access-panel.png" 
+                      alt="Professional Access Control Panel"
                       className="w-full h-auto object-contain"
                       width="300"
                       height="300"
