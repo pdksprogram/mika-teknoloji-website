@@ -76,25 +76,7 @@ export default function AccessControlSystemPage() {
       {/* [S1] Hero Section - Armongate Style */}
       <section id="s1" data-section="S1" className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
         <div className="pointer-events-none select-none absolute top-4 left-4 z-20 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">S1</div>
-        
-        {/* Video Background */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-90"
-          onError={(e) => console.log('Video yükleme hatası:', e)}
-          onLoad={() => console.log('Video yüklendi')}
-        >
-          <source src="/access-hero-video.mp4" type="video/mp4" />
-          <p className="text-center text-gray-600 p-4">Video yüklenemiyor...</p>
-        </video>
-        
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-white/50 to-blue-100/30 z-10"></div>
-        <div className="relative z-20 container mx-auto px-4 py-20">
+        <div className="container mx-auto px-4 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
             {/* Left Content */}
             <motion.div 
@@ -123,7 +105,7 @@ export default function AccessControlSystemPage() {
 
 
               {/* Features Tags */}
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 mb-8">
                 <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
                   🏢 Yetki Seviyeli Kontrol
                 </div>
@@ -134,6 +116,31 @@ export default function AccessControlSystemPage() {
                   ⏰ Saat Aralığı Kontrolü
                 </div>
               </div>
+
+              {/* Video */}
+              <motion.div 
+                className="bg-white rounded-2xl p-4 shadow-xl max-w-md"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                  className="w-full h-auto rounded-xl object-cover"
+                  onError={(e) => console.log('Video yükleme hatası:', e)}
+                  onLoad={() => console.log('Video yüklendi')}
+                >
+                  <source src="/access-hero-video.mp4" type="video/mp4" />
+                  <p className="text-center text-gray-600 p-4">Video yüklenemiyor...</p>
+                </video>
+                <div className="text-center mt-3">
+                  <p className="text-sm text-gray-600 font-medium">MikaPass Access Control Demo</p>
+                </div>
+              </motion.div>
             </motion.div>
 
             {/* Right Content - Professional Phone Images */}
