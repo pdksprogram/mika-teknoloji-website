@@ -10,7 +10,6 @@ import SEO from "@/seo/SEO";
 const controlPanelImage = "/control-panel.png";
 const controlCardImage = "/control-card.png";
 const dashboardImage = "/new-dashboard-table.png";
-const phoneQrImage = "/phone-qr-system.png";
 const cardAccessSystem = "/card-access-system.png";
 const mikaPassPhoneImage = "/qr-hand-mockup.png";
 const mobileAppImage = "/mika-mobile-app-qr.png";
@@ -526,39 +525,74 @@ export default function AccessControlSystemPage() {
         <div className="pointer-events-none select-none absolute top-4 left-4 z-20 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">S5</div>
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left - Dashboard Image */}
+            {/* Left - QR Visitor System */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="relative">
-                <div className="w-full max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
-                  <img 
-                    src={dashboardImage} 
-                    alt="Bulut Tabanlı Yönetim Dashboard"
-                    className="w-full h-auto object-contain"
-                    width="800"
-                    height="600"
-                  />
-                </div>
-                {/* Phone QR Image - Floating */}
-                <motion.div 
-                  className="absolute -bottom-8 -right-8 w-64 h-auto"
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 3, repeat: Infinity }}
-                >
-                  <img 
-                    src={phoneQrImage} 
-                    alt="QR Kod ile Mobil Geçiş"
-                    className="w-full h-auto object-contain drop-shadow-2xl"
-                    width="300"
-                    height="200"
-                  />
-                </motion.div>
+              <div className="w-full max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
+                <img 
+                  src="/qr-visitor-system.png" 
+                  alt="Ziyaretçi QR Kod Takip Sistemi"
+                  className="w-full h-auto object-contain"
+                  width="600"
+                  height="800"
+                />
               </div>
             </motion.div>
 
+            {/* Right - Visitor Tracking Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="mb-8">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                  Ziyaretçi Takip<br />
+                  <span className="text-blue-600">QR Sistemi</span>
+                </h2>
+                <p className="text-xl text-gray-600 leading-relaxed mb-6">
+                  Tek kullanımlık printer veya SMS ile gönderilen QR kodlar ile 
+                  ziyaretçilerinizi kolayca takip edin. Turnikelerden başarıyla 
+                  geçen her ziyaretçi anında sisteme kaydedilir.
+                </p>
+              </div>
+
+              {/* Features */}
+              <div className="space-y-4">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <div className="text-2xl">🖨️</div>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">Tek Kullanımlık QR Printer</h4>
+                    <p className="text-gray-600 text-sm">Anında basılabilen geçici erişim kodları</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <div className="text-2xl">📱</div>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">SMS ile QR Gönderimi</h4>
+                    <p className="text-gray-600 text-sm">Ziyaretçilere otomatik QR kod gönderimi</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <div className="text-2xl">🚪</div>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">Turnike Entegrasyonu</h4>
+                    <p className="text-gray-600 text-sm">Başarıyla geçişlerin anlık takibi</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
