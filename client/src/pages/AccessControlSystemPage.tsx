@@ -127,7 +127,8 @@ export default function AccessControlSystemPage() {
                 <video
                   autoPlay
                   loop
-                  muted
+                  muted={false}
+                  controls={true}
                   playsInline
                   preload="auto"
                   className="w-full h-auto rounded-xl object-cover"
