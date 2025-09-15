@@ -174,8 +174,8 @@ export default function AccessControlSystemPage() {
         </div>
       </section>
 
-      {/* Digital Key Section */}
-      <section className="py-32 bg-white">
+      {/* Cloud Based Access Control Section */}
+      <section className="py-32 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
@@ -186,23 +186,43 @@ export default function AccessControlSystemPage() {
               viewport={{ once: true }}
             >
               <div className="mb-8">
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  Akıllı Telefonunuz<br />
-                  <span className="text-blue-600">Dijital Anahtarınız</span>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                  <span className="text-blue-600">Bulut Tabanlı</span><br />
+                  Geçiş Kontrol Sistemi
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                  Akıllı telefonlarınız ile hızlı, güvenli, kartsız geçiş sağlayın.
+                  Binalarınızı, çalışanlarınızı, ziyaretçilerinizi, müşterilerinizi, bina 
+                  sakinlerinizi ve tüm varlıklarınızı Mika bulut yazılımları ile 
+                  koruyabilirsiniz.
                 </p>
-                <Link href="/kartli-gecis-sistemi">
-                  <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-base">
-                    Daha Fazla Bilgi
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
+                <div className="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8">
+                  <p className="text-gray-700 font-medium">
+                    Tüm yaşam alanlarınızı BT altyapı maliyetine gereksinim duymadan 
+                    güvenle yönetebilirsiniz.
+                  </p>
+                </div>
+              </div>
+
+              {/* Features Grid */}
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center p-6 bg-white rounded-xl shadow-sm">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                    <Shield className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h4 className="font-bold text-gray-900 mb-2">Güvenli Erişim</h4>
+                  <p className="text-sm text-gray-600">SSL şifreleme ile güvenli bağlantı</p>
+                </div>
+                <div className="text-center p-6 bg-white rounded-xl shadow-sm">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                    <Users className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h4 className="font-bold text-gray-900 mb-2">Merkezi Yönetim</h4>
+                  <p className="text-sm text-gray-600">Tüm lokasyonları tek arayüzden kontrol</p>
+                </div>
               </div>
             </motion.div>
 
-            {/* Right - Phone and Device Images */}
+            {/* Right Content - Dashboard and Phone */}
             <motion.div
               className="relative"
               initial={{ opacity: 0, x: 50 }}
@@ -210,22 +230,111 @@ export default function AccessControlSystemPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="relative flex justify-center">
-                {/* Large Phone Mockup */}
-                <div className="w-64 h-96 bg-gray-900 rounded-[2rem] shadow-2xl p-1 rotate-3 hover:rotate-0 transition-transform duration-500">
-                  <div className="w-full h-full bg-gradient-to-b from-blue-50 to-white rounded-[1.5rem] p-6">
-                    <div className="text-center">
-                      <div className="w-12 h-12 bg-blue-600 rounded-xl mx-auto mb-4 flex items-center justify-center">
-                        <span className="text-white font-bold">MT</span>
+              <div className="relative">
+                {/* Dashboard Screen */}
+                <div className="bg-white rounded-2xl shadow-2xl p-4 mb-8">
+                  <div className="bg-gray-100 rounded-xl p-8 min-h-80">
+                    <div className="grid grid-cols-3 gap-4 mb-6">
+                      <div className="bg-orange-100 rounded-lg p-4 h-20"></div>
+                      <div className="bg-pink-100 rounded-lg p-4 h-20"></div>
+                      <div className="bg-blue-100 rounded-lg p-4 h-20"></div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="bg-white rounded-lg p-4 h-32 shadow-sm"></div>
+                      <div className="bg-white rounded-lg p-4 h-32 shadow-sm"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Phone with QR Code */}
+                <div className="absolute -bottom-8 -right-8 w-32 h-56 bg-gray-900 rounded-2xl shadow-xl p-1">
+                  <div className="w-full h-full bg-white rounded-xl p-3 flex flex-col justify-center items-center">
+                    <div className="w-16 h-16 bg-gray-900 rounded-lg mb-2"></div>
+                    <div className="text-xs text-center text-gray-600">QR Kod</div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Digital Key Section - New Design */}
+      <section className="py-32 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="mb-8">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                  <span className="bg-blue-500 px-4 py-2 rounded-lg inline-block mb-4">
+                    Akıllı Telefonunuz
+                  </span><br />
+                  <span className="bg-blue-500 px-4 py-2 rounded-lg inline-block">
+                    Dijital Anahtarınız
+                  </span>
+                </h2>
+                <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+                  Akıllı telefonlarınız ile hızlı, güvenli, kartsız geçiş sağlayın.
+                </p>
+                
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-lg">
+                    Daha Fazla Bilgi
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </motion.div>
+              </div>
+            </motion.div>
+
+            {/* Right - Large Phone Mockup */}
+            <motion.div
+              className="relative flex justify-center"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="relative">
+                {/* Main Phone */}
+                <div className="w-72 h-[500px] bg-gray-900 rounded-[3rem] shadow-2xl p-2">
+                  <div className="w-full h-full bg-white rounded-[2.5rem] p-6 flex flex-col">
+                    {/* Phone Header */}
+                    <div className="text-center mb-8">
+                      <div className="w-16 h-16 bg-blue-600 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                        <span className="text-white font-bold text-xl">MT</span>
                       </div>
-                      <h4 className="font-bold text-gray-900 mb-2">MikaPass</h4>
-                      <div className="w-24 h-24 bg-gray-900 mx-auto rounded-lg mt-8 mb-8"></div>
-                      <div className="space-y-2">
-                        <div className="bg-green-100 text-green-800 p-2 rounded-lg text-xs">
-                          ✓ Aktif
+                      <h4 className="font-bold text-gray-900 text-lg">MikaPass</h4>
+                    </div>
+                    
+                    {/* QR Code Area */}
+                    <div className="flex-1 flex items-center justify-center">
+                      <div className="w-32 h-32 bg-gray-900 rounded-2xl flex items-center justify-center">
+                        <div className="w-24 h-24 bg-white rounded-xl p-3 flex items-center justify-center">
+                          <div className="w-full h-full bg-gray-900 rounded-lg relative">
+                            <div className="absolute inset-2 bg-white rounded-sm"></div>
+                            <div className="absolute top-3 left-3 w-3 h-3 bg-gray-900 rounded-sm"></div>
+                            <div className="absolute top-3 right-3 w-3 h-3 bg-gray-900 rounded-sm"></div>
+                            <div className="absolute bottom-3 left-3 w-3 h-3 bg-gray-900 rounded-sm"></div>
+                          </div>
                         </div>
-                        <div className="text-xs text-gray-500">Hazır</div>
                       </div>
+                    </div>
+                    
+                    {/* Status */}
+                    <div className="text-center">
+                      <div className="bg-green-100 text-green-800 px-6 py-3 rounded-full text-sm font-medium inline-block mb-2">
+                        ✓ Aktif
+                      </div>
+                      <div className="text-gray-500 text-sm">Hazır</div>
                     </div>
                   </div>
                 </div>
