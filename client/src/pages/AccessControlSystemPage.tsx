@@ -226,9 +226,8 @@ export default function AccessControlSystemPage() {
             <motion.div
               className="relative"
               initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
             >
               <div className="relative">
                 {/* Dashboard Screen */}
@@ -299,9 +298,8 @@ export default function AccessControlSystemPage() {
             <motion.div
               className="relative flex justify-center"
               initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
             >
               <div className="relative">
                 {/* Main Phone */}
@@ -498,9 +496,8 @@ export default function AccessControlSystemPage() {
             {/* Left - Dashboard Image */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
             >
               <div className="relative">
                 <div className="w-full max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
@@ -532,7 +529,7 @@ export default function AccessControlSystemPage() {
             {/* Right Content */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
