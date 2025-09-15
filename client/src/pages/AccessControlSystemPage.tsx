@@ -7,10 +7,10 @@ import SEO from "@/seo/SEO";
 // Real product images paths  
 const controlPanelImage = "/control-panel.png";
 const controlCardImage = "/control-card.png";
-const dashboardImage = "/dashboard-panel.png";
+const dashboardImage = "/new-dashboard-table.png";
 const phoneQrImage = "/phone-qr-system.png";
 const cardAccessSystem = "/card-access-system.png";
-const mikaPassPhoneImage = "/mobile-app-interface.png";
+const mikaPassPhoneImage = "/qr-hand-mockup.png";
 const mobileAppImage = "/mika-mobile-app-qr.png";
 
 
@@ -127,7 +127,18 @@ export default function AccessControlSystemPage() {
             >
               <div className="relative">
                 {/* Main MikaPass Phone */}
-                <div className="relative z-10">
+                <motion.div 
+                  className="relative z-10"
+                  animate={{ 
+                    y: [0, -15, 0],
+                    rotate: [0, 2, -2, 0]
+                  }}
+                  transition={{ 
+                    duration: 4, 
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
                   <img 
                     src={mikaPassPhoneImage} 
                     alt="MikaPass Dijital Anahtar Uygulaması"
@@ -135,7 +146,7 @@ export default function AccessControlSystemPage() {
                     width="320"
                     height="600"
                   />
-                </div>
+                </motion.div>
 
                 {/* Secondary Mobile App Image - Floating */}
                 <motion.div 
