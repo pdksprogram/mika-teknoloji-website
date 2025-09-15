@@ -4,11 +4,14 @@ import { ArrowRight, Shield, Users, Database, Share2, Mail, MessageSquare } from
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
 
+// Simple section numbering for clear identification
+
 // Real product images paths  
 const controlPanelImage = "/control-panel.png";
 const controlCardImage = "/control-card.png";
 const dashboardImage = "/new-dashboard-table.png";
 const phoneQrImage = "/phone-qr-system.png";
+const cardAccessSystem = "/card-access-system.png";
 const mikaPassPhoneImage = "/qr-hand-mockup.png";
 const mobileAppImage = "/mika-mobile-app-qr.png";
 
@@ -73,8 +76,9 @@ export default function AccessControlSystemPage() {
         jsonLd={[productJsonLd, faqJsonLd]}
       />
       
-      {/* Hero Section - Armongate Style */}
-      <section className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
+      {/* [S1] Hero Section - Armongate Style */}
+      <section id="s1" data-section="S1" className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
+        <div className="pointer-events-none select-none absolute top-4 left-4 z-20 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">S1</div>
         <div className="container mx-auto px-4 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
             {/* Left Content */}
@@ -185,8 +189,9 @@ export default function AccessControlSystemPage() {
         </div>
       </section>
 
-      {/* Cloud Based Access Control Section */}
-      <section className="py-32 bg-gray-50">
+      {/* [S2] Cloud Based Access Control Section */}
+      <section id="s2" data-section="S2" className="relative py-32 bg-gray-50">
+        <div className="pointer-events-none select-none absolute top-4 left-4 z-20 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">S2</div>
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
@@ -232,30 +237,55 @@ export default function AccessControlSystemPage() {
               </div>
             </motion.div>
 
-            {/* Right Content - Text Content */}
+            {/* Right Content - Dashboard and Phone */}
             <motion.div
               className="relative"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="mb-8">
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                  Mika ile hızlı, güvenli,<br />
-                  <span className="text-blue-600">kontrollü geçiş</span>
-                </h2>
-                <p className="text-xl text-gray-600 leading-relaxed">
-                  Günlük hayatın her alanında rahat geçiş. Mika okuyucularının yer aldığı 
-                  tüm yaşam alanlarında kolaylıkla mobil uygulama ile geçiş sağlayabilirsiniz.
-                </p>
+              <div className="relative">
+                {/* Real Dashboard Image */}
+                <div className="w-full max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
+                  <img 
+                    src={dashboardImage} 
+                    alt="Bulut Tabanlı Yönetim Dashboard"
+                    className="w-full h-auto object-contain"
+                    width="800"
+                    height="600"
+                  />
+                </div>
+                {/* Card Access System - Floating with Animation */}
+                <motion.div 
+                  className="absolute -bottom-8 -right-8 w-64 h-auto"
+                  animate={{ 
+                    y: [0, -10, 0],
+                    rotateY: [0, 5, 0]
+                  }}
+                  transition={{ 
+                    duration: 3.5, 
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
+                  <img 
+                    src={cardAccessSystem} 
+                    alt="Kartlı Geçiş Kontrol Sistemi"
+                    className="w-full h-auto object-contain drop-shadow-2xl rounded-xl"
+                    width="300"
+                    height="200"
+                  />
+                </motion.div>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Advanced Features Section */}
-      <section className="py-32 bg-white">
+
+      {/* [S3] Advanced Features Section */}
+      <section id="s3" data-section="S3" className="relative py-32 bg-white">
+        <div className="pointer-events-none select-none absolute top-4 left-4 z-20 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">S3</div>
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Content - Advanced Dashboard */}
@@ -340,8 +370,11 @@ export default function AccessControlSystemPage() {
         </div>
       </section>
 
-      {/* Hardware Section */}
-      <section className="py-32 bg-gray-50">
+
+
+      {/* [S4] Hardware Section */}
+      <section id="s4" data-section="S4" className="relative py-32 bg-gray-50">
+        <div className="pointer-events-none select-none absolute top-4 left-4 z-20 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">S4</div>
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-20"
@@ -487,8 +520,10 @@ export default function AccessControlSystemPage() {
         </div>
       </section>
 
-      {/* Cloud Based System */}
-      <section className="py-32 bg-white">
+
+      {/* [S5] Cloud Based System */}
+      <section id="s5" data-section="S5" className="relative py-32 bg-white">
+        <div className="pointer-events-none select-none absolute top-4 left-4 z-20 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">S5</div>
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left - Dashboard Image */}
@@ -528,102 +563,10 @@ export default function AccessControlSystemPage() {
         </div>
       </section>
 
-      {/* Fast and Secure Access */}
-      <section className="py-32 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-20"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Mika ile hızlı, güvenli,<br />
-              <span className="text-blue-600">kontrollü geçiş</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Günlük hayatın her alanında rahat geçiş. Mika okuyucularının yer aldığı 
-              tüm yaşam alanlarında kolaylıkla mobil uygulama ile geçiş sağlayabilirsiniz.
-            </p>
-          </motion.div>
 
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <motion.div
-              className="text-center p-8 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-16 h-16 bg-blue-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <div className="text-2xl">👥</div>
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Ziyaretçi Yönetimi</h3>
-              <p className="text-gray-600 text-sm">Misafir erişim kontrolleri</p>
-            </motion.div>
 
-            <motion.div
-              className="text-center p-8 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-16 h-16 bg-blue-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <div className="text-2xl">💳</div>
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Ödemeli Geçiş</h3>
-              <p className="text-gray-600 text-sm">Ücret tabanlı erişim</p>
-            </motion.div>
-
-            <motion.div
-              className="text-center p-8 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-16 h-16 bg-blue-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <div className="text-2xl">📱</div>
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Mobil İnterkom</h3>
-              <p className="text-gray-600 text-sm">Görüntülü konuşma sistemi</p>
-            </motion.div>
-
-            <motion.div
-              className="text-center p-8 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-16 h-16 bg-blue-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <div className="text-2xl">🔐</div>
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Geçiş Kontrol</h3>
-              <p className="text-gray-600 text-sm">Akıllı erişim yönetimi</p>
-            </motion.div>
-          </div>
-
-          {/* Architecture Info */}
-          <motion.div 
-            className="text-center mt-20 max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <div className="bg-white rounded-3xl shadow-xl p-12">
-              <p className="text-gray-600 text-lg leading-relaxed">
-                Mika, bulutta ve tesiste barındırılan çözümleri ile her türlü mimariye uyarlanabilir. 
-                İstemci sertifikasyonu ve SSL şifreleme ile VPN gerektirmeksizin güvenli ve merkezi bir altyapı sağlar. 
-                Geçiş kontrolün yanında sunulan modülleri ile kullanıcı ihtiyaçlarına göre şekillenebilen uygulamalar sunar.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      {/* [S6] Fast and Secure Access - TEMPORARILY DISABLED */}
+      {/* S6 content will be re-added properly after design approval */}
 
       {/* CTA Section - Armongate Style */}
       <section className="py-32 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden">
@@ -721,6 +664,7 @@ export default function AccessControlSystemPage() {
           </motion.div>
         </div>
       </section>
+
     </div>
   );
 }
