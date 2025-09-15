@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, ArrowRight, Shield, Users, Clock } from "lucide-react";
+import { ArrowRight, Shield, Users } from "lucide-react";
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
 
@@ -10,51 +9,9 @@ const controlPanelImage = "/attached_assets/image_1757935900507.png";
 const controlCardImage = "/attached_assets/image_1757935911490.png";
 const dashboardImage = "/attached_assets/image_1757937450064.png";
 const phoneQrImage = "/attached_assets/image_1757937454126.png";
+const mikaPassPhoneImage = "/attached_assets/image_1757938012369.png";
+const mobileAppImage = "/attached_assets/image_1757938092914.png";
 
-const components = [
-  "Sisteme entegre edilmiş kart okuyucular",
-  "Elektrikli kilit karşılıkları ve manyetik kilitler",
-  "Biyometrik okuyucu ve kontrol paneli",
-  "İzleme ve kontrol etme üzerine yazılımlar",
-  "Çeşitli boyutlardaki bariyer ve turnikeler"
-];
-
-const benefits = [
-  "Giriş kapılarında hızlı ve kolay geçiş imkanı",
-  "Pratik ve kontrollü şekilde yetki kontrolü",
-  "Yetki genişletilmesi ve kısıtlanması tanımlama olanağı",
-  "Personelin işe geliş-gidiş takibi",
-  "Mobil cihazlara kolay entegre edilebilir",
-  "Sağlık ve hijyen gereksinimlerini karşılama",
-  "Uzaktan kontrol ve izleme imkanı",
-  "Güvenlik ve takip ön planda olan sistem"
-];
-
-const technicalFeatures = [
-  "Son teknolojik destekli veri tabanı",
-  "Kanun değişikliklerine karşı otomatik güncelleme",
-  "İnternet üzerinden kolay erişim",
-  "Çoklu programa entegre kurulum",
-  "Kolay ve hızlı bakım-onarım"
-];
-
-const features = [
-  {
-    icon: Shield,
-    title: "Güvenli Erişim Kontrolü",
-    description: "İşyerleri, AVM ve binalarda güvenliği sağlama işlevinin yanı sıra giriş-çıkışların kontrol edilmesi"
-  },
-  {
-    icon: Users,
-    title: "Pratik Kurulum",
-    description: "En çok faydanın alınacağı yerin tespiti sonrası uzman çalışanlarla hızlı kurulum"
-  },
-  {
-    icon: Clock,
-    title: "7/24 İzleme",
-    description: "Uzaktan basit şekilde izleme ve kontrol edilebilir sirkülasyon takibi"
-  }
-];
 
 const faqs = [
   {
@@ -185,7 +142,7 @@ export default function AccessControlSystemPage() {
               </div>
             </motion.div>
 
-            {/* Right Content - Device Mockup */}
+            {/* Right Content - Professional Phone Images */}
             <motion.div 
               className="relative flex justify-center items-center"
               initial={{ opacity: 0, x: 50 }}
@@ -193,51 +150,46 @@ export default function AccessControlSystemPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="relative">
-                {/* Phone Mockup */}
-                <div className="w-80 h-[600px] bg-gray-900 rounded-[3rem] shadow-2xl p-2 relative">
-                  <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
-                    {/* Phone Screen Content */}
-                    <div className="p-8 h-full flex flex-col justify-center bg-gradient-to-b from-blue-50 to-white">
-                      <div className="text-center mb-8">
-                        <div className="w-20 h-20 bg-blue-600 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                          <span className="text-white font-bold text-2xl">MT</span>
-                        </div>
-                        <h3 className="font-bold text-gray-900 mb-2">MikaPass</h3>
-                        <p className="text-sm text-gray-600">Dijital Anahtarınız</p>
-                      </div>
-                      
-                      {/* QR Code Area */}
-                      <div className="bg-white p-6 rounded-2xl shadow-lg mb-6">
-                        <div className="w-32 h-32 bg-gray-900 mx-auto rounded-lg flex items-center justify-center">
-                          <div className="text-white text-xs font-mono">QR</div>
-                        </div>
-                      </div>
-
-                      <div className="space-y-3">
-                        <div className="bg-green-100 text-green-800 p-3 rounded-xl text-sm text-center">
-                          ✅ Erişim Onaylandı
-                        </div>
-                        <div className="text-xs text-center text-gray-500">
-                          Son erişim: Bugün 14:30
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                {/* Main MikaPass Phone */}
+                <div className="relative z-10">
+                  <img 
+                    src={mikaPassPhoneImage} 
+                    alt="MikaPass Dijital Anahtar Uygulaması"
+                    className="w-80 h-auto object-contain drop-shadow-2xl"
+                    width="320"
+                    height="600"
+                  />
                 </div>
 
-                {/* Floating Elements */}
+                {/* Secondary Mobile App Image - Floating */}
                 <motion.div 
-                  className="absolute -top-8 -right-8 bg-white rounded-2xl shadow-lg p-4"
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 3, repeat: Infinity }}
+                  className="absolute -top-8 -right-12 z-20 w-48"
+                  animate={{ y: [0, -15, 0] }}
+                  transition={{ duration: 4, repeat: Infinity }}
+                >
+                  <img 
+                    src={mobileAppImage} 
+                    alt="Mika Mobile App QR Kod"
+                    className="w-full h-auto object-contain drop-shadow-xl"
+                    width="200"
+                    height="240"
+                  />
+                </motion.div>
+
+                {/* Floating Security Badge */}
+                <motion.div 
+                  className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 z-10"
+                  animate={{ y: [0, 12, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, delay: 1 }}
                 >
                   <Shield className="h-8 w-8 text-blue-600" />
                 </motion.div>
-                
+
+                {/* Floating Users Badge */}
                 <motion.div 
-                  className="absolute -bottom-4 -left-8 bg-blue-600 rounded-2xl shadow-lg p-4"
-                  animate={{ y: [0, 10, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+                  className="absolute top-12 -left-8 bg-blue-600 rounded-2xl shadow-xl p-4 z-10"
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{ duration: 3.5, repeat: Infinity }}
                 >
                   <Users className="h-8 w-8 text-white" />
                 </motion.div>
