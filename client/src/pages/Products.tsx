@@ -6,7 +6,7 @@ export default function Products() {
       title: "Çözümler",
       items: [
         { name: "PDKS (Personel Devam Kontrol)", href: "/cozumler/pdks" },
-        { name: "Access Geçiş Kontrol Sistemleri", href: "/access-control" },
+        { name: "Access Geçiş Kontrol Sistemleri", href: "/cozumler/access" },
         { name: "Bekçi Tur Kontrol Sistemi", href: "/cozumler/bekci-tur" },
         { name: "Turnike Sistemleri", href: "/urunler/turnike" },
         { name: "Otel Kapı Kilit Sistemleri", href: "/urunler/otel-kilit" },
