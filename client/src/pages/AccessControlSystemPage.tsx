@@ -83,13 +83,17 @@ export default function AccessControlSystemPage() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-20"
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-90"
+          onError={(e) => console.log('Video yükleme hatası:', e)}
+          onLoad={() => console.log('Video yüklendi')}
         >
           <source src="/access-hero-video.mp4" type="video/mp4" />
+          <p className="text-center text-gray-600 p-4">Video yüklenemiyor...</p>
         </video>
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/80 via-white/90 to-blue-100/80 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-white/50 to-blue-100/30 z-10"></div>
         <div className="relative z-20 container mx-auto px-4 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
             {/* Left Content */}
