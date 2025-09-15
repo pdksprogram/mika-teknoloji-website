@@ -23,6 +23,7 @@ import CardAccessSystemPage from "@/pages/CardAccessSystemPage";
 import QRAccessPage from "@/pages/QRAccessPage";
 import TurnstileSystemsPage from "@/pages/TurnstileSystemsPage";
 import ParkingAutomationPage from "@/pages/ParkingAutomationPage";
+import AccessControlSystemPage from "@/pages/AccessControlSystemPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -48,6 +49,7 @@ function Router() {
       <Route path="/qr-gecis" component={QRAccessPage} />
       <Route path="/turnike-sistemleri" component={TurnstileSystemsPage} />
       <Route path="/otopark-otomasyon" component={ParkingAutomationPage} />
+      <Route path="/urunler/gecis-kontrol" component={AccessControlSystemPage} />
       
       <Route path="/referanslar" component={References} />
       <Route path="/iletisim" component={Contact} />
