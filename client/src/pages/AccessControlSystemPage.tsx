@@ -5,12 +5,12 @@ import { Link } from "wouter";
 import SEO from "@/seo/SEO";
 
 // Real product images paths  
-const controlPanelImage = "/attached_assets/image_1757935900507.png";
-const controlCardImage = "/attached_assets/image_1757935911490.png";
-const dashboardImage = "/attached_assets/image_1757937450064.png";
-const phoneQrImage = "/attached_assets/image_1757937454126.png";
-const mikaPassPhoneImage = "/attached_assets/image_1757938012369.png";
-const mobileAppImage = "/attached_assets/image_1757938092914.png";
+const controlPanelImage = "/control-panel.png";
+const controlCardImage = "/control-card.png";
+const dashboardImage = "/dashboard-panel.png";
+const phoneQrImage = "/phone-qr-system.png";
+const mikaPassPhoneImage = "/mikapass-phone.png";
+const mobileAppImage = "/mika-mobile-app-qr.png";
 
 
 const faqs = [
