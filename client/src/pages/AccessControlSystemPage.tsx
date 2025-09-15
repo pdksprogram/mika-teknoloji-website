@@ -5,6 +5,10 @@ import { CheckCircle, ArrowRight, Shield, Users, Clock } from "lucide-react";
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
 
+// Real product images paths  
+const controlPanelImage = "/attached_assets/image_1757935900507.png";
+const controlCardImage = "/attached_assets/image_1757935911490.png";
+
 const components = [
   "Sisteme entegre edilmiş kart okuyucular",
   "Elektrikli kilit karşılıkları ve manyetik kilitler",
@@ -172,9 +176,11 @@ export default function AccessControlSystemPage() {
                 <div className="mb-8">
                   <div className="w-full max-w-md mx-auto bg-white p-6 rounded-xl shadow-lg">
                     <img 
-                      src="/api/assets/attached_assets/image_1757935900507.png" 
+                      src={controlPanelImage} 
                       alt="Güvenlik Kontrol Paneli - Metal Kasa"
                       className="w-full h-auto object-contain rounded-lg"
+                      width="400"
+                      height="400"
                     />
                   </div>
                 </div>
@@ -222,9 +228,11 @@ export default function AccessControlSystemPage() {
                 <div className="mb-8">
                   <div className="w-full max-w-md mx-auto bg-white p-6 rounded-xl shadow-lg">
                     <img 
-                      src="/api/assets/attached_assets/image_1757935911490.png" 
+                      src={controlCardImage} 
                       alt="Geçiş Kontrol Kartı - Çoklu Bağlantı Noktası"
                       className="w-full h-auto object-contain rounded-lg"
+                      width="400"
+                      height="400"
                     />
                   </div>
                 </div>
