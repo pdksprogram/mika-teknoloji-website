@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Users } from "lucide-react";
+import { ArrowRight, Shield, Users, Database, Share2, Mail, MessageSquare } from "lucide-react";
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
 
@@ -10,6 +10,7 @@ const controlCardImage = "/control-card.png";
 const dashboardImage = "/new-dashboard-table.png";
 const phoneQrImage = "/phone-qr-system.png";
 const cardAccessSystem = "/card-access-system.png";
+const advancedDashboard = "/advanced-dashboard.png";
 const mikaPassPhoneImage = "/qr-hand-mockup.png";
 const mobileAppImage = "/mika-mobile-app-qr.png";
 
@@ -278,6 +279,91 @@ export default function AccessControlSystemPage() {
         </div>
       </section>
 
+      {/* Advanced Features Section */}
+      <section className="py-32 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Content - Advanced Dashboard */}
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="w-full max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
+                <img 
+                  src={advancedDashboard} 
+                  alt="Gelişmiş Yönetim Dashboard Sistemi"
+                  className="w-full h-auto object-contain"
+                  width="800"
+                  height="600"
+                />
+              </div>
+            </motion.div>
+
+            {/* Right Content - Features */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="mb-8">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                  Kurumsal Düzeyde<br />
+                  <span className="text-blue-600">İleri Özellikler</span>
+                </h2>
+                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                  Mika Teknoloji'nin bulut tabanlı geçiş kontrol sistemi, kurumsal 
+                  ihtiyaçlarınıza yönelik gelişmiş raporlama ve iletişim altyapısı sunar.
+                </p>
+              </div>
+
+              {/* Features Grid */}
+              <div className="grid grid-cols-1 gap-6">
+                <div className="flex items-start p-6 bg-blue-50 rounded-xl">
+                  <div className="w-12 h-12 bg-blue-600 rounded-xl mr-4 flex items-center justify-center flex-shrink-0">
+                    <Database className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-2">SQL Raporlar</h4>
+                    <p className="text-sm text-gray-600">Detaylı personel giriş-çıkış raporları, vardiya analizleri ve özelleştirilebilen SQL sorguları ile kapsamlı veri analizi imkanı.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start p-6 bg-blue-50 rounded-xl">
+                  <div className="w-12 h-12 bg-blue-600 rounded-xl mr-4 flex items-center justify-center flex-shrink-0">
+                    <Share2 className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-2">API Paylaşım</h4>
+                    <p className="text-sm text-gray-600">RESTful API entegrasyonu ile mevcut ERP, İK ve bordro sistemlerinize sorunsuz bağlantı ve veri senkronizasyonu sağlama.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start p-6 bg-blue-50 rounded-xl">
+                  <div className="w-12 h-12 bg-blue-600 rounded-xl mr-4 flex items-center justify-center flex-shrink-0">
+                    <Mail className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-2">Mail Atma</h4>
+                    <p className="text-sm text-gray-600">Otomatik e-posta bildirimleri ile personel giriş-çıkış durumları, geç kalma uyarıları ve periyodik raporların ilgili birimlere iletimi.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start p-6 bg-blue-50 rounded-xl">
+                  <div className="w-12 h-12 bg-blue-600 rounded-xl mr-4 flex items-center justify-center flex-shrink-0">
+                    <MessageSquare className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-2">SMS Atma</h4>
+                    <p className="text-sm text-gray-600">Anlık SMS bildirimleri ile acil durum uyarıları, vardiya değişiklikleri ve önemli duyuruların personele hızlı ulaştırılması.</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       {/* Hardware Section */}
       <section className="py-32 bg-gray-50">
