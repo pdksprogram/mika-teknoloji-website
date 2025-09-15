@@ -229,28 +229,30 @@ export default function AccessControlSystemPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="relative">
-                {/* Dashboard Screen */}
-                <div className="bg-white rounded-2xl shadow-2xl p-4 mb-8">
-                  <div className="bg-gray-100 rounded-xl p-8 min-h-80">
-                    <div className="grid grid-cols-3 gap-4 mb-6">
-                      <div className="bg-orange-100 rounded-lg p-4 h-20"></div>
-                      <div className="bg-pink-100 rounded-lg p-4 h-20"></div>
-                      <div className="bg-blue-100 rounded-lg p-4 h-20"></div>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-white rounded-lg p-4 h-32 shadow-sm"></div>
-                      <div className="bg-white rounded-lg p-4 h-32 shadow-sm"></div>
-                    </div>
-                  </div>
+                {/* Real Dashboard Image */}
+                <div className="w-full max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
+                  <img 
+                    src={dashboardImage} 
+                    alt="Bulut Tabanlı Yönetim Dashboard"
+                    className="w-full h-auto object-contain"
+                    width="800"
+                    height="600"
+                  />
                 </div>
-                
-                {/* Phone with QR Code */}
-                <div className="absolute -bottom-8 -right-8 w-32 h-56 bg-gray-900 rounded-2xl shadow-xl p-1">
-                  <div className="w-full h-full bg-white rounded-xl p-3 flex flex-col justify-center items-center">
-                    <div className="w-16 h-16 bg-gray-900 rounded-lg mb-2"></div>
-                    <div className="text-xs text-center text-gray-600">QR Kod</div>
-                  </div>
-                </div>
+                {/* Real Phone QR Image - Floating */}
+                <motion.div 
+                  className="absolute -bottom-8 -right-8 w-64 h-auto"
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                >
+                  <img 
+                    src={phoneQrImage} 
+                    alt="QR Kod ile Mobil Geçiş"
+                    className="w-full h-auto object-contain drop-shadow-2xl"
+                    width="300"
+                    height="200"
+                  />
+                </motion.div>
               </div>
             </motion.div>
           </div>
