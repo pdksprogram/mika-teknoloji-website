@@ -15,16 +15,16 @@ export default function Products() {
     {
       title: "Donanımlar",
       items: [
-        { name: "Biyometrik Yüz Tanıma Sistemi", href: "/urunler/yuz-tanima" },
-        { name: "Parmak İzi Okuyucu", href: "/urunler/parmak-izi" },
-        { name: "Kartlı Geçiş Sistemi (RFID)", href: "/urunler/rfid" },
-        { name: "Şifreli Geçiş/Takip Sistemi", href: "/urunler/sifreli" },
-        { name: "Şifreli Passcode Sistemleri", href: "/urunler/passcode" },
-        { name: "Bekçi Tur Kontrol Sistemi", href: "/urunler/bekci-tur-kontrol" },
-        { name: "Turnike Sistemleri", href: "/turnike-sistemleri" },
-        { name: "Bariyer Sistemleri", href: "/urunler/bariyer" },
-        { name: "HiSGate/Kasa Daruma Sistemi", href: "/urunler/hisgate" },
-        { name: "X-Ray Cihazları", href: "/urunler/xray" }
+        { name: "1. Biyometrik Yüz Tanıma Sistemi", href: "/urunler/yuz-tanima" },
+        { name: "2. Parmak İzi Okuyucu", href: "/urunler/parmak-izi" },
+        { name: "3. Kartlı Geçiş Sistemi (RFID)", href: "/urunler/rfid" },
+        { name: "4. Şifreli Geçiş/Takip Sistemi", href: "/urunler/sifreli" },
+        { name: "5. Şifreli Passcode Sistemleri", href: "/urunler/passcode" },
+        { name: "6. Bekçi Tur Kontrol Sistemi", href: "/urunler/bekci-tur-kontrol" },
+        { name: "7. Turnike Sistemleri", href: "/turnike-sistemleri" },
+        { name: "8. Bariyer Sistemleri", href: "/urunler/bariyer" },
+        { name: "9. HiSGate/Kasa Daruma Sistemi", href: "/urunler/hisgate" },
+        { name: "10. X-Ray Cihazları", href: "/urunler/xray" }
       ]
     },
     {
