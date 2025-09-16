@@ -95,67 +95,54 @@ export default function Header() {
   };
 
   const navigationItems = [
-    { href: "/", label: t.nav.products, hasDropdown: true, menuType: 'products' },
-    { href: "/hakkimizda", label: t.nav.about },
-    { href: "/cozumler", label: t.nav.solutions, hasDropdown: true, menuType: 'solutions' },
-    { href: "/referanslar", label: t.nav.references },
-    { href: "/iletisim", label: t.nav.contact }
+    { href: "/", label: `M1 ${t.nav.products}`, hasDropdown: true, menuType: 'products' },
+    { href: "/hakkimizda", label: `M2 ${t.nav.about}` },
+    { href: "/cozumler", label: `M3 ${t.nav.solutions}`, hasDropdown: true, menuType: 'solutions' },
+    { href: "/referanslar", label: `M4 ${t.nav.references}` },
+    { href: "/iletisim", label: `M5 ${t.nav.contact}` }
   ];
 
   // Çözümler menüsü
   const solutionsMenuData = {
     "Çözümler": [
-      { name: "PDKS (Personel Devam Kontrol)", href: "/cozumler/pdks" },
-      { name: "Access Geçiş Kontrol Sistemleri", href: "/access-control" },
-      { name: "Bekçi Tur Kontrol Sistemi", href: "/bekci-tur" },
-      { name: "QR Bekçi Sistemi", href: "/qr-bekci" },
-      { name: "Turnike Sistemleri", href: "/turnike" },
-      { name: "Otel Kapı Kilit Sistemleri", href: "/otel-kilit" },
-      { name: "Anahtar/Dolap Takip Sistemi", href: "/anahtar-takip" }
+      { name: "M6 PDKS (Personel Devam Kontrol)", href: "/cozumler/pdks" },
+      { name: "M7 Access Geçiş Kontrol Sistemleri", href: "/access-control" },
+      { name: "M8 Bekçi Tur Kontrol Sistemi", href: "/bekci-tur" },
+      { name: "M9 QR Bekçi Sistemi", href: "/qr-bekci" },
+      { name: "M10 Turnike Sistemleri", href: "/turnike" },
+      { name: "M11 Otel Kapı Kilit Sistemleri", href: "/otel-kilit" },
+      { name: "M12 Anahtar/Dolap Takip Sistemi", href: "/anahtar-takip" }
     ],
     "Donanımlar": [
-      { name: "Biyometrik Yüz Tanıma Sistemi", href: "/yuz-tanima" },
-      { name: "Parmak İzi Okuyucu", href: "/parmak-izi" },
-      { name: "Kartlı Geçiş Sistemi (RFID)", href: "/rfid" },
-      { name: "Şifreli Passcode Sistemleri", href: "/passcode" },
-      { name: "Bekçi Tur Kontrol Sistemi", href: "/bekci-kontrol" },
-      { name: "Turnike Sistemleri", href: "/turnike-donanim" },
-      { name: "Bariyer Sistemleri", href: "/bariyer" }
+      { name: "M13 Biyometrik Yüz Tanıma Sistemi", href: "/yuz-tanima" },
+      { name: "M14 Parmak İzi Okuyucu", href: "/parmak-izi" },
+      { name: "M15 Kartlı Geçiş Sistemi (RFID)", href: "/rfid" },
+      { name: "M16 Şifreli Passcode Sistemleri", href: "/passcode" },
+      { name: "M17 Bekçi Tur Kontrol Sistemi", href: "/bekci-kontrol" },
+      { name: "M18 Turnike Sistemleri", href: "/turnike-donanim" },
+      { name: "M19 Bariyer Sistemleri", href: "/bariyer" }
     ],
     "Yazılımlar": [
-      { name: "Web PDKS", href: "https://pdkspersoneltakip.com/" },
-      { name: "Access Kontrol Programı", href: "/access-program" },
-      { name: "Startıp Puanlama Yazılımı", href: "/startup-puanlama" },
-      { name: "Ogar Puanlama Yazılımı", href: "/ogar-puanlama" },
-      { name: "Yemekahane Takip Sistemi", href: "/yemekhane" },
-      { name: "Turnike Takip Programı", href: "/turnike-program" },
-      { name: "Üye Takip Programı", href: "/uye-takip" }
+      { name: "M20 Web PDKS", href: "https://pdkspersoneltakip.com/" },
+      { name: "M21 Access Kontrol Programı", href: "/access-program" },
+      { name: "M22 Startıp Puanlama Yazılımı", href: "/startup-puanlama" },
+      { name: "M23 Ogar Puanlama Yazılımı", href: "/ogar-puanlama" },
+      { name: "M24 Yemekahane Takip Sistemi", href: "/yemekhane" },
+      { name: "M25 Turnike Takip Programı", href: "/turnike-program" },
+      { name: "M26 Üye Takip Programı", href: "/uye-takip" }
     ],
     "Tüm Programlar": [
-      { name: "HRCapakus Tanıma Sistemi", href: "/hrcapakus" },
-      { name: "X-Ray Cihazları", href: "/xray" },
-      { name: "Öğretmen Takip Sistemi", href: "/ogretmen-takip" },
-      { name: "Turnike Takip Sistemi", href: "/turnike-takip" }
+      { name: "M27 HRCapakus Tanıma Sistemi", href: "/hrcapakus" },
+      { name: "M28 X-Ray Cihazları", href: "/xray" },
+      { name: "M29 Öğretmen Takip Sistemi", href: "/ogretmen-takip" },
+      { name: "M30 Turnike Takip Sistemi", href: "/turnike-takip" }
     ]
   };
 
   // Ürünler menüsü
   const productsMenuData = {
     "Ürünler": [
-      { name: "Parmak İzi Tanıma Sistemleri", href: "/urunler/parmak-izi-tanima" },
-      { name: "Yüz Tanıma Sistemleri", href: "/urunler/yuz-tanima" },
-      { name: "Geçiş Kontrol Sistemleri", href: "/urunler/gecis-kontrol" },
-      { name: "Turnike Sistemleri", href: "/urunler/turnike" },
-      { name: "Personel Takip Sistemleri", href: "/urunler/personel-takip" },
-      { name: "QR Kodlu PDKS Sistemi", href: "/urunler/qr-pdks" },
-      { name: "Bariyer Sistemleri", href: "/urunler/bariyer" },
-      { name: "Plaka Tanıma Sistemleri", href: "/urunler/plaka-tanima" },
-      { name: "OGS & HGS Geçiş Sistemleri", href: "/urunler/ogs-hgs" },
-      { name: "AR-GE Takip Sistemi", href: "/urunler/arge-takip" },
-      { name: "Bekçi & Devriye Tur Sistemleri", href: "/urunler/bekci-devriye" },
-      { name: "Yemekhane Takip Sistemi", href: "/urunler/yemekhane" },
-      { name: "Üye Takip Sistemi", href: "/urunler/uye-takip" },
-      { name: "Kablosuz Alarm Sistemleri", href: "/urunler/kablosuz-alarm" }
+      { name: "M31 Turnike Sistemleri", href: "/turnike-sistemleri" }
     ]
   };
 
