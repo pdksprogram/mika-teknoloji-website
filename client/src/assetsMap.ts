@@ -2,7 +2,7 @@
 export const IMAGES = {
   t1: "/attached_assets/image_1758019216490.png", // Alet/araç görseli
   t2: "/attached_assets/image_1758019229814.png", // Boy tipi turnike sistemi  
-  t3: "/attached_assets/image_1758019158473.png", // Bel tipi turnike cihazları
+  t3: "/attached_assets/image_1758019591874.png", // Bel tipi turnike cihazları (YENİ)
   t4: "/attached_assets/image_1758019135962.png", // İnşaat alanı çalışanları
 } as const;
 
