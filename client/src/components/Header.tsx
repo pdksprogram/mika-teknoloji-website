@@ -141,25 +141,21 @@ export default function Header() {
 
   // Ürünler menüsü
   const productsMenuData = {
-    "Cihazlar": [
-      { name: "Yüz Tanıma Cihazları (MT35, MT1100)", href: "/yuz-tanima" },
-      { name: "Parmak İzi Okuyucular (MTFP15, MTFDP50)", href: "/parmak-izi" },
-      { name: "Kartlı Geçiş (RFID/Proximity)", href: "/rfid" },
-      { name: "Access Kontrol Panelleri (MT4051)", href: "/access-control" }
-    ],
-    "Sistemler": [
-      { name: "Turnike Sistemleri", href: "/turnike-sistemleri" },
-      { name: "Bariyer Sistemleri", href: "/bariyer" },
-      { name: "Otopark Otomasyon", href: "/otopark-otomasyon" },
-      { name: "QR Mobil Geçiş", href: "/qr-access" },
-      { name: "QR Bekçi Devriye", href: "/qr-bekci" }
-    ],
-    "Yazılımlar": [
-      { name: "Web PDKS", href: "https://pdkspersoneltakip.com/" },
-      { name: "Access Kontrol Programı", href: "/access-program" },
-      { name: "Yemekhane Takip Sistemi", href: "/yemekhane" },
-      { name: "Turnike Takip Programı", href: "/turnike-program" },
-      { name: "Üye Takip Programı", href: "/uye-takip" }
+    "Ürünler": [
+      { name: "Parmak İzi Tanıma Sistemleri", href: "/urunler/parmak-izi-tanima" },
+      { name: "Yüz Tanıma Sistemleri", href: "/urunler/yuz-tanima" },
+      { name: "Geçiş Kontrol Sistemleri", href: "/urunler/gecis-kontrol" },
+      { name: "Turnike Sistemleri", href: "/urunler/turnike" },
+      { name: "Personel Takip Sistemleri", href: "/urunler/personel-takip" },
+      { name: "QR Kodlu PDKS Sistemi", href: "/urunler/qr-pdks" },
+      { name: "Bariyer Sistemleri", href: "/urunler/bariyer" },
+      { name: "Plaka Tanıma Sistemleri", href: "/urunler/plaka-tanima" },
+      { name: "OGS & HGS Geçiş Sistemleri", href: "/urunler/ogs-hgs" },
+      { name: "AR-GE Takip Sistemi", href: "/urunler/arge-takip" },
+      { name: "Bekçi & Devriye Tur Sistemleri", href: "/urunler/bekci-devriye" },
+      { name: "Yemekhane Takip Sistemi", href: "/urunler/yemekhane" },
+      { name: "Üye Takip Sistemi", href: "/urunler/uye-takip" },
+      { name: "Kablosuz Alarm Sistemleri", href: "/urunler/kablosuz-alarm" }
     ]
   };
 
@@ -261,8 +257,8 @@ export default function Header() {
                   
                   {/* Mega Menu Dropdown */}
                   {item.hasDropdown && isDropdownOpen && activeMenuType && item.menuType === activeMenuType && (
-                    <div className={`absolute top-full left-0 w-screen ${activeMenuType === 'products' ? 'max-w-4xl' : 'max-w-5xl'} bg-white shadow-2xl border-t-4 border-primary z-50 transform -translate-x-1/4`}>
-                      <div className={`grid ${activeMenuType === 'products' ? 'grid-cols-3' : 'grid-cols-4'} gap-6 p-8`}>
+                    <div className={`absolute top-full left-0 w-screen ${activeMenuType === 'products' ? 'max-w-2xl' : 'max-w-5xl'} bg-white shadow-2xl border-t-4 border-primary z-50 transform -translate-x-1/4`}>
+                      <div className={`grid ${activeMenuType === 'products' ? 'grid-cols-2' : 'grid-cols-4'} gap-6 p-8`}>
                         {Object.entries(activeMenuType === 'products' ? productsMenuData : solutionsMenuData).map(([category, items]) => (
                           <div key={category} className="space-y-4">
                             <h3 className="font-bold text-gray-900 text-lg border-b-2 border-primary pb-2">
