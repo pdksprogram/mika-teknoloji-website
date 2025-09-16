@@ -56,7 +56,7 @@ export default function ProductTurnikePage() {
       id: 5,
       name: "Hijyen Turnikeleri",
       category: "hygiene",
-      image: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=400&h=300&fit=crop",
+      image: "/attached_assets/image_1758022307099.png",
       description: "Dezenfektan dispenseri entegreli hijyen odaklı turnike sistemleri",
       features: ["Otomatik Dezenfektan", "Temassız Geçiş", "Ateş Ölçer Entegrasyonu", "UV Sterilizasyon"],
       price: "Fiyat İçin İletişime Geçin",
