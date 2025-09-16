@@ -99,6 +99,7 @@ export default function Header() {
     { href: "/hakkimizda", label: t.nav.about },
     { href: "/cozumler", label: t.nav.solutions, hasDropdown: true, menuType: 'solutions' },
     { href: "/referanslar", label: t.nav.references },
+    { href: "/blog", label: t.nav.blog },
     { href: "/iletisim", label: t.nav.contact }
   ];
 

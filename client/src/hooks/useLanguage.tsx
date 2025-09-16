@@ -21,6 +21,7 @@ const translations = {
       about: "Hakkımızda", 
       solutions: "Çözümler",
       references: "Referanslar",
+      blog: "Blog",
       contact: "İletişim"
     },
     home: {
@@ -60,6 +61,7 @@ const translations = {
       about: "About Us",
       solutions: "Solutions", 
       references: "References",
+      blog: "Blog",
       contact: "Contact"
     },
     home: {

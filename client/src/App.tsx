@@ -14,6 +14,7 @@ import Solutions from "@/pages/Solutions";
 import Products from "@/pages/Products";
 import Contact from "@/pages/Contact";
 import References from "@/pages/References";
+import Blog from "@/pages/Blog";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import PDKSPage from "@/pages/PDKSPage";
 import AccessControlPage from "@/pages/AccessControlPage";
@@ -58,6 +59,7 @@ function Router() {
       <Route path="/urunler/bekci-tur-kontrol" component={QRPatrolPage} />
       
       <Route path="/referanslar" component={References} />
+      <Route path="/blog" component={Blog} />
       <Route path="/iletisim" component={Contact} />
       <Route path="/mobil-gizlilik-sozlesmesi" component={PrivacyPolicy} />
       {/* Fallback to 404 */}
