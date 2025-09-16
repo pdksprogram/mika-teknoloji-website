@@ -6,7 +6,7 @@ export const IMAGES = {
   t4: "/attached_assets/image_1758020186900.png", // Engelli turnikeleri
   t5: "/attached_assets/image_1758022229658.png", // Hızlı geçiş turnikeleri
   t6: "/attached_assets/image_1758022307099.png", // Hijyen turnikeleri
-  t7: "/attached_assets/image_1758022356421.png", // Jetonlu turnikeler (YENİ)
+  t7: "/attached_assets/image_1758022450183.png", // Jetonlu turnikeler (YENİ)
 } as const;
 
 export type ImageKey = keyof typeof IMAGES;

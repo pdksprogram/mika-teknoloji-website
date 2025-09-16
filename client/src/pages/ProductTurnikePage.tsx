@@ -66,7 +66,7 @@ export default function ProductTurnikePage() {
       id: 6,
       name: "Jetonlu Turnikeler",
       category: "payment",
-      image: "/attached_assets/image_1758022356421.png",
+      image: "/attached_assets/image_1758022450183.png",
       description: "Ödeme sistemli jeton/kart okuyuculu turnike çözümleri",
       features: ["Jeton/Kart Okuyucu", "Ödeme Entegrasyonu", "Para Üstü Sistemi", "Geri Sayım Display"],
       price: "Fiyat İçin İletişime Geçin",
