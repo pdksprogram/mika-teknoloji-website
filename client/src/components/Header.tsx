@@ -95,54 +95,54 @@ export default function Header() {
   };
 
   const navigationItems = [
-    { href: "/", label: `M1 ${t.nav.products}`, hasDropdown: true, menuType: 'products' },
-    { href: "/hakkimizda", label: `M2 ${t.nav.about}` },
-    { href: "/cozumler", label: `M3 ${t.nav.solutions}`, hasDropdown: true, menuType: 'solutions' },
-    { href: "/referanslar", label: `M4 ${t.nav.references}` },
-    { href: "/iletisim", label: `M5 ${t.nav.contact}` }
+    { href: "/", label: t.nav.products, hasDropdown: true, menuType: 'products', menuCode: 'M1' },
+    { href: "/hakkimizda", label: t.nav.about, menuCode: 'M2' },
+    { href: "/cozumler", label: t.nav.solutions, hasDropdown: true, menuType: 'solutions', menuCode: 'M3' },
+    { href: "/referanslar", label: t.nav.references, menuCode: 'M4' },
+    { href: "/iletisim", label: t.nav.contact, menuCode: 'M5' }
   ];
 
   // Çözümler menüsü
   const solutionsMenuData = {
     "Çözümler": [
-      { name: "M6 PDKS (Personel Devam Kontrol)", href: "/cozumler/pdks" },
-      { name: "M7 Access Geçiş Kontrol Sistemleri", href: "/access-control" },
-      { name: "M8 Bekçi Tur Kontrol Sistemi", href: "/bekci-tur" },
-      { name: "M9 QR Bekçi Sistemi", href: "/qr-bekci" },
-      { name: "M10 Turnike Sistemleri", href: "/turnike" },
-      { name: "M11 Otel Kapı Kilit Sistemleri", href: "/otel-kilit" },
-      { name: "M12 Anahtar/Dolap Takip Sistemi", href: "/anahtar-takip" }
+      { name: "PDKS (Personel Devam Kontrol)", href: "/cozumler/pdks", menuCode: "M6" },
+      { name: "Access Geçiş Kontrol Sistemleri", href: "/access-control", menuCode: "M7" },
+      { name: "Bekçi Tur Kontrol Sistemi", href: "/bekci-tur", menuCode: "M8" },
+      { name: "QR Bekçi Sistemi", href: "/qr-bekci", menuCode: "M9" },
+      { name: "Turnike Sistemleri", href: "/turnike", menuCode: "M10" },
+      { name: "Otel Kapı Kilit Sistemleri", href: "/otel-kilit", menuCode: "M11" },
+      { name: "Anahtar/Dolap Takip Sistemi", href: "/anahtar-takip", menuCode: "M12" }
     ],
     "Donanımlar": [
-      { name: "M13 Biyometrik Yüz Tanıma Sistemi", href: "/yuz-tanima" },
-      { name: "M14 Parmak İzi Okuyucu", href: "/parmak-izi" },
-      { name: "M15 Kartlı Geçiş Sistemi (RFID)", href: "/rfid" },
-      { name: "M16 Şifreli Passcode Sistemleri", href: "/passcode" },
-      { name: "M17 Bekçi Tur Kontrol Sistemi", href: "/bekci-kontrol" },
-      { name: "M18 Turnike Sistemleri", href: "/turnike-donanim" },
-      { name: "M19 Bariyer Sistemleri", href: "/bariyer" }
+      { name: "Biyometrik Yüz Tanıma Sistemi", href: "/yuz-tanima", menuCode: "M13" },
+      { name: "Parmak İzi Okuyucu", href: "/parmak-izi", menuCode: "M14" },
+      { name: "Kartlı Geçiş Sistemi (RFID)", href: "/rfid", menuCode: "M15" },
+      { name: "Şifreli Passcode Sistemleri", href: "/passcode", menuCode: "M16" },
+      { name: "Bekçi Tur Kontrol Sistemi", href: "/bekci-kontrol", menuCode: "M17" },
+      { name: "Turnike Sistemleri", href: "/turnike-donanim", menuCode: "M18" },
+      { name: "Bariyer Sistemleri", href: "/bariyer", menuCode: "M19" }
     ],
     "Yazılımlar": [
-      { name: "M20 Web PDKS", href: "https://pdkspersoneltakip.com/" },
-      { name: "M21 Access Kontrol Programı", href: "/access-program" },
-      { name: "M22 Startıp Puanlama Yazılımı", href: "/startup-puanlama" },
-      { name: "M23 Ogar Puanlama Yazılımı", href: "/ogar-puanlama" },
-      { name: "M24 Yemekahane Takip Sistemi", href: "/yemekhane" },
-      { name: "M25 Turnike Takip Programı", href: "/turnike-program" },
-      { name: "M26 Üye Takip Programı", href: "/uye-takip" }
+      { name: "Web PDKS", href: "https://pdkspersoneltakip.com/", menuCode: "M20" },
+      { name: "Access Kontrol Programı", href: "/access-program", menuCode: "M21" },
+      { name: "Startıp Puanlama Yazılımı", href: "/startup-puanlama", menuCode: "M22" },
+      { name: "Ogar Puanlama Yazılımı", href: "/ogar-puanlama", menuCode: "M23" },
+      { name: "Yemekahane Takip Sistemi", href: "/yemekhane", menuCode: "M24" },
+      { name: "Turnike Takip Programı", href: "/turnike-program", menuCode: "M25" },
+      { name: "Üye Takip Programı", href: "/uye-takip", menuCode: "M26" }
     ],
     "Tüm Programlar": [
-      { name: "M27 HRCapakus Tanıma Sistemi", href: "/hrcapakus" },
-      { name: "M28 X-Ray Cihazları", href: "/xray" },
-      { name: "M29 Öğretmen Takip Sistemi", href: "/ogretmen-takip" },
-      { name: "M30 Turnike Takip Sistemi", href: "/turnike-takip" }
+      { name: "HRCapakus Tanıma Sistemi", href: "/hrcapakus", menuCode: "M27" },
+      { name: "X-Ray Cihazları", href: "/xray", menuCode: "M28" },
+      { name: "Öğretmen Takip Sistemi", href: "/ogretmen-takip", menuCode: "M29" },
+      { name: "Turnike Takip Sistemi", href: "/turnike-takip", menuCode: "M30" }
     ]
   };
 
   // Ürünler menüsü
   const productsMenuData = {
     "Ürünler": [
-      { name: "M31 Turnike Sistemleri", href: "/turnike-sistemleri" }
+      { name: "Turnike Sistemleri", href: "/turnike-sistemleri", menuCode: "M31" }
     ]
   };
 
@@ -233,8 +233,13 @@ export default function Header() {
                       isActiveLink(item.href) ? "text-primary" : "text-slate-700"
                     }`}
                     data-testid={`nav-link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                    title={`${item.menuCode} - ${item.label}`}
                   >
                     {item.label}
+                    {/* Menu Code Badge */}
+                    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-1 py-0.5 rounded-full min-w-[20px] text-center leading-tight">
+                      {item.menuCode}
+                    </span>
                     <span 
                       className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-200 ${
                         isActiveLink(item.href) ? "w-full" : "w-0 group-hover:w-full"
@@ -253,13 +258,18 @@ export default function Header() {
                             </h3>
                             <ul className="space-y-2">
                               {items.map((product) => (
-                                <li key={product.href}>
+                                <li key={product.href} className="relative">
                                   <Link
                                     href={product.href}
-                                    className="text-gray-600 hover:text-primary transition-colors text-sm block py-1"
+                                    className="text-gray-600 hover:text-primary transition-colors text-sm block py-1 pr-8"
                                     data-testid={`mega-menu-${product.name.toLowerCase().replace(/\s+/g, '-')}`}
+                                    title={`${product.menuCode} - ${product.name}`}
                                   >
                                     {product.name}
+                                    {/* Menu Code Badge for dropdown items */}
+                                    <span className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-1 py-0.5 rounded-full min-w-[24px] text-center leading-tight">
+                                      {product.menuCode}
+                                    </span>
                                   </Link>
                                 </li>
                               ))}
