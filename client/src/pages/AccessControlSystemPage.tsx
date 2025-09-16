@@ -303,13 +303,19 @@ export default function AccessControlSystemPage() {
               transition={{ duration: 0.8 }}
             >
               <div className="w-full max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
-                <img 
-                  src="/advanced-dashboard.png" 
-                  alt="Gelişmiş Yönetim Dashboard Sistemi"
-                  className="w-full h-auto object-contain"
-                  width="800"
-                  height="600"
-                />
+                <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-white">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Mika Teknoloji PDKS Dashboard</h3>
+                  <p className="text-gray-600 text-sm">Personel takip ve güvenlik kontrol sistemleri canlı raporlama paneli</p>
+                </div>
+                <div className="p-6 bg-gradient-to-br from-blue-50 to-white">
+                  <img 
+                    src="/pdks-dashboard-interface.png" 
+                    alt="Mika Teknoloji PDKS Dashboard - Personel Takip ve Güvenlik Kontrol Sistemi"
+                    className="w-full h-auto object-contain rounded-xl shadow-lg"
+                    width="800"
+                    height="600"
+                  />
+                </div>
               </div>
             </motion.div>
 

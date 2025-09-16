@@ -250,28 +250,6 @@ export default function QRPatrolPage() {
             </p>
           </motion.div>
 
-          {/* Dashboard Demo Image */}
-          <motion.div 
-            className="max-w-5xl mx-auto mb-16"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="bg-white rounded-3xl p-8 shadow-2xl">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Mika Teknoloji PDKS Dashboard</h3>
-                <p className="text-gray-600">Personel takip ve güvenlik kontrol sistemleri canlı raporlama paneli</p>
-              </div>
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6">
-                <img 
-                  src="/pdks-dashboard-interface.png"
-                  alt="Mika Teknoloji PDKS Dashboard - Personel Takip ve Güvenlik Kontrol Sistemi"
-                  className="w-full h-auto rounded-xl shadow-lg"
-                />
-              </div>
-            </div>
-          </motion.div>
 
           <div className="grid lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
             {[
