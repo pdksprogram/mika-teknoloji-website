@@ -36,7 +36,7 @@ export default function ProductTurnikePage() {
       id: 3,
       name: "Engelli Turnikeleri",
       category: "accessibility",
-      image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=400&h=300&fit=crop",
+      image: "/attached_assets/image_1758020186900.png",
       description: "Engelli erişimi için geniş geçişli özel turnike sistemleri",
       features: ["Geniş Geçiş", "Tekerlekli Sandalye Uyumlu", "Düşük Profil", "Sesli Uyarı"],
       price: "Fiyat İçin İletişime Geçin",
