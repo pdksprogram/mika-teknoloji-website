@@ -16,7 +16,7 @@ export default function ProductTurnikePage() {
       id: 1,
       name: "Bel Tipi Turnikeler",
       category: "security",
-      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=300&fit=crop",
+      image: "/attached_assets/image_1758019158473.png",
       description: "Üç kollu güvenlik turnikeleri, yoğun geçiş alanları için ideal",
       features: ["3 Kollu Tasarım", "Paslanmaz Çelik", "Kartlı Giriş", "Manuel Override"],
       price: "Fiyat İçin İletişime Geçin",
