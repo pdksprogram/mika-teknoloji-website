@@ -46,7 +46,7 @@ export default function ProductTurnikePage() {
       id: 4,
       name: "Hızlı Geçiş Turnikeleri",
       category: "speed",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop",
+      image: "/attached_assets/image_1758022229658.png",
       description: "Yoğun trafik için hızlı ve akıcı geçiş sağlayan turnike sistemleri",
       features: ["Hızlı Geçiş", "RFID/NFC", "Sensör Teknolojisi", "Yüksek Kapasite"],
       price: "Fiyat İçin İletişime Geçin",
