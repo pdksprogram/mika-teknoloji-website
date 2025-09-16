@@ -3,73 +3,110 @@ import { Calendar, User, ArrowRight, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "wouter";
 
 export default function Blog() {
-  // Sample blog posts data
+  // Professional SEO-optimized blog posts based on Meyer and Perkotek research
   const blogPosts = [
     {
       id: 1,
-      title: "PDKS Sistemlerinin İşletmelerdeki Önemi",
-      excerpt: "Modern işletmeler için personel devam kontrol sistemlerinin faydaları ve uygulanması hakkında detaylı bilgiler.",
-      date: "15 Aralık 2024",
-      author: "Mika Teknoloji",
+      title: "PDKS Sistemleri Nedir? 2025 Rehberi - Personel Devam Kontrol",
+      excerpt: "Personel Devam Kontrol Sistemi (PDKS) ile çalışan takibinde devrim yaratın. 50.000+ kurumun tercih ettiği modern PDKS çözümlerinin tüm detayları, fiyatları ve kurulum rehberi.",
+      date: "15 Ocak 2025",
+      author: "PDKS Uzmanı - Mika Teknoloji",
       category: "PDKS",
-      readTime: "5 dk okuma",
-      image: "/api/placeholder/600/300"
+      readTime: "8 dk okuma",
+      slug: "pdks-sistemleri-nedir-2025-rehberi",
+      image: "/attached_assets/image_1758019216490.png",
+      keywords: "PDKS sistemleri, personel devam kontrol sistemi, PDKS nedir, personel takip sistemi"
     },
     {
       id: 2,
-      title: "Yüz Tanıma Teknolojisinin Geleceği",
-      excerpt: "Biyometrik teknolojiler nasıl gelişiyor ve işletmeler için ne anlama geliyor? Yüz tanıma sistemlerinin avantajları.",
-      date: "10 Aralık 2024",
-      author: "Teknoloji Uzmanı",
-      category: "Biyometri",
-      readTime: "7 dk okuma",
-      image: "/api/placeholder/600/300"
+      title: "Bel Tipi Turnike Sistemleri: Tripod Turnike Özellikleri ve Fiyatları",
+      excerpt: "Bel tipi turnike sistemleri ile güvenli geçiş kontrolü sağlayın. Paslanmaz çelik tripod turnike modelleri, teknik özellikler, kurulum detayları ve 2025 fiyat listesi.",
+      date: "12 Ocak 2025",
+      author: "Turnike Uzmanı",
+      category: "Turnike Sistemleri",
+      readTime: "6 dk okuma",
+      slug: "bel-tipi-turnike-sistemleri-ozellikleri-fiyatlari",
+      image: "/attached_assets/image_1758019726366.png",
+      keywords: "bel tipi turnike, tripod turnike, turnike sistemleri, paslanmaz çelik turnike"
     },
     {
       id: 3,
-      title: "Turnike Sistemleri: Güvenlik ve Verimlilik",
-      excerpt: "Farklı turnike türleri, kullanım alanları ve işletmeniz için doğru turnike seçimi nasıl yapılır?",
-      date: "5 Aralık 2024",
-      author: "Güvenlik Uzmanı",
+      title: "Boy Tipi Turnike Sistemleri: Full Height Güvenlik Çözümleri",
+      excerpt: "Maksimum güvenlik için boy tipi turnike sistemleri. Stadium, ceza evi ve yüksek güvenlik alanları için tam boy turnike modelleri, özellikleri ve uygulama alanları.",
+      date: "10 Ocak 2025",
+      author: "Güvenlik Sistemleri Uzmanı",
       category: "Güvenlik",
-      readTime: "6 dk okuma",
-      image: "/api/placeholder/600/300"
+      readTime: "7 dk okuma",
+      slug: "boy-tipi-turnike-sistemleri-full-height-guvenlik",
+      image: "/attached_assets/image_1758020107295.png",
+      keywords: "boy tipi turnike, full height turnike, güvenlik turnike, stadium turnike"
     },
     {
       id: 4,
-      title: "WebPDKS ile Uzaktan Personel Yönetimi",
-      excerpt: "Web tabanlı PDKS sistemlerinin avantajları ve hibrit çalışma modellerine uyumu.",
-      date: "1 Aralık 2024",
-      author: "İK Uzmanı",
-      category: "WebPDKS",
-      readTime: "4 dk okuma",
-      image: "/api/placeholder/600/300"
+      title: "Parmak İzi Okuyucu PDKS: Biyometrik Personel Takip Sistemi 2025",
+      excerpt: "Parmak izi okuyucu ile güvenli PDKS sistemi kurun. Biyometrik teknoloji ile %100 güvenilir personel devam kontrolü, entegrasyon seçenekleri ve performans analizi.",
+      date: "8 Ocak 2025",
+      author: "Biyometri Uzmanı",
+      category: "Biyometri",
+      readTime: "9 dk okuma",
+      slug: "parmak-izi-okuyucu-pdks-biyometrik-personel-takip",
+      image: "/attached_assets/image_1758019135962.png",
+      keywords: "parmak izi okuyucu, biyometrik PDKS, personel takip sistemi, parmak izi PDKS"
     },
     {
       id: 5,
-      title: "QR Kod Teknolojisi ile Modernleşme",
-      excerpt: "QR kod tabanlı kontrol sistemlerinin işletmelere sağladığı fırsatlar ve uygulamalar.",
-      date: "28 Kasım 2024",
-      author: "Dijital Dönüşüm Uzmanı",
-      category: "Dijital",
-      readTime: "5 dk okuma",
-      image: "/api/placeholder/600/300"
+      title: "Yüz Tanıma Sistemleri: 3D Teknoloji ile Temassız PDKS Çözümleri",
+      excerpt: "Yüz tanıma teknolojisi ile modern personel takibi. COVID-19 sonrası temassız çözümler, 3D canlılık tespiti, profil manipülasyon koruması ve entegrasyon rehberi.",
+      date: "5 Ocak 2025",
+      author: "AI Teknoloji Uzmanı",
+      category: "Yapay Zeka",
+      readTime: "10 dk okuma",
+      slug: "yuz-tanima-sistemleri-3d-teknoloji-temassiz-pdks",
+      image: "/attached_assets/image_1758022229658.png",
+      keywords: "yüz tanıma sistemi, temassız PDKS, 3D yüz tanıma, facial recognition"
     },
     {
       id: 6,
-      title: "Akıllı Bina Teknolojileri ve Access Kontrol",
-      excerpt: "Akıllı binalar için entegre erişim kontrol çözümleri ve gelecek teknolojiler.",
-      date: "25 Kasım 2024",
-      author: "Otomasyon Uzmanı",
-      category: "Access Control",
-      readTime: "8 dk okuma",
-      image: "/api/placeholder/600/300"
+      title: "Turnike Sistemleri Fiyatları 2025: Maliyet Analizi ve ROI Hesaplama",
+      excerpt: "Turnike sistemleri yatırım maliyeti ve geri dönüş hesabı. Bel tipi, boy tipi, hızlı geçiş turnike fiyatları, kurulum maliyetleri ve 5 yıllık ROI analizi.",
+      date: "3 Ocak 2025",
+      author: "Proje Yöneticisi",
+      category: "Maliyet",
+      readTime: "12 dk okuma",
+      slug: "turnike-sistemleri-fiyatlari-2025-maliyet-analizi",
+      image: "/attached_assets/image_1758020186900.png",
+      keywords: "turnike fiyatları, turnike maliyeti, turnike yatırım geri dönüşü, ROI"
+    },
+    {
+      id: 7,
+      title: "WebPDKS Cloud Sistemi: Her Yerden Erişilebilir Personel Yönetimi",
+      excerpt: "Web tabanlı PDKS sistemi ile bulut teknolojisinin avantajları. Mobil uyumlu dashboard, 7/24 erişim, otomatik yedekleme ve hibrit çalışma modeli entegrasyonu.",
+      date: "1 Ocak 2025",
+      author: "Cloud Uzmanı",
+      category: "WebPDKS",
+      readTime: "6 dk okuma",
+      slug: "webpdks-cloud-sistemi-bulut-tabanli-personel-yonetimi",
+      image: "/attached_assets/image_1758022307099.png",
+      keywords: "WebPDKS, cloud PDKS, web tabanlı personel takip, bulut PDKS"
+    },
+    {
+      id: 8,
+      title: "Kartlı Geçiş Sistemleri: RFID ve Proximity Kart Teknolojileri",
+      excerpt: "RFID kartlı geçiş sistemleri ile pratik erişim kontrolü. Proximity kart teknolojisi, TCP/IP bağlantı, personel kartı özellikleri ve güvenlik avantajları.",
+      date: "28 Aralık 2024",
+      author: "RFID Teknoloji Uzmanı",
+      category: "RFID",
+      readTime: "5 dk okuma",
+      slug: "kartli-gecis-sistemleri-rfid-proximity-teknoloji",
+      image: "/attached_assets/image_1758022450183.png",
+      keywords: "kartlı geçiş sistemi, RFID kart, proximity kart, personel kartı"
     }
   ];
 
-  const categories = ["Tümü", "PDKS", "Biyometri", "Güvenlik", "WebPDKS", "Dijital", "Access Control"];
+  const categories = ["Tümü", "PDKS", "Turnike Sistemleri", "Biyometri", "Güvenlik", "WebPDKS", "RFID", "Yapay Zeka", "Maliyet"];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -142,9 +179,11 @@ export default function Blog() {
                   </Badge>
                   <Badge variant="outline">{blogPosts[0].category}</Badge>
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 hover:text-primary transition-colors cursor-pointer">
-                  {blogPosts[0].title}
-                </h2>
+                <Link href="/blog/pdks-sistemleri-nedir-2025-rehberi">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4 hover:text-primary transition-colors cursor-pointer">
+                    {blogPosts[0].title}
+                  </h2>
+                </Link>
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {blogPosts[0].excerpt}
                 </p>
@@ -159,9 +198,11 @@ export default function Blog() {
                       {blogPosts[0].author}
                     </div>
                   </div>
-                  <Button className="bg-primary hover:bg-primary/90">
-                    Devamını Oku
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button asChild className="bg-primary hover:bg-primary/90">
+                    <Link href="/blog/pdks-sistemleri-nedir-2025-rehberi">
+                      Devamını Oku
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
                   </Button>
                 </div>
               </div>

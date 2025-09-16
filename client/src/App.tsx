@@ -15,6 +15,7 @@ import Products from "@/pages/Products";
 import Contact from "@/pages/Contact";
 import References from "@/pages/References";
 import Blog from "@/pages/Blog";
+import BlogArticlePDKS from "@/pages/BlogArticlePDKS";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import PDKSPage from "@/pages/PDKSPage";
 import AccessControlPage from "@/pages/AccessControlPage";
@@ -60,6 +61,7 @@ function Router() {
       
       <Route path="/referanslar" component={References} />
       <Route path="/blog" component={Blog} />
+      <Route path="/blog/pdks-sistemleri-nedir-2025-rehberi" component={BlogArticlePDKS} />
       <Route path="/iletisim" component={Contact} />
       <Route path="/mobil-gizlilik-sozlesmesi" component={PrivacyPolicy} />
       {/* Fallback to 404 */}
