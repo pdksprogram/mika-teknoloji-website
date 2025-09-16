@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
+import { Helmet } from "react-helmet-async";
 
 export default function ProductTurnikePage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -92,6 +93,68 @@ export default function ProductTurnikePage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Turnike Sistemleri | Bel ve Boy Turnikeleri | Mika Teknoloji</title>
+        <meta name="description" content="Profesyonel turnike sistemleri ve güvenlik çözümleri. Bel turnikeleri, boy turnikeleri, hızlı geçiş ve engelli turnikeleri. Paslanmaz çelik, parmak izi, kartlı geçiş entegrasyonu. PDKS uyumlu erişim kontrol sistemleri." />
+        <meta name="keywords" content="turnike sistemleri, bel turnikeleri, boy turnikeleri, güvenlik turnikeleri, geçiş kontrol sistemleri, paslanmaz çelik turnike, parmak izi turnike, kartlı geçiş sistemi, biyometrik turnike, PDKS turnike, erişim kontrol, hızlı geçiş turnikeleri, engelli turnikeleri, hijyen turnikeleri, jetonlu turnikeler" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mikateknoloji.com/urunler/turnike" />
+        <meta property="og:title" content="Turnike Sistemleri | Profesyonel Güvenlik Çözümleri | Mika Teknoloji" />
+        <meta property="og:description" content="Türkiye'nin öncü turnike sistemleri üreticisi. Bel turnikeleri, boy turnikeleri, hızlı geçiş sistemleri. Paslanmaz çelik kalite, parmak izi ve kart entegrasyonu." />
+        <meta property="og:image" content="https://mikateknoloji.com/attached_assets/image_1758019726366.png" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://mikateknoloji.com/urunler/turnike" />
+        <meta property="twitter:title" content="Turnike Sistemleri | Güvenlik ve Erişim Kontrol | Mika Teknoloji" />
+        <meta property="twitter:description" content="Modern turnike sistemleri: Bel, boy, hızlı geçiş turnikeleri. Biyometrik entegrasyon, PDKS uyumlu. Profesyonel güvenlik çözümleri." />
+        <meta property="twitter:image" content="https://mikateknoloji.com/attached_assets/image_1758019726366.png" />
+        
+        {/* Additional SEO */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Mika Teknoloji Kontrol Sistemleri" />
+        <meta name="language" content="Turkish" />
+        <meta name="geo.region" content="TR" />
+        <meta name="geo.country" content="Turkey" />
+        
+        {/* Schema.org Structured Data */}
+        <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Turnike Sistemleri",
+          "description": "Profesyonel turnike sistemleri ve güvenlik çözümleri. Bel turnikeleri, boy turnikeleri, hızlı geçiş sistemleri.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Mika Teknoloji"
+          },
+          "manufacturer": {
+            "@type": "Organization",
+            "name": "Mika Teknoloji Kontrol Sistemleri",
+            "url": "https://mikateknoloji.com"
+          },
+          "category": "Security Systems",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "TRY",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "Fiyat İçin İletişime Geçin"
+            }
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "127"
+          }
+        })}
+        </script>
+        
+        <link rel="canonical" href="https://mikateknoloji.com/urunler/turnike" />
+      </Helmet>
       {/* Header Section */}
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
@@ -106,7 +169,7 @@ export default function ProductTurnikePage() {
               transition={{ delay: 0.2 }}
               className="text-4xl lg:text-5xl font-bold mb-4"
             >
-              Turnike Sistemleri
+              Turnike Sistemleri | Güvenlik ve Erişim Kontrol
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -114,7 +177,7 @@ export default function ProductTurnikePage() {
               transition={{ delay: 0.3 }}
               className="text-xl text-blue-100 max-w-3xl mx-auto"
             >
-              Güvenli geçiş kontrol çözümleri ile alanınızı koruyun. Her ihtiyaca uygun turnike sistemlerimizi keşfedin.
+              Profesyonel turnike sistemleri: Bel turnikeleri, boy turnikeleri, hızlı geçiş sistemleri. Paslanmaz çelik kalite, biyometrik entegrasyon ve PDKS uyumlu güvenlik çözümleri.
             </motion.p>
           </div>
         </div>
