@@ -8,7 +8,6 @@ export default function Products() {
         { name: "PDKS (Personel Devam Kontrol)", href: "/cozumler/pdks" },
         { name: "Access Geçiş Kontrol Sistemleri", href: "/cozumler/access" },
         { name: "Bekçi Tur Kontrol Sistemi", href: "/cozumler/bekci-tur" },
-        { name: "Turnike Sistemleri", href: "/urunler/turnike" },
         { name: "Otel Kapı Kilit Sistemleri", href: "/urunler/otel-kilit" },
         { name: "Anahtar/Dolap Takip Sistemi", href: "/urunler/anahtar" }
       ]
@@ -22,7 +21,7 @@ export default function Products() {
         { name: "Şifreli Geçiş/Takip Sistemi", href: "/urunler/sifreli" },
         { name: "Şifreli Passcode Sistemleri", href: "/urunler/passcode" },
         { name: "Bekçi Tur Kontrol Sistemi", href: "/urunler/bekci-tur-kontrol" },
-        { name: "Turnike Sistemleri", href: "/urunler/turnike-sistemleri" },
+        { name: "Turnike Sistemleri", href: "/turnike-sistemleri" },
         { name: "Bariyer Sistemleri", href: "/urunler/bariyer" },
         { name: "HiSGate/Kasa Daruma Sistemi", href: "/urunler/hisgate" },
         { name: "X-Ray Cihazları", href: "/urunler/xray" }
