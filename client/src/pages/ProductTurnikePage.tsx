@@ -26,7 +26,7 @@ export default function ProductTurnikePage() {
       id: 2,
       name: "Boy Tipi Turnikeler",
       category: "security",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+      image: "/attached_assets/image_1758020107295.png",
       description: "Yüksek güvenlik için boy tipi tam geçiş kontrol sistemleri",
       features: ["Tam Boy Güvenlik", "Biyometrik Entegrasyon", "Anti-Tailgating", "Acil Durum Açılımı"],
       price: "Fiyat İçin İletişime Geçin",
