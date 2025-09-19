@@ -19,7 +19,7 @@ export const BEL_TURNIKE_IMAGES = {
   bt6: "/attached_assets/image_1758287453764.png", // MT-345 (GERÇEK RESİM)
   bt7: "/attached_assets/image_1758287498611.png", // MT-345 ECO (GERÇEK RESİM)
   bt8: "/attached_assets/image_1758287542531.png", // MT-250 S (GERÇEK RESİM)
-  bt9: "/attached_assets/stock_images/electromechanical_tu_23c8e9e6.jpg", // T 450
+  bt9: "/attached_assets/image_1758287608935.png", // MT-450 (GERÇEK RESİM)
   bt10: "/attached_assets/stock_images/electromechanical_tu_d7598874.jpg", // T 281
   bt11: "/attached_assets/stock_images/electromechanical_tu_44f2bb65.jpg", // T 250 Jetonlu
   bt12: "/attached_assets/stock_images/electromechanical_tu_4e3db806.jpg", // T 345 Jetonlu
