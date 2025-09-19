@@ -206,8 +206,10 @@ export default function BelTipeTurnikePage() {
                       <div className="text-primary font-bold">
                         {model.price}
                       </div>
-                      <Button size="sm" className="bg-primary hover:bg-primary/90">
-                        Detay
+                      <Button asChild size="sm" className="bg-primary hover:bg-primary/90">
+                        <Link href={model.id === "t250" ? "/urunler/mt-250-turnike" : "#"}>
+                          Detay
+                        </Link>
                       </Button>
                     </div>
                   </CardContent>
