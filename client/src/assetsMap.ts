@@ -22,7 +22,7 @@ export const BEL_TURNIKE_IMAGES = {
   bt9: "/attached_assets/image_1758287608935.png", // MT-450 (GERÇEK RESİM)
   bt10: "/attached_assets/image_1758287648714.png", // MT-281 (GERÇEK RESİM)
   bt11: "/attached_assets/image_1758287708260.png", // MT-250 Jetonlu (GERÇEK RESİM)
-  bt12: "/attached_assets/stock_images/electromechanical_tu_4e3db806.jpg", // T 345 Jetonlu
+  bt12: "/attached_assets/image_1758287753706.png", // MT-345 Jetonlu (GERÇEK RESİM)
 } as const;
 
 export type ImageKey = keyof typeof IMAGES;
