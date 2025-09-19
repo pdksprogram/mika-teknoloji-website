@@ -5,12 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";
 import { 
   CheckCircle, 
-  Shield, 
-  Zap, 
-  Settings, 
-  Users, 
-  Clock,
-  Star,
   Phone,
   Mail,
   MapPin
@@ -131,38 +125,6 @@ export default function BelTipeTurnikePage() {
     }
   ];
 
-  const belTurnikeAvantajlari = [
-    {
-      icon: Shield,
-      title: "Güvenlik",
-      description: "Yetkisiz geçişlerin engellenmesi"
-    },
-    {
-      icon: Users,
-      title: "Kontrol",
-      description: "Personel ve ziyaretçi takibi"
-    },
-    {
-      icon: Clock,
-      title: "Zaman Tasarrufu",
-      description: "Hızlı ve düzenli geçiş"
-    },
-    {
-      icon: Settings,
-      title: "Entegrasyon",
-      description: "PDKS ve kart sistemleri ile uyum"
-    },
-    {
-      icon: Zap,
-      title: "Verimlilik",
-      description: "Otomatik kontrol ve raporlama"
-    },
-    {
-      icon: Star,
-      title: "Kalite",
-      description: "Paslanmaz çelik ve dayanıklılık"
-    }
-  ];
 
   const referansResimler = [
     "/attached_assets/image_1758019216490.png",
@@ -225,45 +187,9 @@ export default function BelTipeTurnikePage() {
         </div>
       </motion.div>
 
-      {/* Avantajlar */}
-      <motion.div 
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.6 }}
-        className="py-16 bg-white"
-      >
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Bel Tipi Turnike Avantajları
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Modern bel tipi turnike sistemleri ile işletmenizde güvenlik ve kontrolü bir arada yaşayın.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {belTurnikeAvantajlari.map((avantaj, index) => (
-              <motion.div
-                key={index}
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.8 + index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <avantaj.icon className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-2">{avantaj.title}</h3>
-                <p className="text-gray-600 text-sm">{avantaj.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
 
       {/* Ürün Katalogu */}
-      <div className="py-16 bg-gray-50">
+      <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -329,7 +255,7 @@ export default function BelTipeTurnikePage() {
       </div>
 
       {/* Referanslar */}
-      <div className="py-16 bg-white">
+      <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
