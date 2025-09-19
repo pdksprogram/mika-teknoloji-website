@@ -28,6 +28,7 @@ import ParkingAutomationPage from "@/pages/ParkingAutomationPage";
 import AccessControlSystemPage from "@/pages/AccessControlSystemPage";
 import QRPatrolPage from "@/pages/QRPatrolPage";
 import ProductTurnikePage from "@/pages/ProductTurnikePage";
+import BelTipeTurnikePage from "@/pages/BelTipeTurnikePage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -57,6 +58,7 @@ function Router() {
       <Route path="/qr-bekci" component={QRPatrolPage} />
       <Route path="/cozumler/bekci-kontrol" component={QRPatrolPage} />
       <Route path="/urunler/turnike" component={ProductTurnikePage} />
+      <Route path="/urunler/bel-tipi-turnike" component={BelTipeTurnikePage} />
       <Route path="/urunler/bekci-tur-kontrol" component={QRPatrolPage} />
       
       <Route path="/referanslar" component={References} />
