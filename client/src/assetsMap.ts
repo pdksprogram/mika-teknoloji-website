@@ -13,7 +13,7 @@ export const IMAGES = {
 export const BEL_TURNIKE_IMAGES = {
   bt1: "/attached_assets/image_1758287172261.png", // MT-250 Elektromekanik (GÜNCELLENMİŞ RESİM)
   bt2: "/attached_assets/image_1758287245371.png", // MT-250 ECO (GERÇEK RESİM)
-  bt3: "/attached_assets/stock_images/tripod_waist_height__e5096458.jpg", // T 250 A2
+  bt3: "/attached_assets/image_1758287306173.png", // MT-250 A2 (GERÇEK RESİM)
   bt4: "/attached_assets/stock_images/tripod_waist_height__7c77a925.jpg", // T 250 A2 ECO
   bt5: "/attached_assets/stock_images/waist_high_turnstile_b8fba04b.jpg", // T 250 GT
   bt6: "/attached_assets/stock_images/waist_high_turnstile_255e27a3.jpg", // T 345
