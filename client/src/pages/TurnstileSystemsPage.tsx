@@ -4,13 +4,13 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
 
-// Turnike kategori görselleri - Parmak izi gibi direkt yollar
-const belTipiTurnike = "/images/products/stock_images/waist_high_turnstile_b37a4efd.jpg";
-const boyTipiTurnike = "/images/products/stock_images/tripod_waist_height__c9a11204.jpg";
-const engelliTurnike = "/images/products/stock_images/waist_high_turnstile_177b0800.jpg";
-const hizliGecisTurnike = "/images/products/stock_images/waist_high_turnstile_255e27a3.jpg";
-const hijyenTurnike = "/images/products/stock_images/waist_high_turnstile_b8fba04b.jpg";
-const jetonluTurnike = "/images/products/stock_images/electromechanical_tu_23c8e9e6.jpg";
+// Turnike kategori görselleri - Public klasörüne kopyalanmış gerçek resimler
+const belTipiTurnike = "/bel-tipi-turnike.png";
+const boyTipiTurnike = "/boy-tipi-turnike.png";
+const engelliTurnike = "/engelli-turnike.png";
+const hizliGecisTurnike = "/hizli-gecis-turnike.png";
+const hijyenTurnike = "/hijyen-turnike.png";
+const jetonluTurnike = "/jetonlu-turnike.png";
 
 // Referans görselleri (placeholder)
 const referans1 = "/Modern_turnstile_security_system_b933269f.png";
