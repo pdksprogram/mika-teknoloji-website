@@ -17,7 +17,7 @@ export default function ProductTurnikePage() {
       id: 1,
       name: "Bel Tipi Turnikeler",
       category: "security",
-      image: "/attached_assets/image_1758019726366.png",
+      image: "/bel-tipi-device.png",
       description: "Üç kollu güvenlik turnikeleri, yoğun geçiş alanları için ideal",
       features: ["3 Kollu Tasarım", "Paslanmaz Çelik", "Kartlı Giriş", "Manuel Override"],
       price: "Fiyat İçin İletişime Geçin",
@@ -103,14 +103,14 @@ export default function ProductTurnikePage() {
         <meta property="og:url" content="https://mikateknoloji.com/urunler/turnike" />
         <meta property="og:title" content="Turnike Sistemleri | Profesyonel Güvenlik Çözümleri | Mika Teknoloji" />
         <meta property="og:description" content="Türkiye'nin öncü turnike sistemleri üreticisi. Bel turnikeleri, boy turnikeleri, hızlı geçiş sistemleri. Paslanmaz çelik kalite, parmak izi ve kart entegrasyonu." />
-        <meta property="og:image" content="https://mikateknoloji.com/attached_assets/image_1758019726366.png" />
+        <meta property="og:image" content="https://mikateknoloji.com/bel-tipi-device.png" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://mikateknoloji.com/urunler/turnike" />
         <meta property="twitter:title" content="Turnike Sistemleri | Güvenlik ve Erişim Kontrol | Mika Teknoloji" />
         <meta property="twitter:description" content="Modern turnike sistemleri: Bel, boy, hızlı geçiş turnikeleri. Biyometrik entegrasyon, PDKS uyumlu. Profesyonel güvenlik çözümleri." />
-        <meta property="twitter:image" content="https://mikateknoloji.com/attached_assets/image_1758019726366.png" />
+        <meta property="twitter:image" content="https://mikateknoloji.com/bel-tipi-device.png" />
         
         {/* Additional SEO */}
         <meta name="robots" content="index, follow" />
