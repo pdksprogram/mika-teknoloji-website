@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ChevronLeft, ChevronRight, CheckCircle, Smartphone, Shield, Eye, Scan } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, Smartphone, Shield, Eye, Scan } from 'lucide-react';
 import { Link } from 'wouter';
 
 // Carousel images from public folder

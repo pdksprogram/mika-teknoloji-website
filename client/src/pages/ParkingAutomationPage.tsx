@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Car, ArrowRight, Camera } from "lucide-react";
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
-import SmartImg from "@/components/SmartImg";
 
 const parkingFeatures = [
   {
