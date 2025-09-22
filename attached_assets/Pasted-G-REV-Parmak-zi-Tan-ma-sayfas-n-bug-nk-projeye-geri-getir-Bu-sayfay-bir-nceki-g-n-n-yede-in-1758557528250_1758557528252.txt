@@ -1,0 +1,73 @@
+GÖREV
+
+“Parmak İzi Tanıma” sayfasını bugünkü projeye geri getir. Bu sayfayı bir önceki günün yedeğinden (History/Checkpoint) al. Sadece bu sayfa ve doğrudan bağlı varlıklar (sayfa dosyası, o sayfanın CSS’i ve o sayfanın görselleri) kopyalansın. Başka hiçbir dosyayı değiştirme.
+
+KAPSAM
+
+Aranacak adlar: parmak-izi, parmakizi, fingerprint, biyometrik, biometric, parmak izi tanıma.
+
+Olası konumlar:
+
+Statik: pages/cozumler/parmak-izi.html veya urunler/.../parmak-izi.html
+
+Next.js/React: pages/**/parmak-izi.*, app/**/parmak-izi/**/page.*, components/Fingerprint*.*
+
+Stil: styles/parmak-izi.css, parmak-izi.module.css
+
+Görsel: public/img/**/parmak-izi-*.*, public/**/fingerprint*.*
+
+YÖNTEM
+
+History/Checkpoints panelinde bugünden bir önceki güne ait checkpoint’i aç.
+
+Bu checkpoint’te parmak izi sayfasını ve sadece onun bağlı dosyalarını bul.
+
+Şu anki çalışma kopyasına yalnızca bu dosyaları geri getir:
+
+Sayfa dosyası
+
+Bu sayfanın sayfaya özel CSS’i (varsa)
+
+Bu sayfanın kullandığı görseller
+
+Global dosyalara dokunma: index.*, layout.*, globals.css, ortak header/footer, routing ayarları vb. değişmesin.
+
+Route/menüde mevcut link zaten varsa bırak. Yoksa yalnızca ilgili ürün/çözüm listesindeki linke minimum ekleme yap (başka sayfalara dokunmadan).
+
+Yolları doğrula: Görseller /public/... altından yüklensin; Türkçe karakter/boşluk olmasın.
+
+Test: Sayfa lokal önizlemede 200 dönmeli, konsolda 0 hata; Lighthouse mobil 80+.
+
+KABUL KRİTERLERİ
+
+Değişen dosyalar listesi sadece:
+
+pages/.../parmak-izi.* (veya app/.../page.*)
+
+styles/parmak-izi.* (varsa)
+
+public/.../parmak-izi-*.{jpg,png,webp,svg} (varsa)
+
+Global dosyalarda diff yok.
+
+Sayfa başlığı: “Parmak İzi Tanıma”, meta/alt metinler dolu.
+
+Build & Preview başarılı.
+
+ÇIKTI FORMATIN
+
+Bulunan checkpoint bilgisi (tarih/saat)
+
+Geri getirilen dosyalar (tam yollar)
+
+Yapılan değişiklik özeti
+
+Diff özetleri (yalnızca ilgili dosyalar)
+
+“Kalan riskler ve öneriler” listesi
+
+İZİN İSTEME KOŞULLARI
+
+İlgili sayfa bir önceki gün checkpoint’inde yoksa, iki gün öncesine bakmak için izin iste.
+
+Geri getirme sırasında global dosyada değişiklik zorunlu ise, yapmadan önce onay iste.
