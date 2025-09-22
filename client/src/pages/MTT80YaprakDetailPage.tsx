@@ -9,97 +9,97 @@ import {
   Mail,
   MapPin,
   ArrowLeft,
-  Zap,
   Shield,
   Settings,
   Users,
-  Accessibility
+  Accessibility,
+  Zap
 } from "lucide-react";
 import { ENGELLI_TURNIKE_IMAGES } from "@/assetsMap";
 import { Link } from "wouter";
 
-export default function MTSC324BVIPDetailPage() {
+export default function MTT80YaprakDetailPage() {
   const productDetails = {
-    model: "MT SC324B",
-    title: "VIP Turnike Sistemi",
-    subtitle: "Engelli Erişim ve VIP Geçiş için Premium Çözüm",
+    model: "MT T80",
+    title: "Yaprak Turnike Sistemi",
+    subtitle: "Basit ve Etkili Tek Yön Kontrol Çözümü",
     price: "Fiyat İçin Ara",
-    mainImage: ENGELLI_TURNIKE_IMAGES.et1,
-    category: "Engelli VIP Turnike",
-    description: "Mika Teknoloji MT SC324B VIP Turnike Sistemi, engelli bireyler, VIP geçişler ve özel malzeme geçişleri için özel olarak tasarlanmış premium turnike sistemidir. %100 paslanmaz çelik gövde ile hem iç hem dış mekanlarda güvenle kullanılabilir.",
+    mainImage: ENGELLI_TURNIKE_IMAGES.et6,
+    category: "Yaprak Turnike",
+    description: "Mika Teknoloji MT T80 Yaprak Turnike, basit ve temel çözüm için tek yön kontrol sağlayan ekonomik turnike sistemidir. Market girişleri ve herhangi bir iç mekan giriş-çıkış kontrolünde rahatlıkla kullanılabilir.",
     
     features: [
-      "VIP ve Engelli Geçiş İçin Özel Tasarım",
-      "%100 Paslanmaz Çelik Gövde Yapı",
-      "Motorlu Otomatik Açılma-Kapanma",
-      "Pleksiglass Üzerinde DUR/GEÇ/Engelli İşaretleri", 
-      "Ayarlanabilir Otomatik Kapanma Süresi",
-      "Elektrik Kesintisinde Manuel Açılma",
-      "İç ve Dış Mekan Kullanımı",
-      "Yönlendirme İndikatörleri (Standart)"
+      "Basit ve Temel Tek Yön Kontrol",
+      "Elle Açılıp Kendiliğinden Geri Kapanma",
+      "Krom-Nikel Kaplama Gövde",
+      "Şık ve Kompakt Tasarım",
+      "Pleksi Kapı Levhası Üzerinde İşaretler",
+      "Düşük Bakım Gereksinimi",
+      "Hızlı ve Kolay Montaj",
+      "Engelli İşareti ve Dur İşareti Seçenekleri"
     ],
     
     technicalSpecs: [
-      { label: "Gövde Malzemesi", value: "1.5 mm 304 Paslanmaz Çelik" },
-      { label: "Kol Malzemesi", value: "38x2 mm Alüminyum Profil + Pleksi" },
-      { label: "Ağırlık", value: "≈35 kg" },
-      { label: "Çalışma Sıcaklığı", value: "-20°C / +60°C" },
-      { label: "Güç Kaynağı", value: "176-264 VAC 50 Hz" },
-      { label: "Güç Tüketimi (Bekleme)", value: "≈15 W" },
-      { label: "Güç Tüketimi (Geçiş)", value: "≈45 W" },
-      { label: "İç Gerilim", value: "12V veya 24V DC" }
+      { label: "Gövde Malzemesi", value: "Krom-Nikel Kaplama" },
+      { label: "Çalışma Prensibi", value: "Elle Açılma, Otomatik Kapanma" },
+      { label: "Kontrol Türü", value: "Tek Yön Kontrol" },
+      { label: "Ağırlık", value: "10 kg" },
+      { label: "Boyutlar", value: "88 x 1000 mm" },
+      { label: "Kapı Levhası", value: "Pleksi Glass" },
+      { label: "Kurulum", value: "İç Mekan" },
+      { label: "Bakım", value: "Minimal Bakım" }
     ],
     
     applications: [
-      "Hastaneler ve Sağlık Kuruluşları",
-      "Kamu Binaları ve Belediye Hizmet Binaları", 
-      "Alışveriş Merkezleri VIP Alanları",
-      "Ofis Binaları Özel Geçişleri",
-      "Havaalanları ve Tren İstasyonları",
-      "Otel ve Toplantı Salonları",
-      "Engelli Erişim Gerektiren Tüm Alanlar",
-      "Özel Malzeme Geçiş Noktaları"
+      "Market ve Alışveriş Merkezleri",
+      "Ofis Binaları Giriş Kontrolleri",
+      "Küçük İşletme Giriş-Çıkışları",
+      "Kafe ve Restoran Girişleri",
+      "Kütüphane ve Okul Alanları",
+      "Küçük Klinik ve Muayenehaneler",
+      "Engelli Geçişine İhtiyaç Olan Alanlar",
+      "Geçici Kontrol Noktaları"
     ],
     
     accessories: [
-      "Uzaktan Kumanda Alıcı-Verici Ünitesi",
-      "Counter (Geçiş Sayaç) Sistemi", 
-      "Kart Okuyucu (RFID/Mifare Uyumlu)",
-      "Emniyet Fotosel Sensörü",
-      "LED Gösterge Paneli",
-      "Alarm ve Uyarı Sistemi"
+      "Engelli İşareti Pleksi Levhası",
+      "DUR İşareti Pleksi Levhası",
+      "Özel Logo ve İşaret Uygulamaları",
+      "Farklı Renk Kaplama Seçenekleri",
+      "Zemin Sabitleme Aparatları",
+      "Bakım ve Temizlik Kitleri"
     ]
   };
 
   const advantages = [
     {
       icon: <Accessibility className="h-8 w-8 text-green-600" />,
-      title: "Engelli Dostu Tasarım", 
-      description: "Tekerlekli sandalye ve baston kullanıcıları için geniş geçiş alanı"
-    },
-    {
-      icon: <Shield className="h-8 w-8 text-blue-600" />,
-      title: "Premium Güvenlik",
-      description: "%100 paslanmaz çelik ile maksimum dayanıklılık ve güvenlik"
+      title: "Engelli Dostu Çözüm", 
+      description: "Geniş geçiş alanı ile engelli bireyler için uygun tasarım"
     },
     {
       icon: <Zap className="h-8 w-8 text-yellow-600" />,
-      title: "Otomatik Kontrol",
-      description: "Motorlu sistem ile otomatik açılma-kapanma ve ayarlanabilir süre"
+      title: "Basit Çalışma Prensibi",
+      description: "Elle açılma ve kendiliğinden kapanma - elektrik gerektirmez"
+    },
+    {
+      icon: <Shield className="h-8 w-8 text-blue-600" />,
+      title: "Dayanıklı Yapı",
+      description: "Krom-nikel kaplama ile uzun ömürlü ve paslanmaz yapı"
     },
     {
       icon: <Settings className="h-8 w-8 text-purple-600" />,
-      title: "Akıllı Özellikler",
-      description: "LED indikatörler, sensörler ve uzaktan kumanda desteği"
+      title: "Düşük Maliyet",
+      description: "Ekonomik çözüm, düşük bakım maliyeti ve uzun kullanım ömrü"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>MT SC324B VIP Turnike Sistemi - Engelli Dostu | Mika Teknoloji</title>
-        <meta name="description" content="MT SC324B VIP Turnike - Engelli erişim ve VIP geçişler için özel tasarım. %100 paslanmaz çelik, motorlu sistem, otomatik açılma. Tekerlekli sandalye uyumlu." />
-        <meta name="keywords" content="mt sc324b, vip turnike, engelli turnike, otomatik turnike, paslanmaz çelik, motorlu turnike, mika teknoloji" />
+        <title>MT T80 Yaprak Turnike Sistemi - Ekonomik Çözüm | Mika Teknoloji</title>
+        <meta name="description" content="MT T80 Yaprak Turnike - Market ve ofis girişleri için basit tek yön kontrol. Krom-nikel kaplama, elle açılma, kendiliğinden kapanma sistemi." />
+        <meta name="keywords" content="mt t80, yaprak turnike, tek yön kontrol, market turnike, ofis turnike, basit turnike, ekonomik turnike, mika teknoloji" />
       </Helmet>
 
       {/* Breadcrumb */}
@@ -112,7 +112,7 @@ export default function MTSC324BVIPDetailPage() {
             <span>/</span>
             <Link href="/urunler/engelli-turnike" className="hover:text-primary">Engelli Turnikeler</Link>
             <span>/</span>
-            <span className="text-primary font-medium">MT SC324B VIP Turnike</span>
+            <span className="text-primary font-medium">MT T80 Yaprak</span>
           </nav>
         </div>
       </div>
@@ -134,7 +134,7 @@ export default function MTSC324BVIPDetailPage() {
                   alt={productDetails.title}
                   className="w-full h-full object-contain"
                 />
-                <Badge className="absolute top-4 left-4 bg-green-600 text-white text-sm px-3 py-1">
+                <Badge className="absolute top-4 left-4 bg-orange-600 text-white text-sm px-3 py-1">
                   {productDetails.category}
                 </Badge>
               </div>
@@ -195,7 +195,7 @@ export default function MTSC324BVIPDetailPage() {
               Ürün Özellikleri
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              MT SC324B VIP Turnike'nin detaylı özellik ve avantajları
+              MT T80 Yaprak Turnike'nin detaylı özellik ve avantajları
             </p>
           </div>
 
@@ -325,10 +325,10 @@ export default function MTSC324BVIPDetailPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">
-              MT SC324B VIP Turnike Sistemi
+              MT T80 Yaprak Turnike Sistemi
             </h2>
             <p className="text-xl mb-8">
-              Engelli dostu ve VIP erişim çözümleri için profesyonel destek alın. Ücretsiz keşif ve detaylı teklif için hemen iletişime geçin.
+              Ekonomik ve basit çözüm arıyorsanız, MT T80 Yaprak Turnike sizin için ideal. Detaylı bilgi ve teklif için hemen iletişime geçin.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

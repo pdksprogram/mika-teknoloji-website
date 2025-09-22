@@ -13,61 +13,63 @@ import {
   Shield,
   Settings,
   Users,
-  Accessibility
+  Accessibility,
+  Building
 } from "lucide-react";
 import { ENGELLI_TURNIKE_IMAGES } from "@/assetsMap";
 import { Link } from "wouter";
 
-export default function MTSC324BVIPDetailPage() {
+export default function MT230MVIPSlimDetailPage() {
   const productDetails = {
-    model: "MT SC324B",
-    title: "VIP Turnike Sistemi",
-    subtitle: "Engelli Erişim ve VIP Geçiş için Premium Çözüm",
+    model: "MT 230 MVIP",
+    title: "Slim VIP Turnike Sistemi", 
+    subtitle: "Şık Tasarım ile Engelli ve VIP Geçiş Çözümü",
     price: "Fiyat İçin Ara",
-    mainImage: ENGELLI_TURNIKE_IMAGES.et1,
-    category: "Engelli VIP Turnike",
-    description: "Mika Teknoloji MT SC324B VIP Turnike Sistemi, engelli bireyler, VIP geçişler ve özel malzeme geçişleri için özel olarak tasarlanmış premium turnike sistemidir. %100 paslanmaz çelik gövde ile hem iç hem dış mekanlarda güvenle kullanılabilir.",
+    mainImage: ENGELLI_TURNIKE_IMAGES.et3,
+    category: "Slim VIP Turnike",
+    description: "Mika Teknoloji MT 230 MVIP Slim Turnike, tekerlekli sandalye kullanıcıları ve VIP geçişler için alternatif geçiş hattı sunan kompakt turnike sistemidir. Şık dizayn ve modern görünümü ile herhangi bir iç mekanda rahatlıkla kullanılabilir.",
     
     features: [
-      "VIP ve Engelli Geçiş İçin Özel Tasarım",
-      "%100 Paslanmaz Çelik Gövde Yapı",
-      "Motorlu Otomatik Açılma-Kapanma",
-      "Pleksiglass Üzerinde DUR/GEÇ/Engelli İşaretleri", 
-      "Ayarlanabilir Otomatik Kapanma Süresi",
-      "Elektrik Kesintisinde Manuel Açılma",
-      "İç ve Dış Mekan Kullanımı",
-      "Yönlendirme İndikatörleri (Standart)"
+      "Engelli ve VIP Geçişler İçin Özel Tasarım",
+      "Slim ve Kompakt Yapı - Az Yer Kaplar",
+      "304 Kalite Paslanmaz Çelik Gövde", 
+      "10mm Pleksi Glass Kanat Yapısı",
+      "Çift Yönlü Otomatik Çalışma",
+      "90° Otomatik Açılma Sistemi",
+      "Kırmızı/Yeşil/Mavi LED Göstergeler",
+      "15 Saniye Otomatik Kapanma (Ayarlanabilir)"
     ],
     
     technicalSpecs: [
-      { label: "Gövde Malzemesi", value: "1.5 mm 304 Paslanmaz Çelik" },
-      { label: "Kol Malzemesi", value: "38x2 mm Alüminyum Profil + Pleksi" },
-      { label: "Ağırlık", value: "≈35 kg" },
-      { label: "Çalışma Sıcaklığı", value: "-20°C / +60°C" },
-      { label: "Güç Kaynağı", value: "176-264 VAC 50 Hz" },
-      { label: "Güç Tüketimi (Bekleme)", value: "≈15 W" },
-      { label: "Güç Tüketimi (Geçiş)", value: "≈45 W" },
-      { label: "İç Gerilim", value: "12V veya 24V DC" }
+      { label: "Kontrol/Çalışma Voltajı", value: "100-230 VAC 50/60 Hz" },
+      { label: "Güç Tüketimi", value: "30 W" },
+      { label: "Çalışma Sıcaklığı", value: "-10°C / +50°C" },
+      { label: "Geçiş Hızı", value: "20-30 Kişi/Dakika" },
+      { label: "Ağırlık", value: "31 kg" },
+      { label: "Kullanım Alanı", value: "İç Ortam" },
+      { label: "Gövde Malzemesi", value: "304 Paslanmaz Çelik" },
+      { label: "Kanat Uzunluğu", value: "850 mm" },
+      { label: "Kanat Malzemesi", value: "10 mm Plexyglass" }
     ],
     
     applications: [
-      "Hastaneler ve Sağlık Kuruluşları",
-      "Kamu Binaları ve Belediye Hizmet Binaları", 
+      "Bankalar ve Finansal Kurumlar",
+      "Bakanlık ve Devlet Daireleri",
+      "Yönetim Ofisleri ve İş Merkezleri",
+      "Toplu Taşıma Merkezleri",
+      "Hastaneler ve Sağlık Kuruluşları", 
       "Alışveriş Merkezleri VIP Alanları",
-      "Ofis Binaları Özel Geçişleri",
-      "Havaalanları ve Tren İstasyonları",
       "Otel ve Toplantı Salonları",
-      "Engelli Erişim Gerektiren Tüm Alanlar",
-      "Özel Malzeme Geçiş Noktaları"
+      "Hızlı Geçiş Turnikelerinin Yanında VIP Hattı"
     ],
     
     accessories: [
-      "Uzaktan Kumanda Alıcı-Verici Ünitesi",
-      "Counter (Geçiş Sayaç) Sistemi", 
-      "Kart Okuyucu (RFID/Mifare Uyumlu)",
-      "Emniyet Fotosel Sensörü",
-      "LED Gösterge Paneli",
-      "Alarm ve Uyarı Sistemi"
+      "Biyometrik Okuyucu (Harici Aparat ile)",
+      "Kart Okuyucu (Harici Aparat ile)", 
+      "Buton ve Uzaktan Kumanda Sistemi",
+      "LED Logo ve Işık Uygulaması",
+      "Opsiyonel Akü Sistemi",
+      "Çeşitli Entegrasyon Modülleri"
     ]
   };
 
@@ -75,31 +77,31 @@ export default function MTSC324BVIPDetailPage() {
     {
       icon: <Accessibility className="h-8 w-8 text-green-600" />,
       title: "Engelli Dostu Tasarım", 
-      description: "Tekerlekli sandalye ve baston kullanıcıları için geniş geçiş alanı"
+      description: "Tekerlekli sandalye ve VIP geçişler için alternatif hat çözümü"
     },
     {
-      icon: <Shield className="h-8 w-8 text-blue-600" />,
-      title: "Premium Güvenlik",
-      description: "%100 paslanmaz çelik ile maksimum dayanıklılık ve güvenlik"
+      icon: <Building className="h-8 w-8 text-blue-600" />,
+      title: "Kompakt ve Şık Tasarım",
+      description: "Slim profil ile dar alanlarda bile rahatlıkla kullanılabilir"
     },
     {
       icon: <Zap className="h-8 w-8 text-yellow-600" />,
-      title: "Otomatik Kontrol",
-      description: "Motorlu sistem ile otomatik açılma-kapanma ve ayarlanabilir süre"
+      title: "Akıllı Otomatik Sistem",
+      description: "90° otomatik açılma, 15 saniye bekleme ve otomatik kapanma"
     },
     {
       icon: <Settings className="h-8 w-8 text-purple-600" />,
-      title: "Akıllı Özellikler",
-      description: "LED indikatörler, sensörler ve uzaktan kumanda desteği"
+      title: "Gelişmiş Entegrasyon",
+      description: "Her türlü kart okuyucu ve biyometrik sistem ile uyumlu"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>MT SC324B VIP Turnike Sistemi - Engelli Dostu | Mika Teknoloji</title>
-        <meta name="description" content="MT SC324B VIP Turnike - Engelli erişim ve VIP geçişler için özel tasarım. %100 paslanmaz çelik, motorlu sistem, otomatik açılma. Tekerlekli sandalye uyumlu." />
-        <meta name="keywords" content="mt sc324b, vip turnike, engelli turnike, otomatik turnike, paslanmaz çelik, motorlu turnike, mika teknoloji" />
+        <title>MT 230 MVIP Slim VIP Turnike Sistemi | Mika Teknoloji</title>
+        <meta name="description" content="MT 230 MVIP Slim Turnike - Engelli ve VIP geçişler için kompakt çözüm. 304 paslanmaz çelik, 10mm pleksi glass kanat, otomatik açılma sistemi." />
+        <meta name="keywords" content="mt 230 mvip slim, vip turnike, engelli turnike, kompakt turnike, slim turnike, otomatik turnike, mika teknoloji" />
       </Helmet>
 
       {/* Breadcrumb */}
@@ -112,7 +114,7 @@ export default function MTSC324BVIPDetailPage() {
             <span>/</span>
             <Link href="/urunler/engelli-turnike" className="hover:text-primary">Engelli Turnikeler</Link>
             <span>/</span>
-            <span className="text-primary font-medium">MT SC324B VIP Turnike</span>
+            <span className="text-primary font-medium">MT 230 MVIP Slim</span>
           </nav>
         </div>
       </div>
@@ -134,7 +136,7 @@ export default function MTSC324BVIPDetailPage() {
                   alt={productDetails.title}
                   className="w-full h-full object-contain"
                 />
-                <Badge className="absolute top-4 left-4 bg-green-600 text-white text-sm px-3 py-1">
+                <Badge className="absolute top-4 left-4 bg-blue-600 text-white text-sm px-3 py-1">
                   {productDetails.category}
                 </Badge>
               </div>
@@ -195,7 +197,7 @@ export default function MTSC324BVIPDetailPage() {
               Ürün Özellikleri
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              MT SC324B VIP Turnike'nin detaylı özellik ve avantajları
+              MT 230 MVIP Slim Turnike'nin detaylı özellik ve avantajları
             </p>
           </div>
 
@@ -325,10 +327,10 @@ export default function MTSC324BVIPDetailPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">
-              MT SC324B VIP Turnike Sistemi
+              MT 230 MVIP Slim Turnike Sistemi
             </h2>
             <p className="text-xl mb-8">
-              Engelli dostu ve VIP erişim çözümleri için profesyonel destek alın. Ücretsiz keşif ve detaylı teklif için hemen iletişime geçin.
+              Kompakt ve şık tasarımıyla engelli erişim ve VIP geçiş çözümü. Profesyonel keşif ve detaylı teklif için bizimle iletişime geçin.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
