@@ -8,14 +8,16 @@ import {
   Phone,
   Mail,
   MapPin,
-  Download,
   ArrowLeft,
   Thermometer,
   Zap,
   Clock,
   Weight,
   Shield,
-  Settings
+  Settings,
+  Award,
+  Wrench,
+  Star
 } from "lucide-react";
 import { Link, useParams } from "wouter";
 
@@ -38,8 +40,15 @@ interface TurnikeSpec {
     weight: string;
     environment: string;
     protection: string;
+    dimensions: string;
+    warranty: string;
+    maintenance: string;
+    installation: string;
   };
   features: string[];
+  advantages: string[];
+  accessories: string[];
+  certifications: string[];
   price: string;
 }
 
@@ -70,13 +79,52 @@ const turnikeSpecs: Record<string, TurnikeSpec> = {
       passageGap: "Min. 42 cm / Max. 47 cm",
       weight: "32 Kg",
       environment: "İç Ortam / Dış Ortam (Kapak silikonlandığında)",
-      protection: "IP 54 (Opsiyon IP 65)"
+      protection: "IP 54 (Opsiyon IP 65)",
+      dimensions: "120 x 100 x 98 cm",
+      warranty: "2 Yıl Garanti",
+      maintenance: "6 Ayda Bir Bakım",
+      installation: "Profesyonel Kurulum Dahil"
     },
     features: [
-      "Paslanmaz Çelik Gövde",
-      "Elektromekanik Kontrol",
-      "Manuel/Otomatik Mod",
-      "LED Yönlendirme"
+      "Paslanmaz Çelik Gövde (304 Grade)",
+      "Elektromekanik Kontrol Sistemi",
+      "Manuel/Otomatik Mod Seçimi",
+      "LED Yönlendirme Işıkları",
+      "Ses Uyarı Sistemi",
+      "Kart Okuyucu Entegrasyonu",
+      "Parmak İzi Okuyucu Desteği",
+      "Yüz Tanıma Sistemi Uyumlu",
+      "Anti-Tailgating Koruması",
+      "Acil Durum Açılması",
+      "Çift Yönlü Geçiş Kontrolü",
+      "Işık Bariyeri Sistemi"
+    ],
+    advantages: [
+      "Kolay kurulum ve kullanım",
+      "Düşük enerji tüketimi",
+      "Sessiz çalışma",
+      "Uzun ömürlü motor sistemi",
+      "Minimum bakım gereksinimi",
+      "Her türlü hava koşuluna uygun",
+      "24/7 kesintisiz çalışma",
+      "Gelişmiş güvenlik algoritmaları"
+    ],
+    accessories: [
+      "Düşen kol mekanizması",
+      "Kart okuyucu ünitesi",
+      "Parmak izi okuyucu",
+      "Buton ünitesi",
+      "Uzaktan kumanda",
+      "Sayaç bağlantı modülü",
+      "Isıtıcı sistemi",
+      "Harici LED ekran"
+    ],
+    certifications: [
+      "CE Belgesi",
+      "ISO 9001:2015",
+      "TSE Standardı",
+      "RoHS Uyumlu",
+      "IP54 Koruma Sınıfı"
     ],
     price: "Fiyat İçin Ara"
   },
@@ -104,13 +152,37 @@ const turnikeSpecs: Record<string, TurnikeSpec> = {
       passageGap: "42 cm",
       weight: "28 Kg",
       environment: "İç Ortam",
-      protection: "IP 54"
+      protection: "IP 54",
+      dimensions: "115 x 95 x 98 cm",
+      warranty: "1 Yıl Garanti",
+      maintenance: "Yılda Bir Bakım",
+      installation: "Hızlı Kurulum"
     },
     features: [
       "Ekonomik Çözüm",
       "Dayanıklı Yapı",
       "Kolay Kurulum",
-      "Düşük Bakım"
+      "Düşük Bakım",
+      "304 Paslanmaz Çelik Gövde",
+      "LED Işık Sistemi",
+      "Ses Uyarı Sistemi",
+      "Kart Okuyucu Hazır Altyapı"
+    ],
+    advantages: [
+      "Küçük işletmeler için ideal",
+      "Hızlı yatırım geri dönüşü",
+      "Basit kullanım arayüzü",
+      "Düşük işletme maliyeti"
+    ],
+    accessories: [
+      "Temel kart okuyucu",
+      "Manuel kontrol butonu",
+      "LED durum göstergesi"
+    ],
+    certifications: [
+      "CE Belgesi",
+      "TSE Standardı",
+      "IP54 Koruma"
     ],
     price: "Fiyat İçin Ara"
   },
@@ -138,13 +210,38 @@ const turnikeSpecs: Record<string, TurnikeSpec> = {
       passageGap: "Min. 40 cm / Max. 50 cm",
       weight: "35 Kg",
       environment: "İç/Dış Ortam",
-      protection: "IP 65"
+      protection: "IP 65",
+      dimensions: "125 x 105 x 98 cm",
+      warranty: "3 Yıl Garanti",
+      maintenance: "6 Ayda Bir Bakım",
+      installation: "Profesyonel Kurulum Dahil"
     },
     features: [
       "İki Yönlü Geçiş",
-      "Akıllı Sensörler",
+      "Akıllı Sensörler", 
       "Anti-Tailgating",
-      "Alarm Sistemi"
+      "Alarm Sistemi",
+      "316 Paslanmaz Çelik",
+      "Gelişmiş LED Sistemi",
+      "Ses ve Işık Uyarısı"
+    ],
+    advantages: [
+      "Yüksek güvenlik seviyesi",
+      "Anti-tailgating koruması", 
+      "Gelişmiş algılama sistemi",
+      "Dayanıklı yapı"
+    ],
+    accessories: [
+      "Düşen kol sistemi",
+      "Gelişmiş kart okuyucu",
+      "Biyometrik okuyucular",
+      "Alarm sistemi"
+    ],
+    certifications: [
+      "CE Belgesi",
+      "ISO 9001:2015",
+      "TSE Güvenlik",
+      "IP65 Koruma"
     ],
     price: "Fiyat İçin Ara"
   },
@@ -171,13 +268,35 @@ const turnikeSpecs: Record<string, TurnikeSpec> = {
       passageGap: "42 cm - 47 cm",
       weight: "33 Kg",
       environment: "İç Ortam",
-      protection: "IP 54"
+      protection: "IP 54",
+      dimensions: "118 x 98 x 98 cm",
+      warranty: "2 Yıl Garanti",
+      maintenance: "6 Ayda Bir Bakım",
+      installation: "Hızlı Kurulum"
     },
     features: [
       "İki Yönlü Kontrol",
       "Ekonomik Fiyat",
       "Güvenilir Çalışma",
-      "Kolay Bakım"
+      "Kolay Bakım",
+      "A2 Teknolojisi",
+      "LED Göstergeler"
+    ],
+    advantages: [
+      "Çift yönlü kontrol imkanı",
+      "Ekonomik işletim maliyeti",
+      "Kolay kurulum",
+      "Güvenilir teknoloji"
+    ],
+    accessories: [
+      "Çift yönlü sensörler",
+      "Kart okuyucu",
+      "Kontrol butonu"
+    ],
+    certifications: [
+      "CE Belgesi",
+      "TSE Standardı",
+      "IP54 Koruma"
     ],
     price: "Fiyat İçin Ara"
   },
@@ -205,13 +324,36 @@ const turnikeSpecs: Record<string, TurnikeSpec> = {
       passageGap: "42 cm - 48 cm",
       weight: "34 Kg",
       environment: "İç/Dış Ortam",
-      protection: "IP 65"
+      protection: "IP 65",
+      dimensions: "122 x 102 x 98 cm",
+      warranty: "3 Yıl Premium Garanti",
+      maintenance: "Yılda Bir Premium Bakım",
+      installation: "VIP Kurulum Hizmeti"
     },
     features: [
       "Premium Tasarım",
       "Sessiz Çalışma",
       "Hızlı Geçiş",
-      "Estetik Görünüm"
+      "Estetik Görünüm",
+      "Premium Paslanmaz Çelik",
+      "Lüks LED Aydınlatma"
+    ],
+    advantages: [
+      "Prestijli görünüm",
+      "Sessiz ve pürüzsüz çalışma",
+      "Yüksek kalite malzemeler",
+      "Premium hizmet kalitesi"
+    ],
+    accessories: [
+      "Premium kart okuyucu",
+      "Lüks tasarım aksesuarları",
+      "Özel renk seçenekleri"
+    ],
+    certifications: [
+      "CE Premium",
+      "ISO 9001:2015",
+      "Premium Quality",
+      "IP65 Koruma"
     ],
     price: "Fiyat İçin Ara"
   },
@@ -239,13 +381,36 @@ const turnikeSpecs: Record<string, TurnikeSpec> = {
       passageGap: "42 cm - 50 cm",
       weight: "42 Kg",
       environment: "Ağır Endüstriyel Ortam",
-      protection: "IP 67"
+      protection: "IP 67",
+      dimensions: "130 x 110 x 100 cm",
+      warranty: "5 Yıl Endüstriyel Garanti",
+      maintenance: "3 Ayda Bir Endüstriyel Bakım",
+      installation: "Endüstriyel Kurulum"
     },
     features: [
       "Endüstriyel Dayanım",
       "Yoğun Kullanım",
       "Çevre Direnci",
-      "Güçlü Motor"
+      "Güçlü Motor",
+      "316 Grade Paslanmaz Çelik",
+      "Ağır Hizmet Tipi Motor"
+    ],
+    advantages: [
+      "Ağır endüstriyel koşullara uygun",
+      "24/7 kesintisiz çalışma",
+      "Aşırı hava koşullarına dayanıklı",
+      "Yüksek trafik kapasitesi"
+    ],
+    accessories: [
+      "Endüstriyel sensörler",
+      "Ağır hizmet kart okuyucu",
+      "Endüstriyel kontrol ünitesi"
+    ],
+    certifications: [
+      "CE Endüstriyel",
+      "IP67 Koruma",
+      "Endüstriyel Standart",
+      "ISO 14001"
     ],
     price: "Fiyat İçin Ara"
   },
@@ -272,13 +437,35 @@ const turnikeSpecs: Record<string, TurnikeSpec> = {
       passageGap: "42 cm - 48 cm",
       weight: "38 Kg",
       environment: "Endüstriyel Ortam",
-      protection: "IP 65"
+      protection: "IP 65",
+      dimensions: "125 x 105 x 98 cm",
+      warranty: "2 Yıl Garanti",
+      maintenance: "4 Ayda Bir Bakım",
+      installation: "Endüstriyel Kurulum"
     },
     features: [
       "Dayanıklı Yapı",
       "Uygun Fiyat",
       "Endüstriyel Kullanım",
-      "Kolay Montaj"
+      "Kolay Montaj",
+      "304 Paslanmaz Çelik",
+      "Endüstriyel LED"
+    ],
+    advantages: [
+      "Endüstriyel ortamlarda ekonomik",
+      "Kolay kurulum ve bakım",
+      "Güvenilir performans",
+      "Uygun maliyet"
+    ],
+    accessories: [
+      "Standart kart okuyucu",
+      "Endüstriyel montaj kiti",
+      "Bakım araçları"
+    ],
+    certifications: [
+      "CE Belgesi",
+      "IP65 Koruma",
+      "TSE Endüstriyel"
     ],
     price: "Fiyat İçin Ara"
   },
@@ -306,13 +493,35 @@ const turnikeSpecs: Record<string, TurnikeSpec> = {
       passageGap: "40 cm - 45 cm",
       weight: "26 Kg",
       environment: "İç Ortam",
-      protection: "IP 54"
+      protection: "IP 54",
+      dimensions: "110 x 90 x 95 cm",
+      warranty: "2 Yıl Garanti",
+      maintenance: "6 Ayda Bir Bakım",
+      installation: "Kompakt Kurulum"
     },
     features: [
       "Kompakt Tasarım",
       "Az Yer Kaplar",
       "Esnek Kurulum",
-      "Hızlı Geçiş"
+      "Hızlı Geçiş",
+      "Dar Alan Optimizasyonu",
+      "Hafif Yapı"
+    ],
+    advantages: [
+      "Dar alanlarda kullanım",
+      "Minimal yer ihtiyacı",
+      "Kolay taşınabilirlik",
+      "Hızlı kurulum"
+    ],
+    accessories: [
+      "Kompakt kart okuyucu",
+      "Dar alan montajı",
+      "Mobil ayaklar"
+    ],
+    certifications: [
+      "CE Belgesi",
+      "TSE Kompakt",
+      "IP54 Koruma"
     ],
     price: "Fiyat İçin Ara"
   },
@@ -341,13 +550,36 @@ const turnikeSpecs: Record<string, TurnikeSpec> = {
       passageGap: "45 cm - 50 cm",
       weight: "45 Kg",
       environment: "Yoğun Trafik Alanları",
-      protection: "IP 65"
+      protection: "IP 65",
+      dimensions: "135 x 115 x 100 cm",
+      warranty: "3 Yıl Yoğun Kullanım Garantisi",
+      maintenance: "2 Ayda Bir Bakım",
+      installation: "Yoğun Trafik Kurulumu"
     },
     features: [
       "Yüksek Kapasite",
       "Hızlı Geçiş",
       "Yoğun Trafik",
-      "Güçlü Performans"
+      "Güçlü Performans",
+      "Yüksek Hızlı Motor",
+      "Çoklu Sensör Sistemi"
+    ],
+    advantages: [
+      "Dakikada 50+ kişi kapasitesi",
+      "Yoğun trafikte kesintisiz çalışma",
+      "Metro/havaalanı standartı",
+      "Sürekli kullanıma uygun"
+    ],
+    accessories: [
+      "Yüksek kapasiteli sensörler",
+      "Hızlı kart okuyucu",
+      "Trafik yönetim sistemi"
+    ],
+    certifications: [
+      "CE Yüksek Kapasite",
+      "Metro Standardı",
+      "IP65 Koruma",
+      "Yoğun Kullanım Belgesi"
     ],
     price: "Fiyat İçin Ara"
   },
@@ -375,13 +607,35 @@ const turnikeSpecs: Record<string, TurnikeSpec> = {
       passageGap: "42 cm - 48 cm",
       weight: "36 Kg",
       environment: "İç Ortam Premium",
-      protection: "IP 54"
+      protection: "IP 54",
+      dimensions: "125 x 100 x 98 cm",
+      warranty: "3 Yıl Özel Tasarım Garantisi",
+      maintenance: "6 Ayda Bir Özel Bakım",
+      installation: "Özel Tasarım Kurulumu"
     },
     features: [
       "Özel Tasarım",
       "Kişiye Özel",
       "Estetik Çözüm",
-      "Markalama"
+      "Markalama",
+      "Özel Renk Seçenekleri",
+      "Logo Entegrasyonu"
+    ],
+    advantages: [
+      "Kurumsal kimliğe uygun tasarım",
+      "Özel renk ve logo seçenekleri",
+      "Markalama imkanı",
+      "Eşsiz görünüm"
+    ],
+    accessories: [
+      "Özel tasarım panelleri",
+      "Logo aplikasyon kiti",
+      "Renk seçenekleri"
+    ],
+    certifications: [
+      "CE Özel Tasarım",
+      "TSE Kalite",
+      "Özel Üretim Belgesi"
     ],
     price: "Fiyat İçin Ara"
   },
@@ -409,13 +663,35 @@ const turnikeSpecs: Record<string, TurnikeSpec> = {
       passageGap: "42 cm",
       weight: "38 Kg",
       environment: "İç/Dış Ortam",
-      protection: "IP 54"
+      protection: "IP 54",
+      dimensions: "125 x 105 x 105 cm",
+      warranty: "2 Yıl Tahsilat Garantisi",
+      maintenance: "3 Ayda Bir Para Kasası Bakım",
+      installation: "Jetonlu Sistem Kurulumu"
     },
     features: [
       "Jeton Okuyucu",
       "Para Kasası",
       "Otomatik Tahsilat",
-      "WC Turnikesi"
+      "WC Turnikesi",
+      "Çelik Para Kasası",
+      "Jeton Algılama Sistemi"
+    ],
+    advantages: [
+      "Otomatik gelir elde etme",
+      "WC girişlerinde ideal",
+      "Para kasası güvenliği",
+      "Jeton sistemli kolay kullanım"
+    ],
+    accessories: [
+      "Jeton seti",
+      "Para kasası kilidi",
+      "Tahsilat rapor sistemi"
+    ],
+    certifications: [
+      "CE Belgesi",
+      "Para Kasası Güvenlik",
+      "IP54 Koruma"
     ],
     price: "Fiyat İçin Ara"
   },
@@ -442,13 +718,36 @@ const turnikeSpecs: Record<string, TurnikeSpec> = {
       passageGap: "42 cm - 47 cm",
       weight: "42 Kg",
       environment: "İç/Dış Ortam",
-      protection: "IP 65"
+      protection: "IP 65",
+      dimensions: "130 x 110 x 110 cm",
+      warranty: "3 Yıl Dijital Sistem Garantisi",
+      maintenance: "2 Ayda Bir Dijital Bakım",
+      installation: "Gelişmiş Dijital Kurulum"
     },
     features: [
       "Çoklu Ödeme",
       "Dijital Ekran",
       "Para Üstü",
-      "Rapor Sistemi"
+      "Rapor Sistemi",
+      "Kredi Kartı Okuyucu",
+      "Contactless Ödeme"
+    ],
+    advantages: [
+      "Çoklu ödeme seçenekleri",
+      "Dijital rapor takibi",
+      "Para üstü verme özelliği",
+      "Modern ödeme sistemleri"
+    ],
+    accessories: [
+      "Kredi kartı terminali",
+      "Dijital ekran ünitesi",
+      "Para üstü mekanizması"
+    ],
+    certifications: [
+      "CE Dijital Ödeme",
+      "PCI DSS Güvenlik",
+      "IP65 Koruma",
+      "Dijital Ödeme Belgesi"
     ],
     price: "Fiyat İçin Ara"
   }
@@ -535,9 +834,11 @@ export default function TurnikeDetailPage() {
                     Fiyat Teklifi Al
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline">
-                  <Download className="h-4 w-4 mr-2" />
-                  Broşür İndir
+                <Button asChild size="lg" variant="outline">
+                  <a href="tel:+902123200230">
+                    <Phone className="h-4 w-4 mr-2" />
+                    Hemen Ara
+                  </a>
                 </Button>
               </div>
             </motion.div>
@@ -597,32 +898,53 @@ export default function TurnikeDetailPage() {
         </div>
       </div>
 
-      {/* Technical Specifications */}
+      {/* Features Grid */}
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Teknik Özellikler</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Ürün Özellikleri</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {spec.features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.05 }}
+                className="flex items-center gap-3 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-100"
+              >
+                <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                <span className="text-gray-700 text-sm font-medium">{feature}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Technical Specifications */}
+      <div className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Teknik Özellikler</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card>
               <CardContent className="p-6 text-center">
                 <Zap className="h-8 w-8 text-primary mx-auto mb-3" />
                 <h4 className="font-semibold text-gray-900 mb-2">Voltaj</h4>
-                <p className="text-gray-600">{spec.technicalSpecs.voltage}</p>
+                <p className="text-gray-600 text-sm">{spec.technicalSpecs.voltage}</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardContent className="p-6 text-center">
                 <Thermometer className="h-8 w-8 text-primary mx-auto mb-3" />
-                <h4 className="font-semibold text-gray-900 mb-2">Sıcaklık</h4>
-                <p className="text-gray-600">{spec.technicalSpecs.temperature}</p>
+                <h4 className="font-semibold text-gray-900 mb-2">Çalışma Sıcaklığı</h4>
+                <p className="text-gray-600 text-sm">{spec.technicalSpecs.temperature}</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardContent className="p-6 text-center">
                 <Clock className="h-8 w-8 text-primary mx-auto mb-3" />
-                <h4 className="font-semibold text-gray-900 mb-2">Kapasite</h4>
-                <p className="text-gray-600">{spec.technicalSpecs.capacity}</p>
+                <h4 className="font-semibold text-gray-900 mb-2">Geçiş Kapasitesi</h4>
+                <p className="text-gray-600 text-sm">{spec.technicalSpecs.capacity}</p>
               </CardContent>
             </Card>
 
@@ -630,16 +952,19 @@ export default function TurnikeDetailPage() {
               <CardContent className="p-6 text-center">
                 <Weight className="h-8 w-8 text-primary mx-auto mb-3" />
                 <h4 className="font-semibold text-gray-900 mb-2">Ağırlık</h4>
-                <p className="text-gray-600">{spec.technicalSpecs.weight}</p>
+                <p className="text-gray-600 text-sm">{spec.technicalSpecs.weight}</p>
               </CardContent>
             </Card>
           </div>
 
-          <div className="mt-12 max-w-4xl mx-auto">
+          <div className="mt-12 grid lg:grid-cols-2 gap-8">
             <Card>
               <CardContent className="p-8">
-                <h3 className="text-lg font-bold text-gray-900 mb-6">Detaylı Teknik Bilgiler</h3>
-                <div className="grid md:grid-cols-2 gap-x-12 gap-y-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center">
+                  <Settings className="h-5 w-5 mr-2 text-primary" />
+                  Detaylı Teknik Bilgiler
+                </h3>
+                <div className="space-y-4">
                   <div className="flex justify-between py-2 border-b border-gray-100">
                     <span className="text-gray-600">Güç Tüketimi:</span>
                     <span className="font-medium">{spec.technicalSpecs.power}</span>
@@ -649,12 +974,43 @@ export default function TurnikeDetailPage() {
                     <span className="font-medium">{spec.technicalSpecs.passageGap}</span>
                   </div>
                   <div className="flex justify-between py-2 border-b border-gray-100">
-                    <span className="text-gray-600">Kullanım Alanları:</span>
-                    <span className="font-medium">{spec.technicalSpecs.environment}</span>
+                    <span className="text-gray-600">Boyutlar (E x G x Y):</span>
+                    <span className="font-medium">{spec.technicalSpecs.dimensions}</span>
                   </div>
                   <div className="flex justify-between py-2 border-b border-gray-100">
                     <span className="text-gray-600">Koruma Sınıfı:</span>
                     <span className="font-medium">{spec.technicalSpecs.protection}</span>
+                  </div>
+                  <div className="flex justify-between py-2 border-b border-gray-100">
+                    <span className="text-gray-600">Garanti Süresi:</span>
+                    <span className="font-medium">{spec.technicalSpecs.warranty}</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-8">
+                <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center">
+                  <Wrench className="h-5 w-5 mr-2 text-primary" />
+                  Servis ve Bakım
+                </h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between py-2 border-b border-gray-100">
+                    <span className="text-gray-600">Bakım Periyodu:</span>
+                    <span className="font-medium">{spec.technicalSpecs.maintenance}</span>
+                  </div>
+                  <div className="flex justify-between py-2 border-b border-gray-100">
+                    <span className="text-gray-600">Kurulum:</span>
+                    <span className="font-medium">{spec.technicalSpecs.installation}</span>
+                  </div>
+                  <div className="flex justify-between py-2 border-b border-gray-100">
+                    <span className="text-gray-600">Kullanım Ortamı:</span>
+                    <span className="font-medium">{spec.technicalSpecs.environment}</span>
+                  </div>
+                  <div className="flex justify-between py-2">
+                    <span className="text-gray-600">7/24 Teknik Destek:</span>
+                    <span className="font-medium text-green-600">✓ Mevcut</span>
                   </div>
                 </div>
               </CardContent>
@@ -663,19 +1019,93 @@ export default function TurnikeDetailPage() {
         </div>
       </div>
 
-      {/* Security Features */}
+      {/* Advantages */}
+      <div className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Üstünlükleri</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {spec.advantages.map((advantage, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Star className="h-8 w-8 text-white" />
+                </div>
+                <p className="text-gray-700 font-medium">{advantage}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Accessories & Certifications */}
       <div className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12">
+            <Card>
+              <CardContent className="p-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                  <Settings className="h-5 w-5 mr-2 text-primary" />
+                  Opsiyonel Aksesuarlar
+                </h3>
+                <div className="space-y-3">
+                  {spec.accessories.map((accessory, index) => (
+                    <div key={index} className="flex items-center gap-3 p-3 bg-white rounded-lg">
+                      <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                      <span className="text-gray-700">{accessory}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                  <Award className="h-5 w-5 mr-2 text-primary" />
+                  Sertifikalar ve Standartlar
+                </h3>
+                <div className="space-y-3">
+                  {spec.certifications.map((cert, index) => (
+                    <div key={index} className="flex items-center gap-3 p-3 bg-white rounded-lg">
+                      <Award className="h-4 w-4 text-yellow-600 flex-shrink-0" />
+                      <span className="text-gray-700 font-medium">{cert}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+
+      {/* Security Features */}
+      <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <Card>
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                   <Shield className="h-6 w-6 mr-3 text-primary" />
-                  Güvenlik Özellikleri
+                  Güvenlik Özellikleri ve Acil Durum Prosedürleri
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-lg">
                   {spec.security}
                 </p>
+                <div className="mt-8 grid md:grid-cols-2 gap-6">
+                  <div className="p-4 bg-green-50 rounded-lg border border-green-200">
+                    <h4 className="font-semibold text-green-800 mb-2">✅ Normal Durum</h4>
+                    <p className="text-green-700 text-sm">Otomatik geçiş kontrolü ve güvenli erişim</p>
+                  </div>
+                  <div className="p-4 bg-red-50 rounded-lg border border-red-200">
+                    <h4 className="font-semibold text-red-800 mb-2">🚨 Acil Durum</h4>
+                    <p className="text-red-700 text-sm">Kollar düşer, serbest geçiş sağlanır</p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
