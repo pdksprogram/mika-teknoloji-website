@@ -357,6 +357,185 @@ export default function ProductTurnikePage() {
           </Button>
         </div>
       </motion.div>
+
+      {/* SEO Content Section */}
+      <div className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            
+            {/* Turnike Sistemleri Hakkında */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-12"
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Turnike Sistemleri: Güvenlik ve Erişim Kontrolünde Profesyonel Çözümler
+              </h2>
+              <div className="prose max-w-none text-gray-700">
+                <p className="text-lg mb-6">
+                  <strong>Turnike sistemi</strong>, modern güvenlik ihtiyaçlarının vazgeçilmez bir parçası haline gelmiştir. 
+                  <strong>Bel tipi turnike</strong> modelleri, kompakt yapısı ve yüksek güvenlik standartları ile ofisler ve küçük alanlarda tercih edilirken, 
+                  <strong>boy tipi turnike</strong> sistemleri maksimum güvenlik gerektiren alanlarda kullanılır. 
+                  <strong>Hızlı geçiş turnike</strong> çözümleri ise yoğun trafikli alanlarda akıcı geçişler sağlar.
+                </p>
+                
+                <p className="mb-6">
+                  <strong>Turnike fiyatları</strong>, sistem özelliklerine ve teknik gereksinimlere göre değişiklik gösterir. 
+                  <strong>Paslanmaz çelik turnike</strong> modelleri dayanıklılığı ile öne çıkarken, 
+                  <strong>parmak izi turnike</strong> sistemleri biyometrik güvenlik teknolojisi sunar. 
+                  <strong>PDKS entegrasyonu</strong> ile personel takip sistemleri için mükemmel uyum sağlanır.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Turnike Çeşitleri */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="mb-12"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Turnike Çeşitleri ve Kullanım Alanları</h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-xl font-semibold text-gray-800 mb-4">Bel Tipi Turnikeler</h4>
+                  <p className="text-gray-700 mb-4">
+                    <strong>Bel tipi turnike sistemleri</strong>, üç kollu tasarımı ile güvenli geçiş kontrolü sağlar. 
+                    Ofis binalarında, fabrika girişlerinde ve okullarda yaygın olarak kullanılan bu sistemler, 
+                    <strong>kartlı geçiş sistemi</strong> ve <strong>personel takip sistemi</strong> entegrasyonu ile tam otomasyona ulaşır.
+                  </p>
+                  <ul className="text-gray-700 space-y-2 list-disc pl-6">
+                    <li>Tripod turnike (3 kollu) tasarım</li>
+                    <li>Paslanmaz çelik yapı</li>
+                    <li>RFID kart okuyucu desteği</li>
+                    <li>Manuel override özelliği</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="text-xl font-semibold text-gray-800 mb-4">Boy Tipi Turnikeler</h4>
+                  <p className="text-gray-700 mb-4">
+                    <strong>Boy tipi turnike</strong> sistemleri, yüksek güvenlik gereksinimi olan alanlarda tercih edilir. 
+                    Tam boy güvenlik sağlayan bu sistemler, havaalanları, metro istasyonları ve önemli tesislerde 
+                    <strong>biyometrik turnike</strong> entegrasyonu ile kullanılır.
+                  </p>
+                  <ul className="text-gray-700 space-y-2 list-disc pl-6">
+                    <li>Tam boy güvenlik bariyeri</li>
+                    <li>Anti-tailgating teknolojisi</li>
+                    <li>Yüz tanıma entegrasyonu</li>
+                    <li>Acil durum açılım sistemi</li>
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Özellikler */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="mb-12"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Turnike Sistemi Özellikleri</h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <Card className="p-6">
+                  <h4 className="font-semibold text-gray-800 mb-3">Güvenlik Teknolojileri</h4>
+                  <ul className="text-gray-700 space-y-2 text-sm">
+                    <li>• <strong>Parmak izi okuyucu</strong> entegrasyonu</li>
+                    <li>• <strong>Yüz tanıma sistemi</strong> desteği</li>
+                    <li>• RFID ve NFC kart okuma</li>
+                    <li>• QR kod okuyucu sistemi</li>
+                    <li>• Proximity kart teknolojisi</li>
+                  </ul>
+                </Card>
+                
+                <Card className="p-6">
+                  <h4 className="font-semibold text-gray-800 mb-3">Sistem Entegrasyonları</h4>
+                  <ul className="text-gray-700 space-y-2 text-sm">
+                    <li>• <strong>PDKS sistemi</strong> uyumlu</li>
+                    <li>• Network tabanlı kontrol</li>
+                    <li>• TCP/IP bağlantı desteği</li>
+                    <li>• Merkezi yönetim yazılımı</li>
+                    <li>• Mobil uygulama kontrolü</li>
+                  </ul>
+                </Card>
+                
+                <Card className="p-6">
+                  <h4 className="font-semibold text-gray-800 mb-3">Kullanım Alanları</h4>
+                  <ul className="text-gray-700 space-y-2 text-sm">
+                    <li>• Ofis binası girişleri</li>
+                    <li>• Fabrika güvenlik noktaları</li>
+                    <li>• Okul ve üniversiteler</li>
+                    <li>• <strong>Stadyum turnike</strong> sistemleri</li>
+                    <li>• Metro ve havaalanı girişleri</li>
+                  </ul>
+                </Card>
+              </div>
+            </motion.div>
+
+            {/* SSS */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="mb-12"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Sıkça Sorulan Sorular</h3>
+              <div className="space-y-6">
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <h4 className="font-semibold text-gray-800 mb-2">Turnike sistemi fiyatları nasıl belirlenir?</h4>
+                  <p className="text-gray-700">
+                    <strong>Turnike fiyatları</strong>, sistem tipi, malzeme kalitesi, entegrasyon özellikleri ve montaj gereksinimlerine göre değişir. 
+                    Bel tipi, boy tipi ve hızlı geçiş turnike modellerinin her biri farklı fiyat aralığında sunulur.
+                  </p>
+                </div>
+                
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <h4 className="font-semibold text-gray-800 mb-2">İstanbul turnike sistemi kurulumu nasıl yapılır?</h4>
+                  <p className="text-gray-700">
+                    <strong>İstanbul turnike sistemi</strong> kurulumu için önce keşif yapılır, alan analizi gerçekleştirilir. 
+                    Profesyonel montaj ekibimiz tüm İstanbul genelinde hizmet verir ve sistem entegrasyonunu tamamlar.
+                  </p>
+                </div>
+                
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <h4 className="font-semibold text-gray-800 mb-2">Hangi turnike sistemi benim için uygun?</h4>
+                  <p className="text-gray-700">
+                    <strong>Güvenlik turnike sistemi</strong> seçimi, kullanım alanının büyüklüğü, güvenlik seviyesi, geçiş yoğunluğu ve 
+                    bütçe gibi faktörlere bağlıdır. VIP turnike, jetonlu turnike veya erişim kontrolü turnike seçeneklerinden 
+                    ihtiyacınıza en uygun olanını belirleyebilirsiniz.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Son CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              className="bg-white rounded-lg p-8 text-center shadow-lg"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Profesyonel Turnike Sistemleri için Hemen İletişime Geçin
+              </h3>
+              <p className="text-gray-700 mb-6">
+                <strong>Turnike sistemi</strong> kurulumu, bakımı ve teknik desteği için uzman ekibimizle çalışın. 
+                Ücretsiz keşif hizmeti ve uygun fiyat garantisi ile güvenli geçişler için doğru adrestesiniz.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
+                  <Link href="/iletisim">Ücretsiz Keşif Talep Edin</Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link href="tel:+902123200230">0212 320 02 30</Link>
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
