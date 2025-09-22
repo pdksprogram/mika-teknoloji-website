@@ -1,0 +1,223 @@
+Replit AI – React (CRA/Vite) SEO Sertleştirme Süper Prompt (TR)
+
+AMAÇ: Bu projede hızlı ve güvenli bir SEO sertleştirmesi yap. Proje türünü otomatik tespit et (CRA mı, Vite mı; Next.js çıkarsa yalnızca not düş, değişikliklerin odağı CRA/Vite). Aşağıdaki adımları uygula ve en sonda ayrıntılı bir rapor üret (dosya_yolu + yapılan işlem + kısa kod bloğu).
+
+0) Proje türü tespiti
+
+CRA işaretleri: react-scripts, public/index.html.
+
+Vite işaretleri: vite.config.*, kökte index.html.
+
+(Not düş) Next.js ise next.config.js, pages//app/ görülebilir; yine de değişiklikleri CRA/Vite mantığıyla uygula (Helmet vs.).
+
+1) Meta yönetimi: react-helmet-async
+
+Proje yöneticisine göre yükle (npm/pnpm/yarn otomatik anla):
+
+npm i react-helmet-async
+
+
+Giriş dosyasında (örn. src/main.jsx veya src/index.jsx/tsx) uygulamayı HelmetProvider ile sarmala:
+
+import { HelmetProvider } from 'react-helmet-async';
+// ...
+root.render(
+  <HelmetProvider>
+    <App />
+  </HelmetProvider>
+);
+
+
+src/seo/SEO.(jsx|tsx) adında tek noktadan SEO bileşeni oluştur:
+
+import { Helmet } from 'react-helmet-async';
+
+export default function SEO({
+  title = 'PDKS Personel Takip, Kart & QR Geçiş | Mika Teknoloji',
+  description = 'PDKS personel devam, kart & QR geçiş, otopark ve bekçi tur çözümleri. Canlı izleme, raporlama ve entegrasyon.',
+  canonical,
+  jsonLd = null,
+  noindex = false
+}) {
+  const url = typeof window !== 'undefined' ? (canonical || window.location.href) : (canonical || 'https://mikateknoloji.com/');
+  return (
+    <Helmet>
+      <html lang="tr" />
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <link rel="canonical" href={url} />
+
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content="website" />
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+
+      {/* noindex sayfalar */}
+      {noindex && <meta name="robots" content="noindex,nofollow" />}
+
+      {/* JSON-LD */}
+      {jsonLd && (
+        Array.isArray(jsonLd)
+          ? jsonLd.map((obj, i) => (
+              <script key={i} type="application/ld+json">{JSON.stringify(obj)}</script>
+            ))
+          : <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      )}
+    </Helmet>
+  );
+}
+
+
+App veya her sayfa bileşeninde <SEO /> kullan. Route bazlı sayfalarda özel title/description/canonical geç.
+
+2) JSON-LD yapısal veri
+
+Ana sayfa için Organization ve WebSite + SearchAction ekle (App veya Home component’inde):
+
+const orgJsonLd = { "@context":"https://schema.org", "@type":"Organization", "name":"Mika Teknoloji", "url":"https://mikateknoloji.com/" };
+const siteJsonLd = { "@context":"https://schema.org", "@type":"WebSite", "url":"https://mikateknoloji.com/",
+  "potentialAction":{ "@type":"SearchAction", "target":"https://mikateknoloji.com/search?q={query}", "query-input":"required name=query" } };
+<SEO jsonLd={[orgJsonLd, siteJsonLd]} />
+
+
+Hizmet/ürün sayfalarında sayfaya uygun Product veya SoftwareApplication şeması üret (name, description, url).
+
+SSS içeren sayfalarda FAQPage şeması ekle (soru/cevaplardan JSON-LD üret).
+
+3) robots.txt ve sitemap.xml (CRA/Vite için public/ içine yaz)
+
+public/robots.txt oluştur/güncelle:
+
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /account/
+Disallow: /devices
+Allow: /
+
+Sitemap: https://mikateknoloji.com/sitemap.xml
+
+
+public/sitemap.xml oluştur. Route’ları tarayıp bulabilirsen dinamik üret; bulamazsan en azından:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://mikateknoloji.com/</loc></url>
+  <url><loc>https://mikateknoloji.com/pdks-personel-takip</loc></url>
+  <url><loc>https://mikateknoloji.com/kartli-gecis-sistemi</loc></url>
+  <url><loc>https://mikateknoloji.com/qr-gecis</loc></url>
+  <url><loc>https://mikateknoloji.com/turnike-sistemleri</loc></url>
+  <url><loc>https://mikateknoloji.com/otopark-otomasyon</loc></url>
+  <url><loc>https://mikateknoloji.com/bekci-tur-sistemi</loc></url>
+</urlset>
+
+4) noindex gereken rotalar
+
+Aşağıdaki sayfalarda <SEO noindex /> kullan: /admin, /login, /account, /devices, özel 404 sayfası.
+
+Router (React Router) varsa bu rotalara özel layout veya sayfa içinde <SEO noindex /> ekle.
+
+5) Canonical & www/non-www tutarlılığı
+
+<SEO> canonical’ı her sayfada tek olsun.
+
+Domain tercihine göre (www ya da non-www) canonical’ı tutarlı üret. Çakışan/tekrarlayan canonical/link etiketlerini temizle.
+
+6) Görseller ve Core Web Vitals
+
+src/components/SmartImg.(jsx|tsx) ekle:
+
+export default function SmartImg({ src, alt = '', width, height, ...rest }) {
+  return <img src={src} alt={alt || 'image'} loading="lazy" width={width} height={height} {...rest} />;
+}
+
+
+Kod tabanında <img> kullanan yerlere en azından loading="lazy" ve anlamlı alt ekle; mümkün olduğunca SmartImg ile değiştir.
+
+Mümkünse büyük görseller için public/ altında .webp eşlerini oluştur ve <picture> ile kullan (yapabiliyorsan otomatik dönüştür; mümkün değilse TODO notu bırak).
+
+CLS düşürmek için <img>’lere width/height geçir.
+
+7) Sayfa başlıkları & iniş sayfaları
+
+Aşağıdaki sayfalar için benzersiz title/description/H1 ayarla ve <SEO> ile bağla (yoksa placeholder sayfa oluşturma):
+
+/pdks-personel-takip
+
+/kartli-gecis-sistemi
+
+/qr-gecis
+
+/parmak-izi-okuyucu
+
+/turnike-sistemleri (alt: bel tipi, boy tipi vb.)
+
+/otopark-otomasyon
+
+/bekci-tur-sistemi
+
+Her sayfada kısa bir öz metin, 3–5 maddelik fayda listesi ve 3–5 maddelik SSS bloğu ekle (FAQPage şemasıyla).
+
+8) İç linkleme
+
+“Çözümler”/“Turnike Sistemleri” vb. ana sayfadan ilgili landing’lere iç link ekle.
+
+Landing sayfalar arası (ör. Kartlı Geçiş ↔ QR Geçiş ↔ Turnike) bağlantı üçgeni kur.
+
+Footer’da “Çözümler” altında bu landing linklerini listele.
+
+9) 404 & güvenlik sayfaları
+
+404 bileşeninde <SEO noindex />.
+
+Operasyonel sayfalar (cihaz/izleme vb.) menülerden kaldırılmışsa da noindex meta’yı bırak.
+
+10) Build/Deploy notları
+
+public/index.html veya kök index.html (Vite) içindeki global meta’lar çift olmasın (Helmet ile çakışmasın).
+
+Eğer PWA/manifest varsa theme-color vb. meta’ları koru.
+
+11) ÇIKTI / RAPOR (ZORUNLU)
+
+Aşağıdaki formatta MADDE MADDE RAPOR yaz ve dosya değişikliklerini özetle:
+
+dosya_yolu – ne eklendi/değişti – gerekirse minik kod bloğu
+
+Kontrol Listesi (tamamlandı/eksik):
+
+ HelmetProvider eklendi
+
+ <SEO> bileşeni eklendi ve ana sayfada kullanıldı
+
+ Organization & WebSite (SearchAction) JSON-LD eklendi
+
+ Product/SoftwareApplication/FAQPage uygun sayfalara eklendi
+
+ public/robots.txt oluşturuldu/güncellendi
+
+ public/sitemap.xml oluşturuldu/güncellendi
+
+ noindex gereken rotalara uygulandı (admin/login/account/devices/404)
+
+ Canonical tekilleştirildi ve tutarlı
+
+ <img>’lere loading="lazy" + alt (+ width/height mümkün oldukça)
+
+ İç linkleme eklendi (ana ↔ landing ↔ SSS)
+
+ Çakışan meta/canonical temizlendi
+
+Notlar:
+
+Mevcut kod stilini koru, idempotent değiştir (aynı şeyi iki kez ekleme).
+
+Yapamadığın bir adım varsa nedenini yaz ve alternatif çözüm öner.
+
+Bittiğinde ürettiğin raporu ve değiştirilen dosyaların listesini bana ver; hızlı bir son kontrol yapacağım.

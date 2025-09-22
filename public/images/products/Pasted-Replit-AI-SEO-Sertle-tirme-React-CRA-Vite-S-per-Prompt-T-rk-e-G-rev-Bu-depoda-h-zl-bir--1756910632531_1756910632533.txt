@@ -1,0 +1,202 @@
+Replit AI – SEO Sertleştirme (React / CRA / Vite) Süper Prompt (Türkçe)
+
+Görev: Bu depoda hızlı bir SEO sertleştirmesi yap. Projenin türünü otomatik tespit et (Next.js varsa not al; ama öncelik CRA/Vite). Aşağıdaki maddeleri uygula, her değişiklik için dosya yolu + kısa açıklama ile rapor yaz.
+
+0) Proje türünü tespit et
+
+CRA: react-scripts içeren package.json, public/index.html vb.
+
+Vite: vite.config.*, index.html kökte, npm run dev Vite.
+
+(Sadece bilgi için) Next: next.config.js, pages/ veya app/.
+
+Next çıkarsa not düş ama müdahale etme; asıl değişiklikleri CRA/Vite için uygula.
+
+1) Meta yönetimi: react-helmet-async
+
+npm i react-helmet-async (veya pnpm/yarn projeye göre)
+
+index.(js|tsx) içinde uygulamayı HelmetProvider ile sarmala:
+
+import { HelmetProvider } from 'react-helmet-async';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <HelmetProvider>
+    <App />
+  </HelmetProvider>
+);
+
+
+src/seo/SEO.(jsx|tsx) oluştur: varsayılan başlık, açıklama, canonical, OG/Twitter, JSON-LD ekleyebileceğimiz tek bir bileşen.
+
+import { Helmet } from 'react-helmet-async';
+
+export default function SEO({
+  title = 'PDKS Personel Takip, Kart & QR Geçiş | Mika Teknoloji',
+  description = 'PDKS personel devam, kart & QR geçiş, otopark ve bekçi tur çözümleri. Canlı izleme, raporlama ve entegrasyon.',
+  canonical = typeof window !== 'undefined' ? window.location.href : 'https://pdkspersoneltakip.com/',
+  jsonLd = null
+}) {
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <link rel="canonical" href={canonical} />
+
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={canonical} />
+      <meta property="og:type" content="website" />
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+
+      {/* JSON-LD */}
+      {jsonLd && (
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      )}
+    </Helmet>
+  );
+}
+
+
+src/App.(jsx|tsx) veya router tabanlı sayfa bileşenlerinde <SEO />’yu kullan. Özel sayfalarda title/description/canonical props ver.
+
+2) JSON-LD Yapısal Veri (Ana sayfa)
+
+Organization ve Website+SearchAction şemalarını ana sayfada kullan:
+
+const orgJsonLd = {
+ "@context":"https://schema.org",
+ "@type":"Organization",
+ "name":"Mika Teknoloji",
+ "url":"https://pdkspersoneltakip.com/"
+};
+const siteJsonLd = {
+ "@context":"https://schema.org",
+ "@type":"WebSite",
+ "url":"https://pdkspersoneltakip.com/",
+ "potentialAction":{
+   "@type":"SearchAction",
+   "target":"https://pdkspersoneltakip.com/search?q={query}",
+   "query-input":"required name=query"
+ }
+};
+<SEO jsonLd={[orgJsonLd, siteJsonLd]} />
+
+
+Ürün/hizmet sayfaları varsa Product veya SoftwareApplication şeması ekle (ad, kısa açıklama, URL).
+
+3) robots.txt ve sitemap.xml
+
+CRA/Vite’de public/ klasörüne aşağıdaki dosyaları yaz:
+public/robots.txt
+
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /account/
+Disallow: /devices
+Disallow: /ViewOnlineDevices.aspx
+Allow: /
+
+Sitemap: https://pdkspersoneltakip.com/sitemap.xml
+
+
+public/sitemap.xml – mümkünse route’ları/src altını tarayıp link üret; bulamazsan en azından şu yolları koy:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://pdkspersoneltakip.com/</loc></url>
+  <url><loc>https://pdkspersoneltakip.com/pdks-personel-takip</loc></url>
+  <url><loc>https://pdkspersoneltakip.com/kartli-gecis-sistemi</loc></url>
+  <url><loc>https://pdkspersoneltakip.com/qr-gecis</loc></url>
+  <url><loc>https://pdkspersoneltakip.com/otopark-otomasyon</loc></url>
+  <url><loc>https://pdkspersoneltakip.com/bekci-tur-sistemi</loc></url>
+</urlset>
+
+
+404/özel operasyon sayfalarına noindex ver (bkz. 4. madde).
+
+4) noindex gereken sayfalar
+
+/admin, /login, /account, /devices, /ViewOnlineDevices.aspx gibi operasyonel veya gizlilik gerektiren rotalarda:
+
+<Helmet>
+  <meta name="robots" content="noindex,nofollow" />
+</Helmet>
+
+
+Not: 404 sayfasında da noindex,nofollow meta kullan.
+
+5) Canonical tutarlılığı
+
+<SEO canonical> varsayılanı window.location.href ile ayarlanıyor.
+
+Aynı sayfada birden fazla canonical varsa temizle.
+
+www/non-www tekliğini bozma (domain neyse ona göre canonical üret).
+
+6) Görseller ve performans detayları
+
+Tüm <img> etiketlerine loading="lazy" ekle; alt boşsa dosya adına göre anlamlı bir alt üret.
+
+<img>’lerde width/height ekle (CLS düşürür).
+
+Eğer public/images vb. varsa, 300 KB üzeri görseller için .webp alternatifi üret ve <picture> ile sun (yapabiliyorsan). Bulamazsan en azından lazy + width/height yap.
+
+Örnek yardımcı bileşen:
+
+export function SmartImg({src, alt='', ...rest}) {
+  return <img src={src} alt={alt || 'image'} loading="lazy" {...rest} />;
+}
+
+
+Kod taramasıyla mevcut <img> kullanımlarını mümkün olduğunca SmartImg ile değiştir veya loading="lazy" ekle.
+
+7) Route bazlı başlık/açıklama (React Router varsa)
+
+src/routes.(ts|js) gibi bir yapı varsa her route için title/desc ekle.
+
+Yoksa sayfa bileşenlerinde <SEO title="..." description="..." /> kullan.
+
+8) Build/Deploy kontrolleri
+
+CRA: public/index.html içindeki <head>’te aynı meta’ları çiftlemeyin.
+
+Vite: kök index.html içinde global meta varsa Helmet ile çakışmasını engelle (global minimal bırak, route’lar Helmet ile yönetilsin).
+
+9) Çıktı / Rapor (zorunlu)
+
+Yaptığın değişiklikleri madde madde raporla:
+
+dosya_yolu – “ne eklendi/değişti” – gerekiyorsa kısa kod bloğu.
+
+Sonda Kontrol Listesi yaz ve “tamamlandı” olarak işaretle:
+
+HelmetProvider eklendi
+
+<SEO> bileşeni eklendi, ana sayfaya bağlandı
+
+Organization & Website JSON-LD eklendi
+
+robots.txt oluşturuldu
+
+sitemap.xml oluşturuldu/güncellendi
+
+noindex gereken rotalara meta eklendi (admin/login/account/devices/404…)
+
+img’lere loading="lazy" + alt + mümkünse width/height
+
+Canonical tekilleştirildi
+
+Önemli Notlar:
+
+Mevcut kod stilini koru; yinelenen meta’ları temizle.
+
+Değişiklikleri idempotent yap (aynı şeyi iki kez ekleme).
+
+Yapamadığın yerleri raporda belirt ve kısa alternatif öner.
