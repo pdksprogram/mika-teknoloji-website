@@ -9,20 +9,20 @@ export const IMAGES = {
   t7: "/attached_assets/image_1758022450183.png", // Jetonlu turnikeler (YENİ)
 } as const;
 
-// Bel Tipi Turnike Modelleri - Object Storage ile production hosting
+// Bel Tipi Turnike Modelleri - Parmak izi gibi direkt yol kullanımı
 export const BEL_TURNIKE_IMAGES = {
-  bt1: "/public-objects/turnstiles/mt-250-elektromekanik.png", // MT-250 Elektromekanik 
-  bt2: "/public-objects/turnstiles/mt-250-eco.png", // MT-250 ECO 
-  bt3: "/public-objects/turnstiles/mt-250-a2.png", // MT-250 A2 
-  bt4: "/public-objects/turnstiles/mt-250-a2-eco.png", // MT-250 A2 ECO 
-  bt5: "/public-objects/turnstiles/mt-250-gt.png", // MT-250 GT 
-  bt6: "/public-objects/turnstiles/mt-345.png", // MT-345 
-  bt7: "/public-objects/turnstiles/mt-345-eco.png", // MT-345 ECO 
-  bt8: "/public-objects/turnstiles/mt-250-s.png", // MT-250 S 
-  bt9: "/public-objects/turnstiles/mt-450.png", // MT-450 
-  bt10: "/public-objects/turnstiles/mt-281.png", // MT-281 
-  bt11: "/public-objects/turnstiles/mt-250-jetonlu.png", // MT-250 Jetonlu 
-  bt12: "/public-objects/turnstiles/mt-345-jetonlu.png", // MT-345 Jetonlu 
+  bt1: "/mt-250-elektromekanik.png", // MT-250 Elektromekanik 
+  bt2: "/mt-250-eco.png", // MT-250 ECO 
+  bt3: "/mt-250-a2.png", // MT-250 A2 
+  bt4: "/mt-250-a2-eco.png", // MT-250 A2 ECO 
+  bt5: "/mt-250-gt.png", // MT-250 GT 
+  bt6: "/mt-345.png", // MT-345 
+  bt7: "/mt-345-eco.png", // MT-345 ECO 
+  bt8: "/mt-250-s.png", // MT-250 S 
+  bt9: "/mt-450.png", // MT-450 
+  bt10: "/mt-281.png", // MT-281 
+  bt11: "/mt-250-jetonlu.png", // MT-250 Jetonlu 
+  bt12: "/mt-345-jetonlu.png", // MT-345 Jetonlu 
 } as const;
 
 export type ImageKey = keyof typeof IMAGES;
