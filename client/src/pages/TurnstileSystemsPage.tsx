@@ -3,14 +3,15 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
+import { IMAGES } from "@/assetsMap";
 
-// Turnike kategori görselleri - Public klasörüne kopyalanmış gerçek resimler
-const belTipiTurnike = "/bel-tipi-turnike.png";
-const boyTipiTurnike = "/boy-tipi-turnike.png";
-const engelliTurnike = "/engelli-turnike.png";
-const hizliGecisTurnike = "/hizli-gecis-turnike.png";
-const hijyenTurnike = "/hijyen-turnike.png";
-const jetonluTurnike = "/jetonlu-turnike.png";
+// Turnike kategori görselleri - Parmak izi gibi gerçek resimler
+const belTipiTurnike = IMAGES.t3; // Bel tipi turnike cihazları
+const boyTipiTurnike = IMAGES.t2; // Boy tipi turnike sistemi
+const engelliTurnike = IMAGES.t4; // Engelli turnikeleri
+const hizliGecisTurnike = IMAGES.t5; // Hızlı geçiş turnikeleri
+const hijyenTurnike = IMAGES.t6; // Hijyen turnikeleri
+const jetonluTurnike = IMAGES.t7; // Jetonlu turnikeler
 
 // Referans görselleri (placeholder)
 const referans1 = "/Modern_turnstile_security_system_b933269f.png";
