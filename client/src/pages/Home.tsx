@@ -180,7 +180,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6" data-testid="main-heading">
-              1990'dan Beri Türkiye'nin Lider PDKS Sistemi
+              Personel Devam Kontrol Sistemi - PDKS ve Parmak İzi Takip
             </h1>
             <div className="flex flex-wrap justify-center gap-6 mb-6">
               <div className="bg-pink-50 px-4 py-2 rounded-full">
@@ -194,7 +194,7 @@ export default function Home() {
               </div>
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4" data-testid="features-title">
-              Personel Devam Kontrol Sistemi, Parmak İzi Takip ve Yüz Tanıma Çözümleri
+              1990'dan Beri Türkiye'nin Lider PDKS - Yüz Tanıma ve Güvenlik Teknolojileri
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-8">
               MT1100, MTP50, MTFDP200, MTFD15 serisi cihazlarımız ile 20.000 kapasite, TCP/IP, Wi-Fi desteği. 
@@ -303,7 +303,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              Sektörün En İyi Markalarının Tercihi
+              Mika Teknoloji PDKS - Sektörün En İyi Markalarının Tercihi
             </h2>
             <p className="text-lg text-slate-600 mb-8">
               30 yıllık tecrübemiz, sunduğu ürün ve hizmet kalitesi ile Türkiye'nin en büyük şirketlerinden KOBİ'lere kadar binlerce başarılı proje
