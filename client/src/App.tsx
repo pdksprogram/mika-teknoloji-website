@@ -34,6 +34,10 @@ import EngelliTurnikePage from "@/pages/EngelliTurnikePage";
 import MTSC324BVIPDetailPage from "@/pages/MTSC324BVIPDetailPage";
 import MT230MVIPSlimDetailPage from "@/pages/MT230MVIPSlimDetailPage";
 import MTT80YaprakDetailPage from "@/pages/MTT80YaprakDetailPage";
+import HizliGecisPage from "@/pages/HizliGecisPage";
+import MTT300HG20DetailPage from "@/pages/MTT300HG20DetailPage";
+import MTT300HG40DetailPage from "@/pages/MTT300HG40DetailPage";
+import MTT300SlimKisaDetailPage from "@/pages/MTT300SlimKisaDetailPage";
 import MT250DetailPage from "@/pages/MT250DetailPage";
 import T250EcoDetailPage from "@/pages/T250EcoDetailPage";
 import T345DetailPage from "@/pages/T345DetailPage";
@@ -73,11 +77,17 @@ function Router() {
       <Route path="/urunler/bel-tipi-turnike" component={BelTipeTurnikePage} />
       <Route path="/urunler/boy-tipi-turnike" component={BoyTipeTurnikePage} />
       <Route path="/urunler/engelli-turnike" component={EngelliTurnikePage} />
+      <Route path="/urunler/hizli-gecis-turnike" component={HizliGecisPage} />
       
       {/* Engelli Turnike Detay Sayfaları */}
       <Route path="/urunler/mt-sc324b-vip-turnike" component={MTSC324BVIPDetailPage} />
       <Route path="/urunler/mt-230mvip-slim-vip-turnike" component={MT230MVIPSlimDetailPage} />
       <Route path="/urunler/mt-t80-yaprak-turnike" component={MTT80YaprakDetailPage} />
+      
+      {/* Hızlı Geçiş Turnike Detay Sayfaları */}
+      <Route path="/urunler/hizli-gecis-t300-hg20-detay" component={MTT300HG20DetailPage} />
+      <Route path="/urunler/hizli-gecis-t300-hg40-detay" component={MTT300HG40DetailPage} />
+      <Route path="/urunler/hizli-gecis-t300-slim-kisa-detay" component={MTT300SlimKisaDetailPage} />
       <Route path="/urunler/mt-250-turnike" component={MT250DetailPage} />
       <Route path="/urunler/t250-eco-turnike" component={T250EcoDetailPage} />
       <Route path="/urunler/t345-turnike" component={T345DetailPage} />
