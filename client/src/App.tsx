@@ -38,6 +38,12 @@ import HizliGecisPage from "@/pages/HizliGecisPage";
 import MTT300HG20DetailPage from "@/pages/MTT300HG20DetailPage";
 import MTT300HG40DetailPage from "@/pages/MTT300HG40DetailPage";
 import MTT300SlimKisaDetailPage from "@/pages/MTT300SlimKisaDetailPage";
+import MTT300HG20ChubbyDetailPage from "@/pages/MTT300HG20ChubbyDetailPage";
+import MTT350HG60DetailPage from "@/pages/MTT350HG60DetailPage";
+import MTT350HG60ChubbyDetailPage from "@/pages/MTT350HG60ChubbyDetailPage";
+import MTT300HG120DetailPage from "@/pages/MTT300HG120DetailPage";
+import MTT300HG120ChubbyDetailPage from "@/pages/MTT300HG120ChubbyDetailPage";
+import MTT300SlimUzunDetailPage from "@/pages/MTT300SlimUzunDetailPage";
 import MT250DetailPage from "@/pages/MT250DetailPage";
 import T250EcoDetailPage from "@/pages/T250EcoDetailPage";
 import T345DetailPage from "@/pages/T345DetailPage";
@@ -86,8 +92,14 @@ function Router() {
       
       {/* Hızlı Geçiş Turnike Detay Sayfaları */}
       <Route path="/urunler/hizli-gecis-t300-hg20-detay" component={MTT300HG20DetailPage} />
+      <Route path="/urunler/hizli-gecis-t300-hg20-chubby-detay" component={MTT300HG20ChubbyDetailPage} />
       <Route path="/urunler/hizli-gecis-t300-hg40-detay" component={MTT300HG40DetailPage} />
+      <Route path="/urunler/hizli-gecis-t350-hg60-detay" component={MTT350HG60DetailPage} />
+      <Route path="/urunler/hizli-gecis-t350-hg60-chubby-detay" component={MTT350HG60ChubbyDetailPage} />
+      <Route path="/urunler/hizli-gecis-t300-hg120-detay" component={MTT300HG120DetailPage} />
+      <Route path="/urunler/hizli-gecis-t300-hg120-chubby-detay" component={MTT300HG120ChubbyDetailPage} />
       <Route path="/urunler/hizli-gecis-t300-slim-kisa-detay" component={MTT300SlimKisaDetailPage} />
+      <Route path="/urunler/hizli-gecis-t300-slim-uzun-detay" component={MTT300SlimUzunDetailPage} />
       <Route path="/urunler/mt-250-turnike" component={MT250DetailPage} />
       <Route path="/urunler/t250-eco-turnike" component={T250EcoDetailPage} />
       <Route path="/urunler/t345-turnike" component={T345DetailPage} />

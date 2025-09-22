@@ -273,7 +273,18 @@ export default function HizliGecisPage() {
                         {model.price}
                       </div>
                       <Button asChild size="sm" className="bg-primary hover:bg-primary/90">
-                        <Link href={`/urunler/hizli-gecis-${model.id.replace('mt-', '')}-detay`}>
+                        <Link href={
+                          model.id === "mt-t300-hg20" ? "/urunler/hizli-gecis-t300-hg20-detay" :
+                          model.id === "mt-t300-hg20-chubby" ? "/urunler/hizli-gecis-t300-hg20-chubby-detay" :
+                          model.id === "mt-t300-hg40" ? "/urunler/hizli-gecis-t300-hg40-detay" :
+                          model.id === "mt-t350-hg60" ? "/urunler/hizli-gecis-t350-hg60-detay" :
+                          model.id === "mt-t350-hg60-chubby" ? "/urunler/hizli-gecis-t350-hg60-chubby-detay" :
+                          model.id === "mt-t300-hg120" ? "/urunler/hizli-gecis-t300-hg120-detay" :
+                          model.id === "mt-t300-hg120-chubby" ? "/urunler/hizli-gecis-t300-hg120-chubby-detay" :
+                          model.id === "mt-t300-slim-kisa" ? "/urunler/hizli-gecis-t300-slim-kisa-detay" :
+                          model.id === "mt-t300-slim-uzun" ? "/urunler/hizli-gecis-t300-slim-uzun-detay" :
+                          "#"
+                        }>
                           Detay
                         </Link>
                       </Button>
