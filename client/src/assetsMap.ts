@@ -59,4 +59,17 @@ export const ENGELLI_TURNIKE_IMAGES = {
   et9: `/turnike-seperator.jpg?t=${CACHE_BUST}`, // MT Turnike Seperatör
 } as const;
 
+// Hızlı Geçiş Turnike Modelleri - BETAPER.COM'dan alınan gerçek resimler
+export const HIZLI_GECIS_TURNIKE_IMAGES = {
+  hg1: `/t-300-hg20-hizli-gecis-turnikesi.jpg?t=${CACHE_BUST}`, // MT T300 HG20 Hızlı Geçiş
+  hg2: `/t-300-hg20-chubby-hizli-gecis-turnikesi.jpg?t=${CACHE_BUST}`, // MT T300 HG20 Chubby Hızlı Geçiş
+  hg3: `/t-300-hg40-hizli-gecis-turnikesi.jpg?t=${CACHE_BUST}`, // MT T300 HG40 Hızlı Geçiş
+  hg4: `/t-300-hg60-hizli-gecis-turnikesi.jpg?t=${CACHE_BUST}`, // MT T350 HG60 Hızlı Geçiş
+  hg5: `/t-350-hg60-chubby-hizli-gecis-turnikesi.jpg?t=${CACHE_BUST}`, // MT T350 HG60 Chubby Hızlı Geçiş
+  hg6: `/t-300-hg120-hizli-gecis-turnikesi.jpg?t=${CACHE_BUST}`, // MT T300 HG120 Hızlı Geçiş
+  hg7: `/t-300-hg120-chubby-hizli-gecis-turnikesi.jpg?t=${CACHE_BUST}`, // MT T300 HG120 Chubby Hızlı Geçiş
+  hg8: `/t-hg-slim-kisa-single.jpg?t=${CACHE_BUST}`, // MT T300 HG SLIM Kısa Hızlı Geçiş
+  hg9: `/t-hg-slim-uzun-single-turnike.jpg?t=${CACHE_BUST}`, // MT T300 HG SLIM Uzun Hızlı Geçiş
+} as const;
+
 export type ImageKey = keyof typeof IMAGES;
