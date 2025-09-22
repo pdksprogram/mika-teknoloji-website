@@ -17,35 +17,35 @@ export default function BelTipeTurnikePage() {
   const belTurnikeModelleri = [
     {
       id: "t250",
-      model: "MT-250",
+      model: "T 250",
       title: "Elektromekanik Bel Tipi Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt1,
-      features: ["Paslanmaz Çelik Gövde", "Elektromekanik Kontrol", "Manuel/Otomatik Mod", "LED Yönlendirme"],
+      features: ["Paslanmaz Çelik Gövde", "Elektromekanik Kontrol Sistemi", "Manuel/Otomatik Çalışma Modu", "LED Yönlendirme Işıkları", "Güvenlik Sensörleri", "Kartlı/Şifreli Okuyucu Desteği"],
       price: "Fiyat İçin Ara",
-      description: "Standart kullanım alanları için ideal ekonomik çözüm."
+      description: "Ofisler, küçük işletmeler ve standart güvenlik gereksinimleri olan alanlar için tasarlanmış güvenilir ve ekonomik turnike sistemi."
     },
     {
       id: "t250-eco",
-      model: "MT-250 ECO",
-      title: "Ekonomik Bel Tipi Turnike Sistemi",
+      model: "T 250 ECO",
+      title: "Ekonomik Elektromekanik Bel Tipi Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt2,
-      features: ["Ekonomik Çözüm", "Dayanıklı Yapı", "Kolay Kurulum", "Düşük Bakım"],
+      features: ["Ekonomik Çözüm", "Dayanıklı Paslanmaz Çelik Yapı", "Kolay Kurulum ve Bakım", "Düşük Enerji Tüketimi", "Temel Güvenlik Özellikleri"],
       price: "Fiyat İçin Ara",
-      description: "Küçük işletmeler için uygun fiyatlı güvenlik çözümü."
+      description: "Bütçe dostu fiyatıyla küçük işletmeler, okullar ve kamu binalarında temel geçiş kontrolü sağlayan ekonomik turnike modeli."
     },
     {
       id: "t250-a2",
-      model: "MT-250 A2",
-      title: "Gelişmiş Bel Tipi Turnike Sistemi",
+      model: "T 250 A2",
+      title: "Elektromekanik Bel Tipi Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt3,
-      features: ["İki Yönlü Geçiş", "Akıllı Sensörler", "Anti-Tailgating", "Alarm Sistemi"],
+      features: ["İki Yönlü Geçiş Kontrolü", "Akıllı Güvenlik Sensörleri", "Anti-Tailgating Teknolojisi", "Sesli ve Görsel Alarm", "Akıllı Kart Okuyucu", "Uzaktan İzleme"],
       price: "Fiyat İçin Ara",
-      description: "Yüksek güvenlik gereken alanlar için gelişmiş özellikler."
+      description: "Havalimanları, üniversiteler ve yüksek güvenlik gerektiren kurumsal binalar için çift yönlü kontrol sağlayan gelişmiş turnike sistemi."
     },
     {
       id: "t250-a2-eco",
-      model: "MT-250 A2 ECO",
-      title: "Ekonomik İki Yönlü Turnike Sistemi",
+      model: "T 250 A2 ECO",
+      title: "Ekonomik Elektromekanik Bel Tipi Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt4,
       features: ["İki Yönlü Kontrol", "Ekonomik Fiyat", "Güvenilir Çalışma", "Kolay Bakım"],
       price: "Fiyat İçin Ara",
@@ -53,26 +53,26 @@ export default function BelTipeTurnikePage() {
     },
     {
       id: "t250-gt",
-      model: "MT-250 GT",
-      title: "Premium Üç Kollu Turnike Sistemi",
+      model: "T 250 GT",
+      title: "Elektromekanik Üç Kollu Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt5,
-      features: ["Premium Tasarım", "Sessiz Çalışma", "Hızlı Geçiş", "Estetik Görünüm"],
+      features: ["Premium Paslanmaz Çelik Tasarım", "Sessiz Elektromekanik Motor", "Hızlı ve Pürüssüz Geçiş", "Modern Estetik Görünüm", "LED Durum Göstergeleri", "Darbe Emici Sistem"],
       price: "Fiyat İçin Ara",
-      description: "Prestijli mekanlar için estetik ve fonksiyonel çözüm."
+      description: "Lux otel girişleri, prestijli ofis binaları ve VIP alanlar için estetik tasarımı ile öne çıkan premium turnike modeli."
     },
     {
       id: "t345",
-      model: "MT-345",
-      title: "Endüstriyel Bel Tipi Turnike Sistemi",
+      model: "T 345",
+      title: "Elektromekanik Bel Tipi Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt6,
-      features: ["Endüstriyel Dayanım", "Yoğun Kullanım", "Çevre Direnci", "Güçlü Motor"],
+      features: ["Endüstriyel Dayanıklılık", "Yoğun Trafik Kapsitesi", "Su ve Toz Direnci", "Güçlü Servo Motor", "Ağır Hizmet Tipi Mekanizma", "24/7 Kesintisiz Çalışma"],
       price: "Fiyat İçin Ara",
-      description: "Fabrika ve endüstriyel tesisler için dayanıklı sistem."
+      description: "Fabrikalar, endüstriyel tesisler ve ağır sanayi alanında günde binlerce geçişe dayanıklı profesyonel turnike sistemi."
     },
     {
       id: "t345-eco",
-      model: "MT-345 ECO",
-      title: "Ekonomik Endüstriyel Turnike",
+      model: "T 345 ECO",
+      title: "Ekonomik Elektromekanik Bel Tipi Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt7,
       features: ["Dayanıklı Yapı", "Uygun Fiyat", "Endüstriyel Kullanım", "Kolay Montaj"],
       price: "Fiyat İçin Ara",
@@ -80,8 +80,8 @@ export default function BelTipeTurnikePage() {
     },
     {
       id: "t250-s",
-      model: "MT-250 S",
-      title: "Kompakt Bel Tipi Turnike Sistemi",
+      model: "T 250 S",
+      title: "Elektromekanik Bel Tipi Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt8,
       features: ["Kompakt Tasarım", "Az Yer Kaplar", "Esnek Kurulum", "Hızlı Geçiş"],
       price: "Fiyat İçin Ara",
@@ -89,8 +89,8 @@ export default function BelTipeTurnikePage() {
     },
     {
       id: "t450",
-      model: "MT-450",
-      title: "Yüksek Kapasiteli Turnike Sistemi",
+      model: "T 450",
+      title: "Elektromekanik Bel Tipi Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt9,
       features: ["Yüksek Kapasite", "Hızlı Geçiş", "Yoğun Trafik", "Güçlü Performans"],
       price: "Fiyat İçin Ara",
@@ -98,8 +98,8 @@ export default function BelTipeTurnikePage() {
     },
     {
       id: "t281",
-      model: "MT-281",
-      title: "Özel Tasarım Turnike Sistemi",
+      model: "T 281",
+      title: "Elektromekanik Bel Tipi Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt10,
       features: ["Özel Tasarım", "Kişiye Özel", "Estetik Çözüm", "Markalama"],
       price: "Fiyat İçin Ara",
@@ -107,17 +107,17 @@ export default function BelTipeTurnikePage() {
     },
     {
       id: "t250-jetonlu",
-      model: "MT-250 Jetonlu",
-      title: "Jetonlu Turnike Sistemi",
+      model: "T 250",
+      title: "Jetonlu Turnike Sistemi (WC Turnikesi)",
       image: BEL_TURNIKE_IMAGES.bt11,
-      features: ["Jeton Okuyucu", "Para Kasası", "Otomatik Tahsilat", "WC Turnikesi"],
+      features: ["Jeton Okuyucu Sistemi", "Güvenli Para Kasası", "Otomatik Tahsilat Sistemi", "WC ve Tuvalet Turnikesi", "Para Üstü Verme", "Kullanım Sayısı Raporu"],
       price: "Fiyat İçin Ara",
       description: "Ücretli geçişler için jetonlu tahsilat sistemi."
     },
     {
       id: "t345-jetonlu",
-      model: "MT-345 Jetonlu",
-      title: "Gelişmiş Jetonlu Turnike",
+      model: "T 345",
+      title: "Jetonlu Turnike Sistemi (WC Turnikesi)",
       image: BEL_TURNIKE_IMAGES.bt12,
       features: ["Çoklu Ödeme", "Dijital Ekran", "Para Üstü", "Rapor Sistemi"],
       price: "Fiyat İçin Ara",
@@ -127,12 +127,12 @@ export default function BelTipeTurnikePage() {
 
 
   const referansResimler = [
-    "/attached_assets/image_1758019216490.png",
-    "/attached_assets/image_1758020107295.png",
-    "/attached_assets/image_1758019726366.png",
-    "/attached_assets/image_1758020186900.png",
-    "/attached_assets/image_1758022229658.png",
-    "/attached_assets/image_1758022307099.png"
+    "/ref-1.png",
+    "/ref-2.png", 
+    "/ref-3.png",
+    "/ref-4.png",
+    "/ref-5.png",
+    "/ref-6.png"
   ];
 
   return (
