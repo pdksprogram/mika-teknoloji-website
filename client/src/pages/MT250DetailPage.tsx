@@ -76,12 +76,12 @@ export default function MT250DetailPage() {
   ];
 
   const referansResimler = [
-    "/images/products/image_1758019216490.png",
-    "/images/products/image_1758020107295.png", 
-    "/images/products/image_1758019726366.png",
-    "/images/products/image_1758020186900.png",
-    "/images/products/image_1758022229658.png",
-    "/images/products/image_1758022307099.png"
+    "/attached_assets/image_1758019216490.png",
+    "/attached_assets/image_1758020107295.png", 
+    "/attached_assets/image_1758019726366.png",
+    "/attached_assets/image_1758020186900.png",
+    "/attached_assets/image_1758022229658.png",
+    "/attached_assets/image_1758022307099.png"
   ];
 
   return (

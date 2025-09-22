@@ -2,11 +2,11 @@ import { Building, Users, Award, Globe, Timer, Smartphone, ArrowRight, Shield, D
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import teamPhoto from "@assets/images/products/image_1756822202470.png";
-import gamzePhoto from "@assets/images/products/image_1756823252649.png";
-import hierarchyPhoto from "@assets/images/products/image_1756823893243.png";
-import suphiPhoto from "@assets/images/products/image_1756824630814.png";
-import yasinPhoto from "@assets/images/products/image_1756824767420.png";
+// Removed problematic import
+// Removed problematic import
+// Removed problematic import
+// Removed problematic import
+// Removed problematic import
 
 export default function About() {
   const stats = [
@@ -470,7 +470,7 @@ export default function About() {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="aspect-square md:aspect-auto">
                   <img 
-                    src={gamzePhoto} 
+                    src="/attached_assets/image_1756823252649.png" 
                     alt="Gamze Deniz Toksoy - Yazılım Müdürü" 
                     className="w-full h-full object-cover"
                     data-testid="leadership-photo"
@@ -541,7 +541,7 @@ export default function About() {
               <div className="p-8 text-center bg-gradient-to-br from-slate-50 to-slate-100">
                 <div className="mb-6">
                   <img 
-                    src={hierarchyPhoto} 
+                    src="/attached_assets/image_1756823893243.png" 
                     alt="Şirket Hiyerarşisi" 
                     className="w-48 h-48 rounded-full mx-auto object-cover shadow-lg"
                     data-testid="hierarchy-photo"
@@ -619,7 +619,7 @@ export default function About() {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="aspect-square md:aspect-auto">
                   <img 
-                    src={suphiPhoto} 
+                    src="/attached_assets/image_1756824630814.png" 
                     alt="Suphi Gezgin - Mobil Yazılım Uzmanı" 
                     className="w-full h-full object-cover"
                     data-testid="suphi-photo"
@@ -705,7 +705,7 @@ export default function About() {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="aspect-square md:aspect-auto">
                   <img 
-                    src={yasinPhoto} 
+                    src="/attached_assets/image_1756824767420.png" 
                     alt="Yasin Atılgan - Satış Müdürü" 
                     className="w-full h-full object-cover"
                     data-testid="yasin-photo"
@@ -786,7 +786,7 @@ export default function About() {
           </h2>
           <div className="max-w-5xl mx-auto">
             <img 
-              src={teamPhoto} 
+              src="/attached_assets/image_1756822202470.png" 
               alt="Mika Teknoloji Ekibi" 
               className="w-full rounded-2xl shadow-2xl"
               data-testid="team-photo"

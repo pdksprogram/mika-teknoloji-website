@@ -1,5 +1,4 @@
 import express, { type Request, Response, NextFunction } from "express";
-import path from "path";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
@@ -51,9 +50,6 @@ app.use((req, res, next) => {
   // importantly only setup vite in development and after
   // setting up all the other routes so the catch-all route
   // doesn't interfere with the other routes
-  // Add static file serving for public folder
-  app.use('/images', express.static(path.resolve(import.meta.dirname, '..', 'public', 'images')));
-  
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {

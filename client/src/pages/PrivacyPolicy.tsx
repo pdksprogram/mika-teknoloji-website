@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Shield, FileText, Eye, Lock } from "lucide-react";
-import mikaLogo from "@assets/images/products/mika_1756450206871.jpg";
+// Removed problematic import
 
 export default function PrivacyPolicy() {
   return (
@@ -21,7 +21,7 @@ export default function PrivacyPolicy() {
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center space-x-4">
               <img 
-                src={mikaLogo} 
+                src="/attached_assets/mika_1756450206871.jpg" 
                 alt="Mika Teknoloji Logo" 
                 className="w-16 h-16 rounded-lg object-contain"
               />
@@ -166,7 +166,7 @@ export default function PrivacyPolicy() {
               <div className="flex flex-col md:flex-row items-center justify-between">
                 <div className="flex items-center space-x-4 mb-4 md:mb-0">
                   <img 
-                    src={mikaLogo} 
+                    src="/attached_assets/mika_1756450206871.jpg" 
                     alt="Mika Teknoloji" 
                     className="w-12 h-12 rounded-lg object-contain"
                   />

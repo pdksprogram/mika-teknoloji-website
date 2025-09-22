@@ -1,17 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, MapPin, Award, CheckCircle, Star } from 'lucide-react';
-import lufianImage from '@assets/images/products/lufian_1756448337411.jpg';
-import adoreImage from '@assets/images/products/Adore_1756448779641.jpeg';
-import kolumanImage from '@assets/images/products/Koluman_1756449232926.jpg';
-import hastaneImage from '@assets/images/products/HastaneAnlatlya_1756449609923.jpg';
-import cerrahpasaImage from '@assets/images/products/istanbulcrrrahpasa_1756450001262.jpg';
+import { Users, MapPin, Star } from 'lucide-react';
+// Removed problematic import
+// Removed problematic import
+// Removed problematic import
+// Removed problematic import
+// Removed problematic import
 
 const customers = [
   {
     id: 1,
     name: "Lufian",
-    logo: lufianImage,
+    logo: "/attached_assets/lufian_1756448337411.jpg",
     employees: 400,
     locations: 80,
     sector: "Tekstil & Moda",
@@ -23,7 +23,7 @@ const customers = [
   {
     id: 2,
     name: "Adore Mobilya",
-    logo: adoreImage,
+    logo: "/attached_assets/Adore_1756448779641.jpeg",
     employees: 1200,
     locations: 65,
     sector: "Mobilya & Dekorasyon",
@@ -35,7 +35,7 @@ const customers = [
   {
     id: 3,
     name: "Koluman Mercedes",
-    logo: kolumanImage,
+    logo: "/attached_assets/Koluman_1756449232926.jpg",
     employees: 2500,
     locations: 28,
     sector: "Otomotiv",
@@ -47,7 +47,7 @@ const customers = [
   {
     id: 4,
     name: "Antalya Devlet Hastanesi",
-    logo: hastaneImage,
+    logo: "/attached_assets/HastaneAnlatlya_1756449609923.jpg",
     employees: 3200,
     locations: 12,
     sector: "Sağlık",
@@ -59,7 +59,7 @@ const customers = [
   {
     id: 5,
     name: "Cerrahpaşa Üniversite Hastanesi",
-    logo: cerrahpasaImage,
+    logo: "/attached_assets/istanbulcrrrahpasa_1756450001262.jpg",
     employees: 7000,
     locations: 1,
     sector: "Sağlık & Eğitim",
