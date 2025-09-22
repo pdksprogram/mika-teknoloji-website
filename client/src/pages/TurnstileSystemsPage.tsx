@@ -3,15 +3,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
-import { IMAGES } from "@/assetsMap";
 
-// Turnike kategori görselleri - Parmak izi gibi gerçek resimler
-const belTipiTurnike = IMAGES.t3; // Bel tipi turnike cihazları
-const boyTipiTurnike = IMAGES.t2; // Boy tipi turnike sistemi
-const engelliTurnike = IMAGES.t4; // Engelli turnikeleri
-const hizliGecisTurnike = IMAGES.t5; // Hızlı geçiş turnikeleri
-const hijyenTurnike = IMAGES.t6; // Hijyen turnikeleri
-const jetonluTurnike = IMAGES.t7; // Jetonlu turnikeler
+// Turnike kategori görselleri - Parmak izi gibi direkt yollar
+const belTipiTurnike = "/images/products/stock_images/waist_high_turnstile_b37a4efd.jpg";
+const boyTipiTurnike = "/images/products/stock_images/tripod_waist_height__c9a11204.jpg";
+const engelliTurnike = "/images/products/stock_images/waist_high_turnstile_177b0800.jpg";
+const hizliGecisTurnike = "/images/products/stock_images/waist_high_turnstile_255e27a3.jpg";
+const hijyenTurnike = "/images/products/stock_images/waist_high_turnstile_b8fba04b.jpg";
+const jetonluTurnike = "/images/products/stock_images/electromechanical_tu_23c8e9e6.jpg";
 
 // Referans görselleri (placeholder)
 const referans1 = "/Modern_turnstile_security_system_b933269f.png";
