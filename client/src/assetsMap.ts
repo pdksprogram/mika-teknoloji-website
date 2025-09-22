@@ -28,4 +28,22 @@ export const BEL_TURNIKE_IMAGES = {
   bt12: `/jetonlu-turnike-sistemi-t345.jpg?t=${CACHE_BUST}`, // T 345 Jetonlu - Betaper'daki asıl resim
 } as const;
 
+// Boy Tipi Turnike Modelleri - BETAPER.COM'dan alınan gerçek resimler
+export const BOY_TURNIKE_IMAGES = {
+  bt1: `/t-2500d-single-3-kollu-paslanmaz-turnike.jpg?t=${CACHE_BUST}`, // MT 2500D Single 3 Kollu
+  bt2: `/t-2500d-single-4-kollu-paslanmaz-turnike.jpg?t=${CACHE_BUST}`, // MT 2500D Single 4 Kollu
+  bt3: `/t-2500d-double-3-kollu-paslanmaz-turnike.jpg?t=${CACHE_BUST}`, // MT 2500D Double 3 Kollu
+  bt4: `/t-2500d-double-4-kollu-paslanmaz-turnike.jpg?t=${CACHE_BUST}`, // MT 2500D Double 4 Kollu
+  bt5: `/t-2500k-single-3-kollu-paslanmaz-turnike.jpg?t=${CACHE_BUST}`, // MT 2500K Single 3 Kollu
+  bt6: `/t-2500k-single-4-kollu-paslanmaz-turnike.jpg?t=${CACHE_BUST}`, // MT 2500K Single 4 Kollu
+  bt7: `/t-2500k-double-3-kollu-paslanmaz-turnike.jpg?t=${CACHE_BUST}`, // MT 2500K Double 3 Kollu
+  bt8: `/t-2500k-double-4-kollu-paslanmaz-turnike.jpg?t=${CACHE_BUST}`, // MT 2500K Double 4 Kollu
+  bt9: `/t-2500d-single-3-kollu-eco-boy-turnike.jpg?t=${CACHE_BUST}`, // MT 2500D Single 3 Kollu ECO
+  bt10: `/t-2500k-single-3-kollu-eco-boy-turnike.jpg?t=${CACHE_BUST}`, // MT 2500K Single 3 Kollu ECO
+  bt11: `/t-2500k-single-3-kollu-kristal-boy-turnike.jpg?t=${CACHE_BUST}`, // MT 2500K Single 3 Kollu Kristal
+  bt12: `/t-2500k-double-3-kollu-eco-boy-turnike.jpg?t=${CACHE_BUST}`, // MT 2500K Double 3 Kollu ECO
+  bt13: `/yarim-boy-turnike-sistemi-t1350-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // MT 1350 Yarım Boy
+  bt14: `/yarim-boy-turnike-sistemi-t1400-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // MT 1400 Yarım Boy
+} as const;
+
 export type ImageKey = keyof typeof IMAGES;
