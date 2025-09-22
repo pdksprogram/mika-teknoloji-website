@@ -44,10 +44,10 @@ interface TurnikeSpec {
 }
 
 const turnikeSpecs: Record<string, TurnikeSpec> = {
-  "mt-250": {
-    id: "mt-250",
+  "t250": {
+    id: "t250",
     model: "MT-250",
-    title: "Elektromekanik 3 Kollu Bel Tipi Turnike Sistemi",
+    title: "Elektromekanik Bel Tipi Turnike Sistemi",
     image: "/t-250-elektromekanik-turnike.jpg",
     description: "Standart kullanım alanları için ideal ekonomik çözüm. Yüksek dayanıklılık ve güvenilir performans sunar.",
     applications: [
@@ -76,9 +76,379 @@ const turnikeSpecs: Record<string, TurnikeSpec> = {
       "Paslanmaz Çelik Gövde",
       "Elektromekanik Kontrol",
       "Manuel/Otomatik Mod",
-      "LED Yönlendirme",
-      "Çift Yönlü Geçiş",
-      "Kart/Parmak İzi Entegrasyonu"
+      "LED Yönlendirme"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+  "t250-eco": {
+    id: "t250-eco",
+    model: "MT-250 ECO",
+    title: "Ekonomik Bel Tipi Turnike Sistemi",
+    image: "/t-250-eco-elektromekanik-turnike.jpg",
+    description: "Küçük işletmeler için uygun fiyatlı güvenlik çözümü.",
+    applications: [
+      "Küçük işletmeler",
+      "Ofis binaları",
+      "Mağazalar",
+      "Küçük fabrikalar",
+      "Depo girişleri"
+    ],
+    materials: "304 paslanmaz çelik gövde ve kollar. Ekonomik üretim için optimize edilmiş malzemeler kullanılır.",
+    usage: "Ekonomik çözüm arayan işletmeler için tasarlanmış basit kullanımlı turnike sistemi.",
+    security: "Temel güvenlik özelliklerini barındırır. Elektrik kesintisinde manuel geçiş imkanı.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "25 W",
+      temperature: "-15°C - +60°C",
+      capacity: "25 Kişi / Dakika",
+      passageGap: "42 cm",
+      weight: "28 Kg",
+      environment: "İç Ortam",
+      protection: "IP 54"
+    },
+    features: [
+      "Ekonomik Çözüm",
+      "Dayanıklı Yapı",
+      "Kolay Kurulum",
+      "Düşük Bakım"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+  "t250-a2": {
+    id: "t250-a2",
+    model: "MT-250 A2",
+    title: "Gelişmiş Bel Tipi Turnike Sistemi",
+    image: "/t-250-a2-elektromekanik-turnike.jpg",
+    description: "Yüksek güvenlik gereken alanlar için gelişmiş özellikler.",
+    applications: [
+      "Güvenlik merkezleri",
+      "Hastaneler",
+      "Devlet kurumları",
+      "Yüksek güvenlikli tesisler",
+      "Araştırma merkezleri"
+    ],
+    materials: "316 paslanmaz çelik opciyonlu, yüksek kaliteli malzemeler.",
+    usage: "İleri sensör teknolojisi ve anti-tailgating özellikleri.",
+    security: "Gelişmiş güvenlik protokolleri ve alarm sistemi.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "35 W",
+      temperature: "-25°C - +70°C",
+      capacity: "35 Kişi / Dakika",
+      passageGap: "Min. 40 cm / Max. 50 cm",
+      weight: "35 Kg",
+      environment: "İç/Dış Ortam",
+      protection: "IP 65"
+    },
+    features: [
+      "İki Yönlü Geçiş",
+      "Akıllı Sensörler",
+      "Anti-Tailgating",
+      "Alarm Sistemi"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+  "t250-a2-eco": {
+    id: "t250-a2-eco",
+    model: "MT-250 A2 ECO",
+    title: "Ekonomik İki Yönlü Turnike Sistemi",
+    image: "/t-250-eco-a2-elektromekanik-turnike.jpg",
+    description: "İki yönlü geçiş kontrolü için ekonomik seçenek.",
+    applications: [
+      "Orta ölçekli işletmeler",
+      "Okullar",
+      "Klinikler",
+      "Büro kompleksleri"
+    ],
+    materials: "304 paslanmaz çelik, ekonomik A2 teknolojisi.",
+    usage: "İki yönlü kontrol özelliği ile esnek kullanım.",
+    security: "Temel güvenlik artı çift yönlü kontrol.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "32 W",
+      temperature: "-20°C - +65°C",
+      capacity: "30 Kişi / Dakika",
+      passageGap: "42 cm - 47 cm",
+      weight: "33 Kg",
+      environment: "İç Ortam",
+      protection: "IP 54"
+    },
+    features: [
+      "İki Yönlü Kontrol",
+      "Ekonomik Fiyat",
+      "Güvenilir Çalışma",
+      "Kolay Bakım"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+  "t250-gt": {
+    id: "t250-gt",
+    model: "MT-250 GT",
+    title: "Premium Üç Kollu Turnike Sistemi",
+    image: "/t-250-gt-elektromekanik-turnike.jpg",
+    description: "Prestijli mekanlar için estetik ve fonksiyonel çözüm.",
+    applications: [
+      "Lüks oteller",
+      "Premium ofisler",
+      "Sanat galerileri",
+      "VIP alanlar",
+      "Prestijli kurumlar"
+    ],
+    materials: "Premium paslanmaz çelik, özel tasarım detayları.",
+    usage: "Sessiz çalışma ve hızlı geçiş özellikli premium turnike.",
+    security: "Yüksek güvenlik ve estetik tasarım bir arada.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "28 W",
+      temperature: "-20°C - +70°C",
+      capacity: "40 Kişi / Dakika",
+      passageGap: "42 cm - 48 cm",
+      weight: "34 Kg",
+      environment: "İç/Dış Ortam",
+      protection: "IP 65"
+    },
+    features: [
+      "Premium Tasarım",
+      "Sessiz Çalışma",
+      "Hızlı Geçiş",
+      "Estetik Görünüm"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+  "t345": {
+    id: "t345",
+    model: "MT-345",
+    title: "Endüstriyel Bel Tipi Turnike Sistemi",
+    image: "/t-345-elektromekanik-turnike.jpg",
+    description: "Fabrika ve endüstriyel tesisler için dayanıklı sistem.",
+    applications: [
+      "Fabrikalar",
+      "Endüstriyel tesisler",
+      "Üretim alanları",
+      "Ağır sanayi",
+      "Madencilik tesisleri"
+    ],
+    materials: "Ağır hizmet tipi 316 paslanmaz çelik, endüstriyel grade malzemeler.",
+    usage: "Yoğun kullanım ve zorlu çevre koşullarına dayanıklı.",
+    security: "Endüstriyel güvenlik standartlarında üretilmiş.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "45 W",
+      temperature: "-30°C - +80°C",
+      capacity: "45 Kişi / Dakika",
+      passageGap: "42 cm - 50 cm",
+      weight: "42 Kg",
+      environment: "Ağır Endüstriyel Ortam",
+      protection: "IP 67"
+    },
+    features: [
+      "Endüstriyel Dayanım",
+      "Yoğun Kullanım",
+      "Çevre Direnci",
+      "Güçlü Motor"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+  "t345-eco": {
+    id: "t345-eco",
+    model: "MT-345 ECO",
+    title: "Ekonomik Endüstriyel Turnike",
+    image: "/t-345-eco-elektromekanik-turnike.jpg",
+    description: "Endüstriyel dayanıklılık, ekonomik maliyetle.",
+    applications: [
+      "Orta ölçekli fabrikalar",
+      "Depo alanları",
+      "İmalat tesisleri",
+      "Lojistik merkezleri"
+    ],
+    materials: "304 paslanmaz çelik, endüstriyel dayanım özelliği.",
+    usage: "Endüstriyel ortamlarda ekonomik çözüm.",
+    security: "Temel endüstriyel güvenlik standartları.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "40 W",
+      temperature: "-25°C - +70°C",
+      capacity: "40 Kişi / Dakika",
+      passageGap: "42 cm - 48 cm",
+      weight: "38 Kg",
+      environment: "Endüstriyel Ortam",
+      protection: "IP 65"
+    },
+    features: [
+      "Dayanıklı Yapı",
+      "Uygun Fiyat",
+      "Endüstriyel Kullanım",
+      "Kolay Montaj"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+  "t250-s": {
+    id: "t250-s",
+    model: "MT-250 S",
+    title: "Kompakt Bel Tipi Turnike Sistemi",
+    image: "/t-250-s-elektromekanik-turnike.jpg",
+    description: "Dar alanlar için özel tasarlanmış kompakt çözüm.",
+    applications: [
+      "Dar geçitler",
+      "Küçük ofisler",
+      "Mağaza girişleri",
+      "Klinik girişleri",
+      "Kompakt alanlar"
+    ],
+    materials: "Kompakt tasarım için optimize edilmiş 304 paslanmaz çelik.",
+    usage: "Dar alanlarda maksimum verimlilik.",
+    security: "Kompakt boyutta güvenli geçiş kontrolü.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "25 W",
+      temperature: "-15°C - +60°C",
+      capacity: "32 Kişi / Dakika",
+      passageGap: "40 cm - 45 cm",
+      weight: "26 Kg",
+      environment: "İç Ortam",
+      protection: "IP 54"
+    },
+    features: [
+      "Kompakt Tasarım",
+      "Az Yer Kaplar",
+      "Esnek Kurulum",
+      "Hızlı Geçiş"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+  "t450": {
+    id: "t450",
+    model: "MT-450",
+    title: "Yüksek Kapasiteli Turnike Sistemi",
+    image: "/t-450-elektromekanik-turnike.jpg",
+    description: "Metro, hastane gibi yoğun trafikli alanlar için.",
+    applications: [
+      "Metro istasyonları",
+      "Büyük hastaneler",
+      "Havaalanları",
+      "Kongre merkezleri",
+      "Stadyumlar",
+      "Alışveriş merkezleri"
+    ],
+    materials: "Yüksek kapasiteli kullanım için güçlendirilmiş 316 paslanmaz çelik.",
+    usage: "Dakikada 50+ kişilik yoğun trafiğe dayanıklı.",
+    security: "Yüksek kapasiteli güvenlik kontrolü.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "50 W",
+      temperature: "-25°C - +75°C",
+      capacity: "50+ Kişi / Dakika",
+      passageGap: "45 cm - 50 cm",
+      weight: "45 Kg",
+      environment: "Yoğun Trafik Alanları",
+      protection: "IP 65"
+    },
+    features: [
+      "Yüksek Kapasite",
+      "Hızlı Geçiş",
+      "Yoğun Trafik",
+      "Güçlü Performans"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+  "t281": {
+    id: "t281",
+    model: "MT-281",
+    title: "Özel Tasarım Turnike Sistemi",
+    image: "/t-281-elektromekanik-turnike.jpg",
+    description: "Kurumsal kimliğe uygun özel tasarım imkanı.",
+    applications: [
+      "Kurumsal merkez ofisler",
+      "Marka mağazaları",
+      "Özel etkinlikler",
+      "VIP tesisler",
+      "Tasarım odaklı projeler"
+    ],
+    materials: "Özel renk ve tasarım seçenekli premium malzemeler.",
+    usage: "Kurumsal kimlik ve fonksiyonellik bir arada.",
+    security: "Estetik tasarımda güvenlik önceliği.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "35 W",
+      temperature: "-20°C - +70°C",
+      capacity: "35 Kişi / Dakika",
+      passageGap: "42 cm - 48 cm",
+      weight: "36 Kg",
+      environment: "İç Ortam Premium",
+      protection: "IP 54"
+    },
+    features: [
+      "Özel Tasarım",
+      "Kişiye Özel",
+      "Estetik Çözüm",
+      "Markalama"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+  "t250-jetonlu": {
+    id: "t250-jetonlu",
+    model: "MT-250 Jetonlu",
+    title: "Jetonlu Turnike Sistemi",
+    image: "/jetonlu-turnike-sistemi-t250.jpg",
+    description: "Ücretli geçişler için jetonlu tahsilat sistemi.",
+    applications: [
+      "WC girişleri",
+      "Ücretli geçitler",
+      "Park alanları",
+      "Etkinlik girişleri",
+      "Tahsilat noktaları"
+    ],
+    materials: "Çelik para kasası ve jeton okuyucu sistemi entegreli 304 paslanmaz çelik.",
+    usage: "Jeton ile otomatik ödeme sistemi.",
+    security: "Ödeme güvenliği ve geçiş kontrolü.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "35 W",
+      temperature: "-15°C - +60°C",
+      capacity: "25 Kişi / Dakika",
+      passageGap: "42 cm",
+      weight: "38 Kg",
+      environment: "İç/Dış Ortam",
+      protection: "IP 54"
+    },
+    features: [
+      "Jeton Okuyucu",
+      "Para Kasası",
+      "Otomatik Tahsilat",
+      "WC Turnikesi"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+  "t345-jetonlu": {
+    id: "t345-jetonlu",
+    model: "MT-345 Jetonlu",
+    title: "Gelişmiş Jetonlu Turnike",
+    image: "/jetonlu-turnike-sistemi-t345.jpg",
+    description: "Gelişmiş ödeme seçenekleri ile tahsilat turnike sistemi.",
+    applications: [
+      "Premium tesisler",
+      "Çok amaçlı tahsilat",
+      "Dijital ödeme noktaları",
+      "Gelişmiş WC sistemleri"
+    ],
+    materials: "Dijital ekran ve çoklu ödeme sistemi entegreli premium malzemeler.",
+    usage: "Çoklu ödeme ve dijital ekran sistemi.",
+    security: "Gelişmiş ödeme güvenliği ve raporlama.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "45 W",
+      temperature: "-15°C - +65°C",
+      capacity: "30 Kişi / Dakika",
+      passageGap: "42 cm - 47 cm",
+      weight: "42 Kg",
+      environment: "İç/Dış Ortam",
+      protection: "IP 65"
+    },
+    features: [
+      "Çoklu Ödeme",
+      "Dijital Ekran",
+      "Para Üstü",
+      "Rapor Sistemi"
     ],
     price: "Fiyat İçin Ara"
   }
@@ -86,7 +456,7 @@ const turnikeSpecs: Record<string, TurnikeSpec> = {
 
 export default function TurnikeDetailPage() {
   const { model } = useParams<{ model: string }>();
-  const spec = turnikeSpecs[model || "mt-250"];
+  const spec = turnikeSpecs[model || "t250"];
 
   if (!spec) {
     return (
