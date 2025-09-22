@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Clock, Smartphone, AlertTriangle, BarChart3, CheckCircle, Download } from "lucide-react";
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
+import { useEffect } from "react";
+import { trackQRPatrolView, trackProductView } from "@/lib/analytics";
 
 // Images
 const securityPatrolImage = "/security-guard-patrol-tracking.png";
@@ -86,6 +88,12 @@ const faqJsonLd = {
 };
 
 export default function QRPatrolPage() {
+  useEffect(() => {
+    // Track QR Patrol page view
+    trackQRPatrolView('qr_patrol_sistemleri_ana_sayfa');
+    trackProductView('QR-Patrol Bekçi Kontrol Sistemi', 'qr_patrol_sistemleri');
+  }, []);
+
   return (
     <div className="min-h-screen">
       <SEO 

@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useEffect } from "react";
+import { trackAccessControlView, trackProductView } from "@/lib/analytics";
 
 // Access Control Panel images  
 const accessControlPanel = "/access-control-panel.png";
@@ -13,6 +14,12 @@ const mikaQRApp = "/mika-qr-app.png";
 
 export default function AccessControlPage() {
   const { selectedLanguage } = useLanguage();
+
+  // Track Access Control page view
+  useEffect(() => {
+    trackAccessControlView('access_control_sistemleri_ana_sayfa');
+    trackProductView('Access Control Sistemleri', 'access_control_sistemleri');
+  }, []);
 
   // SEO Meta Tags
   useEffect(() => {

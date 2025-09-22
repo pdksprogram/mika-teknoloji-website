@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { useEffect } from "react";
+import { trackPDKSView, trackProductView } from "@/lib/analytics";
 
 // Real device images
 const facialRecognitionDevice = "/facial-device.png";
@@ -14,6 +15,12 @@ const fingerprintDevice = "/fingerprint-device.png";
 
 export default function PDKSPage() {
   const { selectedLanguage } = useLanguage();
+
+  // Track PDKS page view
+  useEffect(() => {
+    trackPDKSView('pdks_sistemleri_ana_sayfa');
+    trackProductView('PDKS Personel Devam Kontrol Sistemi', 'pdks_sistemleri');
+  }, []);
 
   // SEO Meta Tags
   useEffect(() => {

@@ -4,6 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Shield } from "lucide-react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
+import { trackFaceRecognitionView, trackProductView } from "@/lib/analytics";
 
 const devices = [
   {
@@ -37,6 +39,12 @@ const devices = [
 ];
 
 export default function FaceRecognitionSystemPage() {
+  useEffect(() => {
+    // Track yüz tanıma systems page view
+    trackFaceRecognitionView('yuz_tanima_sistemleri_ana_sayfa');
+    trackProductView('Yüz Tanıma Sistem', 'yuz_tanima_sistemleri');
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <Helmet>

@@ -4,6 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Shield } from "lucide-react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
+import { trackFingerprintView, trackProductView } from "@/lib/analytics";
 
 const devices = [
   {
@@ -37,6 +39,12 @@ const devices = [
 ];
 
 export default function FingerprintSystemPage() {
+  useEffect(() => {
+    // Track parmak izi systems page view
+    trackFingerprintView('parmak_izi_sistemleri_ana_sayfa');
+    trackProductView('Parmak İzi Takip Sistemi', 'parmak_izi_sistemleri');
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <Helmet>
