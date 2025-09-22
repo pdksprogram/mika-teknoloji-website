@@ -40,8 +40,11 @@ export async function setupVite(app: Express, server: Server) {
     appType: "custom",
   });
 
-  // Serve attached_assets directory
+  // Serve attached_assets directory  
   app.use('/attached_assets', express.static(path.resolve(import.meta.dirname, '..', 'attached_assets')));
+  
+  // Serve public folder for production images
+  app.use('/images', express.static(path.resolve(import.meta.dirname, '..', 'public', 'images')));
   
   app.use(vite.middlewares);
   app.use("*", async (req, res, next) => {

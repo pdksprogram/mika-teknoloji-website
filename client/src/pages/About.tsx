@@ -2,11 +2,11 @@ import { Building, Users, Award, Globe, Timer, Smartphone, ArrowRight, Shield, D
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import teamPhoto from "@assets/image_1756822202470.png";
-import gamzePhoto from "@assets/image_1756823252649.png";
-import hierarchyPhoto from "@assets/image_1756823893243.png";
-import suphiPhoto from "@assets/image_1756824630814.png";
-import yasinPhoto from "@assets/image_1756824767420.png";
+import teamPhoto from "@assets/images/products/image_1756822202470.png";
+import gamzePhoto from "@assets/images/products/image_1756823252649.png";
+import hierarchyPhoto from "@assets/images/products/image_1756823893243.png";
+import suphiPhoto from "@assets/images/products/image_1756824630814.png";
+import yasinPhoto from "@assets/images/products/image_1756824767420.png";
 
 export default function About() {
   const stats = [

@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, MapPin, Award, CheckCircle, Star } from 'lucide-react';
-import lufianImage from '@assets/lufian_1756448337411.jpg';
-import adoreImage from '@assets/Adore_1756448779641.jpeg';
-import kolumanImage from '@assets/Koluman_1756449232926.jpg';
-import hastaneImage from '@assets/HastaneAnlatlya_1756449609923.jpg';
-import cerrahpasaImage from '@assets/istanbulcrrrahpasa_1756450001262.jpg';
+import lufianImage from '@assets/images/products/lufian_1756448337411.jpg';
+import adoreImage from '@assets/images/products/Adore_1756448779641.jpeg';
+import kolumanImage from '@assets/images/products/Koluman_1756449232926.jpg';
+import hastaneImage from '@assets/images/products/HastaneAnlatlya_1756449609923.jpg';
+import cerrahpasaImage from '@assets/images/products/istanbulcrrrahpasa_1756450001262.jpg';
 
 const customers = [
   {

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Shield, FileText, Eye, Lock } from "lucide-react";
-import mikaLogo from "@assets/mika_1756450206871.jpg";
+import mikaLogo from "@assets/images/products/mika_1756450206871.jpg";
 
 export default function PrivacyPolicy() {
   return (
