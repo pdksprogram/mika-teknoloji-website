@@ -25,4 +25,14 @@ export const BEL_TURNIKE_IMAGES = {
   bt12: "/mt-345-jetonlu.png", // MT-345 Jetonlu 
 } as const;
 
+// Boy Tipi Turnike Modelleri - Parmak izi gibi direkt yol kullanımı
+export const BOY_TURNIKE_IMAGES = {
+  yt1: "/mt-500-boy-tipi.png", // MT-500 Boy Tipi 
+  yt2: "/mt-600-premium.png", // MT-600 Premium 
+  yt3: "/mt-700-security.png", // MT-700 Security 
+  yt4: "/mt-800-pro.png", // MT-800 Pro 
+  yt5: "/mt-900-industrial.png", // MT-900 Industrial 
+  yt6: "/mt-1000-advanced.png", // MT-1000 Advanced 
+} as const;
+
 export type ImageKey = keyof typeof IMAGES;
