@@ -10,7 +10,6 @@ import {
   MapPin,
   ArrowLeft,
   Zap,
-  Shield,
   Settings,
   Users,
   Accessibility,
