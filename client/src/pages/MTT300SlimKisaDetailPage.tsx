@@ -9,7 +9,6 @@ import {
   Mail,
   MapPin,
   ArrowLeft,
-  Zap,
   Clock,
   Minimize,
   Settings,

@@ -11,7 +11,6 @@ import {
   ArrowLeft,
   Zap,
   Clock,
-  Users,
   Settings,
   Activity
 } from "lucide-react";
@@ -126,7 +125,7 @@ export default function MTT300HG20DetailPage() {
                     <div className="font-bold">20 Kişi/Dk</div>
                   </div>
                   <div className="text-center bg-white/10 rounded-lg p-3">
-                    <Shield className="h-6 w-6 mx-auto mb-2" />
+                    <CheckCircle className="h-6 w-6 mx-auto mb-2" />
                     <div className="text-sm text-white/80">Güvenlik</div>
                     <div className="font-bold">Anti-Tailgate</div>
                   </div>
