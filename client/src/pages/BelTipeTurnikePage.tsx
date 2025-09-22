@@ -164,7 +164,7 @@ export default function BelTipeTurnikePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {belTurnikeModelleri.map((model, index) => (
               <motion.div
                 key={model.id}
@@ -174,11 +174,11 @@ export default function BelTipeTurnikePage() {
                 className="group"
               >
                 <Card className="h-full hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                  <div className="relative overflow-hidden">
+                  <div className="relative overflow-hidden aspect-[4/3] sm:aspect-[3/2]">
                     <img 
                       src={model.image}
                       alt={model.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-contain sm:object-cover bg-gray-50 group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />
                     <Badge className="absolute top-3 left-3 bg-primary text-white">
@@ -238,7 +238,7 @@ export default function BelTipeTurnikePage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
             {referansResimler.map((resim, index) => (
               <motion.div
                 key={index}
@@ -250,7 +250,7 @@ export default function BelTipeTurnikePage() {
                 <img 
                   src={resim}
                   alt={`Turnike Referans ${index + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-contain sm:object-cover bg-gray-100 hover:scale-105 transition-transform duration-300"
                   loading="lazy"
                 />
               </motion.div>
