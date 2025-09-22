@@ -127,12 +127,12 @@ export default function BelTipeTurnikePage() {
 
 
   const referansResimler = [
-    "/ana-urun.png",
-    "/boy-tipi-turnike.png",
-    "/bel-tipi-turnike.png",
-    "/engelli-turnike.png",
-    "/hizli-gecis-turnike.png",
-    "/hijyen-turnike.png"
+    "/attached_assets/image_1758019216490.png",
+    "/attached_assets/image_1758020107295.png",
+    "/attached_assets/image_1758019726366.png",
+    "/attached_assets/image_1758020186900.png",
+    "/attached_assets/image_1758022229658.png",
+    "/attached_assets/image_1758022307099.png"
   ];
 
   return (
@@ -144,7 +144,7 @@ export default function BelTipeTurnikePage() {
         
         <meta property="og:title" content="Bel Tipi Turnike Sistemleri | Mika Teknoloji" />
         <meta property="og:description" content="Güvenli geçiş kontrolü için paslanmaz çelik bel tipi turnike sistemleri. 12 farklı model seçeneği ile." />
-        <meta property="og:image" content="https://mikateknoloji.com/boy-tipi-turnike.png" />
+        <meta property="og:image" content="https://mikateknoloji.com/attached_assets/stock_images/tripod_waist_height__f6c103da.jpg" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/bel-tipi-turnike" />
         
         <link rel="canonical" href="https://mikateknoloji.com/urunler/bel-tipi-turnike" />
@@ -207,7 +207,7 @@ export default function BelTipeTurnikePage() {
                         {model.price}
                       </div>
                       <Button asChild size="sm" className="bg-primary hover:bg-primary/90">
-                        <Link href={`/urunler/turnike/${model.id}`}>
+                        <Link href={model.id === "t250" ? "/urunler/mt-250-turnike" : "#"}>
                           Detay
                         </Link>
                       </Button>
