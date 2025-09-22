@@ -80,12 +80,12 @@ export default function JetonluT250DetailPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>T 250 Jetonlu Turnike Sistemi - WC Turnikesi | Mika Teknoloji</title>
-        <meta name="description" content="T 250 jetonlu turnike sistemi. WC turnikesi, ücretli geçişler için otomatik tahsilat. Jeton kabul sistemi, para üstü verme." />
+        <title>MT 250 Jetonlu Turnike Sistemi - WC Turnikesi | Mika Teknoloji</title>
+        <meta name="description" content="MT 250 jetonlu turnike sistemi. WC turnikesi, ücretli geçişler için otomatik tahsilat. Jeton kabul sistemi, para üstü verme." />
         <meta name="keywords" content="jetonlu turnike, WC turnikesi, ücretli geçiş, otomatik tahsilat, jeton sistemi, para üstü" />
         
-        <meta property="og:title" content="T 250 Jetonlu Turnike - WC Turnikesi | Mika Teknoloji" />
-        <meta property="og:description" content="Ücretli geçişler için T 250 jetonlu turnike sistemi. Otomatik tahsilat ve para üstü sistemi." />
+        <meta property="og:title" content="MT 250 Jetonlu Turnike - WC Turnikesi | Mika Teknoloji" />
+        <meta property="og:description" content="Ücretli geçişler için MT 250 jetonlu turnike sistemi. Otomatik tahsilat ve para üstü sistemi." />
         <meta property="og:image" content="https://mikateknoloji.com/jetonlu-turnike-sistemi-t250.jpg" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/jetonlu-t250-turnike" />
         
@@ -108,7 +108,7 @@ export default function JetonluT250DetailPage() {
               Bel Tipi Turnikeler
             </Link>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <span className="text-gray-900 font-medium">T 250 Jetonlu</span>
+            <span className="text-gray-900 font-medium">MT 250 Jetonlu</span>
           </nav>
         </div>
       </div>
@@ -126,7 +126,7 @@ export default function JetonluT250DetailPage() {
                 Jetonlu Sistem
               </Badge>
               <h1 className="text-4xl font-bold mb-6">
-                T 250 Jetonlu
+                MT 250 Jetonlu
                 <span className="block text-2xl font-normal text-white/90 mt-2">
                   Jetonlu Turnike Sistemi - WC Turnikesi
                 </span>
@@ -157,7 +157,7 @@ export default function JetonluT250DetailPage() {
               <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur p-8">
                 <img 
                   src={BEL_TURNIKE_IMAGES.bt11}
-                  alt="T 250 Jetonlu Turnike Sistemi"
+                  alt="MT 250 Jetonlu Turnike Sistemi"
                   className="w-full h-auto max-w-md mx-auto rounded-lg shadow-2xl"
                   loading="eager"
                 />
@@ -176,7 +176,7 @@ export default function JetonluT250DetailPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Ödeme Sistemi Özellikleri</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              T 250 Jetonlu, otomatik tahsilat sistemi ile insan faktörünü ortadan kaldırır
+              MT 250 Jetonlu, otomatik tahsilat sistemi ile insan faktörünü ortadan kaldırır
             </p>
           </div>
 
@@ -279,7 +279,7 @@ export default function JetonluT250DetailPage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl font-bold mb-6">
-                T 250 Jetonlu İle Otomatik Tahsilat
+                MT 250 Jetonlu İle Otomatik Tahsilat
               </h2>
               <p className="text-xl text-white/90 mb-8">
                 WC girişlerinde otomatik para tahsilatı yapın. İnsan faktörünü ortadan kaldırın, gelir güvenliğinizi artırın.

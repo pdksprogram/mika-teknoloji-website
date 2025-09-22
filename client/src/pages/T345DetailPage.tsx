@@ -81,12 +81,12 @@ export default function T345DetailPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>T 345 Endüstriyel Bel Tipi Turnike Sistemi | Mika Teknoloji</title>
-        <meta name="description" content="T 345 endüstriyel bel tipi turnike sistemi. Ağır sanayi koşullarında 24/7 çalışma. Yoğun trafik, yüksek güvenlik, IP65 koruma." />
-        <meta name="keywords" content="T 345, endüstriyel turnike, ağır hizmet turnike, fabrika turnike, IP65 turnike, 24/7 turnike" />
+        <title>MT 345 Endüstriyel Bel Tipi Turnike Sistemi | Mika Teknoloji</title>
+        <meta name="description" content="MT 345 endüstriyel bel tipi turnike sistemi. Ağır sanayi koşullarında 24/7 çalışma. Yoğun trafik, yüksek güvenlik, IP65 koruma." />
+        <meta name="keywords" content="MT 345, endüstriyel turnike, ağır hizmet turnike, fabrika turnike, IP65 turnike, 24/7 turnike" />
         
-        <meta property="og:title" content="T 345 Endüstriyel Turnike Sistemi | Mika Teknoloji" />
-        <meta property="og:description" content="Endüstriyel dayanıklılık ile T 345 bel tipi turnike sistemi. Fabrikalar ve yoğun trafik alanları için." />
+        <meta property="og:title" content="MT 345 Endüstriyel Turnike Sistemi | Mika Teknoloji" />
+        <meta property="og:description" content="Endüstriyel dayanıklılık ile MT 345 bel tipi turnike sistemi. Fabrikalar ve yoğun trafik alanları için." />
         <meta property="og:image" content="https://mikateknoloji.com/t-345-elektromekanik-turnike.jpg" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/t345-turnike" />
         
@@ -109,7 +109,7 @@ export default function T345DetailPage() {
               Bel Tipi Turnikeler
             </Link>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <span className="text-gray-900 font-medium">T 345</span>
+            <span className="text-gray-900 font-medium">MT 345</span>
           </nav>
         </div>
       </div>
@@ -127,7 +127,7 @@ export default function T345DetailPage() {
                 Endüstriyel Sınıf
               </Badge>
               <h1 className="text-4xl font-bold mb-6">
-                T 345
+                MT 345
                 <span className="block text-2xl font-normal text-white/90 mt-2">
                   Endüstriyel Elektromekanik Bel Tipi Turnike Sistemi
                 </span>
@@ -158,7 +158,7 @@ export default function T345DetailPage() {
               <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur p-8">
                 <img 
                   src={BEL_TURNIKE_IMAGES.bt6}
-                  alt="T 345 Endüstriyel Bel Tipi Turnike"
+                  alt="MT 345 Endüstriyel Bel Tipi Turnike"
                   className="w-full h-auto max-w-md mx-auto rounded-lg shadow-2xl"
                   loading="eager"
                 />
@@ -177,7 +177,7 @@ export default function T345DetailPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Endüstriyel Özellikler</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              T 345, fabrika ve yoğun trafik alanlarında mükemmel performans sağlar
+              MT 345, fabrika ve yoğun trafik alanlarında mükemmel performans sağlar
             </p>
           </div>
 
@@ -280,7 +280,7 @@ export default function T345DetailPage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl font-bold mb-6">
-                T 345 İle Endüstriyel Güvenlik Standardı
+                MT 345 İle Endüstriyel Güvenlik Standardı
               </h2>
               <p className="text-xl text-white/90 mb-8">
                 Fabrikanızda kesintisiz güvenlik sağlayın. Endüstriyel keşif ve özel fiyat teklifi için uzman ekibimizle görüşün.

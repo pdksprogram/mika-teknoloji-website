@@ -17,7 +17,7 @@ export default function BelTipeTurnikePage() {
   const belTurnikeModelleri = [
     {
       id: "t250",
-      model: "T 250",
+      model: "MT 250",
       title: "Elektromekanik Bel Tipi Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt1,
       features: ["Paslanmaz Çelik Gövde", "Elektromekanik Kontrol Sistemi", "Manuel/Otomatik Çalışma Modu", "LED Yönlendirme Işıkları", "Güvenlik Sensörleri", "Kartlı/Şifreli Okuyucu Desteği"],
@@ -26,7 +26,7 @@ export default function BelTipeTurnikePage() {
     },
     {
       id: "t250-eco",
-      model: "T 250 ECO",
+      model: "MT 250 ECO",
       title: "Ekonomik Elektromekanik Bel Tipi Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt2,
       features: ["Ekonomik Çözüm", "Dayanıklı Paslanmaz Çelik Yapı", "Kolay Kurulum ve Bakım", "Düşük Enerji Tüketimi", "Temel Güvenlik Özellikleri"],
@@ -35,7 +35,7 @@ export default function BelTipeTurnikePage() {
     },
     {
       id: "t250-a2",
-      model: "T 250 A2",
+      model: "MT 250 A2",
       title: "Elektromekanik Bel Tipi Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt3,
       features: ["İki Yönlü Geçiş Kontrolü", "Akıllı Güvenlik Sensörleri", "Anti-Tailgating Teknolojisi", "Sesli ve Görsel Alarm", "Akıllı Kart Okuyucu", "Uzaktan İzleme"],
@@ -44,7 +44,7 @@ export default function BelTipeTurnikePage() {
     },
     {
       id: "t250-a2-eco",
-      model: "T 250 A2 ECO",
+      model: "MT 250 A2 ECO",
       title: "Ekonomik Elektromekanik Bel Tipi Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt4,
       features: ["İki Yönlü Kontrol", "Ekonomik Fiyat", "Güvenilir Çalışma", "Kolay Bakım"],
@@ -53,7 +53,7 @@ export default function BelTipeTurnikePage() {
     },
     {
       id: "t250-gt",
-      model: "T 250 GT",
+      model: "MT 250 GT",
       title: "Elektromekanik Üç Kollu Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt5,
       features: ["Premium Paslanmaz Çelik Tasarım", "Sessiz Elektromekanik Motor", "Hızlı ve Pürüssüz Geçiş", "Modern Estetik Görünüm", "LED Durum Göstergeleri", "Darbe Emici Sistem"],
@@ -62,7 +62,7 @@ export default function BelTipeTurnikePage() {
     },
     {
       id: "t345",
-      model: "T 345",
+      model: "MT 345",
       title: "Elektromekanik Bel Tipi Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt6,
       features: ["Endüstriyel Dayanıklılık", "Yoğun Trafik Kapsitesi", "Su ve Toz Direnci", "Güçlü Servo Motor", "Ağır Hizmet Tipi Mekanizma", "24/7 Kesintisiz Çalışma"],
@@ -71,7 +71,7 @@ export default function BelTipeTurnikePage() {
     },
     {
       id: "t345-eco",
-      model: "T 345 ECO",
+      model: "MT 345 ECO",
       title: "Ekonomik Elektromekanik Bel Tipi Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt7,
       features: ["Dayanıklı Yapı", "Uygun Fiyat", "Endüstriyel Kullanım", "Kolay Montaj"],
@@ -80,7 +80,7 @@ export default function BelTipeTurnikePage() {
     },
     {
       id: "t250-s",
-      model: "T 250 S",
+      model: "MT 250 S",
       title: "Elektromekanik Bel Tipi Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt8,
       features: ["Kompakt Tasarım", "Az Yer Kaplar", "Esnek Kurulum", "Hızlı Geçiş"],
@@ -89,7 +89,7 @@ export default function BelTipeTurnikePage() {
     },
     {
       id: "t450",
-      model: "T 450",
+      model: "MT 450",
       title: "Elektromekanik Bel Tipi Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt9,
       features: ["Yüksek Kapasite", "Hızlı Geçiş", "Yoğun Trafik", "Güçlü Performans"],
@@ -98,7 +98,7 @@ export default function BelTipeTurnikePage() {
     },
     {
       id: "t281",
-      model: "T 281",
+      model: "MT 281",
       title: "Elektromekanik Bel Tipi Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt10,
       features: ["Özel Tasarım", "Kişiye Özel", "Estetik Çözüm", "Markalama"],
@@ -107,7 +107,7 @@ export default function BelTipeTurnikePage() {
     },
     {
       id: "t250-jetonlu",
-      model: "T 250",
+      model: "MT 250",
       title: "Jetonlu Turnike Sistemi (WC Turnikesi)",
       image: BEL_TURNIKE_IMAGES.bt11,
       features: ["Jeton Okuyucu Sistemi", "Güvenli Para Kasası", "Otomatik Tahsilat Sistemi", "WC ve Tuvalet Turnikesi", "Para Üstü Verme", "Kullanım Sayısı Raporu"],
@@ -116,7 +116,7 @@ export default function BelTipeTurnikePage() {
     },
     {
       id: "t345-jetonlu",
-      model: "T 345",
+      model: "MT 345",
       title: "Jetonlu Turnike Sistemi (WC Turnikesi)",
       image: BEL_TURNIKE_IMAGES.bt12,
       features: ["Çoklu Ödeme", "Dijital Ekran", "Para Üstü", "Rapor Sistemi"],

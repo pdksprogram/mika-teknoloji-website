@@ -75,12 +75,12 @@ export default function T250EcoDetailPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>T 250 ECO Ekonomik Bel Tipi Turnike Sistemi | Mika Teknoloji</title>
-        <meta name="description" content="T 250 ECO ekonomik bel tipi turnike sistemi. Düşük bütçeli projeler için maliyet-etkin çözüm. Kolay kurulum, düşük enerji tüketimi." />
-        <meta name="keywords" content="T 250 ECO, ekonomik turnike, bel tipi turnike, düşük bütçe turnike, basit turnike sistemi" />
+        <title>MT 250 ECO Ekonomik Bel Tipi Turnike Sistemi | Mika Teknoloji</title>
+        <meta name="description" content="MT 250 ECO ekonomik bel tipi turnike sistemi. Düşük bütçeli projeler için maliyet-etkin çözüm. Kolay kurulum, düşük enerji tüketimi." />
+        <meta name="keywords" content="MT 250 ECO, ekonomik turnike, bel tipi turnike, düşük bütçe turnike, basit turnike sistemi" />
         
-        <meta property="og:title" content="T 250 ECO Ekonomik Turnike Sistemi | Mika Teknoloji" />
-        <meta property="og:description" content="Ekonomik fiyat avantajı ile T 250 ECO bel tipi turnike sistemi. Küçük işletmeler için ideal çözüm." />
+        <meta property="og:title" content="MT 250 ECO Ekonomik Turnike Sistemi | Mika Teknoloji" />
+        <meta property="og:description" content="Ekonomik fiyat avantajı ile MT 250 ECO bel tipi turnike sistemi. Küçük işletmeler için ideal çözüm." />
         <meta property="og:image" content="https://mikateknoloji.com/t-250-eco-elektromekanik-turnike.jpg" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/t250-eco-turnike" />
         
@@ -103,7 +103,7 @@ export default function T250EcoDetailPage() {
               Bel Tipi Turnikeler
             </Link>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <span className="text-gray-900 font-medium">T 250 ECO</span>
+            <span className="text-gray-900 font-medium">MT 250 ECO</span>
           </nav>
         </div>
       </div>
@@ -121,7 +121,7 @@ export default function T250EcoDetailPage() {
                 Ekonomik Çözüm
               </Badge>
               <h1 className="text-4xl font-bold mb-6">
-                T 250 ECO
+                MT 250 ECO
                 <span className="block text-2xl font-normal text-white/90 mt-2">
                   Ekonomik Elektromekanik Bel Tipi Turnike Sistemi
                 </span>
@@ -152,7 +152,7 @@ export default function T250EcoDetailPage() {
               <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur p-8">
                 <img 
                   src={BEL_TURNIKE_IMAGES.bt2}
-                  alt="T 250 ECO Ekonomik Bel Tipi Turnike"
+                  alt="MT 250 ECO Ekonomik Bel Tipi Turnike"
                   className="w-full h-auto max-w-md mx-auto rounded-lg shadow-2xl"
                   loading="eager"
                 />
@@ -171,7 +171,7 @@ export default function T250EcoDetailPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Ekonomik Avantajlar</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              T 250 ECO, bütçe dostu fiyatıyla küçük işletmelerin güvenlik ihtiyaçlarını karşılar
+              MT 250 ECO, bütçe dostu fiyatıyla küçük işletmelerin güvenlik ihtiyaçlarını karşılar
             </p>
           </div>
 
@@ -274,7 +274,7 @@ export default function T250EcoDetailPage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl font-bold mb-6">
-                T 250 ECO İle Ekonomik Güvenlik Çözümü
+                MT 250 ECO İle Ekonomik Güvenlik Çözümü
               </h2>
               <p className="text-xl text-white/90 mb-8">
                 Küçük bütçenizle büyük güvenlik sağlayın. Ücretsiz keşif ve detaylı fiyat teklifi için hemen iletişime geçin.
