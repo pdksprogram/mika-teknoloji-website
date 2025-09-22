@@ -103,14 +103,14 @@ export default function EngelliTurnikePage() {
   ];
 
   const referansResimler = [
-    "/reference1.jpg",
-    "/reference2.jpg", 
-    "/reference3.jpg",
-    "/reference4.jpg",
-    "/reference5.jpg",
-    "/reference6.jpg",
-    "/reference7.jpg",
-    "/reference8.jpg"
+    "/ref-1.png",
+    "/ref-2.png", 
+    "/ref-3.png",
+    "/ref-4.png",
+    "/ref-5.png",
+    "/ref-6.png",
+    "/ref-7.png",
+    "/ref-8.png"
   ];
 
   return (
