@@ -9,20 +9,20 @@ export const IMAGES = {
   t7: "/jetonlu-turnike.png", // Jetonlu turnikeler (YENİ)
 } as const;
 
-// Bel Tipi Turnike Modelleri - Betaper benzeri düzenleme (klasörlü)
+// Bel Tipi Turnike Modelleri - Eski çalışan resimlerle geri döndüm
 export const BEL_TURNIKE_IMAGES = {
-  bt1: "/turnike-modelleri/bel-tipi/t-250-elektromekanik-turnike.jpg", // MT-250 Elektromekanik
-  bt2: "/turnike-modelleri/bel-tipi/t-250-eco-elektromekanik-turnike.jpg", // MT-250 ECO
-  bt3: "/turnike-modelleri/bel-tipi/t-250-a2-elektromekanik-turnike.jpg", // MT-250 A2
-  bt4: "/turnike-modelleri/bel-tipi/t-250-eco-a2-elektromekanik-turnike.jpg", // MT-250 A2 ECO
-  bt5: "/turnike-modelleri/bel-tipi/t-250-gt-elektromekanik-turnike.jpg", // MT-250 GT
-  bt6: "/turnike-modelleri/bel-tipi/t-345-elektromekanik-turnike.jpg", // MT-345
-  bt7: "/turnike-modelleri/bel-tipi/t-345-eco-elektromekanik-turnike.jpg", // MT-345 ECO
-  bt8: "/turnike-modelleri/bel-tipi/t-250-s-elektromekanik-turnike.jpg", // MT-250 S
-  bt9: "/turnike-modelleri/bel-tipi/t-450-elektromekanik-turnike.jpg", // MT-450
-  bt10: "/turnike-modelleri/bel-tipi/t-281-elektromekanik-turnike.jpg", // MT-281
-  bt11: "/turnike-modelleri/bel-tipi/jetonlu-turnike-sistemi-t250.jpg", // MT-250 Jetonlu
-  bt12: "/turnike-modelleri/bel-tipi/jetonlu-turnike-sistemi-t345.jpg", // MT-345 Jetonlu
+  bt1: "/bel-tipi-turnike.png", // MT-250 Elektromekanik
+  bt2: "/boy-tipi-turnike.png", // MT-250 ECO
+  bt3: "/engelli-turnike.png", // MT-250 A2
+  bt4: "/hizli-gecis-turnike.png", // MT-250 A2 ECO
+  bt5: "/hijyen-turnike.png", // MT-250 GT
+  bt6: "/jetonlu-turnike.png", // MT-345
+  bt7: "/bel-tipi-turnike.png", // MT-345 ECO
+  bt8: "/boy-tipi-turnike.png", // MT-250 S
+  bt9: "/engelli-turnike.png", // MT-450
+  bt10: "/hizli-gecis-turnike.png", // MT-281
+  bt11: "/jetonlu-turnike.png", // MT-250 Jetonlu
+  bt12: "/jetonlu-turnike.png", // MT-345 Jetonlu
 } as const;
 
 export type ImageKey = keyof typeof IMAGES;
