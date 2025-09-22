@@ -529,7 +529,7 @@ export default function ProductTurnikePage() {
                   <Link href="/iletisim">Ücretsiz Keşif Talep Edin</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link href="tel:+902123200230">0212 320 02 30</Link>
+                  <Link href="tel:+905467122296">0546 712 22 96</Link>
                 </Button>
               </div>
             </motion.div>

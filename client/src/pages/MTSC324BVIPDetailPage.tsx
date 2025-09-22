@@ -336,7 +336,7 @@ export default function MTSC324BVIPDetailPage() {
                 <Link href="/iletisim">Ücretsiz Keşif</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
-                <a href="tel:+902123456789">
+                <a href="tel:+905467122296">
                   <Phone className="mr-2 h-4 w-4" />
                   Hemen Ara
                 </a>
@@ -346,7 +346,7 @@ export default function MTSC324BVIPDetailPage() {
             <div className="flex flex-wrap gap-6 justify-center text-sm">
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <span>+90 212 345 67 89</span>
+                <span>+90 546 712 22 96</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
