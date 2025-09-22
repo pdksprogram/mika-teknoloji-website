@@ -8,6 +8,8 @@ import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import LoadingScreen from "@/components/LoadingScreen";
 import { LanguageProvider } from "@/hooks/useLanguage";
+import { initGA } from "@/lib/analytics";
+import { useAnalytics } from "@/hooks/use-analytics";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Solutions from "@/pages/Solutions";
@@ -54,6 +56,9 @@ import MT1350YarimBoyDetailPage from "@/pages/MT1350YarimBoyDetailPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
+  // Track page views when routes change  
+  useAnalytics();
+  
   return (
     <Switch>
       <Route path="/" component={Home} />
@@ -126,6 +131,13 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Initialize Google Analytics when app loads
+    if (!import.meta.env.VITE_GA_MEASUREMENT_ID) {
+      console.warn('Missing required Google Analytics key: VITE_GA_MEASUREMENT_ID');
+    } else {
+      initGA();
+    }
+    
     // Simulate initial app loading
     const timer = setTimeout(() => {
       setIsLoading(false);
