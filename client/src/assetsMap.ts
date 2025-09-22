@@ -12,20 +12,20 @@ export const IMAGES = {
   t7: "/mt-jetonlu-turnike.png", // Jetonlu turnikeler (YENİ)
 } as const;
 
-// Bel Tipi Turnike Modelleri - TIMESTAMP ile cache-busting
+// Bel Tipi Turnike Modelleri - BETAPER.COM'dan alınan gerçek resimler
 export const BEL_TURNIKE_IMAGES = {
-  bt1: `/tripod-t250-classic.png?t=${CACHE_BUST}`, // T 250 - Paslanmaz çelik waist high tripod
-  bt2: `/tripod-t250eco-budget.png?t=${CACHE_BUST}`, // T 250 ECO - Ekonomik tripod turnike
-  bt3: `/tripod-t250a2-bidirectional.png?t=${CACHE_BUST}`, // T 250 A2 - İki yönlü tripod barrier
-  bt4: `/tripod-t250a2eco-economy.png?t=${CACHE_BUST}`, // T 250 A2 ECO - Bütçe A2 tripod
-  bt5: `/tripod-t250gt-premium.png?t=${CACHE_BUST}`, // T 250 GT - Premium tripod gate
-  bt6: `/tripod-t345-industrial.png?t=${CACHE_BUST}`, // T 345 - Heavy duty tripod barrier
-  bt7: `/tripod-t345eco-budget.png?t=${CACHE_BUST}`, // T 345 ECO - Ekonomik endüstriyel tripod
-  bt8: `/tripod-t250s-compact.png?t=${CACHE_BUST}`, // T 250 S - Kompakt tripod turnike
-  bt9: `/tripod-t450-highcap.png?t=${CACHE_BUST}`, // T 450 - Yüksek kapasiteli tripod
-  bt10: `/tripod-t281-custom.png?t=${CACHE_BUST}`, // T 281 - Özel tasarım tripod
-  bt11: `/tripod-t250-coinop.png?t=${CACHE_BUST}`, // T 250 Jetonlu - Coin operated tripod
-  bt12: `/tripod-t345-digital.png?t=${CACHE_BUST}`, // T 345 Jetonlu - Digital payment tripod
+  bt1: `/t-250-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 250 - Betaper'daki asıl resim
+  bt2: `/t-250-eco-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 250 ECO - Betaper'daki asıl resim
+  bt3: `/t-250-a2-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 250 A2 - Betaper'daki asıl resim
+  bt4: `/t-250-eco-a2-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 250 A2 ECO - Betaper'daki asıl resim
+  bt5: `/t-250-gt-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 250 GT - Betaper'daki asıl resim
+  bt6: `/t-345-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 345 - Betaper'daki asıl resim
+  bt7: `/t-345-eco-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 345 ECO - Betaper'daki asıl resim
+  bt8: `/t-250-s-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 250 S - Betaper'daki asıl resim
+  bt9: `/t-450-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 450 - Betaper'daki asıl resim
+  bt10: `/t-281-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 281 - Betaper'daki asıl resim
+  bt11: `/jetonlu-turnike-sistemi-t250.jpg?t=${CACHE_BUST}`, // T 250 Jetonlu - Betaper'daki asıl resim
+  bt12: `/jetonlu-turnike-sistemi-t345.jpg?t=${CACHE_BUST}`, // T 345 Jetonlu - Betaper'daki asıl resim
 } as const;
 
 export type ImageKey = keyof typeof IMAGES;
