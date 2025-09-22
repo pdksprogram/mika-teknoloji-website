@@ -363,6 +363,110 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Detailed Content Section - For SEO */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-8 text-center">
+              PDKS Sistemleri - Personel Devam Kontrol Çözümleri
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-12 mb-16">
+              <div>
+                <h3 className="text-2xl font-bold text-slate-800 mb-6">Neden Mika Teknoloji PDKS?</h3>
+                <div className="space-y-4 text-slate-600">
+                  <p>
+                    <strong>1990'dan bu yana</strong> Türkiye'nin en güvenilir PDKS sistemi sağlayıcısıyız. 
+                    Personel devam kontrol sistemi alanında 30+ yıllık deneyimimiz ile her büyüklükteki işletmeye 
+                    özel çözümler sunmaktayız.
+                  </p>
+                  <p>
+                    <strong>Parmak izi takip sistemi, yüz tanıma sistem ve QR kod</strong> teknolojilerini 
+                    birleştiren hibrit çözümlerimiz ile %99.9 doğruluk oranına ulaşabilirsiniz. 
+                    MT1100, MTP50, MTFDP200, MTFD15 serisi cihazlarımız ISO 27001 güvenlik standartlarına uygun üretilmiştir.
+                  </p>
+                  <p>
+                    <strong>20.000 kullanıcı kapasitesi, TCP/IP ve Wi-Fi desteği</strong> ile ölçeklenebilir 
+                    altyapı sağlıyoruz. Bordro entegrasyonu, mesai hesaplama, vardiya takibi ve 
+                    detaylı raporlama özellikleri ile tam bir personel yönetim sistemi.
+                  </p>
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="text-2xl font-bold text-slate-800 mb-6">Teknik Özellikler ve Avantajlar</h3>
+                <div className="space-y-4 text-slate-600">
+                  <p>
+                    <strong>Web tabanlı PDKS programı</strong> sayesinde kurulum gerektirmeden 
+                    herhangi bir internet bağlantısı bulunan yerden sisteminizi yönetebilirsiniz. 
+                    Mobil cihazlardan takip, evden çalışma desteği ve bulut tabanlı yedekleme hizmetlerimiz mevcuttur.
+                  </p>
+                  <p>
+                    <strong>Biyometrik güvenlik sistemleri</strong> kategorisinde sunduğumuz çözümler:
+                    RFID kart sistemi, turnike sistemleri entegrasyonu, geçiş kontrol sistemleri, 
+                    güvenlik sistemleri bağlantısı ve access control panel desteği.
+                  </p>
+                  <p>
+                    <strong>Sektör çözümleri:</strong> Hastane PDKS, okul personel takip sistemi, 
+                    fabrika vardiya takibi, otel personel yönetimi, AVM güvenlik sistemleri, 
+                    banka şube kontrol sistemleri ve kamu kurumu personel takip uygulamaları.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Technical Specifications */}
+            <div className="bg-slate-50 rounded-lg p-8 mb-12">
+              <h3 className="text-2xl font-bold text-slate-800 mb-6 text-center">Sistem Özellikleri</h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="text-pink-600 font-bold text-lg mb-2">Kapasite</div>
+                  <div className="text-slate-600 text-sm">
+                    20.000 kullanıcı, 500.000 kayıt, Sınırsız rapor
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="text-pink-600 font-bold text-lg mb-2">Bağlantı</div>
+                  <div className="text-slate-600 text-sm">
+                    TCP/IP, Wi-Fi, USB, RS485 desteği
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="text-pink-600 font-bold text-lg mb-2">Güvenlik</div>
+                  <div className="text-slate-600 text-sm">
+                    SSL şifreleme, ISO 27001 uyumlu, KVKK uygun
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="text-pink-600 font-bold text-lg mb-2">Entegrasyon</div>
+                  <div className="text-slate-600 text-sm">
+                    Bordro, ERP, Active Directory, API desteği
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="text-pink-600 font-bold text-lg mb-2">Platform</div>
+                  <div className="text-slate-600 text-sm">
+                    Web, Mobil, Desktop uygulamaları
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="text-pink-600 font-bold text-lg mb-2">Destek</div>
+                  <div className="text-slate-600 text-sm">
+                    7/24 teknik destek, ücretsiz güncelleme
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-slate-800 text-white">
         <div className="container mx-auto px-4 text-center">
