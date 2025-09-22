@@ -46,9 +46,9 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>PDKS - Personel Devam Kontrol Sistemi | Mika Teknoloji - 30+ Yıl Deneyim, 50.000+ Kullanıcı</title>
+        <title>PDKS Sistemleri | Mika Teknoloji - 30+ Yıl</title>
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-        <meta name="description" content="1990'dan beri Türkiye'nin lider PDKS sistemi! Personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem. 20.000 kapasite, TCP/IP, Wi-Fi desteği. Binlerce referans!" />
+        <meta name="description" content="Türkiye'nin lider PDKS sistemi! Parmak izi, yüz tanıma, QR kod. 20.000 kapasite, TCP/IP, Wi-Fi desteği. Binlerce referans!" />
         <meta name="keywords" content="PDKS, personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem, pdks programı, PDKS yazılımı, personel takip sistemi, biyometrik güvenlik sistemleri, QR kod PDKS, RFID kart sistemi, mesai hesaplama, vardiya takibi, bordro entegrasyonu, zaman kontrol sistemi, geçiş kontrol sistemi, turnike sistemleri, güvenlik sistemleri" />
         
         {/* Technical SEO following Meyer/ZKTeco approach */}

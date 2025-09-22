@@ -1,0 +1,139 @@
+Öneriler
+Bağlantı Kurma Stratejisi Uygula
+Bağlantılar
+Yüksek Öncelik
+Toplam Sayfa Dosya Boyutunuzu Azaltın
+Performans
+Orta Öncelik
+Başlık Etiketinin uzunluğunu azaltın
+Sayfa İçi SEO
+Orta Öncelik
+Meta Açıklamasının uzunluğunu azaltın
+Sayfa İçi SEO
+Orta Öncelik
+Yinelenen H1 Etiketlerini Kaldır
+Sayfa İçi SEO
+Orta Öncelik
+Anahtar kelimelerinizi önemli HTML Etiketleri arasında kullanın
+Sayfa İçi SEO
+Düşük Öncelik
+Sayfa Metin İçeriğini Artırın
+Sayfa İçi SEO
+Düşük Öncelik
+HTTP/2+ Protokolünü Kullanın
+Performans
+Düşük Öncelik
+Mobil PageSpeed Insights için optimize edin
+Kullanılabilirlik
+Düşük Öncelik
+Masaüstü PageSpeed Insights için optimize edin
+Kullanılabilirlik
+Düşük Öncelik
+DMARC Mail Kaydı Ekle
+Diğer
+Düşük Öncelik
+SPF Mail Kaydı Ekle
+Diğer
+Düşük Öncelik
+Bağlantılı bir Instagram Profili oluşturun ve bağlayın
+Sosyal
+Düşük Öncelik
+Bağlantılı bir YouTube Kanalı oluşturun ve bağlayın
+Sosyal
+Düşük Öncelik
+İşletme Adresi ve Telefon Numarası Ekleyin
+Diğer
+Düşük Öncelik
+Bir Facebook Pixel Kurun
+Sosyal
+Düşük Öncelik
+Sayfa İçi SEO Sonuçları
+B+
+Sayfa İçi SEO'nuz daha iyi olabilir
+Sayfanızda bir miktar Sayfa İçi SEO optimizasyonu var ancak daha da geliştirilebilir. Sayfa İçi SEO, Arama Motorlarının içeriğinizi doğru bir şekilde anlamasını sağlamak ve ilgili anahtar kelimeler için sıralanmasına yardımcı olmak için önemlidir. HTML Etiket İçeriğinin doğru bir şekilde tamamlandığından ve metin içeriğinin hedef anahtar kelimelerle uyumlu olduğundan emin olmalısınız.
+Başlık Etiketi
+Başlık Etiketiniz var, ancak ideal olarak 50 ile 60 karaktere kısaltılmalıdır (boşluklar dahil).
+PDKS - Personel Devam Kontrol Sistemi | Mika Teknoloji - 30+ Yıl Deneyim, 50.000+ Kullanıcı
+Uzunluk : 91
+Başlık Etiketleri, arama motorlarının içeriğinizi doğru bir şekilde anlaması ve kategorize etmesi için çok önemlidir.
+Meta Açıklama Etiketi
+Sayfanızda bir Meta Açıklama Etiketi var, ancak Meta Açıklamanız ideal olarak 120 ile 160 karakter arasında olmalıdır (boşluklar dahil).
+1990'dan beri Türkiye'nin lider PDKS sistemi! Personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem. 20.000 kapasite, TCP/IP, Wi-Fi desteği. Binlerce referans!
+Uzunluk : 181
+Bir Meta Açıklaması, arama motorlarının sayfanızın içeriğini anlaması için önemlidir ve genellikle arama sonuçlarında açıklama metni olarak gösterilir.
+SERP Parça Önizlemesi
+Bu, sayfanızın Arama Sonuçlarında nasıl görünebileceğini göstermektedir. Not, bu bir kılavuz olarak tasarlanmıştır ve Arama Motorları bu içeriği daha sık dinamik olarak oluşturmaktadır.
+
+Mika Teknoloji
+https://mikateknoloji.com
+PDKS - Personel Devam Kontrol Sistemi
+1990'dan beri Türkiye'nin lider PDKS sistemi! Personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem. 20.000 kapasite, TCP/IP, ...
+Hreflang Kullanımı
+Sayfanız Hreflang özniteliklerini kullanmıyor.
+Dil
+Sayfanız Lang Attributu kullanıyor.
+Beyan Edilen: English
+H1 Başlık Etiketi Kullanımı
+Sayfanızda birden fazla H1 Etiketi var. Genellikle bir sayfada yalnızca bir H1 Etiketi kullanılması önerilir.
+H1 Başlık Etiketi, arama motorlarına içeriğinizin ne hakkında olduğunu ve dolayısıyla hangi anahtar kelimeler için sıralanması gerektiğini belirtmenin önemli bir yoludur.
+Show Details
+H2-H6 Başlık Etiketi Kullanımı
+Sayfanız birden fazla Başlık Etiketi seviyesini kullanıyor.
+BAŞLIK ETİKETİ	FREKANS	
+H2	7	
+H3	3	
+H4	0	
+H5	0	
+H6	0	
+Show Details
+Anahtar Kelime Tutarlılığı
+Sayfanızın anahtar kelimeleri önemli HTML Etiketleri arasında iyi dağılmamış.
+Sayfa içeriğiniz, sıralamak istediğiniz belirli anahtar kelimeler etrafında odaklanmalıdır. İdeal olarak, bu anahtar kelimeler başlık, meta ve başlık etiketleri gibi etiketler arasında da dağıtılmalıdır.
+İfadeler
+CÜMLE	BAŞLIK	META AÇIKLAMA ETİKETİ	BAŞLIK ETİKETLERİ	SAYFA FREKANSI	
+mika teknoloji	
+6	
+teknoloji ÇÖzÜmleri	
+4	
+personel devam	
+4	
+devam kontrol	
+4	
+detayları İncele	
+4	
+İncele teklif	
+4	
+teklif al	
+4	
+yüz tanıma	
+4	
+İçerik Miktarı
+Sayfanızda arama motorlarının 'zayıf içerik' olarak yorumlayabileceği düşük hacimli metin içeriği var.
+Kelime Sayısı: 400
+Daha yüksek metin içeriği hacimlerinin genel olarak daha iyi sıralama yeteneği ile ilişkili olduğu iyi araştırılmıştır.
+Görsel Alt Nitelikleri
+Sayfanızda Alt Nitelik eksik olan herhangi bir resim bulunmamaktadır.
+Kanonik Etiket
+Sayfanız Kanonik Etiket kullanıyor.
+https://mikateknoloji.com/
+Noindex Etiketi Testi
+Sayfanız, dizine eklemeyi engelleyen Noindex Etiketi kullanmıyor.
+Noindex Başlık Testi
+Sayfanız, dizine eklemeyi engelleyen Noindex Başlığı kullanmıyor.
+SSL Etkin
+Web sitenizde SSL etkinleştirilmiş.
+HTTPS Yönlendirme
+Sayfanız başarıyla HTTPS (SSL güvenli) sürümüne yönlendiriyor.
+Robots.txt
+Web sitenizin bir robots.txt dosyası var gibi görünüyor.
+http://mikateknoloji.com/robots.txt
+Robots.txt tarafından engellendi
+Sayfanız robots.txt tarafından engellenmiş görünmüyor.
+XML Site Haritaları
+Web siteniz bir XML Site Haritasına sahip görünüyor.
+https://mikateknoloji.com/sitemap.xml
+Analitik
+Sayfanız bir analiz aracı kullanıyor.
+   Google Analytics
+Schema.org Yapılandırılmış Veriler
+Sayfanızda JSON-LD Şeması kullanıyorsunuz.
