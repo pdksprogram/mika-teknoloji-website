@@ -46,17 +46,17 @@ export const BOY_TURNIKE_IMAGES = {
   bt14: `/yarim-boy-turnike-sistemi-t1400-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // MT 1400 Yarım Boy
 } as const;
 
-// Engelli Turnike Modelleri - Çalışan resim yolları 
+// Engelli Turnike Modelleri - BETAPER.COM'dan alınan gerçek resimler
 export const ENGELLI_TURNIKE_IMAGES = {
-  et1: `/betaper-t250-elektromekanik.jpg?t=${CACHE_BUST}`, // MT SC324B VIP Turnike
-  et2: `/betaper-t250-eco-elektromekanik.jpg?t=${CACHE_BUST}`, // MT SC324C VIP Turnike
-  et3: `/betaper-t345-elektromekanik.jpg?t=${CACHE_BUST}`, // MT 230 MVIP Slim VIP Turnike
-  et4: `/betaper-t450-elektromekanik.jpg?t=${CACHE_BUST}`, // MT 150 MSWG Motorlu VIP Turnike
-  et5: `/betaper-t281-elektromekanik.jpg?t=${CACHE_BUST}`, // MT 150 MSWG Motorlu G Kollu VIP Turnike
-  et6: `/betaper-jetonlu-turnike-t250.jpg?t=${CACHE_BUST}`, // MT T80 Yaprak Turnike
-  et7: `/betaper-jetonlu-turnike-t345.jpg?t=${CACHE_BUST}`, // MT T80 Manyetik Kilitli Yaprak Turnike
-  et8: `/betaper-t250-gt-elektromekanik.jpg?t=${CACHE_BUST}`, // MT TMT4 Kelebek Turnike
-  et9: `/betaper-t250-s-elektromekanik.jpg?t=${CACHE_BUST}`, // MT Turnike Seperatör
+  et1: `/sc324b-vip-turnike.jpg?t=${CACHE_BUST}`, // MT SC324B VIP Turnike
+  et2: `/sc324c-vip-turnike.jpg?t=${CACHE_BUST}`, // MT SC324C VIP Turnike
+  et3: `/t-230-mvip-slim-turnike.jpg?t=${CACHE_BUST}`, // MT 230 MVIP Slim VIP Turnike
+  et4: `/t-150-mswg-turnike-motorlu.jpg?t=${CACHE_BUST}`, // MT 150 MSWG Motorlu VIP Turnike
+  et5: `/t-150-mswg-turnike-gkollu-motorlu.jpg?t=${CACHE_BUST}`, // MT 150 MSWG Motorlu G Kollu VIP Turnike
+  et6: `/699-t80-yaprak-turnike.jpg?t=${CACHE_BUST}`, // MT T80 Yaprak Turnike
+  et7: `/t80-manyetik-kilitli-yaprak-turnike.jpg?t=${CACHE_BUST}`, // MT T80 Manyetik Kilitli Yaprak Turnike
+  et8: `/700-tmt4-kelebek-turnike.jpg?t=${CACHE_BUST}`, // MT TMT4 Kelebek Turnike
+  et9: `/turnike-seperator.jpg?t=${CACHE_BUST}`, // MT Turnike Seperatör
 } as const;
 
 export type ImageKey = keyof typeof IMAGES;
