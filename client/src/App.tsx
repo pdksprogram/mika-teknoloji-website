@@ -30,7 +30,6 @@ import QRPatrolPage from "@/pages/QRPatrolPage";
 import ProductTurnikePage from "@/pages/ProductTurnikePage";
 import BelTipeTurnikePage from "@/pages/BelTipeTurnikePage";
 import MT250DetailPage from "@/pages/MT250DetailPage";
-import TurnikeDetailPage from "@/pages/TurnikeDetailPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -62,7 +61,6 @@ function Router() {
       <Route path="/urunler/turnike" component={ProductTurnikePage} />
       <Route path="/urunler/bel-tipi-turnike" component={BelTipeTurnikePage} />
       <Route path="/urunler/mt-250-turnike" component={MT250DetailPage} />
-      <Route path="/urunler/turnike/:model" component={TurnikeDetailPage} />
       <Route path="/urunler/bekci-tur-kontrol" component={QRPatrolPage} />
       
       <Route path="/referanslar" component={References} />
