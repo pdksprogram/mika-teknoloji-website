@@ -9,20 +9,20 @@ export const IMAGES = {
   t7: "/jetonlu-turnike.png", // Jetonlu turnikeler (YENİ)
 } as const;
 
-// Bel Tipi Turnike Modelleri - Parmak izi gibi direkt yol kullanımı
+// Bel Tipi Turnike Modelleri - Mevcut genel resimler kullanılıyor
 export const BEL_TURNIKE_IMAGES = {
-  bt1: "/mt-250-elektromekanik.png", // MT-250 Elektromekanik 
-  bt2: "/mt-250-eco.png", // MT-250 ECO 
-  bt3: "/mt-250-a2.png", // MT-250 A2 
-  bt4: "/mt-250-a2-eco.png", // MT-250 A2 ECO 
-  bt5: "/mt-250-gt.png", // MT-250 GT 
-  bt6: "/mt-345.png", // MT-345 
-  bt7: "/mt-345-eco.png", // MT-345 ECO 
-  bt8: "/mt-250-s.png", // MT-250 S 
-  bt9: "/mt-450.png", // MT-450 
-  bt10: "/mt-281.png", // MT-281 
-  bt11: "/mt-250-jetonlu.png", // MT-250 Jetonlu 
-  bt12: "/mt-345-jetonlu.png", // MT-345 Jetonlu 
+  bt1: "/bel-tipi-turnike.png", // MT-250 Elektromekanik 
+  bt2: "/bel-tipi-turnike.png", // MT-250 ECO 
+  bt3: "/bel-tipi-turnike.png", // MT-250 A2 
+  bt4: "/bel-tipi-turnike.png", // MT-250 A2 ECO 
+  bt5: "/bel-tipi-turnike.png", // MT-250 GT 
+  bt6: "/bel-tipi-turnike.png", // MT-345 
+  bt7: "/bel-tipi-turnike.png", // MT-345 ECO 
+  bt8: "/bel-tipi-turnike.png", // MT-250 S 
+  bt9: "/bel-tipi-turnike.png", // MT-450 
+  bt10: "/bel-tipi-turnike.png", // MT-281 
+  bt11: "/jetonlu-turnike.png", // MT-250 Jetonlu 
+  bt12: "/jetonlu-turnike.png", // MT-345 Jetonlu 
 } as const;
 
 export type ImageKey = keyof typeof IMAGES;
