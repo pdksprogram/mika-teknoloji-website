@@ -750,6 +750,915 @@ const turnikeSpecs: Record<string, TurnikeSpec> = {
       "Dijital Ödeme Belgesi"
     ],
     price: "Fiyat İçin Ara"
+  },
+
+  // BOY TİPİ TURNİKELER - 14 Model
+  "t2500d-single-3": {
+    id: "t2500d-single-3",
+    model: "MT-2500D Single 3 Kollu",
+    title: "Single 3 Kollu Boy Turnike Sistemi",
+    image: "/t-2500d-single-3-kollu-paslanmaz-turnike.jpg",
+    description: "Yüksek güvenlik alanları için tasarlanmış tek yönlü 3 kollu boy tipi turnike sistemi.",
+    applications: [
+      "Ofis binaları girişleri",
+      "Fabrika ana kapıları",
+      "Okul ve üniversite girişleri",
+      "Hastane güvenlik noktaları",
+      "Devlet kurumları",
+      "Güvenlik merkezleri"
+    ],
+    materials: "304 Grade paslanmaz çelik gövde ve kollar. Yüksek dayanıklılık için özel alaşım kullanılır.",
+    usage: "Tek yönlü geçiş kontrolü sağlar. Kart okuyucu, biyometrik sistemler entegre edilebilir.",
+    security: "3 kollu tasarım ile maksimum güvenlik. Elektrik kesintisinde acil durum prosedürleri devreye girer.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "55 W",
+      temperature: "-30°C - +70°C",
+      capacity: "35 Kişi / Dakika",
+      passageGap: "55 cm",
+      weight: "85 Kg",
+      environment: "İç/Dış Ortam",
+      protection: "IP 65",
+      dimensions: "220 x 110 x 100 cm",
+      warranty: "3 Yıl Boy Tipi Garanti",
+      maintenance: "6 Ayda Bir Profesyonel Bakım",
+      installation: "Özel Boy Tipi Kurulum"
+    },
+    features: [
+      "304 Grade Paslanmaz Çelik",
+      "3 Kollu Güvenlik Sistemi",
+      "LED Yönlendirme Işıkları",
+      "Ses ve Işık Uyarı Sistemi",
+      "Anti-Tailgating Koruması",
+      "Kart Okuyucu Entegrasyonu",
+      "Biyometrik Sistem Desteği",
+      "Acil Durum Açılma Sistemi",
+      "Çift Sensör Teknolojisi",
+      "Yüksek Trafik Kapasitesi",
+      "Otomatik Kilitleme",
+      "Manuel Açma Seçeneği"
+    ],
+    advantages: [
+      "Yüksek güvenlik seviyesi",
+      "Alttan geçiş engelleme",
+      "Dayanıklı boy tipi yapı",
+      "Estetik görünüm",
+      "Kolay entegrasyon",
+      "24/7 çalışma kapasitesi"
+    ],
+    accessories: [
+      "Kart okuyucu sistemi",
+      "Biyometrik okuyucular",
+      "LED durum gösterge paneli",
+      "Acil durum butonu",
+      "Uzaktan kontrol ünitesi",
+      "Harici alarm sistemi"
+    ],
+    certifications: [
+      "CE Boy Tipi Belgesi",
+      "ISO 9001:2015",
+      "TSE Güvenlik Standardı",
+      "IP65 Koruma Sınıfı",
+      "Boy Tipi Turnike Belgesi"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+
+  "t2500d-single-4": {
+    id: "t2500d-single-4",
+    model: "MT-2500D Single 4 Kollu",
+    title: "Single 4 Kollu Boy Turnike Sistemi",
+    image: "/t-2500d-single-4-kollu-paslanmaz-turnike.jpg",
+    description: "Maksimum güvenlik gereken alanlar için 4 kollu tek yönlü boy tipi turnike sistemi.",
+    applications: [
+      "Yüksek güvenlik alanları",
+      "Askeri tesisler",
+      "Bankalar ana giriş",
+      "Veri merkezleri",
+      "Araştırma laboratuvarları",
+      "Kritik altyapı tesisleri"
+    ],
+    materials: "316 Grade paslanmaz çelik seçenekli, anti-korozyon özel kaplama.",
+    usage: "4 kollu maksimum güvenlik sistemi. Çarpışma önleyici ve anti-tailgating teknolojisi.",
+    security: "4 kollu tasarım ile en üst düzey güvenlik. Çoklu sensör sistemi ve alarm entegrasyonu.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "65 W",
+      temperature: "-30°C - +70°C", 
+      capacity: "30 Kişi / Dakika",
+      passageGap: "55 cm",
+      weight: "95 Kg",
+      environment: "Yüksek Güvenlik Ortamları",
+      protection: "IP 67",
+      dimensions: "220 x 110 x 105 cm",
+      warranty: "5 Yıl Yüksek Güvenlik Garantisi",
+      maintenance: "3 Ayda Bir Özel Bakım",
+      installation: "Yüksek Güvenlik Kurulumu"
+    },
+    features: [
+      "4 Kollu Maksimum Güvenlik",
+      "316 Grade Paslanmaz Çelik",
+      "Çoklu LED Sistemi",
+      "Ses ve Titreşim Uyarısı",
+      "Gelişmiş Anti-Tailgating",
+      "Çarpışma Önleyici Sistem",
+      "Acil Durum Otomasyonu",
+      "Yüksek Hızlı Sensörler",
+      "Güvenlik Kamerası Entegrasyonu",
+      "Alarm Sistemi Bağlantısı",
+      "Otomatik Rapor Sistemi",
+      "VIP Geçiş Seçeneği"
+    ],
+    advantages: [
+      "En üst düzey güvenlik",
+      "4 kollu çarpışma koruması",
+      "Yüksek güvenlik standartları",
+      "Kritik alan uygunluğu",
+      "Profesyonel görünüm",
+      "Uzun ömürlü dayanıklılık"
+    ],
+    accessories: [
+      "Yüksek güvenlik kart okuyucu",
+      "Çoklu biyometrik sistemler",
+      "Güvenlik kamerası",
+      "Alarm entegrasyon modülü",
+      "VIP geçiş kontrolü",
+      "Acil durum kumanda paneli"
+    ],
+    certifications: [
+      "CE Yüksek Güvenlik",
+      "ISO 27001 Güvenlik",
+      "NATO Güvenlik Standardı",
+      "IP67 Maksimum Koruma",
+      "Askeri Standart Belgesi"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+
+  "t2500d-double-3": {
+    id: "t2500d-double-3", 
+    model: "MT-2500D Double 3 Kollu",
+    title: "Double 3 Kollu Boy Turnike Sistemi",
+    image: "/t-2500d-double-3-kollu-paslanmaz-turnike.jpg",
+    description: "Yoğun trafikli alanlar için çift yönlü 3 kollu boy tipi turnike sistemi.",
+    applications: [
+      "Metro istasyonu girişleri",
+      "Havaalanı güvenlik noktaları",
+      "Büyük alışveriş merkezleri",
+      "Stadyum ana girişleri",
+      "Kongre merkezi girişleri",
+      "Büyük ofis kompleksleri"
+    ],
+    materials: "304 paslanmaz çelik çift taraflı işlem. Yoğun kullanım için özel kaplama.",
+    usage: "Çift yönlü geçiş imkanı. İki taraflı LED ve ses sistemi ile yönlendirme.",
+    security: "3 kollu çift yönlü güvenlik. Her yönde ayrı sensör ve kontrol sistemi.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "75 W",
+      temperature: "-25°C - +70°C",
+      capacity: "60 Kişi / Dakika (30+30)",
+      passageGap: "55 cm (Her Yön)",
+      weight: "110 Kg", 
+      environment: "Yoğun Trafik Alanları",
+      protection: "IP 65",
+      dimensions: "220 x 110 x 100 cm",
+      warranty: "3 Yıl Double Sistem Garantisi",
+      maintenance: "4 Ayda Bir Double Bakım",
+      installation: "Çift Yönlü Sistem Kurulumu"
+    },
+    features: [
+      "Çift Yönlü Geçiş Sistemi",
+      "3 Kollu İki Taraflı",
+      "Çift LED Yönlendirme",
+      "İki Taraflı Ses Sistemi",
+      "Çoklu Anti-Tailgating",
+      "Double Sensör Sistemi",
+      "İki Yönlü Kart Okuma",
+      "Çift Acil Durum Sistemi",
+      "Yüksek Trafik Kapasitesi",
+      "İki Taraflı Kontrol",
+      "Çoklu Entegrasyon",
+      "Double Güvenlik Protokolü"
+    ],
+    advantages: [
+      "Yüksek geçiş kapasitesi",
+      "Çift yönlü verimlilik",
+      "Yoğun trafikte performans",
+      "İki taraflı güvenlik",
+      "Metro standartı kalite",
+      "Havaalanı uygunluğu"
+    ],
+    accessories: [
+      "Çift taraflı kart okuyucu",
+      "İki yönlü LED panel",
+      "Double ses sistemi",
+      "Çift acil durum butonu",
+      "İki taraflı sayaç",
+      "Double kontrol paneli"
+    ],
+    certifications: [
+      "CE Double Sistem",
+      "Metro Standardı",
+      "Havaalanı Belgesi",
+      "ISO 9001:2015",
+      "IP65 Çift Koruma"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+
+  "t2500d-double-4": {
+    id: "t2500d-double-4",
+    model: "MT-2500D Double 4 Kollu", 
+    title: "Double 4 Kollu Boy Turnike Sistemi",
+    image: "/t-2500d-double-4-kollu-paslanmaz-turnike.jpg",
+    description: "En yüksek güvenlik ve kapasite gereken alanlar için çift yönlü 4 kollu boy tipi turnike.",
+    applications: [
+      "Büyük havaalanları",
+      "Metro ana istasyonları", 
+      "Stadyum VIP girişleri",
+      "Büyük kongre merkezleri",
+      "Devlet kurumları ana giriş",
+      "Yüksek güvenlik tesisleri"
+    ],
+    materials: "316 Grade paslanmaz çelik, maksimum dayanıklılık için özel alaşım.",
+    usage: "4 kollu çift yönlü maksimum güvenlik. Her yönde 4 sensör ve tam kontrol.",
+    security: "En üst seviye güvenlik sistemi. Çift yönlü 4 kollu tam koruma.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "90 W",
+      temperature: "-30°C - +80°C",
+      capacity: "50 Kişi / Dakika (25+25)",
+      passageGap: "55 cm (Her Yön)",
+      weight: "135 Kg",
+      environment: "Maksimum Güvenlik Alanları", 
+      protection: "IP 67",
+      dimensions: "220 x 110 x 105 cm",
+      warranty: "5 Yıl Premium Double Garanti",
+      maintenance: "2 Ayda Bir Premium Bakım",
+      installation: "Premium Double Kurulum"
+    },
+    features: [
+      "4 Kollu Çift Yönlü Sistem",
+      "Premium 316 Paslanmaz Çelik",
+      "Çoklu LED Aydınlatma",
+      "Surround Ses Sistemi",
+      "Maksimum Anti-Tailgating",
+      "8 Sensör Sistemi (4x2)",
+      "Çift Yönlü Biyometrik",
+      "Otomatik Acil Sistem",
+      "Premium Kontrol Paneli",
+      "Havaalanı Standardı",
+      "VIP Geçiş Modülleri",
+      "Gelişmiş Rapor Sistemi"
+    ],
+    advantages: [
+      "Maksimum güvenlik ve kapasite",
+      "Havaalanı kalite standardı",
+      "Çift yönlü 4 kollu koruma",
+      "Premium malzeme kalitesi",
+      "En gelişmiş teknoloji",
+      "24/7 kesintisiz performans"
+    ],
+    accessories: [
+      "Premium çift kart okuyucu",
+      "Havaalanı standart LED",
+      "Surround ses sistemi",
+      "VIP geçiş kontrol modülü",
+      "Acil durum merkez paneli",
+      "Güvenlik entegrasyon sistemi"
+    ],
+    certifications: [
+      "CE Premium Double",
+      "Havaalanı Standardı",
+      "ISO 27001 Güvenlik",
+      "IP67 Maksimum Koruma",
+      "İnternasyonal Güvenlik Belgesi"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+
+  "t2500k-single-3": {
+    id: "t2500k-single-3",
+    model: "MT-2500K Single 3 Kollu",
+    title: "K Serisi Single 3 Kollu Boy Turnike",
+    image: "/t-2500k-single-3-kollu-paslanmaz-turnike.jpg", 
+    description: "Kompakt tasarım tek yönlü 3 kollu K serisi boy tipi turnike sistemi.",
+    applications: [
+      "Orta ölçekli ofisler",
+      "Mağaza ana girişleri",
+      "Klinik ve sağlık merkezleri",
+      "Okul ana kapıları",
+      "Küçük fabrika girişleri",
+      "İş merkezi girişleri"
+    ],
+    materials: "304 paslanmaz çelik K serisi özel tasarım. Kompakt ve dayanıklı yapı.",
+    usage: "K serisi kompakt boy tipi. Dar alanlarda maksimum performans.",
+    security: "3 kollu kompakt güvenlik sistemi. Ekonomik ama güvenli çözüm.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "45 W",
+      temperature: "-25°C - +65°C",
+      capacity: "32 Kişi / Dakika",
+      passageGap: "52 cm",
+      weight: "70 Kg",
+      environment: "İç/Dış Ortam",
+      protection: "IP 54",
+      dimensions: "200 x 100 x 100 cm",
+      warranty: "2 Yıl K Serisi Garanti",
+      maintenance: "6 Ayda Bir K Serisi Bakım", 
+      installation: "Kompakt Kurulum"
+    },
+    features: [
+      "K Serisi Kompakt Tasarım",
+      "3 Kollu Ekonomik Güvenlik",
+      "LED Yönlendirme",
+      "Ses Uyarı Sistemi",
+      "Standart Anti-Tailgating",
+      "Kart Okuyucu Hazırlığı",
+      "Manuel/Otomatik Mod",
+      "Acil Durum Açılma",
+      "Kompakt Sensör Sistemi",
+      "Kolay Kurulum",
+      "Bakım Kolaylığı",
+      "Ekonomik İşletim"
+    ],
+    advantages: [
+      "Kompakt boy tipi çözüm",
+      "Ekonomik yatırım",
+      "Dar alanlarda kullanım",
+      "Kolay kurulum ve bakım",
+      "Güvenilir K serisi teknoloji",
+      "Orta ölçekli işletmelere ideal"
+    ],
+    accessories: [
+      "K serisi kart okuyucu",
+      "Kompakt LED panel",
+      "Standart ses ünitesi",
+      "Manuel kontrol butonu",
+      "Basit sayaç sistemi",
+      "Temel alarm modülü"
+    ],
+    certifications: [
+      "CE K Serisi",
+      "TSE Kompakt Standart",
+      "IP54 Temel Koruma",
+      "K Serisi Kalite Belgesi"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+
+  "t2500k-single-4": {
+    id: "t2500k-single-4",
+    model: "MT-2500K Single 4 Kollu",
+    title: "K Serisi Single 4 Kollu Boy Turnike",
+    image: "/t-2500k-single-4-kollu-paslanmaz-turnike.jpg",
+    description: "Kompakt tasarım tek yönlü 4 kollu K serisi güvenlik odaklı boy tipi turnike.",
+    applications: [
+      "Güvenlik gereken ofisler",
+      "Orta ölçekli bankalar",
+      "Sağlık merkezi girişleri",
+      "Eğitim kurumları",
+      "Küçük güvenlik merkezleri",
+      "Otopark girişleri"
+    ],
+    materials: "304 paslanmaz çelik K serisi 4 kollu özel tasarım.",
+    usage: "K serisi kompakt 4 kollu güvenlik. Orta seviye güvenlik gereken alanlarda ideal.",
+    security: "4 kollu K serisi güvenlik sistemi. Kompakt ama güvenli çözüm.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz", 
+      power: "50 W",
+      temperature: "-25°C - +65°C",
+      capacity: "28 Kişi / Dakika",
+      passageGap: "52 cm",
+      weight: "75 Kg",
+      environment: "İç/Dış Ortam",
+      protection: "IP 54",
+      dimensions: "200 x 100 x 105 cm",
+      warranty: "2 Yıl K Serisi 4 Kol Garanti",
+      maintenance: "6 Ayda Bir K Serisi Bakım",
+      installation: "Kompakt 4 Kol Kurulum"
+    },
+    features: [
+      "K Serisi 4 Kollu Tasarım",
+      "Kompakt Güvenlik Sistemi",
+      "4 Kollu LED Gösterge",
+      "Gelişmiş Ses Sistemi", 
+      "K Serisi Anti-Tailgating",
+      "4 Sensör Güvenlik",
+      "Çarpışma Önleyici",
+      "Otomatik Güvenlik Modu",
+      "Kompakt Kontrol Paneli",
+      "Hızlı Kurulum",
+      "Kolay Bakım Erişimi",
+      "Ekonomik 4 Kol Çözümü"
+    ],
+    advantages: [
+      "Kompakt 4 kollu güvenlik",
+      "Orta seviye güvenlik ihtiyacına ideal",
+      "Ekonomik 4 kollu çözüm",
+      "K serisi güvenilirlik",
+      "Kolay entegrasyon",
+      "Düşük işletim maliyeti"
+    ],
+    accessories: [
+      "K serisi 4 kol kart okuyucu",
+      "Kompakt güvenlik LED",
+      "4 kollu ses sistemi",
+      "Güvenlik kontrol butonu",
+      "4 kol sayaç modülü",
+      "Güvenlik alarm ünitesi"
+    ],
+    certifications: [
+      "CE K Serisi 4 Kol",
+      "TSE Güvenlik Standardı",
+      "IP54 Güvenlik Koruma",
+      "K Serisi Güvenlik Belgesi"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+
+  "t2500k-double-3": {
+    id: "t2500k-double-3",
+    model: "MT-2500K Double 3 Kollu", 
+    title: "K Serisi Double 3 Kollu Boy Turnike",
+    image: "/t-2500k-double-3-kollu-paslanmaz-turnike.jpg",
+    description: "Orta kapasiteli alanlar için kompakt çift yönlü 3 kollu K serisi boy tipi turnike.",
+    applications: [
+      "Okul ana girişleri",
+      "Orta boy alışveriş merkezleri",
+      "İş merkezi girişleri",
+      "Spor salonu girişleri",
+      "Küçük hastane girişleri",
+      "Orta ölçekli fabrikalar"
+    ],
+    materials: "304 paslanmaz çelik K serisi çift yönlü tasarım.",
+    usage: "K serisi kompakt çift yönlü sistem. Orta kapasiteli geçiş kontrolü.",
+    security: "3 kollu çift yönlü K serisi güvenlik. Her yönde kontrol imkanı.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "60 W", 
+      temperature: "-20°C - +65°C",
+      capacity: "50 Kişi / Dakika (25+25)",
+      passageGap: "52 cm (Her Yön)",
+      weight: "85 Kg",
+      environment: "İç/Dış Ortam",
+      protection: "IP 54",
+      dimensions: "200 x 100 x 100 cm",
+      warranty: "2 Yıl K Double Garanti",
+      maintenance: "6 Ayda Bir Double Bakım",
+      installation: "K Serisi Çift Yönlü Kurulum"
+    },
+    features: [
+      "K Serisi Çift Yönlü",
+      "3 Kollu İki Taraf",
+      "Kompakt Double LED",
+      "İki Yönlü Ses Sistemi",
+      "K Serisi Anti-Tailgating",
+      "Çift Sensör Kontrol",
+      "İki Taraflı Kart Okuma",
+      "Double Acil Sistem",
+      "Orta Kapasite Geçiş",
+      "Kompakt Çift Kontrol",
+      "Ekonomik Double Çözüm",
+      "Kolay Double Bakım"
+    ],
+    advantages: [
+      "Kompakt çift yönlü çözüm",
+      "Orta kapasiteli verimlilik", 
+      "Ekonomik double sistem",
+      "K serisi güvenilirlik",
+      "İki yönlü maliyet avantajı",
+      "Okul ve iş yeri uygunluğu"
+    ],
+    accessories: [
+      "K serisi çift kart okuyucu",
+      "Kompakt double LED",
+      "İki yönlü ses modülü",
+      "Çift acil durum butonu",
+      "Double sayaç sistemi",
+      "İki taraflı kontrol paneli"
+    ],
+    certifications: [
+      "CE K Double",
+      "TSE Çift Yönlü Standart", 
+      "IP54 Double Koruma",
+      "K Serisi Double Belgesi"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+
+  "t2500k-double-4": {
+    id: "t2500k-double-4",
+    model: "MT-2500K Double 4 Kollu",
+    title: "K Serisi Double 4 Kollu Boy Turnike",
+    image: "/t-2500k-double-4-kollu-paslanmaz-turnike.jpg",
+    description: "Orta seviye güvenlik gereken alanlar için kompakt çift yönlü 4 kollu K serisi boy tipi turnike.",
+    applications: [
+      "Orta boy tesisler",
+      "Güvenlik gereken eğitim kurumları", 
+      "Sağlık merkezleri ana giriş",
+      "Orta ölçekli güvenlik noktaları",
+      "İş merkezi güvenlik girişleri",
+      "Hızlı geçiş gereken noktalar"
+    ],
+    materials: "304 paslanmaz çelik K serisi 4 kollu çift yönlü özel tasarım.",
+    usage: "K serisi 4 kollu çift yönlü güvenlik. Orta seviye güvenlik ve kapasite.",
+    security: "4 kollu çift yönlü K serisi maksimum güvenlik. Her yönde 4 kollu koruma.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "70 W",
+      temperature: "-20°C - +65°C",
+      capacity: "45 Kişi / Dakika (22+23)",
+      passageGap: "52 cm (Her Yön)",
+      weight: "95 Kg",
+      environment: "Orta Güvenlik Ortamları",
+      protection: "IP 54",
+      dimensions: "200 x 100 x 105 cm",
+      warranty: "3 Yıl K Double 4 Kol Garanti",
+      maintenance: "4 Ayda Bir Premium Bakım",
+      installation: "K Serisi Premium Kurulum"
+    },
+    features: [
+      "K Serisi 4 Kollu Çift Yön",
+      "Premium Kompakt Tasarım",
+      "4 Kollu Double LED",
+      "Gelişmiş Çift Ses Sistemi",
+      "Maksimum K Anti-Tailgating",
+      "8 Sensör Sistemi (4x2)",
+      "Çift Yönlü 4 Kol Güvenlik",
+      "Otomatik Double Acil Sistem",
+      "Premium K Kontrol",
+      "Gelişmiş Double Entegrasyon",
+      "4 Kollu VIP Geçiş",
+      "Double Premium Rapor"
+    ],
+    advantages: [
+      "K serisi maksimum güvenlik",
+      "Kompakt ama güçlü performans",
+      "Çift yönlü 4 kollu verimlilik",
+      "Orta tesisler için ideal",
+      "Premium K serisi kalite",
+      "Maliyet-performans dengesi"
+    ],
+    accessories: [
+      "K serisi premium kart okuyucu",
+      "Double premium LED",
+      "Gelişmiş ses sistemi",
+      "VIP kontrol paneli",
+      "Premium sayaç modülü",
+      "Gelişmiş alarm sistemi"
+    ],
+    certifications: [
+      "CE K Double Premium",
+      "TSE Premium Standart",
+      "ISO 9001:2015",
+      "IP54 Premium Koruma"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+
+  "t2500k-single-3-eco": {
+    id: "t2500k-single-3-eco",
+    model: "MT-2500K ECO Single 3 Kollu",
+    title: "K Serisi Single 3 Kollu Eco Boy Turnike",
+    image: "/t-2500k-single-3-kollu-eco-boy-turnike.jpg",
+    description: "Ekonomik K serisi tek yönlü 3 kollu eco boy tipi turnike sistemi.",
+    applications: [
+      "Küçük mağazalar",
+      "Ofis girişleri",
+      "Kafe/restoran",
+      "Başlangıç projeleri",
+      "Ekonomik çözüm arayan işletmeler",
+      "Küçük ölçekli güvenlik noktaları"
+    ],
+    materials: "304 paslanmaz çelik eco tasarım. Ekonomik üretim için optimize edilmiş.",
+    usage: "K serisi eco boy tipi. En ekonomik boy tipi çözüm.",
+    security: "Temel güvenlik özellikleri içeren ekonomik boy tipi sistem.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "35 W",
+      temperature: "-20°C - +60°C",
+      capacity: "25 Kişi / Dakika",
+      passageGap: "50 cm",
+      weight: "55 Kg",
+      environment: "İç Ortam",
+      protection: "IP 54",
+      dimensions: "180 x 90 x 100 cm",
+      warranty: "1 Yıl Eco Garanti",
+      maintenance: "Yılda Bir Eco Bakım",
+      installation: "Hızlı Eco Kurulum"
+    },
+    features: [
+      "K Serisi Eco Tasarım",
+      "Ekonomik Boy Tipi",
+      "3 Kollu Basit Güvenlik",
+      "LED Temel Gösterge",
+      "Ses Uyarı Sistemi",
+      "Kart Okuyucu Hazırlığı",
+      "Manuel/Otomatik Mod",
+      "Acil Durum Açılma",
+      "Eco Sensör Sistemi",
+      "Basit Kurulum",
+      "Kolay Bakım",
+      "Düşük Maliyet"
+    ],
+    advantages: [
+      "En ekonomik boy tipi seçenek",
+      "Küçük işletmeler için ideal",
+      "Hızlı yatırım geri dönüşü",
+      "Basit kullanım",
+      "K serisi güvenilirlik",
+      "Düşük işletme maliyeti"
+    ],
+    accessories: [
+      "Eco kart okuyucu",
+      "Temel LED panel",
+      "Standart ses ünitesi",
+      "Manuel kontrol butonu"
+    ],
+    certifications: [
+      "CE Eco Boy Tipi",
+      "TSE Temel Standart",
+      "IP54 Koruma"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+
+  "t2500k-single-3-kristal": {
+    id: "t2500k-single-3-kristal",
+    model: "MT-2500K Kristal Single 3 Kollu",
+    title: "K Serisi Single 3 Kollu Kristal Boy Turnike",
+    image: "/t-2500k-single-3-kollu-kristal-boy-turnike.jpg",
+    description: "Lüks kristal cam panelli K serisi 3 kollu boy tipi turnike sistemi.",
+    applications: [
+      "Lüks ofisler",
+      "Premium mağazalar",
+      "Sanat galerileri",
+      "VIP alanlar",
+      "Prestij gereken mekanlar",
+      "Özel tasarım projeleri"
+    ],
+    materials: "Kristal cam panelli özel tasarım. Premium malzemeler kullanılır.",
+    usage: "Kristal tasarım lüks boy tipi. Estetik ve güvenlik bir arada.",
+    security: "3 kollu kristal güvenlik sistemi. Lüks görünüm ile güvenlik.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "50 W",
+      temperature: "-15°C - +60°C",
+      capacity: "30 Kişi / Dakika",
+      passageGap: "52 cm",
+      weight: "80 Kg",
+      environment: "İç Ortam Premium",
+      protection: "IP 44",
+      dimensions: "200 x 100 x 100 cm",
+      warranty: "3 Yıl Kristal Garanti",
+      maintenance: "6 Ayda Bir Kristal Bakım",
+      installation: "Özel Kristal Kurulum"
+    },
+    features: [
+      "Kristal Cam Panel Tasarım",
+      "Lüks LED Aydınlatma",
+      "Premium 3 Kollu Sistem",
+      "Estetik Görünüm",
+      "Özel Kristal İşlemler",
+      "Premium Ses Sistemi",
+      "VIP Mod Seçenekleri",
+      "Kristal Temizlik Sistemi",
+      "Lüks Kontrol Paneli",
+      "Premium Entegrasyon",
+      "Özel Renk Seçenekleri",
+      "Sanat Eseri Görünüm"
+    ],
+    advantages: [
+      "En lüks boy tipi tasarım",
+      "Kristal cam estetik",
+      "Prestij ve güvenlik",
+      "VIP mekanlar için ideal",
+      "Sanat eseri görünüm",
+      "Premium kalite malzemeler"
+    ],
+    accessories: [
+      "Premium kristal kart okuyucu",
+      "Lüks LED aydınlatma",
+      "Kristal ses sistemi",
+      "VIP kontrol paneli",
+      "Premium temizlik kiti",
+      "Özel kristal aksesuarlar"
+    ],
+    certifications: [
+      "CE Kristal Tasarım",
+      "Premium Kalite Belgesi",
+      "Lüks Standart Belgesi",
+      "Kristal İşlem Belgesi"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+
+  "t2500k-double-3-eco": {
+    id: "t2500k-double-3-eco",
+    model: "MT-2500K ECO Double 3 Kollu",
+    title: "K Serisi Double 3 Kollu Eco Boy Turnike",
+    image: "/t-2500k-double-3-kollu-eco-boy-turnike.jpg",
+    description: "Ekonomik çift yönlü 3 kollu K serisi eco boy tipi turnike sistemi.",
+    applications: [
+      "Orta boy işletmeler",
+      "Okul ana kapıları",
+      "Küçük fabrika girişleri",
+      "Ekonomik projeler",
+      "Çift yönlü geçiş gereken yerler",
+      "Orta kapasiteli güvenlik"
+    ],
+    materials: "304 paslanmaz çelik eco double tasarım.",
+    usage: "Ekonomik çift yönlü K serisi boy tipi. Maliyet avantajlı double sistem.",
+    security: "3 kollu çift yönlü eco güvenlik. Her yönde temel güvenlik.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "55 W",
+      temperature: "-20°C - +65°C",
+      capacity: "40 Kişi / Dakika (20+20)",
+      passageGap: "50 cm (Her Yön)",
+      weight: "75 Kg",
+      environment: "İç/Dış Ortam",
+      protection: "IP 54",
+      dimensions: "180 x 90 x 100 cm",
+      warranty: "2 Yıl Eco Double Garanti",
+      maintenance: "6 Ayda Bir Eco Bakım",
+      installation: "Eco Double Kurulum"
+    },
+    features: [
+      "K Eco Çift Yönlü",
+      "Ekonomik Double Sistem",
+      "3 Kollu İki Taraflı",
+      "Eco LED Gösterge",
+      "Çift Yönlü Ses",
+      "Double Eco Sensör",
+      "İki Taraflı Kart Okuma",
+      "Eco Acil Durum",
+      "Basit Double Kontrol",
+      "Ekonomik İşletim",
+      "Kolay Bakım",
+      "Maliyet Avantajlı"
+    ],
+    advantages: [
+      "Ekonomik çift yönlü çözüm",
+      "Orta işletmeler için ideal",
+      "Double maliyet avantajı",
+      "Çift yönlü verimlilik",
+      "K serisi güvenilirlik",
+      "Düşük işletim maliyeti"
+    ],
+    accessories: [
+      "Eco çift kart okuyucu",
+      "Double temel LED",
+      "İki yönlü ses modülü",
+      "Eco acil buton",
+      "Double sayaç",
+      "Çift kontrol butonu"
+    ],
+    certifications: [
+      "CE Eco Double",
+      "TSE Double Standart",
+      "IP54 Double Koruma"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+
+  "t1350-yarim-boy": {
+    id: "t1350-yarim-boy",
+    model: "MT-1350 Yarım Boy",
+    title: "Elektromekanik Yarım Boy Turnikesi",
+    image: "/yarim-boy-turnike-sistemi-t1350-elektromekanik-turnike.jpg",
+    description: "Kompakt yarım boy elektromekanik turnike sistemi. Dar alanlar için ideal çözüm.",
+    applications: [
+      "Dar alanlar",
+      "Küçük girişler",
+      "Ofis içi geçişler",
+      "Bölüm girişleri",
+      "Koridor geçişleri",
+      "Kompakt güvenlik noktaları"
+    ],
+    materials: "304 paslanmaz çelik yarım boy özel tasarım.",
+    usage: "Yarım boy elektromekanik sistem. Dar alanlarda maksimum verimlilik.",
+    security: "Yarım boy güvenlik sistemi. Kompakt ama güvenli çözüm.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "30 W",
+      temperature: "-20°C - +60°C",
+      capacity: "25 Kişi / Dakika",
+      passageGap: "45 cm",
+      weight: "45 Kg",
+      environment: "İç Ortam",
+      protection: "IP 54",
+      dimensions: "150 x 80 x 85 cm",
+      warranty: "2 Yıl Yarım Boy Garanti",
+      maintenance: "6 Ayda Bir Kompakt Bakım",
+      installation: "Kompakt Kurulum"
+    },
+    features: [
+      "Yarım Boy Tasarım",
+      "Elektromekanik Kontrol",
+      "Kompakt Boyut",
+      "LED Gösterge",
+      "Ses Uyarı",
+      "Kart Okuyucu Desteği",
+      "Manuel/Otomatik Mod",
+      "Acil Durum Açılma",
+      "Dar Alan Optimizasyonu",
+      "Kolay Kurulum",
+      "Minimal Yer İhtiyacı",
+      "Ekonomik Çözüm"
+    ],
+    advantages: [
+      "Dar alanlarda kullanım",
+      "Kompakt boy tipi çözüm",
+      "Minimal yer ihtiyacı",
+      "Kolay kurulum ve bakım",
+      "Elektromekanik güvenilirlik",
+      "Ekonomik yatırım"
+    ],
+    accessories: [
+      "Kompakt kart okuyucu",
+      "Dar alan LED",
+      "Küçük ses ünitesi",
+      "Manuel kontrol",
+      "Kompakt sayaç"
+    ],
+    certifications: [
+      "CE Yarım Boy",
+      "TSE Kompakt Standart",
+      "IP54 Koruma"
+    ],
+    price: "Fiyat İçin Ara"
+  },
+
+  "t1400-yarim-boy": {
+    id: "t1400-yarim-boy",
+    model: "MT-1400 Yarım Boy",
+    title: "Gelişmiş Elektromekanik Yarım Boy Turnikesi",
+    image: "/yarim-boy-turnike-sistemi-t1400-elektromekanik-turnike.jpg",
+    description: "Gelişmiş yarım boy elektromekanik turnike sistemi. Premium kompakt çözüm.",
+    applications: [
+      "Premium dar alanlar",
+      "VIP geçişler",
+      "Özel bölümler",
+      "Hassas kontrol noktaları",
+      "Lüks ofis içi geçişler",
+      "Premium kompakt güvenlik"
+    ],
+    materials: "Premium 304 paslanmaz çelik yarım boy tasarım.",
+    usage: "Gelişmiş yarım boy elektromekanik. Premium kompakt güvenlik.",
+    security: "Premium yarım boy güvenlik sistemi. Hassas kontrol imkanı.",
+    technicalSpecs: {
+      voltage: "100-230 VAC 50/60 Hz",
+      power: "35 W",
+      temperature: "-20°C - +65°C",
+      capacity: "28 Kişi / Dakika",
+      passageGap: "45 cm",
+      weight: "50 Kg",
+      environment: "Premium İç Ortam",
+      protection: "IP 54",
+      dimensions: "155 x 85 x 85 cm",
+      warranty: "3 Yıl Premium Yarım Boy Garanti",
+      maintenance: "4 Ayda Bir Premium Bakım",
+      installation: "Premium Kompakt Kurulum"
+    },
+    features: [
+      "1400 Serisi Premium",
+      "Gelişmiş Elektromekanik",
+      "Premium Yarım Boy",
+      "Hassas Kontrol",
+      "Premium LED Sistemi",
+      "Gelişmiş Ses Sistemi",
+      "VIP Mod Seçenekleri",
+      "Premium Acil Sistem",
+      "Hassas Sensör",
+      "Premium Entegrasyon",
+      "Gelişmiş Rapor",
+      "Premium Malzeme"
+    ],
+    advantages: [
+      "Premium kompakt çözüm",
+      "Hassas kontrol sistemi",
+      "VIP alanlar için ideal",
+      "Gelişmiş güvenlik",
+      "Premium kalite",
+      "1400 serisi güvenilirlik"
+    ],
+    accessories: [
+      "Premium kompakt kart okuyucu",
+      "Hassas LED sistemi",
+      "Premium ses ünitesi",
+      "VIP kontrol paneli",
+      "Hassas sayaç sistemi",
+      "Premium alarm modülü"
+    ],
+    certifications: [
+      "CE Premium Yarım Boy",
+      "TSE Premium Standart",
+      "Premium Kalite Belgesi",
+      "IP54 Premium Koruma"
+    ],
+    price: "Fiyat İçin Ara"
   }
 };
 
