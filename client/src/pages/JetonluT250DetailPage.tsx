@@ -32,15 +32,6 @@ export default function JetonluT250DetailPage() {
     { label: "Koruma", value: "IP 54" }
   ];
 
-  const paymentFeatures = [
-    "Jeton kabul sistemi",
-    "Madeni para kabul ünitesi",
-    "Para üstü verme sistemi", 
-    "Güvenli para kasası",
-    "Sahte jeton tespiti",
-    "Otomatik tahsilat raporu",
-    "Uzaktan para takip sistemi"
-  ];
 
   const applicationAreas = [
     "Ücretli WC girişleri",

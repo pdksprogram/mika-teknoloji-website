@@ -57,7 +57,7 @@ export default function T250EcoDetailPage() {
       description: "Basit montaj ve bakım gerektiren tasarım"
     },
     {
-      icon: Zap,
+      icon: Settings,
       title: "Düşük Enerji",
       description: "Enerji tasarrufu sağlayan ekonomik motor sistemi"
     }

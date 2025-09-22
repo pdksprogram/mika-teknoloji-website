@@ -56,7 +56,7 @@ export default function T345DetailPage() {
       description: "Anti-tailgating teknolojisi ile çoklu geçiş engelleme"
     },
     {
-      icon: Users,
+      icon: Factory,
       title: "Yoğun Trafik",
       description: "Günde 10.000+ geçişe dayanıklı motor ve mekanik yapı"
     },
