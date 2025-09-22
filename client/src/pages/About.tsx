@@ -470,7 +470,7 @@ export default function About() {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="aspect-square md:aspect-auto">
                   <img 
-                    src="/attached_assets/image_1756823252649.png" 
+                    src="/hakkimizda-1.png" 
                     alt="Gamze Deniz Toksoy - Yazılım Müdürü" 
                     className="w-full h-full object-cover"
                     data-testid="leadership-photo"
@@ -541,7 +541,7 @@ export default function About() {
               <div className="p-8 text-center bg-gradient-to-br from-slate-50 to-slate-100">
                 <div className="mb-6">
                   <img 
-                    src="/attached_assets/image_1756823893243.png" 
+                    src="/hakkimizda-2.png" 
                     alt="Şirket Hiyerarşisi" 
                     className="w-48 h-48 rounded-full mx-auto object-cover shadow-lg"
                     data-testid="hierarchy-photo"
@@ -619,7 +619,7 @@ export default function About() {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="aspect-square md:aspect-auto">
                   <img 
-                    src="/attached_assets/image_1756824630814.png" 
+                    src="/hakkimizda-3.png" 
                     alt="Suphi Gezgin - Mobil Yazılım Uzmanı" 
                     className="w-full h-full object-cover"
                     data-testid="suphi-photo"
@@ -705,7 +705,7 @@ export default function About() {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="aspect-square md:aspect-auto">
                   <img 
-                    src="/attached_assets/image_1756824767420.png" 
+                    src="/hakkimizda-3.png" 
                     alt="Yasin Atılgan - Satış Müdürü" 
                     className="w-full h-full object-cover"
                     data-testid="yasin-photo"
@@ -786,7 +786,7 @@ export default function About() {
           </h2>
           <div className="max-w-5xl mx-auto">
             <img 
-              src="/attached_assets/image_1756822202470.png" 
+              src="/hakkimizda-1.png" 
               alt="Mika Teknoloji Ekibi" 
               className="w-full rounded-2xl shadow-2xl"
               data-testid="team-photo"

@@ -127,12 +127,12 @@ export default function BelTipeTurnikePage() {
 
 
   const referansResimler = [
-    "/attached_assets/image_1758019216490.png",
-    "/attached_assets/image_1758020107295.png",
-    "/attached_assets/image_1758019726366.png",
-    "/attached_assets/image_1758020186900.png",
-    "/attached_assets/image_1758022229658.png",
-    "/attached_assets/image_1758022307099.png"
+    "/ana-urun.png",
+    "/boy-tipi-turnike.png",
+    "/bel-tipi-turnike.png",
+    "/engelli-turnike.png",
+    "/hizli-gecis-turnike.png",
+    "/hijyen-turnike.png"
   ];
 
   return (
@@ -144,7 +144,7 @@ export default function BelTipeTurnikePage() {
         
         <meta property="og:title" content="Bel Tipi Turnike Sistemleri | Mika Teknoloji" />
         <meta property="og:description" content="Güvenli geçiş kontrolü için paslanmaz çelik bel tipi turnike sistemleri. 12 farklı model seçeneği ile." />
-        <meta property="og:image" content="https://mikateknoloji.com/attached_assets/stock_images/tripod_waist_height__f6c103da.jpg" />
+        <meta property="og:image" content="https://mikateknoloji.com/boy-tipi-turnike.png" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/bel-tipi-turnike" />
         
         <link rel="canonical" href="https://mikateknoloji.com/urunler/bel-tipi-turnike" />

@@ -17,7 +17,7 @@ export default function ProductTurnikePage() {
       id: 1,
       name: "Bel Tipi Turnikeler",
       category: "security",
-      image: "/attached_assets/image_1758019726366.png",
+      image: "/bel-tipi-turnike.png",
       description: "Üç kollu güvenlik turnikeleri, yoğun geçiş alanları için ideal",
       features: ["3 Kollu Tasarım", "Paslanmaz Çelik", "Kartlı Giriş", "Manuel Override"],
       price: "Fiyat İçin İletişime Geçin",
@@ -27,7 +27,7 @@ export default function ProductTurnikePage() {
       id: 2,
       name: "Boy Tipi Turnikeler",
       category: "security",
-      image: "/attached_assets/image_1758020107295.png",
+      image: "/boy-tipi-turnike.png",
       description: "Yüksek güvenlik için boy tipi tam geçiş kontrol sistemleri",
       features: ["Tam Boy Güvenlik", "Biyometrik Entegrasyon", "Anti-Tailgating", "Acil Durum Açılımı"],
       price: "Fiyat İçin İletişime Geçin",
@@ -37,7 +37,7 @@ export default function ProductTurnikePage() {
       id: 3,
       name: "Engelli Turnikeleri",
       category: "accessibility",
-      image: "/attached_assets/image_1758020186900.png",
+      image: "/engelli-turnike.png",
       description: "Engelli erişimi için geniş geçişli özel turnike sistemleri",
       features: ["Geniş Geçiş", "Tekerlekli Sandalye Uyumlu", "Düşük Profil", "Sesli Uyarı"],
       price: "Fiyat İçin İletişime Geçin",
@@ -47,7 +47,7 @@ export default function ProductTurnikePage() {
       id: 4,
       name: "Hızlı Geçiş Turnikeleri",
       category: "speed",
-      image: "/attached_assets/image_1758022229658.png",
+      image: "/hizli-gecis-turnike.png",
       description: "Yoğun trafik için hızlı ve akıcı geçiş sağlayan turnike sistemleri",
       features: ["Hızlı Geçiş", "RFID/NFC", "Sensör Teknolojisi", "Yüksek Kapasite"],
       price: "Fiyat İçin İletişime Geçin",
@@ -57,7 +57,7 @@ export default function ProductTurnikePage() {
       id: 5,
       name: "Hijyen Turnikeleri",
       category: "hygiene",
-      image: "/attached_assets/image_1758022307099.png",
+      image: "/hijyen-turnike.png",
       description: "Dezenfektan dispenseri entegreli hijyen odaklı turnike sistemleri",
       features: ["Otomatik Dezenfektan", "Temassız Geçiş", "Ateş Ölçer Entegrasyonu", "UV Sterilizasyon"],
       price: "Fiyat İçin İletişime Geçin",
@@ -67,7 +67,7 @@ export default function ProductTurnikePage() {
       id: 6,
       name: "Jetonlu Turnikeler",
       category: "payment",
-      image: "/attached_assets/image_1758022450183.png",
+      image: "/jetonlu-turnike.png",
       description: "Ödeme sistemli jeton/kart okuyuculu turnike çözümleri",
       features: ["Jeton/Kart Okuyucu", "Ödeme Entegrasyonu", "Para Üstü Sistemi", "Geri Sayım Display"],
       price: "Fiyat İçin İletişime Geçin",
@@ -103,14 +103,14 @@ export default function ProductTurnikePage() {
         <meta property="og:url" content="https://mikateknoloji.com/urunler/turnike" />
         <meta property="og:title" content="Turnike Sistemleri | Profesyonel Güvenlik Çözümleri | Mika Teknoloji" />
         <meta property="og:description" content="Türkiye'nin öncü turnike sistemleri üreticisi. Bel turnikeleri, boy turnikeleri, hızlı geçiş sistemleri. Paslanmaz çelik kalite, parmak izi ve kart entegrasyonu." />
-        <meta property="og:image" content="https://mikateknoloji.com/attached_assets/image_1758019726366.png" />
+        <meta property="og:image" content="https://mikateknoloji.com/bel-tipi-turnike.png" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://mikateknoloji.com/urunler/turnike" />
         <meta property="twitter:title" content="Turnike Sistemleri | Güvenlik ve Erişim Kontrol | Mika Teknoloji" />
         <meta property="twitter:description" content="Modern turnike sistemleri: Bel, boy, hızlı geçiş turnikeleri. Biyometrik entegrasyon, PDKS uyumlu. Profesyonel güvenlik çözümleri." />
-        <meta property="twitter:image" content="https://mikateknoloji.com/attached_assets/image_1758019726366.png" />
+        <meta property="twitter:image" content="https://mikateknoloji.com/bel-tipi-turnike.png" />
         
         {/* Additional SEO */}
         <meta name="robots" content="index, follow" />
