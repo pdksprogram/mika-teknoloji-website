@@ -16,7 +16,7 @@ export default function BlogArticlePDKS() {
     readTime: "8 dk okuma",
     category: "PDKS",
     keywords: "PDKS sistemleri, personel devam kontrol sistemi, PDKS nedir, personel takip sistemi, biyometrik PDKS, web PDKS",
-    image: "/attached_assets/image_1758019216490.png"
+    image: "/ana-urun.png"
   };
 
   const tableOfContents = [
@@ -56,7 +56,7 @@ export default function BlogArticlePDKS() {
         {/* Open Graph */}
         <meta property="og:title" content="PDKS Sistemleri Nedir? Personel Devam Kontrol Rehberi 2025" />
         <meta property="og:description" content="PDKS sistemleri ile personel takibinde modern çözümler. Biyometrik teknoloji, web tabanlı erişim ve otomatik raporlama özellikleri." />
-        <meta property="og:image" content="https://mikateknoloji.com/attached_assets/image_1758019216490.png" />
+        <meta property="og:image" content="https://mikateknoloji.com/ana-urun.png" />
         <meta property="og:url" content="https://mikateknoloji.com/blog/pdks-sistemleri-nedir-2025-rehberi" />
         <meta property="og:type" content="article" />
         
@@ -64,7 +64,7 @@ export default function BlogArticlePDKS() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="PDKS Sistemleri Nedir? 2025 Kapsamlı Rehberi" />
         <meta name="twitter:description" content="Modern personel devam kontrol sistemlerinin tüm detayları. Biyometrik teknoloji ile %99.9 doğruluk." />
-        <meta name="twitter:image" content="https://mikateknoloji.com/attached_assets/image_1758019216490.png" />
+        <meta name="twitter:image" content="https://mikateknoloji.com/ana-urun.png" />
         
         {/* Schema.org Structured Data */}
         <script type="application/ld+json">
@@ -73,7 +73,7 @@ export default function BlogArticlePDKS() {
           "@type": "BlogPosting",
           "headline": "PDKS Sistemleri Nedir? 2025 Rehberi - Personel Devam Kontrol",
           "description": "Personel Devam Kontrol Sistemi (PDKS) ile çalışan takibinde devrim yaratın. Modern PDKS çözümlerinin tüm detayları.",
-          "image": "https://mikateknoloji.com/attached_assets/image_1758019216490.png",
+          "image": "https://mikateknoloji.com/ana-urun.png",
           "author": {
             "@type": "Person",
             "name": "PDKS Uzmanı - Mika Teknoloji"
