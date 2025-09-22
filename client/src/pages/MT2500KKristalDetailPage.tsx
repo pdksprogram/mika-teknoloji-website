@@ -4,10 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";
 import { 
-  CheckCircle, 
-  Shield, 
   Zap, 
-  Users, 
   Phone,
   Mail,
   MapPin,
