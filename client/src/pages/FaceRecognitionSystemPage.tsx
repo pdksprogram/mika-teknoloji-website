@@ -8,30 +8,30 @@ import { Helmet } from "react-helmet-async";
 const devices = [
   {
     id: 1,
-    name: "MT35 Face",
+    name: "MTFD15",
     description: "Yüz Tanıma Sistemi",
-    image: "/Professional_MT35_facial_recognition_device_cdd395c7.png",
+    image: "/mtfd15-device.png",
     features: ["Yüz Kayıt Kapasitesi : 1500", "Log Kapasitesi : 150.000", "Ekran Boyutu : 3,5 inç Elektronik Kapasiteli Dokunmatik Ekran", "Röle : Var", "Haberleşme : TCP/IP, USB"]
   },
   {
     id: 2,
-    name: "MT35 Vertical",
+    name: "MTFP15",
     description: "Yüz Tanıma ve Parmak İzi Terminal",
-    image: "/Vertical_MT35_facial_recognition_terminal_3293fcb3.png",
+    image: "/mtfp15-device.png",
     features: ["Yüz Kayıt Kapasitesi : 1000", "Parmak İzi Kayıt Kapasitesi : 1000", "Log Kapasitesi : 100.000", "Ekran Boyutu : 2,4 inç TFT LCD", "Röle : Var", "Haberleşme : TCP/IP, USB"]
   },
   {
     id: 3,
-    name: "MT35 Professional",
+    name: "MTFDP50",
     description: "Yüz Tanıma ve Parmak İzi Terminal",
-    image: "/Professional_MT35_facial_recognition_device_cdd395c7.png",
+    image: "/mtfdp50-device.png",
     features: ["Yüz Kayıt Kapasitesi : 5000", "Parmak İzi Kayıt Kapasitesi : 5000", "Log Kapasitesi : 500.000", "Röle : Var", "Haberleşme : TCP/IP, USB"]
   },
   {
     id: 4,
-    name: "MT35 Ultimate",
+    name: "MTFDP200",
     description: "Yüz Tanıma ve Parmak İzi Terminal",
-    image: "/MT35_device_pure_white_background_0d0febd4.png",
+    image: "/mtfdp200-yuz-device.png",
     features: ["Yüz Kayıt Kapasitesi : 20000", "Parmak İzi Kayıt Kapasitesi : 20000", "Log Kapasitesi : 500.000", "Röle : Var", "Haberleşme : TCP/IP, USB"]
   }
 ];
