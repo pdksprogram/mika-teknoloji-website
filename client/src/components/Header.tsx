@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X, Search, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -9,6 +9,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 // import { useIsMobile } from "@/hooks/use-mobile"; // Not used currently
 import { useLanguage } from "@/hooks/useLanguage";
 const mikaLogo = "/mika-logo.jpg"; // Real Mika logo
@@ -24,6 +30,14 @@ export default function Header() {
   const [location] = useLocation();
   // const isMobile = useIsMobile(); // Not used currently
   const { selectedLanguage, setSelectedLanguage, t } = useLanguage();
+  
+  // Touch device detection for mobile dropdown behavior
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsTouchDevice(window.matchMedia('(hover: none)').matches);
+    }
+  }, []);
 
   const languages = [
     { code: "tr", name: "Türkçe", flag: "🇹🇷" },
@@ -228,33 +242,65 @@ export default function Header() {
                 <div
                   key={item.href}
                   className="relative"
-                  onMouseEnter={() => {
+                  onMouseEnter={!isTouchDevice ? () => {
                     if (item.hasDropdown && item.menuType) {
                       setIsDropdownOpen(true);
                       setActiveMenuType(item.menuType as 'solutions' | 'products');
                     }
-                  }}
-                  onMouseLeave={() => {
+                  } : undefined}
+                  onMouseLeave={!isTouchDevice ? () => {
                     if (item.hasDropdown) {
                       setIsDropdownOpen(false);
                       setActiveMenuType(null);
                     }
-                  }}
+                  } : undefined}
                 >
-                  <Link
-                    href={item.href}
-                    className={`relative font-medium transition-colors duration-200 hover:text-primary group ${
-                      isActiveLink(item.href) ? "text-primary" : "text-slate-700"
-                    }`}
-                    data-testid={`nav-link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
-                  >
-                    {item.label}
-                    <span 
-                      className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-200 ${
-                        isActiveLink(item.href) ? "w-full" : "w-0 group-hover:w-full"
+                  {item.hasDropdown ? (
+                    <button
+                      onClick={(e) => {
+                        if (!item.hasDropdown) return;
+                        if (isTouchDevice) {
+                          e.preventDefault();
+                          if (!isDropdownOpen || activeMenuType !== item.menuType) {
+                            setActiveMenuType(item.menuType as 'solutions' | 'products');
+                            setIsDropdownOpen(true);
+                          } else {
+                            setIsDropdownOpen(false);
+                            setActiveMenuType(null);
+                          }
+                        } else {
+                          window.location.href = item.href;
+                        }
+                      }}
+                      className={`relative font-medium transition-colors duration-200 hover:text-primary group flex items-center space-x-1 ${
+                        isActiveLink(item.href) ? "text-primary" : "text-slate-700"
                       }`}
-                    />
-                  </Link>
+                      data-testid={`nav-link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                    >
+                      <span>{item.label}</span>
+                      <ChevronDown className={`h-4 w-4 transition-transform ${isDropdownOpen && activeMenuType === item.menuType ? 'rotate-180' : ''}`} />
+                      <span 
+                        className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-200 ${
+                          isActiveLink(item.href) ? "w-full" : "w-0 group-hover:w-full"
+                        }`}
+                      />
+                    </button>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className={`relative font-medium transition-colors duration-200 hover:text-primary group ${
+                        isActiveLink(item.href) ? "text-primary" : "text-slate-700"
+                      }`}
+                      data-testid={`nav-link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                    >
+                      {item.label}
+                      <span 
+                        className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-200 ${
+                          isActiveLink(item.href) ? "w-full" : "w-0 group-hover:w-full"
+                        }`}
+                      />
+                    </Link>
+                  )}
                   
                   {/* Mega Menu Dropdown */}
                   {item.hasDropdown && isDropdownOpen && activeMenuType && item.menuType === activeMenuType && (
@@ -372,21 +418,63 @@ export default function Header() {
         {isMenuOpen && (
           <div className="lg:hidden bg-white border-t shadow-lg">
             <div className="container mx-auto px-4 py-4">
-              <nav className="space-y-4">
+              <nav className="space-y-2">
                 {navigationItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`block py-2 font-medium transition-colors duration-200 ${
-                      isActiveLink(item.href) 
-                        ? "text-primary border-l-4 border-primary pl-4" 
-                        : "text-slate-700 hover:text-primary pl-4"
-                    }`}
-                    data-testid={`mobile-nav-link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
-                  >
-                    {item.label}
-                  </Link>
+                  item.hasDropdown ? (
+                    <Accordion key={item.href} type="single" collapsible className="w-full">
+                      <AccordionItem value={item.menuType!} className="border-none">
+                        <AccordionTrigger 
+                          className={`py-3 px-4 font-medium transition-colors duration-200 hover:no-underline rounded-lg ${
+                            isActiveLink(item.href) 
+                              ? "text-primary bg-primary/5 border-l-4 border-primary" 
+                              : "text-slate-700 hover:text-primary hover:bg-slate-50"
+                          }`}
+                          data-testid={`mobile-accordion-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                        >
+                          {item.label}
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 pb-2">
+                          <div className="space-y-1">
+                            {Object.entries(item.menuType === 'products' ? productsMenuData : solutionsMenuData).map(([category, items]) => (
+                              <div key={category} className="py-2">
+                                <h4 className="font-semibold text-slate-800 text-sm mb-2 border-b border-slate-200 pb-1">
+                                  {category}
+                                </h4>
+                                <div className="space-y-1">
+                                  {items.map((product) => (
+                                    <Link
+                                      key={product.href}
+                                      href={product.href}
+                                      className="block text-slate-600 hover:text-primary transition-colors text-sm py-1.5 px-2 rounded hover:bg-primary/5"
+                                      data-testid={`mobile-submenu-${product.name.toLowerCase().replace(/\s+/g, '-')}`}
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {product.name}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+                  ) : (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={`block py-3 px-4 font-medium transition-colors duration-200 rounded-lg ${
+                        isActiveLink(item.href) 
+                          ? "text-primary bg-primary/5 border-l-4 border-primary" 
+                          : "text-slate-700 hover:text-primary hover:bg-slate-50"
+                      }`}
+                      data-testid={`mobile-nav-link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                    >
+                      {item.label}
+                    </Link>
+                  )
                 ))}
+                
                 <div className="pt-4 border-t space-y-3">
                   <Button 
                     asChild 
@@ -394,6 +482,19 @@ export default function Header() {
                     data-testid="mobile-webpdks-button"
                   >
                     <a href="https://pdkspersoneltakip.com/" target="_blank" rel="noopener noreferrer">WebPDKS</a>
+                  </Button>
+                  
+                  {/* Mobile Search Button */}
+                  <Button 
+                    className="w-full bg-primary hover:bg-primary/90 text-white"
+                    onClick={() => {
+                      setIsSearchOpen(true);
+                      setIsMenuOpen(false);
+                    }}
+                    data-testid="mobile-search-button"
+                  >
+                    <Search className="h-4 w-4 mr-2" />
+                    Ara
                   </Button>
                   
                   {/* Mobile Language Selector */}
