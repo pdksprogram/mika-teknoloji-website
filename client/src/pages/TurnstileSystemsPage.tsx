@@ -4,13 +4,13 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
 
-// Turnike kategori görselleri - Public klasörüne kopyalanmış gerçek resimler
-const belTipiTurnike = "/bel-tipi-turnike.png";
-const boyTipiTurnike = "/boy-tipi-turnike.png";
-const engelliTurnike = "/engelli-turnike.png";
-const hizliGecisTurnike = "/hizli-gecis-turnike.png";
-const hijyenTurnike = "/hijyen-turnike.png";
-const jetonluTurnike = "/jetonlu-turnike.png";
+// Turnike kategori görselleri - Parmak izi sayfası mantığı
+const belTipiTurnike = "/mt-bel-tipi-turnike.png";
+const boyTipiTurnike = "/mt-boy-tipi-turnike.png";
+const engelliTurnike = "/mt-engelli-turnike.png";
+const hizliGecisTurnike = "/mt-hizli-gecis-turnike.png";
+const hijyenTurnike = "/mt-hijyen-turnike.png";
+const jetonluTurnike = "/mt-jetonlu-turnike.png";
 
 // Referans görselleri (placeholder)
 const referans1 = "/Modern_turnstile_security_system_b933269f.png";
