@@ -8,30 +8,30 @@ import { Helmet } from "react-helmet-async";
 const devices = [
   {
     id: 1,
-    name: "MT1100",
+    name: "MT35",
     description: "Parmak İzi Sistemi",
-    image: "/mt1100-device.png",
+    image: "/MT35_device_pure_white_background_0d0febd4.png",
     features: ["Parmak izi Kapasitesi : 3.000", "Kayıt Kapasitesi : 100.000", "Parmak izi + Proximity Kart + Şifre Tanımlama", "Kapı Açma Özelliği", "Zil Çaldırma Özelliği"]
   },
   {
     id: 2,
-    name: "MTP50",
+    name: "MT35 Professional",
     description: "Yüz Tanıma ve Parmak İzi Terminal",
-    image: "/mtp50-device.png",
+    image: "/Professional_MT35_facial_recognition_device_cdd395c7.png",
     features: ["Yüz Kayıt Kapasitesi : 1000", "Parmak İzi Kayıt Kapasitesi : 1000", "Log Kapasitesi : 100.000", "Ekran Boyutu : 2,4 inç TFT LCD", "Röle : Var", "Haberleşme : TCP/IP, USB"]
   },
   {
     id: 3,
-    name: "MTFDP200",
+    name: "MT35 Vertical",
     description: "Yüz Tanıma ve Parmak İzi Terminal",
-    image: "/mtfdp200-device.png",
+    image: "/Vertical_MT35_facial_recognition_terminal_3293fcb3.png",
     features: ["Yüz Kayıt Kapasitesi : 20000", "Parmak İzi Kayıt Kapasitesi : 20000", "Log Kapasitesi : 500.000", "Röle : Var", "Haberleşme : TCP/IP, USB"]
   },
   {
     id: 4,
-    name: "MT4051",
+    name: "MT35 Plus",
     description: "Parmak İzi ve Kart Okuyucu",
-    image: "/mt4051-device.png",
+    image: "/MT35_device_pure_white_background_0d0febd4.png",
     features: ["Parmak İzi Kapasite : 1000 - 3000", "Log Kapasitesi : 100.000", "Kart Kapasitesi : 500", "Kart : Proximity", "Şifre : Var", "Ethernet : Var", "İletişim Portalı : TCP / IP , USB , RS485", "Röle : Var"]
   }
 ];

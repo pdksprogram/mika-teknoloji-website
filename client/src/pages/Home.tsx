@@ -65,7 +65,7 @@ export default function Home() {
         <meta property="og:description" content="1990'dan beri Türkiye'nin lider PDKS sistemi! 20.000 kapasite, TCP/IP, Wi-Fi desteği. Binlerce referans!" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mikateknoloji.com" />
-        <meta property="og:image" content="https://mikateknoloji.com/mika-logo.jpg" />
+        <meta property="og:image" content="https://mikateknoloji.com/mika_1756450206871.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         
@@ -85,8 +85,8 @@ export default function Home() {
               "name": "Mika Teknoloji Kontrol Sistemleri",
               "alternateName": "Mika Teknoloji",
               "url": "https://mikateknoloji.com",
-              "logo": "https://mikateknoloji.com/mika-logo.jpg",
-              "image": "https://mikateknoloji.com/mika-logo.jpg",
+              "logo": "https://mikateknoloji.com/mika_1756450206871.jpg",
+              "image": "https://mikateknoloji.com/mika_1756450206871.jpg",
               "description": "1990'dan beri PDKS sistemi sağlayıcısı. Personel devam kontrol, parmak izi takip, yüz tanıma çözümleri.",
               "foundingDate": "1990",
               "industry": "Security Systems",
