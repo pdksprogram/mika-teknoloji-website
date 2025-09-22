@@ -34,6 +34,9 @@ import MT250DetailPage from "@/pages/MT250DetailPage";
 import T250EcoDetailPage from "@/pages/T250EcoDetailPage";
 import T345DetailPage from "@/pages/T345DetailPage";
 import JetonluT250DetailPage from "@/pages/JetonluT250DetailPage";
+import MT2500DSingle3DetailPage from "@/pages/MT2500DSingle3DetailPage";
+import MT2500KKristalDetailPage from "@/pages/MT2500KKristalDetailPage";
+import MT1350YarimBoyDetailPage from "@/pages/MT1350YarimBoyDetailPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -69,6 +72,11 @@ function Router() {
       <Route path="/urunler/t250-eco-turnike" component={T250EcoDetailPage} />
       <Route path="/urunler/t345-turnike" component={T345DetailPage} />
       <Route path="/urunler/jetonlu-t250-turnike" component={JetonluT250DetailPage} />
+      
+      {/* Boy Tipi Turnike Detay Sayfaları */}
+      <Route path="/urunler/mt2500d-single-3-kollu" component={MT2500DSingle3DetailPage} />
+      <Route path="/urunler/mt2500k-kristal" component={MT2500KKristalDetailPage} />
+      <Route path="/urunler/mt1350-yarim-boy" component={MT1350YarimBoyDetailPage} />
       <Route path="/urunler/bekci-tur-kontrol" component={QRPatrolPage} />
       
       <Route path="/referanslar" component={References} />

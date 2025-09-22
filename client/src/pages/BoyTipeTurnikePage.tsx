@@ -222,7 +222,12 @@ export default function BoyTipeTurnikePage() {
                         {model.price}
                       </div>
                       <Button asChild size="sm" className="bg-primary hover:bg-primary/90">
-                        <Link href="#">
+                        <Link href={
+                          model.id === "mt2500d-single-3" ? "/urunler/mt2500d-single-3-kollu" :
+                          model.id === "mt2500k-kristal-3" ? "/urunler/mt2500k-kristal" :
+                          model.id === "mt1350-yarim" ? "/urunler/mt1350-yarim-boy" :
+                          "#"
+                        }>
                           Detay
                         </Link>
                       </Button>
