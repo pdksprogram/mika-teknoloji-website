@@ -179,7 +179,7 @@ export default function BoyTipeTurnikePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 xs:gap-4 sm:gap-6">
             {boyTurnikeModelleri.map((model, index) => (
               <motion.div
                 key={model.id}
@@ -189,30 +189,30 @@ export default function BoyTipeTurnikePage() {
                 className="group"
               >
                 <Card className="h-full hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                  <div className="relative overflow-hidden aspect-[4/3] sm:aspect-[3/2]">
+                  <div className="relative overflow-hidden aspect-[3/2] xs:aspect-[4/3] sm:aspect-[3/2] md:aspect-[4/3]">
                     <img 
                       src={model.image}
                       alt={model.title}
-                      className="w-full h-full object-contain sm:object-cover bg-gray-50 group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover xs:object-contain sm:object-cover bg-gray-50 group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />
                     <Badge className="absolute top-3 left-3 bg-blue-600 text-white">
                       {model.model}
                     </Badge>
                   </div>
-                  <CardContent className="p-6">
-                    <h3 className="font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                  <CardContent className="p-3 xs:p-4 sm:p-6">
+                    <h3 className="font-bold text-gray-900 mb-1 xs:mb-2 text-sm xs:text-base group-hover:text-primary transition-colors">
                       {model.title}
                     </h3>
-                    <p className="text-gray-600 text-sm mb-4">
+                    <p className="text-gray-600 text-xs xs:text-sm mb-2 xs:mb-4">
                       {model.description}
                     </p>
                     
-                    <div className="space-y-2 mb-6">
+                    <div className="space-y-1 xs:space-y-2 mb-3 xs:mb-6">
                       {model.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center gap-2">
                           <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                          <span className="text-gray-700 text-xs">{feature}</span>
+                          <span className="text-gray-700 text-xs xs:text-xs">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -252,19 +252,19 @@ export default function BoyTipeTurnikePage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
+          <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 xs:gap-3 sm:gap-4">
             {referansResimler.map((resim, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
-                className="aspect-square rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+                className="aspect-square rounded-md xs:rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
               >
                 <img 
                   src={resim}
                   alt={`Boy Tipi Turnike Referans ${index + 1}`}
-                  className="w-full h-full object-contain sm:object-cover bg-gray-100 hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover xs:object-contain sm:object-cover bg-gray-100 hover:scale-105 transition-transform duration-300"
                   loading="lazy"
                 />
               </motion.div>
