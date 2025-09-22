@@ -198,14 +198,14 @@ export default function HeroCarousel() {
                       </div>
                       
                       {/* Clean Main Title */}
-                      <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
+                      <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
                         {slide.title}
-                      </h1>
+                      </h2>
                       
                       {/* Clean Subtitle */}
-                      <h2 className="text-xl md:text-2xl text-white/90 font-light mb-6">
+                      <h3 className="text-xl md:text-2xl text-white/90 font-light mb-6">
                         {slide.subtitle}
-                      </h2>
+                      </h3>
                     </motion.div>
 
                     {/* Clean Description */}
