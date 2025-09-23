@@ -30,7 +30,7 @@ import {
   HelpCircle
 } from "lucide-react";
 import { Link } from "wouter";
-import videoDemo from "@assets/Financial Technology_1758649706937.mp4";
+import videoDemo from "@assets/0EC10B9E-BF19-7CDF-F1CE-79CD07041EBC_1758659190393.mp4";
 
 export default function PersonelTakipPage() {
   const handleDemoRequest = () => {
