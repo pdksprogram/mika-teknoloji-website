@@ -137,6 +137,8 @@ export default function PersonelTakipPage() {
               <video 
                 className="w-full aspect-video rounded-xl object-cover"
                 controls
+                autoPlay
+                muted
                 preload="metadata"
                 poster=""
               >
