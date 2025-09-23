@@ -30,6 +30,7 @@ import {
   HelpCircle
 } from "lucide-react";
 import { Link } from "wouter";
+import videoDemo from "@assets/Financial Technology_1758649706937.mp4";
 
 export default function PersonelTakipPage() {
   const handleDemoRequest = () => {
@@ -131,14 +132,22 @@ export default function PersonelTakipPage() {
               </Button>
             </div>
 
-            {/* Hero Image/Video Placeholder */}
+            {/* Hero Video */}
             <div className="relative bg-white rounded-2xl shadow-2xl p-2 max-w-4xl mx-auto">
-              <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center">
-                <div className="text-center">
-                  <Video className="h-16 w-16 text-slate-400 mx-auto mb-4" />
-                  <p className="text-slate-600 font-medium">Mika Teknoloji PDKS Demo Video</p>
+              <video 
+                className="w-full aspect-video rounded-xl object-cover"
+                controls
+                preload="metadata"
+                poster=""
+              >
+                <source src={videoDemo} type="video/mp4" />
+                <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center">
+                  <div className="text-center">
+                    <Video className="h-16 w-16 text-slate-400 mx-auto mb-4" />
+                    <p className="text-slate-600 font-medium">Tarayıcınız video oynatmayı desteklemiyor</p>
+                  </div>
                 </div>
-              </div>
+              </video>
             </div>
           </motion.div>
         </div>
