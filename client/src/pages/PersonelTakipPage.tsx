@@ -78,7 +78,7 @@ export default function PersonelTakipPage() {
         <link rel="canonical" href="https://mikateknoloji.com/urunler/personel-takip" />
       </Helmet>
       {/* Hero Section */}
-      <section className="relative py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
+      <section data-testid="P1" className="relative py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto text-center">
           <motion.div 
             className="max-w-4xl mx-auto"
@@ -156,7 +156,7 @@ export default function PersonelTakipPage() {
       </section>
 
       {/* Client Logos */}
-      <section className="py-16 bg-white">
+      <section data-testid="P2" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-12"
@@ -175,7 +175,7 @@ export default function PersonelTakipPage() {
       </section>
 
       {/* Geçiş Çözümleri */}
-      <section className="py-20 bg-slate-50">
+      <section data-testid="P3" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -263,7 +263,7 @@ export default function PersonelTakipPage() {
       </section>
 
       {/* Avantajlar */}
-      <section className="py-20 bg-white">
+      <section data-testid="P4" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -308,7 +308,7 @@ export default function PersonelTakipPage() {
       </section>
 
       {/* Mobil Uygulama */}
-      <section className="py-20 bg-slate-50">
+      <section data-testid="P5" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -417,7 +417,7 @@ export default function PersonelTakipPage() {
       </section>
 
       {/* PDKS Teknolojileri */}
-      <section className="py-20 bg-white">
+      <section data-testid="P6" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -524,7 +524,7 @@ export default function PersonelTakipPage() {
       </section>
 
       {/* Güvenlik ve Esneklik */}
-      <section className="py-20 bg-slate-50">
+      <section data-testid="P7" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -608,7 +608,7 @@ export default function PersonelTakipPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary to-pink-600 text-white">
+      <section data-testid="P8" className="py-20 bg-gradient-to-br from-primary to-pink-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div 
             className="max-w-4xl mx-auto"
@@ -651,7 +651,7 @@ export default function PersonelTakipPage() {
       </section>
 
       {/* Destek Bölümü */}
-      <section className="py-20 bg-white">
+      <section data-testid="P9" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
