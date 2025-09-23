@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Helmet } from "react-helmet-async";
+import { trackEvent } from "@/lib/analytics";
 import { 
   CheckCircle, 
   ArrowRight, 
@@ -30,6 +32,14 @@ import {
 import { Link } from "wouter";
 
 export default function PersonelTakipPage() {
+  const handleDemoRequest = () => {
+    trackEvent('Demo Request', 'personel_takip_demo', 'Personel Takip Page - Demo Button');
+  };
+
+  const handleContactRequest = () => {
+    trackEvent('Contact Request', 'personel_takip_contact', 'Personel Takip Page - Contact Button');
+  };
+
   const fadeInUp = {
     initial: { opacity: 0, y: 50 },
     whileInView: { opacity: 1, y: 0 },
@@ -54,6 +64,18 @@ export default function PersonelTakipPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Personel Takip Sistemi | Mika Teknoloji - Bulut Tabanlı PDKS</title>
+        <meta 
+          name="description" 
+          content="Bulut tabanlı personel takip ve insan kaynakları yönetimi. QR kod, kart okuyucu, mobil uygulama. 7/24 destek, yasal uyum garantili." 
+        />
+        <meta name="keywords" content="personel takip sistemi, bulut tabanlı pdks, insan kaynakları yönetimi, qr kod takip, mobil personel takip, vardiya yönetimi" />
+        <meta property="og:title" content="Personel Takip Sistemi | Mika Teknoloji - Bulut Tabanlı PDKS" />
+        <meta property="og:description" content="Bulut tabanlı personel takip ve insan kaynakları yönetimi. QR kod, kart okuyucu, mobil uygulama. 7/24 destek, yasal uyum garantili." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://mikateknoloji.com/urunler/personel-takip" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto text-center">
@@ -88,6 +110,7 @@ export default function PersonelTakipPage() {
                 asChild 
                 size="lg" 
                 className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                onClick={handleDemoRequest}
               >
                 <Link href="/iletisim">
                   <span>Ücretsiz Demo Talep Et</span>
@@ -100,6 +123,7 @@ export default function PersonelTakipPage() {
                 variant="outline" 
                 size="lg" 
                 className="border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-4 rounded-xl font-semibold text-lg"
+                onClick={handleContactRequest}
               >
                 <Link href="/iletisim">
                   <span>Online Sunum Talep Et</span>
@@ -591,6 +615,7 @@ export default function PersonelTakipPage() {
                 asChild 
                 size="lg" 
                 className="bg-white text-primary hover:bg-white/90 px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                onClick={handleDemoRequest}
               >
                 <Link href="/iletisim">
                   <span>Ücretsiz Demo</span>
@@ -603,6 +628,7 @@ export default function PersonelTakipPage() {
                 variant="outline" 
                 size="lg" 
                 className="border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg backdrop-blur-sm"
+                onClick={handleContactRequest}
               >
                 <Link href="/iletisim">
                   <span>Sizi Arayalım</span>
