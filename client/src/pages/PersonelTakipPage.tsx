@@ -6,8 +6,6 @@ import { trackEvent } from "@/lib/analytics";
 import { 
   CheckCircle, 
   ArrowRight, 
-  Smartphone, 
-  CreditCard, 
   QrCode, 
   Shield, 
   Cloud, 
@@ -206,8 +204,12 @@ export default function PersonelTakipPage() {
             <motion.div variants={staggerItem}>
               <Card className="h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <QrCode className="h-8 w-8 text-primary" />
+                  <div className="mb-6">
+                    <img 
+                      src="/qr-hand-mockup.png" 
+                      alt="QR kod mobil okutma sistemi" 
+                      className="w-32 h-32 mx-auto object-contain rounded-lg"
+                    />
                   </div>
                   <h3 className="text-xl font-bold text-slate-800 mb-4">QR KOD OKUTMA</h3>
                   <p className="text-primary font-semibold mb-4">Modern ve Hızlı Giriş-Çıkış Takibi</p>
@@ -227,8 +229,12 @@ export default function PersonelTakipPage() {
             <motion.div variants={staggerItem}>
               <Card className="h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CreditCard className="h-8 w-8 text-primary" />
+                  <div className="mb-6">
+                    <img 
+                      src="/access-control-professional.png" 
+                      alt="Profesyonel access control kart okuyucu sistemi" 
+                      className="w-32 h-32 mx-auto object-contain rounded-lg"
+                    />
                   </div>
                   <h3 className="text-xl font-bold text-slate-800 mb-4">KART OKUYUCU</h3>
                   <p className="text-primary font-semibold mb-4">Güvenilir Giriş ve Çıkış Kontrolü</p>
@@ -244,22 +250,26 @@ export default function PersonelTakipPage() {
               </Card>
             </motion.div>
 
-            {/* Sanal Cihaz */}
+            {/* Parmak İzi */}
             <motion.div variants={staggerItem}>
               <Card className="h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Smartphone className="h-8 w-8 text-primary" />
+                  <div className="mb-6">
+                    <img 
+                      src="/fingerprint-device.png" 
+                      alt="Parmak izi okuyucu biyometrik sistemi" 
+                      className="w-32 h-32 mx-auto object-contain rounded-lg"
+                    />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-800 mb-4">SANAL CİHAZ</h3>
-                  <p className="text-primary font-semibold mb-4">Konum Tabanlı Esnek Çözüm</p>
+                  <h3 className="text-xl font-bold text-slate-800 mb-4">PARMAK İZİ</h3>
+                  <p className="text-primary font-semibold mb-4">Biyometrik Güvenli Tanımlama</p>
                   <p className="text-slate-600 mb-6">
-                    Bulut tabanlı sistemimiz sayesinde fiziksel donanım yatırımlarına gerek kalmadan, 
-                    personel devam takibini kolayca gerçekleştirebilirsiniz. Personelin mobil cihaz ile 
-                    bulunduğu konum içerisinden giriş/çıkış yapmasını sağlar.
+                    Parmak izi okuyucu sistemlerimiz, en yüksek güvenlik seviyesinde personel tanımlaması yapar. 
+                    Biyometrik teknoloji ile kartlı sistemlere göre çok daha güvenli ve pratik bir 
+                    giriş-çıkış kontrolü sağlar. Sahtecilik imkansızdır.
                   </p>
                   <Button asChild variant="outline" className="w-full">
-                    <Link href="/cozumler/pdks">Detayları İncele</Link>
+                    <Link href="/cozumler/parmak-izi">Detayları İncele</Link>
                   </Button>
                 </CardContent>
               </Card>
