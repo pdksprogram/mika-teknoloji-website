@@ -28,7 +28,7 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import videoDemo from "@assets/0EC10B9E-BF19-7CDF-F1CE-79CD07041EBC_1758659190393.mp4";
-import mobilAppImage from "@assets/image_1758714170649.png";
+import mobilAppImage from "@assets/image_1758714438261.png";
 
 export default function PersonelTakipPage() {
   const handleDemoRequest = () => {
@@ -384,7 +384,7 @@ export default function PersonelTakipPage() {
                     <img 
                       src={mobilAppImage} 
                       alt="Mika Teknoloji PDKS mobil uygulama ekranı"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                   
