@@ -312,8 +312,8 @@ export default function PersonelTakipPage() {
               <motion.div key={index} variants={staggerItem} className="lg:col-span-2">
                 <Card className="h-full text-center hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <item.icon className="h-6 w-6 text-primary" />
+                    <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+                      <item.icon className="h-10 w-10 text-primary drop-shadow-sm" />
                     </div>
                     <h3 className="font-bold text-slate-800 mb-3">{item.title}</h3>
                     <p className="text-slate-600 text-sm">{item.desc}</p>
