@@ -372,15 +372,30 @@ export default function PersonelTakipPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="bg-slate-800 rounded-[3rem] p-2 max-w-sm mx-auto">
-                <div className="bg-white rounded-[2.5rem] overflow-hidden aspect-[9/16]">
-                  <img 
-                    src={mobilAppImage} 
-                    alt="Mika Teknoloji PDKS mobil uygulama ekranı"
-                    className="w-full h-full object-cover"
-                  />
+              {/* Gradient Background Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-purple-500/20 to-pink-500/20 rounded-[4rem] blur-3xl transform rotate-6 scale-110 -z-10"></div>
+              
+              {/* Shadow Effect */}
+              <div className="relative transform hover:scale-105 transition-all duration-500 hover:rotate-1">
+                <div className="bg-gradient-to-b from-slate-700 to-slate-900 rounded-[3rem] p-2 max-w-sm mx-auto shadow-2xl border border-slate-600/50">
+                  {/* Screen Glow Effect */}
+                  <div className="relative bg-white rounded-[2.5rem] overflow-hidden aspect-[9/16] shadow-inner">
+                    <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/10 z-10"></div>
+                    <img 
+                      src={mobilAppImage} 
+                      alt="Mika Teknoloji PDKS mobil uygulama ekranı"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  
+                  {/* Reflection Effect */}
+                  <div className="absolute bottom-0 left-2 right-2 h-8 bg-gradient-to-t from-white/5 to-transparent rounded-b-[2.5rem]"></div>
                 </div>
               </div>
+              
+              {/* Floating Elements */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/30 rounded-full blur-sm animate-pulse"></div>
+              <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-purple-500/20 rounded-full blur-md animate-bounce" style={{animationDelay: '1s'}}></div>
             </motion.div>
           </div>
 
