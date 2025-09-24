@@ -139,7 +139,8 @@ export default function PersonelTakipPage() {
                 controls
                 autoPlay
                 muted
-                preload="metadata"
+                loop
+                preload="auto"
                 poster=""
               >
                 <source src={videoDemo} type="video/mp4" />
