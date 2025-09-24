@@ -31,6 +31,7 @@ import videoDemo from "@assets/personel-takip-demo.mp4";
 import mobilAppImage from "@assets/mobile-app-interface.png";
 import mobileAdminImage from "@assets/mobile-admin-interface.png";
 import vardiyaYonetimiImage from "@assets/vardiya-yonetimi-interface.png";
+import maasHesaplamaImage from "@assets/maas-hesaplama-interface.png";
 
 export default function PersonelTakipPage() {
   const handleDemoRequest = () => {
@@ -535,6 +536,7 @@ export default function PersonelTakipPage() {
                 title: "Maaş Hesaplama",
                 subtitle: "Maaş hesaplamalarının zahmetinden kurtulun!",
                 desc: "Maaş hesaplamalarının zahmetinden ve karışıklığından kurtulun.",
+                image: maasHesaplamaImage,
                 features: [
                   "Özelleştirebilir Parametreler",
                   "Otomatik Maaş Hesaplama",
