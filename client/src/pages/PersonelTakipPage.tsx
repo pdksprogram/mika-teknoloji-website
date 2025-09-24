@@ -30,6 +30,7 @@ import { Link } from "wouter";
 import videoDemo from "@assets/personel-takip-demo.mp4";
 import mobilAppImage from "@assets/mobile-app-interface.png";
 import mobileAdminImage from "@assets/mobile-admin-interface.png";
+import vardiyaYonetimiImage from "@assets/vardiya-yonetimi-interface.png";
 
 export default function PersonelTakipPage() {
   const handleDemoRequest = () => {
@@ -516,6 +517,7 @@ export default function PersonelTakipPage() {
                 title: "Vardiya Yönetimi",
                 subtitle: "Vardiya yönetimini kolay, eksiksiz ve profesyonelce yapın!",
                 desc: "Vardiya yönetimini kolay, eksiksiz ve profesyonelce yapın, karışıklığa izin vermeyin!",
+                image: vardiyaYonetimiImage,
                 features: [
                   "Toplu Personel Vardiya Planlama",
                   "Akıllı Vardiya Planı",
@@ -581,6 +583,18 @@ export default function PersonelTakipPage() {
                       <p className="text-slate-600 mb-4">{item.desc}</p>
                     </div>
                   </div>
+                  
+                  {/* Image for Vardiya Yönetimi */}
+                  {item.image && (
+                    <div className="mb-6">
+                      <img 
+                        src={item.image} 
+                        alt={`${item.title} - PDKS sistem ekranı`}
+                        className="w-full h-auto rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-300"
+                      />
+                    </div>
+                  )}
+                  
                   <ul className="space-y-2">
                     {item.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm text-slate-600">
