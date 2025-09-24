@@ -28,7 +28,7 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import videoDemo from "@assets/personel-takip-demo.mp4";
-import mobilAppImage from "@assets/image_1758717418595.png";
+import mobilAppImage from "@assets/mobile-app-interface.png";
 
 export default function PersonelTakipPage() {
   const handleDemoRequest = () => {
