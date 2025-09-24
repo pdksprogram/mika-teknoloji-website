@@ -27,7 +27,7 @@ import {
   HelpCircle
 } from "lucide-react";
 import { Link } from "wouter";
-import videoDemo from "@assets/0EC10B9E-BF19-7CDF-F1CE-79CD07041EBC_1758659190393.mp4";
+import videoDemo from "@assets/personel-takip-demo.mp4";
 import mobilAppImage from "@assets/image_1758717418595.png";
 
 export default function PersonelTakipPage() {
@@ -138,7 +138,6 @@ export default function PersonelTakipPage() {
                 className="w-full aspect-video rounded-xl object-cover"
                 controls
                 autoPlay
-                muted
                 loop
                 preload="auto"
                 poster=""
