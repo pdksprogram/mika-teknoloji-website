@@ -28,7 +28,7 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import videoDemo from "@assets/0EC10B9E-BF19-7CDF-F1CE-79CD07041EBC_1758659190393.mp4";
-import mobilAppImage from "@assets/iphone_mockup_mika_menu_1758714861798.png";
+import mobilAppImage from "@assets/image_1758717418595.png";
 
 export default function PersonelTakipPage() {
   const handleDemoRequest = () => {
