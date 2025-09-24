@@ -28,7 +28,6 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import videoDemo from "@assets/0EC10B9E-BF19-7CDF-F1CE-79CD07041EBC_1758659190393.mp4";
-import mobilAppImage from "@assets/image_1758717418595.png";
 
 export default function PersonelTakipPage() {
   const handleDemoRequest = () => {
@@ -342,44 +341,25 @@ export default function PersonelTakipPage() {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="max-w-4xl mx-auto">
             {/* Personel Özellikleri */}
             <motion.div {...fadeInUp}>
-              <h3 className="text-2xl font-bold text-slate-800 mb-8">Personele Özel Ekranlar</h3>
-              <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-slate-800 mb-8 text-center">Personele Özel Ekranlar</h3>
+              <div className="grid md:grid-cols-2 gap-8">
                 {[
                   { title: "Personel Ana Ekranı", desc: "Gelecek gün vardiyası, Yıllık izin durumu, Saatlik izin kullanımı ve Avans durumu bilgileri" },
                   { title: "Talep Oluşturma", desc: "İzin, saatlik izin, avans talepleri oluşturma" },
                   { title: "Giriş-Çıkış İşlemleri", desc: "QR tarama ile veya konum içi giriş-çıkış işlemleri" },
                   { title: "Vardiya Planı", desc: "Aylık vardiya takvimi" }
                 ].map((item, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <div key={index} className="flex items-start space-x-4 p-6 bg-white rounded-lg border border-slate-200 hover:shadow-md transition-shadow duration-300">
+                    <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <div>
-                      <h4 className="font-semibold text-slate-800 mb-1">{item.title}</h4>
+                      <h4 className="font-semibold text-slate-800 mb-2">{item.title}</h4>
                       <p className="text-slate-600 text-sm">{item.desc}</p>
                     </div>
                   </div>
                 ))}
-              </div>
-            </motion.div>
-
-            {/* Mobil App Mockup */}
-            <motion.div 
-              className="relative"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="relative transform hover:scale-105 transition-all duration-500">
-                <div className="max-w-sm mx-auto shadow-2xl">
-                  <img 
-                    src={mobilAppImage} 
-                    alt="Mika Teknoloji PDKS mobil uygulama ekranı - iPhone Mockup"
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
               </div>
             </motion.div>
           </div>
