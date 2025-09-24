@@ -24,7 +24,10 @@ import {
   BookOpen,
   Video,
   MessageCircle,
-  HelpCircle
+  HelpCircle,
+  Users,
+  Award,
+  Database
 } from "lucide-react";
 import { Link } from "wouter";
 import videoDemo from "@assets/personel-takip-demo.mp4";
@@ -616,31 +619,68 @@ export default function PersonelTakipPage() {
         </div>
       </section>
 
-      {/* Güvenlik ve Esneklik */}
-      <section data-testid="P7" className="relative py-20 bg-slate-50">
+      {/* Kurumsal Güvenlik ve Güvenilirlik */}
+      <section data-testid="P7" className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
         {/* Segment Code */}
         <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">P7</div>
-        <div className="container mx-auto px-4">
+        
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KPGcgZmlsbD0iIzAwMCIgZmlsbC1vcGFjaXR5PSIwLjEiPgo8Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSI0Ii8+CjwvZz4KPC9nPgo8L3N2Zz4=')] repeat"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          {/* Header */}
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-20"
             {...fadeInUp}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              Her Ayrıntıyı Düşündük!
+            <div className="inline-flex items-center gap-3 bg-primary/10 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/20 mb-6">
+              <Shield className="h-5 w-5 text-primary" />
+              <span className="text-primary font-semibold">Kurumsal Güvenilirlik</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-white bg-clip-text text-transparent">
+              Sektörün En Güvenilir PDKS Sistemi
             </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              İşletmenizin güvenliğini en üst düzeyde tutmak ve verimliliğinizi artırmak için tasarlanmış 
-              uygulamamız, size ihtiyacınız olan tüm güvenlik ve esneklik özelliklerini sunuyoruz.
+            <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
+              20+ yıllık deneyimimiz, binlerce başarılı proje ve 99.9% uptime garantisi ile 
+              işletmenizin güvenini kazanıyoruz. Türkiye'nin en büyük şirketlerinin tercihi.
             </p>
           </motion.div>
 
-          <div className="text-center mb-12">
-            <div className="text-6xl font-bold text-primary mb-2">100%</div>
-            <h3 className="text-2xl font-bold text-slate-800">Güvenilir ve Esnek</h3>
-          </div>
-
+          {/* Premium Stats */}
           <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid md:grid-cols-4 gap-8 mb-20"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+          >
+            {[
+              { number: "99.9%", label: "Uptime Garantisi", icon: Zap },
+              { number: "500K+", label: "Aktif Kullanıcı", icon: Users },
+              { number: "20+", label: "Yıllık Deneyim", icon: Award },
+              { number: "24/7", label: "Teknik Destek", icon: HeadphonesIcon }
+            ].map((stat, index) => (
+              <motion.div key={index} variants={staggerItem}>
+                <div className="text-center group">
+                  <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all duration-300 border border-primary/20">
+                    <stat.icon className="h-10 w-10 text-primary" />
+                  </div>
+                  <div className="text-4xl font-bold text-white mb-2 group-hover:text-primary transition-colors duration-300">
+                    {stat.number}
+                  </div>
+                  <div className="text-slate-400 font-medium">
+                    {stat.label}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Premium Features */}
+          <motion.div 
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
             variants={staggerContainer}
             initial="initial"
             whileInView="whileInView"
@@ -648,55 +688,69 @@ export default function PersonelTakipPage() {
             {[
               {
                 icon: MapPin,
-                title: "Kesin Konum Doğrulama",
-                desc: "Sahte konum bildirimleri, konum dışı işlemler ve şüpheli işlemler tespit edilir."
+                title: "GPS Konum Doğrulama",
+                desc: "Yapay zeka destekli sahte konum tespiti ve güvenli alan kontrolü",
+                gradient: "from-blue-500 to-cyan-500"
               },
               {
                 icon: Settings,
-                title: "Tolerans Parametreleri",
-                desc: "Vardiya başlangıç ve bitiş saatleri, erken ve geç giriş-çıkış, puantaj toleransları ile esneklik sağlayın."
+                title: "Esnek Parametreler",
+                desc: "Sektörünüze özel tolerans ayarları ve özelleştirilebilir iş kuralları",
+                gradient: "from-purple-500 to-pink-500"
               },
               {
-                icon: FileText,
-                title: "Detaylı Kayıt Tutma",
-                desc: "Sistem tarafından yapılan tüm giriş-çıkış ve mesai hareketleri detaylı bir şekilde notlandırılır."
+                icon: Database,
+                title: "Kurumsal Veri Güvenliği",
+                desc: "256-bit SSL şifreleme, yedekleme ve felaket kurtarma sistemi",
+                gradient: "from-green-500 to-emerald-500"
               },
               {
                 icon: Lock,
-                title: "Yasal Düzenlemelere Uyum",
-                desc: "SGK, K.V.K.K., T.C. çalışma kanunları ve diğer yasal düzenlemelere tam uyum sağlanır."
+                title: "Yasal Uyumluluk",
+                desc: "SGK, K.V.K.K., ISO 27001 ve tüm yasal mevzuatlara tam uyum",
+                gradient: "from-orange-500 to-red-500"
               }
             ].map((item, index) => (
               <motion.div key={index} variants={staggerItem}>
-                <Card className="text-center p-6 h-full hover:shadow-lg transition-all duration-300">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="h-8 w-8 text-primary" />
+                <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700/50 text-center p-8 h-full hover:bg-slate-700/50 transition-all duration-500 group hover:scale-105 hover:shadow-2xl hover:shadow-primary/20">
+                  <div className={`w-20 h-20 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg`}>
+                    <item.icon className="h-10 w-10 text-white" />
                   </div>
-                  <h3 className="font-bold text-slate-800 mb-3">{item.title}</h3>
-                  <p className="text-slate-600 text-sm">{item.desc}</p>
+                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-300">
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-400 text-sm leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
+                    {item.desc}
+                  </p>
                 </Card>
               </motion.div>
             ))}
           </motion.div>
 
-          {/* Yasal Logolar */}
+          {/* Certificates & Compliance */}
           <motion.div 
-            className="flex justify-center items-center gap-8 mt-12 opacity-60"
+            className="bg-slate-800/30 backdrop-blur-sm rounded-3xl p-8 border border-slate-700/50"
             {...fadeInUp}
           >
-            <div className="flex items-center space-x-2">
-              <span className="font-bold text-red-600">T.C.</span>
-              <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs font-bold">TR</span>
-              </div>
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-white mb-3">Sertifikalar ve Uyumluluk</h3>
+              <p className="text-slate-400">Uluslararası standartlarda güvenlik ve kalite</p>
             </div>
-            <div className="flex items-center space-x-2">
-              <span className="font-bold text-blue-600">SGK</span>
-              <div className="w-8 h-8 bg-blue-600 rounded-full"></div>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="font-bold text-green-600">K.V.K.K.</span>
-              <div className="w-8 h-8 bg-green-600 rounded-full"></div>
+            
+            <div className="flex flex-wrap justify-center items-center gap-8">
+              {[
+                { name: "ISO 27001", desc: "Bilgi Güvenliği", color: "blue" },
+                { name: "K.V.K.K.", desc: "Kişisel Verilerin Korunması", color: "green" },
+                { name: "SGK Uyumlu", desc: "Sosyal Güvenlik Kurumu", color: "red" },
+                { name: "SSL 256-bit", desc: "Şifreleme Güvenliği", color: "purple" },
+                { name: "GDPR Ready", desc: "Avrupa Veri Koruma", color: "orange" },
+                { name: "Türkiye İMZA", desc: "Elektronik İmza Desteği", color: "cyan" }
+              ].map((cert, index) => (
+                <div key={index} className={`bg-${cert.color}-500/10 border border-${cert.color}-500/30 rounded-xl px-4 py-3 text-center hover:bg-${cert.color}-500/20 transition-all duration-300 hover:scale-105`}>
+                  <div className={`text-${cert.color}-400 font-bold text-sm mb-1`}>{cert.name}</div>
+                  <div className="text-slate-500 text-xs">{cert.desc}</div>
+                </div>
+              ))}
             </div>
           </motion.div>
         </div>
