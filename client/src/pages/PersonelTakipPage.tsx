@@ -401,19 +401,48 @@ export default function PersonelTakipPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="bg-slate-800 rounded-[3rem] p-2 max-w-sm mx-auto">
-                <div className="bg-white rounded-[2.5rem] p-8 aspect-[9/16]">
-                  <div className="text-center space-y-4">
-                    <Settings className="h-16 w-16 text-primary mx-auto" />
-                    <h4 className="font-bold text-slate-800">Yönetici Paneli</h4>
-                    <div className="space-y-2">
-                      <div className="h-2 bg-slate-200 rounded"></div>
-                      <div className="h-2 bg-slate-200 rounded w-4/5"></div>
-                      <div className="h-2 bg-slate-200 rounded w-2/3"></div>
+              {/* Gradient Background Effect */}
+              <div className="absolute inset-0 bg-gradient-to-l from-blue-500/20 via-cyan-500/20 to-teal-500/20 rounded-[4rem] blur-3xl transform -rotate-6 scale-110 -z-10"></div>
+              
+              {/* Shadow Effect */}
+              <div className="relative transform hover:scale-105 transition-all duration-500 hover:-rotate-1">
+                <div className="bg-gradient-to-b from-slate-700 to-slate-900 rounded-[3rem] p-2 max-w-sm mx-auto shadow-2xl border border-slate-600/50">
+                  <div className="relative bg-white rounded-[2.5rem] p-8 aspect-[9/16] shadow-inner overflow-hidden">
+                    {/* Screen Glow Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/10 z-10"></div>
+                    
+                    <div className="text-center space-y-6 relative z-20">
+                      <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto">
+                        <Settings className="h-10 w-10 text-primary" />
+                      </div>
+                      
+                      <h4 className="font-bold text-slate-800 text-lg">Yönetici Paneli</h4>
+                      
+                      <div className="space-y-3">
+                        <div className="h-3 bg-gradient-to-r from-primary/40 to-primary/20 rounded-full"></div>
+                        <div className="h-3 bg-gradient-to-r from-slate-300 to-slate-200 rounded-full w-4/5 mx-auto"></div>
+                        <div className="h-3 bg-gradient-to-r from-slate-300 to-slate-200 rounded-full w-2/3 mx-auto"></div>
+                      </div>
+                      
+                      <div className="grid grid-cols-2 gap-3 mt-8">
+                        <div className="h-12 bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg flex items-center justify-center">
+                          <UserCheck className="h-6 w-6 text-blue-600" />
+                        </div>
+                        <div className="h-12 bg-gradient-to-br from-green-100 to-green-50 rounded-lg flex items-center justify-center">
+                          <Calendar className="h-6 w-6 text-green-600" />
+                        </div>
+                      </div>
                     </div>
+                    
+                    {/* Reflection Effect */}
+                    <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white/5 to-transparent"></div>
                   </div>
                 </div>
               </div>
+              
+              {/* Floating Elements */}
+              <div className="absolute -top-4 -left-4 w-6 h-6 bg-blue-500/30 rounded-full blur-sm animate-pulse" style={{animationDelay: '0.5s'}}></div>
+              <div className="absolute -bottom-6 -right-6 w-10 h-10 bg-teal-500/20 rounded-full blur-md animate-bounce" style={{animationDelay: '1.5s'}}></div>
             </motion.div>
 
             {/* Yönetici Özellikleri */}
