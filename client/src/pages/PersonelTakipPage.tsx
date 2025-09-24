@@ -33,6 +33,7 @@ import mobileAdminImage from "@assets/mobile-admin-interface.png";
 import vardiyaYonetimiImage from "@assets/vardiya-yonetimi-interface.png";
 import maasHesaplamaImage from "@assets/maas-hesaplama-interface.png";
 import personelBilgileriImage from "@assets/personel-bilgileri-interface.png";
+import personelTalepleriImage from "@assets/personel-talepleri-interface.png";
 
 export default function PersonelTakipPage() {
   const handleDemoRequest = () => {
@@ -566,6 +567,7 @@ export default function PersonelTakipPage() {
                 title: "Personel Talepleri Yönetimi",
                 subtitle: "Personel taleplerini kolayca yönetin!",
                 desc: "Personel taleplerini kolayca yönetin, izinler ve avansları kontrol altına alın.",
+                image: personelTalepleriImage,
                 features: [
                   "Saatlik İzin Talepleri",
                   "Genel İzin Talepleri",
