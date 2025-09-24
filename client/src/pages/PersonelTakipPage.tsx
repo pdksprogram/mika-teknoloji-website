@@ -465,19 +465,19 @@ export default function PersonelTakipPage() {
 
             {/* Yönetici Özellikleri */}
             <motion.div className="order-1 lg:order-2" {...fadeInUp}>
-              <h3 className="text-2xl font-bold text-slate-800 mb-8">Yöneticiye Özel Ekranlar</h3>
-              <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-slate-800 mb-8">Yönetici Panel Özellikleri</h3>
+              <div className="space-y-4">
                 {[
-                  { title: "Yönetici Ana Ekranı", desc: "Personel Bilgileri Kartı, Bekleyen Talepler, Personel Giriş-Çıkış Bilgileri" },
-                  { title: "Personel Talepleri Yönetimi", desc: "Bekleyen talepleri görüntüleme, onaylama, reddetme" },
-                  { title: "Anlık Durum Listesi", desc: "Personellerin anlık konum ve çalışma durumu listesi" },
-                  { title: "Zaman Kullanımı", desc: "Personellerin zaman kullanımı listesi" }
+                  { emoji: "📅", title: "Tarih Seçim Alanı", desc: "Başlangıç Tarihi / Bitiş Tarihi: Raporların hangi tarih aralığında gösterileceğini seçersin. Örn. 01.09.2025 – 30.09.2025 arası tüm giriş-çıkış, izin, devamsızlık verileri gelir." },
+                  { emoji: "👥", title: "Personel Bilgileri Kartı", desc: "Aktif Çalışan: O an sisteme göre iş başında olan çalışan sayısı. İzinli / Raporlu: O gün izinli ya da raporlu görünen çalışan sayısı. Devamsız: O gün işe gelmeyen çalışan sayısı. Toplam: Sisteme kayıtlı toplam çalışan sayısı." },
+                  { emoji: "⏳", title: "Bekleyen İşlemler", desc: "Bekleyen İzin: Onay bekleyen izin talepleri. Bekleyen Saatlik İzin: Saatlik (kısa süreli) izinler için onay bekleyen talepler. Bekleyen Avans: Çalışanların talep ettiği ve onay sürecinde olan maaş avansları." },
+                  { emoji: "📊", title: "Personel Durum Bilgileri", desc: "Geç Gelen: O gün belirlenen mesai saatinden sonra giriş yapan çalışan sayısı. Erken Çıkan: Çalışma saatinden önce çıkış yapan çalışan sayısı. İçerdekiler: O anda işyerinde, sistemde içeride görünüp aktif çalışan kişi sayısı. Dışardakiler: O anda işyeri dışında olan, çıkış yapmış veya hiç giriş yapmamış kişi sayısı." }
                 ].map((item, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <div key={index} className="flex items-start space-x-3">
+                    <div className="text-xl flex-shrink-0 mt-1">{item.emoji}</div>
                     <div>
                       <h4 className="font-semibold text-slate-800 mb-1">{item.title}</h4>
-                      <p className="text-slate-600 text-sm">{item.desc}</p>
+                      <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
