@@ -32,6 +32,7 @@ import mobilAppImage from "@assets/mobile-app-interface.png";
 import mobileAdminImage from "@assets/mobile-admin-interface.png";
 import vardiyaYonetimiImage from "@assets/vardiya-yonetimi-interface.png";
 import maasHesaplamaImage from "@assets/maas-hesaplama-interface.png";
+import personelBilgileriImage from "@assets/personel-bilgileri-interface.png";
 
 export default function PersonelTakipPage() {
   const handleDemoRequest = () => {
@@ -548,6 +549,7 @@ export default function PersonelTakipPage() {
                 title: "Personel Bilgileri Yönetimi",
                 subtitle: "Personel bilgilerini tek bir ekranda toplayın!",
                 desc: "Personel bilgilerini tek bir ekranda toplayın, tüm detaylara kolayca erişin.",
+                image: personelBilgileriImage,
                 features: [
                   "Personel Listeleme",
                   "Ekleme - Düzenleme - Silme",
