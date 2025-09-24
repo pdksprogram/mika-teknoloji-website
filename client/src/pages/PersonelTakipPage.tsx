@@ -343,21 +343,27 @@ export default function PersonelTakipPage() {
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Personel Özellikleri */}
+            {/* Mobil Uygulama Özellikleri */}
             <motion.div {...fadeInUp}>
-              <h3 className="text-2xl font-bold text-slate-800 mb-8">Personele Özel Ekranlar</h3>
-              <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-slate-800 mb-8">Mobil Uygulama Özellikleri</h3>
+              <div className="space-y-4">
                 {[
-                  { title: "Personel Ana Ekranı", desc: "Gelecek gün vardiyası, Yıllık izin durumu, Saatlik izin kullanımı ve Avans durumu bilgileri" },
-                  { title: "Talep Oluşturma", desc: "İzin, saatlik izin, avans talepleri oluşturma" },
-                  { title: "Giriş-Çıkış İşlemleri", desc: "QR tarama ile veya konum içi giriş-çıkış işlemleri" },
-                  { title: "Vardiya Planı", desc: "Aylık vardiya takvimi" }
+                  { emoji: "✏️", title: "Düzeltme Giriş Çıkışlar", desc: "Personelin giriş/çıkış saatlerinde hata veya eksik olduğunda düzeltme yapılır. Örneğin kart basmayı unutan çalışan için manuel giriş ekleme." },
+                  { emoji: "🕒", title: "Shift Plan Kart", desc: "Personelin vardiya/çalışma kartlarını gösterir. Hangi tarihte hangi vardiyada olduklarını görürler." },
+                  { emoji: "✅", title: "Shift Plan Onay", desc: "Hazırlanan vardiya planlarının yöneticiler tarafından onaylandığı ekran. Onaylanmadan vardiya planı kesinleşmez." },
+                  { emoji: "💸", title: "Avans", desc: "Personelin maaş avans taleplerini oluşturduğu ve takip ettiği bölüm. Yöneticiler de buradan onay/ret verebilir." },
+                  { emoji: "🧳", title: "İzin", desc: "Günlük ya da belirli tarihler için izin talep etme alanı. İzinler yönetici onayına düşer." },
+                  { emoji: "📅", title: "Vardiya", desc: "Detaylı vardiya planlaması ve çalışanların vardiyalarını listeleme alanı. Özellikle üretim veya vardiyalı sistemlerde yoğun kullanılır." },
+                  { emoji: "🌴", title: "Yıllık İzin", desc: "Yıllık ücretli izinlerin takibi ve talep süreci. Kalan izin günleri, kullanılan izinler burada görünür." },
+                  { emoji: "📝", title: "Şikayet ve Öneri", desc: "Personelin kuruma yönelik öneri ve şikayetlerini ilettiği bölüm. Yöneticiler geri bildirimleri buradan takip eder." },
+                  { emoji: "📋", title: "Anket Portal", desc: "Kurum içi memnuniyet veya değerlendirme anketlerinin yayınlandığı alan. Çalışanlar anketleri doldurur, sonuçlar yönetime raporlanır." },
+                  { emoji: "📑", title: "Bordro Portal", desc: "Çalışanların maaş bordrolarını görüntüleyebildiği bölüm. Genellikle PDF olarak indirilebilen bordrolar bulunur." }
                 ].map((item, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <div key={index} className="flex items-start space-x-3">
+                    <div className="text-xl flex-shrink-0 mt-1">{item.emoji}</div>
                     <div>
                       <h4 className="font-semibold text-slate-800 mb-1">{item.title}</h4>
-                      <p className="text-slate-600 text-sm">{item.desc}</p>
+                      <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
