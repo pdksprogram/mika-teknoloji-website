@@ -28,7 +28,7 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import videoDemo from "@assets/0EC10B9E-BF19-7CDF-F1CE-79CD07041EBC_1758659190393.mp4";
-import mobilAppImage from "@assets/image_1758714438261.png";
+import mobilAppImage from "@assets/iphone_mockup_mika_menu_1758714861798.png";
 
 export default function PersonelTakipPage() {
   const handleDemoRequest = () => {
@@ -377,19 +377,12 @@ export default function PersonelTakipPage() {
               
               {/* Shadow Effect */}
               <div className="relative transform hover:scale-105 transition-all duration-500 hover:rotate-1">
-                <div className="bg-gradient-to-b from-slate-700 to-slate-900 rounded-[3rem] p-2 max-w-sm mx-auto shadow-2xl border border-slate-600/50">
-                  {/* Screen Glow Effect */}
-                  <div className="relative bg-white rounded-[2.5rem] overflow-hidden aspect-[9/16] shadow-inner">
-                    <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/10 z-10"></div>
-                    <img 
-                      src={mobilAppImage} 
-                      alt="Mika Teknoloji PDKS mobil uygulama ekranı"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  
-                  {/* Reflection Effect */}
-                  <div className="absolute bottom-0 left-2 right-2 h-8 bg-gradient-to-t from-white/5 to-transparent rounded-b-[2.5rem]"></div>
+                <div className="max-w-sm mx-auto shadow-2xl">
+                  <img 
+                    src={mobilAppImage} 
+                    alt="Mika Teknoloji PDKS mobil uygulama ekranı - iPhone Mockup"
+                    className="w-full h-auto object-contain"
+                  />
                 </div>
               </div>
               
