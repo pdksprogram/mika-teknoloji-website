@@ -29,6 +29,7 @@ import {
 import { Link } from "wouter";
 import videoDemo from "@assets/personel-takip-demo.mp4";
 import mobilAppImage from "@assets/mobile-app-interface.png";
+import mobileAdminImage from "@assets/mobile-admin-interface.png";
 
 export default function PersonelTakipPage() {
   const handleDemoRequest = () => {
@@ -430,36 +431,29 @@ export default function PersonelTakipPage() {
               
               {/* Shadow Effect */}
               <div className="relative transform hover:scale-105 transition-all duration-500 hover:-rotate-1">
-                <div className="bg-gradient-to-b from-slate-700 to-slate-900 rounded-[3rem] p-2 max-w-sm mx-auto shadow-2xl border border-slate-600/50">
-                  <div className="relative bg-white rounded-[2.5rem] p-8 aspect-[9/16] shadow-inner overflow-hidden">
-                    {/* Screen Glow Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/10 z-10"></div>
+                <div className="max-w-sm mx-auto">
+                  {/* Phone Frame */}
+                  <div className="relative bg-gradient-to-b from-slate-800 to-slate-900 rounded-[3rem] p-3 shadow-2xl border-2 border-slate-700/50">
+                    {/* Phone Notch */}
+                    <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-black rounded-full z-20"></div>
                     
-                    <div className="text-center space-y-6 relative z-20">
-                      <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto">
-                        <Settings className="h-10 w-10 text-primary" />
-                      </div>
-                      
-                      <h4 className="font-bold text-slate-800 text-lg">Yönetici Paneli</h4>
-                      
-                      <div className="space-y-3">
-                        <div className="h-3 bg-gradient-to-r from-primary/40 to-primary/20 rounded-full"></div>
-                        <div className="h-3 bg-gradient-to-r from-slate-300 to-slate-200 rounded-full w-4/5 mx-auto"></div>
-                        <div className="h-3 bg-gradient-to-r from-slate-300 to-slate-200 rounded-full w-2/3 mx-auto"></div>
-                      </div>
-                      
-                      <div className="grid grid-cols-2 gap-3 mt-8">
-                        <div className="h-12 bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg flex items-center justify-center">
-                          <UserCheck className="h-6 w-6 text-blue-600" />
-                        </div>
-                        <div className="h-12 bg-gradient-to-br from-green-100 to-green-50 rounded-lg flex items-center justify-center">
-                          <Calendar className="h-6 w-6 text-green-600" />
-                        </div>
+                    {/* Screen Container */}
+                    <div className="relative bg-black rounded-[2.5rem] p-1 overflow-hidden">
+                      {/* Screen Content */}
+                      <div className="relative rounded-[2rem] overflow-hidden">
+                        <img 
+                          src={mobileAdminImage} 
+                          alt="Mika Teknoloji PDKS yönetici mobil uygulama ekranı - Admin Panel"
+                          className="w-full h-auto object-cover rounded-[2rem]"
+                        />
+                        
+                        {/* Screen Reflection */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/5 rounded-[2rem]"></div>
                       </div>
                     </div>
                     
-                    {/* Reflection Effect */}
-                    <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white/5 to-transparent"></div>
+                    {/* Home Indicator */}
+                    <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-white/30 rounded-full"></div>
                   </div>
                 </div>
               </div>
