@@ -377,12 +377,30 @@ export default function PersonelTakipPage() {
               
               {/* Shadow Effect */}
               <div className="relative transform hover:scale-105 transition-all duration-500 hover:rotate-1">
-                <div className="max-w-sm mx-auto shadow-2xl">
-                  <img 
-                    src={mobilAppImage} 
-                    alt="Mika Teknoloji PDKS mobil uygulama ekranı - iPhone Mockup"
-                    className="w-full h-auto object-contain"
-                  />
+                <div className="max-w-sm mx-auto">
+                  {/* Phone Frame */}
+                  <div className="relative bg-gradient-to-b from-slate-800 to-slate-900 rounded-[3rem] p-3 shadow-2xl border-2 border-slate-700/50">
+                    {/* Phone Notch */}
+                    <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-black rounded-full z-20"></div>
+                    
+                    {/* Screen Container */}
+                    <div className="relative bg-black rounded-[2.5rem] p-1 overflow-hidden">
+                      {/* Screen Content */}
+                      <div className="relative rounded-[2rem] overflow-hidden">
+                        <img 
+                          src={mobilAppImage} 
+                          alt="Mika Teknoloji PDKS mobil uygulama ekranı - iPhone Mockup"
+                          className="w-full h-auto object-cover rounded-[2rem]"
+                        />
+                        
+                        {/* Screen Reflection */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/5 rounded-[2rem]"></div>
+                      </div>
+                    </div>
+                    
+                    {/* Home Indicator */}
+                    <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-white/30 rounded-full"></div>
+                  </div>
                 </div>
               </div>
               
