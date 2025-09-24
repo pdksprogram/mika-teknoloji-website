@@ -149,13 +149,6 @@ export default function PersonelTakipPage() {
                   "addressCountry": "TR",
                   "addressRegion": "Türkiye"
                 },
-                "contactPoint": {
-                  "@type": "ContactPoint",
-                  "telephone": "+90-XXX-XXX-XXXX",
-                  "contactType": "customer service",
-                  "availableLanguage": ["Turkish", "English"],
-                  "hoursAvailable": "Mo-Su 24:00"
-                },
                 "sameAs": [
                   "https://www.linkedin.com/company/mikateknoloji",
                   "https://twitter.com/mikateknoloji"
@@ -169,13 +162,6 @@ export default function PersonelTakipPage() {
                 "url": "https://mikateknoloji.com/urunler/personel-takip",
                 "applicationCategory": "BusinessApplication",
                 "operatingSystem": "Web, iOS, Android",
-                "offers": {
-                  "@type": "Offer",
-                  "price": "Özel Fiyat",
-                  "priceCurrency": "TRY",
-                  "availability": "https://schema.org/InStock",
-                  "validFrom": "2025-01-01"
-                },
                 "provider": {
                   "@id": "https://mikateknoloji.com/#organization"
                 },
@@ -282,8 +268,9 @@ export default function PersonelTakipPage() {
                 controls
                 autoPlay
                 loop
-                preload="auto"
-                poster=""
+                preload="metadata"
+                poster="/images/personel-takip-video-poster.jpg"
+                aria-label="Mika Teknoloji personel takip sistemi demo videosu"
               >
                 <source src={videoDemo} type="video/mp4" />
                 <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center">
