@@ -9,7 +9,6 @@ import {
   QrCode, 
   Shield, 
   Cloud, 
-  Users, 
   Globe, 
   HeadphonesIcon,
   Zap,
@@ -29,6 +28,7 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import videoDemo from "@assets/0EC10B9E-BF19-7CDF-F1CE-79CD07041EBC_1758659190393.mp4";
+import mobilAppImage from "@assets/image_1758714170649.png";
 
 export default function PersonelTakipPage() {
   const handleDemoRequest = () => {
@@ -373,16 +373,12 @@ export default function PersonelTakipPage() {
               viewport={{ once: true }}
             >
               <div className="bg-slate-800 rounded-[3rem] p-2 max-w-sm mx-auto">
-                <div className="bg-white rounded-[2.5rem] p-8 aspect-[9/16]">
-                  <div className="text-center space-y-4">
-                    <Users className="h-16 w-16 text-primary mx-auto" />
-                    <h4 className="font-bold text-slate-800">Personel Takip</h4>
-                    <div className="space-y-2">
-                      <div className="h-2 bg-slate-200 rounded"></div>
-                      <div className="h-2 bg-slate-200 rounded w-3/4"></div>
-                      <div className="h-2 bg-slate-200 rounded w-1/2"></div>
-                    </div>
-                  </div>
+                <div className="bg-white rounded-[2.5rem] overflow-hidden aspect-[9/16]">
+                  <img 
+                    src={mobilAppImage} 
+                    alt="Mika Teknoloji PDKS mobil uygulama ekranı"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </motion.div>
