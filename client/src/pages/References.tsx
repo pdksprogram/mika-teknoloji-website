@@ -11,7 +11,7 @@ const customers = [
   {
     id: 1,
     name: "Lufian",
-    logo: "/attached_assets/lufian_1756448337411.jpg",
+    logo: "/images/logos/lufian.jpg",
     employees: 400,
     locations: 80,
     sector: "Tekstil & Moda",
@@ -23,7 +23,7 @@ const customers = [
   {
     id: 2,
     name: "Adore Mobilya",
-    logo: "/attached_assets/Adore_1756448779641.jpeg",
+    logo: "/images/logos/adore.jpeg",
     employees: 1200,
     locations: 65,
     sector: "Mobilya & Dekorasyon",
@@ -35,7 +35,7 @@ const customers = [
   {
     id: 3,
     name: "Koluman Mercedes",
-    logo: "/attached_assets/Koluman_1756449232926.jpg",
+    logo: "/images/logos/koluman.jpg",
     employees: 2500,
     locations: 28,
     sector: "Otomotiv",
@@ -47,7 +47,7 @@ const customers = [
   {
     id: 4,
     name: "Antalya Devlet Hastanesi",
-    logo: "/attached_assets/HastaneAnlatlya_1756449609923.jpg",
+    logo: "/images/logos/hastane-antalya.jpg",
     employees: 3200,
     locations: 12,
     sector: "Sağlık",
@@ -59,7 +59,7 @@ const customers = [
   {
     id: 5,
     name: "Cerrahpaşa Üniversite Hastanesi",
-    logo: "/attached_assets/istanbulcrrrahpasa_1756450001262.jpg",
+    logo: "/images/logos/istanbul-cerrahpasa.jpg",
     employees: 7000,
     locations: 1,
     sector: "Sağlık & Eğitim",

@@ -144,7 +144,7 @@ export default function BelTipeTurnikePage() {
         
         <meta property="og:title" content="Bel Tipi Turnike Sistemleri | Mika Teknoloji" />
         <meta property="og:description" content="Güvenli geçiş kontrolü için paslanmaz çelik bel tipi turnike sistemleri. 12 farklı model seçeneği ile." />
-        <meta property="og:image" content="https://mikateknoloji.com/attached_assets/stock_images/tripod_waist_height__f6c103da.jpg" />
+        <meta property="og:image" content="https://mikateknoloji.com/images/products/tripod-waist-height.jpg" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/bel-tipi-turnike" />
         
         <link rel="canonical" href="https://mikateknoloji.com/urunler/bel-tipi-turnike" />

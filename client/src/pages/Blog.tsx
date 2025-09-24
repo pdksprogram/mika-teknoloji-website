@@ -17,7 +17,7 @@ export default function Blog() {
       category: "PDKS",
       readTime: "8 dk okuma",
       slug: "pdks-sistemleri-nedir-2025-rehberi",
-      image: "/attached_assets/image_1758019216490.png",
+      image: "/images/blog/pdks-1.png",
       keywords: "PDKS sistemleri, personel devam kontrol sistemi, PDKS nedir, personel takip sistemi"
     },
     {
@@ -29,7 +29,7 @@ export default function Blog() {
       category: "Turnike Sistemleri",
       readTime: "6 dk okuma",
       slug: "bel-tipi-turnike-sistemleri-ozellikleri-fiyatlari",
-      image: "/attached_assets/image_1758019726366.png",
+      image: "/images/blog/pdks-2.png",
       keywords: "bel tipi turnike, tripod turnike, turnike sistemleri, paslanmaz çelik turnike"
     },
     {
@@ -41,7 +41,7 @@ export default function Blog() {
       category: "Güvenlik",
       readTime: "7 dk okuma",
       slug: "boy-tipi-turnike-sistemleri-full-height-guvenlik",
-      image: "/attached_assets/image_1758020107295.png",
+      image: "/images/blog/pdks-3.png",
       keywords: "boy tipi turnike, full height turnike, güvenlik turnike, stadium turnike"
     },
     {
@@ -53,7 +53,7 @@ export default function Blog() {
       category: "Biyometri",
       readTime: "9 dk okuma",
       slug: "parmak-izi-okuyucu-pdks-biyometrik-personel-takip",
-      image: "/attached_assets/image_1758019135962.png",
+      image: "/images/blog/pdks-4.png",
       keywords: "parmak izi okuyucu, biyometrik PDKS, personel takip sistemi, parmak izi PDKS"
     },
     {
@@ -65,7 +65,7 @@ export default function Blog() {
       category: "Yapay Zeka",
       readTime: "10 dk okuma",
       slug: "yuz-tanima-sistemleri-3d-teknoloji-temassiz-pdks",
-      image: "/attached_assets/image_1758022229658.png",
+      image: "/images/blog/pdks-5.png",
       keywords: "yüz tanıma sistemi, temassız PDKS, 3D yüz tanıma, facial recognition"
     },
     {
@@ -77,7 +77,7 @@ export default function Blog() {
       category: "Maliyet",
       readTime: "12 dk okuma",
       slug: "turnike-sistemleri-fiyatlari-2025-maliyet-analizi",
-      image: "/attached_assets/image_1758020186900.png",
+      image: "/images/blog/pdks-6.png",
       keywords: "turnike fiyatları, turnike maliyeti, turnike yatırım geri dönüşü, ROI"
     },
     {
@@ -89,7 +89,7 @@ export default function Blog() {
       category: "WebPDKS",
       readTime: "6 dk okuma",
       slug: "webpdks-cloud-sistemi-bulut-tabanli-personel-yonetimi",
-      image: "/attached_assets/image_1758022307099.png",
+      image: "/images/blog/pdks-7.png",
       keywords: "WebPDKS, cloud PDKS, web tabanlı personel takip, bulut PDKS"
     },
     {
@@ -101,7 +101,7 @@ export default function Blog() {
       category: "RFID",
       readTime: "5 dk okuma",
       slug: "kartli-gecis-sistemleri-rfid-proximity-teknoloji",
-      image: "/attached_assets/image_1758022450183.png",
+      image: "/images/blog/pdks-8.png",
       keywords: "kartlı geçiş sistemi, RFID kart, proximity kart, personel kartı"
     }
   ];

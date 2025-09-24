@@ -76,12 +76,12 @@ export default function MT250DetailPage() {
   ];
 
   const referansResimler = [
-    "/attached_assets/image_1758019216490.png",
-    "/attached_assets/image_1758020107295.png", 
-    "/attached_assets/image_1758019726366.png",
-    "/attached_assets/image_1758020186900.png",
-    "/attached_assets/image_1758022229658.png",
-    "/attached_assets/image_1758022307099.png"
+    "/images/blog/pdks-1.png",
+    "/images/blog/pdks-3.png", 
+    "/images/blog/pdks-2.png",
+    "/images/blog/pdks-6.png",
+    "/images/blog/pdks-5.png",
+    "/images/blog/pdks-7.png"
   ];
 
   return (
@@ -93,7 +93,7 @@ export default function MT250DetailPage() {
         
         <meta property="og:title" content="MT-250 Elektromekanik Bel Tipi Turnike | Mika Teknoloji" />
         <meta property="og:description" content="304 paslanmaz çelik üç kollu bel tipi turnike sistemi. Yüksek güvenlik ve dayanıklılık." />
-        <meta property="og:image" content="https://mikateknoloji.com/attached_assets/image_1758287172261.png" />
+        <meta property="og:image" content="https://mikateknoloji.com/images/products/mt250-main.png" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/mt-250-turnike" />
         
         <link rel="canonical" href="https://mikateknoloji.com/urunler/mt-250-turnike" />
