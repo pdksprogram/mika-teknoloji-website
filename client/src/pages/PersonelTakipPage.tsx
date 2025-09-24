@@ -72,16 +72,150 @@ export default function PersonelTakipPage() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Personel Takip Sistemi | Mika Teknoloji - Bulut Tabanlı PDKS</title>
+        {/* Primary Meta Tags */}
+        <title>Personel Takip Sistemi | Mika Teknoloji - Bulut Tabanlı PDKS Çözümleri</title>
         <meta 
           name="description" 
-          content="Bulut tabanlı personel takip ve insan kaynakları yönetimi. QR kod, kart okuyucu, mobil uygulama. 7/24 destek, yasal uyum garantili." 
+          content="Türkiye'nin en güvenilir bulut tabanlı personel takip sistemi. PDKS, vardiya yönetimi, QR kod takip, mobil uygulama ile 7/24 destek. SGK uyumlu, yasal mevzuata tam uygun. 20+ yıl deneyim, 500K+ kullanıcı." 
         />
-        <meta name="keywords" content="personel takip sistemi, bulut tabanlı pdks, insan kaynakları yönetimi, qr kod takip, mobil personel takip, vardiya yönetimi" />
-        <meta property="og:title" content="Personel Takip Sistemi | Mika Teknoloji - Bulut Tabanlı PDKS" />
-        <meta property="og:description" content="Bulut tabanlı personel takip ve insan kaynakları yönetimi. QR kod, kart okuyucu, mobil uygulama. 7/24 destek, yasal uyum garantili." />
+        <meta name="keywords" content="personel takip sistemi, bulut tabanlı pdks, vardiya yönetimi yazılımı, insan kaynakları sistemi, çalışan takip programı, pdks sistemi, personel devam kontrol sistemi, mesai takip sistemi, QR kod personel takip, mobil personel takip uygulaması, işçi takip sistemi, personel giriş çıkış sistemi, puantaj sistemi, shift yönetimi, çalışan zaman takibi, bordro hazırlama sistemi, iş gücü yönetimi, hr yazılımı türkiye, sgk uyumlu pdks" />
+        <meta name="author" content="Mika Teknoloji" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="language" content="tr" />
+        <meta name="geo.region" content="TR" />
+        <meta name="geo.country" content="Turkey" />
+        <meta name="geo.placename" content="Türkiye" />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Personel Takip Sistemi | Mika Teknoloji - Bulut Tabanlı PDKS Çözümleri" />
+        <meta property="og:description" content="Türkiye'nin en güvenilir bulut tabanlı personel takip sistemi. PDKS, vardiya yönetimi, QR kod takip, mobil uygulama ile 7/24 destek. SGK uyumlu, yasal mevzuata tam uygun." />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mikateknoloji.com/urunler/personel-takip" />
+        <meta property="og:image" content="https://mikateknoloji.com/images/personel-takip-og.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Mika Teknoloji Personel Takip Sistemi - Bulut Tabanlı PDKS" />
+        <meta property="og:site_name" content="Mika Teknoloji" />
+        <meta property="og:locale" content="tr_TR" />
+        <meta property="og:locale:alternate" content="en_US" />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Personel Takip Sistemi | Mika Teknoloji - Bulut Tabanlı PDKS" />
+        <meta name="twitter:description" content="Türkiye'nin en güvenilir bulut tabanlı personel takip sistemi. PDKS, vardiya yönetimi, QR kod takip, mobil uygulama ile 7/24 destek." />
+        <meta name="twitter:image" content="https://mikateknoloji.com/images/personel-takip-twitter.jpg" />
+        <meta name="twitter:image:alt" content="Mika Teknoloji Personel Takip Sistemi" />
+        <meta name="twitter:site" content="@mikateknoloji" />
+        <meta name="twitter:creator" content="@mikateknoloji" />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="theme-color" content="#EC4899" />
+        <meta name="apple-mobile-web-app-title" content="Mika Teknoloji PDKS" />
+        <meta name="application-name" content="Mika Teknoloji Personel Takip Sistemi" />
+        <meta name="msapplication-TileColor" content="#EC4899" />
+        
+        {/* Canonical and Hreflang */}
         <link rel="canonical" href="https://mikateknoloji.com/urunler/personel-takip" />
+        <link rel="alternate" hrefLang="tr" href="https://mikateknoloji.com/urunler/personel-takip" />
+        <link rel="alternate" hrefLang="en" href="https://mikateknoloji.com/en/products/personnel-tracking" />
+        <link rel="alternate" hrefLang="x-default" href="https://mikateknoloji.com/urunler/personel-takip" />
+        
+        {/* Preconnect for Performance */}
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://googletagmanager.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Organization",
+                "@id": "https://mikateknoloji.com/#organization",
+                "name": "Mika Teknoloji Kontrol Sistemleri",
+                "url": "https://mikateknoloji.com",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://mikateknoloji.com/images/mika-teknoloji-logo.png",
+                  "width": 300,
+                  "height": 100
+                },
+                "description": "Türkiye'nin önde gelen PDKS ve güvenlik teknolojileri şirketi. Personel takip sistemleri, access control, QR-Patrol çözümleri.",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressCountry": "TR",
+                  "addressRegion": "Türkiye"
+                },
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": "+90-XXX-XXX-XXXX",
+                  "contactType": "customer service",
+                  "availableLanguage": ["Turkish", "English"],
+                  "hoursAvailable": "Mo-Su 24:00"
+                },
+                "sameAs": [
+                  "https://www.linkedin.com/company/mikateknoloji",
+                  "https://twitter.com/mikateknoloji"
+                ]
+              },
+              {
+                "@type": "SoftwareApplication",
+                "@id": "https://mikateknoloji.com/urunler/personel-takip/#product",
+                "name": "Mika Teknoloji Personel Takip Sistemi",
+                "description": "Bulut tabanlı personel devam kontrol sistemi (PDKS) ile kapsamlı vardiya yönetimi, QR kod takip ve mobil uygulama desteği.",
+                "url": "https://mikateknoloji.com/urunler/personel-takip",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "Web, iOS, Android",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "Özel Fiyat",
+                  "priceCurrency": "TRY",
+                  "availability": "https://schema.org/InStock",
+                  "validFrom": "2025-01-01"
+                },
+                "provider": {
+                  "@id": "https://mikateknoloji.com/#organization"
+                },
+                "featureList": [
+                  "Bulut tabanlı altyapı",
+                  "QR kod ile giriş-çıkış",
+                  "Mobil uygulama",
+                  "Vardiya yönetimi",
+                  "SGK uyumlu raporlama",
+                  "7/24 teknik destek",
+                  "Çoklu lokasyon desteği",
+                  "Gerçek zamanlı takip"
+                ],
+                "screenshot": "https://mikateknoloji.com/images/personel-takip-screenshot.jpg"
+              },
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Ana Sayfa",
+                    "item": "https://mikateknoloji.com"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Ürünler",
+                    "item": "https://mikateknoloji.com/urunler"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Personel Takip Sistemi",
+                    "item": "https://mikateknoloji.com/urunler/personel-takip"
+                  }
+                ]
+              }
+            ]
+          })}
+        </script>
       </Helmet>
       {/* Hero Section */}
       <section data-testid="P1" className="relative py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
