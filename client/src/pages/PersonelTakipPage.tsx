@@ -246,7 +246,7 @@ export default function PersonelTakipPage() {
             </h1>
             
             <h2 className="text-xl md:text-2xl text-slate-600 font-light mb-8">
-              Personel ve İş Süreçleri Yönetimi, İnsan Kaynakları Çözümleri, Giriş - Çıkış Takibi ve çok daha fazlası...
+              İstanbul, İzmir, Ankara, Bursa ve tüm Türkiye'deki fabrikalar, üretim tesisleri, ofisler ve perakende mağazaları için <Link href="/urunler" className="text-primary hover:text-primary/80 font-medium underline">bulut tabanlı personel takip çözümleri</Link>. SGK uyumlu PDKS sistemi ile vardiya yönetimi, mesai takibi ve insan kaynakları süreçlerinizi dijitalleştirin.
             </h2>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
@@ -642,7 +642,7 @@ export default function PersonelTakipPage() {
               PDKS Teknolojisini Keşfedin!
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Çalışma gücünüzün tüm yönlerini yönetin. Operasyonları basitleştirin ve verimliliği artırın!
+              Otomotiv, tekstil, gıda, üretim, perakende, lojistik ve inşaat sektörlerinde binlerce şirketin tercih ettiği teknoloji ile çalışma gücünüzün tüm yönlerini yönetin. <Link href="/cozumler" className="text-primary hover:text-primary/80 underline font-medium">Sektörel çözümlerimizi</Link> keşfedin ve operasyonları basitleştirin!
             </p>
           </motion.div>
 
@@ -779,8 +779,7 @@ export default function PersonelTakipPage() {
               Sektörün En Güvenilir PDKS Sistemi
             </h2>
             <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-              20+ yıllık deneyimimiz, binlerce başarılı proje ve 99.9% uptime garantisi ile 
-              işletmenizin güvenini kazanıyoruz. Türkiye'nin en büyük şirketlerinin tercihi.
+              İstanbul'dan Antalya'ya, İzmir'den Trabzon'a kadar Türkiye'nin 81 ilinde başarıyla çalışan sistemimiz, 20+ yıllık deneyimimiz ve 99.9% uptime garantisi ile işletmenizin güvenini kazanıyor. Fortune 500 şirketlerinden KOBİ'lere kadar binlerce kurumun <Link href="/referanslar" className="text-primary hover:text-white underline">güvenilir tercihi</Link>.
             </p>
           </motion.div>
 
@@ -949,7 +948,7 @@ export default function PersonelTakipPage() {
               Her zaman yanınızdayız!
             </h2>
             <p className="text-lg text-slate-600">
-              Sınırsız destek ve bilgi için her zaman yanınızdayız!
+              Personel takip sistemi, <Link href="/urunler/qr-patrol" className="text-primary hover:text-primary/80 underline font-medium">QR-Patrol güvenlik sistemi</Link>, <Link href="/urunler/turnike-sistemleri" className="text-primary hover:text-primary/80 underline font-medium">turnike sistemleri</Link> ve tüm teknoloji çözümlerimiz için 7/24 sınırsız destek ve bilgi desteği sunuyoruz!
             </p>
           </motion.div>
 
