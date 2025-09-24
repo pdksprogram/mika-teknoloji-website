@@ -372,11 +372,7 @@ export default function PersonelTakipPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              {/* Gradient Background Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-purple-500/20 to-pink-500/20 rounded-[4rem] blur-3xl transform rotate-6 scale-110 -z-10"></div>
-              
-              {/* Shadow Effect */}
-              <div className="relative transform hover:scale-105 transition-all duration-500 hover:rotate-1">
+              <div className="relative transform hover:scale-105 transition-all duration-500">
                 <div className="max-w-sm mx-auto shadow-2xl">
                   <img 
                     src={mobilAppImage} 
@@ -385,10 +381,6 @@ export default function PersonelTakipPage() {
                   />
                 </div>
               </div>
-              
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/30 rounded-full blur-sm animate-pulse"></div>
-              <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-purple-500/20 rounded-full blur-md animate-bounce" style={{animationDelay: '1s'}}></div>
             </motion.div>
           </div>
 
