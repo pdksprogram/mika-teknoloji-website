@@ -246,11 +246,11 @@ export default function QRPDKSPage() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section data-testid="features-section" className="relative py-20 bg-slate-50">
+      {/* Features Section Header */}
+      <section className="relative py-12 bg-slate-50">
         <div className="container mx-auto px-4">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center"
             {...fadeInUp}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
@@ -261,80 +261,233 @@ export default function QRPDKSPage() {
               işletmenize hız ve güvenlik katıyor.
             </p>
           </motion.div>
-          
+        </div>
+      </section>
+
+      {/* Q1 - QR Kod Okutma */}
+      <section data-testid="Q1" className="relative py-12 bg-slate-50">
+        {/* Segment Code */}
+        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">Q1</div>
+        <div className="container mx-auto px-4">
           <motion.div 
-            className="max-w-5xl mx-auto space-y-8"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="whileInView"
-            viewport={{ once: true }}
+            className="max-w-5xl mx-auto"
+            {...fadeInUp}
           >
-            {[
-              {
-                icon: QrCode,
-                title: "QR Kod Okutma",
-                description: "Akıllı telefonlarla hızlı ve kolay QR kod okutarak giriş-çıkış işlemleri. Personel kartındaki QR kodu telefon kamerasıyla okutarak saniyeler içinde giriş-çıkış kaydı oluşturun.",
-                imageAlt: "QR Kod Okutma Sistemi"
-              },
-              {
-                icon: Smartphone,
-                title: "Mobil Uygulama",
-                description: "iOS ve Android uyumlu mobil uygulama ile her yerden erişim. Personel ve yöneticiler için ayrı arayüzler, offline çalışma desteği ve senkronizasyon özellikleri.",
-                imageAlt: "Mobil PDKS Uygulaması"
-              },
-              {
-                icon: Shield,
-                title: "Temassız Sistem",
-                description: "Hijyen ve güvenlik odaklı temassız personel takip çözümü. COVID-19 sonrası yeni normalde güvenli mesafe kurallarına uygun personel kontrolü sağlayın.",
-                imageAlt: "Temassız Personel Takip"
-              },
-              {
-                icon: Cloud,
-                title: "Bulut Tabanlı Altyapı",
-                description: "Güvenli bulut altyapısı ile verileriniz her zaman korunur. 7/24 erişim, otomatik yedekleme, multi-lokasyon desteği ve yüksek güvenlik protokolleri.",
-                imageAlt: "Bulut Tabanlı PDKS"
-              },
-              {
-                icon: Settings,
-                title: "Kolay Kurulum",
-                description: "Hızlı kurulum, minimum donanım gereksinimi. Mevcut sistemlerinizle entegrasyon, uzaktan kurulum desteği ve 1 saatte hizmete alım imkanı.",
-                imageAlt: "Kolay PDKS Kurulumu"
-              },
-              {
-                icon: Lock,
-                title: "SGK Uyumlu Raporlama",
-                description: "SGK mevzuatına uygun raporlama ve veri aktarımı. Yasal raporlar, bordro entegrasyonu, mesai hesaplamaları ve otomatik SGK bildirimleri.",
-                imageAlt: "SGK Uyumlu PDKS Raporları"
-              }
-            ].map((feature, index) => (
-              <motion.div key={index} variants={staggerItem}>
-                <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
-                  <CardContent className="p-0">
-                    <div className="flex flex-col md:flex-row">
-                      {/* Resim Alanı */}
-                      <div className="md:w-1/3 bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center">
-                        <div className="w-32 h-32 bg-primary/10 rounded-2xl flex items-center justify-center border-2 border-primary/20">
-                          <feature.icon className="h-16 w-16 text-primary" />
-                        </div>
-                      </div>
-                      {/* İçerik Alanı */}
-                      <div className="md:w-2/3 p-8">
-                        <div className="flex items-start space-y-4">
-                          <div>
-                            <h3 className="text-2xl font-bold text-slate-800 mb-4">
-                              {feature.title}
-                            </h3>
-                            <p className="text-slate-600 leading-relaxed text-lg">
-                              {feature.description}
-                            </p>
-                          </div>
-                        </div>
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+              <CardContent className="p-0">
+                <div className="flex flex-col md:flex-row">
+                  {/* Resim Alanı */}
+                  <div className="md:w-1/3 bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center">
+                    <div className="w-32 h-32 bg-primary/10 rounded-2xl flex items-center justify-center border-2 border-primary/20">
+                      <QrCode className="h-16 w-16 text-primary" />
+                    </div>
+                  </div>
+                  {/* İçerik Alanı */}
+                  <div className="md:w-2/3 p-8">
+                    <div className="flex items-start space-y-4">
+                      <div>
+                        <h3 className="text-2xl font-bold text-slate-800 mb-4">
+                          QR Kod Okutma
+                        </h3>
+                        <p className="text-slate-600 leading-relaxed text-lg">
+                          Akıllı telefonlarla hızlı ve kolay QR kod okutarak giriş-çıkış işlemleri. Personel kartındaki QR kodu telefon kamerasıyla okutarak saniyeler içinde giriş-çıkış kaydı oluşturun.
+                        </p>
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Q2 - Mobil Uygulama */}
+      <section data-testid="Q2" className="relative py-12 bg-white">
+        {/* Segment Code */}
+        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">Q2</div>
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="max-w-5xl mx-auto"
+            {...fadeInUp}
+          >
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+              <CardContent className="p-0">
+                <div className="flex flex-col md:flex-row">
+                  {/* Resim Alanı */}
+                  <div className="md:w-1/3 bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center">
+                    <div className="w-32 h-32 bg-primary/10 rounded-2xl flex items-center justify-center border-2 border-primary/20">
+                      <Smartphone className="h-16 w-16 text-primary" />
+                    </div>
+                  </div>
+                  {/* İçerik Alanı */}
+                  <div className="md:w-2/3 p-8">
+                    <div className="flex items-start space-y-4">
+                      <div>
+                        <h3 className="text-2xl font-bold text-slate-800 mb-4">
+                          Mobil Uygulama
+                        </h3>
+                        <p className="text-slate-600 leading-relaxed text-lg">
+                          iOS ve Android uyumlu mobil uygulama ile her yerden erişim. Personel ve yöneticiler için ayrı arayüzler, offline çalışma desteği ve senkronizasyon özellikleri.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Q3 - Temassız Sistem */}
+      <section data-testid="Q3" className="relative py-12 bg-slate-50">
+        {/* Segment Code */}
+        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">Q3</div>
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="max-w-5xl mx-auto"
+            {...fadeInUp}
+          >
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+              <CardContent className="p-0">
+                <div className="flex flex-col md:flex-row">
+                  {/* Resim Alanı */}
+                  <div className="md:w-1/3 bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center">
+                    <div className="w-32 h-32 bg-primary/10 rounded-2xl flex items-center justify-center border-2 border-primary/20">
+                      <Shield className="h-16 w-16 text-primary" />
+                    </div>
+                  </div>
+                  {/* İçerik Alanı */}
+                  <div className="md:w-2/3 p-8">
+                    <div className="flex items-start space-y-4">
+                      <div>
+                        <h3 className="text-2xl font-bold text-slate-800 mb-4">
+                          Temassız Sistem
+                        </h3>
+                        <p className="text-slate-600 leading-relaxed text-lg">
+                          Hijyen ve güvenlik odaklı temassız personel takip çözümü. COVID-19 sonrası yeni normalde güvenli mesafe kurallarına uygun personel kontrolü sağlayın.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Q4 - Bulut Tabanlı Altyapı */}
+      <section data-testid="Q4" className="relative py-12 bg-white">
+        {/* Segment Code */}
+        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">Q4</div>
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="max-w-5xl mx-auto"
+            {...fadeInUp}
+          >
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+              <CardContent className="p-0">
+                <div className="flex flex-col md:flex-row">
+                  {/* Resim Alanı */}
+                  <div className="md:w-1/3 bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center">
+                    <div className="w-32 h-32 bg-primary/10 rounded-2xl flex items-center justify-center border-2 border-primary/20">
+                      <Cloud className="h-16 w-16 text-primary" />
+                    </div>
+                  </div>
+                  {/* İçerik Alanı */}
+                  <div className="md:w-2/3 p-8">
+                    <div className="flex items-start space-y-4">
+                      <div>
+                        <h3 className="text-2xl font-bold text-slate-800 mb-4">
+                          Bulut Tabanlı Altyapı
+                        </h3>
+                        <p className="text-slate-600 leading-relaxed text-lg">
+                          Güvenli bulut altyapısı ile verileriniz her zaman korunur. 7/24 erişim, otomatik yedekleme, multi-lokasyon desteği ve yüksek güvenlik protokolleri.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Q5 - Kolay Kurulum */}
+      <section data-testid="Q5" className="relative py-12 bg-slate-50">
+        {/* Segment Code */}
+        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">Q5</div>
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="max-w-5xl mx-auto"
+            {...fadeInUp}
+          >
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+              <CardContent className="p-0">
+                <div className="flex flex-col md:flex-row">
+                  {/* Resim Alanı */}
+                  <div className="md:w-1/3 bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center">
+                    <div className="w-32 h-32 bg-primary/10 rounded-2xl flex items-center justify-center border-2 border-primary/20">
+                      <Settings className="h-16 w-16 text-primary" />
+                    </div>
+                  </div>
+                  {/* İçerik Alanı */}
+                  <div className="md:w-2/3 p-8">
+                    <div className="flex items-start space-y-4">
+                      <div>
+                        <h3 className="text-2xl font-bold text-slate-800 mb-4">
+                          Kolay Kurulum
+                        </h3>
+                        <p className="text-slate-600 leading-relaxed text-lg">
+                          Hızlı kurulum, minimum donanım gereksinimi. Mevcut sistemlerinizle entegrasyon, uzaktan kurulum desteği ve 1 saatte hizmete alım imkanı.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Q6 - SGK Uyumlu Raporlama */}
+      <section data-testid="Q6" className="relative py-12 bg-white">
+        {/* Segment Code */}
+        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">Q6</div>
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="max-w-5xl mx-auto"
+            {...fadeInUp}
+          >
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+              <CardContent className="p-0">
+                <div className="flex flex-col md:flex-row">
+                  {/* Resim Alanı */}
+                  <div className="md:w-1/3 bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center">
+                    <div className="w-32 h-32 bg-primary/10 rounded-2xl flex items-center justify-center border-2 border-primary/20">
+                      <Lock className="h-16 w-16 text-primary" />
+                    </div>
+                  </div>
+                  {/* İçerik Alanı */}
+                  <div className="md:w-2/3 p-8">
+                    <div className="flex items-start space-y-4">
+                      <div>
+                        <h3 className="text-2xl font-bold text-slate-800 mb-4">
+                          SGK Uyumlu Raporlama
+                        </h3>
+                        <p className="text-slate-600 leading-relaxed text-lg">
+                          SGK mevzuatına uygun raporlama ve veri aktarımı. Yasal raporlar, bordro entegrasyonu, mesai hesaplamaları ve otomatik SGK bildirimleri.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </motion.div>
         </div>
       </section>
