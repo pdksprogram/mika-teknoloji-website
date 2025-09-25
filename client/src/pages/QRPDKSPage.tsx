@@ -32,20 +32,6 @@ export default function QRPDKSPage() {
     viewport: { once: true }
   };
 
-  const staggerContainer = {
-    initial: {},
-    whileInView: {
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const staggerItem = {
-    initial: { opacity: 0, y: 30 },
-    whileInView: { opacity: 1, y: 0 },
-    transition: { duration: 0.5 }
-  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -247,51 +233,130 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Features Section Header */}
-      <section className="relative py-12 bg-slate-50">
-        <div className="container mx-auto px-4">
+      <section className="relative py-24 bg-gradient-to-br from-slate-900 to-slate-800 overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-48 h-48 bg-pink-500/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div 
-            className="text-center"
+            className="text-center max-w-6xl mx-auto"
             {...fadeInUp}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              QR Kod PDKS Avantajları
+            <div className="inline-flex items-center bg-gradient-to-r from-primary/20 to-pink-500/20 backdrop-blur-sm border border-primary/30 px-8 py-4 rounded-full mb-10">
+              <div className="w-3 h-3 bg-primary rounded-full mr-4 animate-pulse"></div>
+              <span className="text-primary font-bold text-sm tracking-widest uppercase">Kurumsal Teknoloji Çözümleri</span>
+            </div>
+            
+            <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+              QR Kod PDKS 
+              <span className="text-transparent bg-gradient-to-r from-primary via-pink-400 to-primary bg-clip-text animate-pulse">
+                Avantajları
+              </span>
             </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Mobil teknoloji ile personel takibini kolaylaştıran QR kod PDKS sistemi, 
-              işletmenize hız ve güvenlik katıyor.
+            
+            <p className="text-xl md:text-2xl text-slate-300 max-w-5xl mx-auto leading-relaxed mb-12">
+              Fortune 500 şirketlerinin tercih ettiği kurumsal düzeyde mobil teknoloji ile 
+              personel takibini kolaylaştıran QR kod PDKS sistemi, işletmenize dijital dönüşüm, 
+              operasyonel verimlilik ve güvenlik katıyor.
             </p>
+            
+            <div className="flex justify-center items-center space-x-4 mb-8">
+              <div className="w-8 h-1 bg-primary rounded-full"></div>
+              <div className="w-16 h-1 bg-gradient-to-r from-primary to-pink-400 rounded-full"></div>
+              <div className="w-8 h-1 bg-pink-400 rounded-full"></div>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Q1 - QR Kod Okutma */}
-      <section data-testid="Q1" className="relative py-12 bg-slate-50">
+      <section data-testid="Q1" className="relative py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50">
         {/* Segment Code */}
-        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">Q1</div>
-        <div className="container mx-auto px-4">
+        <div className="absolute top-6 left-6 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full text-lg font-bold z-20 shadow-xl">Q1</div>
+        
+        {/* Decorative Background */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-primary/5 to-transparent rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div 
-            className="max-w-5xl mx-auto"
+            className="max-w-7xl mx-auto"
             {...fadeInUp}
           >
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-2 bg-white/80 backdrop-blur-sm overflow-hidden">
               <CardContent className="p-0">
-                <div className="flex flex-col md:flex-row">
-                  {/* Resim Alanı */}
-                  <div className="md:w-1/3 bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center">
-                    <div className="w-32 h-32 bg-primary/10 rounded-2xl flex items-center justify-center border-2 border-primary/20">
-                      <QrCode className="h-16 w-16 text-primary" />
+                <div className="flex flex-col lg:flex-row min-h-[400px]">
+                  {/* Resim Alanı - Büyük ve Premium */}
+                  <div className="lg:w-2/5 relative bg-gradient-to-br from-primary/10 via-primary/5 to-pink-500/10">
+                    {/* Premium Image Container */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
+                    <div className="relative h-full flex items-center justify-center p-12">
+                      <div className="relative">
+                        {/* Main Icon Container */}
+                        <div className="w-48 h-48 bg-gradient-to-br from-primary to-primary/80 rounded-3xl flex items-center justify-center shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                          <QrCode className="h-24 w-24 text-white" />
+                        </div>
+                        {/* Floating Elements */}
+                        <div className="absolute -top-6 -right-6 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center">
+                          <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+                        </div>
+                        <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-primary to-pink-400 rounded-full shadow-lg opacity-80"></div>
+                      </div>
                     </div>
+                    {/* Decorative Corner */}
+                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-pink-400 to-primary"></div>
                   </div>
-                  {/* İçerik Alanı */}
-                  <div className="md:w-2/3 p-8">
-                    <div className="flex items-start space-y-4">
+                  
+                  {/* İçerik Alanı - Premium Typography */}
+                  <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
+                    <div className="space-y-8">
+                      {/* Premium Badge */}
+                      <div className="inline-flex items-center bg-gradient-to-r from-primary/20 to-pink-400/20 px-6 py-3 rounded-full border border-primary/30">
+                        <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-pulse"></div>
+                        <span className="text-primary font-semibold text-sm tracking-wider uppercase">Teknolojik Üstünlük</span>
+                      </div>
+                      
+                      {/* Premium Title */}
                       <div>
-                        <h3 className="text-2xl font-bold text-slate-800 mb-4">
-                          QR Kod Okutma
+                        <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
+                          QR Kod Okutma Sistemi
                         </h3>
-                        <p className="text-slate-600 leading-relaxed text-lg">
-                          Akıllı telefonlarla hızlı ve kolay QR kod okutarak giriş-çıkış işlemleri. Personel kartındaki QR kodu telefon kamerasıyla okutarak saniyeler içinde giriş-çıkış kaydı oluşturun.
+                        <div className="w-24 h-1 bg-gradient-to-r from-primary to-pink-400 rounded-full mb-8"></div>
+                      </div>
+                      
+                      {/* Premium Description */}
+                      <div className="space-y-6">
+                        <p className="text-xl text-slate-700 leading-relaxed font-light">
+                          En gelişmiş <strong className="text-slate-800 font-semibold">QR kod teknolojisi</strong> ile 
+                          personel giriş-çıkış işlemlerini saniyeler içinde gerçekleştirin.
                         </p>
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                          Akıllı telefon kamerası ile personel kartındaki benzersiz QR kodu okutarak, 
+                          gerçek zamanlı veri işleme altyapısı sayesinde anında giriş-çıkış kaydı oluşturun. 
+                          <span className="text-primary font-medium"> %99.9 doğruluk oranı</span> ile sektörde lider performans.
+                        </p>
+                      </div>
+                      
+                      {/* Premium Features */}
+                      <div className="grid grid-cols-2 gap-6 pt-6">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Saniye İçinde Okuma</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Yüksek Doğruluk Oranı</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Tüm Kamera Türleri</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Çoklu Format Desteği</span>
+                        </div>
                       </div>
                     </div>
                   </div>
