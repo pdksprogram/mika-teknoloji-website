@@ -15,7 +15,7 @@ import {
   Video
 } from "lucide-react";
 import { Link } from "wouter";
-import qrKodOkumaImage from "@assets/image_1758816694416.png";
+import qrKodOkumaImage from "@assets/image_1758816518741.png";
 
 export default function QRPDKSPage() {
   const handleDemoRequest = () => {
@@ -295,21 +295,14 @@ export default function QRPDKSPage() {
                     <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
                     <div className="relative h-full flex items-center justify-center p-8">
                       <div className="relative w-full max-w-[280px]">
-                        {/* Ana QR Okuma Resmi */}
-                        <div className="relative overflow-hidden rounded-3xl shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
+                        {/* Ana QR Okuma Resmi - Sade Görünüm */}
+                        <div className="relative overflow-hidden rounded-2xl">
                           <img 
                             src={qrKodOkumaImage} 
                             alt="QR Kod Okuma Mobil Uygulama - Mika Teknoloji PDKS"
                             className="w-full h-auto object-contain"
                           />
-                          {/* Overlay Gradient */}
-                          <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent"></div>
                         </div>
-                        {/* Floating Elements */}
-                        <div className="absolute -top-4 -right-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center">
-                          <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                        </div>
-                        <div className="absolute -bottom-3 -left-3 w-8 h-8 bg-gradient-to-r from-primary to-pink-400 rounded-full shadow-lg opacity-80"></div>
                       </div>
                     </div>
                     {/* Decorative Corner */}
