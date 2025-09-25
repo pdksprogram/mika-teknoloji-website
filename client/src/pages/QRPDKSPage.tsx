@@ -15,7 +15,7 @@ import {
   Video
 } from "lucide-react";
 import { Link } from "wouter";
-import qrKodOkumaImage from "@assets/image_1758816518741.png";
+import qrKodOkumaImage from "@assets/image_1758816694416.png";
 
 export default function QRPDKSPage() {
   const handleDemoRequest = () => {
