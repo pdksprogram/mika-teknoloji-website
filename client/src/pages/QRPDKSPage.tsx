@@ -15,6 +15,7 @@ import {
   Video
 } from "lucide-react";
 import { Link } from "wouter";
+import qrKodOkumaImage from "@assets/image_1758816518741.png";
 
 export default function QRPDKSPage() {
   const handleDemoRequest = () => {
@@ -292,17 +293,23 @@ export default function QRPDKSPage() {
                   <div className="lg:w-2/5 relative bg-gradient-to-br from-primary/10 via-primary/5 to-pink-500/10">
                     {/* Premium Image Container */}
                     <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
-                    <div className="relative h-full flex items-center justify-center p-12">
-                      <div className="relative">
-                        {/* Main Icon Container */}
-                        <div className="w-48 h-48 bg-gradient-to-br from-primary to-primary/80 rounded-3xl flex items-center justify-center shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                          <QrCode className="h-24 w-24 text-white" />
+                    <div className="relative h-full flex items-center justify-center p-8">
+                      <div className="relative w-full max-w-[280px]">
+                        {/* Ana QR Okuma Resmi */}
+                        <div className="relative overflow-hidden rounded-3xl shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
+                          <img 
+                            src={qrKodOkumaImage} 
+                            alt="QR Kod Okuma Mobil Uygulama - Mika Teknoloji PDKS"
+                            className="w-full h-auto object-contain"
+                          />
+                          {/* Overlay Gradient */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent"></div>
                         </div>
                         {/* Floating Elements */}
-                        <div className="absolute -top-6 -right-6 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center">
-                          <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+                        <div className="absolute -top-4 -right-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center">
+                          <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
                         </div>
-                        <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-primary to-pink-400 rounded-full shadow-lg opacity-80"></div>
+                        <div className="absolute -bottom-3 -left-3 w-8 h-8 bg-gradient-to-r from-primary to-pink-400 rounded-full shadow-lg opacity-80"></div>
                       </div>
                     </div>
                     {/* Decorative Corner */}
