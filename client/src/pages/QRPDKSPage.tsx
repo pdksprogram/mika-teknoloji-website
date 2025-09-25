@@ -332,7 +332,7 @@ export default function QRPDKSPage() {
                       {/* Premium Title */}
                       <div>
                         <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
-                          QR Kod Okutma Sistemi
+                          QR Kod PDKS + Güvenlik Sistemi
                         </h3>
                         <div className="w-24 h-1 bg-gradient-to-r from-primary to-pink-400 rounded-full mb-8"></div>
                       </div>
@@ -340,33 +340,41 @@ export default function QRPDKSPage() {
                       {/* Premium Description */}
                       <div className="space-y-6">
                         <p className="text-xl text-slate-700 leading-relaxed font-light">
-                          En gelişmiş <strong className="text-slate-800 font-semibold">QR kod teknolojisi</strong> ile 
-                          personel giriş-çıkış işlemlerini saniyeler içinde gerçekleştirin.
+                          <strong className="text-slate-800 font-semibold">Fake GPS engelleme ve konum doğrulama</strong> ile 
+                          sahte konumu, kopya kimlikleri ve riskli cihazları anında tespit edin.
                         </p>
                         <p className="text-lg text-slate-600 leading-relaxed">
-                          Akıllı telefon kamerası ile personel kartındaki benzersiz QR kodu okutarak, 
-                          gerçek zamanlı veri işleme altyapısı sayesinde anında giriş-çıkış kaydı oluşturun. 
-                          <span className="text-primary font-medium"> %99.9 doğruluk oranı</span> ile sektörde lider performans.
+                          Çok katmanlı güvenlik sistemiyle mükerrer ID önleme, gerçek zamanlı konum doğrulama ve 
+                          jeofencing kombinasyonu. Evden sahte QR okutmayı engelleyen 
+                          <span className="text-primary font-medium"> %100 güvenli PDKS</span> çözümü.
                         </p>
                       </div>
                       
                       {/* Premium Features */}
                       <div className="grid grid-cols-2 gap-6 pt-6">
                         <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Saniye İçinde Okuma</span>
+                          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Fake GPS Engelleme</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Yüksek Doğruluk Oranı</span>
+                          <span className="text-slate-600 font-medium">Konum Doğrulama</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Tüm Kamera Türleri</span>
+                          <span className="text-slate-600 font-medium">Mükerrer ID Önleme</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Jeofencing</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Root/Jailbreak Tespiti</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Çoklu Format Desteği</span>
+                          <span className="text-slate-600 font-medium">VPN/Proxy Kontrolü</span>
                         </div>
                       </div>
                     </div>

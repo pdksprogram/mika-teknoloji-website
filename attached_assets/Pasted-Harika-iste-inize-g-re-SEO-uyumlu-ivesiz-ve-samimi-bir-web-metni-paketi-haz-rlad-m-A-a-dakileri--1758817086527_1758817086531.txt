@@ -1,0 +1,84 @@
+Harika—isteğinize göre SEO uyumlu, şivesiz ve samimi bir web metni paketi hazırladım. Aşağıdakileri doğrudan site sayfanıza koyabilirsiniz.
+
+Meta Bilgiler
+
+Meta Title (≤60): Fake GPS Engelleme, Konum Doğrulama ve Mükerrer ID Önleme
+
+Meta Description (≤160): Sahte konum (Fake GPS) engelleme, gerçek zamanlı konum doğrulama, mükerrer kimlik/cihaz tespiti ve çok katmanlı güvenlik ile PDKS ve erişim kontrolünüzü güçlendirin.
+
+H1
+
+Fake GPS Engelleme, Konum Doğrulama ve Mükerrer ID Önleme
+
+Kısa Özet (Hero Metni)
+
+Sahte konumu, kopya kimlikleri ve riskli cihazları anında tespit edin. Fake GPS engelleme, konum doğrulama ve mükerrer ID önleme motorumuzla tek merkezden, güvenli ve denetlenebilir bir operasyon yönetin.
+
+Neden Gerekli?
+
+Sahte Konum Riski: Evden QR okutma, sanal lokasyon uygulamaları, VPN/Proxy ile konum manipülasyonu.
+
+Mükerrer ID Riski: Aynı personelin birden çok cihazla işlem yapması, veri bütünlüğünü bozması.
+
+Uyumluluk ve Denetim: Denetlenebilir log, doğru ücretlendirme, hatasız puantaj.
+
+Ana Özellikler (H2)
+
+Fake GPS Engelleme: Uygulama içi sahte konum tespiti, sahte konum API izleri ve joystick hareket kalıplarının algılanması.
+
+Konum Doğrulama (Geo-Validation): GPS + ağ tabanlı konum + jeofencing kombinasyonu; kapı/turnike koordinatına metre hassasiyetinde yaklaşım kontrolü.
+
+Mükerrer ID Önleme: Cihaz ID, kullanıcı ID, SIM/IMEI karması ve oturum parmak iziyle tekil kimlik zorunluluğu.
+
+Cihaz Bütünlüğü Kontrolü: Root/Jailbreak tespiti, geliştirici seçenekleri ve mock location izni denetimi.
+
+Zaman–Konum Tutarlılığı: Hız/rota anomalisi, beklenmeyen atlama (teleport) ve insan-dışı hız eşikleri.
+
+IP/Proxy/VPN Kontrolü: Kurumsal IP havuzu, bilinen VPN/Proxy blokları ve bölge–IP uyuşmazlığı.
+
+QR/Beacon Doğrulama: QR kodu yalnızca yetkili alanda geçerli kılma; BLE beacon/SSID yakınlık doğrulaması (opsiyonel).
+
+Anlık Uyarı ve Engelleme: Şüpheli oturumları otomatik askıya alma; yönetici paneline anlık bildirim.
+
+Zengin Raporlama: Personel bazında konum geçmişi, şüpheli oturum raporları, ihlal ısı haritaları.
+
+Kolay Entegrasyon: PDKS, bordro, ERP/MRP, İK ve muhasebe sistemlerine çift yönlü API.
+
+Nasıl Çalışır? (H2)
+
+Çok Katmanlı Doğrulama: GPS + Wi-Fi + hücresel ağ verileri; jeofence içinde mesafe eşiği kontrolü.
+
+Cihaz Güvenliği: Root/Jailbreak, mock location ve sanal cihaz emarelerinin tespiti.
+
+Oturum Parmak İzi: Cihaz ID + kullanıcı + ağ izleriyle tekil oturum.
+
+Anomali Motoru: Rota tutarlılığı, hız sınırı, atlama tespiti.
+
+Politika Uygulaması: İhlalde engelleme, ikinci doğrulama (foto/selfie, PIN), yöneticiyi bilgilendirme.
+
+Kullanım Senaryoları (H2)
+
+PDKS / Puantaj: Evden sahte giriş engeli, doğru vardiya–mesai hesabı.
+
+Saha Ekipleri: Bölgeye girmeden işlem açmayı engelleme, rota ve ziyaret doğrulama.
+
+Güvenli Alanlar: Kampüs, fabrika, depo ve şantiye giriş/çıkışında jeofence zorunluluğu.
+
+SSS (H2)
+
+Fake GPS’i nasıl engelliyorsunuz?
+Uygulama içi mock location, joystick örüntüsü, sanal cihaz ve root/jailbreak kontrollerini beraber çalıştırıyoruz. Jeofence dışında konum raporlarına izin verilmiyor.
+
+Mükerrer ID’yi nasıl yakalıyorsunuz?
+Cihaz–kullanıcı–oturum parmak izi eşleşmesi ve eş zamanlı oturum kontrolü. Çakışma tespitinde işlem askıya alınır, yöneticilere bildirim gider.
+
+VPN/Proxy kullanılırsa?
+Bölge–IP uyuşmazlığı ve bilinen VPN/Proxy listeleriyle eşleşme yakalanır; ek doğrulama tetiklenir veya erişim engellenir.
+
+Performansı etkiler mi?
+Doğrulamalar cihazda hafif, sunucuda ölçeklenebilir tasarlanmıştır. Raporlar asenkron üretilir.
+
+Eylem Çağrısı (CTA)
+
+Gerçek konum, gerçek veri.
+Sahte konumu ve mükerrer kimliği bugün durdurun. Canlı demoyu isteyin: [Bize ulaşın]
