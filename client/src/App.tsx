@@ -54,7 +54,7 @@ import MT2500DSingle3DetailPage from "@/pages/MT2500DSingle3DetailPage";
 import MT2500KKristalDetailPage from "@/pages/MT2500KKristalDetailPage";
 import MT1350YarimBoyDetailPage from "@/pages/MT1350YarimBoyDetailPage";
 import PersonelTakipPage from "@/pages/PersonelTakipPage";
-import QRPDKSPage from "@/pages/QRPDKSPage";
+import QRPDKSPage from "./pages/QRPDKSPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {

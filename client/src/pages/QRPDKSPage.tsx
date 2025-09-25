@@ -4,28 +4,15 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Helmet } from "react-helmet-async";
 import { trackEvent } from "@/lib/analytics";
 import { 
-  CheckCircle, 
   ArrowRight, 
   QrCode, 
   Shield, 
   Cloud, 
   Smartphone,
   Settings,
-  HeadphonesIcon,
-  Zap,
   Lock,
-  MapPin,
-  FileText,
-  Calendar,
-  UserCheck,
-  MessageSquare,
   Phone,
-  BookOpen,
-  Video,
-  Users,
-  Award,
-  Database,
-  ChevronDown
+  Video
 } from "lucide-react";
 import { Link } from "wouter";
 
