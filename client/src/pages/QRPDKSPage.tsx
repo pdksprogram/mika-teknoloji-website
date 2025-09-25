@@ -368,33 +368,90 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Q2 - Mobil Uygulama */}
-      <section data-testid="Q2" className="relative py-12 bg-white">
+      <section data-testid="Q2" className="relative py-20 bg-gradient-to-br from-slate-100 via-white to-slate-100">
         {/* Segment Code */}
-        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">Q2</div>
-        <div className="container mx-auto px-4">
+        <div className="absolute top-6 left-6 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full text-lg font-bold z-20 shadow-xl">Q2</div>
+        
+        {/* Decorative Background */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-500/5 to-transparent rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div 
-            className="max-w-5xl mx-auto"
+            className="max-w-7xl mx-auto"
             {...fadeInUp}
           >
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-2 bg-white/80 backdrop-blur-sm overflow-hidden">
               <CardContent className="p-0">
-                <div className="flex flex-col md:flex-row">
-                  {/* Resim Alanı */}
-                  <div className="md:w-1/3 bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center">
-                    <div className="w-32 h-32 bg-primary/10 rounded-2xl flex items-center justify-center border-2 border-primary/20">
-                      <Smartphone className="h-16 w-16 text-primary" />
+                <div className="flex flex-col lg:flex-row-reverse min-h-[400px]">
+                  {/* Resim Alanı - Büyük ve Premium */}
+                  <div className="lg:w-2/5 relative bg-gradient-to-br from-blue-500/10 via-blue-400/5 to-purple-500/10">
+                    {/* Premium Image Container */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
+                    <div className="relative h-full flex items-center justify-center p-12">
+                      <div className="relative">
+                        {/* Main Icon Container */}
+                        <div className="w-48 h-48 bg-gradient-to-br from-blue-600 to-blue-500 rounded-3xl flex items-center justify-center shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+                          <Smartphone className="h-24 w-24 text-white" />
+                        </div>
+                        {/* Floating Elements */}
+                        <div className="absolute -top-6 -left-6 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center">
+                          <div className="w-3 h-3 bg-blue-500 rounded-full animate-bounce"></div>
+                        </div>
+                        <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg opacity-80"></div>
+                      </div>
                     </div>
+                    {/* Decorative Corner */}
+                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 via-purple-400 to-blue-600"></div>
                   </div>
-                  {/* İçerik Alanı */}
-                  <div className="md:w-2/3 p-8">
-                    <div className="flex items-start space-y-4">
+                  
+                  {/* İçerik Alanı - Premium Typography */}
+                  <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
+                    <div className="space-y-8">
+                      {/* Premium Badge */}
+                      <div className="inline-flex items-center bg-gradient-to-r from-blue-500/20 to-purple-500/20 px-6 py-3 rounded-full border border-blue-500/30">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
+                        <span className="text-blue-600 font-semibold text-sm tracking-wider uppercase">Mobil İnovasyon</span>
+                      </div>
+                      
+                      {/* Premium Title */}
                       <div>
-                        <h3 className="text-2xl font-bold text-slate-800 mb-4">
-                          Mobil Uygulama
+                        <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
+                          Mobil Uygulama Platformu
                         </h3>
-                        <p className="text-slate-600 leading-relaxed text-lg">
-                          iOS ve Android uyumlu mobil uygulama ile her yerden erişim. Personel ve yöneticiler için ayrı arayüzler, offline çalışma desteği ve senkronizasyon özellikleri.
+                        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-8"></div>
+                      </div>
+                      
+                      {/* Premium Description */}
+                      <div className="space-y-6">
+                        <p className="text-xl text-slate-700 leading-relaxed font-light">
+                          <strong className="text-slate-800 font-semibold">Native iOS & Android</strong> deneyimi ile 
+                          personel takip süreçlerinizi mobil dünyaya taşıyın.
                         </p>
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                          Personel ve yöneticiler için özelleştirilmiş arayüzler, offline çalışma desteği ve 
+                          gerçek zamanlı senkronizasyon özellikleri. App Store ve Google Play'de 
+                          <span className="text-blue-600 font-medium"> 4.8/5 yıldız</span> kullanıcı memnuniyeti.
+                        </p>
+                      </div>
+                      
+                      {/* Premium Features */}
+                      <div className="grid grid-cols-2 gap-6 pt-6">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Offline Çalışma</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Push Bildirimleri</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Biometrik Güvenlik</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Otomatik Güncelleme</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -406,33 +463,90 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Q3 - Temassız Sistem */}
-      <section data-testid="Q3" className="relative py-12 bg-slate-50">
+      <section data-testid="Q3" className="relative py-20 bg-gradient-to-br from-green-50 via-white to-emerald-50">
         {/* Segment Code */}
-        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">Q3</div>
-        <div className="container mx-auto px-4">
+        <div className="absolute top-6 left-6 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full text-lg font-bold z-20 shadow-xl">Q3</div>
+        
+        {/* Decorative Background */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-emerald-500/5 to-transparent rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div 
-            className="max-w-5xl mx-auto"
+            className="max-w-7xl mx-auto"
             {...fadeInUp}
           >
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-2 bg-white/80 backdrop-blur-sm overflow-hidden">
               <CardContent className="p-0">
-                <div className="flex flex-col md:flex-row">
-                  {/* Resim Alanı */}
-                  <div className="md:w-1/3 bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center">
-                    <div className="w-32 h-32 bg-primary/10 rounded-2xl flex items-center justify-center border-2 border-primary/20">
-                      <Shield className="h-16 w-16 text-primary" />
+                <div className="flex flex-col lg:flex-row min-h-[400px]">
+                  {/* Resim Alanı - Büyük ve Premium */}
+                  <div className="lg:w-2/5 relative bg-gradient-to-br from-emerald-500/10 via-green-400/5 to-teal-500/10">
+                    {/* Premium Image Container */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
+                    <div className="relative h-full flex items-center justify-center p-12">
+                      <div className="relative">
+                        {/* Main Icon Container */}
+                        <div className="w-48 h-48 bg-gradient-to-br from-emerald-600 to-green-500 rounded-3xl flex items-center justify-center shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                          <Shield className="h-24 w-24 text-white" />
+                        </div>
+                        {/* Floating Elements */}
+                        <div className="absolute -top-6 -right-6 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center">
+                          <div className="w-3 h-3 bg-emerald-500 rounded-full animate-ping"></div>
+                        </div>
+                        <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full shadow-lg opacity-80"></div>
+                      </div>
                     </div>
+                    {/* Decorative Corner */}
+                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-500 via-green-400 to-teal-500"></div>
                   </div>
-                  {/* İçerik Alanı */}
-                  <div className="md:w-2/3 p-8">
-                    <div className="flex items-start space-y-4">
+                  
+                  {/* İçerik Alanı - Premium Typography */}
+                  <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
+                    <div className="space-y-8">
+                      {/* Premium Badge */}
+                      <div className="inline-flex items-center bg-gradient-to-r from-emerald-500/20 to-teal-500/20 px-6 py-3 rounded-full border border-emerald-500/30">
+                        <div className="w-2 h-2 bg-emerald-500 rounded-full mr-3 animate-pulse"></div>
+                        <span className="text-emerald-600 font-semibold text-sm tracking-wider uppercase">Hijyen & Güvenlik</span>
+                      </div>
+                      
+                      {/* Premium Title */}
                       <div>
-                        <h3 className="text-2xl font-bold text-slate-800 mb-4">
-                          Temassız Sistem
+                        <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
+                          Temassız Güvenlik Sistemi
                         </h3>
-                        <p className="text-slate-600 leading-relaxed text-lg">
-                          Hijyen ve güvenlik odaklı temassız personel takip çözümü. COVID-19 sonrası yeni normalde güvenli mesafe kurallarına uygun personel kontrolü sağlayın.
+                        <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mb-8"></div>
+                      </div>
+                      
+                      {/* Premium Description */}
+                      <div className="space-y-6">
+                        <p className="text-xl text-slate-700 leading-relaxed font-light">
+                          <strong className="text-slate-800 font-semibold">Yeni nesil temassız teknoloji</strong> ile 
+                          hijyen ve güvenlik standartlarını en üst seviyeye çıkarın.
                         </p>
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                          COVID-19 sonrası yeni normalde güvenli mesafe kurallarına uygun personel kontrolü. 
+                          Fiziksel temasın tamamen ortadan kalktığı bu sistemle 
+                          <span className="text-emerald-600 font-medium"> %100 hijyenik</span> personel takip deneyimi.
+                        </p>
+                      </div>
+                      
+                      {/* Premium Features */}
+                      <div className="grid grid-cols-2 gap-6 pt-6">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Fiziksel Temassız</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-emerald-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Hijyen Odaklı</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-teal-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Güvenli Mesafe</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-cyan-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Antimikrobiyal</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -444,33 +558,90 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Q4 - Bulut Tabanlı Altyapı */}
-      <section data-testid="Q4" className="relative py-12 bg-white">
+      <section data-testid="Q4" className="relative py-20 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
         {/* Segment Code */}
-        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">Q4</div>
-        <div className="container mx-auto px-4">
+        <div className="absolute top-6 left-6 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full text-lg font-bold z-20 shadow-xl">Q4</div>
+        
+        {/* Decorative Background */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-indigo-500/5 to-transparent rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div 
-            className="max-w-5xl mx-auto"
+            className="max-w-7xl mx-auto"
             {...fadeInUp}
           >
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-2 bg-white/80 backdrop-blur-sm overflow-hidden">
               <CardContent className="p-0">
-                <div className="flex flex-col md:flex-row">
-                  {/* Resim Alanı */}
-                  <div className="md:w-1/3 bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center">
-                    <div className="w-32 h-32 bg-primary/10 rounded-2xl flex items-center justify-center border-2 border-primary/20">
-                      <Cloud className="h-16 w-16 text-primary" />
+                <div className="flex flex-col lg:flex-row-reverse min-h-[400px]">
+                  {/* Resim Alanı - Büyük ve Premium */}
+                  <div className="lg:w-2/5 relative bg-gradient-to-br from-indigo-500/10 via-blue-400/5 to-cyan-500/10">
+                    {/* Premium Image Container */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
+                    <div className="relative h-full flex items-center justify-center p-12">
+                      <div className="relative">
+                        {/* Main Icon Container */}
+                        <div className="w-48 h-48 bg-gradient-to-br from-indigo-600 to-blue-500 rounded-3xl flex items-center justify-center shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+                          <Cloud className="h-24 w-24 text-white" />
+                        </div>
+                        {/* Floating Elements */}
+                        <div className="absolute -top-6 -left-6 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center">
+                          <div className="w-3 h-3 bg-indigo-500 rounded-full animate-spin"></div>
+                        </div>
+                        <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full shadow-lg opacity-80"></div>
+                      </div>
                     </div>
+                    {/* Decorative Corner */}
+                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-indigo-500 via-blue-400 to-cyan-500"></div>
                   </div>
-                  {/* İçerik Alanı */}
-                  <div className="md:w-2/3 p-8">
-                    <div className="flex items-start space-y-4">
+                  
+                  {/* İçerik Alanı - Premium Typography */}
+                  <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
+                    <div className="space-y-8">
+                      {/* Premium Badge */}
+                      <div className="inline-flex items-center bg-gradient-to-r from-indigo-500/20 to-cyan-500/20 px-6 py-3 rounded-full border border-indigo-500/30">
+                        <div className="w-2 h-2 bg-indigo-500 rounded-full mr-3 animate-pulse"></div>
+                        <span className="text-indigo-600 font-semibold text-sm tracking-wider uppercase">Kurumsal Bulut</span>
+                      </div>
+                      
+                      {/* Premium Title */}
                       <div>
-                        <h3 className="text-2xl font-bold text-slate-800 mb-4">
+                        <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
                           Bulut Tabanlı Altyapı
                         </h3>
-                        <p className="text-slate-600 leading-relaxed text-lg">
-                          Güvenli bulut altyapısı ile verileriniz her zaman korunur. 7/24 erişim, otomatik yedekleme, multi-lokasyon desteği ve yüksek güvenlik protokolleri.
+                        <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full mb-8"></div>
+                      </div>
+                      
+                      {/* Premium Description */}
+                      <div className="space-y-6">
+                        <p className="text-xl text-slate-700 leading-relaxed font-light">
+                          <strong className="text-slate-800 font-semibold">Enterprise sınıfı bulut altyapısı</strong> ile 
+                          verileriniz maksimum güvenlik ve performansla korunur.
                         </p>
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                          AWS ve Microsoft Azure üzerinde çalışan altyapı ile 7/24 erişim, otomatik yedekleme, 
+                          çoklu coğrafi lokasyon desteği ve 
+                          <span className="text-indigo-600 font-medium"> ISO 27001 sertifikalı</span> güvenlik protokolleri.
+                        </p>
+                      </div>
+                      
+                      {/* Premium Features */}
+                      <div className="grid grid-cols-2 gap-6 pt-6">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">7/24 Erişim</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Otomatik Yedekleme</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-cyan-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Multi-Lokasyon</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">ISO 27001</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -482,33 +653,90 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Q5 - Kolay Kurulum */}
-      <section data-testid="Q5" className="relative py-12 bg-slate-50">
+      <section data-testid="Q5" className="relative py-20 bg-gradient-to-br from-orange-50 via-white to-amber-50">
         {/* Segment Code */}
-        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">Q5</div>
-        <div className="container mx-auto px-4">
+        <div className="absolute top-6 left-6 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full text-lg font-bold z-20 shadow-xl">Q5</div>
+        
+        {/* Decorative Background */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-amber-500/5 to-transparent rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div 
-            className="max-w-5xl mx-auto"
+            className="max-w-7xl mx-auto"
             {...fadeInUp}
           >
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-2 bg-white/80 backdrop-blur-sm overflow-hidden">
               <CardContent className="p-0">
-                <div className="flex flex-col md:flex-row">
-                  {/* Resim Alanı */}
-                  <div className="md:w-1/3 bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center">
-                    <div className="w-32 h-32 bg-primary/10 rounded-2xl flex items-center justify-center border-2 border-primary/20">
-                      <Settings className="h-16 w-16 text-primary" />
+                <div className="flex flex-col lg:flex-row min-h-[400px]">
+                  {/* Resim Alanı - Büyük ve Premium */}
+                  <div className="lg:w-2/5 relative bg-gradient-to-br from-amber-500/10 via-orange-400/5 to-yellow-500/10">
+                    {/* Premium Image Container */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
+                    <div className="relative h-full flex items-center justify-center p-12">
+                      <div className="relative">
+                        {/* Main Icon Container */}
+                        <div className="w-48 h-48 bg-gradient-to-br from-amber-600 to-orange-500 rounded-3xl flex items-center justify-center shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
+                          <Settings className="h-24 w-24 text-white" />
+                        </div>
+                        {/* Floating Elements */}
+                        <div className="absolute -top-6 -right-6 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center">
+                          <div className="w-3 h-3 bg-amber-500 rounded-full animate-pulse"></div>
+                        </div>
+                        <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-full shadow-lg opacity-80"></div>
+                      </div>
                     </div>
+                    {/* Decorative Corner */}
+                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-amber-500 via-orange-400 to-yellow-500"></div>
                   </div>
-                  {/* İçerik Alanı */}
-                  <div className="md:w-2/3 p-8">
-                    <div className="flex items-start space-y-4">
+                  
+                  {/* İçerik Alanı - Premium Typography */}
+                  <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
+                    <div className="space-y-8">
+                      {/* Premium Badge */}
+                      <div className="inline-flex items-center bg-gradient-to-r from-amber-500/20 to-yellow-500/20 px-6 py-3 rounded-full border border-amber-500/30">
+                        <div className="w-2 h-2 bg-amber-500 rounded-full mr-3 animate-pulse"></div>
+                        <span className="text-amber-600 font-semibold text-sm tracking-wider uppercase">Hızlı & Kolay</span>
+                      </div>
+                      
+                      {/* Premium Title */}
                       <div>
-                        <h3 className="text-2xl font-bold text-slate-800 mb-4">
-                          Kolay Kurulum
+                        <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
+                          Express Kurulum Sistemi
                         </h3>
-                        <p className="text-slate-600 leading-relaxed text-lg">
-                          Hızlı kurulum, minimum donanım gereksinimi. Mevcut sistemlerinizle entegrasyon, uzaktan kurulum desteği ve 1 saatte hizmete alım imkanı.
+                        <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-full mb-8"></div>
+                      </div>
+                      
+                      {/* Premium Description */}
+                      <div className="space-y-6">
+                        <p className="text-xl text-slate-700 leading-relaxed font-light">
+                          <strong className="text-slate-800 font-semibold">Dünyada bir ilk</strong> olan 1 saatlik 
+                          kurulum süreci ile sistem hemen çalışmaya başlar.
                         </p>
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                          Plug-and-play teknolojisi sayesinde minimum donanım gereksinimi. 
+                          Mevcut sistemlerinizle tam entegrasyon, uzaktan kurulum desteği ve 
+                          <span className="text-amber-600 font-medium"> %0 kesinti</span> ile geçiş.
+                        </p>
+                      </div>
+                      
+                      {/* Premium Features */}
+                      <div className="grid grid-cols-2 gap-6 pt-6">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">1 Saat Kurulum</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-amber-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Plug & Play</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Uzaktan Destek</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Sıfır Kesinti</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -520,33 +748,90 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Q6 - SGK Uyumlu Raporlama */}
-      <section data-testid="Q6" className="relative py-12 bg-white">
+      <section data-testid="Q6" className="relative py-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         {/* Segment Code */}
-        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">Q6</div>
-        <div className="container mx-auto px-4">
+        <div className="absolute top-6 left-6 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full text-lg font-bold z-20 shadow-xl">Q6</div>
+        
+        {/* Decorative Background */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-violet-500/5 to-transparent rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div 
-            className="max-w-5xl mx-auto"
+            className="max-w-7xl mx-auto"
             {...fadeInUp}
           >
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-2 bg-white/80 backdrop-blur-sm overflow-hidden">
               <CardContent className="p-0">
-                <div className="flex flex-col md:flex-row">
-                  {/* Resim Alanı */}
-                  <div className="md:w-1/3 bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center">
-                    <div className="w-32 h-32 bg-primary/10 rounded-2xl flex items-center justify-center border-2 border-primary/20">
-                      <Lock className="h-16 w-16 text-primary" />
+                <div className="flex flex-col lg:flex-row-reverse min-h-[400px]">
+                  {/* Resim Alanı - Büyük ve Premium */}
+                  <div className="lg:w-2/5 relative bg-gradient-to-br from-violet-500/10 via-purple-400/5 to-indigo-500/10">
+                    {/* Premium Image Container */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
+                    <div className="relative h-full flex items-center justify-center p-12">
+                      <div className="relative">
+                        {/* Main Icon Container */}
+                        <div className="w-48 h-48 bg-gradient-to-br from-violet-600 to-purple-500 rounded-3xl flex items-center justify-center shadow-2xl transform -rotate-1 hover:rotate-0 transition-transform duration-500">
+                          <Lock className="h-24 w-24 text-white" />
+                        </div>
+                        {/* Floating Elements */}
+                        <div className="absolute -top-6 -left-6 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center">
+                          <div className="w-3 h-3 bg-violet-500 rounded-full animate-pulse"></div>
+                        </div>
+                        <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-to-r from-violet-500 to-indigo-500 rounded-full shadow-lg opacity-80"></div>
+                      </div>
                     </div>
+                    {/* Decorative Corner */}
+                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-violet-500 via-purple-400 to-indigo-500"></div>
                   </div>
-                  {/* İçerik Alanı */}
-                  <div className="md:w-2/3 p-8">
-                    <div className="flex items-start space-y-4">
+                  
+                  {/* İçerik Alanı - Premium Typography */}
+                  <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
+                    <div className="space-y-8">
+                      {/* Premium Badge */}
+                      <div className="inline-flex items-center bg-gradient-to-r from-violet-500/20 to-indigo-500/20 px-6 py-3 rounded-full border border-violet-500/30">
+                        <div className="w-2 h-2 bg-violet-500 rounded-full mr-3 animate-pulse"></div>
+                        <span className="text-violet-600 font-semibold text-sm tracking-wider uppercase">Yasal Uyumluluk</span>
+                      </div>
+                      
+                      {/* Premium Title */}
                       <div>
-                        <h3 className="text-2xl font-bold text-slate-800 mb-4">
+                        <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
                           SGK Uyumlu Raporlama
                         </h3>
-                        <p className="text-slate-600 leading-relaxed text-lg">
-                          SGK mevzuatına uygun raporlama ve veri aktarımı. Yasal raporlar, bordro entegrasyonu, mesai hesaplamaları ve otomatik SGK bildirimleri.
+                        <div className="w-24 h-1 bg-gradient-to-r from-violet-500 to-indigo-500 rounded-full mb-8"></div>
+                      </div>
+                      
+                      {/* Premium Description */}
+                      <div className="space-y-6">
+                        <p className="text-xl text-slate-700 leading-relaxed font-light">
+                          <strong className="text-slate-800 font-semibold">Türkiye mevzuatına %100 uyumlu</strong> 
+                          raporlama sistemi ile yasal yümlülüklerinizi eksiksiz yerine getirin.
                         </p>
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                          SGK bildirimleri, bordro entegrasyonu, mesai hesaplamaları ve otomatik ücretsiz izin takibi. 
+                          Çalışma ve Sosyal Güvenlik Bakanlığı tarafından 
+                          <span className="text-violet-600 font-medium"> sertifikalı sistem</span>.
+                        </p>
+                      </div>
+                      
+                      {/* Premium Features */}
+                      <div className="grid grid-cols-2 gap-6 pt-6">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">SGK Entegrasyonu</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-violet-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Bordro Sistemi</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Mesai Hesaplama</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Otomatik Bildirim</span>
+                        </div>
                       </div>
                     </div>
                   </div>
