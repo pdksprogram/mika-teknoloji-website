@@ -294,14 +294,25 @@ export default function QRPDKSPage() {
                     {/* Premium Image Container */}
                     <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
                     <div className="relative h-full flex items-center justify-center p-8">
-                      <div className="relative w-full max-w-[280px]">
-                        {/* Ana QR Okuma Resmi - Sade Görünüm */}
-                        <div className="relative overflow-hidden rounded-2xl">
-                          <img 
-                            src={qrKodOkumaImage} 
-                            alt="QR Kod Okuma Mobil Uygulama - Mika Teknoloji PDKS"
-                            className="w-full h-auto object-contain"
-                          />
+                      <div className="relative w-full max-w-[200px] mx-auto">
+                        {/* iPhone Çerçevesi */}
+                        <div className="relative">
+                          {/* iPhone Dış Çerçeve */}
+                          <div className="bg-gray-900 rounded-[2.5rem] p-1 shadow-2xl">
+                            {/* iPhone İç Ekran */}
+                            <div className="bg-white rounded-[2.2rem] overflow-hidden relative" style={{aspectRatio: '375/812'}}>
+                              {/* Üst çentik (notch) */}
+                              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-5 bg-gray-900 rounded-b-xl z-10"></div>
+                              {/* QR Kod Okuma Resmi */}
+                              <img 
+                                src={qrKodOkumaImage} 
+                                alt="QR Kod Okuma Mobil Uygulama - Mika Teknoloji PDKS"
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          </div>
+                          {/* Home Indicator */}
+                          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-white rounded-full"></div>
                         </div>
                       </div>
                     </div>
