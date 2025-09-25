@@ -263,7 +263,7 @@ export default function QRPDKSPage() {
           </motion.div>
           
           <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="max-w-5xl mx-auto space-y-8"
             variants={staggerContainer}
             initial="initial"
             whileInView="whileInView"
@@ -273,50 +273,62 @@ export default function QRPDKSPage() {
               {
                 icon: QrCode,
                 title: "QR Kod Okutma",
-                description: "Akıllı telefonlarla hızlı ve kolay QR kod okutarak giriş-çıkış işlemleri"
+                description: "Akıllı telefonlarla hızlı ve kolay QR kod okutarak giriş-çıkış işlemleri. Personel kartındaki QR kodu telefon kamerasıyla okutarak saniyeler içinde giriş-çıkış kaydı oluşturun.",
+                imageAlt: "QR Kod Okutma Sistemi"
               },
               {
                 icon: Smartphone,
                 title: "Mobil Uygulama",
-                description: "iOS ve Android uyumlu mobil uygulama ile her yerden erişim"
+                description: "iOS ve Android uyumlu mobil uygulama ile her yerden erişim. Personel ve yöneticiler için ayrı arayüzler, offline çalışma desteği ve senkronizasyon özellikleri.",
+                imageAlt: "Mobil PDKS Uygulaması"
               },
               {
                 icon: Shield,
                 title: "Temassız Sistem",
-                description: "Hijyen ve güvenlik odaklı temassız personel takip çözümü"
+                description: "Hijyen ve güvenlik odaklı temassız personel takip çözümü. COVID-19 sonrası yeni normalde güvenli mesafe kurallarına uygun personel kontrolü sağlayın.",
+                imageAlt: "Temassız Personel Takip"
               },
               {
                 icon: Cloud,
-                title: "Bulut Tabanlı",
-                description: "Güvenli bulut altyapısı ile verileriniz her zaman korunur"
+                title: "Bulut Tabanlı Altyapı",
+                description: "Güvenli bulut altyapısı ile verileriniz her zaman korunur. 7/24 erişim, otomatik yedekleme, multi-lokasyon desteği ve yüksek güvenlik protokolleri.",
+                imageAlt: "Bulut Tabanlı PDKS"
               },
               {
                 icon: Settings,
                 title: "Kolay Kurulum",
-                description: "Hızlı kurulum, minimum donanım gereksinimi"
+                description: "Hızlı kurulum, minimum donanım gereksinimi. Mevcut sistemlerinizle entegrasyon, uzaktan kurulum desteği ve 1 saatte hizmete alım imkanı.",
+                imageAlt: "Kolay PDKS Kurulumu"
               },
               {
                 icon: Lock,
-                title: "SGK Uyumlu",
-                description: "SGK mevzuatına uygun raporlama ve veri aktarımı"
+                title: "SGK Uyumlu Raporlama",
+                description: "SGK mevzuatına uygun raporlama ve veri aktarımı. Yasal raporlar, bordro entegrasyonu, mesai hesaplamaları ve otomatik SGK bildirimleri.",
+                imageAlt: "SGK Uyumlu PDKS Raporları"
               }
             ].map((feature, index) => (
               <motion.div key={index} variants={staggerItem}>
-                <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0">
-                        <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                          <feature.icon className="h-6 w-6 text-primary" />
+                <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+                  <CardContent className="p-0">
+                    <div className="flex flex-col md:flex-row">
+                      {/* Resim Alanı */}
+                      <div className="md:w-1/3 bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center">
+                        <div className="w-32 h-32 bg-primary/10 rounded-2xl flex items-center justify-center border-2 border-primary/20">
+                          <feature.icon className="h-16 w-16 text-primary" />
                         </div>
                       </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-slate-800 mb-2">
-                          {feature.title}
-                        </h3>
-                        <p className="text-slate-600">
-                          {feature.description}
-                        </p>
+                      {/* İçerik Alanı */}
+                      <div className="md:w-2/3 p-8">
+                        <div className="flex items-start space-y-4">
+                          <div>
+                            <h3 className="text-2xl font-bold text-slate-800 mb-4">
+                              {feature.title}
+                            </h3>
+                            <p className="text-slate-600 leading-relaxed text-lg">
+                              {feature.description}
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </CardContent>
