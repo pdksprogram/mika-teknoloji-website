@@ -11,11 +11,11 @@ import {
   Smartphone,
   Settings,
   Lock,
-  Phone,
-  Video
+  Phone
 } from "lucide-react";
 import { Link } from "wouter";
 import qrKodOkumaImage from "@assets/image_1758816518741.png";
+import qrPdksDemoVideo from "@assets/Untitled Video_1759323015173.mp4";
 
 export default function QRPDKSPage() {
   const handleDemoRequest = () => {
@@ -219,14 +219,21 @@ export default function QRPDKSPage() {
               </Button>
             </div>
 
-            {/* Video Header Section - User will add video here */}
+            {/* Video Header Section */}
             <div className="relative bg-white rounded-2xl shadow-2xl p-2 max-w-4xl mx-auto">
-              <div className="aspect-video rounded-xl bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-                <div className="text-center" data-testid="video-placeholder">
-                  <Video className="h-16 w-16 text-slate-400 mx-auto mb-4" />
-                  <p className="text-slate-600 font-medium text-lg mb-2">QR Kod PDKS Demo Videosu</p>
-                  <p className="text-slate-500 text-sm">Video yükleme alanı - Buraya demo videosu eklenecek</p>
-                </div>
+              <div className="aspect-video rounded-xl overflow-hidden bg-black">
+                <video 
+                  src={qrPdksDemoVideo}
+                  autoPlay
+                  muted={false}
+                  loop
+                  playsInline
+                  controls
+                  className="w-full h-full object-contain"
+                  data-testid="qr-pdks-demo-video"
+                >
+                  Tarayıcınız video etiketini desteklemiyor.
+                </video>
               </div>
             </div>
           </motion.div>
