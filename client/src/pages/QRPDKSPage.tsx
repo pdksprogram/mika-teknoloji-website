@@ -18,6 +18,7 @@ import yillikIzinBilgileriImage from "@assets/IMG_4254_1759437242409.png";
 import vardiyaKartiImage from "@assets/IMG_4255_1759437674529.png";
 import sikayetOlusturImage from "@assets/IMG_4256_1759438160354.png";
 import anketPortaliImage from "@assets/IMG_4257_1759438578441.png";
+import bordroPortaliImage from "@assets/IMG_4258_1759438746593.png";
 
 export default function QRPDKSPage() {
   const handleDemoRequest = () => {
@@ -1103,6 +1104,124 @@ export default function QRPDKSPage() {
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
                           <span className="text-slate-600 font-medium">Analiz Araçları</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Q8 - Elektronik Bordro Onay Sistemi */}
+      <section data-testid="Q8" className="relative py-20 bg-gradient-to-br from-emerald-50 via-white to-green-50">
+        {/* Segment Code */}
+        <div className="absolute top-6 left-6 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full text-lg font-bold z-20 shadow-xl">Q8</div>
+        
+        {/* Decorative Background */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-green-500/5 to-transparent rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            className="max-w-7xl mx-auto"
+            {...fadeInUp}
+          >
+            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-2 bg-white/80 backdrop-blur-sm overflow-hidden">
+              <CardContent className="p-0">
+                <div className="flex flex-col lg:flex-row-reverse min-h-[400px]">
+                  {/* Resim Alanı - iPhone Mockup */}
+                  <div className="lg:w-2/5 relative bg-gradient-to-br from-emerald-500/10 via-green-400/5 to-teal-500/10">
+                    {/* Premium Image Container */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
+                    <div className="relative h-full flex items-center justify-center p-8">
+                      <div className="relative w-full max-w-[200px] mx-auto">
+                        {/* iPhone Çerçevesi */}
+                        <div className="relative">
+                          {/* iPhone Dış Çerçeve */}
+                          <div className="bg-gray-900 rounded-[2.5rem] p-1 shadow-2xl">
+                            {/* iPhone İç Ekran */}
+                            <div className="bg-white rounded-[2.2rem] overflow-hidden relative" style={{aspectRatio: '375/812'}}>
+                              {/* Üst çentik (notch) */}
+                              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-5 bg-gray-900 rounded-b-xl z-10"></div>
+                              {/* Bordro Portalı Resmi */}
+                              <img 
+                                src={bordroPortaliImage} 
+                                alt="Bordro Portalı - Elektronik İmza Sistemi - Mika Teknoloji PDKS"
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          </div>
+                          {/* Home Indicator */}
+                          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-white rounded-full"></div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Decorative Corner */}
+                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-500 via-green-400 to-teal-500"></div>
+                  </div>
+                  
+                  {/* İçerik Alanı - Premium Typography */}
+                  <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
+                    <div className="space-y-8">
+                      {/* Premium Badge */}
+                      <div className="inline-flex items-center bg-gradient-to-r from-emerald-500/20 to-green-500/20 px-6 py-3 rounded-full border border-emerald-500/30">
+                        <div className="w-2 h-2 bg-emerald-500 rounded-full mr-3 animate-pulse"></div>
+                        <span className="text-emerald-600 font-semibold text-sm tracking-wider uppercase">Elektronik İmza</span>
+                      </div>
+                      
+                      {/* Premium Title */}
+                      <div>
+                        <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
+                          Dijital Bordro Onay ve Elektronik İmza Sistemi
+                        </h3>
+                        <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full mb-8"></div>
+                      </div>
+                      
+                      {/* Premium Description */}
+                      <div className="space-y-6">
+                        <p className="text-xl text-slate-700 leading-relaxed font-light">
+                          <strong className="text-slate-800 font-semibold">Yeni nesil personel devam kontrol sisteminde</strong> bordro bilgileri 
+                          istenildiği taktirde personellerin mobil aplikasyonlarına push bildirim ile gönderilir.
+                        </p>
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                          Personel günlük giriş-çıkışlarını ve mesai saatlerini tek tek kontrol ederek onaylar ve 
+                          <strong className="text-slate-800 font-semibold"> İK departmanına elektronik ortamda</strong> gönderir. 
+                          Onay sonrası tüm giriş-çıkışlar kilitlenir ve İK departmanı sorumlusu hariç kimse değişiklik yapamaz.
+                        </p>
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                          Bu şekilde giriş-çıkışlar <span className="text-emerald-600 font-medium">elektronik ortamda imzalanmış</span> olur. 
+                          İleride personel ile ilgili doğacak resmi anlaşmazlıklarda yasal bir delil olarak firma tarafından 
+                          belge niteliğinde tutulmaktadır. Bu özellik firmaya çok önemli bir hukuki güvence sağlamaktadır.
+                        </p>
+                      </div>
+                      
+                      {/* Premium Features */}
+                      <div className="grid grid-cols-2 gap-6 pt-6">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Push Bildirim</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-emerald-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Elektronik Onay</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-teal-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Kayıt Kilitleme</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-lime-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Yasal Delil</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-cyan-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Bordro Entegrasyonu</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Hukuki Güvence</span>
                         </div>
                       </div>
                     </div>
