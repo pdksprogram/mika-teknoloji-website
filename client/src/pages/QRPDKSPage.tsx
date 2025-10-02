@@ -588,13 +588,13 @@ export default function QRPDKSPage() {
                       {/* Premium Badge */}
                       <div className="inline-flex items-center bg-gradient-to-r from-emerald-500/20 to-teal-500/20 px-6 py-3 rounded-full border border-emerald-500/30">
                         <div className="w-2 h-2 bg-emerald-500 rounded-full mr-3 animate-pulse"></div>
-                        <span className="text-emerald-600 font-semibold text-sm tracking-wider uppercase">Hijyen & Güvenlik</span>
+                        <span className="text-emerald-600 font-semibold text-sm tracking-wider uppercase">Hiyerarşik Onay Sistemi</span>
                       </div>
                       
                       {/* Premium Title */}
                       <div>
                         <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
-                          Temassız Güvenlik Sistemi
+                          İzin ve Avans Talep Yönetimi
                         </h3>
                         <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mb-8"></div>
                       </div>
@@ -602,13 +602,19 @@ export default function QRPDKSPage() {
                       {/* Premium Description */}
                       <div className="space-y-6">
                         <p className="text-xl text-slate-700 leading-relaxed font-light">
-                          <strong className="text-slate-800 font-semibold">Yeni nesil temassız teknoloji</strong> ile 
-                          hijyen ve güvenlik standartlarını en üst seviyeye çıkarın.
+                          <strong className="text-slate-800 font-semibold">QR tabanlı personel devam kontrol sistemimizde</strong> izin ve avans 
+                          talepleri tamamen dijital ve hiyerarşik onay akışıyla yönetiliyor.
                         </p>
                         <p className="text-lg text-slate-600 leading-relaxed">
-                          COVID-19 sonrası yeni normalde güvenli mesafe kurallarına uygun personel kontrolü. 
-                          Fiziksel temasın tamamen ortadan kalktığı bu sistemle 
-                          <span className="text-emerald-600 font-medium"> %100 hijyenik</span> personel takip deneyimi.
+                          Personel, <strong className="text-slate-800 font-semibold">yeni nesil personel devam kontrol sistemi</strong> mobil uygulamasından 
+                          izin talebini girer ve ilgili tarihteki izin yöneticisine otomatik düşer. Yönetici onayladıktan sonra 
+                          talep İK'ya (İnsan Kaynakları) ulaşır. İK da onayladığında 
+                          <span className="text-emerald-600 font-medium"> izin otomatik olarak sisteme yansır</span>.
+                        </p>
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                          Aynı şekilde avans talepleri de <strong className="text-slate-800 font-semibold">bulut tabanlı personel kontrol sisteminde</strong> 
+                          aynı hiyerarşik yapıyla yönetilir. Personel → Yönetici → İK onay zinciri ile 
+                          tüm süreç şeffaf, denetlenebilir ve tamamen otomatik hale gelir.
                         </p>
                       </div>
                       
@@ -616,19 +622,27 @@ export default function QRPDKSPage() {
                       <div className="grid grid-cols-2 gap-6 pt-6">
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Fiziksel Temassız</span>
+                          <span className="text-slate-600 font-medium">İzin Talep Sistemi</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-emerald-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Hijyen Odaklı</span>
+                          <span className="text-slate-600 font-medium">Avans Yönetimi</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-teal-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Güvenli Mesafe</span>
+                          <span className="text-slate-600 font-medium">Hiyerarşik Onay</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-cyan-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Antimikrobiyal</span>
+                          <span className="text-slate-600 font-medium">Otomatik İK Akışı</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Şeffaf Süreç</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Mobil Erişim</span>
                         </div>
                       </div>
                     </div>
