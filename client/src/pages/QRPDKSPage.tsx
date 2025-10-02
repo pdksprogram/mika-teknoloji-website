@@ -943,13 +943,13 @@ export default function QRPDKSPage() {
                       {/* Premium Badge */}
                       <div className="inline-flex items-center bg-gradient-to-r from-violet-500/20 to-indigo-500/20 px-6 py-3 rounded-full border border-violet-500/30">
                         <div className="w-2 h-2 bg-violet-500 rounded-full mr-3 animate-pulse"></div>
-                        <span className="text-violet-600 font-semibold text-sm tracking-wider uppercase">Yasal Uyumluluk</span>
+                        <span className="text-violet-600 font-semibold text-sm tracking-wider uppercase">İletişim Platformu</span>
                       </div>
                       
                       {/* Premium Title */}
                       <div>
                         <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
-                          SGK Uyumlu Raporlama
+                          Mobil Şikayet ve Talep Yönetimi
                         </h3>
                         <div className="w-24 h-1 bg-gradient-to-r from-violet-500 to-indigo-500 rounded-full mb-8"></div>
                       </div>
@@ -957,13 +957,18 @@ export default function QRPDKSPage() {
                       {/* Premium Description */}
                       <div className="space-y-6">
                         <p className="text-xl text-slate-700 leading-relaxed font-light">
-                          <strong className="text-slate-800 font-semibold">Türkiye mevzuatına %100 uyumlu</strong> 
-                          raporlama sistemi ile yasal yümlülüklerinizi eksiksiz yerine getirin.
+                          Personeller işletme ile ilgili şikayetlerini <strong className="text-slate-800 font-semibold">mobil aplikasyon üzerinden</strong> anlık 
+                          olarak İK platformuna ileterek, insan kaynakları departmanı ile doğrudan iletişime geçebilmektedir.
                         </p>
                         <p className="text-lg text-slate-600 leading-relaxed">
-                          SGK bildirimleri, bordro entegrasyonu, mesai hesaplamaları ve otomatik ücretsiz izin takibi. 
-                          Çalışma ve Sosyal Güvenlik Bakanlığı tarafından 
-                          <span className="text-violet-600 font-medium"> sertifikalı sistem</span>.
+                          <strong className="text-slate-800 font-semibold">Yeni nesil personel devam kontrol sisteminde</strong> personeller, 
+                          olayların fotoğraflarını çekerek, açıklama ekleyerek ve kategori kodu girerek şikayetlerini 
+                          insan kaynakları departmanına ve ilgili müdürlüklere mobil aplikasyon üzerinden iletmektedir.
+                        </p>
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                          Bu özellik hem <span className="text-violet-600 font-medium">erişilebilirlik</span> hem de 
+                          <span className="text-violet-600 font-medium"> personel memnuniyeti</span> yönünden firmaya önemli bir üstünlük sağlamaktadır. 
+                          Şeffaf iletişim kanalları sayesinde çalışan bağlılığı artar ve sorunlar hızla çözüme kavuşturulur.
                         </p>
                       </div>
                       
@@ -971,19 +976,27 @@ export default function QRPDKSPage() {
                       <div className="grid grid-cols-2 gap-6 pt-6">
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">SGK Entegrasyonu</span>
+                          <span className="text-slate-600 font-medium">Fotoğraf Ekleme</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-violet-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Bordro Sistemi</span>
+                          <span className="text-slate-600 font-medium">İK İletişimi</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Mesai Hesaplama</span>
+                          <span className="text-slate-600 font-medium">Kategori Kodları</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Otomatik Bildirim</span>
+                          <span className="text-slate-600 font-medium">Anlık Bildirim</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Şeffaf Süreç</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Hızlı Çözüm</span>
                         </div>
                       </div>
                     </div>
