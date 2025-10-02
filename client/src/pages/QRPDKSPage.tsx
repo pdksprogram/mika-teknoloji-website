@@ -826,13 +826,13 @@ export default function QRPDKSPage() {
                       {/* Premium Badge */}
                       <div className="inline-flex items-center bg-gradient-to-r from-amber-500/20 to-yellow-500/20 px-6 py-3 rounded-full border border-amber-500/30">
                         <div className="w-2 h-2 bg-amber-500 rounded-full mr-3 animate-pulse"></div>
-                        <span className="text-amber-600 font-semibold text-sm tracking-wider uppercase">Hızlı & Kolay</span>
+                        <span className="text-amber-600 font-semibold text-sm tracking-wider uppercase">Akıllı Vardiya</span>
                       </div>
                       
                       {/* Premium Title */}
                       <div>
                         <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
-                          Express Kurulum Sistemi
+                          Mobil Shift Planlama Sistemi
                         </h3>
                         <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-full mb-8"></div>
                       </div>
@@ -840,13 +840,18 @@ export default function QRPDKSPage() {
                       {/* Premium Description */}
                       <div className="space-y-6">
                         <p className="text-xl text-slate-700 leading-relaxed font-light">
-                          <strong className="text-slate-800 font-semibold">Dünyada bir ilk</strong> olan 1 saatlik 
-                          kurulum süreci ile sistem hemen çalışmaya başlar.
+                          <strong className="text-slate-800 font-semibold">Hastane personel devam kontrol sistemi</strong> ve 
+                          <strong className="text-slate-800 font-semibold"> mağaza personel devam kontrol sisteminde</strong> shift yapıldığında, 
+                          personel hangi vardiyaya geleceğini mobil sisteminden anında görebilmektedir.
                         </p>
                         <p className="text-lg text-slate-600 leading-relaxed">
-                          Plug-and-play teknolojisi sayesinde minimum donanım gereksinimi. 
-                          Mevcut sistemlerinizle tam entegrasyon, uzaktan kurulum desteği ve 
-                          <span className="text-amber-600 font-medium"> %0 kesinti</span> ile geçiş.
+                          Personelin müdürü ya da amiri tarafından yapılan <strong className="text-slate-800 font-semibold">shift planlama</strong>, 
+                          doğrudan personelin uygulama kısmına düşer. Bu sayede sistematik bir şekilde akış düzenlenir ve 
+                          <span className="text-amber-600 font-medium"> yeni nesil personel devam kontrol sistemi</span> olan ESOFT için +1 özellik katmaktadır.
+                        </p>
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                          Gerek hastanelerde, gerekse mağaza yönetim sistemlerinde vardiya çizelgeleri otomatik olarak güncellenir. 
+                          Personeller hangi gün, hangi saatte ve hangi lokasyonda çalışacaklarını mobil cihazlarından takip edebilirler.
                         </p>
                       </div>
                       
@@ -854,19 +859,27 @@ export default function QRPDKSPage() {
                       <div className="grid grid-cols-2 gap-6 pt-6">
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">1 Saat Kurulum</span>
+                          <span className="text-slate-600 font-medium">Otomatik Shift Bildirimi</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-amber-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Plug & Play</span>
+                          <span className="text-slate-600 font-medium">Vardiya Takibi</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Uzaktan Destek</span>
+                          <span className="text-slate-600 font-medium">Anlık Güncelleme</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Sıfır Kesinti</span>
+                          <span className="text-slate-600 font-medium">Çoklu Lokasyon</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Hastane PDKS</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Mağaza PDKS</span>
                         </div>
                       </div>
                     </div>
