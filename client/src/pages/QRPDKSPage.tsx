@@ -6,7 +6,6 @@ import { trackEvent } from "@/lib/analytics";
 import { 
   ArrowRight, 
   QrCode, 
-  Shield, 
   Cloud, 
   Settings,
   Lock,
@@ -16,6 +15,8 @@ import { Link } from "wouter";
 import qrKodOkumaImage from "@assets/image_1758816518741.png";
 import qrPdksDemoVideo from "@assets/Untitled Video_1759323015173.mp4";
 import giriscikisListesiImage from "@assets/IMG_4251_1759436174932.png";
+import talepOlusturImage from "@assets/IMG_4252_1759436659395.png";
+import avansTalepImage from "@assets/IMG_4253_1759436694818.png";
 
 export default function QRPDKSPage() {
   const handleDemoRequest = () => {
@@ -526,21 +527,55 @@ export default function QRPDKSPage() {
             <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-2 bg-white/80 backdrop-blur-sm overflow-hidden">
               <CardContent className="p-0">
                 <div className="flex flex-col lg:flex-row min-h-[400px]">
-                  {/* Resim Alanı - Büyük ve Premium */}
+                  {/* Resim Alanı - İki iPhone Yan Yana */}
                   <div className="lg:w-2/5 relative bg-gradient-to-br from-emerald-500/10 via-green-400/5 to-teal-500/10">
                     {/* Premium Image Container */}
                     <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
-                    <div className="relative h-full flex items-center justify-center p-12">
-                      <div className="relative">
-                        {/* Main Icon Container */}
-                        <div className="w-48 h-48 bg-gradient-to-br from-emerald-600 to-green-500 rounded-3xl flex items-center justify-center shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                          <Shield className="h-24 w-24 text-white" />
+                    <div className="relative h-full flex items-center justify-center p-6">
+                      <div className="flex gap-4 items-center">
+                        {/* İlk iPhone - Talep Oluştur */}
+                        <div className="relative w-[140px]">
+                          <div className="relative">
+                            {/* iPhone Dış Çerçeve */}
+                            <div className="bg-gray-900 rounded-[2rem] p-[3px] shadow-2xl">
+                              {/* iPhone İç Ekran */}
+                              <div className="bg-white rounded-[1.8rem] overflow-hidden relative" style={{aspectRatio: '375/812'}}>
+                                {/* Üst çentik (notch) */}
+                                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-16 h-4 bg-gray-900 rounded-b-lg z-10"></div>
+                                {/* Talep Oluştur Resmi */}
+                                <img 
+                                  src={talepOlusturImage} 
+                                  alt="Talep Oluşturma Ekranı - Mika Teknoloji PDKS"
+                                  className="w-full h-full object-cover"
+                                />
+                              </div>
+                            </div>
+                            {/* Home Indicator */}
+                            <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-14 h-[3px] bg-white rounded-full"></div>
+                          </div>
                         </div>
-                        {/* Floating Elements */}
-                        <div className="absolute -top-6 -right-6 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center">
-                          <div className="w-3 h-3 bg-emerald-500 rounded-full animate-ping"></div>
+
+                        {/* İkinci iPhone - Avans Talep */}
+                        <div className="relative w-[140px]">
+                          <div className="relative">
+                            {/* iPhone Dış Çerçeve */}
+                            <div className="bg-gray-900 rounded-[2rem] p-[3px] shadow-2xl">
+                              {/* iPhone İç Ekran */}
+                              <div className="bg-white rounded-[1.8rem] overflow-hidden relative" style={{aspectRatio: '375/812'}}>
+                                {/* Üst çentik (notch) */}
+                                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-16 h-4 bg-gray-900 rounded-b-lg z-10"></div>
+                                {/* Avans Talep Resmi */}
+                                <img 
+                                  src={avansTalepImage} 
+                                  alt="Avans Talep Ekranı - Mika Teknoloji PDKS"
+                                  className="w-full h-full object-cover"
+                                />
+                              </div>
+                            </div>
+                            {/* Home Indicator */}
+                            <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-14 h-[3px] bg-white rounded-full"></div>
+                          </div>
                         </div>
-                        <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full shadow-lg opacity-80"></div>
                       </div>
                     </div>
                     {/* Decorative Corner */}
