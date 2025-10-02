@@ -6,8 +6,6 @@ import { trackEvent } from "@/lib/analytics";
 import { 
   ArrowRight, 
   QrCode, 
-  Settings,
-  Lock,
   Phone
 } from "lucide-react";
 import { Link } from "wouter";
@@ -18,6 +16,7 @@ import talepOlusturImage from "@assets/IMG_4252_1759436659395.png";
 import avansTalepImage from "@assets/IMG_4253_1759436694818.png";
 import yillikIzinBilgileriImage from "@assets/IMG_4254_1759437242409.png";
 import vardiyaKartiImage from "@assets/IMG_4255_1759437674529.png";
+import sikayetOlusturImage from "@assets/IMG_4256_1759438160354.png";
 
 export default function QRPDKSPage() {
   const handleDemoRequest = () => {
@@ -907,21 +906,31 @@ export default function QRPDKSPage() {
             <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-2 bg-white/80 backdrop-blur-sm overflow-hidden">
               <CardContent className="p-0">
                 <div className="flex flex-col lg:flex-row-reverse min-h-[400px]">
-                  {/* Resim Alanı - Büyük ve Premium */}
+                  {/* Resim Alanı - iPhone Mockup */}
                   <div className="lg:w-2/5 relative bg-gradient-to-br from-violet-500/10 via-purple-400/5 to-indigo-500/10">
                     {/* Premium Image Container */}
                     <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
-                    <div className="relative h-full flex items-center justify-center p-12">
-                      <div className="relative">
-                        {/* Main Icon Container */}
-                        <div className="w-48 h-48 bg-gradient-to-br from-violet-600 to-purple-500 rounded-3xl flex items-center justify-center shadow-2xl transform -rotate-1 hover:rotate-0 transition-transform duration-500">
-                          <Lock className="h-24 w-24 text-white" />
+                    <div className="relative h-full flex items-center justify-center p-8">
+                      <div className="relative w-full max-w-[200px] mx-auto">
+                        {/* iPhone Çerçevesi */}
+                        <div className="relative">
+                          {/* iPhone Dış Çerçeve */}
+                          <div className="bg-gray-900 rounded-[2.5rem] p-1 shadow-2xl">
+                            {/* iPhone İç Ekran */}
+                            <div className="bg-white rounded-[2.2rem] overflow-hidden relative" style={{aspectRatio: '375/812'}}>
+                              {/* Üst çentik (notch) */}
+                              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-5 bg-gray-900 rounded-b-xl z-10"></div>
+                              {/* Şikayet Oluştur Resmi */}
+                              <img 
+                                src={sikayetOlusturImage} 
+                                alt="Yeni Şikayet Oluştur - Mika Teknoloji PDKS"
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          </div>
+                          {/* Home Indicator */}
+                          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-white rounded-full"></div>
                         </div>
-                        {/* Floating Elements */}
-                        <div className="absolute -top-6 -left-6 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center">
-                          <div className="w-3 h-3 bg-violet-500 rounded-full animate-pulse"></div>
-                        </div>
-                        <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-to-r from-violet-500 to-indigo-500 rounded-full shadow-lg opacity-80"></div>
                       </div>
                     </div>
                     {/* Decorative Corner */}
