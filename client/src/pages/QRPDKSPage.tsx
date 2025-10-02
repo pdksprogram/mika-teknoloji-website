@@ -446,13 +446,13 @@ export default function QRPDKSPage() {
                       {/* Premium Badge */}
                       <div className="inline-flex items-center bg-gradient-to-r from-blue-500/20 to-purple-500/20 px-6 py-3 rounded-full border border-blue-500/30">
                         <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
-                        <span className="text-blue-600 font-semibold text-sm tracking-wider uppercase">Mobil İnovasyon</span>
+                        <span className="text-blue-600 font-semibold text-sm tracking-wider uppercase">Akıllı Onay Sistemi</span>
                       </div>
                       
                       {/* Premium Title */}
                       <div>
                         <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
-                          Mobil Uygulama Platformu
+                          Bulut Tabanlı Otomatik Düzeltme ve Onay Akışı
                         </h3>
                         <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-8"></div>
                       </div>
@@ -460,13 +460,17 @@ export default function QRPDKSPage() {
                       {/* Premium Description */}
                       <div className="space-y-6">
                         <p className="text-xl text-slate-700 leading-relaxed font-light">
-                          <strong className="text-slate-800 font-semibold">Native iOS & Android</strong> deneyimi ile 
-                          personel takip süreçlerinizi mobil dünyaya taşıyın.
+                          <strong className="text-slate-800 font-semibold">Klasik PDKS sistemlerinde</strong> personel çıkış yapmayı unuttuğunda, 
+                          yöneticiler personeli arayıp kaçta çıktığını öğrenip elle müdahale etmek zorunda kalıyordu.
                         </p>
                         <p className="text-lg text-slate-600 leading-relaxed">
-                          Personel ve yöneticiler için özelleştirilmiş arayüzler, offline çalışma desteği ve 
-                          gerçek zamanlı senkronizasyon özellikleri. App Store ve Google Play'de 
-                          <span className="text-blue-600 font-medium"> 4.8/5 yıldız</span> kullanıcı memnuniyeti.
+                          <strong className="text-slate-800 font-semibold">QR Kod PDKS bulut sistemimizde</strong> artık bu iş yükü ortadan kalkıyor! 
+                          Personel düzeltme kaydını mobil uygulamadan girer, amirine otomatik bildirim gider. 
+                          Amir onayladıktan sonra kayıt İK'ya düşer. İK kimin onayladığını görür ve 
+                          onaylayınca <span className="text-blue-600 font-medium">hareket otomatik olarak düzenlenir</span>.
+                        </p>
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                          İş yükünüzü azaltıyor, süreçlerinizi disipline sokuyoruz.
                         </p>
                       </div>
                       
@@ -474,19 +478,27 @@ export default function QRPDKSPage() {
                       <div className="grid grid-cols-2 gap-6 pt-6">
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Offline Çalışma</span>
+                          <span className="text-slate-600 font-medium">Personel Düzeltme Talebi</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Push Bildirimleri</span>
+                          <span className="text-slate-600 font-medium">Amir Onay Sistemi</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Biometrik Güvenlik</span>
+                          <span className="text-slate-600 font-medium">İK Kontrol Paneli</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Otomatik Düzeltme</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Otomatik Güncelleme</span>
+                          <span className="text-slate-600 font-medium">Anlık Bildirimler</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-teal-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Onay Geçmişi</span>
                         </div>
                       </div>
                     </div>
