@@ -17,6 +17,7 @@ import avansTalepImage from "@assets/IMG_4253_1759436694818.png";
 import yillikIzinBilgileriImage from "@assets/IMG_4254_1759437242409.png";
 import vardiyaKartiImage from "@assets/IMG_4255_1759437674529.png";
 import sikayetOlusturImage from "@assets/IMG_4256_1759438160354.png";
+import anketPortaliImage from "@assets/IMG_4257_1759438578441.png";
 
 export default function QRPDKSPage() {
   const handleDemoRequest = () => {
@@ -997,6 +998,111 @@ export default function QRPDKSPage() {
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
                           <span className="text-slate-600 font-medium">Hızlı Çözüm</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Q7 - Anket ve Geri Bildirim Sistemi */}
+      <section data-testid="Q7" className="relative py-20 bg-gradient-to-br from-teal-50 via-white to-cyan-50">
+        {/* Segment Code */}
+        <div className="absolute top-6 left-6 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full text-lg font-bold z-20 shadow-xl">Q7</div>
+        
+        {/* Decorative Background */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-cyan-500/5 to-transparent rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            className="max-w-7xl mx-auto"
+            {...fadeInUp}
+          >
+            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-2 bg-white/80 backdrop-blur-sm overflow-hidden">
+              <CardContent className="p-0">
+                <div className="flex flex-col lg:flex-row min-h-[400px]">
+                  {/* Resim Alanı - iPhone Mockup */}
+                  <div className="lg:w-2/5 relative bg-gradient-to-br from-teal-500/10 via-cyan-400/5 to-blue-500/10">
+                    {/* Premium Image Container */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
+                    <div className="relative h-full flex items-center justify-center p-8">
+                      <div className="relative w-full max-w-[200px] mx-auto">
+                        {/* iPhone Çerçevesi */}
+                        <div className="relative">
+                          {/* iPhone Dış Çerçeve */}
+                          <div className="bg-gray-900 rounded-[2.5rem] p-1 shadow-2xl">
+                            {/* iPhone İç Ekran */}
+                            <div className="bg-white rounded-[2.2rem] overflow-hidden relative" style={{aspectRatio: '375/812'}}>
+                              {/* Üst çentik (notch) */}
+                              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-5 bg-gray-900 rounded-b-xl z-10"></div>
+                              {/* Anket Portalı Resmi */}
+                              <img 
+                                src={anketPortaliImage} 
+                                alt="Anket Portalı - Mika Teknoloji PDKS"
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          </div>
+                          {/* Home Indicator */}
+                          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-white rounded-full"></div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Decorative Corner */}
+                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-teal-500 via-cyan-400 to-blue-500"></div>
+                  </div>
+                  
+                  {/* İçerik Alanı - Premium Typography */}
+                  <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
+                    <div className="space-y-8">
+                      {/* Premium Badge */}
+                      <div className="inline-flex items-center bg-gradient-to-r from-teal-500/20 to-cyan-500/20 px-6 py-3 rounded-full border border-teal-500/30">
+                        <div className="w-2 h-2 bg-teal-500 rounded-full mr-3 animate-pulse"></div>
+                        <span className="text-teal-600 font-semibold text-sm tracking-wider uppercase">Geri Bildirim</span>
+                      </div>
+                      
+                      {/* Premium Title */}
+                      <div>
+                        <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
+                          Mobil Anket ve Geri Bildirim Platformu
+                        </h3>
+                        <div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full mb-8"></div>
+                      </div>
+                      
+                      {/* Premium Description */}
+                      <div className="space-y-6">
+                        <p className="text-xl text-slate-700 leading-relaxed font-light">
+                          <strong className="text-slate-800 font-semibold">Anket Portalı</strong> ile personellerinizin 
+                          görüş ve önerilerini mobil uygulama üzerinden toplayın.
+                        </p>
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                          Çalışan memnuniyeti anketleri, performans değerlendirmeleri, öneri sistemleri ve 
+                          geri bildirim formları ile işletme içi iletişimi güçlendirin. Tüm anket sonuçları 
+                          <span className="text-teal-600 font-medium"> otomatik raporlanır</span> ve analiz edilir.
+                        </p>
+                      </div>
+                      
+                      {/* Premium Features */}
+                      <div className="grid grid-cols-2 gap-6 pt-6">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Anket Oluşturma</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-teal-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Mobil Katılım</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-cyan-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Otomatik Raporlama</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Analiz Araçları</span>
                         </div>
                       </div>
                     </div>
