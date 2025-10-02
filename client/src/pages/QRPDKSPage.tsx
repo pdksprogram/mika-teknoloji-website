@@ -707,13 +707,13 @@ export default function QRPDKSPage() {
                       {/* Premium Badge */}
                       <div className="inline-flex items-center bg-gradient-to-r from-indigo-500/20 to-cyan-500/20 px-6 py-3 rounded-full border border-indigo-500/30">
                         <div className="w-2 h-2 bg-indigo-500 rounded-full mr-3 animate-pulse"></div>
-                        <span className="text-indigo-600 font-semibold text-sm tracking-wider uppercase">Kurumsal Bulut</span>
+                        <span className="text-indigo-600 font-semibold text-sm tracking-wider uppercase">Mobil İzin Takibi</span>
                       </div>
                       
                       {/* Premium Title */}
                       <div>
                         <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
-                          Bulut Tabanlı Altyapı
+                          Yıllık İzin Yönetim Sistemi
                         </h3>
                         <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full mb-8"></div>
                       </div>
@@ -721,13 +721,18 @@ export default function QRPDKSPage() {
                       {/* Premium Description */}
                       <div className="space-y-6">
                         <p className="text-xl text-slate-700 leading-relaxed font-light">
-                          <strong className="text-slate-800 font-semibold">Enterprise sınıfı bulut altyapısı</strong> ile 
-                          verileriniz maksimum güvenlik ve performansla korunur.
+                          <strong className="text-slate-800 font-semibold">Yeni nesil personel devam kontrol sistemimizde</strong> personeller 
+                          ne kadar yıllık izin kaldığını ve ne kadar kullandığını cep telefonlarından anında görüntüleyebiliyor.
                         </p>
                         <p className="text-lg text-slate-600 leading-relaxed">
-                          AWS ve Microsoft Azure üzerinde çalışan altyapı ile 7/24 erişim, otomatik yedekleme, 
-                          çoklu coğrafi lokasyon desteği ve 
-                          <span className="text-indigo-600 font-medium"> ISO 27001 sertifikalı</span> güvenlik protokolleri.
+                          <strong className="text-slate-800 font-semibold">İnsan kaynakları yönetiminin etkinliğini</strong> artırarak, 
+                          işletmedeki yıllık izin durumlarını personeller hak edişlerine ve işe giriş tarihlerine göre 
+                          <span className="text-indigo-600 font-medium"> sistematik şekilde</span> cep telefonlarından görebilmektedirler.
+                        </p>
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                          Kalan izin günleri, kullanılan izinler, hak ediş bilgileri ve izin geçmişi mobil uygulamada 
+                          tek ekranda şeffaf bir şekilde sunulur. Bu sayede personel planlaması kolaylaşır ve izin yönetimi 
+                          tamamen otomatik hale gelir.
                         </p>
                       </div>
                       
@@ -735,19 +740,27 @@ export default function QRPDKSPage() {
                       <div className="grid grid-cols-2 gap-6 pt-6">
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">7/24 Erişim</span>
+                          <span className="text-slate-600 font-medium">Anlık İzin Takibi</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Otomatik Yedekleme</span>
+                          <span className="text-slate-600 font-medium">Hak Ediş Hesaplama</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-cyan-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Multi-Lokasyon</span>
+                          <span className="text-slate-600 font-medium">İzin Geçmişi</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">ISO 27001</span>
+                          <span className="text-slate-600 font-medium">Mobil Erişim</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Otomatik Güncelleme</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
+                          <span className="text-slate-600 font-medium">Şeffaf Raporlama</span>
                         </div>
                       </div>
                     </div>
