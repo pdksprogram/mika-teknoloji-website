@@ -190,16 +190,24 @@ const segments = [
 
 const faqs = [
   {
-    question: "Bariyer sistemi nasıl seçilir?",
-    answer: "Bariyer seçiminde kullanım alanı, geçiş sıklığı, güvenlik seviyesi ve kol uzunluğu göz önünde bulundurulmalıdır. Yoğun trafikli alanlarda PT Dinamik, yüksek güvenlik gerektiren noktalarda Road Blocker veya Mantar Bariyer tercih edilmelidir."
+    question: "Mantar bariyer, road blocker ve tuzak kapanlar arasındaki fark nedir?",
+    answer: "Mantar bariyer hidrolik sistemle yükselen silindirik bariyer, road blocker araç trafiğini tamamen engelleyen yüksek güvenlikli yol kesici sistem, tuzak kapanlar ise yeraltına gömülen acil durum güvenlik sistemleridir. Her biri farklı güvenlik seviyesi ve kullanım alanı için tasarlanmıştır."
   },
   {
     question: "Otopark bariyeri fiyatları ne kadardır?",
     answer: "Bariyer fiyatları model, özellikler ve kurulum gereksinimlerine göre değişiklik gösterir. Detaylı fiyat teklifi için bizimle iletişime geçebilirsiniz. Ücretsiz keşif ve montaj danışmanlığı sunuyoruz."
   },
   {
-    question: "Bariyer kurulumu ne kadar sürer?",
-    answer: "Standart bir bariyer kurulumu 2-4 saat arasında tamamlanır. Yeraltı sistemleri ve özel uygulamalar için süre değişebilir. Profesyonel ekibimiz hızlı ve güvenli montaj sağlar."
+    question: "Road blocker sistemler nerede kullanılır?",
+    answer: "Road blocker sistemler havalimanları, askeri tesisler, devlet binaları, büyükelçilikler ve yüksek güvenlik gerektiren kritik noktalarda kullanılır. Terör saldırılarına karşı maksimum koruma sağlar ve araç trafiğini tamamen engelleyebilir."
+  },
+  {
+    question: "Mantar bariyer fiyatları nasıl belirlenir?",
+    answer: "Mantar bariyer fiyatları hidrolik sistem kapasitesi, malzeme kalitesi (304 paslanmaz çelik), kontrol sistemi özellikleri ve kurulum gereksinimlerine göre değişir. PLC kontrollü modeller ve özel entegrasyonlar fiyatı etkileyen faktörlerdir."
+  },
+  {
+    question: "Tuzak kapanlar nasıl çalışır?",
+    answer: "Tuzak kapanlar yeraltına gömülen hidrolik sistemlerdir. Normal durumda görünmez haldedir, acil durumlarda otomatik veya manuel olarak aktive edilir ve yerden yükselerek yetkisiz araç girişlerini anında engeller. Maksimum güvenlik için ideal bir çözümdür."
   },
   {
     question: "Hidrolik bariyer mi yoksa elektrikli bariyer mi?",
@@ -241,12 +249,14 @@ const benefits = [
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "Bariyer Sistemleri",
-  "description": "Otopark bariyerleri, hidrolik bariyer, mantar bariyer, road blocker ve güvenlik bariyer sistemleri. Yüksek kaliteli araç giriş kontrol çözümleri.",
+  "name": "Bariyer Sistemleri - Mantar Bariyer, Road Blocker, Tuzak Kapanlar",
+  "description": "Profesyonel güvenlik çözümleri: Hidrolik mantar bariyer, road blocker yol kesici sistemler, tuzak kapanlar, otopark bariyerleri. ISO 9001 belgeli, yüksek güvenlik standartlarında araç giriş kontrol sistemleri.",
   "brand": {
     "@type": "Brand",
     "name": "Mika Teknoloji"
   },
+  "category": "Güvenlik Sistemleri",
+  "keywords": "mantar bariyer, road blocker, tuzak kapanlar, hidrolik bariyer, otopark bariyeri, güvenlik sistemleri",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.8",
@@ -306,12 +316,12 @@ export default function BariyerSistemleriPage() {
   return (
     <>
       <Helmet>
-        <title>Bariyer Sistemleri - Otopark Bariyeri, Hidrolik Bariyer, Road Blocker 2025 | Mika Teknoloji</title>
-        <meta name="description" content="✅ Profesyonel bariyer sistemleri: Otopark bariyeri, hidrolik mantar bariyer, road blocker, PT PLUS ve dinamik bariyer çözümleri. ISO 9001 belgeli, 2 yıl garanti, ücretsiz keşif. İstanbul'da en iyi bariyer fiyatları!" />
+        <title>Bariyer Sistemleri: Mantar Bariyer, Road Blocker, Tuzak Kapanlar | Mika Teknoloji 2025</title>
+        <meta name="description" content="✅ Profesyonel bariyer sistemleri: Mantar bariyer, road blocker, tuzak kapanlar, otopark bariyeri ve hidrolik güvenlik sistemleri. ISO 9001 belgeli, 2 yıl garanti, ücretsiz keşif. En iyi bariyer fiyatları!" />
         <meta name="keywords" content="bariyer sistemleri, otopark bariyeri, hidrolik bariyer, mantar bariyer, road blocker, güvenlik bariyeri, PT PLUS bariyer, dinamik bariyer, tuzak sistemleri, bariyer fiyatları, otopark bariyeri kurulumu, otomatik bariyer, kollu bariyer, bariyer montajı, araç giriş kontrol, park bariyeri, bariyer sistemi fiyat, uzaktan kumandalı bariyer, fotoselli bariyer" />
         
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Bariyer Sistemleri - Otopark Bariyeri & Hidrolik Bariyer | Mika Teknoloji" />
+        <meta property="og:title" content="Mantar Bariyer, Road Blocker ve Tuzak Kapanlar | Mika Teknoloji Bariyer Sistemleri" />
         <meta property="og:description" content="Profesyonel bariyer sistemleri: Otopark bariyeri, hidrolik bariyer, road blocker. ISO 9001 belgeli, 2 yıl garanti, ücretsiz keşif!" />
         <meta property="og:type" content="product.group" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/bariyer-sistemleri" />
@@ -378,10 +388,10 @@ export default function BariyerSistemleriPage() {
         <div className="container mx-auto px-4">
           <motion.div className="text-center mb-16" {...fadeInUp}>
             <h2 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6">
-              Bariyer Sistem Çeşitleri
+              Mantar Bariyer, Road Blocker ve Tuzak Kapan Sistemleri
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              İhtiyacınıza uygun profesyonel bariyer sistemleri ile güvenliğinizi maksimuma çıkarın
+              Hidrolik mantar bariyer, road blocker yol kesici ve tuzak kapan sistemleri ile maksimum güvenlik
             </p>
           </motion.div>
 
