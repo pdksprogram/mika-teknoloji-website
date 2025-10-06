@@ -116,7 +116,7 @@ export default function MagazaPersonelTakipPage() {
     {
       icon: Timer,
       title: "Vardiya Çakışmalarını Önleyin",
-      description: "Akıllı vardiya planlama sistemi ile çift görevlendirme ve vardiya çakışmalarını otomatik engelleyin."
+      description: "Mağaza müdürü shift'i yapar bölge müdürü onaylar"
     },
     {
       icon: DollarSign,
