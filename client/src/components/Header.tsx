@@ -135,7 +135,7 @@ export default function Header() {
       { name: "Şifreli Passcode Sistemleri", href: "/passcode" },
       { name: "Bekçi Tur Kontrol Sistemi", href: "/bekci-kontrol" },
       { name: "Turnike Sistemleri", href: "/turnike-donanim" },
-      { name: "Bariyer Sistemleri", href: "/bariyer" }
+      { name: "Bariyer Sistemleri", href: "/urunler/bariyer-sistemleri" }
     ],
     "Yazılımlar": [
       { name: "Web PDKS", href: "https://pdkspersoneltakip.com/" },
@@ -163,7 +163,7 @@ export default function Header() {
       { name: "Turnike Sistemleri", href: "/urunler/turnike" },
       { name: "Personel Takip Sistemleri", href: "/urunler/personel-takip" },
       { name: "QR Kodlu PDKS Sistemi", href: "/urunler/qr-pdks" },
-      { name: "Bariyer Sistemleri", href: "/urunler/bariyer" },
+      { name: "Bariyer Sistemleri", href: "/urunler/bariyer-sistemleri" },
       { name: "Plaka Tanıma Sistemleri", href: "/urunler/plaka-tanima" },
       { name: "OGS & HGS Geçiş Sistemleri", href: "/urunler/ogs-hgs" },
       { name: "AR-GE Takip Sistemi", href: "/urunler/arge-takip" },
