@@ -11,6 +11,7 @@ import {
 import { Link } from "wouter";
 import { useState } from "react";
 import vardiyaPlanlama from "@assets/IMG_4278_1759780466857.png";
+import vardiyaOnay from "@assets/IMG_4279_1759780771668.png";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -73,11 +74,11 @@ export default function MagazaPersonelTakipPage() {
     },
     {
       icon: TrendingUp,
-      title: "Vardiya Optimizasyonu ve Personel Planlama",
-      description: "Müşteri yoğunluğuna göre vardiya optimizasyonu, personel ihtiyaç analizi ve akıllı planlama algoritmaları. Doğru zamanda doğru sayıda personel ile maliyet tasarrufu sağlayın.",
+      title: "Hiyerarşik Onay Sistemi ve Plan Takibi",
+      description: "Mağaza müdürleri haftalık 45 saatlik vardiya planlarını oluşturur ve bu planlar bölge müdürleri tarafından onaylanır. Mobil uygulama üzerinden onaylı ve onay bekleyen planların durumu anlık olarak takip edilebilir. Detaylı raporlama özellikleri sayesinde bölge müdürleri tüm süreçleri kontrol altında tutar ve mağaza müdürlerine etkin bir yönetim avantajı sağlar.",
       gradient: "from-purple-500 to-pink-500",
-      keywords: "vardiya optimizasyonu, personel planlama, maliyet optimizasyonu",
-      imagePlaceholder: "vardiya-optimizasyon.jpg"
+      keywords: "plan onay sistemi, bölge müdürü kontrolü, vardiya onaylama, hiyerarşik yönetim",
+      imagePlaceholder: "plan-onay-sistemi.jpg"
     },
     {
       icon: FileText,
@@ -119,8 +120,8 @@ export default function MagazaPersonelTakipPage() {
       answer: "Programımız ile haftalık, aylık vardiya planları oluşturabilir, shift değişikliklerini takip edebilir ve personel rotasyonunu otomatik olarak yönetebilirsiniz. Sistem, çalışan müsaitlik durumlarını ve iş yükünü dikkate alarak en optimal vardiya planını önerir."
     },
     {
-      question: "Vardiya optimizasyonu ve personel planlama nasıl çalışır?",
-      answer: "Sistemimiz, mağaza yoğunluk saatlerini analiz ederek personel ihtiyacını hesaplar. Müşteri trafiğine göre vardiya optimizasyonu yapar ve gereksiz personel maliyetlerini azaltır. Akıllı algoritma ile doğru zamanda doğru sayıda personel planlaması yapabilirsiniz."
+      question: "Hiyerarşik onay sistemi nasıl çalışır?",
+      answer: "Mağaza müdürleri 45 saatlik haftalık vardiya planlarını mobil uygulama üzerinden oluşturur. Bu planlar bölge müdürleri tarafından incelenir ve onaylanır. Sistemde hangi planların onaylandığı, hangilerinin onay beklendiği anlık olarak görülebilir. Detaylı raporlama sayesinde tüm süreç şeffaf şekilde yönetilir."
     },
     {
       question: "İzin yönetimi ve prim hesaplama sistemi nasıl işler?",
@@ -243,7 +244,7 @@ export default function MagazaPersonelTakipPage() {
                       <CardContent className="p-0">
                         {/* Resim Alanı */}
                         <div className="relative h-56 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden border-b border-slate-200">
-                          {index === 0 ? (
+                          {index === 0 || index === 1 ? (
                             <div className="absolute inset-0 flex items-center justify-center p-6">
                               {/* Telefon Çerçevesi */}
                               <div className="relative bg-slate-900 rounded-[32px] p-3 shadow-2xl" style={{ width: '180px', height: '360px' }}>
@@ -256,8 +257,8 @@ export default function MagazaPersonelTakipPage() {
                                   
                                   {/* Ekran İçeriği */}
                                   <img 
-                                    src={vardiyaPlanlama} 
-                                    alt="Vardiya Planlama ve Shift Yönetimi" 
+                                    src={index === 0 ? vardiyaPlanlama : vardiyaOnay} 
+                                    alt={feature.title} 
                                     className="w-full h-full object-cover"
                                   />
                                 </div>
