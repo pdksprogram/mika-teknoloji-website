@@ -351,11 +351,11 @@ export default function BariyerSistemleriPage() {
       <section className="pt-32 pb-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <motion.div 
-            className="max-w-7xl mx-auto"
+            className="max-w-4xl mx-auto"
             {...fadeInUp}
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-lg">
-              <div className="aspect-video">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-white/60 bg-white/50 backdrop-blur-sm p-3">
+              <div className="aspect-video rounded-xl overflow-hidden">
                 <video
                   className="w-full h-full object-cover"
                   autoPlay
