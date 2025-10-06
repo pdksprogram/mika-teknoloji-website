@@ -56,6 +56,13 @@ import MT1350YarimBoyDetailPage from "@/pages/MT1350YarimBoyDetailPage";
 import PersonelTakipPage from "@/pages/PersonelTakipPage";
 import QRPDKSPage from "./pages/QRPDKSPage";
 import BariyerSistemleriPage from "@/pages/BariyerSistemleriPage";
+import PTDinamikDetailPage from "@/pages/PTDinamikDetailPage";
+import PTPlusDetailPage from "@/pages/PTPlusDetailPage";
+import PTGeniusDetailPage from "@/pages/PTGeniusDetailPage";
+import PTGuardDetailPage from "@/pages/PTGuardDetailPage";
+import TuzaklarDetailPage from "@/pages/TuzaklarDetailPage";
+import MantarBariyerDetailPage from "@/pages/MantarBariyerDetailPage";
+import RoadBlockerDetailPage from "@/pages/RoadBlockerDetailPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -121,6 +128,15 @@ function Router() {
       <Route path="/urunler/personel-takip" component={PersonelTakipPage} />
       <Route path="/urunler/qr-pdks" component={QRPDKSPage} />
       <Route path="/urunler/bariyer-sistemleri" component={BariyerSistemleriPage} />
+      
+      {/* Bariyer Sistemleri Detay Sayfaları */}
+      <Route path="/urunler/pt-dinamik-bariyer" component={PTDinamikDetailPage} />
+      <Route path="/urunler/pt-plus-bariyer" component={PTPlusDetailPage} />
+      <Route path="/urunler/pt-genius-bariyer" component={PTGeniusDetailPage} />
+      <Route path="/urunler/pt-guard-bariyer" component={PTGuardDetailPage} />
+      <Route path="/urunler/tuzaklar-kapanlar" component={TuzaklarDetailPage} />
+      <Route path="/urunler/mantar-bariyer" component={MantarBariyerDetailPage} />
+      <Route path="/urunler/road-blocker" component={RoadBlockerDetailPage} />
       
       <Route path="/referanslar" component={References} />
       <Route path="/blog" component={Blog} />

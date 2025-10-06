@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Shield, Clock, Zap, Settings, CheckCircle2, CheckCircle, ArrowRight, Lock, Gauge, AlertTriangle, Phone, Mail, MapPin, Award, Users, TrendingUp, Wrench } from "lucide-react";
+import { Link } from "wouter";
 import { trackEvent } from "@/lib/analytics";
 
 const fadeInUp = {
@@ -32,6 +33,7 @@ const segments = [
     gradient: "from-blue-600 via-blue-500 to-cyan-500",
     bgGradient: "from-blue-50 via-white to-cyan-50",
     icon: Zap,
+    detailUrl: "/urunler/pt-dinamik-bariyer",
     features: [
       "Hızlı açılma mekanizması",
       "Dinamik yapı tasarımı",
@@ -56,6 +58,7 @@ const segments = [
     gradient: "from-green-600 via-green-500 to-emerald-500",
     bgGradient: "from-green-50 via-white to-emerald-50",
     icon: CheckCircle2,
+    detailUrl: "/urunler/pt-plus-bariyer",
     features: [
       "Ledli 5,25 mt kol",
       "Anti-Shock Rubber",
@@ -84,6 +87,7 @@ const segments = [
     gradient: "from-red-600 via-red-500 to-rose-500",
     bgGradient: "from-red-50 via-white to-rose-50",
     icon: Settings,
+    detailUrl: "/urunler/pt-genius-bariyer",
     features: [
       "Akıllı kontrol sistemi",
       "Otomatik ayar özelliği",
@@ -108,6 +112,7 @@ const segments = [
     gradient: "from-indigo-600 via-indigo-500 to-purple-500",
     bgGradient: "from-indigo-50 via-white to-purple-50",
     icon: Shield,
+    detailUrl: "/urunler/pt-guard-bariyer",
     features: [
       "Yüksek dayanıklılık",
       "Askeri standart üretim",
@@ -132,6 +137,7 @@ const segments = [
     gradient: "from-amber-600 via-amber-500 to-yellow-500",
     bgGradient: "from-amber-50 via-white to-yellow-50",
     icon: AlertTriangle,
+    detailUrl: "/urunler/tuzaklar-kapanlar",
     features: [
       "Yeraltı gömme sistemi",
       "Görünmez güvenlik",
@@ -156,6 +162,7 @@ const segments = [
     gradient: "from-violet-600 via-violet-500 to-purple-500",
     bgGradient: "from-violet-50 via-white to-purple-50",
     icon: Lock,
+    detailUrl: "/urunler/mantar-bariyer",
     features: [
       "304 paslanmaz çelik yapı",
       "Galvaniz alt kısım",
@@ -186,6 +193,7 @@ const segments = [
     gradient: "from-cyan-600 via-cyan-500 to-blue-500",
     bgGradient: "from-cyan-50 via-white to-blue-50",
     icon: Gauge,
+    detailUrl: "/urunler/road-blocker",
     features: [
       "Terör eylemlerine karşı tasarım",
       "Yüksek dayanıklılık yapısı",
@@ -531,7 +539,7 @@ export default function BariyerSistemleriPage() {
                           </div>
 
                           {/* Özellikler */}
-                          <ul className="space-y-2">
+                          <ul className="space-y-2 mb-6">
                             {segment.features.map((feature, idx) => (
                               <li key={idx} className="flex items-center text-sm text-gray-600">
                                 <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
@@ -539,6 +547,14 @@ export default function BariyerSistemleriPage() {
                               </li>
                             ))}
                           </ul>
+
+                          {/* Detay Butonu */}
+                          <Link href={segment.detailUrl}>
+                            <Button className="w-full" variant="default">
+                              Detaylı Bilgi
+                              <ArrowRight className="w-4 h-4 ml-2" />
+                            </Button>
+                          </Link>
                         </div>
                       </div>
                     </CardContent>
