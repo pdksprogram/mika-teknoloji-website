@@ -56,7 +56,6 @@ import MT1350YarimBoyDetailPage from "@/pages/MT1350YarimBoyDetailPage";
 import PersonelTakipPage from "@/pages/PersonelTakipPage";
 import QRPDKSPage from "./pages/QRPDKSPage";
 import BariyerSistemleriPage from "@/pages/BariyerSistemleriPage";
-import PTDinamikDetailPage from "@/pages/PTDinamikDetailPage";
 import PTPlusDetailPage from "@/pages/PTPlusDetailPage";
 import PTGeniusDetailPage from "@/pages/PTGeniusDetailPage";
 import PTGuardDetailPage from "@/pages/PTGuardDetailPage";
@@ -130,7 +129,6 @@ function Router() {
       <Route path="/urunler/bariyer-sistemleri" component={BariyerSistemleriPage} />
       
       {/* Bariyer Sistemleri Detay Sayfaları */}
-      <Route path="/urunler/pt-dinamik-bariyer" component={PTDinamikDetailPage} />
       <Route path="/urunler/pt-plus-bariyer" component={PTPlusDetailPage} />
       <Route path="/urunler/pt-genius-bariyer" component={PTGeniusDetailPage} />
       <Route path="/urunler/pt-guard-bariyer" component={PTGuardDetailPage} />

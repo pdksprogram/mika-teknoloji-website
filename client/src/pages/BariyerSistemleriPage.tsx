@@ -25,31 +25,6 @@ const staggerContainer = {
 
 const segments = [
   {
-    id: "Q1",
-    title: "MT Dinamik Bariyer Sistemi",
-    subtitle: "Yüksek Hızlı Geçiş Kontrolü",
-    description: "Hızlı açılma süresi ve dinamik yapısı ile yoğun trafiğe sahip alanlarda ideal çözüm sunar. Modern tasarımı ve güvenilir performansı ile otopark ve geçiş noktalarında mükemmel performans sağlar.",
-    image: "https://betaper.com.tr/bariyer-sistemleri/pt-dinamik-bariyerler.jpg",
-    gradient: "from-blue-600 via-blue-500 to-cyan-500",
-    bgGradient: "from-blue-50 via-white to-cyan-50",
-    icon: Zap,
-    detailUrl: "/urunler/pt-dinamik-bariyer",
-    features: [
-      "Hızlı açılma mekanizması",
-      "Dinamik yapı tasarımı",
-      "Yoğun trafik uyumlu",
-      "Güvenilir performans",
-      "Kolay kurulum",
-      "Uzun ömürlü kullanım"
-    ],
-    specs: [
-      { label: "Açılma Süresi", value: "3-5 saniye" },
-      { label: "Kullanım Alanı", value: "Yoğun Trafik Noktaları" },
-      { label: "Kontrol Sistemi", value: "Otomatik/Manuel" },
-      { label: "Güvenlik", value: "Fotosel Korumalı" }
-    ]
-  },
-  {
     id: "Q2",
     title: "MT PLUS Bariyer Sistemi",
     subtitle: "Orta Seviye Güvenlik Çözümü",
@@ -424,6 +399,66 @@ export default function BariyerSistemleriPage() {
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
+      </section>
+
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="max-w-6xl mx-auto"
+            {...fadeInUp}
+          >
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center bg-primary/20 px-6 py-3 rounded-full border border-primary/30 mb-6">
+                <Zap className="w-5 h-5 mr-3 text-primary" />
+                <span className="text-primary font-semibold text-sm tracking-wider uppercase">Video Tanıtım</span>
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Bariyer Sistemlerimizi Keşfedin
+              </h2>
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+                Profesyonel bariyer sistemlerimizin özelliklerini ve uygulama alanlarını video ile inceleyin
+              </p>
+            </div>
+
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-slate-800">
+              <div className="aspect-video">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Bariyer Sistemleri Tanıtım Videosu"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4">
+                  <Shield className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Güvenilir Teknoloji</h3>
+                <p className="text-slate-300">ISO 9001 belgeli üretim ve 2 yıl garanti</p>
+              </div>
+              
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4">
+                  <Settings className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Kolay Kurulum</h3>
+                <p className="text-slate-300">Profesyonel ekip ile hızlı montaj hizmeti</p>
+              </div>
+              
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4">
+                  <Wrench className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">7/24 Destek</h3>
+                <p className="text-slate-300">Ömür boyu teknik destek ve bakım hizmeti</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       <section className="py-20 bg-white">
