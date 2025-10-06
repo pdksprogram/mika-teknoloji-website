@@ -17,7 +17,6 @@ const products = [
     id: 1,
     name: "PT PLUS Bariyer Sistemi",
     description: "Orta seviye güvenlik ihtiyaçları için ideal olan PT PLUS bariyer sistemi, kolay montaj ve güvenilir performans sunar.",
-    image: "https://betaper.com.tr/bariyer-sistemleri/ptplus-bariyersistemi.jpg",
     specs: [
       { label: "Kontrol/Çalışma Voltajı", value: "220 V 50 Hz" },
       { label: "Güç Tüketimi", value: "24 V DC" },
@@ -42,7 +41,6 @@ const products = [
     id: 2,
     name: "Hidrolik Mantar Bariyer",
     description: "Yüksek güvenlik ihtiyacı duyulan noktalarda araç trafiğini engelleyecek şekilde tasarlanmış, 304 paslanmaz çelik yapılı hidrolik bariyer sistemi.",
-    image: "https://betaper.com.tr/bariyer-sistemleri/mantar-bariyerler.jpg",
     specs: [
       { label: "Kontrol/Çalışma Voltajı", value: "380 V 50-60 Hz" },
       { label: "Açılma Süresi", value: "3-5 saniye (opsiyonel)" },
@@ -69,7 +67,6 @@ const products = [
     id: 3,
     name: "Road Blocker Sistemler",
     description: "Terör eylemlerine karşı tasarlanan, elektronik kontrollü hidrolik yol kesici sistem. Yüksek dayanıklılık ve güvenilirlik özelliği ile kritik noktalarda kullanılır.",
-    image: "https://betaper.com.tr/bariyer-sistemleri/roadblocker.jpg",
     specs: [
       { label: "Sistem Tipi", value: "Hidrolik Yol Kesici" },
       { label: "Kontrol", value: "Elektronik Kontrollü" },
@@ -92,7 +89,6 @@ const products = [
     id: 4,
     name: "PT Dinamik Bariyer Sistemi",
     description: "Hızlı açılma süresi ve dinamik yapısı ile yoğun trafiğe sahip alanlarda ideal çözüm sunar.",
-    image: "https://betaper.com.tr/bariyer-sistemleri/ptdinamikbariyersistemi.jpg",
     specs: [
       { label: "Sistem Tipi", value: "Dinamik Bariyer" },
       { label: "Kullanım Alanı", value: "Yoğun Trafik" },
@@ -173,7 +169,10 @@ export default function BariyerSistemleriPage() {
 
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://betaper.com.tr/content/images/bariyer-sistemi.jpg')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-96 h-96 bg-primary/30 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl"></div>
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -283,15 +282,14 @@ export default function BariyerSistemleriPage() {
                   <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-2 bg-white overflow-hidden">
                     <CardContent className="p-0">
                       <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} min-h-[500px]`}>
-                        {/* Image Section */}
+                        {/* Image Section - Gradient with Icon */}
                         <div className={`lg:w-2/5 relative bg-gradient-to-br ${scheme.bg}`}>
                           <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
                           <div className="relative h-full flex items-center justify-center p-8">
-                            <img 
-                              src={product.image} 
-                              alt={`${product.name} - Mika Teknoloji Bariyer Sistemleri`}
-                              className="w-full h-auto object-contain max-h-[450px] drop-shadow-2xl"
-                            />
+                            <div className={`w-64 h-64 rounded-full bg-gradient-to-br ${scheme.gradient} opacity-20 absolute blur-3xl`}></div>
+                            <div className={`relative w-48 h-48 rounded-3xl bg-gradient-to-br ${scheme.gradient} flex items-center justify-center shadow-2xl`}>
+                              <Shield className="w-24 h-24 text-white" strokeWidth={1.5} />
+                            </div>
                           </div>
                           <div className={`absolute top-0 left-0 w-full h-2 bg-gradient-to-r ${scheme.gradient}`}></div>
                         </div>
