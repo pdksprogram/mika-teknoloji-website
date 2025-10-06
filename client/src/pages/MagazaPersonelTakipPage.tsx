@@ -242,13 +242,27 @@ export default function MagazaPersonelTakipPage() {
                       
                       <CardContent className="p-0">
                         {/* Resim Alanı */}
-                        <div className="relative h-56 bg-slate-100 overflow-hidden border-b border-slate-200">
+                        <div className="relative h-56 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden border-b border-slate-200">
                           {index === 0 ? (
-                            <img 
-                              src={vardiyaPlanlama} 
-                              alt="Vardiya Planlama ve Shift Yönetimi" 
-                              className="w-full h-full object-cover"
-                            />
+                            <div className="absolute inset-0 flex items-center justify-center p-6">
+                              {/* Telefon Çerçevesi */}
+                              <div className="relative bg-slate-900 rounded-[32px] p-3 shadow-2xl" style={{ width: '180px', height: '360px' }}>
+                                {/* Telefon Ekranı */}
+                                <div className="relative w-full h-full bg-white rounded-[24px] overflow-hidden">
+                                  {/* Notch */}
+                                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-slate-900 rounded-b-2xl z-10 flex items-center justify-center gap-2">
+                                    <div className="w-12 h-1 bg-slate-700 rounded-full"></div>
+                                  </div>
+                                  
+                                  {/* Ekran İçeriği */}
+                                  <img 
+                                    src={vardiyaPlanlama} 
+                                    alt="Vardiya Planlama ve Shift Yönetimi" 
+                                    className="w-full h-full object-cover"
+                                  />
+                                </div>
+                              </div>
+                            </div>
                           ) : (
                             <div className="absolute inset-0 flex items-center justify-center">
                               <div className="text-center">
