@@ -22,7 +22,7 @@ export default function Products() {
         { name: "5. Şifreli Passcode Sistemleri", href: "/urunler/passcode" },
         { name: "6. Bekçi Tur Kontrol Sistemi", href: "/urunler/bekci-tur-kontrol" },
         { name: "7. Turnike Sistemleri", href: "/turnike-sistemleri" },
-        { name: "8. Bariyer Sistemleri", href: "/urunler/bariyer" },
+        { name: "8. Bariyer Sistemleri", href: "/urunler/bariyer-sistemleri" },
         { name: "9. HiSGate/Kasa Daruma Sistemi", href: "/urunler/hisgate" },
         { name: "10. X-Ray Cihazları", href: "/urunler/xray" }
       ]
