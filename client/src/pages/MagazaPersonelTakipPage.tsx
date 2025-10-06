@@ -236,7 +236,7 @@ export default function MagazaPersonelTakipPage() {
         </section>
 
         {/* Video Section */}
-        <section className="py-16 bg-gradient-to-br from-slate-50 to-slate-100">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -246,7 +246,7 @@ export default function MagazaPersonelTakipPage() {
               className="max-w-6xl mx-auto"
             >
               <div className="text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-bold mb-3 text-slate-800">
+                <h2 className="text-3xl md:text-4xl font-bold mb-3 text-slate-900">
                   Mağaza Personel Takip Programı Nasıl Çalışır?
                 </h2>
                 <p className="text-lg text-slate-600 max-w-3xl mx-auto">
@@ -254,9 +254,9 @@ export default function MagazaPersonelTakipPage() {
                 </p>
               </div>
 
-              <Card className="overflow-hidden shadow-2xl border-0 bg-white">
+              <Card className="overflow-hidden shadow-lg border border-slate-200 bg-white">
                 <CardContent className="p-0">
-                  <div className="relative aspect-video bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center group">
+                  <div className="relative aspect-video bg-slate-100 flex items-center justify-center group">
                     {!videoError ? (
                       <>
                         <video
@@ -271,18 +271,17 @@ export default function MagazaPersonelTakipPage() {
                           <source src="/magaza-personel-takip.mp4" type="video/mp4" />
                           Tarayıcınız video oynatmayı desteklemiyor.
                         </video>
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                       </>
                     ) : (
-                      <div className="text-center p-12 text-white">
-                        <div className="inline-flex p-6 rounded-full bg-white/10 backdrop-blur-sm mb-4">
-                          <Play className="h-16 w-16" />
+                      <div className="text-center p-12 text-slate-700">
+                        <div className="inline-flex p-6 rounded-full bg-primary/10 mb-4">
+                          <Play className="h-16 w-16 text-primary" />
                         </div>
                         <h3 className="text-2xl font-bold mb-2">Tanıtım Videosu</h3>
-                        <p className="text-white/80 text-lg">
+                        <p className="text-slate-600 text-lg">
                           Mağaza Personel Takip Programı özelliklerini keşfedin
                         </p>
-                        <p className="text-white/60 text-sm mt-4">
+                        <p className="text-slate-500 text-sm mt-4">
                           Video dosyası yükleniyor...
                         </p>
                       </div>
@@ -302,13 +301,13 @@ export default function MagazaPersonelTakipPage() {
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1 }}
                     >
-                      <Card className="text-center hover:shadow-lg transition-all duration-300 border-t-4 border-primary/20 hover:border-primary bg-white">
-                        <CardContent className="p-4">
+                      <Card className="text-center hover:shadow-md transition-all duration-300 border border-slate-200 bg-white">
+                        <CardContent className="p-5">
                           <div className="inline-flex p-3 rounded-full bg-primary/10 mb-3">
-                            <Icon className="h-6 w-6 text-primary" />
+                            <Icon className="h-7 w-7 text-primary" />
                           </div>
-                          <h3 className="font-semibold text-sm mb-1 text-slate-800">{benefit.title}</h3>
-                          <p className="text-xs text-slate-600">{benefit.description}</p>
+                          <h3 className="font-bold text-sm mb-2 text-slate-900">{benefit.title}</h3>
+                          <p className="text-xs text-slate-600 leading-relaxed">{benefit.description}</p>
                         </CardContent>
                       </Card>
                     </motion.div>
@@ -320,13 +319,13 @@ export default function MagazaPersonelTakipPage() {
         </section>
 
         {/* Ana Özellikler Kartları */}
-        <section className="py-16">
+        <section className="py-16 bg-slate-50">
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-12"
               {...fadeInUp}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
                 Mağaza Personel Takip Programı Özellikleri
               </h2>
               <p className="text-lg text-slate-600 max-w-3xl mx-auto">
@@ -335,7 +334,7 @@ export default function MagazaPersonelTakipPage() {
             </motion.div>
 
             <motion.div 
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
               variants={staggerContainer}
               initial="initial"
               whileInView="whileInView"
@@ -345,36 +344,32 @@ export default function MagazaPersonelTakipPage() {
                 const Icon = feature.icon;
                 return (
                   <motion.div key={index} variants={fadeInUp}>
-                    <Card className="h-full hover:shadow-2xl transition-all duration-300 border-0 overflow-hidden group bg-white">
+                    <Card className="h-full hover:shadow-lg transition-all duration-300 border border-slate-200 overflow-hidden group bg-white">
                       <CardContent className="p-0">
                         {/* Resim Alanı */}
-                        <div className="relative h-48 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden">
-                          <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-80`}></div>
+                        <div className="relative h-56 bg-slate-100 overflow-hidden border-b border-slate-200">
                           <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="text-center text-white">
-                              <Icon className="h-16 w-16 mx-auto mb-2 drop-shadow-lg" />
-                              <p className="text-xs font-medium px-4 opacity-90">
-                                {feature.imagePlaceholder}
+                            <div className="text-center">
+                              <div className="inline-flex p-6 rounded-2xl bg-white shadow-md mb-3">
+                                <Icon className="h-14 w-14 text-primary" />
+                              </div>
+                              <p className="text-sm font-medium px-4 text-slate-600">
+                                📸 {feature.imagePlaceholder}
                               </p>
-                            </div>
-                          </div>
-                          <div className="absolute top-3 right-3">
-                            <div className={`p-2 rounded-lg bg-white/90 backdrop-blur-sm shadow-lg`}>
-                              <Icon className="h-5 w-5 text-primary" />
                             </div>
                           </div>
                         </div>
 
                         {/* İçerik Alanı */}
                         <div className="p-6">
-                          <h3 className="text-xl font-bold mb-3 text-slate-800 group-hover:text-primary transition-colors">
+                          <h3 className="text-xl font-bold mb-3 text-slate-900">
                             {feature.title}
                           </h3>
-                          <p className="text-slate-600 mb-3 leading-relaxed">
+                          <p className="text-slate-600 mb-4 leading-relaxed text-[15px]">
                             {feature.description}
                           </p>
                           <div className="pt-3 border-t border-slate-100">
-                            <p className="text-xs text-slate-400 italic">
+                            <p className="text-xs text-slate-500 font-medium">
                               🔍 {feature.keywords}
                             </p>
                           </div>
@@ -389,13 +384,13 @@ export default function MagazaPersonelTakipPage() {
         </section>
 
         {/* Kullanım Alanları */}
-        <section className="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-12"
               {...fadeInUp}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
                 Hangi Sektörlerde Kullanılır?
               </h2>
               <p className="text-lg text-slate-600">
@@ -416,13 +411,13 @@ export default function MagazaPersonelTakipPage() {
                 { title: "☕ Hizmet Sektörü", items: ["Otel ve Restoranlar", "Cafe ve Pastaneler", "Kafe Zincirleri", "Güzellik Salonları"] }
               ].map((sector, index) => (
                 <motion.div key={index} variants={fadeInUp}>
-                  <Card className="h-full hover:shadow-xl transition-all duration-300 border-t-4 border-primary/30 bg-white">
+                  <Card className="h-full hover:shadow-md transition-all duration-300 border border-slate-200 bg-white">
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-bold mb-4 text-primary">{sector.title}</h3>
-                      <ul className="space-y-2">
+                      <h3 className="text-xl font-bold mb-5 text-slate-900">{sector.title}</h3>
+                      <ul className="space-y-3">
                         {sector.items.map((item, i) => (
                           <li key={i} className="flex items-center text-slate-700">
-                            <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+                            <CheckCircle2 className="h-5 w-5 text-primary mr-3 flex-shrink-0" />
                             <span className="font-medium">{item}</span>
                           </li>
                         ))}
@@ -436,13 +431,13 @@ export default function MagazaPersonelTakipPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16">
+        <section className="py-16 bg-slate-50">
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-12"
               {...fadeInUp}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
                 Sıkça Sorulan Sorular
               </h2>
               <p className="text-lg text-slate-600">
@@ -459,13 +454,13 @@ export default function MagazaPersonelTakipPage() {
             >
               {faqs.map((faq, index) => (
                 <motion.div key={index} variants={fadeInUp}>
-                  <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 border-l-4 border-primary/30 hover:border-primary bg-white">
+                  <Card className="overflow-hidden hover:shadow-md transition-all duration-300 border border-slate-200 bg-white">
                     <CardContent className="p-6">
-                      <h3 className="text-lg font-bold mb-3 text-slate-800 flex items-start">
-                        <span className="text-primary mr-2 text-xl">❓</span>
-                        {faq.question}
+                      <h3 className="text-lg font-bold mb-3 text-slate-900 flex items-start">
+                        <span className="text-primary mr-3 text-xl flex-shrink-0">❓</span>
+                        <span>{faq.question}</span>
                       </h3>
-                      <p className="text-slate-600 pl-7 leading-relaxed">
+                      <p className="text-slate-600 pl-8 leading-relaxed text-[15px]">
                         {faq.answer}
                       </p>
                     </CardContent>
