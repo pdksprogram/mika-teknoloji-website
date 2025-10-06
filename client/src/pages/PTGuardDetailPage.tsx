@@ -27,8 +27,8 @@ export default function PTGuardDetailPage() {
   return (
     <>
       <Helmet>
-        <title>PT Guard Bariyer Sistemi - Yüksek Güvenlik Çözümü | Mika Teknoloji</title>
-        <meta name="description" content="PT Guard bariyer sistemi ile yüksek güvenlik seviyesi sağlayan profesyonel koruma çözümü. Sağlam yapısı ve dayanıklılığı ile güvenlik önceliği olan alanlarda ideal." />
+        <title>MT Guard Bariyer Sistemi - Yüksek Güvenlik Çözümü | Mika Teknoloji</title>
+        <meta name="description" content="MT Guard bariyer sistemi ile yüksek güvenlik seviyesi sağlayan profesyonel koruma çözümü. Sağlam yapısı ve dayanıklılığı ile güvenlik önceliği olan alanlarda ideal." />
       </Helmet>
 
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-50 to-white">
@@ -45,14 +45,14 @@ export default function PTGuardDetailPage() {
               <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                 <img 
                   src="https://betaper.com.tr/bariyer-sistemleri/pt-guard-bariyerler.jpg"
-                  alt="PT Guard Bariyer Sistemi"
+                  alt="MT Guard Bariyer Sistemi"
                   className="w-full h-auto object-contain rounded-2xl"
                 />
               </div>
               <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                 <img 
                   src="https://betaper.com.tr/bariyer-sistemleri/guard.jpg"
-                  alt="PT Guard Bariyer Detay"
+                  alt="MT Guard Bariyer Detay"
                   className="w-full h-auto object-contain rounded-2xl"
                 />
               </div>
@@ -65,7 +65,7 @@ export default function PTGuardDetailPage() {
                   <span className="text-white font-bold text-sm">Q4 - GÜVENLİK</span>
                 </div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-                  PT Guard Bariyer Sistemi
+                  MT Guard Bariyer Sistemi
                 </h1>
                 <p className="text-xl text-primary font-semibold mb-6">
                   Yüksek Güvenlik Seviyesi - Profesyonel Koruma
@@ -74,7 +74,7 @@ export default function PTGuardDetailPage() {
               </div>
 
               <p className="text-lg text-gray-700 leading-relaxed">
-                PT Guard bariyer sistemi, yüksek güvenlik gerektiren alanlarda profesyonel koruma sağlar. Sağlam yapısı ve dayanıklı mekanizması ile güvenlik öncelikli projelerde tercih edilen çözümdür.
+                MT Guard bariyer sistemi, yüksek güvenlik gerektiren alanlarda profesyonel koruma sağlar. Sağlam yapısı ve dayanıklı mekanizması ile güvenlik öncelikli projelerde tercih edilen çözümdür.
               </p>
 
               <Card className="border-0 bg-gradient-to-br from-indigo-50 to-purple-50">

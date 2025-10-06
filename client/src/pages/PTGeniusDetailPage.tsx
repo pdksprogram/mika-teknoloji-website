@@ -37,8 +37,8 @@ export default function PTGeniusDetailPage() {
   return (
     <>
       <Helmet>
-        <title>PT Genius Bariyer Sistemi - 3 Saniye Hızlı Açılma | Mika Teknoloji</title>
-        <meta name="description" content="PT Genius bariyer sistemi 3 saniye ultra hızlı açılma, 5.5 metre kol uzunluğu ve geniş sıcaklık aralığı ile yüksek performans sağlar." />
+        <title>MT Genius Bariyer Sistemi - 3 Saniye Hızlı Açılma | Mika Teknoloji</title>
+        <meta name="description" content="MT Genius bariyer sistemi 3 saniye ultra hızlı açılma, 5.5 metre kol uzunluğu ve geniş sıcaklık aralığı ile yüksek performans sağlar." />
       </Helmet>
 
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-50 to-white">
@@ -56,7 +56,7 @@ export default function PTGeniusDetailPage() {
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                   <img 
                     src="https://betaper.com.tr/bariyer-sistemleri/ptgenius-bariyersistemi.jpg"
-                    alt="PT Genius Bariyer Sistemi"
+                    alt="MT Genius Bariyer Sistemi"
                     className="w-full h-auto object-contain rounded-2xl"
                   />
                 </div>
@@ -70,7 +70,7 @@ export default function PTGeniusDetailPage() {
                   <span className="text-white font-bold text-sm">Q3 - ULTRA HIZLI</span>
                 </div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-                  PT Genius Bariyer Sistemi
+                  MT Genius Bariyer Sistemi
                 </h1>
                 <p className="text-xl text-primary font-semibold mb-6">
                   3 Saniye Hızlı Geçiş - Yandan Kollu Teknoloji

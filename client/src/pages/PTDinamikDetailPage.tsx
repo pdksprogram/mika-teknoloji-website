@@ -34,8 +34,8 @@ export default function PTDinamikDetailPage() {
   return (
     <>
       <Helmet>
-        <title>PT Dinamik Bariyer Sistemi - Yüksek Hızlı Geçiş Kontrolü | Mika Teknoloji</title>
-        <meta name="description" content="PT Dinamik bariyer sistemi ile hızlı açılma süresi ve dinamik yapısı sayesinde yoğun trafiğe sahip alanlarda ideal güvenlik çözümü. Otopark ve geçiş noktalarında mükemmel performans." />
+        <title>MT Dinamik Bariyer Sistemi - Yüksek Hızlı Geçiş Kontrolü | Mika Teknoloji</title>
+        <meta name="description" content="MT Dinamik bariyer sistemi ile hızlı açılma süresi ve dinamik yapısı sayesinde yoğun trafiğe sahip alanlarda ideal güvenlik çözümü. Otopark ve geçiş noktalarında mükemmel performans." />
       </Helmet>
 
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-50 to-white">
@@ -53,7 +53,7 @@ export default function PTDinamikDetailPage() {
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                   <img 
                     src="https://betaper.com.tr/bariyer-sistemleri/ptdinamikbariyersistemi.jpg"
-                    alt="PT Dinamik Bariyer Sistemi"
+                    alt="MT Dinamik Bariyer Sistemi"
                     className="w-full h-auto object-contain rounded-2xl"
                   />
                 </div>
@@ -67,7 +67,7 @@ export default function PTDinamikDetailPage() {
                   <span className="text-white font-bold text-sm">Q1 - YENİ NESIL</span>
                 </div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-                  PT Dinamik Bariyer Sistemi
+                  MT Dinamik Bariyer Sistemi
                 </h1>
                 <p className="text-xl text-primary font-semibold mb-6">
                   Yüksek Hızlı Geçiş Kontrolü

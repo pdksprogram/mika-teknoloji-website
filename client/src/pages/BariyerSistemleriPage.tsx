@@ -26,7 +26,7 @@ const staggerContainer = {
 const segments = [
   {
     id: "Q1",
-    title: "PT Dinamik Bariyer Sistemi",
+    title: "MT Dinamik Bariyer Sistemi",
     subtitle: "Yüksek Hızlı Geçiş Kontrolü",
     description: "Hızlı açılma süresi ve dinamik yapısı ile yoğun trafiğe sahip alanlarda ideal çözüm sunar. Modern tasarımı ve güvenilir performansı ile otopark ve geçiş noktalarında mükemmel performans sağlar.",
     image: "https://betaper.com.tr/bariyer-sistemleri/pt-dinamik-bariyerler.jpg",
@@ -51,9 +51,9 @@ const segments = [
   },
   {
     id: "Q2",
-    title: "PT PLUS Bariyer Sistemi",
+    title: "MT PLUS Bariyer Sistemi",
     subtitle: "Orta Seviye Güvenlik Çözümü",
-    description: "Orta seviye güvenlik ihtiyaçları için ideal olan PT PLUS bariyer sistemi, kolay montaj ve güvenilir performans sunar. 5,25 metre ledli kol uzunluğu ile geniş geçiş alanlarında kullanım için tasarlanmıştır.",
+    description: "Orta seviye güvenlik ihtiyaçları için ideal olan MT PLUS bariyer sistemi, kolay montaj ve güvenilir performans sunar. 5,25 metre ledli kol uzunluğu ile geniş geçiş alanlarında kullanım için tasarlanmıştır.",
     image: "https://betaper.com.tr/bariyer-sistemleri/ptplus-bariyersistemi.jpg",
     gradient: "from-green-600 via-green-500 to-emerald-500",
     bgGradient: "from-green-50 via-white to-emerald-50",
@@ -80,9 +80,9 @@ const segments = [
   },
   {
     id: "Q3",
-    title: "PT Genius Bariyer Sistemi",
+    title: "MT Genius Bariyer Sistemi",
     subtitle: "Akıllı Kontrol ve Yönetim",
-    description: "İleri teknoloji ile donatılmış PT Genius bariyer sistemi, akıllı kontrol özellikleri ve entegrasyon kabiliyeti ile öne çıkar. Gelişmiş sensör teknolojisi ve otomatik ayar özellikleri ile kusursuz performans sunar.",
+    description: "İleri teknoloji ile donatılmış MT Genius bariyer sistemi, akıllı kontrol özellikleri ve entegrasyon kabiliyeti ile öne çıkar. Gelişmiş sensör teknolojisi ve otomatik ayar özellikleri ile kusursuz performans sunar.",
     image: "https://betaper.com.tr/bariyer-sistemleri/ptgenius-bariyersistemi.jpg",
     gradient: "from-red-600 via-red-500 to-rose-500",
     bgGradient: "from-red-50 via-white to-rose-50",
@@ -105,9 +105,9 @@ const segments = [
   },
   {
     id: "Q4",
-    title: "PT Guard Bariyer Sistemi",
+    title: "MT Guard Bariyer Sistemi",
     subtitle: "Yüksek Güvenlik ve Dayanıklılık",
-    description: "Maksimum güvenlik gerektiren noktalarda kullanılmak üzere tasarlanan PT Guard bariyer sistemi, üstün dayanıklılık ve güvenilirlik sunar. Askeri standartlarda üretilmiş, yüksek darbe emilimi özellikli yapısı ile kritik güvenlik noktalarında tercih edilir.",
+    description: "Maksimum güvenlik gerektiren noktalarda kullanılmak üzere tasarlanan MT Guard bariyer sistemi, üstün dayanıklılık ve güvenilirlik sunar. Askeri standartlarda üretilmiş, yüksek darbe emilimi özellikli yapısı ile kritik güvenlik noktalarında tercih edilir.",
     image: "https://betaper.com.tr/bariyer-sistemleri/pt-guard-bariyerler.jpg",
     gradient: "from-indigo-600 via-indigo-500 to-purple-500",
     bgGradient: "from-indigo-50 via-white to-purple-50",
@@ -155,7 +155,7 @@ const segments = [
   },
   {
     id: "Q6",
-    title: "PT Mantar Bariyer (Hidrolik)",
+    title: "MT Mantar Bariyer (Hidrolik)",
     subtitle: "Hidrolik Yükselen Bariyer Sistemi",
     description: "Yüksek güvenlik ihtiyacı duyulan noktalarda araç trafiğini engelleyecek şekilde tasarlanmış, 304 paslanmaz çelik yapılı hidrolik bariyer sistemi. PLC kontrol sistemi ve 100 bar hidrolik güç ile maksimum performans sağlar.",
     image: "https://betaper.com.tr/bariyer-sistemleri/mantar-bariyerler.jpg",

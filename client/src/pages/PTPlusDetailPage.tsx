@@ -45,8 +45,8 @@ export default function PTPlusDetailPage() {
   return (
     <>
       <Helmet>
-        <title>PT Plus Bariyer Sistemi - Profesyonel Otopark Bariyeri | Mika Teknoloji</title>
-        <meta name="description" content="PT Plus bariyer sistemi 5.25 metre kol uzunluğu, LED aydınlatma ve IP54 koruma derecesi ile otopark ve geçiş kontrolü için ideal profesyonel çözüm." />
+        <title>MT Plus Bariyer Sistemi - Profesyonel Otopark Bariyeri | Mika Teknoloji</title>
+        <meta name="description" content="MT Plus bariyer sistemi 5.25 metre kol uzunluğu, LED aydınlatma ve IP54 koruma derecesi ile otopark ve geçiş kontrolü için ideal profesyonel çözüm." />
       </Helmet>
 
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-50 to-white">
@@ -64,7 +64,7 @@ export default function PTPlusDetailPage() {
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                   <img 
                     src="https://betaper.com.tr/bariyer-sistemleri/ptplus-bariyersistemi.jpg"
-                    alt="PT Plus Bariyer Sistemi"
+                    alt="MT Plus Bariyer Sistemi"
                     className="w-full h-auto object-contain rounded-2xl"
                   />
                 </div>
@@ -78,7 +78,7 @@ export default function PTPlusDetailPage() {
                   <span className="text-white font-bold text-sm">Q2 - PROFESYONEL</span>
                 </div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-                  PT Plus Bariyer Sistemi
+                  MT Plus Bariyer Sistemi
                 </h1>
                 <p className="text-xl text-primary font-semibold mb-6">
                   Güvenilir Performans, Uzun Ömür
