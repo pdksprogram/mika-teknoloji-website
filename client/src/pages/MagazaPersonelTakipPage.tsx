@@ -235,9 +235,17 @@ export default function MagazaPersonelTakipPage() {
           </motion.div>
         </section>
 
-        {/* Video Section - Sadece Video Kartı */}
-        <section className="py-16 bg-white">
+        {/* SEGMENT 2: Video + Avantaj Kartları */}
+        <section className="py-16 bg-white relative">
           <div className="container mx-auto px-4">
+            {/* Segment Başlık Badge */}
+            <div className="flex items-center justify-center mb-8">
+              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-lg">
+                <span className="text-2xl font-bold">2</span>
+                <span className="text-lg font-semibold">TANITIM VİDEOSU & AVANTAJLAR</span>
+              </div>
+            </div>
+            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -309,9 +317,17 @@ export default function MagazaPersonelTakipPage() {
           </div>
         </section>
 
-        {/* Ana Özellikler Kartları */}
+        {/* SEGMENT 3: Ana Özellikler Kartları */}
         <section className="py-16 bg-slate-50">
           <div className="container mx-auto px-4">
+            {/* Segment Başlık Badge */}
+            <div className="flex items-center justify-center mb-8">
+              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-lg">
+                <span className="text-2xl font-bold">3</span>
+                <span className="text-lg font-semibold">ANA ÖZELLİKLER (1-6 NUMARALI KARTLAR)</span>
+              </div>
+            </div>
+            
             <motion.div 
               className="text-center mb-12"
               {...fadeInUp}
@@ -386,9 +402,17 @@ export default function MagazaPersonelTakipPage() {
           </div>
         </section>
 
-        {/* Kullanım Alanları */}
+        {/* SEGMENT 4: Kullanım Alanları */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
+            {/* Segment Başlık Badge */}
+            <div className="flex items-center justify-center mb-8">
+              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-lg">
+                <span className="text-2xl font-bold">4</span>
+                <span className="text-lg font-semibold">KULLANIM ALANLARI</span>
+              </div>
+            </div>
+            
             <motion.div 
               className="text-center mb-12"
               {...fadeInUp}
@@ -433,9 +457,17 @@ export default function MagazaPersonelTakipPage() {
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* SEGMENT 5: FAQ */}
         <section className="py-16 bg-slate-50">
           <div className="container mx-auto px-4">
+            {/* Segment Başlık Badge */}
+            <div className="flex items-center justify-center mb-8">
+              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-lg">
+                <span className="text-2xl font-bold">5</span>
+                <span className="text-lg font-semibold">SIKÇA SORULAN SORULAR</span>
+              </div>
+            </div>
+            
             <motion.div 
               className="text-center mb-12"
               {...fadeInUp}
@@ -474,9 +506,17 @@ export default function MagazaPersonelTakipPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white">
+        {/* SEGMENT 6: CTA (Çağrı) */}
+        <section className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white relative">
           <div className="container mx-auto px-4 text-center">
+            {/* Segment Başlık Badge */}
+            <div className="flex items-center justify-center mb-8">
+              <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full shadow-lg border-2 border-white/30">
+                <span className="text-2xl font-bold">6</span>
+                <span className="text-lg font-semibold">İLETİŞİME GEÇİN</span>
+              </div>
+            </div>
+            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
