@@ -12,6 +12,7 @@ import { Link } from "wouter";
 import { useState } from "react";
 import vardiyaPlanlama from "@assets/IMG_4278_1759780466857.png";
 import vardiyaOnay from "@assets/IMG_4279_1759780771668.png";
+import vardiyaBildirim from "@assets/IMG_4280_1759781022450.png";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -82,11 +83,11 @@ export default function MagazaPersonelTakipPage() {
     },
     {
       icon: FileText,
-      title: "İzin Yönetimi ve Prim Sistemi",
-      description: "Yıllık izin, hastalık izni, mazeret izni yönetimi ve performansa dayalı prim hesaplama sistemi. Otomatik izin hakediş hesaplama ve bordro entegrasyonu.",
+      title: "Personel Vardiya Bildirimleri ve Mobil Takip",
+      description: "Mağaza müdürü tarafından oluşturulan ve bölge müdürü tarafından onaylanan vardiya planları sistematik olarak personele iletilir. Çalışanlar hafta boyunca hangi vardiyaya geleceğini, çalışma saatlerini ve shift detaylarını mobil uygulama üzerinden anlık olarak görüntüler. Push bildirim sistemi sayesinde personel, vardiya değişikliklerinden ve çalışma programından anında haberdar olur. Bu çift yönlü sistem hem hiyerarşik onay yapısını güçlendirir hem de personellerin planlama sürecine aktif katılımını sağlar.",
       gradient: "from-green-500 to-emerald-500",
-      keywords: "izin yönetimi, prim yönetimi, performans primleri",
-      imagePlaceholder: "izin-prim-yonetimi.jpg"
+      keywords: "vardiya bildirimleri, push notification, mobil personel takip, shift uyarıları",
+      imagePlaceholder: "vardiya-bildirim.jpg"
     },
     {
       icon: Smartphone,
@@ -124,8 +125,8 @@ export default function MagazaPersonelTakipPage() {
       answer: "Mağaza müdürleri 45 saatlik haftalık vardiya planlarını mobil uygulama üzerinden oluşturur. Bu planlar bölge müdürleri tarafından incelenir ve onaylanır. Sistemde hangi planların onaylandığı, hangilerinin onay beklendiği anlık olarak görülebilir. Detaylı raporlama sayesinde tüm süreç şeffaf şekilde yönetilir."
     },
     {
-      question: "İzin yönetimi ve prim hesaplama sistemi nasıl işler?",
-      answer: "Personellerin yıllık izin hakları otomatik hesaplanır, izin talepleri onay akışından geçer. Prim yönetimi modülü ile satış hedeflerine ulaşma, çalışma performansı ve mesai saatlerine göre prim hesaplamaları otomatik yapılır ve bordro sistemine aktarılır."
+      question: "Personel vardiya bildirimlerini nasıl alır?",
+      answer: "Mağaza müdürü tarafından oluşturulan ve bölge müdürü tarafından onaylanan vardiya planları, mobil uygulama üzerinden personele otomatik olarak iletilir. Push bildirim sistemi sayesinde çalışanlar hangi gün, hangi saatte ve hangi vardiyada çalışacaklarını anlık olarak öğrenir. Vardiya değişikliklerinde de anında bilgilendirme yapılır."
     },
     {
       question: "Mobil PDKS ile giriş-çıkış takibi nasıl yapılır?",
@@ -244,7 +245,7 @@ export default function MagazaPersonelTakipPage() {
                       <CardContent className="p-0">
                         {/* Resim Alanı */}
                         <div className="relative h-56 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden border-b border-slate-200">
-                          {index === 0 || index === 1 ? (
+                          {index === 0 || index === 1 || index === 2 ? (
                             <div className="absolute inset-0 flex items-center justify-center p-6">
                               {/* Telefon Çerçevesi */}
                               <div className="relative bg-slate-900 rounded-[32px] p-3 shadow-2xl" style={{ width: '180px', height: '360px' }}>
@@ -257,7 +258,7 @@ export default function MagazaPersonelTakipPage() {
                                   
                                   {/* Ekran İçeriği */}
                                   <img 
-                                    src={index === 0 ? vardiyaPlanlama : vardiyaOnay} 
+                                    src={index === 0 ? vardiyaPlanlama : index === 1 ? vardiyaOnay : vardiyaBildirim} 
                                     alt={feature.title} 
                                     className="w-full h-full object-cover"
                                   />
