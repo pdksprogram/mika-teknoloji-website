@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Shield, Clock, Zap, Settings, CheckCircle2, CheckCircle, ArrowRight, Lock, Gauge, AlertTriangle, Phone, Mail, MapPin, Award, Users, TrendingUp, Wrench } from "lucide-react";
+import { Shield, Clock, Settings, CheckCircle2, CheckCircle, ArrowRight, Lock, Gauge, AlertTriangle, Phone, Mail, MapPin, Award, Users, TrendingUp, Wrench } from "lucide-react";
 import { Link } from "wouter";
 import { trackEvent } from "@/lib/analytics";
 
@@ -405,44 +405,6 @@ export default function BariyerSistemleriPage() {
                 <p className="text-slate-300">Ömür boyu teknik destek ve bakım hizmeti</p>
               </div>
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto" {...fadeInUp}>
-            <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-all">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="font-bold text-lg mb-2">Yüksek Güvenlik</h3>
-              <p className="text-slate-600 text-sm">Dayanıklı yapı ve güvenilir sistemler</p>
-            </Card>
-
-            <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-all">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="font-bold text-lg mb-2">Hızlı Geçiş</h3>
-              <p className="text-slate-600 text-sm">3-7 saniye açılma süresi</p>
-            </Card>
-
-            <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-all">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-orange-600" />
-              </div>
-              <h3 className="font-bold text-lg mb-2">Otomatik Kontrol</h3>
-              <p className="text-slate-600 text-sm">Uzaktan kumanda ve entegrasyon</p>
-            </Card>
-
-            <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-all">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Settings className="w-8 h-8 text-red-600" />
-              </div>
-              <h3 className="font-bold text-lg mb-2">Kolay Montaj</h3>
-              <p className="text-slate-600 text-sm">Profesyonel kurulum desteği</p>
-            </Card>
           </motion.div>
         </div>
       </section>
