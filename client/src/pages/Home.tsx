@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/hooks/useLanguage";
 import { Helmet } from "react-helmet-async";
 import HeroCarousel from "@/components/HeroCarousel";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -509,6 +510,9 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* WhatsApp Widget */}
+      <WhatsAppWidget />
     </div>
   );
 }
