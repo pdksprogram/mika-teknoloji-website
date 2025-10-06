@@ -14,6 +14,7 @@ import vardiyaPlanlama from "@assets/IMG_4278_1759780466857.png";
 import vardiyaOnay from "@assets/IMG_4279_1759780771668.png";
 import vardiyaBildirim from "@assets/IMG_4280_1759781022450.png";
 import izinAvans from "@assets/IMG_4281_1759781338557.png";
+import belgeYonetimi from "@assets/IMG_4283_1759781625259.png";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -100,11 +101,11 @@ export default function MagazaPersonelTakipPage() {
     },
     {
       icon: BarChart3,
-      title: "KPI ve Analitik Raporlama",
-      description: "Detaylı KPI raporları, performans analitiği, çalışma saati istatistikleri ve yönetici dashboard'u. Excel ve PDF formatında raporlar alın, grafiklerle analiz edin.",
+      title: "Dijital Belge ve Evrak Yönetim Sistemi",
+      description: "Personeller raporlu izin, sağlık raporu, sertifika, diploma ve diğer resmi evraklarını mobil uygulama üzerinden kolayca yükleyebilir ve merkez sisteme iletebilir. Tüm belgeler dijital ortamda güvenli şekilde saklanır ve gerektiğinde yöneticiler tarafından anında erişilebilir. Bu dijital belge yönetim sistemi, kağıt kullanımını ortadan kaldırır, evrak kaybını önler ve kurumsal bir dokümantasyon yapısı oluşturur. İnsan Kaynakları ve yöneticiler tüm personel belgelerini merkezi sistemden takip edebilir, arşivleme ve raporlama süreçlerini otomatikleştirebilir.",
       gradient: "from-indigo-500 to-purple-500",
-      keywords: "kpi raporlama, analitik, performans takibi",
-      imagePlaceholder: "kpi-analitik.jpg"
+      keywords: "dijital belge yönetimi, evrak sistemi, raporlu izin belgesi, QR kod sistemi, dijital arşiv",
+      imagePlaceholder: "belge-yonetimi.jpg"
     },
     {
       icon: Database,
@@ -134,8 +135,8 @@ export default function MagazaPersonelTakipPage() {
       answer: "Personel mobil uygulama üzerinden izin veya avans talebini başlatır. Talep önce mağaza müdürüne düşer ve incelenir. Mağaza müdürü onayladıktan sonra merkez İnsan Kaynakları departmanına iletilir. İK nihai onayı verdikten sonra personele push bildirim olarak sonuç bildirilir. Red durumunda ret nedeni de detaylı şekilde paylaşılır. Tüm süreç şeffaf ve takip edilebilirdir."
     },
     {
-      question: "KPI ve analitik raporlama özellikleri nelerdir?",
-      answer: "Dashboard üzerinden çalışma saatleri, devamsızlık oranları, fazla mesai istatistikleri, personel performans KPI'ları görüntülenebilir. Excel ve PDF formatında detaylı analitik raporlar alınabilir. Grafik ve tablolarla görsel raporlama yapılır."
+      question: "Dijital belge yönetimi nasıl çalışır?",
+      answer: "Personeller raporlu izin belgelerini, sağlık raporlarını, sertifikalarını, diplomalarını ve diğer resmi evraklarını mobil uygulama üzerinden fotoğraflayarak veya PDF olarak yükleyebilir. Belgeler otomatik olarak personel dosyasına eklenir ve yöneticiler tarafından onaylanır. Tüm evraklar dijital ortamda güvenli şekilde arşivlenir. QR kod sistemi ile giriş-çıkış işlemleri de mobil uygulama üzerinden gerçekleştirilebilir."
     },
     {
       question: "Hangi sistemlerle entegrasyon sağlanabilir?",
@@ -246,7 +247,7 @@ export default function MagazaPersonelTakipPage() {
                       <CardContent className="p-0">
                         {/* Resim Alanı */}
                         <div className="relative h-56 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden border-b border-slate-200">
-                          {index === 0 || index === 1 || index === 2 || index === 3 ? (
+                          {index === 0 || index === 1 || index === 2 || index === 3 || index === 4 ? (
                             <div className="absolute inset-0 flex items-center justify-center p-6">
                               {/* Telefon Çerçevesi */}
                               <div className="relative bg-slate-900 rounded-[32px] p-3 shadow-2xl" style={{ width: '180px', height: '360px' }}>
@@ -259,7 +260,7 @@ export default function MagazaPersonelTakipPage() {
                                   
                                   {/* Ekran İçeriği */}
                                   <img 
-                                    src={index === 0 ? vardiyaPlanlama : index === 1 ? vardiyaOnay : index === 2 ? vardiyaBildirim : izinAvans} 
+                                    src={index === 0 ? vardiyaPlanlama : index === 1 ? vardiyaOnay : index === 2 ? vardiyaBildirim : index === 3 ? izinAvans : belgeYonetimi} 
                                     alt={feature.title} 
                                     className="w-full h-full object-cover"
                                   />
