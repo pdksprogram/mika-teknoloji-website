@@ -162,56 +162,6 @@ export default function MagazaPersonelTakipPage() {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-        {/* Hero Section */}
-        <section className="relative py-16 overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <motion.div 
-            className="container mx-auto px-4 relative z-10"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="max-w-4xl mx-auto text-center text-white">
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.2, type: "spring" }}
-                className="inline-block mb-4"
-              >
-                <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
-                  🏪 Perakende ve Mağaza Çözümü
-                </span>
-              </motion.div>
-              
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Mağaza Personel Takip Programı
-              </h1>
-              <p className="text-xl mb-6 text-white/90">
-                Vardiya Planlama, Shift Yönetimi ve Mobil PDKS ile Mağaza Personelini Kolayca Yönetin
-              </p>
-              <div className="flex flex-wrap gap-3 justify-center">
-                <Button 
-                  asChild
-                  size="lg" 
-                  className="bg-white text-purple-600 hover:bg-white/90 font-semibold px-6"
-                  data-testid="hero-demo-button"
-                >
-                  <Link href="/iletisim">📞 Ücretsiz Demo</Link>
-                </Button>
-                <Button 
-                  asChild
-                  size="lg" 
-                  variant="outline" 
-                  className="border-2 border-white text-white hover:bg-white/10 font-semibold px-6"
-                  data-testid="hero-call-button"
-                >
-                  <a href="tel:+908503051986">Hemen Ara</a>
-                </Button>
-              </div>
-            </div>
-          </motion.div>
-        </section>
-
         {/* SEGMENT 2: Video + Avantaj Kartları */}
         <section className="py-16 bg-white relative">
           <div className="container mx-auto px-4">
