@@ -55,6 +55,7 @@ import MT2500KKristalDetailPage from "@/pages/MT2500KKristalDetailPage";
 import MT1350YarimBoyDetailPage from "@/pages/MT1350YarimBoyDetailPage";
 import PersonelTakipPage from "@/pages/PersonelTakipPage";
 import QRPDKSPage from "./pages/QRPDKSPage";
+import BariyerSistemleriPage from "@/pages/BariyerSistemleriPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -119,6 +120,7 @@ function Router() {
       <Route path="/urunler/bekci-tur-kontrol" component={QRPatrolPage} />
       <Route path="/urunler/personel-takip" component={PersonelTakipPage} />
       <Route path="/urunler/qr-pdks" component={QRPDKSPage} />
+      <Route path="/urunler/bariyer-sistemleri" component={BariyerSistemleriPage} />
       
       <Route path="/referanslar" component={References} />
       <Route path="/blog" component={Blog} />
