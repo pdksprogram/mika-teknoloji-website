@@ -164,7 +164,7 @@ export default function Header() {
       { name: "Personel Takip Sistemleri", href: "/urunler/personel-takip" },
       { name: "QR Kodlu PDKS Sistemi", href: "/urunler/qr-pdks" },
       { name: "Bariyer Sistemleri", href: "/urunler/bariyer-sistemleri" },
-      { name: "Plaka Tanıma Sistemleri", href: "/urunler/plaka-tanima" },
+      { name: "Mağaza Personel Takip Programı", href: "/urunler/magaza-personel-takip" },
       { name: "OGS & HGS Geçiş Sistemleri", href: "/urunler/ogs-hgs" },
       { name: "AR-GE Takip Sistemi", href: "/urunler/arge-takip" },
       { name: "Bekçi & Devriye Tur Sistemleri", href: "/urunler/bekci-devriye" },
@@ -330,7 +330,7 @@ export default function Header() {
                       <div className="bg-gray-50 px-8 py-4 border-t">
                         <p className="text-sm text-gray-600">
                           {activeMenuType === 'products' 
-                            ? "Popüler Ürünler: Parmak İzi Tanıma, Yüz Tanıma, PDKS Sistemleri, Turnike, Bariyer, Plaka Tanıma, QR Kodlu Sistem"
+                            ? "Popüler Ürünler: Parmak İzi Tanıma, Yüz Tanıma, PDKS Sistemleri, Turnike, Bariyer, Mağaza Personel Takip, QR Kodlu Sistem"
                             : "Popüler Çözümler: PDKS, Access Control, Bekçi Kontrol, Turnike Sistemleri, QR Devriye Takip"
                           }
                         </p>
