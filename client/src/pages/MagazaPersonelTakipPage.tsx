@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
+import vardiyaPlanlama from "@assets/IMG_4278_1759780466857.png";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -242,16 +243,24 @@ export default function MagazaPersonelTakipPage() {
                       <CardContent className="p-0">
                         {/* Resim Alanı */}
                         <div className="relative h-56 bg-slate-100 overflow-hidden border-b border-slate-200">
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="text-center">
-                              <div className="inline-flex p-6 rounded-2xl bg-white shadow-md mb-3">
-                                <Icon className="h-14 w-14 text-primary" />
+                          {index === 0 ? (
+                            <img 
+                              src={vardiyaPlanlama} 
+                              alt="Vardiya Planlama ve Shift Yönetimi" 
+                              className="w-full h-full object-cover"
+                            />
+                          ) : (
+                            <div className="absolute inset-0 flex items-center justify-center">
+                              <div className="text-center">
+                                <div className="inline-flex p-6 rounded-2xl bg-white shadow-md mb-3">
+                                  <Icon className="h-14 w-14 text-primary" />
+                                </div>
+                                <p className="text-sm font-medium px-4 text-slate-600">
+                                  📸 {feature.imagePlaceholder}
+                                </p>
                               </div>
-                              <p className="text-sm font-medium px-4 text-slate-600">
-                                📸 {feature.imagePlaceholder}
-                              </p>
                             </div>
-                          </div>
+                          )}
                         </div>
 
                         {/* İçerik Alanı */}
