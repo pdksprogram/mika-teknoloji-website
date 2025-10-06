@@ -369,7 +369,6 @@ export default function BariyerSistemleriPage() {
                 <video
                   className="w-full h-full object-cover"
                   autoPlay
-                  muted
                   loop
                   controls
                   playsInline
