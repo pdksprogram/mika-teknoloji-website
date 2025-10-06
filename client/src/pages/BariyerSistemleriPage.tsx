@@ -589,6 +589,271 @@ export default function BariyerSistemleriPage() {
         </div>
       </section>
 
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="container mx-auto px-4">
+          <motion.div className="text-center mb-16" {...fadeInUp}>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Bariyer Sistemleri Uygulama Alanları
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Profesyonel bariyer çözümlerimiz, farklı sektör ve alanlarda güvenli geçiş kontrolü sağlar
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+          >
+            {[
+              { title: "Otopark ve Garajlar", desc: "AVM, rezidans, ofis ve site otoparkları için otomatik otopark bariyerleri", icon: "🅿️" },
+              { title: "Sanayi Tesisleri", desc: "Fabrika ve üretim tesislerinde araç giriş-çıkış kontrolü", icon: "🏭" },
+              { title: "Alışveriş Merkezleri", desc: "Çok katlı otopark sistemleri ve vale hizmeti için bariyer çözümleri", icon: "🛒" },
+              { title: "Askeri ve Resmi Kurumlar", desc: "Road blocker ve yüksek güvenlikli bariyer sistemleri", icon: "🛡️" },
+              { title: "Havalimanları", desc: "Terminal giriş-çıkış noktaları ve park alanları için hidrolik bariyerler", icon: "✈️" },
+              { title: "Konut Siteleri", desc: "Rezidans, villa ve site girişleri için uzaktan kumandalı bariyerler", icon: "🏘️" },
+              { title: "Oteller ve Tesisler", desc: "Misafir araç park kontrolü ve otopark yönetim sistemleri", icon: "🏨" },
+              { title: "Hastaneler", desc: "Acil servis ve doktor park alanları için özel bariyer çözümleri", icon: "🏥" },
+              { title: "Kamu Binaları", desc: "Belediye, valilik ve resmi kurumlar için güvenlik bariyerleri", icon: "🏛️" }
+            ].map((area, index) => (
+              <motion.div key={index} variants={fadeInUp}>
+                <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-6 hover:bg-white/20 transition-all h-full">
+                  <div className="text-5xl mb-4">{area.icon}</div>
+                  <h3 className="font-bold text-xl mb-3 text-white">{area.title}</h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">{area.desc}</p>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div className="text-center mb-16" {...fadeInUp}>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6">
+              Kurulum ve Montaj Süreci
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Profesyonel ekibimiz ile 4 adımda hızlı ve güvenli bariyer kurulumu
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+          >
+            {[
+              { step: "1", title: "Keşif ve Analiz", desc: "Ücretsiz yerinde keşif, ihtiyaç analizi ve ölçüm", time: "1 Gün" },
+              { step: "2", title: "Proje ve Teklif", desc: "Detaylı proje planı ve uygun fiyat teklifi hazırlama", time: "1-2 Gün" },
+              { step: "3", title: "Kurulum", desc: "Profesyonel montaj ekibi ile güvenli kurulum", time: "2-4 Saat" },
+              { step: "4", title: "Test ve Eğitim", desc: "Sistem testleri ve kullanıcı eğitimi", time: "1 Saat" }
+            ].map((item, index) => (
+              <motion.div key={index} variants={fadeInUp}>
+                <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-all relative overflow-hidden h-full">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -mr-12 -mt-12"></div>
+                  <div className="relative">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
+                      {item.step}
+                    </div>
+                    <h3 className="font-bold text-lg mb-2 text-slate-800">{item.title}</h3>
+                    <p className="text-slate-600 text-sm mb-3">{item.desc}</p>
+                    <div className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+                      ⏱️ {item.time}
+                    </div>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <motion.div className="text-center mb-16" {...fadeInUp}>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6">
+              Bariyer Sistemleri Karşılaştırma Tablosu
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              İhtiyacınıza en uygun bariyer sistemini seçmenize yardımcı olacak detaylı karşılaştırma
+            </p>
+          </motion.div>
+
+          <motion.div className="max-w-6xl mx-auto overflow-x-auto" {...fadeInUp}>
+            <table className="w-full bg-white shadow-2xl rounded-2xl overflow-hidden">
+              <thead className="bg-gradient-to-r from-slate-800 to-slate-700">
+                <tr>
+                  <th className="px-6 py-4 text-left text-white font-bold">Özellik</th>
+                  <th className="px-6 py-4 text-center text-white font-bold">PT Dinamik</th>
+                  <th className="px-6 py-4 text-center text-white font-bold">PT PLUS</th>
+                  <th className="px-6 py-4 text-center text-white font-bold">Mantar Bariyer</th>
+                  <th className="px-6 py-4 text-center text-white font-bold">Road Blocker</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200">
+                <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="px-6 py-4 font-semibold text-slate-700">Açılma Süresi</td>
+                  <td className="px-6 py-4 text-center">3-5 sn</td>
+                  <td className="px-6 py-4 text-center">7 sn</td>
+                  <td className="px-6 py-4 text-center">3-5 sn</td>
+                  <td className="px-6 py-4 text-center">Değişken</td>
+                </tr>
+                <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="px-6 py-4 font-semibold text-slate-700">Güvenlik Seviyesi</td>
+                  <td className="px-6 py-4 text-center">⭐⭐⭐⭐</td>
+                  <td className="px-6 py-4 text-center">⭐⭐⭐</td>
+                  <td className="px-6 py-4 text-center">⭐⭐⭐⭐⭐</td>
+                  <td className="px-6 py-4 text-center">⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="px-6 py-4 font-semibold text-slate-700">Kullanım Alanı</td>
+                  <td className="px-6 py-4 text-center text-sm">Yoğun Trafik</td>
+                  <td className="px-6 py-4 text-center text-sm">Standart</td>
+                  <td className="px-6 py-4 text-center text-sm">Yüksek Güvenlik</td>
+                  <td className="px-6 py-4 text-center text-sm">Kritik Noktalar</td>
+                </tr>
+                <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="px-6 py-4 font-semibold text-slate-700">Kol Uzunluğu</td>
+                  <td className="px-6 py-4 text-center">Değişken</td>
+                  <td className="px-6 py-4 text-center">5,25 m</td>
+                  <td className="px-6 py-4 text-center">-</td>
+                  <td className="px-6 py-4 text-center">-</td>
+                </tr>
+                <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="px-6 py-4 font-semibold text-slate-700">Tahrik Sistemi</td>
+                  <td className="px-6 py-4 text-center text-sm">Elektrikli</td>
+                  <td className="px-6 py-4 text-center text-sm">Elektrikli</td>
+                  <td className="px-6 py-4 text-center text-sm">Hidrolik</td>
+                  <td className="px-6 py-4 text-center text-sm">Hidrolik</td>
+                </tr>
+                <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="px-6 py-4 font-semibold text-slate-700">Fiyat Aralığı</td>
+                  <td className="px-6 py-4 text-center">💰💰💰</td>
+                  <td className="px-6 py-4 text-center">💰💰</td>
+                  <td className="px-6 py-4 text-center">💰💰💰💰</td>
+                  <td className="px-6 py-4 text-center">💰💰💰💰💰</td>
+                </tr>
+                <tr className="hover:bg-slate-50 transition-colors">
+                  <td className="px-6 py-4 font-semibold text-slate-700">Önerilen Kullanım</td>
+                  <td className="px-6 py-4 text-center text-sm">AVM, Fabrika</td>
+                  <td className="px-6 py-4 text-center text-sm">Site, Ofis</td>
+                  <td className="px-6 py-4 text-center text-sm">Askeri, Resmi</td>
+                  <td className="px-6 py-4 text-center text-sm">Havalimanı, Elçilik</td>
+                </tr>
+              </tbody>
+            </table>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div className="text-center mb-16" {...fadeInUp}>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6">
+              Bakım ve Teknik Destek
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Bariyer sistemlerinizin uzun ömürlü ve kesintisiz çalışması için profesyonel destek
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <motion.div {...fadeInUp}>
+              <Card className="border-0 shadow-xl p-8 h-full">
+                <h3 className="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+                  <Wrench className="w-8 h-8 text-primary mr-3" />
+                  Periyodik Bakım Hizmetleri
+                </h3>
+                <ul className="space-y-4">
+                  {[
+                    "3 aylık rutin kontrol ve bakım",
+                    "Motor ve mekanik sistem kontrolü",
+                    "Elektronik kart ve sensör testleri",
+                    "Yağlama ve temizlik işlemleri",
+                    "Güvenlik sistemleri kalibrasyonu",
+                    "Detaylı bakım raporu sunumu"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start space-x-3">
+                      <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
+                      <span className="text-slate-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            </motion.div>
+
+            <motion.div {...fadeInUp}>
+              <Card className="border-0 shadow-xl p-8 h-full bg-gradient-to-br from-primary/5 to-primary/10">
+                <h3 className="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+                  <Phone className="w-8 h-8 text-primary mr-3" />
+                  7/24 Teknik Destek
+                </h3>
+                <ul className="space-y-4">
+                  {[
+                    "Acil arıza müdahale hizmeti",
+                    "Telefon ve online teknik destek",
+                    "Yedek parça temin garantisi",
+                    "Yerinde tamir ve onarım",
+                    "Uzaktan sistem kontrolü",
+                    "Kullanıcı eğitim programları"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start space-x-3">
+                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                      <span className="text-slate-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <motion.div className="text-center mb-16" {...fadeInUp}>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6">
+              Garanti ve Servis Kapsamı
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Tüm bariyer sistemlerimiz kapsamlı garanti ve servis hizmetleri ile birlikte sunulmaktadır
+            </p>
+          </motion.div>
+
+          <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto" {...fadeInUp}>
+            <Card className="border-0 shadow-xl p-8 text-center">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-bold">
+                2
+              </div>
+              <h3 className="text-2xl font-bold text-slate-800 mb-3">Yıl Garanti</h3>
+              <p className="text-slate-600">Üretici garantisi kapsamında tüm parça ve işçilik</p>
+            </Card>
+
+            <Card className="border-0 shadow-xl p-8 text-center bg-gradient-to-br from-primary to-primary/90 text-white">
+              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 text-4xl">
+                ∞
+              </div>
+              <h3 className="text-2xl font-bold mb-3">Ömür Boyu Destek</h3>
+              <p className="text-white/90">Sınırsız telefon danışmanlığı ve teknik destek</p>
+            </Card>
+
+            <Card className="border-0 shadow-xl p-8 text-center">
+              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-bold">
+                24
+              </div>
+              <h3 className="text-2xl font-bold text-slate-800 mb-3">Saat İçinde</h3>
+              <p className="text-slate-600">Arıza bildirimlerinde maksimum müdahale süresi</p>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div className="text-center mb-16" {...fadeInUp}>
