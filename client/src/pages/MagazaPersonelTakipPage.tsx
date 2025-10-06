@@ -344,7 +344,14 @@ export default function MagazaPersonelTakipPage() {
                 const Icon = feature.icon;
                 return (
                   <motion.div key={index} variants={fadeInUp}>
-                    <Card className="h-full hover:shadow-lg transition-all duration-300 border border-slate-200 overflow-hidden group bg-white">
+                    <Card className="h-full hover:shadow-lg transition-all duration-300 border-2 border-slate-200 overflow-hidden group bg-white relative">
+                      {/* Numara Badge */}
+                      <div className="absolute top-4 left-4 z-10">
+                        <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg">
+                          <span className="text-white text-xl font-bold">{index + 1}</span>
+                        </div>
+                      </div>
+                      
                       <CardContent className="p-0">
                         {/* Resim Alanı */}
                         <div className="relative h-56 bg-slate-100 overflow-hidden border-b border-slate-200">
@@ -362,9 +369,14 @@ export default function MagazaPersonelTakipPage() {
 
                         {/* İçerik Alanı */}
                         <div className="p-6">
-                          <h3 className="text-xl font-bold mb-3 text-slate-900">
-                            {feature.title}
-                          </h3>
+                          <div className="flex items-start gap-3 mb-3">
+                            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                              <span className="text-primary text-sm font-bold">{index + 1}</span>
+                            </div>
+                            <h3 className="text-xl font-bold text-slate-900 flex-1">
+                              {feature.title}
+                            </h3>
+                          </div>
                           <p className="text-slate-600 mb-4 leading-relaxed text-[15px]">
                             {feature.description}
                           </p>
