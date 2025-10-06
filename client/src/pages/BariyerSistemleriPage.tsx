@@ -348,60 +348,7 @@ export default function BariyerSistemleriPage() {
         </script>
       </Helmet>
 
-      <section className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-96 h-96 bg-primary/30 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl"></div>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            className="max-w-4xl mx-auto text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="inline-flex items-center bg-primary/20 px-6 py-3 rounded-full border border-primary/30 mb-8">
-              <Shield className="w-5 h-5 mr-3 text-primary" />
-              <span className="text-primary font-semibold text-sm tracking-wider uppercase">Güvenlik Sistemleri</span>
-            </div>
-            
-            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Bariyer Sistemleri
-            </h1>
-            
-            <p className="text-xl lg:text-2xl text-slate-300 leading-relaxed mb-12">
-              Otopark bariyeri, hidrolik mantar bariyer, road blocker ve güvenlik bariyer sistemleri. 
-              2 yıl garanti, ISO 9001 belgeli, profesyonel kurulum hizmetiyle tam güvenlik.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                data-testid="button-contact"
-                onClick={handleContactClick}
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg group"
-              >
-                Ücretsiz Teklif Alın
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                data-testid="button-catalog"
-                className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-6 text-lg"
-              >
-                Ürün Kataloğu İndir
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
-      </section>
-
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="container mx-auto px-4">
           <motion.div 
             className="max-w-6xl mx-auto"
@@ -409,14 +356,15 @@ export default function BariyerSistemleriPage() {
           >
             <div className="text-center mb-12">
               <div className="inline-flex items-center bg-primary/20 px-6 py-3 rounded-full border border-primary/30 mb-6">
-                <Zap className="w-5 h-5 mr-3 text-primary" />
-                <span className="text-primary font-semibold text-sm tracking-wider uppercase">Video Tanıtım</span>
+                <Shield className="w-5 h-5 mr-3 text-primary" />
+                <span className="text-primary font-semibold text-sm tracking-wider uppercase">Güvenlik Sistemleri</span>
               </div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Bariyer Sistemlerimizi Keşfedin
-              </h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Profesyonel bariyer sistemlerimizin özelliklerini ve uygulama alanlarını video ile inceleyin
+              <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                Bariyer Sistemleri
+              </h1>
+              <p className="text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-4xl mx-auto mb-12">
+                Otopark bariyeri, hidrolik mantar bariyer, road blocker ve güvenlik bariyer sistemleri. 
+                2 yıl garanti, ISO 9001 belgeli, profesyonel kurulum hizmetiyle tam güvenlik.
               </p>
             </div>
 
