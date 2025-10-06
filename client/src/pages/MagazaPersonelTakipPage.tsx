@@ -15,6 +15,7 @@ import vardiyaOnay from "@assets/IMG_4279_1759780771668.png";
 import vardiyaBildirim from "@assets/IMG_4280_1759781022450.png";
 import izinAvans from "@assets/IMG_4281_1759781338557.png";
 import belgeYonetimi from "@assets/IMG_4283_1759781625259.png";
+import toplulukPlus from "@assets/IMG_4285_1759782715899.jpeg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -109,11 +110,11 @@ export default function MagazaPersonelTakipPage() {
     },
     {
       icon: Database,
-      title: "Entegrasyon ve Otomasyon",
-      description: "Bordro sistemi entegrasyonu, muhasebe yazılımı bağlantısı, API desteği ve otomatik veri aktarımı. Popüler ERP sistemleri ile uyumlu çalışır.",
+      title: "Topluluk+ Kurumsal Sosyal Medya Platformu",
+      description: "Mika Teknoloji tarafından geliştirilen Topluluk+, kurum içi çalışanlar için özel tasarlanmış Twitter tarzı bir sosyal medya platformudur. Personeller mobil uygulama üzerinden anlık fotoğraf ve video paylaşımları yapabilir. Tüm paylaşımlar moderatör onayından geçerek yayınlanır ve kurum içinde güvenli bir iletişim ortamı sağlanır. Çalışanlar birbirlerinin paylaşımlarını beğenebilir, yorum yapabilir ve etkileşimde bulunabilir. Platform, oyunlaşma sistemi ile rozetler, başarı ödülleri ve prim mekanizması içerir. Performansa dayalı ödüller, aktif katılım ve pozitif davranışlar üzerinden hesaplanır. Topluluk+, çalışan bağlılığını artırır, kurum kültürünü güçlendirir ve şirket içi iletişimi dijitalleştirir.",
       gradient: "from-teal-500 to-cyan-500",
-      keywords: "sistem entegrasyonu, bordro entegrasyonu, api",
-      imagePlaceholder: "entegrasyon-otomasyon.jpg"
+      keywords: "kurumsal sosyal medya, topluluk+, oyunlaşma, personel rozetleri, prim sistemi, moderasyon",
+      imagePlaceholder: "topluluk-plus.jpg"
     }
   ];
 
@@ -139,8 +140,8 @@ export default function MagazaPersonelTakipPage() {
       answer: "Personeller raporlu izin belgelerini, sağlık raporlarını, sertifikalarını, diplomalarını ve diğer resmi evraklarını mobil uygulama üzerinden fotoğraflayarak veya PDF olarak yükleyebilir. Belgeler otomatik olarak personel dosyasına eklenir ve yöneticiler tarafından onaylanır. Tüm evraklar dijital ortamda güvenli şekilde arşivlenir. QR kod sistemi ile giriş-çıkış işlemleri de mobil uygulama üzerinden gerçekleştirilebilir."
     },
     {
-      question: "Hangi sistemlerle entegrasyon sağlanabilir?",
-      answer: "Bordro ve muhasebe yazılımları ile entegrasyon, e-fatura sistemleri ile bağlantı, API desteği ile kendi yazılımınıza entegrasyon sağlanabilir. Popüler ERP sistemleri ile uyumlu çalışır ve otomatik veri senkronizasyonu yapılabilir."
+      question: "Topluluk+ sosyal medya platformu nasıl çalışır?",
+      answer: "Topluluk+, Mika Teknoloji tarafından geliştirilen kurum içi sosyal medya platformudur. Personeller mobil uygulama üzerinden fotoğraf ve video paylaşımı yapar. Tüm içerikler moderatör onayından geçer ve ardından yayınlanır. Çalışanlar beğeni ve yorum yapabilir. Platform oyunlaşma sistemi ile rozetler, başarı ödülleri ve prim mekanizması içerir. Aktif katılım ve pozitif davranışlar ödüllendirilir."
     }
   ];
 
@@ -247,7 +248,7 @@ export default function MagazaPersonelTakipPage() {
                       <CardContent className="p-0">
                         {/* Resim Alanı */}
                         <div className="relative h-56 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden border-b border-slate-200">
-                          {index === 0 || index === 1 || index === 2 || index === 3 || index === 4 ? (
+                          {index >= 0 && index <= 5 ? (
                             <div className="absolute inset-0 flex items-center justify-center p-6">
                               {/* Telefon Çerçevesi */}
                               <div className="relative bg-slate-900 rounded-[32px] p-3 shadow-2xl" style={{ width: '180px', height: '360px' }}>
@@ -260,7 +261,7 @@ export default function MagazaPersonelTakipPage() {
                                   
                                   {/* Ekran İçeriği */}
                                   <img 
-                                    src={index === 0 ? vardiyaPlanlama : index === 1 ? vardiyaOnay : index === 2 ? vardiyaBildirim : index === 3 ? izinAvans : belgeYonetimi} 
+                                    src={index === 0 ? vardiyaPlanlama : index === 1 ? vardiyaOnay : index === 2 ? vardiyaBildirim : index === 3 ? izinAvans : index === 4 ? belgeYonetimi : toplulukPlus} 
                                     alt={feature.title} 
                                     className="w-full h-full object-cover"
                                   />
