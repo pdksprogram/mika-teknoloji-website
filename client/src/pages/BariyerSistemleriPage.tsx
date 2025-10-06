@@ -608,22 +608,30 @@ export default function BariyerSistemleriPage() {
             viewport={{ once: true }}
           >
             {[
-              { title: "Otopark ve Garajlar", desc: "AVM, rezidans, ofis ve site otoparkları için otomatik otopark bariyerleri", icon: "🅿️" },
-              { title: "Sanayi Tesisleri", desc: "Fabrika ve üretim tesislerinde araç giriş-çıkış kontrolü", icon: "🏭" },
-              { title: "Alışveriş Merkezleri", desc: "Çok katlı otopark sistemleri ve vale hizmeti için bariyer çözümleri", icon: "🛒" },
-              { title: "Askeri ve Resmi Kurumlar", desc: "Road blocker ve yüksek güvenlikli bariyer sistemleri", icon: "🛡️" },
-              { title: "Havalimanları", desc: "Terminal giriş-çıkış noktaları ve park alanları için hidrolik bariyerler", icon: "✈️" },
-              { title: "Konut Siteleri", desc: "Rezidans, villa ve site girişleri için uzaktan kumandalı bariyerler", icon: "🏘️" },
-              { title: "Oteller ve Tesisler", desc: "Misafir araç park kontrolü ve otopark yönetim sistemleri", icon: "🏨" },
-              { title: "Hastaneler", desc: "Acil servis ve doktor park alanları için özel bariyer çözümleri", icon: "🏥" },
-              { title: "Kamu Binaları", desc: "Belediye, valilik ve resmi kurumlar için güvenlik bariyerleri", icon: "🏛️" }
+              { title: "Otopark ve Garajlar", desc: "AVM, rezidans, ofis ve site otoparkları için otomatik otopark bariyerleri", icon: "🅿️", gradient: "from-blue-500 to-cyan-500" },
+              { title: "Sanayi Tesisleri", desc: "Fabrika ve üretim tesislerinde araç giriş-çıkış kontrolü", icon: "🏭", gradient: "from-orange-500 to-red-500" },
+              { title: "Alışveriş Merkezleri", desc: "Çok katlı otopark sistemleri ve vale hizmeti için bariyer çözümleri", icon: "🛒", gradient: "from-purple-500 to-pink-500" },
+              { title: "Askeri ve Resmi Kurumlar", desc: "Road blocker ve yüksek güvenlikli bariyer sistemleri", icon: "🛡️", gradient: "from-green-500 to-emerald-500" },
+              { title: "Havalimanları", desc: "Terminal giriş-çıkış noktaları ve park alanları için hidrolik bariyerler", icon: "✈️", gradient: "from-indigo-500 to-blue-500" },
+              { title: "Konut Siteleri", desc: "Rezidans, villa ve site girişleri için uzaktan kumandalı bariyerler", icon: "🏘️", gradient: "from-teal-500 to-cyan-500" },
+              { title: "Oteller ve Tesisler", desc: "Misafir araç park kontrolü ve otopark yönetim sistemleri", icon: "🏨", gradient: "from-amber-500 to-yellow-500" },
+              { title: "Hastaneler", desc: "Acil servis ve doktor park alanları için özel bariyer çözümleri", icon: "🏥", gradient: "from-red-500 to-rose-500" },
+              { title: "Kamu Binaları", desc: "Belediye, valilik ve resmi kurumlar için güvenlik bariyerleri", icon: "🏛️", gradient: "from-slate-500 to-slate-600" }
             ].map((area, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-6 hover:bg-white/20 transition-all h-full">
-                  <div className="text-5xl mb-4">{area.icon}</div>
-                  <h3 className="font-bold text-xl mb-3 text-white">{area.title}</h3>
-                  <p className="text-slate-300 text-sm leading-relaxed">{area.desc}</p>
-                </Card>
+                <div className="group relative">
+                  <div className={`absolute -inset-0.5 bg-gradient-to-r ${area.gradient} rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-500`}></div>
+                  <Card className="relative bg-white/95 backdrop-blur-xl border-0 p-8 hover:bg-white transition-all duration-500 h-full rounded-3xl group-hover:scale-105">
+                    <div className={`w-20 h-20 bg-gradient-to-br ${area.gradient} rounded-2xl flex items-center justify-center mb-6 text-4xl shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
+                      {area.icon}
+                    </div>
+                    <h3 className="font-bold text-xl mb-3 text-slate-800 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-slate-800 group-hover:to-slate-600 transition-all">
+                      {area.title}
+                    </h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">{area.desc}</p>
+                    <div className={`absolute bottom-0 left-0 h-1.5 bg-gradient-to-r ${area.gradient} w-0 group-hover:w-full transition-all duration-500 rounded-b-3xl`}></div>
+                  </Card>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -649,25 +657,31 @@ export default function BariyerSistemleriPage() {
             viewport={{ once: true }}
           >
             {[
-              { step: "1", title: "Keşif ve Analiz", desc: "Ücretsiz yerinde keşif, ihtiyaç analizi ve ölçüm", time: "1 Gün" },
-              { step: "2", title: "Proje ve Teklif", desc: "Detaylı proje planı ve uygun fiyat teklifi hazırlama", time: "1-2 Gün" },
-              { step: "3", title: "Kurulum", desc: "Profesyonel montaj ekibi ile güvenli kurulum", time: "2-4 Saat" },
-              { step: "4", title: "Test ve Eğitim", desc: "Sistem testleri ve kullanıcı eğitimi", time: "1 Saat" }
+              { step: "1", title: "Keşif ve Analiz", desc: "Ücretsiz yerinde keşif, ihtiyaç analizi ve ölçüm", time: "1 Gün", color: "blue" },
+              { step: "2", title: "Proje ve Teklif", desc: "Detaylı proje planı ve uygun fiyat teklifi hazırlama", time: "1-2 Gün", color: "purple" },
+              { step: "3", title: "Kurulum", desc: "Profesyonel montaj ekibi ile güvenli kurulum", time: "2-4 Saat", color: "green" },
+              { step: "4", title: "Test ve Eğitim", desc: "Sistem testleri ve kullanıcı eğitimi", time: "1 Saat", color: "orange" }
             ].map((item, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-all relative overflow-hidden h-full">
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -mr-12 -mt-12"></div>
-                  <div className="relative">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
-                      {item.step}
+                <div className="group relative h-full">
+                  <div className={`absolute -inset-1 bg-gradient-to-br from-${item.color}-400 to-${item.color}-600 rounded-3xl blur-lg opacity-20 group-hover:opacity-40 transition duration-500`}></div>
+                  <Card className="relative bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200/50 p-8 hover:border-primary/30 transition-all duration-500 h-full rounded-3xl group-hover:-translate-y-2">
+                    <div className="text-center relative">
+                      <div className={`relative inline-block mb-6`}>
+                        <div className={`absolute inset-0 bg-gradient-to-br from-${item.color}-500 to-${item.color}-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity`}></div>
+                        <div className={`relative w-20 h-20 bg-gradient-to-br from-${item.color}-500 to-${item.color}-600 rounded-2xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300`}>
+                          <span className="text-white text-3xl font-bold">{item.step}</span>
+                        </div>
+                      </div>
+                      <h3 className="font-bold text-xl mb-3 text-slate-800">{item.title}</h3>
+                      <p className="text-slate-600 text-sm mb-4 leading-relaxed">{item.desc}</p>
+                      <div className={`inline-flex items-center gap-2 bg-gradient-to-r from-${item.color}-50 to-${item.color}-100 text-${item.color}-700 px-4 py-2 rounded-full text-sm font-semibold border border-${item.color}-200`}>
+                        <Clock className="w-4 h-4" />
+                        {item.time}
+                      </div>
                     </div>
-                    <h3 className="font-bold text-lg mb-2 text-slate-800">{item.title}</h3>
-                    <p className="text-slate-600 text-sm mb-3">{item.desc}</p>
-                    <div className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
-                      ⏱️ {item.time}
-                    </div>
-                  </div>
-                </Card>
+                  </Card>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -763,53 +777,67 @@ export default function BariyerSistemleriPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <motion.div {...fadeInUp}>
-              <Card className="border-0 shadow-xl p-8 h-full">
-                <h3 className="text-2xl font-bold text-slate-800 mb-6 flex items-center">
-                  <Wrench className="w-8 h-8 text-primary mr-3" />
-                  Periyodik Bakım Hizmetleri
-                </h3>
-                <ul className="space-y-4">
-                  {[
-                    "3 aylık rutin kontrol ve bakım",
-                    "Motor ve mekanik sistem kontrolü",
-                    "Elektronik kart ve sensör testleri",
-                    "Yağlama ve temizlik işlemleri",
-                    "Güvenlik sistemleri kalibrasyonu",
-                    "Detaylı bakım raporu sunumu"
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start space-x-3">
-                      <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
-                      <span className="text-slate-700">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Card>
+              <div className="group relative h-full">
+                <div className="absolute -inset-1 bg-gradient-to-br from-green-400 to-emerald-500 rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition duration-500"></div>
+                <Card className="relative border-2 border-green-100 hover:border-green-200 p-10 h-full rounded-3xl bg-white group-hover:-translate-y-1 transition-all duration-500">
+                  <div className="flex items-center mb-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                      <Wrench className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-slate-800 ml-4">Periyodik Bakım Hizmetleri</h3>
+                  </div>
+                  <ul className="space-y-4">
+                    {[
+                      "3 aylık rutin kontrol ve bakım",
+                      "Motor ve mekanik sistem kontrolü",
+                      "Elektronik kart ve sensör testleri",
+                      "Yağlama ve temizlik işlemleri",
+                      "Güvenlik sistemleri kalibrasyonu",
+                      "Detaylı bakım raporu sunumu"
+                    ].map((item, index) => (
+                      <li key={index} className="flex items-start space-x-3 group/item">
+                        <div className="w-6 h-6 bg-gradient-to-br from-green-100 to-green-200 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform">
+                          <CheckCircle2 className="w-4 h-4 text-green-600" />
+                        </div>
+                        <span className="text-slate-700 group-hover/item:text-slate-900 transition-colors">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </Card>
+              </div>
             </motion.div>
 
             <motion.div {...fadeInUp}>
-              <Card className="border-0 shadow-xl p-8 h-full bg-gradient-to-br from-primary/5 to-primary/10">
-                <h3 className="text-2xl font-bold text-slate-800 mb-6 flex items-center">
-                  <Phone className="w-8 h-8 text-primary mr-3" />
-                  7/24 Teknik Destek
-                </h3>
-                <ul className="space-y-4">
-                  {[
-                    "Acil arıza müdahale hizmeti",
-                    "Telefon ve online teknik destek",
-                    "Yedek parça temin garantisi",
-                    "Yerinde tamir ve onarım",
-                    "Uzaktan sistem kontrolü",
-                    "Kullanıcı eğitim programları"
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start space-x-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                      <span className="text-slate-700">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Card>
+              <div className="group relative h-full">
+                <div className="absolute -inset-1 bg-gradient-to-br from-primary to-pink-500 rounded-3xl blur-xl opacity-25 group-hover:opacity-40 transition duration-500"></div>
+                <Card className="relative border-0 p-10 h-full rounded-3xl bg-gradient-to-br from-primary via-primary to-pink-500 text-white group-hover:-translate-y-1 transition-all duration-500 shadow-2xl">
+                  <div className="flex items-center mb-8">
+                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 border border-white/30">
+                      <Phone className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold ml-4">7/24 Teknik Destek</h3>
+                  </div>
+                  <ul className="space-y-4">
+                    {[
+                      "Acil arıza müdahale hizmeti",
+                      "Telefon ve online teknik destek",
+                      "Yedek parça temin garantisi",
+                      "Yerinde tamir ve onarım",
+                      "Uzaktan sistem kontrolü",
+                      "Kullanıcı eğitim programları"
+                    ].map((item, index) => (
+                      <li key={index} className="flex items-start space-x-3 group/item">
+                        <div className="w-6 h-6 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 border border-white/30 group-hover/item:scale-110 transition-transform">
+                          <CheckCircle2 className="w-4 h-4 text-white" />
+                        </div>
+                        <span className="text-white/95 group-hover/item:text-white transition-colors">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </Card>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -827,29 +855,49 @@ export default function BariyerSistemleriPage() {
           </motion.div>
 
           <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto" {...fadeInUp}>
-            <Card className="border-0 shadow-xl p-8 text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-bold">
-                2
-              </div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-3">Yıl Garanti</h3>
-              <p className="text-slate-600">Üretici garantisi kapsamında tüm parça ve işçilik</p>
-            </Card>
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-3xl blur-xl opacity-25 group-hover:opacity-50 transition duration-500"></div>
+              <Card className="relative border-0 p-10 text-center bg-white rounded-3xl group-hover:-translate-y-2 transition-all duration-500 shadow-xl">
+                <div className="relative inline-block mb-6">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-3xl blur-2xl opacity-40"></div>
+                  <div className="relative w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-3xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <span className="text-white text-4xl font-bold">2</span>
+                  </div>
+                </div>
+                <h3 className="text-3xl font-bold text-slate-800 mb-3">Yıl Garanti</h3>
+                <p className="text-slate-600">Üretici garantisi kapsamında tüm parça ve işçilik</p>
+                <div className="absolute bottom-0 left-0 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 w-0 group-hover:w-full transition-all duration-500 rounded-b-3xl"></div>
+              </Card>
+            </div>
 
-            <Card className="border-0 shadow-xl p-8 text-center bg-gradient-to-br from-primary to-primary/90 text-white">
-              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 text-4xl">
-                ∞
-              </div>
-              <h3 className="text-2xl font-bold mb-3">Ömür Boyu Destek</h3>
-              <p className="text-white/90">Sınırsız telefon danışmanlığı ve teknik destek</p>
-            </Card>
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-br from-primary to-pink-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition duration-500"></div>
+              <Card className="relative border-0 p-10 text-center bg-gradient-to-br from-primary via-primary to-pink-500 rounded-3xl text-white group-hover:scale-105 transition-all duration-500 shadow-2xl">
+                <div className="relative inline-block mb-6">
+                  <div className="absolute inset-0 bg-white/20 rounded-3xl blur-2xl"></div>
+                  <div className="relative w-24 h-24 bg-white/20 backdrop-blur-md rounded-3xl flex items-center justify-center shadow-2xl border-2 border-white/30 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <span className="text-5xl font-bold">∞</span>
+                  </div>
+                </div>
+                <h3 className="text-3xl font-bold mb-3">Ömür Boyu Destek</h3>
+                <p className="text-white/95">Sınırsız telefon danışmanlığı ve teknik destek</p>
+              </Card>
+            </div>
 
-            <Card className="border-0 shadow-xl p-8 text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-bold">
-                24
-              </div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-3">Saat İçinde</h3>
-              <p className="text-slate-600">Arıza bildirimlerinde maksimum müdahale süresi</p>
-            </Card>
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-br from-green-400 to-emerald-500 rounded-3xl blur-xl opacity-25 group-hover:opacity-50 transition duration-500"></div>
+              <Card className="relative border-0 p-10 text-center bg-white rounded-3xl group-hover:-translate-y-2 transition-all duration-500 shadow-xl">
+                <div className="relative inline-block mb-6">
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl blur-2xl opacity-40"></div>
+                  <div className="relative w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <span className="text-white text-4xl font-bold">24</span>
+                  </div>
+                </div>
+                <h3 className="text-3xl font-bold text-slate-800 mb-3">Saat İçinde</h3>
+                <p className="text-slate-600">Arıza bildirimlerinde maksimum müdahale süresi</p>
+                <div className="absolute bottom-0 left-0 h-2 bg-gradient-to-r from-green-500 to-emerald-500 w-0 group-hover:w-full transition-all duration-500 rounded-b-3xl"></div>
+              </Card>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -874,15 +922,29 @@ export default function BariyerSistemleriPage() {
           >
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
+              const gradients = [
+                "from-blue-500 to-cyan-500",
+                "from-purple-500 to-pink-500", 
+                "from-orange-500 to-red-500",
+                "from-green-500 to-emerald-500"
+              ];
+              const gradient = gradients[index % gradients.length];
+              
               return (
                 <motion.div key={index} variants={fadeInUp}>
-                  <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-all h-full">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Icon className="w-8 h-8 text-primary" />
-                    </div>
-                    <h3 className="font-bold text-lg mb-2 text-slate-800">{benefit.title}</h3>
-                    <p className="text-slate-600 text-sm">{benefit.description}</p>
-                  </Card>
+                  <div className="group relative h-full">
+                    <div className={`absolute -inset-0.5 bg-gradient-to-r ${gradient} rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500`}></div>
+                    <Card className="relative bg-white border-0 p-8 hover:bg-slate-50 transition-all duration-500 h-full rounded-3xl group-hover:-translate-y-1">
+                      <div className="text-center">
+                        <div className={`w-20 h-20 bg-gradient-to-br ${gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
+                          <Icon className="w-10 h-10 text-white" />
+                        </div>
+                        <h3 className="font-bold text-xl mb-3 text-slate-800">{benefit.title}</h3>
+                        <p className="text-slate-600 text-sm leading-relaxed">{benefit.description}</p>
+                      </div>
+                      <div className={`absolute bottom-0 left-0 h-1.5 bg-gradient-to-r ${gradient} w-0 group-hover:w-full transition-all duration-500 rounded-b-3xl`}></div>
+                    </Card>
+                  </div>
                 </motion.div>
               );
             })}
