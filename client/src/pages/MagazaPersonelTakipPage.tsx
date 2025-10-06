@@ -5,11 +5,9 @@ import { Button } from "@/components/ui/button";
 import { 
   Calendar, TrendingUp, Smartphone, 
   BarChart3, FileText, Database,
-  Phone, Mail, MapPin, CheckCircle2,
-  Play, Shield, Timer, DollarSign, LineChart
+  Phone, Mail, MapPin, CheckCircle2
 } from "lucide-react";
 import { Link } from "wouter";
-import { useState } from "react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -29,8 +27,6 @@ const staggerContainer = {
 };
 
 export default function MagazaPersonelTakipPage() {
-  const [videoError, setVideoError] = useState(false);
-  
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -109,29 +105,6 @@ export default function MagazaPersonelTakipPage() {
       gradient: "from-teal-500 to-cyan-500",
       keywords: "sistem entegrasyonu, bordro entegrasyonu, api",
       imagePlaceholder: "entegrasyon-otomasyon.jpg"
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: Timer,
-      title: "Vardiya Çakışmalarını Önleyin",
-      description: "Akıllı vardiya planlama sistemi ile çift görevlendirme ve vardiya çakışmalarını otomatik engelleyin."
-    },
-    {
-      icon: DollarSign,
-      title: "Fazla Mesai Kontrolü",
-      description: "Fazla mesai saatlerini otomatik hesaplayın, prim ve ek ücret hesaplamalarını kolaylaştırın."
-    },
-    {
-      icon: LineChart,
-      title: "Performans Bazlı Prim",
-      description: "Satış hedefleri, çalışma saatleri ve performans kriterlerine göre otomatik prim hesaplama."
-    },
-    {
-      icon: Shield,
-      title: "Yasal Uyumluluk",
-      description: "İş kanunu ve SGK mevzuatına uyumlu çalışma saati takibi ve raporlama sistemi."
     }
   ];
 
@@ -233,89 +206,6 @@ export default function MagazaPersonelTakipPage() {
               </div>
             </div>
           </motion.div>
-        </section>
-
-        {/* Video Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="max-w-6xl mx-auto"
-            >
-              <div className="text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-bold mb-3 text-slate-900">
-                  Mağaza Personel Takip Programı Nasıl Çalışır?
-                </h2>
-                <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-                  Vardiya planlama, izin yönetimi ve mobil PDKS özelliklerini videomuzda keşfedin
-                </p>
-              </div>
-
-              <Card className="overflow-hidden shadow-lg border border-slate-200 bg-white">
-                <CardContent className="p-0">
-                  <div className="relative aspect-video bg-slate-100 flex items-center justify-center group">
-                    {!videoError ? (
-                      <>
-                        <video
-                          className="w-full h-full object-cover"
-                          controls
-                          muted
-                          playsInline
-                          poster="/placeholder-video.jpg"
-                          onError={() => setVideoError(true)}
-                          data-testid="magaza-video"
-                        >
-                          <source src="/magaza-personel-takip.mp4" type="video/mp4" />
-                          Tarayıcınız video oynatmayı desteklemiyor.
-                        </video>
-                      </>
-                    ) : (
-                      <div className="text-center p-12 text-slate-700">
-                        <div className="inline-flex p-6 rounded-full bg-primary/10 mb-4">
-                          <Play className="h-16 w-16 text-primary" />
-                        </div>
-                        <h3 className="text-2xl font-bold mb-2">Tanıtım Videosu</h3>
-                        <p className="text-slate-600 text-lg">
-                          Mağaza Personel Takip Programı özelliklerini keşfedin
-                        </p>
-                        <p className="text-slate-500 text-sm mt-4">
-                          Video dosyası yükleniyor...
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-
-              <div className="grid md:grid-cols-4 gap-4 mt-8">
-                {benefits.map((benefit, index) => {
-                  const Icon = benefit.icon;
-                  return (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 }}
-                    >
-                      <Card className="text-center hover:shadow-md transition-all duration-300 border border-slate-200 bg-white">
-                        <CardContent className="p-5">
-                          <div className="inline-flex p-3 rounded-full bg-primary/10 mb-3">
-                            <Icon className="h-7 w-7 text-primary" />
-                          </div>
-                          <h3 className="font-bold text-sm mb-2 text-slate-900">{benefit.title}</h3>
-                          <p className="text-xs text-slate-600 leading-relaxed">{benefit.description}</p>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            </motion.div>
-          </div>
         </section>
 
         {/* Ana Özellikler Kartları */}
