@@ -6,7 +6,7 @@ import {
   Calendar, TrendingUp, Smartphone, 
   BarChart3, FileText, Database,
   Phone, Mail, MapPin, CheckCircle2,
-  Play, Shield, Timer, DollarSign, LineChart
+  Play
 } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
@@ -109,29 +109,6 @@ export default function MagazaPersonelTakipPage() {
       gradient: "from-teal-500 to-cyan-500",
       keywords: "sistem entegrasyonu, bordro entegrasyonu, api",
       imagePlaceholder: "entegrasyon-otomasyon.jpg"
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: Timer,
-      title: "Vardiya Çakışmalarını Önleyin",
-      description: "Mağaza müdürü shift'i yapar bölge müdürü onaylar"
-    },
-    {
-      icon: DollarSign,
-      title: "Fazla Mesai Kontrolü",
-      description: "Fazla mesai saatlerini otomatik hesaplayın, prim ve ek ücret hesaplamalarını kolaylaştırın."
-    },
-    {
-      icon: LineChart,
-      title: "Performans Bazlı Prim",
-      description: "Satış hedefleri, çalışma saatleri ve performans kriterlerine göre otomatik prim hesaplama."
-    },
-    {
-      icon: Shield,
-      title: "Yasal Uyumluluk",
-      description: "İş kanunu ve SGK mevzuatına uyumlu çalışma saati takibi ve raporlama sistemi."
     }
   ];
 
@@ -242,7 +219,7 @@ export default function MagazaPersonelTakipPage() {
             <div className="flex items-center justify-center mb-8">
               <div className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-lg">
                 <span className="text-2xl font-bold">2</span>
-                <span className="text-lg font-semibold">TANITIM VİDEOSU & AVANTAJLAR</span>
+                <span className="text-lg font-semibold">TANITIM VİDEOSU</span>
               </div>
             </div>
             
@@ -288,31 +265,6 @@ export default function MagazaPersonelTakipPage() {
                   </div>
                 </CardContent>
               </Card>
-
-              <div className="grid md:grid-cols-4 gap-4">
-                {benefits.map((benefit, index) => {
-                  const Icon = benefit.icon;
-                  return (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 }}
-                    >
-                      <Card className="text-center hover:shadow-md transition-all duration-300 border border-slate-200 bg-white">
-                        <CardContent className="p-5">
-                          <div className="inline-flex p-3 rounded-full bg-primary/10 mb-3">
-                            <Icon className="h-7 w-7 text-primary" />
-                          </div>
-                          <h3 className="font-bold text-sm mb-2 text-slate-900">{benefit.title}</h3>
-                          <p className="text-xs text-slate-600 leading-relaxed">{benefit.description}</p>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
-                  );
-                })}
-              </div>
             </motion.div>
           </div>
         </section>
