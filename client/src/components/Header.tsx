@@ -189,7 +189,7 @@ export default function Header() {
           <div className="flex items-center relative">
             <div className="flex-1 flex justify-center">
               <a 
-                href="https://wa.link/vblc5g" 
+                href="https://wa.me/905467122296" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="font-bold hover:text-white/90 transition-colors"

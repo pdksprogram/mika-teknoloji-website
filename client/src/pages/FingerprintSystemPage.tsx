@@ -402,7 +402,7 @@ export default function FingerprintSystemPage() {
                   className="border-white text-white hover:bg-white hover:text-primary font-semibold px-8"
                   data-testid="fingerprint-whatsapp-button"
                 >
-                  <a href="https://wa.link/vblc5g" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/905467122296" target="_blank" rel="noopener noreferrer">
                     💬 WhatsApp Teknik Destek
                   </a>
                 </Button>

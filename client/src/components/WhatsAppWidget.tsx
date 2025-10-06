@@ -14,7 +14,7 @@ export default function WhatsAppWidget() {
     return () => clearTimeout(timer);
   }, []);
 
-  const whatsappNumber = "https://wa.link/vblc5g";
+  const whatsappNumber = "https://wa.me/905467122296";
 
   const handleWhatsAppClick = () => {
     window.open(whatsappNumber, '_blank');

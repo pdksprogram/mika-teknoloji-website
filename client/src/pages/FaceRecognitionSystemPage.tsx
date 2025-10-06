@@ -374,7 +374,7 @@ export default function FaceRecognitionSystemPage() {
                   className="border-white text-white hover:bg-white hover:text-primary font-semibold px-8"
                   data-testid="cta-whatsapp-button"
                 >
-                  <a href="https://wa.link/vblc5g" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/905467122296" target="_blank" rel="noopener noreferrer">
                     💬 WhatsApp Destek
                   </a>
                 </Button>
