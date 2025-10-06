@@ -348,13 +348,13 @@ export default function BariyerSistemleriPage() {
         </script>
       </Helmet>
 
-      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <section className="pt-32 pb-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <motion.div 
-            className="max-w-6xl mx-auto"
+            className="max-w-7xl mx-auto"
             {...fadeInUp}
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-slate-800">
+            <div className="relative rounded-3xl overflow-hidden shadow-lg">
               <div className="aspect-video">
                 <iframe
                   className="w-full h-full"
