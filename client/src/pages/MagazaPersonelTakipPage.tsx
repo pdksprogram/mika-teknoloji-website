@@ -221,18 +221,6 @@ export default function MagazaPersonelTakipPage() {
           
           <div className="container mx-auto px-4">
             <motion.div 
-              className="text-center mb-12"
-              {...fadeInUp}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
-                Mağaza Personel Takip Programı Özellikleri
-              </h2>
-              <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-                Vardiya planlama, shift yönetimi, izin takibi, prim hesaplama ve mobil PDKS ile kapsamlı personel yönetimi
-              </p>
-            </motion.div>
-
-            <motion.div 
               className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
               variants={staggerContainer}
               initial="initial"
