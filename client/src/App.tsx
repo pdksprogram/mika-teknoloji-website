@@ -62,6 +62,7 @@ import PTGuardDetailPage from "@/pages/PTGuardDetailPage";
 import TuzaklarDetailPage from "@/pages/TuzaklarDetailPage";
 import MantarBariyerDetailPage from "@/pages/MantarBariyerDetailPage";
 import RoadBlockerDetailPage from "@/pages/RoadBlockerDetailPage";
+import MagazaPersonelTakipPage from "@/pages/MagazaPersonelTakipPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -127,6 +128,7 @@ function Router() {
       <Route path="/urunler/personel-takip" component={PersonelTakipPage} />
       <Route path="/urunler/qr-pdks" component={QRPDKSPage} />
       <Route path="/urunler/bariyer-sistemleri" component={BariyerSistemleriPage} />
+      <Route path="/urunler/magaza-personel-takip" component={MagazaPersonelTakipPage} />
       
       {/* Bariyer Sistemleri Detay Sayfaları */}
       <Route path="/urunler/pt-plus-bariyer" component={PTPlusDetailPage} />

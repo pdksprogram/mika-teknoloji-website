@@ -10,6 +10,15 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes (Latest)
 
+- **Mağaza Personel Takip Programı Sayfası (Ekim 2025)**: Yeni ürün sayfası eklendi
+  - Perakende ve mağaza sektörü için özel personel takip programı sayfası oluşturuldu
+  - SEO optimizasyonu: vardiya planlama, shift planlama, vardiya optimizasyonu, personel planlama anahtar kelimeleri
+  - İzin yönetimi, prim yönetimi, mobil PDKS, giriş-çıkış takibi özellikleri vurgulandı
+  - KPI/analitik raporlama ve sistem entegrasyonu detaylandırıldı
+  - Structured data (Schema.org) ile SoftwareApplication şeması eklendi
+  - 6 detaylı FAQ ile yaygın soruları yanıtlandı
+  - Ürünler menüsü güncellendi: "Plaka Tanıma" kaldırıldı, "Mağaza Personel Takip Programı" eklendi
+
 - **Page Loading Animations (January 2025)**: Added comprehensive loading and motion animations
   - Created LoadingScreen component with progress bar and company logo animation
   - Implemented smooth page transitions using Framer Motion with fade-in effects
