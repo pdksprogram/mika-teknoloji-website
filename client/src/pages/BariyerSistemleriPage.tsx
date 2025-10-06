@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Shield, Clock, Settings, CheckCircle2, CheckCircle, ArrowRight, Lock, Gauge, AlertTriangle, Phone, Mail, MapPin, Award, Users, TrendingUp, Wrench } from "lucide-react";
 import { Link } from "wouter";
 import { trackEvent } from "@/lib/analytics";
+import bariyerVideo from "@assets/bariyer sistemleri_1759763379528.mp4";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -356,13 +357,16 @@ export default function BariyerSistemleriPage() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-lg">
               <div className="aspect-video">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                  title="Bariyer Sistemleri Tanıtım Videosu"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <video
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  controls
+                  playsInline
+                >
+                  <source src={bariyerVideo} type="video/mp4" />
+                  Tarayıcınız video oynatmayı desteklemiyor.
+                </video>
               </div>
             </div>
           </motion.div>
