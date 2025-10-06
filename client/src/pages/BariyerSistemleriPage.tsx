@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Shield, Clock, Zap, Settings, CheckCircle2, ArrowRight, Lock, Gauge, AlertTriangle, Phone, Mail, MapPin, Award, Users, TrendingUp, Wrench } from "lucide-react";
+import { Shield, Clock, Zap, Settings, CheckCircle2, CheckCircle, ArrowRight, Lock, Gauge, AlertTriangle, Phone, Mail, MapPin, Award, Users, TrendingUp, Wrench } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 
 const fadeInUp = {
@@ -478,88 +478,67 @@ export default function BariyerSistemleriPage() {
                   {...fadeInUp}
                   className="relative"
                 >
-                  <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-500 bg-white overflow-hidden rounded-3xl">
-                    <CardContent className="p-0">
-                      <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-0`}>
-                        {/* Sol - Görsel Bölümü */}
-                        <div className="lg:w-[45%] relative bg-gradient-to-br from-slate-50 to-slate-100 p-12 flex items-center justify-center">
-                          <div className="relative w-full max-w-lg">
-                            {/* Icon Badge */}
-                            <div className={`absolute -top-6 ${isEven ? '-right-6' : '-left-6'} z-20 w-16 h-16 bg-gradient-to-br ${segment.gradient} rounded-2xl flex items-center justify-center shadow-xl`}>
-                              <Icon className="w-8 h-8 text-white" />
-                            </div>
-                            
-                            {/* Ana Görsel */}
-                            <div className="relative bg-white rounded-3xl p-4 shadow-2xl">
-                              <div className="relative rounded-2xl overflow-hidden">
-                                <img 
-                                  src={segment.image} 
-                                  alt={`${segment.title} - ${segment.subtitle}`}
-                                  className="w-full h-[400px] object-contain bg-gradient-to-br from-slate-50 to-white"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
+                  <Card className="h-full hover:shadow-lg transition-shadow duration-300 relative">
+                    {/* Icon Badge */}
+                    <div className="absolute -top-3 -right-3 z-10">
+                      <div className="relative">
+                        <div className={`bg-gradient-to-r ${segment.gradient} text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl`}>
+                          <div className="flex items-center gap-2">
+                            <Icon className="w-4 h-4" />
+                            <span>{segment.id}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <CardContent className="p-6">
+                      <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8`}>
+                        {/* Görsel */}
+                        <div className="lg:w-1/2">
+                          <div className="bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden border border-gray-200">
+                            <img 
+                              src={segment.image} 
+                              alt={`${segment.title} - ${segment.subtitle}`}
+                              className="w-full h-[400px] object-contain"
+                              style={{ backgroundColor: '#ffffff', padding: '16px' }}
+                              loading="lazy"
+                            />
                           </div>
                         </div>
 
-                        {/* Sağ - İçerik Bölümü */}
-                        <div className="lg:w-[55%] p-10 lg:p-12 bg-white">
-                          <div className="space-y-6">
-                            {/* Badge */}
-                            <div className={`inline-flex items-center px-4 py-2 rounded-xl bg-gradient-to-r ${segment.gradient} shadow-lg`}>
-                              <span className="text-white font-bold text-sm tracking-wider uppercase">
-                                {segment.id}
-                              </span>
-                            </div>
+                        {/* İçerik */}
+                        <div className="lg:w-1/2">
+                          <h3 className="text-2xl font-bold text-gray-900 mb-2">{segment.title}</h3>
+                          <p className={`font-semibold mb-4 bg-gradient-to-r ${segment.gradient} bg-clip-text text-transparent`}>
+                            {segment.subtitle}
+                          </p>
+                          <p className="text-gray-600 mb-6 leading-relaxed">{segment.description}</p>
 
-                            {/* Başlık */}
-                            <div>
-                              <h3 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">
-                                {segment.title}
-                              </h3>
-                              <p className={`text-lg font-semibold bg-gradient-to-r ${segment.gradient} bg-clip-text text-transparent`}>
-                                {segment.subtitle}
-                              </p>
-                              <div className={`w-16 h-1 bg-gradient-to-r ${segment.gradient} rounded-full mt-3`}></div>
-                            </div>
-
-                            {/* Açıklama */}
-                            <p className="text-slate-600 leading-relaxed">
-                              {segment.description}
-                            </p>
-
-                            {/* Teknik Özellikler */}
-                            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
-                              <div className="flex items-center mb-4">
-                                <Settings className={`w-5 h-5 mr-2 bg-gradient-to-r ${segment.gradient} bg-clip-text text-transparent`} />
-                                <h4 className="font-bold text-slate-900">Teknik Özellikler</h4>
-                              </div>
-                              <div className="space-y-3">
-                                {segment.specs.map((spec, idx) => (
-                                  <div key={idx} className="flex justify-between items-center py-2 border-b border-slate-200 last:border-0">
-                                    <span className="text-sm text-slate-600">{spec.label}:</span>
-                                    <span className="text-sm font-semibold text-slate-900">{spec.value}</span>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-
-                            {/* Özellikler */}
-                            <div>
-                              <h4 className="font-bold text-slate-900 mb-4">Özellikler</h4>
-                              <div className="grid grid-cols-2 gap-3">
-                                {segment.features.map((feature, idx) => (
-                                  <div key={idx} className="flex items-start space-x-2">
-                                    <div className={`w-5 h-5 rounded-lg bg-gradient-to-br ${segment.gradient} flex items-center justify-center flex-shrink-0 mt-0.5`}>
-                                      <CheckCircle2 className="w-3 h-3 text-white" />
-                                    </div>
-                                    <span className="text-sm text-slate-700 leading-snug">{feature}</span>
-                                  </div>
-                                ))}
-                              </div>
+                          {/* Teknik Özellikler */}
+                          <div className="bg-gray-50 rounded-lg p-4 mb-6">
+                            <h4 className="font-bold text-gray-900 mb-3 flex items-center">
+                              <Settings className="w-5 h-5 mr-2 text-primary" />
+                              Teknik Özellikler
+                            </h4>
+                            <div className="space-y-2">
+                              {segment.specs.map((spec, idx) => (
+                                <div key={idx} className="flex justify-between text-sm">
+                                  <span className="text-gray-600">{spec.label}:</span>
+                                  <span className="font-semibold text-gray-900">{spec.value}</span>
+                                </div>
+                              ))}
                             </div>
                           </div>
+
+                          {/* Özellikler */}
+                          <ul className="space-y-2">
+                            {segment.features.map((feature, idx) => (
+                              <li key={idx} className="flex items-center text-sm text-gray-600">
+                                <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                                {feature}
+                              </li>
+                            ))}
+                          </ul>
                         </div>
                       </div>
                     </CardContent>
