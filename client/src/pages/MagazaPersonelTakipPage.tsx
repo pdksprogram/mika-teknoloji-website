@@ -13,6 +13,7 @@ import { useState } from "react";
 import vardiyaPlanlama from "@assets/IMG_4278_1759780466857.png";
 import vardiyaOnay from "@assets/IMG_4279_1759780771668.png";
 import vardiyaBildirim from "@assets/IMG_4280_1759781022450.png";
+import izinAvans from "@assets/IMG_4281_1759781338557.png";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -91,11 +92,11 @@ export default function MagazaPersonelTakipPage() {
     },
     {
       icon: Smartphone,
-      title: "Mobil PDKS ve Giriş-Çıkış Takibi",
-      description: "Mobil uygulama ile personel giriş-çıkış takibi, QR kod ile PDKS, GPS tabanlı konum doğrulama ve anlık bildirimler. Her yerden erişim imkanı.",
+      title: "İzin ve Avans Talep Yönetim Sistemi",
+      description: "Mağaza personeli, izin talepleri ve avans ücret taleplerini mobil uygulama üzerinden kolayca başlatır. Talepler önce mağaza müdürüne iletilir ve onaylanır. Ardından merkez İnsan Kaynakları departmanına düşer ve nihai onay alınır. Onay sürecinin her aşamasında personele push bildirim gönderilir. İzin veya avans talebinin onaylandığı, reddedildiği ve ret nedenleri anında çalışana iletilir. Bu çok katmanlı onay süreci hem hiyerarşik yapıyı güçlendirir hem de şeffaf bir talep yönetimi sağlar.",
       gradient: "from-orange-500 to-red-500",
-      keywords: "mobil pdks, giriş çıkış takibi, mobil personel takip",
-      imagePlaceholder: "mobil-pdks.jpg"
+      keywords: "izin talebi, avans talebi, çok katmanlı onay, İK yönetimi, talep bildirimleri",
+      imagePlaceholder: "izin-avans-yonetimi.jpg"
     },
     {
       icon: BarChart3,
@@ -129,8 +130,8 @@ export default function MagazaPersonelTakipPage() {
       answer: "Mağaza müdürü tarafından oluşturulan ve bölge müdürü tarafından onaylanan vardiya planları, mobil uygulama üzerinden personele otomatik olarak iletilir. Push bildirim sistemi sayesinde çalışanlar hangi gün, hangi saatte ve hangi vardiyada çalışacaklarını anlık olarak öğrenir. Vardiya değişikliklerinde de anında bilgilendirme yapılır."
     },
     {
-      question: "Mobil PDKS ile giriş-çıkış takibi nasıl yapılır?",
-      answer: "Personeller mobil uygulama ile QR kod okutarak veya GPS konum doğrulama ile giriş-çıkış yapabilir. Mağaza dışı çalışan personel için konum bazlı mobil PDKS özelliği mevcuttur. Tüm giriş çıkışlar anlık olarak sisteme kaydedilir ve yöneticiler tarafından takip edilebilir."
+      question: "İzin ve avans talep süreci nasıl işler?",
+      answer: "Personel mobil uygulama üzerinden izin veya avans talebini başlatır. Talep önce mağaza müdürüne düşer ve incelenir. Mağaza müdürü onayladıktan sonra merkez İnsan Kaynakları departmanına iletilir. İK nihai onayı verdikten sonra personele push bildirim olarak sonuç bildirilir. Red durumunda ret nedeni de detaylı şekilde paylaşılır. Tüm süreç şeffaf ve takip edilebilirdir."
     },
     {
       question: "KPI ve analitik raporlama özellikleri nelerdir?",
@@ -245,7 +246,7 @@ export default function MagazaPersonelTakipPage() {
                       <CardContent className="p-0">
                         {/* Resim Alanı */}
                         <div className="relative h-56 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden border-b border-slate-200">
-                          {index === 0 || index === 1 || index === 2 ? (
+                          {index === 0 || index === 1 || index === 2 || index === 3 ? (
                             <div className="absolute inset-0 flex items-center justify-center p-6">
                               {/* Telefon Çerçevesi */}
                               <div className="relative bg-slate-900 rounded-[32px] p-3 shadow-2xl" style={{ width: '180px', height: '360px' }}>
@@ -258,7 +259,7 @@ export default function MagazaPersonelTakipPage() {
                                   
                                   {/* Ekran İçeriği */}
                                   <img 
-                                    src={index === 0 ? vardiyaPlanlama : index === 1 ? vardiyaOnay : vardiyaBildirim} 
+                                    src={index === 0 ? vardiyaPlanlama : index === 1 ? vardiyaOnay : index === 2 ? vardiyaBildirim : izinAvans} 
                                     alt={feature.title} 
                                     className="w-full h-full object-cover"
                                   />
