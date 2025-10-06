@@ -162,17 +162,12 @@ export default function MagazaPersonelTakipPage() {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-        {/* SEGMENT 2: Video + Avantaj Kartları */}
+        {/* SEGMENT 2: Video */}
         <section className="py-16 bg-white relative">
+          {/* Segment İşareti - Sağ Üst Köşe */}
+          <div className="absolute top-4 right-4 text-slate-400 text-sm font-medium">S2</div>
+          
           <div className="container mx-auto px-4">
-            {/* Segment Başlık Badge */}
-            <div className="flex items-center justify-center mb-8">
-              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-lg">
-                <span className="text-2xl font-bold">2</span>
-                <span className="text-lg font-semibold">TANITIM VİDEOSU</span>
-              </div>
-            </div>
-            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -220,16 +215,11 @@ export default function MagazaPersonelTakipPage() {
         </section>
 
         {/* SEGMENT 3: Ana Özellikler Kartları */}
-        <section className="py-16 bg-slate-50">
+        <section className="py-16 bg-slate-50 relative">
+          {/* Segment İşareti - Sağ Üst Köşe */}
+          <div className="absolute top-4 right-4 text-slate-400 text-sm font-medium">S3</div>
+          
           <div className="container mx-auto px-4">
-            {/* Segment Başlık Badge */}
-            <div className="flex items-center justify-center mb-8">
-              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-lg">
-                <span className="text-2xl font-bold">3</span>
-                <span className="text-lg font-semibold">ANA ÖZELLİKLER (1-6 NUMARALI KARTLAR)</span>
-              </div>
-            </div>
-            
             <motion.div 
               className="text-center mb-12"
               {...fadeInUp}
@@ -305,16 +295,11 @@ export default function MagazaPersonelTakipPage() {
         </section>
 
         {/* SEGMENT 4: Kullanım Alanları */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white relative">
+          {/* Segment İşareti - Sağ Üst Köşe */}
+          <div className="absolute top-4 right-4 text-slate-400 text-sm font-medium">S4</div>
+          
           <div className="container mx-auto px-4">
-            {/* Segment Başlık Badge */}
-            <div className="flex items-center justify-center mb-8">
-              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-lg">
-                <span className="text-2xl font-bold">4</span>
-                <span className="text-lg font-semibold">KULLANIM ALANLARI</span>
-              </div>
-            </div>
-            
             <motion.div 
               className="text-center mb-12"
               {...fadeInUp}
@@ -360,16 +345,11 @@ export default function MagazaPersonelTakipPage() {
         </section>
 
         {/* SEGMENT 5: FAQ */}
-        <section className="py-16 bg-slate-50">
+        <section className="py-16 bg-slate-50 relative">
+          {/* Segment İşareti - Sağ Üst Köşe */}
+          <div className="absolute top-4 right-4 text-slate-400 text-sm font-medium">S5</div>
+          
           <div className="container mx-auto px-4">
-            {/* Segment Başlık Badge */}
-            <div className="flex items-center justify-center mb-8">
-              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-lg">
-                <span className="text-2xl font-bold">5</span>
-                <span className="text-lg font-semibold">SIKÇA SORULAN SORULAR</span>
-              </div>
-            </div>
-            
             <motion.div 
               className="text-center mb-12"
               {...fadeInUp}
@@ -410,15 +390,10 @@ export default function MagazaPersonelTakipPage() {
 
         {/* SEGMENT 6: CTA (Çağrı) */}
         <section className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white relative">
+          {/* Segment İşareti - Sağ Üst Köşe */}
+          <div className="absolute top-4 right-4 text-white/60 text-sm font-medium">S6</div>
+          
           <div className="container mx-auto px-4 text-center">
-            {/* Segment Başlık Badge */}
-            <div className="flex items-center justify-center mb-8">
-              <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full shadow-lg border-2 border-white/30">
-                <span className="text-2xl font-bold">6</span>
-                <span className="text-lg font-semibold">İLETİŞİME GEÇİN</span>
-              </div>
-            </div>
-            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
