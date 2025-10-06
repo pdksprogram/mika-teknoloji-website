@@ -354,20 +354,6 @@ export default function BariyerSistemleriPage() {
             className="max-w-6xl mx-auto"
             {...fadeInUp}
           >
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center bg-primary/20 px-6 py-3 rounded-full border border-primary/30 mb-6">
-                <Shield className="w-5 h-5 mr-3 text-primary" />
-                <span className="text-primary font-semibold text-sm tracking-wider uppercase">Güvenlik Sistemleri</span>
-              </div>
-              <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                Bariyer Sistemleri
-              </h1>
-              <p className="text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-4xl mx-auto mb-12">
-                Otopark bariyeri, hidrolik mantar bariyer, road blocker ve güvenlik bariyer sistemleri. 
-                2 yıl garanti, ISO 9001 belgeli, profesyonel kurulum hizmetiyle tam güvenlik.
-              </p>
-            </div>
-
             <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-slate-800">
               <div className="aspect-video">
                 <iframe
@@ -377,32 +363,6 @@ export default function BariyerSistemleriPage() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
-              </div>
-            </div>
-
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4">
-                  <Shield className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Güvenilir Teknoloji</h3>
-                <p className="text-slate-300">ISO 9001 belgeli üretim ve 2 yıl garanti</p>
-              </div>
-              
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4">
-                  <Settings className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Kolay Kurulum</h3>
-                <p className="text-slate-300">Profesyonel ekip ile hızlı montaj hizmeti</p>
-              </div>
-              
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4">
-                  <Wrench className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">7/24 Destek</h3>
-                <p className="text-slate-300">Ömür boyu teknik destek ve bakım hizmeti</p>
               </div>
             </div>
           </motion.div>
