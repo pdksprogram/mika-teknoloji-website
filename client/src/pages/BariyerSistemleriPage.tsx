@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Shield, Clock, Zap, Settings, CheckCircle2, ArrowRight, Lock, Gauge, AlertTriangle } from "lucide-react";
+import { Shield, Clock, Zap, Settings, CheckCircle2, ArrowRight, Lock, Gauge, AlertTriangle, Phone, Mail, MapPin, Award, Users, TrendingUp, Wrench } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 
 const fadeInUp = {
@@ -205,6 +205,115 @@ const segments = [
   }
 ];
 
+const faqs = [
+  {
+    question: "Bariyer sistemi nasıl seçilir?",
+    answer: "Bariyer seçiminde kullanım alanı, geçiş sıklığı, güvenlik seviyesi ve kol uzunluğu göz önünde bulundurulmalıdır. Yoğun trafikli alanlarda PT Dinamik, yüksek güvenlik gerektiren noktalarda Road Blocker veya Mantar Bariyer tercih edilmelidir."
+  },
+  {
+    question: "Otopark bariyeri fiyatları ne kadardır?",
+    answer: "Bariyer fiyatları model, özellikler ve kurulum gereksinimlerine göre değişiklik gösterir. Detaylı fiyat teklifi için bizimle iletişime geçebilirsiniz. Ücretsiz keşif ve montaj danışmanlığı sunuyoruz."
+  },
+  {
+    question: "Bariyer kurulumu ne kadar sürer?",
+    answer: "Standart bir bariyer kurulumu 2-4 saat arasında tamamlanır. Yeraltı sistemleri ve özel uygulamalar için süre değişebilir. Profesyonel ekibimiz hızlı ve güvenli montaj sağlar."
+  },
+  {
+    question: "Hidrolik bariyer mi yoksa elektrikli bariyer mi?",
+    answer: "Hidrolik bariyerler daha yüksek dayanıklılık ve güç sunarken, elektrikli bariyerler daha ekonomik ve bakımı kolaydır. Yüksek güvenlik gerektiren alanlarda hidrolik, standart kullanımda elektrikli tercih edilebilir."
+  },
+  {
+    question: "Bariyer sistemleri hangi garanti kapsamındadır?",
+    answer: "Tüm bariyer sistemlerimiz 2 yıl üretici garantisi ile sunulmaktadır. Ayrıca periyodik bakım hizmetleri ve 7/24 teknik destek sağlıyoruz."
+  },
+  {
+    question: "Road Blocker sistemi nedir ve nerede kullanılır?",
+    answer: "Road Blocker, terör saldırılarına karşı maksimum koruma sağlayan hidrolik yol kesici sistemdir. Askeri tesisler, elçilikler, havalimanları ve kritik altyapı tesislerinde kullanılır."
+  }
+];
+
+const benefits = [
+  {
+    icon: Award,
+    title: "ISO 9001 Belgeli",
+    description: "Uluslararası kalite standartlarına uygun üretim"
+  },
+  {
+    icon: Users,
+    title: "Uzman Ekip",
+    description: "15+ yıl tecrübeli kurulum ve bakım kadrosu"
+  },
+  {
+    icon: TrendingUp,
+    title: "Yüksek Performans",
+    description: "7/24 kesintisiz çalışma garantisi"
+  },
+  {
+    icon: Wrench,
+    title: "Teknik Destek",
+    description: "Ömür boyu ücretsiz danışmanlık hizmeti"
+  }
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Bariyer Sistemleri",
+  "description": "Otopark bariyerleri, hidrolik bariyer, mantar bariyer, road blocker ve güvenlik bariyer sistemleri. Yüksek kaliteli araç giriş kontrol çözümleri.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Mika Teknoloji"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "156"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "TRY",
+    "availability": "https://schema.org/InStock"
+  }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Ana Sayfa",
+      "item": "https://mikateknoloji.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Ürünler",
+      "item": "https://mikateknoloji.com/urunler"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Bariyer Sistemleri",
+      "item": "https://mikateknoloji.com/urunler/bariyer-sistemleri"
+    }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+};
+
 export default function BariyerSistemleriPage() {
   const handleContactClick = () => {
     trackEvent('Contact Request', 'bariyer_contact', 'Bariyer Sistemleri Page - Contact Button');
@@ -214,15 +323,46 @@ export default function BariyerSistemleriPage() {
   return (
     <>
       <Helmet>
-        <title>Bariyer Sistemleri - Otopark Bariyerleri ve Güvenlik Sistemleri | Mika Teknoloji</title>
-        <meta name="description" content="Hidrolik bariyer, mantar bariyer, road blocker ve otopark bariyer sistemleri. Yüksek güvenlikli araç giriş kontrol çözümleri. ISO 9001 belgeli Mika Teknoloji kalitesi." />
-        <meta name="keywords" content="bariyer sistemleri, otopark bariyeri, hidrolik bariyer, mantar bariyer, road blocker, araç giriş kontrol, güvenlik bariyeri, PT PLUS bariyer, dinamik bariyer, tuzak sistemleri" />
+        <title>Bariyer Sistemleri - Otopark Bariyeri, Hidrolik Bariyer, Road Blocker 2025 | Mika Teknoloji</title>
+        <meta name="description" content="✅ Profesyonel bariyer sistemleri: Otopark bariyeri, hidrolik mantar bariyer, road blocker, PT PLUS ve dinamik bariyer çözümleri. ISO 9001 belgeli, 2 yıl garanti, ücretsiz keşif. İstanbul'da en iyi bariyer fiyatları!" />
+        <meta name="keywords" content="bariyer sistemleri, otopark bariyeri, hidrolik bariyer, mantar bariyer, road blocker, güvenlik bariyeri, PT PLUS bariyer, dinamik bariyer, tuzak sistemleri, bariyer fiyatları, otopark bariyeri kurulumu, otomatik bariyer, kollu bariyer, bariyer montajı, araç giriş kontrol, park bariyeri, bariyer sistemi fiyat, uzaktan kumandalı bariyer, fotoselli bariyer" />
         
-        <meta property="og:title" content="Bariyer Sistemleri - Otopark Bariyerleri ve Güvenlik Sistemleri | Mika Teknoloji" />
-        <meta property="og:description" content="Hidrolik bariyer, mantar bariyer, road blocker ve otopark bariyer sistemleri. Yüksek güvenlikli araç giriş kontrol çözümleri." />
-        <meta property="og:type" content="product" />
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Bariyer Sistemleri - Otopark Bariyeri & Hidrolik Bariyer | Mika Teknoloji" />
+        <meta property="og:description" content="Profesyonel bariyer sistemleri: Otopark bariyeri, hidrolik bariyer, road blocker. ISO 9001 belgeli, 2 yıl garanti, ücretsiz keşif!" />
+        <meta property="og:type" content="product.group" />
+        <meta property="og:url" content="https://mikateknoloji.com/urunler/bariyer-sistemleri" />
+        <meta property="og:image" content="https://mikateknoloji.com/assets/bariyer-sistemleri-og.jpg" />
+        <meta property="og:locale" content="tr_TR" />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Bariyer Sistemleri - Otopark Bariyeri & Hidrolik Bariyer" />
+        <meta name="twitter:description" content="ISO 9001 belgeli bariyer sistemleri. Otopark bariyeri, hidrolik bariyer, road blocker çözümleri. Ücretsiz keşif!" />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="Mika Teknoloji" />
+        <meta name="publisher" content="Mika Teknoloji" />
+        <meta name="geo.region" content="TR" />
+        <meta name="geo.placename" content="İstanbul" />
         
         <link rel="canonical" href="https://mikateknoloji.com/urunler/bariyer-sistemleri" />
+        
+        {/* Structured Data - Product Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+        
+        {/* Structured Data - Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+        
+        {/* Structured Data - FAQ Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
       </Helmet>
 
       <section className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
@@ -249,8 +389,8 @@ export default function BariyerSistemleriPage() {
             </h1>
             
             <p className="text-xl lg:text-2xl text-slate-300 leading-relaxed mb-12">
-              Otopark ve güvenlik alanları için profesyonel bariyer çözümleri. 
-              Hidrolik, elektrikli ve road blocker sistemleri ile tam güvenlik.
+              Otopark bariyeri, hidrolik mantar bariyer, road blocker ve güvenlik bariyer sistemleri. 
+              2 yıl garanti, ISO 9001 belgeli, profesyonel kurulum hizmetiyle tam güvenlik.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -260,7 +400,7 @@ export default function BariyerSistemleriPage() {
                 onClick={handleContactClick}
                 className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg group"
               >
-                Teklif Alın
+                Ücretsiz Teklif Alın
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button 
@@ -269,7 +409,7 @@ export default function BariyerSistemleriPage() {
                 data-testid="button-catalog"
                 className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-6 text-lg"
               >
-                Ürün Kataloğu
+                Ürün Kataloğu İndir
               </Button>
             </div>
           </motion.div>
@@ -351,7 +491,7 @@ export default function BariyerSistemleriPage() {
                               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                                 <img 
                                   src={segment.image} 
-                                  alt={segment.title}
+                                  alt={`${segment.title} - ${segment.subtitle} - Mika Teknoloji profesyonel bariyer çözümleri`}
                                   className="w-full h-80 object-cover"
                                   loading="lazy"
                                 />
@@ -449,17 +589,108 @@ export default function BariyerSistemleriPage() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div className="text-center mb-16" {...fadeInUp}>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6">
+              Neden Mika Teknoloji?
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              15 yılı aşkın tecrübemiz ve müşteri memnuniyeti odaklı hizmet anlayışımızla yanınızdayız
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+          >
+            {benefits.map((benefit, index) => {
+              const Icon = benefit.icon;
+              return (
+                <motion.div key={index} variants={fadeInUp}>
+                  <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-all h-full">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon className="w-8 h-8 text-primary" />
+                    </div>
+                    <h3 className="font-bold text-lg mb-2 text-slate-800">{benefit.title}</h3>
+                    <p className="text-slate-600 text-sm">{benefit.description}</p>
+                  </Card>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <motion.div className="text-center mb-16" {...fadeInUp}>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6">
+              Sıkça Sorulan Sorular
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Bariyer sistemleri hakkında merak ettikleriniz
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="max-w-4xl mx-auto space-y-6"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+          >
+            {faqs.map((faq, index) => (
+              <motion.div key={index} variants={fadeInUp}>
+                <Card className="border-0 shadow-lg hover:shadow-xl transition-all">
+                  <CardContent className="p-8">
+                    <h3 className="text-xl font-bold text-slate-800 mb-4 flex items-start">
+                      <span className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                        ?
+                      </span>
+                      {faq.question}
+                    </h3>
+                    <p className="text-slate-600 leading-relaxed ml-12">
+                      {faq.answer}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-white/5"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div className="max-w-4xl mx-auto text-center" {...fadeInUp}>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Bariyer Sistemi Kurulumu için Teklif Alın
+              Bariyer Sistemi Kurulumu İçin Ücretsiz Teklif Alın
             </h2>
             <p className="text-xl text-slate-300 mb-12 leading-relaxed">
               Profesyonel ekibimiz, size en uygun bariyer sistemini seçmenizde ve kurulumunda yardımcı olmaya hazır. 
-              Ücretsiz keşif ve teklif için hemen iletişime geçin.
+              Ücretsiz keşif ve detaylı fiyat teklifi için hemen iletişime geçin.
             </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="flex items-center justify-center space-x-3 text-white">
+                <Phone className="w-6 h-6 text-primary" />
+                <span className="text-lg">(0212) 555 00 00</span>
+              </div>
+              <div className="flex items-center justify-center space-x-3 text-white">
+                <Mail className="w-6 h-6 text-primary" />
+                <span className="text-lg">info@mikateknoloji.com</span>
+              </div>
+              <div className="flex items-center justify-center space-x-3 text-white">
+                <MapPin className="w-6 h-6 text-primary" />
+                <span className="text-lg">İstanbul</span>
+              </div>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg"
@@ -476,7 +707,7 @@ export default function BariyerSistemleriPage() {
                 data-testid="button-cta-phone"
                 className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-12 py-6 text-lg"
               >
-                (0212) 555 00 00
+                Hemen Ara
               </Button>
             </div>
           </motion.div>
