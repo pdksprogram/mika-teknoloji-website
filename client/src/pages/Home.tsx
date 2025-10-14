@@ -161,24 +161,29 @@ export default function Home() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
               {[
                 { 
-                  title: "Holding PDKS Projesi", 
-                  description: "Çok Lokasyonlu Personel Devam Kontrol Sistemi Uygulaması" 
+                  title: "Turnike Montajımız", 
+                  description: "Profesyonel ekibimiz tarafından gerçekleştirilen turnike kurulum ve montaj çalışması",
+                  videoUrl: "/turnike-montaj.mp4"
                 },
                 { 
                   title: "Fabrika Yüz Tanıma", 
-                  description: "Üretim Tesisinde Biyometrik Güvenlik ve Vardiya Takibi" 
+                  description: "Üretim Tesisinde Biyometrik Güvenlik ve Vardiya Takibi",
+                  videoUrl: null
                 },
                 { 
                   title: "AVM Geçiş Kontrol", 
-                  description: "Alışveriş Merkezi Access Control ve Turnike Sistemi" 
+                  description: "Alışveriş Merkezi Access Control ve Turnike Sistemi",
+                  videoUrl: null
                 },
                 { 
                   title: "Hastane PDKS Çözümü", 
-                  description: "Sağlık Sektöründe 7/24 Personel Takip ve Mesai Yönetimi" 
+                  description: "Sağlık Sektöründe 7/24 Personel Takip ve Mesai Yönetimi",
+                  videoUrl: null
                 },
                 { 
                   title: "Kamu QR-Patrol", 
-                  description: "Kamu Binası Güvenlik Devriye ve Kontrol Sistemi" 
+                  description: "Kamu Binası Güvenlik Devriye ve Kontrol Sistemi",
+                  videoUrl: null
                 }
               ].map((video, index) => (
                 <motion.div
@@ -190,13 +195,26 @@ export default function Home() {
                   className="group"
                 >
                   <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
-                    <div className="relative aspect-video bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center cursor-pointer group-hover:from-pink-600 group-hover:to-pink-500 transition-all duration-300">
-                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300"></div>
-                      <Play className="w-16 h-16 text-white/90 group-hover:scale-110 transition-transform duration-300 relative z-10" />
-                      <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
-                        <p className="text-white text-xs font-medium">Video Yüklenecek</p>
+                    {video.videoUrl ? (
+                      <div className="relative aspect-video bg-black">
+                        <video 
+                          className="w-full h-full object-cover"
+                          controls
+                          preload="metadata"
+                        >
+                          <source src={video.videoUrl} type="video/mp4" />
+                          Tarayıcınız video etiketini desteklemiyor.
+                        </video>
                       </div>
-                    </div>
+                    ) : (
+                      <div className="relative aspect-video bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center cursor-pointer group-hover:from-pink-600 group-hover:to-pink-500 transition-all duration-300">
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300"></div>
+                        <Play className="w-16 h-16 text-white/90 group-hover:scale-110 transition-transform duration-300 relative z-10" />
+                        <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
+                          <p className="text-white text-xs font-medium">Video Yüklenecek</p>
+                        </div>
+                      </div>
+                    )}
                     <CardContent className="p-4">
                       <h3 className="font-semibold text-slate-800 mb-1">{video.title}</h3>
                       <p className="text-sm text-slate-600">{video.description}</p>
