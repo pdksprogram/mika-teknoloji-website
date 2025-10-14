@@ -168,10 +168,14 @@ export default function Home() {
       </Helmet>
       
       {/* Hero Carousel Section */}
-      <HeroCarousel />
+      <section className="relative">
+        <div className="absolute top-4 right-4 z-20 text-xs font-semibold text-pink-600 bg-white/80 px-2 py-1 rounded">S1</div>
+        <HeroCarousel />
+      </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section className="relative py-20 bg-white">
+        <div className="absolute top-4 right-4 text-xs font-semibold text-pink-600 bg-pink-50 px-2 py-1 rounded">S2</div>
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -294,7 +298,8 @@ export default function Home() {
       </section>
 
       {/* Reference Section - Following Meyer's approach */}
-      <section className="py-20 bg-gray-50">
+      <section className="relative py-20 bg-gray-50">
+        <div className="absolute top-4 right-4 text-xs font-semibold text-pink-600 bg-white px-2 py-1 rounded">S3</div>
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -365,7 +370,8 @@ export default function Home() {
       </section>
 
       {/* Detailed Content Section - For SEO */}
-      <section className="py-20 bg-white">
+      <section className="relative py-20 bg-white">
+        <div className="absolute top-4 right-4 text-xs font-semibold text-pink-600 bg-pink-50 px-2 py-1 rounded">S4</div>
         <div className="container mx-auto px-4">
           <motion.div
             className="max-w-4xl mx-auto"
@@ -469,7 +475,8 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-slate-800 text-white">
+      <section className="relative py-20 bg-slate-800 text-white">
+        <div className="absolute top-4 right-4 text-xs font-semibold text-pink-600 bg-white px-2 py-1 rounded">S5</div>
         <div className="container mx-auto px-4 text-center">
           <motion.h2 
             className="text-3xl md:text-4xl font-bold mb-4" 
