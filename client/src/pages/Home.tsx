@@ -3,13 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { useLanguage } from "@/hooks/useLanguage";
 import { Helmet } from "react-helmet-async";
 import HeroCarousel from "@/components/HeroCarousel";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 export default function Home() {
-  const { t } = useLanguage();
 
   return (
     <div className="min-h-screen">
@@ -166,9 +164,9 @@ export default function Home() {
                   videoUrl: "/turnike-montaj.mp4"
                 },
                 { 
-                  title: "Fabrika Yüz Tanıma", 
-                  description: "Üretim Tesisinde Biyometrik Güvenlik ve Vardiya Takibi",
-                  videoUrl: null
+                  title: "Yüz Tanıma Montajı", 
+                  description: "Profesyonel ekibimiz tarafından gerçekleştirilen yüz tanıma cihazı kurulum ve montaj çalışması",
+                  videoUrl: "/yuz-tanima-montaj.mp4"
                 },
                 { 
                   title: "AVM Geçiş Kontrol", 
