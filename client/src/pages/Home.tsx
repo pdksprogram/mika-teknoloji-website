@@ -150,7 +150,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4 text-center">
-              Tamamlanmış Proje Referanslarımız
+              Tamamlanmış Proje Montajları
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-12 text-center">
               30 yılı aşkın deneyimimiz ile Türkiye'nin önde gelen kurumlarına sunduğumuz PDKS ve güvenlik çözümlerinden örnekler
