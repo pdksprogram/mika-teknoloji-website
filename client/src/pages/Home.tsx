@@ -1,4 +1,4 @@
-import { ArrowRight, Shield, Clock, Users, CheckCircle } from "lucide-react";
+import { ArrowRight, Shield, Clock, Users, CheckCircle, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
@@ -272,7 +272,7 @@ export default function Home() {
 
           {/* Key Features */}
           <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-4"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-20"
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
@@ -293,6 +293,54 @@ export default function Home() {
                 <span className="text-slate-700">{feature}</span>
               </motion.div>
             ))}
+          </motion.div>
+
+          {/* Örnek Proje Videolarımız */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-8 text-center">
+              Örnek Proje Videolarımız
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-12 text-center">
+              Tamamlanmış projelerimizden seçkin örnekler ve başarı hikayelerimiz
+            </p>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+              {[
+                { title: "Proje Video 1", description: "Kurumsal PDKS Çözümü" },
+                { title: "Proje Video 2", description: "Yüz Tanıma Sistemi" },
+                { title: "Proje Video 3", description: "Access Control" },
+                { title: "Proje Video 4", description: "QR-Patrol Uygulaması" },
+                { title: "Proje Video 5", description: "Turnike Entegrasyonu" }
+              ].map((video, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group"
+                >
+                  <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div className="relative aspect-video bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center cursor-pointer group-hover:from-pink-600 group-hover:to-pink-500 transition-all duration-300">
+                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300"></div>
+                      <Play className="w-16 h-16 text-white/90 group-hover:scale-110 transition-transform duration-300 relative z-10" />
+                      <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
+                        <p className="text-white text-xs font-medium">Video Yüklenecek</p>
+                      </div>
+                    </div>
+                    <CardContent className="p-4">
+                      <h3 className="font-semibold text-slate-800 mb-1">{video.title}</h3>
+                      <p className="text-sm text-slate-600">{video.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
