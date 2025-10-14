@@ -1,6 +1,6 @@
-import { ArrowRight, Shield, Clock, Users, CheckCircle, Play } from "lucide-react";
+import { Play, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/hooks/useLanguage";
@@ -10,39 +10,6 @@ import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 export default function Home() {
   const { t } = useLanguage();
-  
-  const services = [
-    {
-      icon: Shield,
-      title: t.home.services.webpdks.title,
-      description: t.home.services.webpdks.description,
-      href: "/cozumler/webpdks"
-    },
-    {
-      icon: Clock,
-      title: t.home.services.qrPatrol.title,
-      description: t.home.services.qrPatrol.description,
-      href: "/cozumler/qr-patrol"
-    },
-    {
-      icon: Users,
-      title: t.home.services.accessControl.title,
-      description: t.home.services.accessControl.description,
-      href: "/cozumler/access-kontrol"
-    }
-  ];
-
-  const features = t.home.features;
-
-  // Animation variants
-
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
 
   return (
     <div className="min-h-screen">
@@ -173,129 +140,11 @@ export default function Home() {
         <HeroCarousel />
       </section>
 
-      {/* Features Section */}
+      {/* Project Videos Section */}
       <section className="relative py-20 bg-white">
         <div className="absolute top-4 right-4 text-xs font-semibold text-pink-600 bg-pink-50 px-2 py-1 rounded">S2</div>
         <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6" data-testid="main-heading">
-              Personel Devam Kontrol Sistemi - PDKS ve Parmak İzi Takip
-            </h1>
-            <div className="flex flex-wrap justify-center gap-6 mb-6">
-              <div className="bg-pink-50 px-4 py-2 rounded-full">
-                <span className="text-pink-600 font-semibold">50.000+ Kullanıcı</span>
-              </div>
-              <div className="bg-pink-50 px-4 py-2 rounded-full">
-                <span className="text-pink-600 font-semibold">30+ Yıl Deneyim</span>
-              </div>
-              <div className="bg-pink-50 px-4 py-2 rounded-full">
-                <span className="text-pink-600 font-semibold">%99.9 Güvenilirlik</span>
-              </div>
-            </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4" data-testid="features-title">
-              1990'dan Beri Türkiye'nin Lider PDKS - Yüz Tanıma ve Güvenlik Teknolojileri
-            </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-8">
-              MT1100, MTP50, MTFDP200, MTFD15 serisi cihazlarımız ile 20.000 kapasite, TCP/IP, Wi-Fi desteği. 
-              ISO 27001 sertifikalı, bordro entegrasyonu, mesai hesaplama ve vardiya takibi.
-            </p>
-            
-            {/* Technical Specifications like ZKTeco */}
-            <div className="grid md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-              <div className="bg-white p-4 rounded-lg shadow-sm border">
-                <div className="text-2xl font-bold text-pink-600">20.000</div>
-                <div className="text-sm text-slate-600">Kullanıcı Kapasitesi</div>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm border">
-                <div className="text-2xl font-bold text-pink-600">0.3s</div>
-                <div className="text-sm text-slate-600">Yüz Tanıma Hızı</div>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm border">
-                <div className="text-2xl font-bold text-pink-600">TCP/IP</div>
-                <div className="text-sm text-slate-600">Ağ Bağlantısı</div>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm border">
-                <div className="text-2xl font-bold text-pink-600">Wi-Fi</div>
-                <div className="text-sm text-slate-600">Kablosuz Destek</div>
-              </div>
-            </div>
-          </motion.div>
-          
-          <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                variants={{
-                  initial: { opacity: 0, y: 40 },
-                  animate: { opacity: 1, y: 0 }
-                }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-2 h-full">
-                  <CardHeader>
-                    <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors group-hover:scale-110 duration-300">
-                      <service.icon className="h-8 w-8 text-primary" />
-                    </div>
-                    <CardTitle className="text-xl font-bold text-slate-800">{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-slate-600 mb-4">
-                      {service.description}
-                    </CardDescription>
-                    <Button 
-                      asChild 
-                      variant="ghost" 
-                      className="p-0 h-auto text-primary hover:text-primary/80 group-hover:translate-x-2 transition-transform duration-200"
-                      data-testid={`service-link-${service.title.toLowerCase()}`}
-                    >
-                      <Link href={service.href}>
-                        Detayları öğrenin <ArrowRight className="ml-1 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {/* Key Features */}
-          <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-20"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            {features.map((feature: string, index: number) => (
-              <motion.div 
-                key={index} 
-                className="flex items-center space-x-3 p-4 rounded-lg bg-slate-50 hover:bg-slate-100 transition-colors duration-200"
-                variants={{
-                  initial: { opacity: 0, x: -20 },
-                  animate: { opacity: 1, x: 0 }
-                }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.02 }}
-              >
-                <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                <span className="text-slate-700">{feature}</span>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {/* Örnek Proje Videolarımız */}
+          {/* Tamamlanmış Proje Referanslarımız */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
