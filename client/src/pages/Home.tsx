@@ -171,7 +171,7 @@ export default function Home() {
                 { 
                   title: "Bariyer Sistemi Montajı", 
                   description: "Profesyonel ekibimiz tarafından gerçekleştirilen bariyer sistemi kurulum ve montaj çalışması",
-                  imageUrl: "/bariyer-montaj.png"
+                  videoUrl: "/bariyer-montaj.mp4"
                 },
                 { 
                   title: "Hastane PDKS Çözümü", 
@@ -206,14 +206,6 @@ export default function Home() {
                         <div className="absolute bottom-3 right-3 bg-black/80 text-white text-xs px-2 py-1 rounded">
                           2min 5s
                         </div>
-                      </div>
-                    ) : video.imageUrl ? (
-                      <div className="relative aspect-video rounded-2xl overflow-hidden border-4 border-pink-600 group-hover:border-pink-500 transition-all duration-300">
-                        <img 
-                          src={video.imageUrl}
-                          alt={video.title}
-                          className="w-full h-full object-cover"
-                        />
                       </div>
                     ) : (
                       <div className="relative aspect-video bg-gradient-to-br from-slate-800 to-slate-600 rounded-2xl overflow-hidden border-4 border-pink-600 group-hover:border-pink-500 flex items-center justify-center cursor-pointer transition-all duration-300">
