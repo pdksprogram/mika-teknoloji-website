@@ -194,9 +194,9 @@ export default function Home() {
                   viewport={{ once: true }}
                   className="group"
                 >
-                  <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
+                  <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 bg-transparent border-0">
                     {video.videoUrl ? (
-                      <div className="relative aspect-video bg-black">
+                      <div className="relative aspect-video bg-black rounded-2xl overflow-hidden border-4 border-pink-600 group-hover:border-pink-500 transition-all duration-300">
                         <video 
                           className="w-full h-full object-cover"
                           controls
@@ -205,17 +205,22 @@ export default function Home() {
                           <source src={video.videoUrl} type="video/mp4" />
                           Tarayıcınız video etiketini desteklemiyor.
                         </video>
+                        <div className="absolute bottom-3 right-3 bg-black/80 text-white text-xs px-2 py-1 rounded">
+                          2min 5s
+                        </div>
                       </div>
                     ) : (
-                      <div className="relative aspect-video bg-gradient-to-br from-slate-800 to-slate-600 flex items-center justify-center cursor-pointer group-hover:from-pink-600 group-hover:to-pink-500 transition-all duration-300">
+                      <div className="relative aspect-video bg-gradient-to-br from-slate-800 to-slate-600 rounded-2xl overflow-hidden border-4 border-pink-600 group-hover:border-pink-500 flex items-center justify-center cursor-pointer transition-all duration-300">
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300"></div>
-                        <Play className="w-16 h-16 text-white/90 group-hover:scale-110 transition-transform duration-300 relative z-10" />
-                        <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
-                          <p className="text-white text-xs font-medium">Video Yüklenecek</p>
+                        <div className="relative z-10 bg-white/20 backdrop-blur-sm rounded-full p-4 group-hover:scale-110 transition-transform duration-300">
+                          <Play className="w-12 h-12 text-white fill-white" />
+                        </div>
+                        <div className="absolute bottom-3 right-3 bg-black/80 text-white text-xs px-2 py-1 rounded">
+                          Yakında
                         </div>
                       </div>
                     )}
-                    <CardContent className="p-4">
+                    <CardContent className="p-4 bg-white rounded-b-lg">
                       <h3 className="font-semibold text-slate-800 mb-1">{video.title}</h3>
                       <p className="text-sm text-slate-600">{video.description}</p>
                     </CardContent>
