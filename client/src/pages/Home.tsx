@@ -302,20 +302,35 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-8 text-center">
-              Örnek Proje Videolarımız
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4 text-center">
+              Tamamlanmış Proje Referanslarımız
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-12 text-center">
-              Tamamlanmış projelerimizden seçkin örnekler ve başarı hikayelerimiz
+              30 yılı aşkın deneyimimiz ile Türkiye'nin önde gelen kurumlarına sunduğumuz PDKS ve güvenlik çözümlerinden örnekler
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
               {[
-                { title: "Proje Video 1", description: "Kurumsal PDKS Çözümü" },
-                { title: "Proje Video 2", description: "Yüz Tanıma Sistemi" },
-                { title: "Proje Video 3", description: "Access Control" },
-                { title: "Proje Video 4", description: "QR-Patrol Uygulaması" },
-                { title: "Proje Video 5", description: "Turnike Entegrasyonu" }
+                { 
+                  title: "Holding PDKS Projesi", 
+                  description: "Çok Lokasyonlu Personel Devam Kontrol Sistemi Uygulaması" 
+                },
+                { 
+                  title: "Fabrika Yüz Tanıma", 
+                  description: "Üretim Tesisinde Biyometrik Güvenlik ve Vardiya Takibi" 
+                },
+                { 
+                  title: "AVM Geçiş Kontrol", 
+                  description: "Alışveriş Merkezi Access Control ve Turnike Sistemi" 
+                },
+                { 
+                  title: "Hastane PDKS Çözümü", 
+                  description: "Sağlık Sektöründe 7/24 Personel Takip ve Mesai Yönetimi" 
+                },
+                { 
+                  title: "Kamu QR-Patrol", 
+                  description: "Kamu Binası Güvenlik Devriye ve Kontrol Sistemi" 
+                }
               ].map((video, index) => (
                 <motion.div
                   key={index}
