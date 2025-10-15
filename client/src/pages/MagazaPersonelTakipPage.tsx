@@ -195,7 +195,7 @@ export default function MagazaPersonelTakipPage() {
                           onError={() => setVideoError(true)}
                           data-testid="magaza-video"
                         >
-                          <source src="/magaza-personel-takip.mp4" type="video/mp4" />
+                          <source src="/magaza-video.mp4" type="video/mp4" />
                           Tarayıcınız video oynatmayı desteklemiyor.
                         </video>
                       </>
