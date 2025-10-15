@@ -5,11 +5,9 @@ import { Button } from "@/components/ui/button";
 import { 
   Calendar, TrendingUp, Smartphone, 
   BarChart3, FileText, Database,
-  Phone, Mail, MapPin, CheckCircle2,
-  Play
+  Phone, Mail, MapPin, CheckCircle2
 } from "lucide-react";
 import { Link } from "wouter";
-import { useState } from "react";
 import vardiyaPlanlama from "@assets/IMG_4278_1759780466857.png";
 import vardiyaOnay from "@assets/IMG_4279_1759780771668.png";
 import vardiyaBildirim from "@assets/IMG_4280_1759781022450.png";
@@ -35,8 +33,6 @@ const staggerContainer = {
 };
 
 export default function MagazaPersonelTakipPage() {
-  const [videoError, setVideoError] = useState(false);
-  
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -168,9 +164,31 @@ export default function MagazaPersonelTakipPage() {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+        {/* SEGMENT 1: Hero */}
+        <section className="py-16 bg-gradient-to-br from-primary/5 to-pink-50 relative">
+          <div className="absolute top-4 right-4 text-slate-400 text-sm font-medium">S1</div>
+          <div className="container mx-auto px-4 text-center">
+            <motion.h1 
+              className="text-4xl md:text-5xl font-bold text-slate-800 mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Mağaza Personel Takip Programı
+            </motion.h1>
+            <motion.p 
+              className="text-xl text-slate-600 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              Vardiya planlama, shift yönetimi, izin takibi ve mobil PDKS özellikleri ile mağaza personelinizi etkili şekilde yönetin
+            </motion.p>
+          </div>
+        </section>
+
         {/* SEGMENT 2: Video */}
         <section className="py-16 bg-white relative">
-          {/* Segment İşareti - Sağ Üst Köşe */}
           <div className="absolute top-4 right-4 text-slate-400 text-sm font-medium">S2</div>
           
           <div className="container mx-auto px-4">
@@ -181,41 +199,19 @@ export default function MagazaPersonelTakipPage() {
               transition={{ duration: 0.6 }}
               className="max-w-6xl mx-auto"
             >
-              <Card className="overflow-hidden shadow-lg border border-slate-200 bg-white mb-8">
-                <CardContent className="p-0">
-                  <div className="relative aspect-video bg-slate-100 flex items-center justify-center group">
-                    {!videoError ? (
-                      <>
-                        <video
-                          className="w-full h-full object-cover"
-                          controls
-                          muted
-                          playsInline
-                          poster="/placeholder-video.jpg"
-                          onError={() => setVideoError(true)}
-                          data-testid="magaza-video"
-                        >
-                          <source src="/magaza-video.mp4" type="video/mp4" />
-                          Tarayıcınız video oynatmayı desteklemiyor.
-                        </video>
-                      </>
-                    ) : (
-                      <div className="text-center p-12 text-slate-700">
-                        <div className="inline-flex p-6 rounded-full bg-primary/10 mb-4">
-                          <Play className="h-16 w-16 text-primary" />
-                        </div>
-                        <h3 className="text-2xl font-bold mb-2">Tanıtım Videosu</h3>
-                        <p className="text-slate-600 text-lg">
-                          Mağaza Personel Takip Programı özelliklerini keşfedin
-                        </p>
-                        <p className="text-slate-500 text-sm mt-4">
-                          Video dosyası yükleniyor...
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="relative aspect-video bg-slate-900 rounded-lg overflow-hidden shadow-2xl border-4 border-pink-600">
+                <video
+                  className="w-full h-full"
+                  controls
+                  preload="auto"
+                  playsInline
+                  style={{ objectFit: 'contain' }}
+                  data-testid="magaza-video"
+                >
+                  <source src="/magaza-video.mp4" type="video/mp4" />
+                  <p className="text-white p-4">Tarayıcınız video oynatmayı desteklemiyor.</p>
+                </video>
+              </div>
             </motion.div>
           </div>
         </section>
