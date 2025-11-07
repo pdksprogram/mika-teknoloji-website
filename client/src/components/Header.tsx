@@ -206,7 +206,7 @@ export default function Header() {
                 className="text-white hover:text-white/90 hover:bg-white/10 px-3 py-1 h-auto text-xs"
                 data-testid="top-privacy-button"
               >
-                <Link href="/mobil-gizlilik-sozlesmesi">
+                <Link href="/mobil-gizlilik-sozlesmesi.php">
                   {t.privacy}
                 </Link>
               </Button>

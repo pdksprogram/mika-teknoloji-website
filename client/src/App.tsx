@@ -142,7 +142,7 @@ function Router() {
       <Route path="/blog" component={Blog} />
       <Route path="/blog/pdks-sistemleri-nedir-2025-rehberi" component={BlogArticlePDKS} />
       <Route path="/iletisim" component={Contact} />
-      <Route path="/mobil-gizlilik-sozlesmesi" component={PrivacyPolicy} />
+      <Route path="/mobil-gizlilik-sozlesmesi.php" component={PrivacyPolicy} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
