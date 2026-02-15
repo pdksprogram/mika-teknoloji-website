@@ -93,12 +93,8 @@ function VideoCard({ video }: { video: typeof videos[0] }) {
 
   const handlePlay = () => {
     if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
+      videoRef.current.play();
+      setIsPlaying(true);
     }
   };
 
@@ -106,20 +102,22 @@ function VideoCard({ video }: { video: typeof videos[0] }) {
     <motion.div variants={fadeInUp}>
       <Card className="h-full overflow-hidden border-2 border-slate-200 hover:border-pink-500 transition-all duration-300 group bg-white">
         <CardContent className="p-0">
-          <div className="relative aspect-video bg-slate-900 overflow-hidden cursor-pointer" onClick={handlePlay}>
+          <div className="relative aspect-video bg-slate-900 overflow-hidden cursor-pointer" onClick={!isPlaying ? handlePlay : undefined}>
             <video
               ref={videoRef}
               className="w-full h-full object-cover"
               preload="metadata"
               playsInline
-              controls={isPlaying}
+              controls
+              controlsList="nodownload"
               onPlay={() => setIsPlaying(true)}
               onPause={() => setIsPlaying(false)}
+              style={{ width: '100%', height: '100%' }}
             >
               <source src={video.src} type="video/mp4" />
             </video>
             {!isPlaying && (
-              <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/20 transition-all duration-300">
+              <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/20 transition-all duration-300 pointer-events-none">
                 <div className="w-16 h-16 rounded-full bg-pink-600/90 flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
                   <Play className="h-8 w-8 text-white ml-1" fill="white" />
                 </div>
