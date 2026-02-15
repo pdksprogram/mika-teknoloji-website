@@ -63,6 +63,7 @@ import TuzaklarDetailPage from "@/pages/TuzaklarDetailPage";
 import MantarBariyerDetailPage from "@/pages/MantarBariyerDetailPage";
 import RoadBlockerDetailPage from "@/pages/RoadBlockerDetailPage";
 import MagazaPersonelTakipPage from "@/pages/MagazaPersonelTakipPage";
+import VideolarPage from "@/pages/VideolarPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -142,6 +143,7 @@ function Router() {
       <Route path="/blog" component={Blog} />
       <Route path="/blog/pdks-sistemleri-nedir-2025-rehberi" component={BlogArticlePDKS} />
       <Route path="/iletisim" component={Contact} />
+      <Route path="/videolar" component={VideolarPage} />
       <Route path="/mobil-gizlilik-sozlesmesi.php" component={PrivacyPolicy} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
