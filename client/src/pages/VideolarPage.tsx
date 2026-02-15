@@ -9,6 +9,15 @@ import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 const videos = [
   {
+    id: "vardiya-planlama-pdks",
+    title: "Vardiya Planlama ve PDKS Sistemi - Mağaza & Hastane",
+    description: "Mağaza, hastane ve tüm sektörler için vardiya planlama, shift yönetimi ve PDKS sistemi tanıtımı. Otomatik vardiya oluşturma, personel atama ve mesai hesaplama özellikleri.",
+    src: "/vardiya-planlama-pdks.mp4",
+    duration: "1:30",
+    category: "Demo",
+    keywords: "vardiya planlama, shift planlama, PDKS vardiya, mağaza vardiya sistemi, hastane vardiya planlama, personel vardiya yönetimi, shift management, vardiya çizelgesi, mesai planlama, nöbet çizelgesi",
+  },
+  {
     id: "turnike-montaj",
     title: "Turnike Sistemi Montaj Rehberi",
     description: "Tripod turnike sisteminin profesyonel montaj sürecini adım adım izleyin. Kablolama, sabitleme ve yazılım kurulumu dahil.",
