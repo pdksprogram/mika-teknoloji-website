@@ -13,7 +13,6 @@ const videos = [
     title: "Vardiya Planlama ve PDKS Sistemi - Mağaza & Hastane",
     description: "Mağaza, hastane ve tüm sektörler için vardiya planlama, shift yönetimi ve PDKS sistemi tanıtımı. Otomatik vardiya oluşturma, personel atama ve mesai hesaplama özellikleri.",
     src: "/vardiya-planlama-pdks.mp4",
-    youtubeId: "",
     duration: "1:30",
     category: "Demo",
     keywords: "vardiya planlama, shift planlama, PDKS vardiya, mağaza vardiya sistemi, hastane vardiya planlama, personel vardiya yönetimi, shift management, vardiya çizelgesi, mesai planlama, nöbet çizelgesi",
@@ -23,7 +22,6 @@ const videos = [
     title: "Turnike Sistemi Montaj Rehberi",
     description: "Tripod turnike sisteminin profesyonel montaj sürecini adım adım izleyin. Kablolama, sabitleme ve yazılım kurulumu dahil.",
     src: "/turnike-montaj.mp4",
-    youtubeId: "",
     duration: "2:45",
     category: "Montaj",
     keywords: "turnike montajı, tripod turnike kurulumu, geçiş kontrol sistemi montajı",
@@ -33,7 +31,6 @@ const videos = [
     title: "Yüz Tanıma Sistemi Kurulumu",
     description: "Yüz tanıma cihazının duvar montajı, ağ bağlantısı ve PDKS yazılımı ile entegrasyonu.",
     src: "/yuz-tanima-montaj.mp4",
-    youtubeId: "",
     duration: "3:10",
     category: "Montaj",
     keywords: "yüz tanıma sistemi kurulumu, biyometrik cihaz montajı, PDKS entegrasyonu",
@@ -43,7 +40,6 @@ const videos = [
     title: "Bariyer Sistemi Montaj Rehberi",
     description: "Otopark ve site girişleri için bariyer sistemi montajı. Temel hazırlığı, elektrik bağlantısı ve kumanda ayarları.",
     src: "/bariyer-montaj.mp4",
-    youtubeId: "",
     duration: "4:20",
     category: "Montaj",
     keywords: "bariyer montajı, otopark bariyeri kurulumu, araç bariyer sistemi",
@@ -53,7 +49,6 @@ const videos = [
     title: "Bariyer Sistemleri Tanıtım",
     description: "Mika Teknoloji bariyer ürün ailesi tanıtımı. PT Plus, PT Genius ve PT Guard modelleri.",
     src: "/bariyer-sistemleri.mp4",
-    youtubeId: "",
     duration: "3:30",
     category: "Tanıtım",
     keywords: "bariyer sistemleri, araç bariyeri, otopark güvenlik sistemi",
@@ -63,7 +58,6 @@ const videos = [
     title: "Geçiş Kontrol Sistemi Tanıtım",
     description: "Kartlı, parmak izli ve yüz tanımalı geçiş kontrol çözümlerimizin tanıtım videosu.",
     src: "/access-control-video.mp4",
-    youtubeId: "",
     duration: "2:55",
     category: "Tanıtım",
     keywords: "geçiş kontrol sistemi, kartlı geçiş, parmak izi geçiş, erişim kontrol",
@@ -73,7 +67,6 @@ const videos = [
     title: "Mağaza Personel Takip Programı Demo",
     description: "Perakende sektörü için geliştirilen personel takip programının canlı demo videosu. Vardiya planlama ve mesai hesaplama.",
     src: "/magaza-video.mp4",
-    youtubeId: "",
     duration: "2:06",
     category: "Demo",
     keywords: "mağaza personel takip, vardiya planlama, perakende PDKS, mesai hesaplama",
@@ -105,50 +98,37 @@ function VideoCard({ video }: { video: typeof videos[0] }) {
     }
   };
 
-  const isYouTube = video.youtubeId && video.youtubeId.length > 0;
-
   return (
     <motion.div variants={fadeInUp}>
       <Card className="h-full overflow-hidden border-2 border-slate-200 hover:border-pink-500 transition-all duration-300 group bg-white rounded-xl shadow-sm hover:shadow-lg">
         <CardContent className="p-0">
-          <div className="relative aspect-video bg-slate-900 overflow-hidden rounded-t-xl">
-            {isYouTube ? (
-              <iframe
-                src={`https://www.youtube.com/embed/${video.youtubeId}?rel=0`}
-                title={video.title}
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                allowFullScreen
-                style={{ border: 'none' }}
-              />
-            ) : (
-              <div className="cursor-pointer" onClick={!isPlaying ? handlePlay : undefined}>
-                <video
-                  ref={videoRef}
-                  className="w-full h-full object-contain bg-black"
-                  preload="metadata"
-                  playsInline
-                  controls
-                  controlsList="nodownload"
-                  onPlay={() => setIsPlaying(true)}
-                  onPause={() => setIsPlaying(false)}
-                >
-                  <source src={video.src} type="video/mp4" />
-                </video>
-                {!isPlaying && (
-                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/20 transition-all duration-300 pointer-events-none">
-                    <div className="w-16 h-16 rounded-full bg-pink-600/90 flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
-                      <Play className="h-8 w-8 text-white ml-1" fill="white" />
-                    </div>
+          <div className="relative bg-black overflow-hidden rounded-t-xl" style={{ aspectRatio: '16/9' }}>
+            <div className="w-full h-full" onClick={!isPlaying ? handlePlay : undefined}>
+              <video
+                ref={videoRef}
+                className="w-full h-full object-contain"
+                preload="metadata"
+                playsInline
+                controls
+                controlsList="nodownload"
+                onPlay={() => setIsPlaying(true)}
+                onPause={() => setIsPlaying(false)}
+              >
+                <source src={video.src} type="video/mp4" />
+              </video>
+              {!isPlaying && (
+                <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/20 transition-all duration-300 pointer-events-none">
+                  <div className="w-20 h-20 rounded-full bg-pink-600/90 flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
+                    <Play className="h-10 w-10 text-white ml-1" fill="white" />
                   </div>
-                )}
-              </div>
-            )}
-            <div className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded backdrop-blur-sm pointer-events-none">
-              {video.duration}
+                </div>
+              )}
             </div>
-            <div className="absolute top-3 left-3 bg-pink-600 text-white text-xs px-3 py-1 rounded-full font-medium pointer-events-none">
+            <div className="absolute top-3 left-3 bg-pink-600 text-white text-xs px-3 py-1 rounded-full font-medium pointer-events-none z-10">
               {video.category}
+            </div>
+            <div className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded backdrop-blur-sm pointer-events-none z-10">
+              {video.duration}
             </div>
           </div>
           <div className="p-5">
