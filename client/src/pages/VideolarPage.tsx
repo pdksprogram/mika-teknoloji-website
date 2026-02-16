@@ -1,4 +1,4 @@
-import { Play, ArrowRight, Film, Video } from "lucide-react";
+import { Play, ArrowRight, Film, Video, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
@@ -16,6 +16,15 @@ const videos = [
     duration: "1:30",
     category: "Demo",
     keywords: "vardiya planlama, shift planlama, PDKS vardiya, mağaza vardiya sistemi, hastane vardiya planlama, personel vardiya yönetimi, shift management, vardiya çizelgesi, mesai planlama, nöbet çizelgesi",
+  },
+  {
+    id: "shift-plan-kart-tanitim",
+    title: "Shift Plan Kart Uygulama Tanıtımı",
+    description: "Shift Plan kart uygulamasının detaylı tanıtımı. Personel kartı ile giriş-çıkış takibi, vardiya planlama ve PDKS entegrasyonu.",
+    src: "/shift-plan-kart-tanitim-2.mp4",
+    duration: "2:00",
+    category: "Demo",
+    keywords: "shift plan kart, personel kartı, kart okuyucu, PDKS kart sistemi, giriş çıkış kartı, vardiya kart takibi",
   },
   {
     id: "turnike-montaj",
@@ -135,9 +144,17 @@ function VideoCard({ video }: { video: typeof videos[0] }) {
             <h3 className="text-lg font-bold text-slate-800 mb-2 group-hover:text-pink-600 transition-colors">
               {video.title}
             </h3>
-            <p className="text-sm text-slate-600 leading-relaxed">
+            <p className="text-sm text-slate-600 leading-relaxed mb-3">
               {video.description}
             </p>
+            <a
+              href={video.src}
+              download
+              className="inline-flex items-center gap-2 text-sm text-pink-600 hover:text-pink-700 font-medium transition-colors"
+            >
+              <Download className="h-4 w-4" />
+              Videoyu İndir
+            </a>
           </div>
         </CardContent>
       </Card>
