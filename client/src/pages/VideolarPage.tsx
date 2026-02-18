@@ -66,7 +66,7 @@ const videos = [
     id: "pdks-shift-plan-onay-ret",
     title: "PDKS Shift Plan Onay ve Ret İşlemi",
     description: "Shift Plan üzerinde vardiya onay ve ret işlemlerinin nasıl yapıldığını gösteren eğitim videosu. Yönetici onay süreci detaylı anlatım.",
-    src: "/pdks-shift-plan-onay-ret.mp4",
+    src: "/pdks-shift-plan-onay-ret-islemi.mp4",
     duration: "2:00",
     category: "Demo",
     keywords: "shift plan onay, vardiya onay ret, PDKS onay süreci, vardiya ret işlemi, plan onaylama",
