@@ -5,6 +5,10 @@
   "framework": "vite",
   "routes": [
     {
+      "src": "/chat-api\\.php",
+      "dest": "/api/chat-api.js"
+    },
+    {
       "handle": "filesystem"
     },
     {
