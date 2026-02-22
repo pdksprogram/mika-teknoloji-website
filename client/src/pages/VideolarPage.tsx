@@ -186,6 +186,17 @@ const videos: VideoItem[] = [
     level: "Orta",
   },
   {
+    id: "pdks-yillik-izin-anlatimi",
+    title: "PDKS Yıllık İzin Anlatımı - Detaylı Rehber",
+    description: "PDKS sisteminde yıllık izin yönetiminin detaylı anlatımı. İzin hak edişi, izin bakiyesi takibi, izin kullanımı ve yıllık izin raporları.",
+    src: "/pdks-yillik-izin-anlatimi.mp4",
+    duration: "3:00",
+    category: "Demo",
+    subcategory: "İzin Yönetimi",
+    keywords: "yıllık izin anlatımı, PDKS yıllık izin, izin hak edişi, izin bakiyesi, izin kullanımı, yıllık izin raporu, izin yönetimi 2025",
+    level: "Başlangıç",
+  },
+  {
     id: "pdks-izin-talep-egitimi",
     title: "PDKS İzin Talebi Oluşturma ve Onay Süreci",
     description: "Personel olarak izin talebi nasıl oluşturulur? Yıllık izin başvurusu, mazeret izni talebi ve yönetici onay süreci.",
