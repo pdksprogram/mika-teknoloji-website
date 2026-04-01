@@ -120,6 +120,17 @@ const videos: VideoItem[] = [
     level: "İleri",
   },
   {
+    id: "pdks-giris-cikis-kayitlari-1",
+    title: "Web Tabanlı Personel Devam Kontrol Programı Giriş Çıkış Kayıtları 1 Eğitim Videosu",
+    description: "Web tabanlı PDKS sisteminde yeni giriş çıkış sayfasının kullanımı ve ipuçları: personel devam kayıtları oluşturma, giriş çıkış saati düzenleme, hata düzeltme ve gelişmiş raporlama özellikleri. WebPDKS giriş-çıkış modülü detaylı anlatım.",
+    src: "/pdks-giris-cikis-kayitlari-1.mp4",
+    duration: "3:00",
+    category: "Demo",
+    subcategory: "Giriş-Çıkış İşlemleri",
+    keywords: "web tabanlı PDKS giriş çıkış, personel devam kontrol programı giriş çıkış kayıtları, WebPDKS giriş çıkış sayfası, personel devam takibi, PDKS giriş kaydı, web PDKS eğitim videosu, personel devam kontrol sistemi giriş çıkış",
+    level: "Başlangıç",
+  },
+  {
     id: "pdks-giris-cikis-islemleri",
     title: "PDKS Giriş Çıkış Takibi - Devam Kontrolü",
     description: "Personel giriş-çıkış kayıtlarının takibi: geç gelme kontrolü, erken çıkma tespiti, eksik kayıt uyarıları ve günlük devam raporu.",
