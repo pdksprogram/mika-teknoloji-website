@@ -43,6 +43,17 @@ const videos: VideoItem[] = [
     level: "Başlangıç",
   },
   {
+    id: "esoft-pdks-kurulum-rehberi-2",
+    title: "Esoft PDKS Kurulum Rehberi 2 - Adım Adım Kurulum Eğitim Videosu",
+    description: "Esoft PDKS yazılımının kurulumu 2. bölüm: sistem yapılandırması, veritabanı ayarları, lisans tanımlama ve ilk çalıştırma adımları. Web tabanlı personel devam kontrol sistemi kurulum rehberi.",
+    src: "/esoft-pdks-kurulum-rehberi-2.mp4",
+    duration: "3:00",
+    category: "Demo",
+    subcategory: "Başlangıç Rehberi",
+    keywords: "Esoft PDKS kurulum, PDKS kurulum rehberi, personel devam kontrol sistemi kurulumu, PDKS yazılım kurulumu, Esoft kurulum adımları, PDKS sistem kurulumu eğitim videosu",
+    level: "Başlangıç",
+  },
+  {
     id: "pdks-tanimlari",
     title: "PDKS Sistem Tanımları - Departman ve Mesai Ayarları",
     description: "PDKS sistemindeki temel tanımları öğrenin: departman oluşturma, şube tanımlama, mesai tipleri, çalışma saatleri ve diğer sistem yapılandırmaları.",
