@@ -98,6 +98,17 @@ const videos: VideoItem[] = [
     level: "Orta",
   },
   {
+    id: "pdks-excel-personel-aktarimi",
+    title: "PDKS Excel Personel Aktarımı ve Eşleştirme - Toplu Personel Yükleme Eğitim Videosu",
+    description: "PDKS sistemine Excel ile toplu personel aktarımı nasıl yapılır? Excel dosyasından personel verilerini içe aktarma, alan eşleştirme, hata kontrolü ve toplu yükleme adımları. Personel bilgilerini Excel'den PDKS'e aktarma rehberi.",
+    src: "/pdks-excel-personel-aktarimi.mp4",
+    duration: "3:00",
+    category: "Demo",
+    subcategory: "Personel Yönetimi",
+    keywords: "PDKS Excel personel aktarımı, Excel ile personel yükleme, toplu personel aktarma, PDKS personel içe aktarma, Excel eşleştirme, personel import PDKS, Excel personel aktarım eğitimi",
+    level: "Orta",
+  },
+  {
     id: "pdks-personel-excel-yazdirma",
     title: "PDKS Personel Listesi Excel'e Aktarma ve Yazdırma",
     description: "Personel verilerini Excel'e nasıl aktarılır? Rapor oluşturma, filtreleme, yazdırma ve veri dışa aktarma işlemleri.",
