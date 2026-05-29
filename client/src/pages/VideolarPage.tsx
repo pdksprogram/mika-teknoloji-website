@@ -109,6 +109,17 @@ const videos: VideoItem[] = [
     level: "Orta",
   },
   {
+    id: "pdks-excel-raporu-tasarlama",
+    title: "PDKS Excel Raporu Tasarlama - Özel Rapor Oluşturma Eğitim Videosu",
+    description: "PDKS sisteminde özel Excel raporu nasıl tasarlanır? Rapor şablonu oluşturma, sütun seçimi, filtreleme kriterleri, formül kullanımı ve özelleştirilmiş rapor kaydetme adımları. Personel devam verilerini özel Excel raporuna dönüştürme.",
+    src: "/pdks-excel-raporu-tasarlama.mp4",
+    duration: "3:00",
+    category: "Demo",
+    subcategory: "Raporlama",
+    keywords: "PDKS Excel raporu tasarlama, özel rapor oluşturma PDKS, Excel rapor şablonu, PDKS rapor tasarımı, personel devam raporu Excel, PDKS özelleştirilmiş rapor, Excel rapor eğitim videosu",
+    level: "Orta",
+  },
+  {
     id: "pdks-personel-excel-yazdirma",
     title: "PDKS Personel Listesi Excel'e Aktarma ve Yazdırma",
     description: "Personel verilerini Excel'e nasıl aktarılır? Rapor oluşturma, filtreleme, yazdırma ve veri dışa aktarma işlemleri.",
