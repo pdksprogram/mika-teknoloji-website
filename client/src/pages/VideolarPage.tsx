@@ -109,6 +109,17 @@ const videos: VideoItem[] = [
     level: "Orta",
   },
   {
+    id: "pdks-ihtar-zimmet-evrak-yukleme",
+    title: "PDKS İhtar ve Zimmet Evrak Yükleme - Personel Belge Yönetimi Eğitim Videosu",
+    description: "PDKS sisteminde personele ihtar ve zimmet belgesi nasıl yüklenir? İhtar evrakı oluşturma, zimmet belgesi ekleme, personel dosyasına belge kaydetme ve evrak takibi adımları. Personel belge yönetimi ve dijital arşiv rehberi.",
+    src: "/pdks-ihtar-zimmet-evrak-yukleme.mp4",
+    duration: "3:00",
+    category: "Demo",
+    subcategory: "Personel Yönetimi",
+    keywords: "PDKS ihtar belgesi, zimmet evrak yükleme, personel belge yönetimi, PDKS evrak takibi, ihtar zimmet PDKS, personel dosyası belge ekleme, dijital evrak arşivi PDKS eğitim",
+    level: "Orta",
+  },
+  {
     id: "pdks-excel-raporu-tasarlama",
     title: "PDKS Excel Raporu Tasarlama - Özel Rapor Oluşturma Eğitim Videosu",
     description: "PDKS sisteminde özel Excel raporu nasıl tasarlanır? Rapor şablonu oluşturma, sütun seçimi, filtreleme kriterleri, formül kullanımı ve özelleştirilmiş rapor kaydetme adımları. Personel devam verilerini özel Excel raporuna dönüştürme.",
