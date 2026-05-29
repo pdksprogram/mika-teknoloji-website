@@ -263,6 +263,17 @@ const videos: VideoItem[] = [
     level: "Başlangıç",
   },
   {
+    id: "pdks-yillik-izin-takip-gecmisten",
+    title: "PDKS Personel Yıllık İzin Takibi Geçmişten - İzin Geçmişi Görüntüleme Eğitim Videosu",
+    description: "PDKS sisteminde personelin geçmiş yıllık izin kayıtları nasıl takip edilir? Geçmiş izin geçmişini görüntüleme, izin bakiyesi sorgulama, kullanılan ve kalan izin günlerini raporlama. Personel yıllık izin takip ve geçmiş analiz rehberi.",
+    src: "/pdks-yillik-izin-takip-gecmisten.mp4",
+    duration: "3:00",
+    category: "Demo",
+    subcategory: "İzin Yönetimi",
+    keywords: "PDKS yıllık izin takibi, personel izin geçmişi, geçmiş izin kayıtları, PDKS izin sorgulama, yıllık izin geçmişi görüntüleme, kalan izin günü sorgulama, personel izin takip eğitim videosu",
+    level: "Orta",
+  },
+  {
     id: "pdks-izin-talep-egitimi",
     title: "PDKS İzin Talebi Oluşturma ve Onay Süreci",
     description: "Personel olarak izin talebi nasıl oluşturulur? Yıllık izin başvurusu, mazeret izni talebi ve yönetici onay süreci.",
