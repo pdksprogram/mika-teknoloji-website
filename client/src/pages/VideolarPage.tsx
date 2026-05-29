@@ -98,6 +98,17 @@ const videos: VideoItem[] = [
     level: "Orta",
   },
   {
+    id: "pdks-personel-karti-ekleme-2",
+    title: "PDKS Personel Kartı Ekleme - Yeni Personel Tanımlama Eğitim Videosu",
+    description: "PDKS sistemine yeni personel kartı nasıl eklenir? Personel bilgileri girişi, departman atama, çalışma saati tanımlama, kart numarası eşleştirme ve fotoğraf yükleme adımları. Yeni çalışan PDKS sisteme kayıt rehberi.",
+    src: "/pdks-personel-karti-ekleme-2.mp4",
+    duration: "3:00",
+    category: "Demo",
+    subcategory: "Personel Yönetimi",
+    keywords: "PDKS personel kartı ekleme, yeni personel tanımlama, PDKS personel kayıt, personel bilgi girişi, PDKS kart ekleme, yeni çalışan PDKS kaydı, personel kartı oluşturma eğitim videosu",
+    level: "Başlangıç",
+  },
+  {
     id: "pdks-excel-personel-aktarimi",
     title: "PDKS Excel Personel Aktarımı ve Eşleştirme - Toplu Personel Yükleme Eğitim Videosu",
     description: "PDKS sistemine Excel ile toplu personel aktarımı nasıl yapılır? Excel dosyasından personel verilerini içe aktarma, alan eşleştirme, hata kontrolü ve toplu yükleme adımları. Personel bilgilerini Excel'den PDKS'e aktarma rehberi.",
