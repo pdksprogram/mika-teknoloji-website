@@ -1,0 +1,25 @@
+Sorunun kaynağı şu: .gitattributes'ı güncellemek, daha önce LFS olarak commit edilmiş dosyayı geri çevirmez. O dosya hâlâ index'te bir LFS pointer'ı (birkaç byte'lık metin) olarak duruyor. Vercel repoyu çekince mp4 yerine o pointer metnini alıyor, video da oynatılamıyor. yillik-izin-gecmis.mp4 muhtemelen LFS satırı eklenmeden önce ya da farklı bir anda girdiği için normal dosya kalmış, onun için çalışıyor.
+12MB ve 20MB videolar zaten GitHub'ın 100MB sınırının çok altında, yani bu boyutlarda LFS'e hiç gerek yok. En temiz çözüm LFS'ten çıkarıp normal dosya yapmak.
+Sıra önemli — önce takibi kaldır, sonra add et (yoksa git add dosyayı tekrar pointer'a çevirir):
+bash# 1. Gerçek 12MB dosya yerinde mi? (pointer değil, ~12MB göstermeli)
+ls -lh public/yillik-izin.mp4
+
+# 2. LFS takibini kaldır (.gitattributes'taki *.mp4 satırını da temizler)
+git lfs untrack "*.mp4"
+
+# 3. Eski pointer'ı index'ten çıkar (çalışma dosyası silinmez)
+git rm --cached public/yillik-izin.mp4
+
+# 4. Gerçek dosyayı normal olarak ekle
+git add .gitattributes public/yillik-izin.mp4
+
+# 5. Commit + push
+git commit -m "yillik-izin.mp4 LFS yerine normal dosya olarak eklendi"
+git push
+Yolu kendine göre düzelt — Vercel'in statik olarak sunabilmesi için videonun public/ altında olması gerekir.
+Push sonrası iki kontrol:
+bashgit lfs ls-files
+Bu listede yillik-izin.mp4 görünmemeli. Görünmüyorsa düzelmiş demektir. Ayrıca GitHub'da dosyaya bakınca gerçek boyutu (~12MB) ve video önizlemesini görmelisin; birkaç satırlık version https://git-lfs.github.com/... metni görünüyorsa hâlâ pointer'dır.
+Bu kontroller geçince Vercel'de yeni deploy'u tetikle (otomatik tetiklenmezse Redeploy).
+Bir not: .gitattributes'ta hâlâ *.mp4 filter=lfs ... satırı kaldıysa git lfs untrack onu kaldırmış olmalı, ama emin olmak için dosyayı bir aç ve mp4 satırının gittiğini doğrula. Aksi halde her yeni mp4 yine LFS'e takılır.
+Tüm videolar bu boyutlardaysa LFS'i tamamen bırakman en az dert açanı olur. İstersen geçmişteki pointer'ları da temizlemek için git lfs migrate adımını gösterebilirim, ama Vercel sadece son commit'ten build aldığı için deploy'un düzelmesi açısından yukarıdaki adımlar yeterli.
