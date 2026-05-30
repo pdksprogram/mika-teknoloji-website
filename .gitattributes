@@ -2,3 +2,4 @@ attached_assets/personel_yıllık_izin_takip_1780086154111.mp4 filter=lfs diff=l
 attached_assets/personel_yıllık_izin_takip_geçmişten_1780086098559.mp4 filter=lfs diff=lfs merge=lfs -text
 attached_assets/personel_yıllık_izin_takip_1780139405118.mp4 filter=lfs diff=lfs merge=lfs -text
 attached_assets/personel_yıllık_izin_takip_geçmişten_1780139402549.mp4 filter=lfs diff=lfs merge=lfs -text
+client/public/pdks-yillik-izin-takip.mp4 filter=lfs diff=lfs merge=lfs -text
