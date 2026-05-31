@@ -6,3 +6,4 @@ client/public/*.mp4 !filter !diff !merge
 attached_assets/Ana_İşlem_Genel_Anlatım_1780146496069.mp4 filter=lfs diff=lfs merge=lfs -text
 attached_assets/Ana_İşlem_Genel_2_1780150874638.mp4 filter=lfs diff=lfs merge=lfs -text
 attached_assets/Esoft_PDKS_Genel_Anlatım_1_1780169154479.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/Genel_Anlatım_Videoları_2_1780222588429.mp4 filter=lfs diff=lfs merge=lfs -text
