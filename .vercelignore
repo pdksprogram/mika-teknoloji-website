@@ -1,0 +1,33 @@
+# Vercel deploy paketinden dışlananlar (Deployment Storage 23,67 GB / 10 GB aşımı — 2026-09-12)
+# attached_assets: Replit yükleme klasörü (2,2 GB, çoğu kopya). Yalnız koddan @assets/ ile import edilenler tutulur.
+attached_assets/*
+!attached_assets/image_1758816518741.png
+!attached_assets/IMG_4251_1759436174932.png
+!attached_assets/IMG_4252_1759436659395.png
+!attached_assets/IMG_4253_1759436694818.png
+!attached_assets/IMG_4254_1759437242409.png
+!attached_assets/IMG_4255_1759437674529.png
+!attached_assets/IMG_4256_1759438160354.png
+!attached_assets/IMG_4257_1759438578441.png
+!attached_assets/IMG_4258_1759438746593.png
+!attached_assets/IMG_4278_1759780466857.png
+!attached_assets/IMG_4279_1759780771668.png
+!attached_assets/IMG_4280_1759781022450.png
+!attached_assets/IMG_4281_1759781338557.png
+!attached_assets/IMG_4283_1759781625259.png
+!attached_assets/IMG_4285_1759782715899.jpeg
+!attached_assets/maas-hesaplama-interface.png
+!attached_assets/mobile-admin-interface.png
+!attached_assets/mobile-app-interface.png
+!attached_assets/personel-bilgileri-interface.png
+!attached_assets/personel-takip-demo.mp4
+!attached_assets/personel-talepleri-interface.png
+!attached_assets/Untitled Video_1759323015173.mp4
+!attached_assets/vardiya-yonetimi-interface.png
+
+# Replit yerel durum/skill önbelleği
+.local/
+
+# Kaynak yedekleri / dokümanlar
+*.md
+backlink_targets.csv
