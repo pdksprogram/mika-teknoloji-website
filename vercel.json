@@ -9,6 +9,10 @@
       "dest": "/api/chat-api.js"
     },
     {
+      "src": "/api/plaka-anahtar",
+      "dest": "/api/plaka-anahtar.js"
+    },
+    {
       "handle": "filesystem"
     },
     {
