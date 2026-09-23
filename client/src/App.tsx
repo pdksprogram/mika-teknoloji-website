@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Header from "@/components/Header";
+import SiteFooter from "@/components/SiteFooter";
 import LoadingScreen from "@/components/LoadingScreen";
 import { LanguageProvider } from "@/hooks/useLanguage";
 import { initGA } from "@/lib/analytics";
@@ -189,6 +190,7 @@ function App() {
               <main>
                 <Router />
               </main>
+              <SiteFooter />
             </motion.div>
           )}
         </AnimatePresence>
