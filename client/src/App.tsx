@@ -20,6 +20,7 @@ import References from "@/pages/References";
 import Blog from "@/pages/Blog";
 import BlogArticlePDKS from "@/pages/BlogArticlePDKS";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import { KvkkAydinlatma, HizmetSartlari, VeriSilme } from "@/pages/LegalPages";
 import PDKSPage from "@/pages/PDKSPage";
 import AccessControlPage from "@/pages/AccessControlPage";
 import FingerprintSystemPage from "@/pages/FingerprintSystemPage";
@@ -146,6 +147,9 @@ function Router() {
       <Route path="/iletisim" component={Contact} />
       <Route path="/videolar" component={VideolarPage} />
       <Route path="/mobil-gizlilik-sozlesmesi.php" component={PrivacyPolicy} />
+      <Route path="/kvkk" component={KvkkAydinlatma} />
+      <Route path="/hizmet-sartlari" component={HizmetSartlari} />
+      <Route path="/veri-silme" component={VeriSilme} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
