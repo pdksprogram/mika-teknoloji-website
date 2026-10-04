@@ -1,14 +1,14 @@
 {
-    "surum":  "2.4.3",
-    "boyut":  295940990,
-    "sha256":  "c9badc0bb413021a6cdcf141777b299184066268c26a82ccfe7573e5cce2043b",
+    "surum":  "2.4.6",
+    "boyut":  296209344,
+    "sha256":  "2df961102961e25fd85b062493bed428fac34429e5a9d9ea6a160b829f056f3c",
     "parcalar":  [
                      {
-                         "yol":  "https://github.com/pdksprogram/platevision-surum/releases/download/v2.4.3/PlateVision_Setup_2.4.3.exe",
-                         "boyut":  295940990,
-                         "sha256":  "c9badc0bb413021a6cdcf141777b299184066268c26a82ccfe7573e5cce2043b"
+                         "yol":  "https://github.com/pdksprogram/platevision-surum/releases/download/v2.4.6/PlateVision_Setup_2.4.6.exe",
+                         "boyut":  296209344,
+                         "sha256":  "2df961102961e25fd85b062493bed428fac34429e5a9d9ea6a160b829f056f3c"
                      }
                  ],
-    "tarih":  "2026-09-29",
-    "imza":  "904ElCo7lRBYdsPcLfLljgQdcmU/3Aohd0r2npdCV3gvG+LujIrSFkEb9kBbMxW6i3e9YUeJIzlY6Qdvm8qh5w=="
+    "tarih":  "2026-10-04",
+    "imza":  "ZZT+4/PwtMmEdDYg1x8NxCJuIyVFOgpCvSr4q+cmGABsQ+UqfxsQQp6wBECDOAxnJHFhj2UsGRlaofTumG9EKA=="
 }
