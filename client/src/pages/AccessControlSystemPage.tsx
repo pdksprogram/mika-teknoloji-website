@@ -410,7 +410,7 @@ export default function AccessControlSystemPage() {
             >
               <div className="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-all duration-500 group-hover:scale-105">
                 <div className="mb-8">
-                  <div className="w-full max-w-sm mx-auto bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl h-80 flex items-center justify-center">
+                  <div className="w-full max-w-sm mx-auto bg-white border border-slate-200 p-8 rounded-2xl h-80 flex items-center justify-center">
                     <img 
                       src="/access-control-panels.png" 
                       alt="Access Kontrol Panelleri"
@@ -454,7 +454,7 @@ export default function AccessControlSystemPage() {
             >
               <div className="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-all duration-500 group-hover:scale-105">
                 <div className="mb-8">
-                  <div className="w-full max-w-sm mx-auto bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl h-80 flex items-center justify-center">
+                  <div className="w-full max-w-sm mx-auto bg-white border border-slate-200 p-8 rounded-2xl h-80 flex items-center justify-center">
                     <img 
                       src="/professional-access-panel.png" 
                       alt="Professional Access Control Panel"

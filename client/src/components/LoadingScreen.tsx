@@ -66,7 +66,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
           className="mx-auto bg-slate-200 rounded-full h-1 overflow-hidden"
         >
           <motion.div
-            className="h-full bg-gradient-to-r from-primary to-primary/80 rounded-full"
+            className="h-full bg-primary rounded-full"
             style={{ width: `${progress}%` }}
             transition={{ duration: 0.1 }}
           />

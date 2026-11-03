@@ -159,9 +159,9 @@ export default function MagazaPersonelTakipPage() {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <div className="min-h-screen bg-white">
         {/* SEGMENT 1: Hero */}
-        <section className="py-16 bg-gradient-to-br from-primary/5 to-slate-50 relative">
+        <section className="py-16 bg-slate-50 relative">
           <div className="container mx-auto px-4 text-center">
             <motion.h1 
               className="text-4xl md:text-5xl font-bold text-slate-800 mb-6"
@@ -236,7 +236,7 @@ export default function MagazaPersonelTakipPage() {
                       
                       <CardContent className="p-0">
                         {/* Resim Alanı */}
-                        <div className="relative h-56 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden border-b border-slate-200">
+                        <div className="relative h-56 bg-slate-100 overflow-hidden border-b border-slate-200">
                           {index >= 0 && index <= 5 ? (
                             <div className="absolute inset-0 flex items-center justify-center p-6">
                               {/* Telefon Çerçevesi */}

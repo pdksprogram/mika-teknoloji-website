@@ -53,7 +53,7 @@ export default function MantarBariyerDetailPage() {
         <meta name="description" content="Hidrolik mantar bariyer sistemi ile yüksek güvenlik. 304 paslanmaz çelik, 100 bar hidrolik tahrik, IP67 koruma ve araç tahrip özelliği ile maksimum koruma." />
       </Helmet>
 
-      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-50 to-white">
+      <section className="pt-32 pb-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <Link href="/urunler/bariyer-sistemleri">
             <Button variant="ghost" className="mb-8 group">

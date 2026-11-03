@@ -33,7 +33,7 @@ export default function WhatsAppWidget() {
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             className="absolute bottom-20 right-0 w-80 bg-white rounded-2xl shadow-2xl overflow-hidden mb-2"
           >
-            <div className="bg-gradient-to-r from-green-600 to-green-500 p-4 text-white">
+            <div className="bg-slate-900 border-b-4 border-primary p-4 text-white">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">

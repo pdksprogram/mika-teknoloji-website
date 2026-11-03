@@ -49,7 +49,7 @@ export default function PTPlusDetailPage() {
         <meta name="description" content="MT Plus bariyer sistemi 5.25 metre kol uzunluğu, LED aydınlatma ve IP54 koruma derecesi ile otopark ve geçiş kontrolü için ideal profesyonel çözüm." />
       </Helmet>
 
-      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-50 to-white">
+      <section className="pt-32 pb-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <Link href="/urunler/bariyer-sistemleri">
             <Button variant="ghost" className="mb-8 group">

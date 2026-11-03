@@ -38,7 +38,7 @@ export default function PTDinamikDetailPage() {
         <meta name="description" content="MT Dinamik bariyer sistemi ile hızlı açılma süresi ve dinamik yapısı sayesinde yoğun trafiğe sahip alanlarda ideal güvenlik çözümü. Otopark ve geçiş noktalarında mükemmel performans." />
       </Helmet>
 
-      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-50 to-white">
+      <section className="pt-32 pb-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <Link href="/urunler/bariyer-sistemleri">
             <Button variant="ghost" className="mb-8 group">

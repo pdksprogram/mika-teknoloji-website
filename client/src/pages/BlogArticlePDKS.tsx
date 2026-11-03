@@ -94,7 +94,7 @@ export default function BlogArticlePDKS() {
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="bg-gradient-to-br from-primary via-primary to-slate-800 text-white py-16"
+        className="bg-slate-900 border-b-4 border-primary text-white py-16"
       >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -503,7 +503,7 @@ export default function BlogArticlePDKS() {
                 </article>
 
                 {/* Call to Action */}
-                <div className="bg-gradient-to-r from-primary to-slate-800 rounded-2xl p-8 text-white text-center mt-12">
+                <div className="bg-slate-900 border-t-4 border-primary rounded-lg p-8 text-white text-center mt-12">
                   <h3 className="text-2xl font-bold mb-4">PDKS Sisteminde Uzman Desteği Alın</h3>
                   <p className="text-lg mb-6 opacity-90">
                     İşletmeniz için uygun PDKS çözümünü birlikte belirleyelim. 

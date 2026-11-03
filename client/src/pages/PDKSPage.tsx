@@ -449,7 +449,7 @@ export default function PDKSPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
+    <div className="min-h-screen bg-white">
       <SEO
         title={title}
         description={description}
@@ -465,7 +465,6 @@ export default function PDKSPage() {
       
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent" />
         <div className="container mx-auto px-4 relative">
           <motion.div 
             className="max-w-4xl mx-auto text-center"
@@ -492,7 +491,7 @@ export default function PDKSPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild 
                 size="lg" 
-                className="px-8 py-4 transform hover:scale-105 transition-all duration-300"
+                className="px-8 py-4"
                 data-testid="pdks-demo-button"
               >
                 <Link href="/iletisim">DEMO VE KEŞİF TALEP EDİN</Link>
@@ -559,7 +558,7 @@ export default function PDKSPage() {
       </section>
 
       {/* PDKS Systems Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+      <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -593,8 +592,7 @@ export default function PDKSPage() {
               >
                 <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                   <div className="relative group">
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300" />
-                    <div className="relative bg-white p-8 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300">
+                    <div className="relative bg-white p-8 rounded-lg border border-slate-200">
                       <div className={`${system.id === 'qr' ? 'aspect-[3/4] max-w-xs' : system.id === 'rfid' ? 'aspect-[4/3] max-w-lg' : 'aspect-square max-w-md'} mx-auto overflow-hidden rounded-lg`}>
                         <img 
                           src={system.image} 
@@ -698,7 +696,7 @@ export default function PDKSPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+      <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <motion.div 
             className="max-w-4xl mx-auto"
@@ -801,7 +799,7 @@ export default function PDKSPage() {
       </section>
 
       {/* CTA Section */}
-      <section id="demo" className="py-20 bg-gradient-to-r from-primary to-primary/80 scroll-mt-24">
+      <section id="demo" className="py-20 bg-slate-900 border-t-4 border-primary scroll-mt-24">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center text-white"

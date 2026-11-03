@@ -160,7 +160,7 @@ export default function MT250DetailPage() {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="mt-6 bg-gradient-to-r from-primary to-slate-800 text-white p-4 rounded-lg text-center"
+                className="mt-6 bg-slate-900 border-t-4 border-primary text-white p-4 rounded-lg text-center"
               >
                 <div className="flex items-center justify-center gap-3">
                   <Phone className="h-5 w-5" />
@@ -371,7 +371,7 @@ export default function MT250DetailPage() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1.0 }}
-            className="bg-gradient-to-r from-primary to-slate-800 text-white rounded-2xl p-8 text-center"
+            className="bg-slate-900 border-t-4 border-primary text-white rounded-lg p-8 text-center"
           >
             <h3 className="text-2xl font-bold mb-4">MT-250 Turnike Sistemi İçin Teklif Alın</h3>
             <p className="text-xl text-white/90 mb-6">

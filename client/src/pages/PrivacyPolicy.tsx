@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
     <>
     <SEO title="Mobil Uygulama Gizlilik Sözleşmesi | Mika Teknoloji" description="Mika Teknoloji mobil uygulamaları (Google Play ve App Store) için gizlilik politikası: toplanan veriler, kullanım amacı ve haklarınız." />
     <motion.div 
-      className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-16"
+      className="min-h-screen bg-slate-50 py-16"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
@@ -46,7 +46,7 @@ export default function PrivacyPolicy() {
               Google Play Store ve iOS App Store Uygulamaları İçin Resmi Gizlilik Politikası
             </p>
             <div className="flex justify-center mt-4">
-              <div className="w-32 h-1 bg-gradient-to-r from-primary to-primary/60 rounded-full"></div>
+              <div className="w-32 h-1 bg-primary"></div>
             </div>
           </div>
         </motion.div>
@@ -165,7 +165,7 @@ export default function PrivacyPolicy() {
             
             
             {/* Corporate Footer */}
-            <div className="mt-12 bg-gradient-to-r from-slate-50 to-slate-100 p-8 rounded-xl border border-slate-200">
+            <div className="mt-12 bg-slate-50 p-8 rounded-lg border border-slate-200">
               <div className="flex flex-col md:flex-row items-center justify-between">
                 <div className="flex items-center space-x-4 mb-4 md:mb-0">
                   <img 
@@ -181,8 +181,7 @@ export default function PrivacyPolicy() {
                 <div className="text-right">
                   <p className="text-slate-800 font-semibold mb-1">Son Güncelleme:</p>
                   <div className="flex items-center">
-                    <div className="w-3 h-3 bg-green-500 rounded-full mr-2 animate-pulse"></div>
-                    <p className="text-slate-600 font-mono">01 Aralık 2021</p>
+                                        <p className="text-slate-600 font-mono">01 Aralık 2021</p>
                   </div>
                 </div>
               </div>

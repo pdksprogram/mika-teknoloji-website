@@ -223,7 +223,7 @@ export default function Blog() {
             >
               <Card className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
                 <CardHeader className="p-0">
-                  <div className="h-48 bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center rounded-t-lg">
+                  <div className="h-48 bg-slate-100 flex items-center justify-center rounded-t-lg">
                     <div className="text-primary text-4xl font-bold opacity-60">
                       {post.category.charAt(0)}
                     </div>
@@ -290,7 +290,7 @@ export default function Blog() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.3 }}
-          className="mt-16 bg-gradient-to-r from-primary to-slate-800 rounded-2xl p-8 text-center text-white"
+          className="mt-16 bg-slate-900 border-t-4 border-primary rounded-lg p-8 text-center text-white"
         >
           <h3 className="text-2xl font-bold mb-4">Blog Güncellemelerini Kaçırmayın!</h3>
           <p className="text-lg mb-6 opacity-90">

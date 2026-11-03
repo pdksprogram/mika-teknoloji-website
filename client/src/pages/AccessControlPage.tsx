@@ -392,7 +392,7 @@ export default function AccessControlPage() {
     <div className="min-h-screen bg-white">
       <SEO title={title} description={description} />
       {/* Hero Section with Animation */}
-      <section className="relative py-20 bg-gradient-to-br from-primary/5 via-white to-primary/10 overflow-hidden">
+      <section className="relative py-20 bg-slate-50 overflow-hidden">
         <div className="container mx-auto px-4">
           <nav className="text-sm text-slate-600 mb-8">
             {t.breadcrumb}
@@ -933,7 +933,7 @@ export default function AccessControlPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-primary to-primary/80 text-white">
+      <section className="py-16 bg-slate-900 border-t-4 border-primary text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

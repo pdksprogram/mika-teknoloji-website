@@ -41,7 +41,7 @@ export default function PTGeniusDetailPage() {
         <meta name="description" content="MT Genius bariyer sistemi 3 saniye ultra hızlı açılma, 5.5 metre kol uzunluğu ve geniş sıcaklık aralığı ile yüksek performans sağlar." />
       </Helmet>
 
-      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-50 to-white">
+      <section className="pt-32 pb-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <Link href="/urunler/bariyer-sistemleri">
             <Button variant="ghost" className="mb-8 group">
@@ -65,7 +65,7 @@ export default function PTGeniusDetailPage() {
 
             <motion.div {...fadeInUp} className="space-y-8">
               <div>
-                <div className="inline-flex items-center px-4 py-2 rounded-xl bg-gradient-to-r from-primary to-slate-800 shadow-lg mb-4">
+                <div className="inline-flex items-center px-4 py-2 rounded-md bg-slate-900 mb-4">
                   <Zap className="w-4 h-4 text-white mr-2" />
                   <span className="text-white font-bold text-sm">Q3 - ULTRA HIZLI</span>
                 </div>
@@ -75,7 +75,7 @@ export default function PTGeniusDetailPage() {
                 <p className="text-xl text-primary font-semibold mb-6">
                   3 Saniye Hızlı Geçiş - Yandan Kollu Teknoloji
                 </p>
-                <div className="w-20 h-1 bg-gradient-to-r from-primary to-slate-800 rounded-full"></div>
+                <div className="w-20 h-1 bg-primary"></div>
               </div>
 
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -107,7 +107,7 @@ export default function PTGeniusDetailPage() {
                 <div className="grid md:grid-cols-2 gap-4">
                   {features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-lg bg-gradient-to-br from-primary to-slate-800 flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-1">
                         <CheckCircle className="w-3 h-3 text-white" />
                       </div>
                       <span className="text-gray-700">{feature}</span>
@@ -116,7 +116,7 @@ export default function PTGeniusDetailPage() {
                 </div>
               </div>
 
-              <Card className="border-0 bg-gradient-to-br from-slate-50 to-slate-100">
+              <Card className="border border-slate-200 bg-slate-50">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <Thermometer className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />

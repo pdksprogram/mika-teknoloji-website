@@ -134,7 +134,7 @@ export function OzellikIzgarasi({ baslik, alt, maddeler }: { baslik: string; alt
           {maddeler.map((m) => (
             <Card key={m.baslik} className="h-full border-0 shadow-lg">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                   <m.ikon className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-800 mb-3">{m.baslik}</h3>

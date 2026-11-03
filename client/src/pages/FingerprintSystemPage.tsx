@@ -118,8 +118,6 @@ export default function FingerprintSystemPage() {
                             <span>Wi-Fi</span>
                           </div>
                         </div>
-                        {/* Glow effect */}
-                        <div className="absolute inset-0 bg-green-400 rounded-full blur-sm opacity-75 animate-ping"></div>
                       </div>
                     </div>
                   )}
@@ -374,7 +372,7 @@ export default function FingerprintSystemPage() {
             </div>
 
             {/* Call to Action */}
-            <div className="text-center mt-12 bg-gradient-to-r from-primary to-slate-800 text-white rounded-xl p-8">
+            <div className="text-center mt-12 bg-slate-900 border-t-4 border-primary text-white rounded-lg p-8">
               <h3 className="text-2xl font-bold mb-4">
                 Parmak İzi Okuyucu Sistemi Fiyatları ve Keşif
               </h3>

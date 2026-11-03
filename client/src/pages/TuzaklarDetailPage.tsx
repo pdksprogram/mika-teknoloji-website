@@ -38,7 +38,7 @@ export default function TuzaklarDetailPage() {
         <meta name="description" content="Tuzak ve kapan sistemleri ile ters yönden girişleri engelleyin. Manuel ve otomatik seçenekler, yangın güvenlik entegrasyonu ve seyyar kullanım imkanı." />
       </Helmet>
 
-      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-50 to-white">
+      <section className="pt-32 pb-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <Link href="/urunler/bariyer-sistemleri">
             <Button variant="ghost" className="mb-8 group">
@@ -114,7 +114,7 @@ export default function TuzaklarDetailPage() {
                     <div className="grid md:grid-cols-2 gap-3 mt-4">
                       {kapanFeatures.map((feature, idx) => (
                         <div key={idx} className="flex items-start gap-2">
-                          <div className="w-5 h-5 rounded-lg bg-gradient-to-br from-primary to-slate-800 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                             <CheckCircle className="w-3 h-3 text-white" />
                           </div>
                           <span className="text-sm text-gray-700">{feature}</span>

@@ -475,7 +475,7 @@ export default function PersonelTakipPage() {
               <motion.div key={index} variants={staggerItem} className="lg:col-span-2">
                 <Card className="h-full text-center hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-6">
-                    <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+                    <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
                       <item.icon className="h-10 w-10 text-primary drop-shadow-sm" />
                     </div>
                     <h3 className="font-bold text-slate-800 mb-3">{item.title}</h3>
@@ -542,7 +542,7 @@ export default function PersonelTakipPage() {
               <div className="relative">
                 <div className="max-w-sm mx-auto">
                   {/* Phone Frame */}
-                  <div className="relative bg-gradient-to-b from-slate-800 to-slate-900 rounded-[3rem] p-3 shadow-2xl border-2 border-slate-700/50">
+                  <div className="relative bg-slate-900 rounded-[3rem] p-3 shadow-2xl border-2 border-slate-700/50">
                     {/* Phone Notch */}
                     <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-black rounded-full z-20"></div>
                     
@@ -557,7 +557,6 @@ export default function PersonelTakipPage() {
                         />
                         
                         {/* Screen Reflection */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/5 rounded-[2rem]"></div>
                       </div>
                     </div>
                     
@@ -583,7 +582,7 @@ export default function PersonelTakipPage() {
               <div className="relative">
                 <div className="max-w-sm mx-auto">
                   {/* Phone Frame */}
-                  <div className="relative bg-gradient-to-b from-slate-800 to-slate-900 rounded-[3rem] p-3 shadow-2xl border-2 border-slate-700/50">
+                  <div className="relative bg-slate-900 rounded-[3rem] p-3 shadow-2xl border-2 border-slate-700/50">
                     {/* Phone Notch */}
                     <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-black rounded-full z-20"></div>
                     
@@ -598,7 +597,6 @@ export default function PersonelTakipPage() {
                         />
                         
                         {/* Screen Reflection */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/5 rounded-[2rem]"></div>
                       </div>
                     </div>
                     
@@ -757,12 +755,7 @@ export default function PersonelTakipPage() {
       </section>
 
       {/* Kurumsal Güvenlik ve Güvenilirlik */}
-      <section data-testid="P7" className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
-        
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KPGcgZmlsbD0iIzAwMCIgZmlsbC1vcGFjaXR5PSIwLjEiPgo8Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSI0Ii8+CjwvZz4KPC9nPgo8L3N2Zz4=')] repeat"></div>
-        </div>
+      <section data-testid="P7" className="relative py-20 bg-slate-900 border-t-4 border-primary text-white overflow-hidden">
 
         <div className="container mx-auto px-4 relative z-10">
           {/* Header */}
@@ -770,12 +763,12 @@ export default function PersonelTakipPage() {
             className="text-center mb-20"
             {...fadeInUp}
           >
-            <div className="inline-flex items-center gap-3 bg-primary/10 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/20 mb-6">
+            <div className="inline-flex items-center gap-3 mb-6">
               <Shield className="h-5 w-5 text-primary" />
               <span className="text-primary font-semibold">Kurumsal Güvenilirlik</span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-white bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
               Güvenilir PDKS Altyapısı
             </h2>
             <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
@@ -794,37 +787,33 @@ export default function PersonelTakipPage() {
               {
                 icon: MapPin,
                 title: "GPS Konum Doğrulama",
-                desc: "Mobil kayda konum eklenir; sahte konum (Fake GPS) tespit edilirse kayıt alınmaz",
-                gradient: "from-slate-900 to-slate-800"
+                desc: "Mobil kayda konum eklenir; sahte konum (Fake GPS) tespit edilirse kayıt alınmaz"
               },
               {
                 icon: Settings,
                 title: "Esnek Parametreler",
-                desc: "Sektörünüze özel tolerans ayarları ve özelleştirilebilir iş kuralları",
-                gradient: "from-slate-900 to-slate-800"
+                desc: "Sektörünüze özel tolerans ayarları ve özelleştirilebilir iş kuralları"
               },
               {
                 icon: Database,
                 title: "Kurumsal Veri Güvenliği",
-                desc: "SSL şifreleme ve yetkiye göre erişim",
-                gradient: "from-slate-900 to-slate-800"
+                desc: "SSL şifreleme ve yetkiye göre erişim"
               },
               {
                 icon: Lock,
                 title: "Yasal Uyumluluk",
-                desc: "K.V.K.K.'ya uygun veri işleme; konum bilgisi raporlarda gizlenebilir",
-                gradient: "from-slate-900 to-slate-800"
+                desc: "K.V.K.K.'ya uygun veri işleme; konum bilgisi raporlarda gizlenebilir"
               }
             ].map((item, index) => (
               <motion.div key={index} variants={staggerItem}>
-                <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700/50 text-center p-8 h-full hover:bg-slate-700/50 transition-all duration-500 group hover:scale-105 hover:shadow-2xl hover:shadow-primary/20">
-                  <div className={`w-20 h-20 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg`}>
+                <Card className="bg-slate-800 border-slate-700 text-center p-8 h-full">
+                  <div className={"w-16 h-16 bg-slate-900 border border-slate-700 rounded-lg flex items-center justify-center mx-auto mb-6"}>
                     <item.icon className="h-10 w-10 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-white mb-4">
                     {item.title}
                   </h3>
-                  <p className="text-slate-400 text-sm leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
+                  <p className="text-slate-400 text-sm leading-relaxed">
                     {item.desc}
                   </p>
                 </Card>
@@ -834,7 +823,7 @@ export default function PersonelTakipPage() {
 
           {/* Certificates & Compliance */}
           <motion.div 
-            className="bg-slate-800/30 backdrop-blur-sm rounded-3xl p-8 border border-slate-700/50"
+            className="bg-slate-800 rounded-lg p-8 border border-slate-700"
             {...fadeInUp}
           >
             <div className="text-center mb-8">
@@ -844,11 +833,11 @@ export default function PersonelTakipPage() {
             
             <div className="flex flex-wrap justify-center items-center gap-8">
               {[
-                { name: "K.V.K.K.", desc: "Kişisel Verilerin Korunması", color: "green" },
-                { name: "SSL", desc: "Şifreleme Güvenliği", color: "purple" }
+                { name: "K.V.K.K.", desc: "Kişisel Verilerin Korunması" },
+                { name: "SSL", desc: "Şifreleme Güvenliği" }
               ].map((cert, index) => (
-                <div key={index} className={`bg-${cert.color}-500/10 border border-${cert.color}-500/30 rounded-xl px-4 py-3 text-center hover:bg-${cert.color}-500/20 transition-all duration-300 hover:scale-105`}>
-                  <div className={`text-${cert.color}-400 font-bold text-sm mb-1`}>{cert.name}</div>
+                <div key={index} className={"border border-slate-700 rounded-md px-4 py-3 text-center"}>
+                  <div className={"text-slate-200 font-bold text-sm mb-1"}>{cert.name}</div>
                   <div className="text-slate-500 text-xs">{cert.desc}</div>
                 </div>
               ))}
@@ -858,7 +847,7 @@ export default function PersonelTakipPage() {
       </section>
 
       {/* CTA Section */}
-      <section data-testid="P8" className="relative py-20 bg-gradient-to-br from-primary to-slate-800 text-white">
+      <section data-testid="P8" className="relative py-20 bg-slate-900 border-t-4 border-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div 
             className="max-w-4xl mx-auto"

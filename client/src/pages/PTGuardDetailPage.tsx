@@ -31,7 +31,7 @@ export default function PTGuardDetailPage() {
         <meta name="description" content="MT Guard bariyer sistemi ile yüksek güvenlik seviyesi sağlayan profesyonel koruma çözümü. Sağlam yapısı ve dayanıklılığı ile güvenlik önceliği olan alanlarda ideal." />
       </Helmet>
 
-      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-50 to-white">
+      <section className="pt-32 pb-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <Link href="/urunler/bariyer-sistemleri">
             <Button variant="ghost" className="mb-8 group">

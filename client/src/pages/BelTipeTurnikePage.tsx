@@ -220,7 +220,7 @@ export default function BelTipeTurnikePage() {
       <TurnikeReferanslari />
 
       {/* Call to Action */}
-      <div className="py-16 bg-gradient-to-r from-primary to-slate-800 text-white">
+      <div className="py-16 bg-slate-900 border-t-4 border-primary text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">
