@@ -62,12 +62,7 @@ export default function FingerprintSystemPage() {
             "name": "Mika Teknoloji Parmak İzi Takip Sistemi",
             "description": "Profesyonel parmak izi okuyucu ve PDKS cihazları. MT1100, MTP50, MTFDP200, MT4051 modelleri.",
             "brand": "Mika Teknoloji",
-            "category": "Security Systems",
-            "offers": {
-              "@type": "Offer",
-              "availability": "InStock",
-              "priceCurrency": "TRY"
-            }
+            "category": "Security Systems"
           })}
         </script>
       </Helmet>

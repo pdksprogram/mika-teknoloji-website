@@ -93,12 +93,7 @@ const productJsonLd = {
   "name": "QR Kod Geçiş Sistemi",
   "description": "QR kod teknolojisi ile temassız geçiş kontrol sistemi. Mobil uygulama entegrasyonu, dinamik kodlar ve PDKS sistemi uyumluluğu.",
   "applicationCategory": "SecurityApplication",
-  "operatingSystem": "iOS, Android, Web Browser",
-  "offers": {
-    "@type": "Offer",
-    "availability": "InStock",
-    "priceCurrency": "TRY"
-  }
+  "operatingSystem": "iOS, Android, Web Browser"
 };
 
 const faqJsonLd = {

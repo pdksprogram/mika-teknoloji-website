@@ -40,11 +40,6 @@ export default function MagazaPersonelTakipPage() {
     "name": "Mağaza Personel Takip Programı",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web, iOS, Android",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "TRY"
-    },
     "description": "Mağaza ve perakende sektörü için özel geliştirilmiş vardiya planlama, shift yönetimi, izin takibi, prim hesaplama ve mobil PDKS özellikleri sunan personel takip programı.",
     "featureList": [
       "Vardiya Planlama ve Shift Yönetimi",

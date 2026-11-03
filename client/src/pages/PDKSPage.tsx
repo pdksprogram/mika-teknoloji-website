@@ -102,12 +102,7 @@ export default function PDKSPage() {
           "name": "Mika PDKS Sistemi",
           "description": "Personel devam kontrol sistemi - Yüz tanıma, parmak izi, QR kod, RFID teknolojileri",
           "operatingSystem": "Web-based, iOS, Android",
-          "applicationCategory": "BusinessApplication",
-          "offers": {
-            "@type": "Offer",
-            "availability": "https://schema.org/InStock",
-            "priceValidUntil": "2025-12-31"
-          }
+          "applicationCategory": "BusinessApplication"
         }
         // SSS (FAQPage) şeması ön-render'a girsin diye <SEO jsonLd> ile veriliyor (PDKS_SSS).
       ]

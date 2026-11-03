@@ -64,12 +64,7 @@ export default function FaceRecognitionSystemPage() {
             "name": "Mika Teknoloji Yüz Tanıma Sistem",
             "description": "Gelişmiş yüz tanıma sistemi ve temassız PDKS cihazları. MTFD15, MTFP15, MTFDP50, MTFDP200 modelleri.",
             "brand": "Mika Teknoloji",
-            "category": "Security Systems",
-            "offers": {
-              "@type": "Offer",
-              "availability": "InStock",
-              "priceCurrency": "TRY"
-            }
+            "category": "Security Systems"
           })}
         </script>
       </Helmet>

@@ -136,16 +136,7 @@ export default function ProductTurnikePage() {
             "name": "Mika Teknoloji Kontrol Sistemleri",
             "url": "https://mikateknoloji.com"
           },
-          "category": "Security Systems",
-          "offers": {
-            "@type": "Offer",
-            "availability": "https://schema.org/InStock",
-            "priceCurrency": "TRY",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "price": "Fiyat İçin İletişime Geçin"
-            }
-          }
+          "category": "Security Systems"
         })}
         </script>
         

@@ -84,12 +84,7 @@ const productJsonLd = {
   "name": "Kartlı Geçiş Sistemi - RFID Kart Okuyucu",
   "description": "RFID kart teknolojisi ile kartlı geçiş sistemi. Proximity, MIFARE ve UHF kart desteği. PDKS entegrasyonu ve güvenli erişim kontrolü.",
   "brand": "Mika Teknoloji",
-  "category": "Access Control System",
-  "offers": {
-    "@type": "Offer",
-    "availability": "InStock",
-    "priceCurrency": "TRY"
-  }
+  "category": "Access Control System"
 };
 
 const faqJsonLd = {

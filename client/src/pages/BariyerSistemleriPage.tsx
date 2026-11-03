@@ -189,12 +189,7 @@ const structuredData = {
     "name": "Mika Teknoloji"
   },
   "category": "Güvenlik Sistemleri",
-  "keywords": "mantar bariyer, road blocker, tuzak kapanlar, hidrolik bariyer, otopark bariyeri, güvenlik sistemleri",
-  "offers": {
-    "@type": "AggregateOffer",
-    "priceCurrency": "TRY",
-    "availability": "https://schema.org/InStock"
-  }
+  "keywords": "mantar bariyer, road blocker, tuzak kapanlar, hidrolik bariyer, otopark bariyeri, güvenlik sistemleri"
 };
 
 const breadcrumbSchema = {

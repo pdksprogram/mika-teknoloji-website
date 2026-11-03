@@ -38,12 +38,7 @@ const productJsonLd = {
   "name": "Geçiş Kontrol Sistemleri",
   "description": "RFID kartlı geçiş, biyometrik parmak izi, yüz tanıma ve QR kod teknolojileri ile profesyonel access control çözümleri.",
   "brand": "Mika Teknoloji",
-  "category": "Access Control System",
-  "offers": {
-    "@type": "Offer",
-    "availability": "InStock",
-    "priceCurrency": "TRY"
-  }
+  "category": "Access Control System"
 };
 
 const faqJsonLd = {

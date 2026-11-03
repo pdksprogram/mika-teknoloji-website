@@ -73,11 +73,6 @@ export default function AccessControlPage() {
           "brand": {
             "@type": "Brand",
             "name": "Mika Teknoloji"
-          },
-          "offers": {
-            "@type": "Offer",
-            "availability": "https://schema.org/InStock",
-            "priceValidUntil": "2025-12-31"
           }
         },
         {

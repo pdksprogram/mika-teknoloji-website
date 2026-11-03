@@ -118,12 +118,7 @@ export default function Home() {
               "name": "Mika PDKS - Personel Devam Kontrol Sistemi",
               "description": "Web tabanlı PDKS sistemi. Parmak izi, yüz tanıma, QR kod desteği.",
               "applicationCategory": "SecurityApplication",
-              "operatingSystem": "Web Browser",
-              "offers": {
-                "@type": "Offer",
-                "availability": "InStock",
-                "priceCurrency": "TRY"
-              }
+              "operatingSystem": "Web Browser"
             }
           ])}
         </script>

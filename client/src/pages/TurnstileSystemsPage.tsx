@@ -66,12 +66,7 @@ const productJsonLd = {
   "name": "Turnike Sistemleri - Bel Tipi, Boy Tipi, Engelli, Hızlı Geçiş",
   "description": "Mika Teknoloji turnike sistemleri. Bel tipi, boy tipi, engelli, hızlı geçiş, hijyen ve jetonlu turnike çeşitleri. Güvenlik ve geçiş kontrol çözümleri.",
   "brand": "Mika Teknoloji",
-  "category": "Security Equipment",
-  "offers": {
-    "@type": "Offer",
-    "availability": "InStock",
-    "priceCurrency": "TRY"
-  }
+  "category": "Security Equipment"
 };
 
 export default function TurnstileSystemsPage() {

@@ -67,12 +67,7 @@ const productJsonLd = {
   "name": "QR-Patrol Bekçi Kontrol Sistemi", 
   "description": "Güvenlik personeli için QR kod tabanlı mobil devriye takip sistemi. Gerçek zamanlı konum izleme, otomatik raporlama ve acil durum alarm özellikleri.",
   "brand": "Mika Teknoloji",
-  "category": "Security Control System",
-  "offers": {
-    "@type": "Offer",
-    "availability": "InStock",
-    "priceCurrency": "TRY"
-  }
+  "category": "Security Control System"
 };
 
 const faqJsonLd = {

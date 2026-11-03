@@ -74,12 +74,7 @@ const productJsonLd = {
   "name": "Otopark Otomasyon Sistemi",
   "description": "Plaka tanıma, bariyer kontrol ve ücretlendirme sistemi ile tam otomatik otopark yönetimi. RFID kart desteği ve güvenlik kamerası entegrasyonu.",
   "brand": "Mika Teknoloji",
-  "category": "Parking Management System",
-  "offers": {
-    "@type": "Offer",
-    "availability": "InStock",
-    "priceCurrency": "TRY"
-  }
+  "category": "Parking Management System"
 };
 
 const faqJsonLd = {
