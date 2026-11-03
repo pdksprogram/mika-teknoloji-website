@@ -24,7 +24,9 @@ const URUNLER = [
   "Diğer",
 ];
 
-type Alan = "adSoyad" | "telefon" | "eposta" | "urun" | "mesaj";
+const TALEP_TURLERI = ["Demo", "Keşif", "Fiyat teklifi", "Diğer"];
+
+type Alan = "adSoyad" | "telefon" | "eposta" | "talep" | "urun" | "mesaj";
 type Hatalar = Partial<Record<Alan, string>>;
 
 // Yalnız rakam, en fazla 11 hane; 0 ile başlıyorsa 0XXX XXX XX XX, değilse XXX XXX XX XX.
@@ -65,6 +67,7 @@ export default function Contact() {
     if (v.adSoyad.trim().length < 2) h.adSoyad = "Ad soyad yazın.";
     if (!telefonGecerli(v.telefon)) h.telefon = "Telefonu 0 5xx xxx xx xx biçiminde yazın.";
     if (v.eposta.trim() && !EPOSTA_DESENI.test(v.eposta.trim())) h.eposta = "Geçerli bir e-posta yazın.";
+    if (!v.talep) h.talep = "Talep türünü seçin.";
     if (!v.urun) h.urun = "İlgilendiğiniz ürünü seçin.";
     if (v.mesaj.trim().length < 5) h.mesaj = "Kısa bir mesaj yazın.";
     return h;
@@ -78,6 +81,7 @@ export default function Contact() {
       adSoyad: al("adSoyad"),
       telefon: al("telefon"),
       eposta: al("eposta"),
+      talep: al("talep"),
       urun: al("urun"),
       mesaj: al("mesaj"),
     };
@@ -96,6 +100,7 @@ export default function Contact() {
       firma ? `Firma: ${firma}` : "",
       `Telefon: ${v.telefon.trim()}`,
       v.eposta.trim() ? `E-posta: ${v.eposta.trim()}` : "",
+      `Talep türü: ${v.talep}`,
       `İlgilenilen ürün: ${v.urun}`,
       `Mesaj: ${v.mesaj.trim()}`,
     ].filter(Boolean);
@@ -210,24 +215,45 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="urun">İlgilenilen Ürün *</Label>
-                    <select
-                      id="urun"
-                      name="urun"
-                      required
-                      defaultValue=""
-                      onChange={() => temizle("urun")}
-                      className={`flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base md:text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${hataSinifi("urun")}`}
-                      {...aria("urun")}
-                      data-testid="select-urun"
-                    >
-                      <option value="" disabled>Seçin</option>
-                      {URUNLER.map((u) => (
-                        <option key={u} value={u}>{u}</option>
-                      ))}
-                    </select>
-                    <HataMetni ad="urun" />
+                  <div className="grid md:grid-cols-2 gap-5">
+                    <div className="space-y-2">
+                      <Label htmlFor="talep">Talep Türü *</Label>
+                      <select
+                        id="talep"
+                        name="talep"
+                        required
+                        defaultValue=""
+                        onChange={() => temizle("talep")}
+                        className={`flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base md:text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${hataSinifi("talep")}`}
+                        {...aria("talep")}
+                        data-testid="select-talep"
+                      >
+                        <option value="" disabled>Seçin</option>
+                        {TALEP_TURLERI.map((t) => (
+                          <option key={t} value={t}>{t}</option>
+                        ))}
+                      </select>
+                      <HataMetni ad="talep" />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="urun">İlgilenilen Ürün *</Label>
+                      <select
+                        id="urun"
+                        name="urun"
+                        required
+                        defaultValue=""
+                        onChange={() => temizle("urun")}
+                        className={`flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base md:text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${hataSinifi("urun")}`}
+                        {...aria("urun")}
+                        data-testid="select-urun"
+                      >
+                        <option value="" disabled>Seçin</option>
+                        {URUNLER.map((u) => (
+                          <option key={u} value={u}>{u}</option>
+                        ))}
+                      </select>
+                      <HataMetni ad="urun" />
+                    </div>
                   </div>
 
                   <div className="space-y-2">
