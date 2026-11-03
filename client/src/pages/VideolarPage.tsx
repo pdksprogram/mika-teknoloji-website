@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Kirinti, type KirintiMaddesi } from "@/components/PdksIcerik";
 import { Helmet } from "react-helmet-async";
 import { useState, useRef, type SyntheticEvent } from "react";
-import CtaDugmeleri from "@/components/CtaDugmeleri";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 interface VideoItem {
   id: string;
@@ -584,13 +584,13 @@ const tumVideolar: VideoItem[] = [
   },
   {
     id: "bariyer-sistemleri",
-    title: "Bariyer Sistemleri Tanıtım - MT Plus, MT Genius, MT Guard",
-    description: "Mika Teknoloji bariyer ürün ailesi: MT Plus, MT Genius ve MT Guard modellerinin karşılaştırması ve özellik tanıtımı.",
+    title: "Bariyer Sistemleri Tanıtım - PT Plus, PT Genius, PT Guard",
+    description: "Mika Teknoloji bariyer ürün ailesi: PT Plus, PT Genius ve PT Guard modellerinin karşılaştırması ve özellik tanıtımı.",
     src: "/bariyer-sistemleri.mp4",
     duration: "3:30",
     category: "Tanıtım",
     subcategory: "Ürün Tanıtımı",
-    keywords: "bariyer sistemleri, MT Plus, MT Genius, MT Guard, otopark bariyeri, araç bariyeri",
+    keywords: "bariyer sistemleri, PT Plus, PT Genius, PT Guard, otopark bariyeri, araç bariyeri",
     level: "Başlangıç",
   },
   {
@@ -1037,13 +1037,12 @@ export default function VideolarPage() {
 
       <div className="min-h-screen bg-white">
         <Kirinti maddeler={KIRINTI} icSinif="pb-4" />
-        <section className="bg-slate-900 border-b-4 border-primary text-white py-8 md:py-12">
+        <section className="bg-slate-900 border-b-4 border-primary text-white py-12">
           <div className="container mx-auto px-4">
             <h1 className="text-3xl md:text-4xl font-bold mb-3">PDKS Eğitim Videoları</h1>
             <p className="text-slate-300 max-w-2xl">
               {videos.length} video: kullanım rehberleri, kurulum videoları ve canlı demolar.
             </p>
-            <CtaDugmeleri tur="yazilim" koyu sinif="mt-6" />
           </div>
         </section>
         <section className="py-8 bg-slate-50 border-b border-slate-200">
@@ -1214,9 +1213,29 @@ export default function VideolarPage() {
                 PDKS Sistemi Hakkında Bilgi Alın
               </h2>
               <p className="text-slate-300 text-sm sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">
-                Kurulumu ve kullanımı ekibimiz yerinde gösterir.
+                Ücretsiz demo talebi oluşturun veya WhatsApp üzerinden anında bilgi alın. Profesyonel ekibimiz kurulum desteği sağlar.
               </p>
-              <CtaDugmeleri tur="yazilim" koyu sinif="justify-center" />
+              <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+                <Button
+                  asChild
+                  size="lg"
+                  className="text-sm sm:text-base"
+                >
+                  <a href="https://wa.me/905467122296" target="_blank" rel="noopener noreferrer">
+                    WhatsApp ile İletişim
+                  </a>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outlineLight"
+                  className="text-sm sm:text-base"
+                >
+                  <Link href="/iletisim">
+                    İletişim Formu <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                  </Link>
+                </Button>
+              </div>
             </motion.div>
           </div>
         </section>
@@ -1241,6 +1260,8 @@ export default function VideolarPage() {
           </div>
         </section>
       </div>
+
+      <WhatsAppWidget />
     </>
   );
 }

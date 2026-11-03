@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -170,6 +170,13 @@ function Router() {
   );
 }
 
+// Videolar sayfası kendi WhatsApp düğmesini taşır (o sayfaya dokunulmaz); orada genel düğme çift görünmesin.
+function SiteWhatsApp() {
+  const [konum] = useLocation();
+  if (konum.replace(/\/+$/, "") === "/videolar") return null;
+  return <WhatsAppWidget />;
+}
+
 // onRenderli: main.tsx/entry-server.tsx imzası korunur; yükleme ekranı kalktığı için artık davranışı değiştirmez.
 function App(_props: { onRenderli?: boolean }) {
   // Yükleme ekranı ve açılış solması yok: ön-render HTML'i ile ilk çizim birebir aynı,
@@ -194,7 +201,7 @@ function App(_props: { onRenderli?: boolean }) {
           </main>
           <SiteFooter />
         </div>
-        <WhatsAppWidget />
+        <SiteWhatsApp />
         <Toaster />
         </TooltipProvider>
       </LanguageProvider>
