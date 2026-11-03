@@ -106,7 +106,8 @@ async function main() {
       }
       sayfa = sayfa
         .replace("</head>", `    ${bas}\n  </head>`)
-        .replace('<div id="root"></div>', `<div id="root">${html}</div>`);
+        // data-rota: istemci (main.tsx) yalnız adres bu rotaysa hydrate eder, değilse yeniden çizer.
+        .replace(BOS_KOK, `<div id="root" data-rota="${rota}">${html}</div>`);
       const hedef = hedefDosya(rota);
       fs.mkdirSync(path.dirname(hedef), { recursive: true });
       fs.writeFileSync(hedef, sayfa);

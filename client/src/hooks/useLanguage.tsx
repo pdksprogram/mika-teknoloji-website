@@ -93,13 +93,20 @@ const translations = {
   }
 };
 
+// Kayıtlı dil; yoksa, boşsa ya da sözlükte karşılığı yoksa (ör. "de") Türkçe.
+// Geçerli diller `translations` anahtarlarıdır. Ön-render (sunucu) ortamında localStorage yoktur.
+export function kayitliDiliOku(): Language {
+  let saved: string | null = null;
+  try {
+    saved = typeof localStorage !== 'undefined' ? localStorage.getItem('language') : null;
+  } catch {
+    saved = null;
+  }
+  return saved && Object.prototype.hasOwnProperty.call(translations, saved) ? (saved as Language) : 'tr';
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [selectedLanguage, setSelectedLanguage] = useState<Language>(() => {
-    // Get from localStorage or default to Turkish
-    // Ön-render (sunucu) ortamında localStorage yoktur; Türkçe ile üretilir.
-    const saved = typeof localStorage !== 'undefined' ? localStorage.getItem('language') : null;
-    return (saved as Language) || 'tr';
-  });
+  const [selectedLanguage, setSelectedLanguage] = useState<Language>(kayitliDiliOku);
 
   const t = translations[selectedLanguage];
 
