@@ -4,8 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";
 import {
-  Phone,
-  Download,
   CheckCircle,
   Shield,
   Settings,
@@ -31,7 +29,6 @@ export default function T345DetailPage() {
     { label: "Darbe Direnci", value: "IK08 (Yüksek)" },
     { label: "Garanti", value: "2 Yıl" }
   ];
-
 
   const applicationAreas = [
     "Fabrikalar ve endüstriyel tesisler",
@@ -105,7 +102,7 @@ export default function T345DetailPage() {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
-                MT 345
+                MT 345{" "}
                 <span className="block text-xl font-normal text-slate-600 mt-2">
                   Endüstriyel Elektromekanik Bel Tipi Turnike Sistemi
                 </span>

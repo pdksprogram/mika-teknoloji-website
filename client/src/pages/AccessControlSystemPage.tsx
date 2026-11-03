@@ -1,15 +1,13 @@
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Users, Database, Share2, Mail, MessageSquare, Lock, Timer, Smartphone, Zap, Printer, DoorOpen, Rocket, Wallet } from "lucide-react";
-import { Link } from "wouter";
+import { Database, Share2, Mail, MessageSquare, Lock, Timer, Users, Smartphone, Zap, Printer, DoorOpen, Shield } from "lucide-react";
 import SEO from "@/seo/SEO";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
+import { Kirinti, kirintiJsonLd, type KirintiMaddesi } from "@/components/PdksIcerik";
 
-// Simple section numbering for clear identification
-
-// Real product images paths  
-const dashboardImage = "/new-dashboard-table.png";
-const cardAccessSystem = "/card-access-system.png";
-
+const KIRINTI: KirintiMaddesi[] = [
+  { ad: "Ana Sayfa", yol: "/" },
+  { ad: "Ürünler", yol: "/urunler" },
+  { ad: "Geçiş Kontrol", yol: "/urunler/gecis-kontrol" },
+];
 
 const faqs = [
   {
@@ -36,7 +34,7 @@ const faqs = [
 
 const productJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Product", 
+  "@type": "Product",
   "name": "Geçiş Kontrol Sistemleri",
   "description": "RFID kartlı geçiş, biyometrik parmak izi, yüz tanıma ve QR kod teknolojileri ile profesyonel access control çözümleri.",
   "brand": "Mika Teknoloji",
@@ -61,627 +59,217 @@ const faqJsonLd = {
   }))
 };
 
+const TEMEL = [
+  { ikon: Lock, baslik: "Global Antipassback", metin: "Bir kapı kapanmadan diğer kapıdan geçişi engeller." },
+  { ikon: Timer, baslik: "Saat Aralığı Kontrolü", metin: "Belirli saatlerde geçiş izni; mesai dışında otomatik kısıtlama." },
+  { ikon: Users, baslik: "Yetki Seviyeli Erişim", metin: "Personele ve departmana göre kapı yetkisi." },
+];
+
+const ILERI = [
+  { ikon: Database, baslik: "SQL Raporlar", metin: "Giriş-çıkış raporları, vardiya analizleri ve özelleştirilebilen SQL sorguları." },
+  { ikon: Share2, baslik: "Entegrasyon", metin: "Mevcut ERP, İK ve bordro sistemlerinizle entegrasyon desteği." },
+  { ikon: Mail, baslik: "E-posta Bildirimi", metin: "Giriş-çıkış durumları, geç kalma uyarıları ve periyodik raporlar ilgili birime gider." },
+  { ikon: MessageSquare, baslik: "SMS Bildirimi", metin: "Acil durum uyarıları, vardiya değişiklikleri ve duyurular personele hızla ulaşır." },
+  { ikon: Shield, baslik: "Güvenli Erişim", metin: "SSL şifreli bağlantı." },
+  { ikon: Users, baslik: "Merkezi Yönetim", metin: "Tüm lokasyonlar tek arayüzden yönetilir." },
+];
+
+const OKUYUCU = [
+  { ikon: Smartphone, baslik: "Bluetooth ve NFC", metin: "Çoklu bağlantı seçeneği" },
+  { ikon: Lock, baslik: "QR Kod", metin: "Hızlı ve güvenli geçiş" },
+  { ikon: Zap, baslik: "Dijital Kimlik", metin: "Akıllı telefon ile geçiş" },
+];
+
+const ZIYARETCI = [
+  { ikon: Printer, baslik: "Tek Kullanımlık QR", metin: "Anında basılabilen geçici erişim kodu" },
+  { ikon: Smartphone, baslik: "SMS ile QR Gönderimi", metin: "Ziyaretçiye otomatik QR kod gönderimi" },
+  { ikon: DoorOpen, baslik: "Turnike Entegrasyonu", metin: "Geçişlerin anlık takibi" },
+];
+
+type Madde = { ikon: typeof Lock; baslik: string; metin: string };
+
+function MaddeListesi({ maddeler, sinif = "" }: { maddeler: Madde[]; sinif?: string }) {
+  return (
+    <ul className={`grid gap-x-8 gap-y-5 ${sinif}`}>
+      {maddeler.map(({ ikon: Ikon, baslik, metin }) => (
+        <li key={baslik} className="flex items-start gap-3">
+          <Ikon className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" aria-hidden="true" />
+          <div>
+            <h3 className="font-semibold text-gray-900">{baslik}</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">{metin}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export default function AccessControlSystemPage() {
   return (
     <div className="min-h-screen">
-      <SEO 
+      <SEO
         title="Geçiş Kontrol Sistemleri - Access Control Panelleri | Mika Teknoloji"
         description="RFID kartlı geçiş, biyometrik parmak izi, yüz tanıma ve QR kod teknolojileri ile profesyonel access control çözümleri. PDKS entegrasyonu ve güvenli erişim kontrolü."
         canonical="https://mikateknoloji.com/urunler/gecis-kontrol"
-        jsonLd={[productJsonLd, faqJsonLd]}
+        jsonLd={[productJsonLd, faqJsonLd, kirintiJsonLd(KIRINTI)]}
       />
-      
-      {/* [S1] Hero Section - Corporate Style */}
-      <section id="s1" data-section="S1" className="relative min-h-screen bg-slate-50 overflow-hidden">
-        
-        <div className="container mx-auto px-4 py-20">
-          {/* Main Hero Content */}
-          <div className="text-center mb-16">
-            <motion.div
-              initial={false}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-                <span className="text-primary">MikaPass</span><br />
-                <span className="text-gray-800">Akıllı Erişim Kontrol Sistemi</span>
+
+      <Kirinti maddeler={KIRINTI} />
+
+      {/* Ürün hero: solda gerçek yazılım ekranı, sağda bilgi */}
+      <section className="py-8 md:py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <figure className="order-2 lg:order-1 rounded-lg border border-slate-200 overflow-hidden bg-white">
+              <img
+                src="/images/slayt/bulut-pdks-paneli.jpg"
+                alt="MikaPass geçiş kayıtları ekranı: kapı, panel, tarih ve geçiş durumu"
+                className="w-full h-auto"
+                width={1400}
+                height={603}
+              />
+              <figcaption className="px-4 py-3 text-sm text-slate-600 border-t border-slate-200">
+                Geçiş kayıtları ekranı (kişisel veriler maskelenmiştir)
+              </figcaption>
+            </figure>
+
+            <div className="order-1 lg:order-2">
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 leading-tight">
+                <span className="text-primary">MikaPass</span>{" "}Akıllı Erişim Kontrol Sistemi
               </h1>
-              <p className="text-2xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed">
-                Bina içindeki kapıları yetki seviyesine göre geçiş kontrol yapın.
+              <p className="text-lg text-gray-600 mb-5">
+                Bina içindeki kapıları yetki seviyesine göre kontrol edin.
               </p>
-              <p className="text-lg text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-                Antipassback ve Global Antipassback özelliği ile bir kapı kapanmadan diğer kapıdan geçiş engelleyin. 
-                Limit kontör ve saat aralıkları ile tam güvenlik kontrolü sağlayın.
+              <CtaDugmeleri tur="yazilim" sinif="mb-6" />
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Antipassback ve Global Antipassback ile bir kapı kapanmadan diğer kapıdan geçiş engellenir.
+                Limit kontör ve saat aralıkları ile geçişler tam kontrol altında kalır.
               </p>
-            </motion.div>
-
-            {/* Features Tags */}
-            <motion.div 
-              className="flex flex-wrap justify-center gap-4 mb-12"
-              initial={false}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <p className="text-base font-semibold text-slate-700">
-                Yetki Seviyeli Kontrol · Antipassback Sistemi · Saat Aralığı Kontrolü
-              </p>
-            </motion.div>
-          </div>
-
-          {/* Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left - Video Demo */}
-            <motion.div 
-              className="order-2 lg:order-1"
-              initial={false}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <figure className="bg-white rounded-lg border border-slate-200 overflow-hidden">
-                <img
-                  src="/images/urun/gecis-kontrol-paneli.jpg"
-                  alt="Geçiş kontrol yazılımı yönetim paneli ekranı"
-                  className="w-full h-auto"
-                  width={1400}
-                  height={629}
-                />
-                <figcaption className="px-4 py-3 text-sm text-slate-600 border-t border-slate-200">
-                  Geçiş kontrol yönetim paneli
-                </figcaption>
-              </figure>
-            </motion.div>
-
-            {/* Right - Professional Features */}
-            <motion.div 
-              className="order-1 lg:order-2"
-              initial={false}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <div className="space-y-8">
-                {/* Feature Cards */}
-                <div className="bg-white rounded-2xl p-6 shadow-xl border border-slate-200">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4">
-                      <Lock className="h-6 w-6 text-primary" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900">Global Antipassback</h3>
-                  </div>
-                  <p className="text-gray-600 leading-relaxed">
-                    Bir kapı kapanmadan diğer kapıdan geçişi engeller. Güvenlik açıklarını tamamen kapatır.
-                  </p>
-                </div>
-
-                <div className="bg-white rounded-2xl p-6 shadow-xl border border-slate-200">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4">
-                      <Timer className="h-6 w-6 text-primary" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900">Saat Aralığı Kontrolü</h3>
-                  </div>
-                  <p className="text-gray-600 leading-relaxed">
-                    Belirli saatlerde geçiş izinleri tanımlayın. Mesai saatleri dışında otomatik kısıtlama.
-                  </p>
-                </div>
-
-                <div className="bg-white rounded-2xl p-6 shadow-xl border border-slate-200">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4">
-                      <Users className="h-6 w-6 text-primary" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900">Yetki Seviyeli Erişim</h3>
-                  </div>
-                  <p className="text-gray-600 leading-relaxed">
-                    Her personele özel yetki tanımlaması. Departman bazlı erişim kontrolü ve izleme.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+              <MaddeListesi maddeler={TEMEL} />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* [S2] Cloud Based Access Control Section */}
-      <section id="s2" data-section="S2" className="relative py-32 bg-gray-50 overflow-hidden">
+      {/* Bulut tabanlı yönetim ve ileri özellikler */}
+      <section className="py-12 md:py-16 bg-gray-50 border-t border-slate-200">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left Content */}
-            <motion.div
-              initial={false}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="mb-8">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                  <span className="text-primary">Bulut Tabanlı</span><br />
-                  Geçiş Kontrol Sistemi
-                </h2>
-                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                  Binalarınızı, çalışanlarınızı, ziyaretçilerinizi, müşterilerinizi, bina 
-                  sakinlerinizi ve tüm varlıklarınızı Mika bulut yazılımları ile 
-                  koruyabilirsiniz.
-                </p>
-                <div className="bg-slate-50 border-l-4 border-primary p-6 mb-8">
-                  <p className="text-gray-700 font-medium">
-                    Tüm yaşam alanlarınızı BT altyapı maliyetine gereksinim duymadan 
-                    güvenle yönetebilirsiniz.
-                  </p>
-                </div>
-              </div>
-
-              {/* Features Grid */}
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl mx-auto mb-4 flex items-center justify-center">
-                    <Shield className="h-6 w-6 text-primary" />
-                  </div>
-                  <h4 className="font-bold text-gray-900 mb-2">Güvenli Erişim</h4>
-                  <p className="text-sm text-gray-600">SSL şifreleme ile güvenli bağlantı</p>
-                </div>
-                <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl mx-auto mb-4 flex items-center justify-center">
-                    <Users className="h-6 w-6 text-primary" />
-                  </div>
-                  <h4 className="font-bold text-gray-900 mb-2">Merkezi Yönetim</h4>
-                  <p className="text-sm text-gray-600">Tüm lokasyonları tek arayüzden kontrol</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Right Content - Dashboard and Phone */}
-            <motion.div
-              className="relative"
-              initial={false}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <div className="relative">
-                {/* Real Dashboard Image */}
-                <div className="w-full max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
-                  <img 
-                    src={dashboardImage} 
-                    alt="Bulut Tabanlı Yönetim Dashboard"
-                    className="w-full h-auto object-contain"
-                    width="800"
-                    height="600"
-                  />
-                </div>
-                {/* Card Access System */}
-                <motion.div 
-                  className="absolute -bottom-8 -right-8 w-64 h-auto"
-                >
-                  <img 
-                    src={cardAccessSystem} 
-                    alt="Kartlı Geçiş Kontrol Sistemi"
-                    className="w-full h-auto object-contain drop-shadow-2xl rounded-xl"
-                    width="300"
-                    height="200"
-                  />
-                </motion.div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-
-      {/* [S3] Advanced Features Section */}
-      <section id="s3" data-section="S3" className="relative py-32 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left Content - Advanced Dashboard */}
-            <motion.div
-              className="relative"
-              initial={false}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="w-full max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
-                <div className="text-center p-6 bg-slate-50">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Mika Teknoloji PDKS Dashboard</h3>
-                  <p className="text-gray-600 text-sm">Personel takip ve güvenlik kontrol sistemleri canlı raporlama paneli</p>
-                </div>
-                <div className="p-6 bg-slate-50">
-                  <img 
-                    src="/images/urun/gecis-kontrol-paneli.jpg" 
-                    alt="Mika geçiş kontrol paneli: günlük giriş sayıları ve hata oranları"
-                    className="w-full h-auto object-contain rounded-xl shadow-lg"
-                    width="1400"
-                    height="629"
-                  />
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Right Content - Features */}
-            <motion.div
-              initial={false}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <div className="mb-8">
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                  Kurumsal Düzeyde<br />
-                  <span className="text-primary">İleri Özellikler</span>
-                </h2>
-                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                  Mika Teknoloji'nin bulut tabanlı geçiş kontrol sistemi, kurumsal 
-                  ihtiyaçlarınıza yönelik gelişmiş raporlama ve iletişim altyapısı sunar.
-                </p>
-              </div>
-
-              {/* Features Grid */}
-              <div className="grid grid-cols-1 gap-6">
-                <div className="flex items-start p-6 bg-slate-50 rounded-xl">
-                  <div className="w-12 h-12 bg-primary rounded-xl mr-4 flex items-center justify-center flex-shrink-0">
-                    <Database className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-2">SQL Raporlar</h4>
-                    <p className="text-sm text-gray-600">Detaylı personel giriş-çıkış raporları, vardiya analizleri ve özelleştirilebilen SQL sorguları ile kapsamlı veri analizi imkanı.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start p-6 bg-slate-50 rounded-xl">
-                  <div className="w-12 h-12 bg-primary rounded-xl mr-4 flex items-center justify-center flex-shrink-0">
-                    <Share2 className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-2">Entegrasyon</h4>
-                    <p className="text-sm text-gray-600">Mevcut ERP, İK ve bordro sistemlerinizle entegrasyon desteği için bize ulaşın.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start p-6 bg-slate-50 rounded-xl">
-                  <div className="w-12 h-12 bg-primary rounded-xl mr-4 flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-2">Mail Atma</h4>
-                    <p className="text-sm text-gray-600">Otomatik e-posta bildirimleri ile personel giriş-çıkış durumları, geç kalma uyarıları ve periyodik raporların ilgili birimlere iletimi.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start p-6 bg-slate-50 rounded-xl">
-                  <div className="w-12 h-12 bg-primary rounded-xl mr-4 flex items-center justify-center flex-shrink-0">
-                    <MessageSquare className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-2">SMS Atma</h4>
-                    <p className="text-sm text-gray-600">Anlık SMS bildirimleri ile acil durum uyarıları, vardiya değişiklikleri ve önemli duyuruların personele hızlı ulaştırılması.</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-
-
-      {/* [S4] Hardware Section */}
-      <section id="s4" data-section="S4" className="relative py-32 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-20"
-            initial={false}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Donanımlar
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Eşi görülmemiş bir geçiş kontrol deneyimi yaşarken sınırları aşın. 
-              Mika donanımları ile yüksek sayıda noktayı tek bir arayüz ile kontrol edebilir.
+          <div className="max-w-3xl mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Bulut Tabanlı Geçiş Kontrol Sistemi</h2>
+            <p className="text-gray-600 leading-relaxed">
+              Binalarınızı, çalışanlarınızı, ziyaretçilerinizi ve bina sakinlerinizi Mika bulut yazılımları ile
+              BT altyapı maliyetine gerek duymadan yönetin.
             </p>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
-            {/* Control Panel */}
-            <motion.div
-              initial={false}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="group"
-            >
-              <div className="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-all duration-500 group-hover:scale-105">
-                <div className="mb-8">
-                  <div className="w-full max-w-sm mx-auto bg-white border border-slate-200 p-8 rounded-2xl h-80 flex items-center justify-center">
-                    <img 
-                      src="/access-control-panels.png" 
-                      alt="Access Kontrol Panelleri"
-                      className="max-w-full max-h-full object-contain"
-                      width="300"
-                      height="300"
-                    />
-                  </div>
-                </div>
-                
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    Güvenlik Kontrol Paneli
-                  </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    İşyerleri, AVM ve binalarda güvenli geçiş kontrolü sağlayan 
-                    profesyonel metal kasa sistemi.
-                  </p>
-                  
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="bg-slate-50 p-3 rounded-xl">
-                      <div className="font-semibold text-slate-900">Metal Kasa</div>
-                      <div className="text-slate-800">Güvenli Yapı</div>
-                    </div>
-                    <div className="bg-slate-50 p-3 rounded-xl">
-                      <div className="font-semibold text-slate-900">Kilit Sistemi</div>
-                      <div className="text-slate-800">Anahtarlı Güvenlik</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Control Card */}
-            <motion.div
-              initial={false}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="group"
-            >
-              <div className="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-all duration-500 group-hover:scale-105">
-                <div className="mb-8">
-                  <div className="w-full max-w-sm mx-auto bg-white border border-slate-200 p-8 rounded-2xl h-80 flex items-center justify-center">
-                    <img 
-                      src="/images/urun/erisim-kontrol-paneli-kart.jpg" 
-                      alt="Geçiş kontrol paneli kartı"
-                      className="max-w-full max-h-full object-contain"
-                      width="300"
-                      height="300"
-                    />
-                  </div>
-                </div>
-                
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    Akıllı Kontrol Kartı
-                  </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    Çoklu bağlantı portları ve LCD ekran ile 
-                    gelişmiş kontrol kartı teknolojisi.
-                  </p>
-                  
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="bg-slate-50 p-3 rounded-xl">
-                      <div className="font-semibold text-slate-900">LCD Ekran</div>
-                      <div className="text-slate-800">Anlık Bilgi</div>
-                    </div>
-                    <div className="bg-slate-50 p-3 rounded-xl">
-                      <div className="font-semibold text-slate-900">Modüler</div>
-                      <div className="text-slate-800">Genişletilebilir</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
           </div>
-
-          {/* Tech Specs */}
-          <motion.div 
-            className="text-center mt-16"
-            initial={false}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <div className="bg-white rounded-3xl shadow-xl p-12 max-w-4xl mx-auto">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">Mika Serisi Okuyucular</h3>
-              <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                Mika okuyucuları üstün güvenlik standartlarına uygunlukla birlikte kullanıcı deneyimini 
-                hızlı ve kullanışlı bir alışkanlığa çevirir. Cep telefonuna tanımlanan dijital kimlik 
-                ile kart taşıma gereksinimini rafa kaldırabilirsiniz.
-              </p>
-              
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="text-center p-6 bg-slate-50 rounded-2xl">
-                  <Smartphone className="h-8 w-8 mx-auto text-primary mb-3" />
-                  <div className="font-semibold text-gray-900">Bluetooth & NFC</div>
-                  <div className="text-sm text-gray-600 mt-2">Çoklu bağlantı seçeneği</div>
-                </div>
-                <div className="text-center p-6 bg-slate-50 rounded-2xl">
-                  <Lock className="h-8 w-8 mx-auto text-primary mb-3" />
-                  <div className="font-semibold text-gray-900">QR Kod</div>
-                  <div className="text-sm text-gray-600 mt-2">Hızlı ve güvenli geçiş</div>
-                </div>
-                <div className="text-center p-6 bg-slate-50 rounded-2xl">
-                  <Zap className="h-8 w-8 mx-auto text-primary mb-3" />
-                  <div className="font-semibold text-gray-900">Dijital Kimlik</div>
-                  <div className="text-sm text-gray-600 mt-2">Akıllı telefon entegrasyonu</div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+          <MaddeListesi maddeler={ILERI} sinif="sm:grid-cols-2 lg:grid-cols-3" />
         </div>
       </section>
 
-
-      {/* [S5] Cloud Based System */}
-      <section id="s5" data-section="S5" className="relative py-32 bg-white">
+      {/* Donanımlar */}
+      <section className="py-12 md:py-16 bg-white border-t border-slate-200">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left - QR Visitor System */}
-            <motion.div
-              initial={false}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="w-full max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
-                <img 
-                  src="/qr-visitor-system.png" 
-                  alt="Ziyaretçi QR Kod Takip Sistemi"
-                  className="w-full h-auto object-contain"
-                  width="600"
-                  height="800"
-                />
-              </div>
-            </motion.div>
+          <div className="max-w-3xl mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Donanımlar</h2>
+            <p className="text-gray-600 leading-relaxed">
+              Mika donanımları ile çok sayıda geçiş noktası tek arayüzden yönetilir.
+            </p>
+          </div>
 
-            {/* Right - Visitor Tracking Content */}
-            <motion.div
-              initial={false}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <div className="mb-8">
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                  Ziyaretçi Takip<br />
-                  <span className="text-primary">QR Sistemi</span>
-                </h2>
-                <p className="text-xl text-gray-600 leading-relaxed mb-6">
-                  Tek kullanımlık printer veya SMS ile gönderilen QR kodlar ile 
-                  ziyaretçilerinizi kolayca takip edin. Turnikelerden başarıyla 
-                  geçen her ziyaretçi anında sisteme kaydedilir.
+          <div className="grid md:grid-cols-2 gap-8 mb-10">
+            <div className="flex gap-5 items-start border border-slate-200 rounded-lg p-5">
+              <img
+                src="/access-control-panels.png"
+                alt="Metal kasalı geçiş kontrol paneli"
+                className="w-32 h-auto object-contain flex-shrink-0"
+                width={291}
+                height={173}
+                loading="lazy"
+              />
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">Güvenlik Kontrol Paneli</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  İşyeri, AVM ve binalar için metal kasalı, anahtarlı kilit sistemli geçiş kontrol paneli.
                 </p>
               </div>
-
-              {/* Features */}
-              <div className="space-y-4">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                    <Printer className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900">Tek Kullanımlık QR Printer</h4>
-                    <p className="text-gray-600 text-sm">Anında basılabilen geçici erişim kodları</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                    <Smartphone className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900">SMS ile QR Gönderimi</h4>
-                    <p className="text-gray-600 text-sm">Ziyaretçilere otomatik QR kod gönderimi</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                    <DoorOpen className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900">Turnike Entegrasyonu</h4>
-                    <p className="text-gray-600 text-sm">Başarıyla geçişlerin anlık takibi</p>
-                  </div>
-                </div>
+            </div>
+            <div className="flex gap-5 items-start border border-slate-200 rounded-lg p-5">
+              <img
+                src="/images/urun/erisim-kontrol-paneli-kart.jpg"
+                alt="Geçiş kontrol paneli kartı"
+                className="w-32 h-auto object-contain flex-shrink-0"
+                width={252}
+                height={252}
+                loading="lazy"
+              />
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">Akıllı Kontrol Kartı</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Çoklu bağlantı portlu, LCD ekranlı, modüler ve genişletilebilir kontrol kartı.
+                </p>
               </div>
-            </motion.div>
+            </div>
+          </div>
+
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">Mika Serisi Okuyucular</h3>
+          <p className="text-gray-600 leading-relaxed mb-5 max-w-3xl">
+            Cep telefonuna tanımlanan dijital kimlik ile kart taşıma gereksinimi ortadan kalkar.
+          </p>
+          <MaddeListesi maddeler={OKUYUCU} sinif="sm:grid-cols-3" />
+        </div>
+      </section>
+
+      {/* Ziyaretçi QR */}
+      <section className="py-12 md:py-16 bg-gray-50 border-t border-slate-200">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <img
+              src="/qr-visitor-system.png"
+              alt="Ziyaretçi QR kod oluşturma ekranı"
+              className="w-full max-w-sm mx-auto h-auto rounded-lg border border-slate-200 bg-white"
+              width={685}
+              height={819}
+              loading="lazy"
+            />
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Ziyaretçi Takip QR Sistemi</h2>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Yazıcıdan basılan ya da SMS ile gönderilen tek kullanımlık QR kodlarla ziyaretçiler takip edilir.
+                Turnikeden geçen her ziyaretçi anında sisteme kaydedilir.
+              </p>
+              <MaddeListesi maddeler={ZIYARETCI} />
+            </div>
           </div>
         </div>
       </section>
 
-
-
-      {/* [S6] Fast and Secure Access - TEMPORARILY DISABLED */}
-      {/* S6 content will be re-added properly after design approval */}
-
-      {/* CTA Section - Armongate Style */}
-      <section className="py-32 bg-slate-900 border-t-4 border-primary text-white relative overflow-hidden">
-        
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <motion.div
-            initial={false}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-              Hızlı ve Basit<br />
-              <span className="text-slate-300">Geçiş Kontrolü</span>
-            </h2>
-            <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-              MikaPass ile akıllı telefonunuzu dijital anahtarınız haline getirin. 
-              Temassız, güvenli ve hızlı geçiş deneyimi.
-            </p>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link href="/iletisim">
-                  <Button 
-                    size="lg" 
-                    className="px-12 py-6 text-xl"
-                  >
-                    Demo ve Keşif Talep Edin
-                    <ArrowRight className="ml-3 h-6 w-6" />
-                  </Button>
-                </Link>
-              </motion.div>
-              
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button asChild 
-                  size="lg" 
-                  variant="outlineLight"
-                  className="px-12 py-6 text-xl"
-                >
-                  <Link href="/iletisim">
-                    Daha Fazla Bilgi
-                  </Link>
-                </Button>
-              </motion.div>
-            </div>
-
-            {/* Benefits Grid */}
-            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <motion.div
-                className="text-center"
-                initial={false}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Rocket className="h-8 w-8 mx-auto text-primary mb-4" />
-                <div className="font-bold text-lg text-white mb-2">Anında Kurulum</div>
-                <div className="text-slate-300 text-sm">15 dakikada kurulum tamamlanır</div>
-              </motion.div>
-
-              <motion.div
-                className="text-center"
-                initial={false}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Wallet className="h-8 w-8 mx-auto text-primary mb-4" />
-                <div className="font-bold text-lg text-white mb-2">Düşük Maliyet</div>
-                <div className="text-slate-300 text-sm">BT altyapı yatırımı gerektirmez</div>
-              </motion.div>
-
-              <motion.div
-                className="text-center"
-                initial={false}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <Lock className="h-8 w-8 mx-auto text-primary mb-4" />
-                <div className="font-bold text-lg text-white mb-2">KVKK Uyumlu</div>
-                <div className="text-slate-300 text-sm">Tam güvenlik ve gizlilik</div>
-              </motion.div>
-            </div>
-          </motion.div>
+      {/* Sık sorulan sorular: metinler faqJsonLd ile aynı kaynaktan */}
+      <section className="py-12 md:py-16 bg-white border-t border-slate-200">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Sık Sorulan Sorular</h2>
+          <div className="divide-y divide-slate-200 border-y border-slate-200">
+            {faqs.map((faq) => (
+              <details key={faq.question} className="group py-4">
+                <summary className="cursor-pointer list-none [&::-webkit-details-marker]:hidden flex items-center justify-between gap-4 font-semibold text-gray-900">
+                  {faq.question}
+                  <span aria-hidden="true" className="text-primary text-xl leading-none group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <p className="mt-3 text-gray-600 leading-relaxed">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 
+      {/* Sayfa sonu talep */}
+      <section className="py-12 md:py-16 bg-slate-900 border-t-4 border-primary text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">Hızlı ve Basit Geçiş Kontrolü</h2>
+          <p className="text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+            MikaPass ile akıllı telefon dijital anahtara dönüşür: temassız, güvenli ve hızlı geçiş.
+          </p>
+          <CtaDugmeleri tur="yazilim" koyu sinif="justify-center" />
+        </div>
+      </section>
     </div>
   );
 }
