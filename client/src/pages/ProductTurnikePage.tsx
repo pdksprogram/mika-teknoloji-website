@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 export default function ProductTurnikePage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -279,10 +280,7 @@ export default function ProductTurnikePage() {
                     </div>
                   </div>
                   
-                  <div className="flex items-center justify-between pt-4 border-t">
-                    <div className="text-slate-900 font-semibold">
-                      {product.price}
-                    </div>
+                  <div className="flex items-center justify-end pt-4 border-t">
                     <Button 
                       asChild
                       size="sm"
@@ -290,7 +288,7 @@ export default function ProductTurnikePage() {
                       data-testid={`product-detail-${product.id}`}
                     >
                       <Link href={product.href}>
-                        {product.href === "/iletisim" ? "Bilgi Alın" : "Detayları Gör"}
+                        {product.href === "/iletisim" ? "Teklif Alın" : "Detayları Gör"}
                         <ChevronRight className="w-4 h-4 ml-1" />
                       </Link>
                     </Button>
@@ -518,14 +516,7 @@ export default function ProductTurnikePage() {
                 <strong>Turnike sistemi</strong> kurulumu, bakımı ve teknik desteği için uzman ekibimizle çalışın. 
                 Keşif için bize ulaşın.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg">
-                  <Link href="/iletisim">Keşif Talep Edin</Link>
-                </Button>
-                <Button asChild variant="outline" size="lg">
-                  <a href="tel:+905467122296">0546 712 22 96</a>
-                </Button>
-              </div>
+              <CtaDugmeleri tur="donanim" sinif="justify-center" />
             </motion.div>
           </div>
         </div>

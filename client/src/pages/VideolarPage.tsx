@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Kirinti, type KirintiMaddesi } from "@/components/PdksIcerik";
 import { Helmet } from "react-helmet-async";
 import { useState, useRef, type SyntheticEvent } from "react";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 interface VideoItem {
   id: string;
@@ -1212,29 +1213,9 @@ export default function VideolarPage() {
                 PDKS Sistemi Hakkında Bilgi Alın
               </h2>
               <p className="text-slate-300 text-sm sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">
-                Ücretsiz demo talebi oluşturun veya WhatsApp üzerinden anında bilgi alın. Profesyonel ekibimiz kurulum desteği sağlar.
+                Kurulumu ve kullanımı ekibimiz yerinde gösterir.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-                <Button
-                  asChild
-                  size="lg"
-                  className="text-sm sm:text-base"
-                >
-                  <a href="https://wa.me/905467122296" target="_blank" rel="noopener noreferrer">
-                    WhatsApp ile İletişim
-                  </a>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outlineLight"
-                  className="text-sm sm:text-base"
-                >
-                  <Link href="/iletisim">
-                    İletişim Formu <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-                  </Link>
-                </Button>
-              </div>
+              <CtaDugmeleri tur="yazilim" koyu sinif="justify-center" />
             </motion.div>
           </div>
         </section>

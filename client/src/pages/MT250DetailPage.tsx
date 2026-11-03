@@ -17,6 +17,7 @@ import {
 import { BEL_TURNIKE_IMAGES } from "@/assetsMap";
 import { Link } from "wouter";
 import TurnikeReferanslari from "@/components/TurnikeReferanslari";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 export default function MT250DetailPage() {
   
@@ -358,19 +359,7 @@ export default function MT250DetailPage() {
             <p className="text-xl text-white/90 mb-6">
               Uzman ekibimizle iletişime geçin ve işletmeniz için en uygun çözümü keşfedin.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg">
-                <a href="tel:+905467122296">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Hemen Ara: 0546 712 22 96
-                </a>
-              </Button>
-              <Button asChild size="lg" variant="outlineLight">
-                <Link href="/iletisim">
-                  Teklif Formu
-                </Link>
-              </Button>
-            </div>
+            <CtaDugmeleri tur="donanim" koyu sinif="justify-center" />
           </motion.div>
 
         </div>

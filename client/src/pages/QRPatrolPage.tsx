@@ -5,6 +5,7 @@ import { Link } from "wouter";
 import SEO from "@/seo/SEO";
 import { useEffect } from "react";
 import { trackQRPatrolView, trackProductView } from "@/lib/analytics";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 // Images
 const securityPatrolImage = "/security-guard-patrol-tracking.png";
@@ -342,30 +343,9 @@ export default function QRPatrolPage() {
               Güvenlik Operasyonlarınızı Dijitalleştirin
             </h2>
             <p className="text-xl text-slate-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-              QR-Patrol sistemi ile güvenlik personelini daha etkili yönetin. 
-              Ücretsiz demo talep edin ve farkı hemen görün.
+              QR-Patrol sistemi ile güvenlik personelini daha etkili yönetin.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                asChild
-                size="lg" 
-                className="px-8 py-4 text-lg"
-              >
-                <Link href="/iletisim">
-                  Ücretsiz Demo İsteyin <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild 
-                variant="outlineLight" 
-                size="lg"
-                className="px-8 py-4 text-lg"
-              >
-                <Link href="/iletisim">
-                  <Download className="mr-2 h-5 w-5" />
-                  Ürün Kataloğu İste
-                </Link>
-              </Button>
-            </div>
+            <CtaDugmeleri tur="yazilim" koyu sinif="justify-center" />
           </motion.div>
         </div>
       </section>

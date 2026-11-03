@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { ENGELLI_TURNIKE_IMAGES } from "@/assetsMap";
 import { Link } from "wouter";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 export default function MTT80YaprakDetailPage() {
   const productDetails = {
@@ -146,17 +147,7 @@ export default function MTT80YaprakDetailPage() {
                 </p>
               </div>
 
-              <div className="flex flex-wrap items-center gap-3 py-4">
-                <Button asChild>
-                  <a href={`tel:${DEMO_TELEFON}`}>
-                    <Phone className="mr-2 h-4 w-4" />
-                    Fiyat İçin Ara
-                  </a>
-                </Button>
-                <Button asChild variant="outline">
-                  <Link href="/iletisim">Teklif Alın</Link>
-                </Button>
-              </div>
+              <CtaDugmeleri tur="donanim" sinif="py-4" />
 
               <div className="pt-4">
                 <Button asChild variant="outline">
@@ -315,17 +306,7 @@ export default function MTT80YaprakDetailPage() {
               Ekonomik ve basit çözüm arıyorsanız, MT T80 Yaprak Turnike sizin için ideal. Detaylı bilgi ve teklif için hemen iletişime geçin.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button asChild size="lg">
-                <Link href="/iletisim">Keşif Talep Edin</Link>
-              </Button>
-              <Button asChild variant="outlineLight" size="lg">
-                <a href="tel:+905467122296">
-                  <Phone className="mr-2 h-4 w-4" />
-                  Hemen Ara
-                </a>
-              </Button>
-            </div>
+            <CtaDugmeleri tur="donanim" koyu sinif="justify-center mb-8" />
             
             <div className="flex flex-wrap gap-6 justify-center text-sm">
               <div className="flex items-center gap-2">

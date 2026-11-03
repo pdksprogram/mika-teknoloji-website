@@ -395,7 +395,7 @@ export default function MagazaPersonelTakipPage() {
                 Mağaza Personel Takip Programını Hemen Deneyin
               </h2>
               <p className="text-xl mb-8 text-white/90">
-                Vardiya planlama, shift yönetimi ve mobil PDKS ile personel yönetimini kolaylaştırın. Ücretsiz demo için bizimle iletişime geçin.
+                Vardiya planlama, shift yönetimi ve mobil PDKS ile personel yönetimini kolaylaştırın.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Button 
@@ -404,7 +404,7 @@ export default function MagazaPersonelTakipPage() {
                   className="px-8"
                   data-testid="cta-demo-button"
                 >
-                  <Link href="/iletisim">Ücretsiz Demo Talep Et</Link>
+                  <Link href="/iletisim">Demo ve Keşif Talep Edin</Link>
                 </Button>
                 <Button 
                   asChild

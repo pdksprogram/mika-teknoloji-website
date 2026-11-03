@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { BEL_TURNIKE_IMAGES } from "@/assetsMap";
 import { Link } from "wouter";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 export default function JetonluT250DetailPage() {
   
@@ -113,20 +114,7 @@ export default function JetonluT250DetailPage() {
                 WC girişleri ve kamu alanları için mükemmel çözüm.
               </p>
               
-              <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg">
-                  <Link href="/iletisim">
-                    <Phone className="h-5 w-5 mr-2" />
-                    Jetonlu Sistem Teklifi
-                  </Link>
-                </Button>
-                <Button asChild size="lg" variant="outline">
-                  <Link href="/iletisim">
-                    <Download className="h-5 w-5 mr-2" />
-                    Ödeme Sistemi Kataloğu
-                  </Link>
-                </Button>
-              </div>
+              <CtaDugmeleri tur="donanim" />
             </motion.div>
             
             <motion.div
@@ -266,7 +254,7 @@ export default function JetonluT250DetailPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg">
                   <Link href="/iletisim">
-                    Jetonlu Sistem Teklifi Al
+                    Teklif Alın
                   </Link>
                 </Button>
                 <Button asChild size="lg" variant="outlineLight">

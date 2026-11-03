@@ -136,7 +136,7 @@ export default function FaceRecognitionSystemPage() {
                       variant="outline"
                       data-testid={`device-info-${device.name.toLowerCase().replace(/\s+/g, '-')}`}
                     >
-                      <Link href="/iletisim">Detaylı Bilgi Al</Link>
+                      <Link href="/iletisim">Teklif Alın</Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -335,7 +335,7 @@ export default function FaceRecognitionSystemPage() {
                   className="px-8"
                   data-testid="cta-contact-button"
                 >
-                  <Link href="/iletisim">Hemen Teklif Al</Link>
+                  <Link href="/iletisim">Teklif Alın</Link>
                 </Button>
                 <Button 
                   asChild 

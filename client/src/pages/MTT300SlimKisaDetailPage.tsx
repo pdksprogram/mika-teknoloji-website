@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { HIZLI_GECIS_TURNIKE_IMAGES } from "@/assetsMap";
 import { Link } from "wouter";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 export default function MTT300SlimKisaDetailPage() {
   const urunDetay = {
@@ -129,20 +130,7 @@ export default function MTT300SlimKisaDetailPage() {
                   </div>
                 </div>
                 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button asChild size="lg" variant="default">
-                    <a href="tel:+905467122296">
-                      <Phone className="mr-2 h-5 w-5" />
-                      Hemen Ara
-                    </a>
-                  </Button>
-                  <Button asChild size="lg" variant="outlineLight">
-                    <Link href="/iletisim">
-                      <Mail className="mr-2 h-5 w-5" />
-                      Teklif Al
-                    </Link>
-                  </Button>
-                </div>
+                <CtaDugmeleri tur="donanim" koyu />
               </div>
               
               <motion.div 

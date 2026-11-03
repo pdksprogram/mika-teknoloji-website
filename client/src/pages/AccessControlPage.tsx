@@ -6,6 +6,7 @@ import { Link } from "wouter";
 import { useEffect } from "react";
 import { trackAccessControlView, trackProductView } from "@/lib/analytics";
 import SEO from "@/seo/SEO";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 // Access Control Panel images  
 const accessControlPanel = "/access-control-panel.png";
@@ -435,27 +436,7 @@ export default function AccessControlPage() {
                 </div>
               </div>"
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  asChild
-                  size="lg" 
-                  className="px-8 py-3"
-                >
-                  <Link href="/iletisim">
-                    Keşif Talep Edin
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button asChild 
-                  variant="outline" 
-                  size="lg"
-                  className="px-8 py-3"
-                >
-                  <Link href="/iletisim">
-                    Teknik Bilgi Alın
-                  </Link>
-                </Button>
-              </div>
+              <CtaDugmeleri tur="donanim" />
             </motion.div>
 
             {/* Right Side - Professional Demo */}

@@ -16,6 +16,7 @@ import {
 import { ENGELLI_TURNIKE_IMAGES } from "@/assetsMap";
 import TurnikeReferanslari from "@/components/TurnikeReferanslari";
 import { Link } from "wouter";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 export default function EngelliTurnikePage() {
   
@@ -134,14 +135,7 @@ export default function EngelliTurnikePage() {
               Tekerlekli sandalye kullanıcıları, yaşlılar ve hareket kısıtlılığı olan bireyler için özel tasarlanmış turnike sistemleri. 
               Geniş geçiş alanı, otomatik açılma ve VIP erişim özellikleri.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button asChild size="lg">
-                <Link href="#modeller">Ürünleri İncele</Link>
-              </Button>
-              <Button asChild variant="outlineLight" size="lg">
-                <Link href="/iletisim">Teklif Al</Link>
-              </Button>
-            </div>
+            <CtaDugmeleri tur="donanim" koyu sinif="justify-center" />
           </motion.div>
         </div>
       </div>
@@ -256,10 +250,7 @@ export default function EngelliTurnikePage() {
                       ))}
                     </div>
                     
-                    <div className="flex items-center justify-between">
-                      <div className="text-primary font-bold">
-                        {model.price}
-                      </div>
+                    <div className="flex items-center justify-end">
                       <Button asChild size="sm">
                         <Link href={
                           model.id === "mt-sc324b" ? "/urunler/mt-sc324b-vip-turnike" :
@@ -292,17 +283,7 @@ export default function EngelliTurnikePage() {
               Erişilebilirlik standartlarına uygun, güvenli ve konforlu geçiş çözümleri için hemen iletişime geçin.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button asChild size="lg">
-                <Link href="/iletisim">Keşif Talep Edin</Link>
-              </Button>
-              <Button asChild variant="outlineLight" size="lg">
-                <a href="tel:+905467122296">
-                  <Phone className="mr-2 h-4 w-4" />
-                  Hemen Ara
-                </a>
-              </Button>
-            </div>
+            <CtaDugmeleri tur="donanim" koyu sinif="justify-center mb-8" />
             
             <div className="flex flex-wrap gap-6 justify-center text-sm">
               <div className="flex items-center gap-2">

@@ -12,6 +12,7 @@ import {
 import { BEL_TURNIKE_IMAGES } from "@/assetsMap";
 import TurnikeReferanslari from "@/components/TurnikeReferanslari";
 import { Link } from "wouter";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 export default function BelTipeTurnikePage() {
   
@@ -193,10 +194,7 @@ export default function BelTipeTurnikePage() {
                       ))}
                     </div>
                     
-                    <div className="flex items-center justify-between">
-                      <div className="text-primary font-bold">
-                        {model.price}
-                      </div>
+                    <div className="flex items-center justify-end">
                       <Button asChild size="sm">
                         <Link href={
                           model.id === "t250" ? "/urunler/mt-250-turnike" :
@@ -249,18 +247,7 @@ export default function BelTipeTurnikePage() {
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg">
-                <Link href="/iletisim">
-                  Keşif Talep Edin
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outlineLight">
-                <Link href="/iletisim">
-                  Teklif Al
-                </Link>
-              </Button>
-            </div>
+            <CtaDugmeleri tur="donanim" koyu sinif="justify-center" />
           </div>
         </div>
       </div>

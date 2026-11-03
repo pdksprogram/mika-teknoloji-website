@@ -33,6 +33,7 @@ import vardiyaYonetimiImage from "@assets/vardiya-yonetimi-interface.png";
 import maasHesaplamaImage from "@assets/maas-hesaplama-interface.png";
 import personelBilgileriImage from "@assets/personel-bilgileri-interface.png";
 import personelTalepleriImage from "@assets/personel-talepleri-interface.png";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 // /urunler/personel-takip SSS (FAQPage) şeması. Gövdeye konan <script> ön-render'da &quot; ile kaçıp geçersiz
 // oluyordu; Helmet içinde verilir (SEO bileşeninin jsonLd deseniyle aynı mekanizma).
@@ -290,29 +291,7 @@ export default function PersonelTakipPage() {
               Vardiya, mesai ve izin takibi tek bulut panelde.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-              <Button
-                asChild
-                size="lg"
-                onClick={handleDemoRequest}
-              >
-                <Link href="/iletisim">
-                  <span>Demo Talep Edin</span>
-                  <ArrowRight className="ml-3 h-5 w-5" />
-                </Link>
-              </Button>
-              
-              <Button 
-                asChild 
-                variant="outline"
-                size="lg"
-                onClick={handleContactRequest}
-              >
-                <Link href="/iletisim">
-                  <span>Online Sunum Talep Et</span>
-                </Link>
-              </Button>
-            </div>
+            <CtaDugmeleri tur="yazilim" sinif="justify-center mb-12" />
 
             {/* Ürün görseli: gerçek bulut PDKS paneli (kişisel veriler maskeli) */}
             <div className="bg-white rounded-lg border border-slate-200 shadow-xl p-2 max-w-4xl mx-auto">
@@ -842,31 +821,7 @@ export default function PersonelTakipPage() {
               Mika Teknoloji PDKS'nin gücünü bizzat deneyimleyin. Size özel hazırlanmış bir demo ile 
               sistemimizin nasıl çalıştığını görün ve işletmenize nasıl değer katabileceğinizi keşfedin.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button 
-                asChild 
-                size="lg" 
-                className="px-8 py-4 text-lg transform hover:scale-105 transition-all duration-300"
-                onClick={handleDemoRequest}
-              >
-                <Link href="/iletisim">
-                  <span>Ücretsiz Demo</span>
-                  <ArrowRight className="ml-3 h-5 w-5" />
-                </Link>
-              </Button>
-              
-              <Button 
-                asChild 
-                variant="outlineLight" 
-                size="lg" 
-                className="px-8 py-4 text-lg"
-                onClick={handleContactRequest}
-              >
-                <Link href="/iletisim">
-                  <span>Sizi Arayalım</span>
-                </Link>
-              </Button>
-            </div>
+            <CtaDugmeleri tur="yazilim" koyu sinif="justify-center" />
           </motion.div>
         </div>
       </section>

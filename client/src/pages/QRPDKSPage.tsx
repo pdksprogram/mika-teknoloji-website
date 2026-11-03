@@ -11,6 +11,7 @@ import talepOlusturImage from "@assets/IMG_4252_1759436659395.png";
 import avansTalepImage from "@assets/IMG_4253_1759436694818.png";
 import yillikIzinBilgileriImage from "@assets/IMG_4254_1759437242409.png";
 import sikayetOlusturImage from "@assets/IMG_4256_1759438160354.png";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 type Bolum = { id: string; ust: string; baslik: string; gorseller: { src: string; alt: string }[]; metin: ReactNode; maddeler: string[] };
 
@@ -286,17 +287,7 @@ export default function QRPDKSPage() {
             <p className="text-xl text-slate-600 mb-8">
               Personel, akıllı telefonuyla QR kod okutarak giriş-çıkış yapar; konum doğrulanır, kayıt anında panele düşer.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" onClick={handleDemoRequest} data-testid="button-demo-request">
-                <Link href="/iletisim">
-                  Ücretsiz Demo Talep Et
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" onClick={handleContactRequest} data-testid="button-contact-request">
-                <Link href="/iletisim">Online Sunum Talep Et</Link>
-              </Button>
-            </div>
+            <CtaDugmeleri tur="yazilim" />
           </div>
           <div className="flex justify-center gap-3 sm:gap-4">
             {GIRIS_EKRANLARI.map((e, i) => (
@@ -428,13 +419,12 @@ export default function QRPDKSPage() {
             QR Kod PDKS ile Personel Takibini Modernize Edin
           </h2>
           <p className="text-lg mb-8 text-slate-300">
-            Ücretsiz demo; kurulum ve kullanım desteği dahil.
+            Kurulum ve kullanım desteği dahil.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" data-testid="button-cta-demo">
               <Link href="/iletisim">
-                <Phone className="mr-2 h-5 w-5" />
-                Hemen Demo Talep Et
+                Demo ve Keşif Talep Edin
               </Link>
             </Button>
             <Button asChild size="lg" variant="outlineLight" data-testid="button-cta-products">

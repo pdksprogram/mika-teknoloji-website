@@ -268,7 +268,7 @@ export default function ParkingAutomationPage() {
                   size="lg" 
                   variant="default"
                 >
-                  Ücretsiz Teklif Al
+                  Teklif Alın
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>

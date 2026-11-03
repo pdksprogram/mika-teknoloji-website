@@ -136,7 +136,7 @@ export default function FingerprintSystemPage() {
                       variant="outline"
                       data-testid={`device-info-${device.name.toLowerCase().replace(/\s+/g, '-')}`}
                     >
-                      <Link href="/iletisim">Detaylı Bilgi Al</Link>
+                      <Link href="/iletisim">Teklif Alın</Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -362,7 +362,7 @@ export default function FingerprintSystemPage() {
                   className="px-8"
                   data-testid="fingerprint-contact-button"
                 >
-                  <Link href="/iletisim">Keşif Talep Edin</Link>
+                  <Link href="/iletisim">Teklif Alın</Link>
                 </Button>
                 <Button 
                   asChild 

@@ -512,7 +512,7 @@ export default function BlogArticlePDKS() {
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button asChild size="lg">
                       <Link href="/iletisim">
-                        Keşif Talep Edin
+                        Demo ve Keşif Talep Edin
                       </Link>
                     </Button>
                     <Button asChild size="lg" variant="outlineLight">

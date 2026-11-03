@@ -618,7 +618,7 @@ export default function AccessControlSystemPage() {
                     size="lg" 
                     className="px-12 py-6 text-xl"
                   >
-                    Ücretsiz Demo
+                    Demo ve Keşif Talep Edin
                     <ArrowRight className="ml-3 h-6 w-6" />
                   </Button>
                 </Link>

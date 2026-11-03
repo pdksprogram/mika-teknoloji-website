@@ -86,7 +86,7 @@ export default function Solutions() {
                   className="w-full transition-colors"
                   data-testid={`solution-detail-${solution.title.toLowerCase()}`}
                 >
-                  <Link href="/iletisim">Detaylı Bilgi Al</Link>
+                  <Link href="/iletisim">Demo ve Keşif Talep Edin</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -99,8 +99,7 @@ export default function Solutions() {
             Size Özel Çözüm mü Arıyorsunuz?
           </h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            Uzman ekibimiz ile ihtiyaçlarınıza özel çözümler geliştirebiliriz. 
-            Ücretsiz danışmanlık için hemen iletişime geçin.
+            Uzman ekibimiz ile ihtiyaçlarınıza özel çözümler geliştirebiliriz.
           </p>
           <Button 
             asChild 
@@ -108,7 +107,7 @@ export default function Solutions() {
             className="px-8"
             data-testid="custom-solution-button"
           >
-            <Link href="/iletisim">Ücretsiz Danışmanlık</Link>
+            <Link href="/iletisim">Demo ve Keşif Talep Edin</Link>
           </Button>
         </div>
       </div>

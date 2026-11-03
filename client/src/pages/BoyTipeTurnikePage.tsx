@@ -12,6 +12,7 @@ import {
 import { BOY_TURNIKE_IMAGES } from "@/assetsMap";
 import TurnikeReferanslari from "@/components/TurnikeReferanslari";
 import { Link } from "wouter";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 export default function BoyTipeTurnikePage() {
   
@@ -209,10 +210,7 @@ export default function BoyTipeTurnikePage() {
                       ))}
                     </div>
                     
-                    <div className="flex items-center justify-between">
-                      <div className="text-primary font-bold">
-                        {model.price}
-                      </div>
+                    <div className="flex items-center justify-end">
                       <Button asChild size="sm">
                         <Link href={
                           model.id === "mt2500d-single-3" ? "/urunler/mt2500d-single-3-kollu" :
@@ -264,18 +262,7 @@ export default function BoyTipeTurnikePage() {
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg">
-                <Link href="/iletisim">
-                  Keşif Talep Edin
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outlineLight">
-                <Link href="/iletisim">
-                  Boy Tipi Teklif Al
-                </Link>
-              </Button>
-            </div>
+            <CtaDugmeleri tur="donanim" koyu sinif="justify-center" />
           </div>
         </div>
       </div>

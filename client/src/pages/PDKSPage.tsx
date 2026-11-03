@@ -9,6 +9,7 @@ import { trackPDKSView, trackProductView } from "@/lib/analytics";
 import SEO, { ASIL_ADRES, kanonikAdres } from "@/seo/SEO";
 import { IlgiliSayfalar, VideoBolumu, DEMO_TELEFON, DEMO_TELEFON_GORUNEN, DEMO_WHATSAPP, kirintiJsonLd, sssJsonLd } from "@/components/PdksIcerik";
 import type { SssMaddesi } from "@/components/PdksIcerik";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 // Doğrulanmış SSS: EPDKS menüleri ve hesap kuralları, Esoft Pdks mobil uygulama ekranları.
 const PDKS_SSS: SssMaddesi[] = [
@@ -253,10 +254,10 @@ export default function PDKSPage() {
       },
       cta: {
         title: "PDKS Sisteminizi Hemen Kurun",
-        subtitle: "Ücretsiz danışmanlık ve demo için bizimle iletişime geçin",
+        subtitle: "Kurulumu iş yerinizin düzenine göre birlikte planlayalım.",
         buttons: {
-          demo: "Ücretsiz Demo İsteyin",
-          contact: "Teknik Bilgi Alın"
+          demo: "Demo ve Keşif Talep Edin",
+          contact: "Hemen Ara"
         }
       }
     },
@@ -482,14 +483,7 @@ export default function PDKSPage() {
               {pdks.description}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" data-testid="pdks-demo-button">
-                <Link href="/iletisim">Demo ve Keşif Talep Edin</Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" data-testid="pdks-contact-button">
-                <Link href="/iletisim">Fiyat Teklifi Alın</Link>
-              </Button>
-            </div>
+            <CtaDugmeleri tur="yazilim" sinif="justify-center" />
             
             {/* Trust Signals */}
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 mt-8 text-sm text-slate-600">
@@ -800,27 +794,7 @@ export default function PDKSPage() {
               {pdks.cta.subtitle}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild 
-                size="lg" 
-                variant="default"
-                className="px-8 py-4 text-lg"
-                data-testid="pdks-cta-demo"
-              >
-                <Link href="/iletisim" className="flex items-center">
-                  {pdks.cta.buttons.demo}
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild 
-                size="lg" 
-                variant="outlineLight"
-                className="px-8 py-4 text-lg"
-                data-testid="pdks-cta-contact"
-              >
-                <Link href="/iletisim">{pdks.cta.buttons.contact}</Link>
-              </Button>
-            </div>
+            <CtaDugmeleri tur="yazilim" koyu sinif="justify-center" />
             <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8 text-lg">
               <a href={DEMO_WHATSAPP} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:opacity-80">
                 WhatsApp ile demo isteyin

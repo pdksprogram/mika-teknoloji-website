@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { BOY_TURNIKE_IMAGES } from "@/assetsMap";
 import { Link } from "wouter";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 export default function MT1350YarimBoyDetailPage() {
   
@@ -135,20 +136,7 @@ export default function MT1350YarimBoyDetailPage() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="flex-1">
-                  <Link href="/iletisim">
-                    <Phone className="h-5 w-5 mr-2" />
-                    Ekonomik Fiyat Al
-                  </Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="flex-1">
-                  <Link href="/iletisim">
-                    <Download className="h-5 w-5 mr-2" />
-                    Teknik Doküman
-                  </Link>
-                </Button>
-              </div>
+              <CtaDugmeleri tur="donanim" />
             </motion.div>
           </div>
 
@@ -337,18 +325,7 @@ export default function MT1350YarimBoyDetailPage() {
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg">
-                <Link href="/iletisim">
-                  Ekonomik Keşif Al
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outlineLight">
-                <Link href="/iletisim">
-                  Hızlı Teklif İste
-                </Link>
-              </Button>
-            </div>
+            <CtaDugmeleri tur="donanim" koyu sinif="justify-center" />
           </motion.div>
 
           {/* Geri Dön */}

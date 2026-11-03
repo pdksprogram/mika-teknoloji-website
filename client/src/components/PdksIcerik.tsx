@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { kanonikAdres } from "@/seo/SEO";
 import { videos, VideoCard } from "@/pages/VideolarPage";
-import { DEMO_TELEFON, DEMO_TELEFON_GORUNEN, DEMO_WHATSAPP } from "@/lib/iletisim";
+import { CTA_YAZILIM, DEMO_TELEFON, DEMO_TELEFON_GORUNEN, DEMO_WHATSAPP } from "@/lib/iletisim";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 // PDKS konu sayfalarının (/puantaj-programi, /vardiya-takip-programi, /qr-pdks) ve
 // /pdks-programi ek bölümlerinin ortak parçaları. Görsel dil PersonelTakipPage'den alınır:
@@ -96,17 +97,7 @@ export function KonuGiris({ ust, baslik, giris, sikisik = false }: { ust: string
         <h1 className={sikisik ? "text-3xl md:text-4xl font-bold text-slate-800 mb-2 leading-tight" : "text-4xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight"}>{baslik}</h1>
         <p className={sikisik ? "text-base md:text-lg text-slate-600" : "text-xl md:text-2xl text-slate-600 font-light mb-10"}>{giris}</p>
         {!sikisik && (
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild size="lg">
-            <a href="#demo">
-              Demo Talep Edin
-              <ArrowRight className="ml-3 h-5 w-5" />
-            </a>
-          </Button>
-          <Button asChild size="lg" variant="secondary">
-            <Link href="/pdks-programi">PDKS Programı</Link>
-          </Button>
-        </div>
+        <CtaDugmeleri tur="yazilim" sinif="justify-center" />
         )}
       </div>
     </section>
@@ -247,9 +238,8 @@ export function IlgiliSayfalar({ mevcutYol, ekler = [] }: { mevcutYol: string; e
   );
 }
 
-// Sitedeki iletişim formu bir yere göndermediği için demo talebi çalışan kanallardan alınır:
-// WhatsApp, telefon ve İletişim sayfası.
-export function DemoTalebi({ baslik = "Demo Talep Edin" }: { baslik?: string }) {
+// Sayfa sonu talep bölümü: sözlükteki düğme çifti + WhatsApp ve telefon bağlantısı.
+export function DemoTalebi({ baslik = CTA_YAZILIM }: { baslik?: string }) {
   return (
     <section id="demo" className="py-20 bg-slate-900 border-t-4 border-primary scroll-mt-24">
       <div className="container mx-auto px-4 text-center text-white">
@@ -257,22 +247,14 @@ export function DemoTalebi({ baslik = "Demo Talep Edin" }: { baslik?: string }) 
         <p className="text-xl mb-10 opacity-90 max-w-2xl mx-auto">
           Programı kendi iş yerinizin düzeniyle birlikte gösterelim. WhatsApp'tan yazın ya da arayın.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild size="lg" variant="default" className="px-8 py-4 text-lg">
-            <a href={DEMO_WHATSAPP} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="mr-2 h-5 w-5" />
-              WhatsApp ile Yazın
-            </a>
-          </Button>
-          <Button asChild size="lg" variant="outlineLight" className="px-8 py-4 text-lg">
-            <a href={`tel:${DEMO_TELEFON}`}>
-              <Phone className="mr-2 h-5 w-5" />
-              {DEMO_TELEFON_GORUNEN}
-            </a>
-          </Button>
-          <Button asChild size="lg" variant="outlineLight" className="px-8 py-4 text-lg">
-            <Link href="/iletisim">İletişim Sayfası</Link>
-          </Button>
+        <CtaDugmeleri tur="yazilim" koyu sinif="justify-center" />
+        <div className="flex flex-wrap gap-6 justify-center mt-8 text-lg">
+          <a href={DEMO_WHATSAPP} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:opacity-80">
+            WhatsApp ile yazın
+          </a>
+          <a href={`tel:${DEMO_TELEFON}`} className="underline underline-offset-4 hover:opacity-80">
+            {DEMO_TELEFON_GORUNEN}
+          </a>
         </div>
       </div>
     </section>
