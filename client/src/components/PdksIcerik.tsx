@@ -100,13 +100,13 @@ export function KonuGiris({ ust, baslik, giris, sikisik = false }: { ust: string
         <p className={sikisik ? "text-base md:text-lg text-slate-600" : "text-xl md:text-2xl text-slate-600 font-light mb-10"}>{giris}</p>
         {!sikisik && (
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg">
+          <Button asChild size="lg">
             <a href="#demo">
               Demo Talep Edin
               <ArrowRight className="ml-3 h-5 w-5" />
             </a>
           </Button>
-          <Button asChild size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-xl font-semibold text-lg">
+          <Button asChild size="lg" variant="secondary">
             <Link href="/pdks-programi">PDKS Programı</Link>
           </Button>
         </div>

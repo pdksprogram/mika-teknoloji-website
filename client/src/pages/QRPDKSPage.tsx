@@ -59,9 +59,9 @@ export default function QRPDKSPage() {
         <meta property="og:description" content="QR kod tabanlı personel devam kontrol sistemi (PDKS). Mobil uygulama ile QR kod okutma, personel giriş çıkış takibi, vardiya yönetimi. Bulut tabanlı QR PDKS çözümü." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/qr-pdks" />
-        <meta property="og:image" content="https://mikateknoloji.com/images/qr-pdks-og.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image" content="https://mikateknoloji.com/images/slayt/qr-pdks-mobil.jpg" />
+        <meta property="og:image:width" content="873" />
+        <meta property="og:image:height" content="957" />
         <meta property="og:image:alt" content="Mika Teknoloji QR Kod PDKS - Mobil Personel Takip Sistemi" />
         <meta property="og:site_name" content="Mika Teknoloji" />
         <meta property="og:locale" content="tr_TR" />
@@ -71,7 +71,7 @@ export default function QRPDKSPage() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="QR Kod PDKS | Mika Teknoloji - Mobil Personel Takip Sistemi" />
         <meta name="twitter:description" content="QR kod tabanlı personel devam kontrol sistemi (PDKS). Mobil uygulama ile QR kod okutma, personel giriş çıkış takibi, vardiya yönetimi." />
-        <meta name="twitter:image" content="https://mikateknoloji.com/images/qr-pdks-twitter.jpg" />
+        <meta name="twitter:image" content="https://mikateknoloji.com/images/slayt/qr-pdks-mobil.jpg" />
         <meta name="twitter:image:alt" content="Mika Teknoloji QR Kod PDKS" />
         <meta name="twitter:site" content="@mikateknoloji" />
         <meta name="twitter:creator" content="@mikateknoloji" />
@@ -100,7 +100,7 @@ export default function QRPDKSPage() {
               "@id": "https://mikateknoloji.com/#organization",
               "name": "Mika Teknoloji Kontrol Sistemleri",
               "url": "https://mikateknoloji.com",
-              "logo": "https://mikateknoloji.com/images/mikateknoloji-logo.png",
+              "logo": "https://mikateknoloji.com/images/logos/mika-logo.jpg",
               "description": "Personel takip sistemleri, PDKS, güvenlik çözümleri ve turnike sistemleri alanında çalışan teknoloji şirketi.",
               "address": {
                 "@type": "PostalAddress",
@@ -133,7 +133,7 @@ export default function QRPDKSPage() {
                 "Temassız personel kontrolü",
                 "Çoklu lokasyon desteği"
               ],
-              "screenshot": "https://mikateknoloji.com/images/qr-pdks-screenshot.jpg"
+              "screenshot": "https://mikateknoloji.com/images/slayt/qr-pdks-mobil.jpg"
             },
             {
               "@type": "BreadcrumbList",

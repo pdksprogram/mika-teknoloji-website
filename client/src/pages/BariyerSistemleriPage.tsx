@@ -319,7 +319,7 @@ export default function BariyerSistemleriPage() {
         <meta property="og:description" content="Profesyonel bariyer sistemleri: Otopark bariyeri, hidrolik bariyer, road blocker. 2 yıl garanti. Keşif için bize ulaşın." />
         <meta property="og:type" content="product.group" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/bariyer-sistemleri" />
-        <meta property="og:image" content="https://mikateknoloji.com/assets/bariyer-sistemleri-og.jpg" />
+        <meta property="og:image" content="https://mikateknoloji.com/images/logos/mika-logo.jpg" />
         <meta property="og:locale" content="tr_TR" />
         
         {/* Twitter Card Meta Tags */}

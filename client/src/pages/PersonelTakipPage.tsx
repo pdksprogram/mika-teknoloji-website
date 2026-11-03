@@ -163,9 +163,9 @@ export default function PersonelTakipPage() {
         <meta property="og:description" content="Bulut tabanlı personel takip sistemi: PDKS, vardiya yönetimi, QR kod ile giriş-çıkış, mobil uygulama ve aylık puantaj." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/personel-takip" />
-        <meta property="og:image" content="https://mikateknoloji.com/images/personel-takip-og.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image" content="https://mikateknoloji.com/images/slayt/bulut-pdks-paneli.jpg" />
+        <meta property="og:image:width" content="1400" />
+        <meta property="og:image:height" content="603" />
         <meta property="og:image:alt" content="Mika Teknoloji Personel Takip Sistemi - Bulut Tabanlı PDKS" />
         <meta property="og:site_name" content="Mika Teknoloji" />
         <meta property="og:locale" content="tr_TR" />
@@ -175,7 +175,7 @@ export default function PersonelTakipPage() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Personel Takip Sistemi | Mika Teknoloji - Bulut Tabanlı PDKS" />
         <meta name="twitter:description" content="Bulut tabanlı personel takip sistemi: PDKS, vardiya yönetimi, QR kod ile giriş-çıkış ve mobil uygulama." />
-        <meta name="twitter:image" content="https://mikateknoloji.com/images/personel-takip-twitter.jpg" />
+        <meta name="twitter:image" content="https://mikateknoloji.com/images/slayt/bulut-pdks-paneli.jpg" />
         <meta name="twitter:image:alt" content="Mika Teknoloji Personel Takip Sistemi" />
         <meta name="twitter:site" content="@mikateknoloji" />
         <meta name="twitter:creator" content="@mikateknoloji" />
@@ -209,7 +209,7 @@ export default function PersonelTakipPage() {
                 "url": "https://mikateknoloji.com",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://mikateknoloji.com/images/mika-teknoloji-logo.png",
+                  "url": "https://mikateknoloji.com/images/logos/mika-logo.jpg",
                   "width": 300,
                   "height": 100
                 },
@@ -244,7 +244,7 @@ export default function PersonelTakipPage() {
                   "Çoklu lokasyon desteği",
                   "Gerçek zamanlı takip"
                 ],
-                "screenshot": "https://mikateknoloji.com/images/personel-takip-screenshot.jpg"
+                "screenshot": "https://mikateknoloji.com/images/slayt/bulut-pdks-paneli.jpg"
               },
               {
                 "@type": "BreadcrumbList",
@@ -340,7 +340,7 @@ export default function PersonelTakipPage() {
                 playsInline
                 disablePictureInPicture
                 preload="metadata"
-                poster="/images/personel-takip-video-poster.jpg"
+                poster="/images/slayt/bulut-pdks-paneli.jpg"
                 aria-label="Mika Teknoloji personel takip sistemi demo videosu"
               >
                 <source src={videoDemo} type="video/mp4" />

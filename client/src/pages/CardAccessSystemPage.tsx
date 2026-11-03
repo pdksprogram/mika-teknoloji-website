@@ -4,14 +4,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, CreditCard, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
-import SmartImg from "@/components/SmartImg";
 
 const cardTypes = [
   {
     id: 1,
     name: "RFID Proximity Kart",
     description: "125kHz frekansında çalışan uzaktan okuma kartları",
-    image: "/rfid-proximity-kart.jpg",
     features: [
       "125kHz LF frekans",
       "10cm okuma mesafesi",
@@ -24,7 +22,6 @@ const cardTypes = [
     id: 2,
     name: "MIFARE Akıllı Kart",
     description: "13.56MHz frekansında güvenli veri saklama",
-    image: "/mifare-smart-kart.jpg",
     features: [
       "13.56MHz HF frekans",
       "8KB veri kapasitesi",
@@ -37,7 +34,6 @@ const cardTypes = [
     id: 3,
     name: "UHF RFID Kart",
     description: "Uzun menzilli okuma için UHF teknolojisi",
-    image: "/uhf-rfid-kart.jpg",
     features: [
       "860-960MHz UHF frekans",
       "1-5m okuma mesafesi",
@@ -179,13 +175,6 @@ export default function CardAccessSystemPage() {
               >
                 <Card className="h-full hover:shadow-lg transition-shadow duration-300">
                   <CardHeader>
-                    <SmartImg 
-                      src={card.image} 
-                      alt={card.name}
-                      width={300}
-                      height={200}
-                      className="w-full h-48 object-cover rounded-lg mb-4"
-                    />
                     <CardTitle className="text-xl text-slate-800">{card.name}</CardTitle>
                     <p className="text-slate-600">{card.description}</p>
                   </CardHeader>
