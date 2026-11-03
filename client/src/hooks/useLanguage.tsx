@@ -12,7 +12,6 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 const translations = {
   tr: {
-    promo: "Mika Teknoloji ile işletmenizi dijitalleştirin!",
     privacy: "Gizlilik",
     companyName: "Mika Teknoloji", 
     companySubtitle: "Kontrol Sistemleri",
@@ -52,7 +51,6 @@ const translations = {
     }
   },
   en: {
-    promo: "Digitalize your business with Mika Technology!",
     privacy: "Privacy",
     companyName: "Mika Technology",
     companySubtitle: "Control Systems", 

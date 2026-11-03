@@ -43,8 +43,8 @@ export default function Header() {
   }, []);
 
   const languages = [
-    { code: "tr", name: "Türkçe", flag: "🇹🇷" },
-    { code: "en", name: "English", flag: "🇺🇸" }
+    { code: "tr", name: "Türkçe" },
+    { code: "en", name: "English" }
   ];
 
   // Site içi arama verileri
@@ -200,38 +200,6 @@ export default function Header() {
 
   return (
     <>
-      {/* Promotional Banner */}
-      <div className="bg-primary text-white py-2 text-sm">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center relative">
-            <div className="flex-1 min-w-0 flex justify-center sm:px-24">
-              <a 
-                href="https://wa.me/905467122296" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block min-w-0 truncate font-bold hover:text-white/90 transition-colors"
-                data-testid="promo-banner"
-              >
-                {t.promo}
-              </a>
-            </div>
-            <div className="hidden sm:flex absolute right-0 items-center space-x-2">
-              <Button 
-                asChild 
-                size="sm"
-                variant="ghost"
-                className="text-white hover:text-white/90 hover:bg-white/10 px-3 py-1 h-auto text-xs"
-                data-testid="top-privacy-button"
-              >
-                <Link href="/mobil-gizlilik-sozlesmesi.php">
-                  {t.privacy}
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Header */}
       <header 
         className={`sticky top-0 z-50 bg-white transition-all duration-300 ${
@@ -372,7 +340,6 @@ export default function Header() {
                         className="flex items-center space-x-2 cursor-pointer text-sm"
                         data-testid={`main-lang-option-${language.code}`}
                       >
-                        <span>{language.flag}</span>
                         <span>{language.name}</span>
                         {selectedLanguage === language.code && (
                           <span className="ml-auto text-primary">✓</span>
@@ -511,7 +478,7 @@ export default function Header() {
                   
                   {/* Mobile Language Selector */}
                   <div className="pt-2">
-                    <div className="text-sm font-medium text-slate-600 mb-2">Dil / Language</div>
+                    <div className="text-sm font-medium text-slate-600 mb-2">Dil</div>
                     <div className="flex space-x-2">
                       {languages.map((language) => (
                         <Button
@@ -522,8 +489,7 @@ export default function Header() {
                           className="flex-1 flex items-center justify-center space-x-2"
                           data-testid={`mobile-lang-${language.code}`}
                         >
-                          <span>{language.flag}</span>
-                          <span>{language.name}</span>
+                            <span>{language.name}</span>
                         </Button>
                       ))}
                     </div>
