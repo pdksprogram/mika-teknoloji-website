@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Building2 } from 'lucide-react';
+import { Link } from 'wouter';
 import SEO from "@/seo/SEO";
 // Removed problematic import
 // Removed problematic import
@@ -8,7 +9,17 @@ import SEO from "@/seo/SEO";
 // Removed problematic import
 // Removed problematic import
 
-const customers = [
+interface Musteri {
+  id: number;
+  name: string;
+  logo: string;
+  sector: string;
+  solutions: string[];
+  // false: referans belgesi yok, sayfada gösterilmez (logo yerine stok foto kullanılıyordu)
+  dogrulandi?: boolean;
+}
+
+const customers: Musteri[] = [
   {
     id: 1,
     name: "Lufian",
@@ -46,6 +57,7 @@ const customers = [
   },
   {
     id: 6,
+    dogrulandi: false,
     name: "Teknosa",
     logo: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=300&fit=crop",
     sector: "Teknoloji Perakende",
@@ -53,6 +65,7 @@ const customers = [
   },
   {
     id: 7,
+    dogrulandi: false,
     name: "Koton",
     logo: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=400&h=300&fit=crop",
     sector: "Tekstil & Moda",
@@ -60,6 +73,7 @@ const customers = [
   },
   {
     id: 8,
+    dogrulandi: false,
     name: "Bim Market",
     logo: "https://images.unsplash.com/photo-1534723452862-4c874018d66d?w=400&h=300&fit=crop",
     sector: "Perakende",
@@ -67,6 +81,7 @@ const customers = [
   },
   {
     id: 9,
+    dogrulandi: false,
     name: "Akbank",
     logo: "https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=400&h=300&fit=crop",
     sector: "Bankacılık",
@@ -74,12 +89,15 @@ const customers = [
   },
   {
     id: 10,
+    dogrulandi: false,
     name: "Turkcell",
     logo: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop",
     sector: "Telekomünikasyon",
     solutions: ["QR Personel Takip", "Mobil PDKS", "Dijital Çözümler"]
   }
 ];
+
+const gorunenMusteriler = customers.filter((c) => c.dogrulandi !== false);
 
 const References: React.FC = () => {
   return (
@@ -138,7 +156,7 @@ const References: React.FC = () => {
 
           {/* Customer Stories */}
           <div className="space-y-32">
-            {customers.map((customer, index) => (
+            {gorunenMusteriler.map((customer, index) => (
               <motion.div
                 key={customer.id}
                 className="relative"
@@ -225,39 +243,23 @@ const References: React.FC = () => {
             </p>
             
             {/* Professional Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <motion.button
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 min-w-[200px] shadow-lg"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-10">
+              <Link
+                href="/iletisim"
+                className="bg-primary hover:opacity-90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 min-w-[200px] text-center shadow-lg hover:scale-[1.02]"
               >
                 Ücretsiz Demo Talebi
-              </motion.button>
-              
-              <motion.button
-                className="bg-transparent border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 min-w-[200px]"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+              </Link>
+
+              <Link
+                href="/urunler"
+                className="bg-transparent border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 min-w-[200px] text-center hover:scale-[1.02]"
               >
                 Teknik Detaylar
-              </motion.button>
+              </Link>
             </div>
-            
-            {/* Corporate Trust Indicators */}
-            <div className="grid md:grid-cols-3 gap-8 max-w-2xl mx-auto">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">Teknik</div>
-                <div className="text-gray-400 text-sm">Destek</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-green-400 mb-1">Kurulum</div>
-                <div className="text-gray-400 text-sm">ve Eğitim</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-400 mb-1">2 Yıl</div>
-                <div className="text-gray-400 text-sm">Garanti</div>
-              </div>
-            </div>
+
+            <p className="text-gray-400 text-sm">Teknik destek · Kurulum ve eğitim · 2 yıl garanti</p>
           </motion.div>
         </div>
       </section>

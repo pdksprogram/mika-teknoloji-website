@@ -358,9 +358,11 @@ export default function MT250DetailPage() {
                     </div>
                     
                     <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                      <Button className="w-full bg-primary hover:bg-primary/90">
-                        <Download className="h-4 w-4 mr-2" />
-                        Ürün Broşürü İndir
+                      <Button asChild className="w-full bg-primary hover:bg-primary/90">
+                        <Link href="/iletisim">
+                          <Download className="h-4 w-4 mr-2" />
+                          Ürün Broşürü İste
+                        </Link>
                       </Button>
                     </div>
                   </div>

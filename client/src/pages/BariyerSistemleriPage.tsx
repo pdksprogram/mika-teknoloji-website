@@ -59,8 +59,8 @@ const segments = [
     subtitle: "Akıllı Kontrol ve Yönetim",
     description: "İleri teknoloji ile donatılmış MT Genius bariyer sistemi, akıllı kontrol özellikleri ve entegrasyon kabiliyeti ile öne çıkar. Gelişmiş sensör teknolojisi ve otomatik ayar özellikleri ile kusursuz performans sunar.",
     image: "https://betaper.com.tr/bariyer-sistemleri/ptgenius-bariyersistemi.jpg",
-    gradient: "from-red-600 via-red-500 to-rose-500",
-    bgGradient: "from-red-50 via-white to-rose-50",
+    gradient: "from-primary via-primary to-slate-800",
+    bgGradient: "from-slate-50 via-white to-slate-100",
     icon: Settings,
     detailUrl: "/urunler/pt-genius-bariyer",
     features: [
@@ -82,7 +82,7 @@ const segments = [
     id: "Q4",
     title: "MT Guard Bariyer Sistemi",
     subtitle: "Yüksek Güvenlik ve Dayanıklılık",
-    description: "Yüksek güvenlik gerektiren noktalarda kullanılmak üzere tasarlanan MT Guard bariyer sistemi, üstün dayanıklılık ve güvenilirlik sunar. Askeri standartlarda üretilmiş, yüksek darbe emilimi özellikli yapısı ile kritik güvenlik noktalarında tercih edilir.",
+    description: "Yüksek güvenlik gerektiren noktalarda kullanılmak üzere tasarlanan MT Guard bariyer sistemi, üstün dayanıklılık ve güvenilirlik sunar. Yüksek darbe emilimi özellikli yapısı ile kritik güvenlik noktalarında tercih edilir.",
     image: "https://betaper.com.tr/bariyer-sistemleri/pt-guard-bariyerler.jpg",
     gradient: "from-indigo-600 via-indigo-500 to-purple-500",
     bgGradient: "from-indigo-50 via-white to-purple-50",
@@ -90,15 +90,14 @@ const segments = [
     detailUrl: "/urunler/pt-guard-bariyer",
     features: [
       "Yüksek dayanıklılık",
-      "Askeri standart üretim",
       "Darbe emilim sistemi",
       "Yüksek güvenlik",
-      "Uzun ömür garantisi",
+      "Uzun ömürlü yapı",
       "Minimum bakım gereksinimi"
     ],
     specs: [
       { label: "Güvenlik Seviyesi", value: "Yüksek Seviye" },
-      { label: "Dayanıklılık", value: "Askeri Standart" },
+      { label: "Dayanıklılık", value: "Ağır Hizmet Tipi" },
       { label: "Darbe Emilimi", value: "Yüksek Koruma" },
       { label: "Kullanım Alanı", value: "Kritik Noktalar" }
     ]
@@ -382,9 +381,9 @@ export default function BariyerSistemleriPage() {
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <motion.div className="text-center mb-16" {...fadeInUp}>
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6">
               Mantar Bariyer, Road Blocker ve Tuzak Kapan Sistemleri
-            </h2>
+            </h1>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Hidrolik mantar bariyer, road blocker yol kesici ve tuzak kapan sistemleri ile yüksek güvenlik
             </p>
@@ -507,7 +506,7 @@ export default function BariyerSistemleriPage() {
               { title: "Havalimanları", desc: "Terminal giriş-çıkış noktaları ve park alanları için hidrolik bariyerler", icon: "✈️", gradient: "from-indigo-500 to-blue-500" },
               { title: "Konut Siteleri", desc: "Rezidans, villa ve site girişleri için uzaktan kumandalı bariyerler", icon: "🏘️", gradient: "from-teal-500 to-cyan-500" },
               { title: "Oteller ve Tesisler", desc: "Misafir araç park kontrolü ve otopark yönetim sistemleri", icon: "🏨", gradient: "from-amber-500 to-yellow-500" },
-              { title: "Hastaneler", desc: "Acil servis ve doktor park alanları için özel bariyer çözümleri", icon: "🏥", gradient: "from-red-500 to-rose-500" },
+              { title: "Hastaneler", desc: "Acil servis ve doktor park alanları için özel bariyer çözümleri", icon: "🏥", gradient: "from-primary to-slate-800" },
               { title: "Kamu Binaları", desc: "Belediye, valilik ve resmi kurumlar için güvenlik bariyerleri", icon: "🏛️", gradient: "from-slate-500 to-slate-600" }
             ].map((area, index) => (
               <motion.div key={index} variants={fadeInUp}>

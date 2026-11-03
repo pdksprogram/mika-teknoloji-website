@@ -175,7 +175,7 @@ export default function Home() {
                 },
                 { 
                   title: "Hastane PDKS Çözümü", 
-                  description: "Sağlık Sektöründe 7/24 Personel Takip ve Mesai Yönetimi",
+                  description: "Sağlık Sektöründe Nöbet ve Mesai Takibi",
                   videoUrl: null
                 },
                 { 
@@ -395,7 +395,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             Personel devam kontrol sistemi, parmak izi takip sistemi ve yüz tanıma çözümleriniz için hemen iletişime geçin. 
-            MT serisi cihazlarımız ile 20.000 kapasite, TCP/IP ve Wi-Fi desteği garantili çözümler.
+            MT serisi cihazlarımız ile 20.000 kapasite, TCP/IP ve Wi-Fi destekli çözümler.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 30 }}

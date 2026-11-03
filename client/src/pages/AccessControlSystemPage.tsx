@@ -654,12 +654,14 @@ export default function AccessControlSystemPage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button 
+                <Button asChild 
                   size="lg" 
                   variant="outline"
                   className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-12 py-6 text-xl font-bold rounded-2xl"
                 >
-                  Daha Fazla Bilgi
+                  <Link href="/iletisim">
+                    Daha Fazla Bilgi
+                  </Link>
                 </Button>
               </motion.div>
             </div>

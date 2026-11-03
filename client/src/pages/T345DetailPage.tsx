@@ -29,7 +29,7 @@ export default function T345DetailPage() {
     { label: "Kullanım Alanları", value: "İç Ortam / Dış Ortam / Endüstriyel" },
     { label: "Koruma", value: "IP 65 (Su ve Toz Geçirmez)" },
     { label: "Darbe Direnci", value: "IK08 (Yüksek)" },
-    { label: "Garanti", value: "3 Yıl Kapsamlı" }
+    { label: "Garanti", value: "2 Yıl" }
   ];
 
 
@@ -48,7 +48,7 @@ export default function T345DetailPage() {
     {
       icon: Factory,
       title: "Endüstriyel Dayanıklılık",
-      description: "Ağır sanayi koşullarında 24/7 kesintisiz çalışma kapasitesi"
+      description: "Ağır sanayi koşulları için tasarlanmış gövde ve mekanizma"
     },
     {
       icon: Shield,
@@ -58,7 +58,7 @@ export default function T345DetailPage() {
     {
       icon: Factory,
       title: "Yoğun Trafik",
-      description: "Günde 10.000+ geçişe dayanıklı motor ve mekanik yapı"
+      description: "Yoğun trafiğe uygun motor ve mekanik yapı"
     },
     {
       icon: Clock,
@@ -68,7 +68,7 @@ export default function T345DetailPage() {
   ];
 
   const advantages = [
-    "24/7 kesintisiz çalışma kapasitesi",
+    "Ağır sanayi koşullarına uygun yapı",
     "Aşırı hava koşullarına dayanıklılık", 
     "Yoğun trafik akışını sorunsuz yönetim",
     "Minimal bakım gereksinimleri",
@@ -82,8 +82,8 @@ export default function T345DetailPage() {
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>MT 345 Endüstriyel Bel Tipi Turnike Sistemi | Mika Teknoloji</title>
-        <meta name="description" content="MT 345 endüstriyel bel tipi turnike sistemi. Ağır sanayi koşullarında 24/7 çalışma. Yoğun trafik, yüksek güvenlik, IP65 koruma." />
-        <meta name="keywords" content="MT 345, endüstriyel turnike, ağır hizmet turnike, fabrika turnike, IP65 turnike, 24/7 turnike" />
+        <meta name="description" content="MT 345 endüstriyel bel tipi turnike sistemi. Ağır sanayi koşulları için. Yoğun trafik, yüksek güvenlik, IP65 koruma." />
+        <meta name="keywords" content="MT 345, endüstriyel turnike, ağır hizmet turnike, fabrika turnike, IP65 turnike" />
         
         <meta property="og:title" content="MT 345 Endüstriyel Turnike Sistemi | Mika Teknoloji" />
         <meta property="og:description" content="Endüstriyel dayanıklılık ile MT 345 bel tipi turnike sistemi. Fabrikalar ve yoğun trafik alanları için." />
@@ -133,18 +133,22 @@ export default function T345DetailPage() {
                 </span>
               </h1>
               <p className="text-xl text-white/90 mb-8">
-                Ağır sanayi koşulları için tasarlanmış, 24/7 kesintisiz çalışma kapasitesine sahip, 
-                yoğun trafik akışını sorunsuz yöneten profesyonel turnike sistemi.
+                Ağır sanayi koşulları için tasarlanmış, 
+                yoğun trafiğe uygun profesyonel turnike sistemi.
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
-                  <Phone className="h-5 w-5 mr-2" />
-                  Endüstriyel Teklif Al
+                <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-600">
+                  <Link href="/iletisim">
+                    <Phone className="h-5 w-5 mr-2" />
+                    Endüstriyel Teklif Al
+                  </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                  <Download className="h-5 w-5 mr-2" />
-                  Teknik Katalog
+                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                  <Link href="/iletisim">
+                    <Download className="h-5 w-5 mr-2" />
+                    Teknik Katalog
+                  </Link>
                 </Button>
               </div>
             </motion.div>

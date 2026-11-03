@@ -162,7 +162,7 @@ export default function FingerprintSystemPage() {
                       ))}
                     </ul>
                     
-                    <Button 
+                    <Button asChild 
                       className="w-full"
                       variant="outline"
                       data-testid={`device-info-${device.name.toLowerCase().replace(/\s+/g, '-')}`}
@@ -353,8 +353,7 @@ export default function FingerprintSystemPage() {
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-2">Parmak izi okuyucu ne kadar hassas?</h4>
                   <p className="text-gray-600 mb-4">
-                    Mika Teknoloji cihazları, FBI standartlarında 500 DPI çözünürlükle çalışır. 
-                    False Acceptance Rate (FAR) oranımız 0.0001%'den düşüktür.
+                    Mika Teknoloji cihazları 500 DPI optik sensör ile çalışır.
                   </p>
 
                   <h4 className="font-semibold text-gray-800 mb-2">Yaralı veya kuru parmakta çalışır mı?</h4>

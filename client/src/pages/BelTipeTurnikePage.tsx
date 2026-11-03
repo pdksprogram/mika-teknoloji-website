@@ -65,9 +65,9 @@ export default function BelTipeTurnikePage() {
       model: "MT 345",
       title: "Elektromekanik Bel Tipi Turnike Sistemi",
       image: BEL_TURNIKE_IMAGES.bt6,
-      features: ["Endüstriyel Dayanıklılık", "Yoğun Trafik Kapsitesi", "Su ve Toz Direnci", "Güçlü Servo Motor", "Ağır Hizmet Tipi Mekanizma", "24/7 Kesintisiz Çalışma"],
+      features: ["Endüstriyel Dayanıklılık", "Yoğun Trafik Kapasitesi", "Su ve Toz Direnci", "Güçlü Servo Motor", "Ağır Hizmet Tipi Mekanizma"],
       price: "Fiyat İçin Ara",
-      description: "Fabrikalar, endüstriyel tesisler ve ağır sanayi alanında günde binlerce geçişe dayanıklı profesyonel turnike sistemi."
+      description: "Fabrikalar, endüstriyel tesisler ve ağır sanayi alanında yoğun trafiğe uygun profesyonel turnike sistemi."
     },
     {
       id: "t345-eco",
@@ -295,8 +295,10 @@ export default function BelTipeTurnikePage() {
                   Keşif Talep Edin
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                Teklif Al
+              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Link href="/iletisim">
+                  Teklif Al
+                </Link>
               </Button>
             </div>
           </div>

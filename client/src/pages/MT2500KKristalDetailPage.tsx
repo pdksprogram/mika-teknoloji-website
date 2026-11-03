@@ -154,13 +154,17 @@ export default function MT2500KKristalDetailPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-gradient-to-r from-purple-600 to-slate-800 hover:from-purple-700 hover:to-slate-900 flex-1">
-                  <Phone className="h-5 w-5 mr-2" />
-                  Premium Fiyat Al
+                <Button asChild size="lg" className="bg-gradient-to-r from-purple-600 to-slate-800 hover:from-purple-700 hover:to-slate-900 flex-1">
+                  <Link href="/iletisim">
+                    <Phone className="h-5 w-5 mr-2" />
+                    Premium Fiyat Al
+                  </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="flex-1 border-purple-300 text-purple-700 hover:bg-purple-50">
-                  <Download className="h-5 w-5 mr-2" />
-                  Katalog İndir
+                <Button asChild size="lg" variant="outline" className="flex-1 border-purple-300 text-purple-700 hover:bg-purple-50">
+                  <Link href="/iletisim">
+                    <Download className="h-5 w-5 mr-2" />
+                    Katalog İste
+                  </Link>
                 </Button>
               </div>
             </motion.div>
@@ -309,8 +313,10 @@ export default function MT2500KKristalDetailPage() {
                     Premium Keşif Talep Et
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                  VIP Teklif Al
+                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                  <Link href="/iletisim">
+                    VIP Teklif Al
+                  </Link>
                 </Button>
               </div>
             </div>

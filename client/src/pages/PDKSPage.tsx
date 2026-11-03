@@ -490,14 +490,14 @@ export default function PDKSPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
+              <Button asChild 
                 size="lg" 
                 className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white font-bold px-8 py-4 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
                 data-testid="pdks-demo-button"
               >
                 <Link href="/iletisim">DEMO VE KEŞİF TALEP EDİN</Link>
               </Button>
-              <Button 
+              <Button asChild 
                 size="lg" 
                 variant="outline" 
                 className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300"
@@ -821,7 +821,7 @@ export default function PDKSPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
+              <Button asChild 
                 size="lg" 
                 variant="secondary"
                 className="bg-white text-primary hover:bg-gray-100 px-8 py-4 text-lg"
@@ -832,7 +832,7 @@ export default function PDKSPage() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button 
+              <Button asChild 
                 size="lg" 
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg"

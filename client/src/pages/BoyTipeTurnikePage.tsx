@@ -85,7 +85,7 @@ export default function BoyTipeTurnikePage() {
       image: BOY_TURNIKE_IMAGES.bt8,
       features: ["Kompakt Çift Yön", "4 Kollu Güvenlik", "Maximum Verimlilik", "Gelişmiş Teknoloji", "Profesyonel Çözüm"],
       price: "Fiyat İçin Ara",
-      description: "En gelişmiş kompakt boy tipi turnike sistemi. 4 kollu çift yönlü güvenlik."
+      description: "Kompakt boy tipi turnike sistemi. 4 kollu çift yönlü güvenlik."
     },
     {
       id: "mt2500d-eco-3",
@@ -309,8 +309,10 @@ export default function BoyTipeTurnikePage() {
                   Keşif Talep Edin
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                Boy Tipi Teklif Al
+              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Link href="/iletisim">
+                  Boy Tipi Teklif Al
+                </Link>
               </Button>
             </div>
           </div>

@@ -24,7 +24,7 @@ export default function MTT300HG120DetailPage() {
     title: "Ultra Hızlı Geçiş Sistemi",
     image: HIZLI_GECIS_TURNIKE_IMAGES.hg6,
     price: "Fiyat İçin Ara",
-    description: "En hızlı geçiş kapasiteli turnike sistemi. 120 kişi/dakika ultra kapasite ile mega alışveriş merkezleri ve büyük etkinlik alanları için tasarlandı.",
+    description: "Yüksek geçiş kapasiteli turnike sistemi. 120 kişi/dakika ultra kapasite ile mega alışveriş merkezleri ve büyük etkinlik alanları için tasarlandı.",
     
     teknikOzellikler: {
       "Geçiş Kapasitesi": "120 Kişi/Dakika",
@@ -90,7 +90,7 @@ export default function MTT300HG120DetailPage() {
     <>
       <Helmet>
         <title>MT T300 HG120 Ultra Hızlı Turnike - 120 Kişi/Dakika | Mika Teknoloji</title>
-        <meta name="description" content="MT T300 HG120 ultra hızlı geçiş turnike. 120 kişi/dakika kapasiteli, big data destekli, mega alışveriş merkezleri için en hızlı çözüm." />
+        <meta name="description" content="MT T300 HG120 ultra hızlı geçiş turnike. 120 kişi/dakika kapasiteli, big data destekli, mega alışveriş merkezleri için yüksek kapasiteli çözüm." />
         <meta name="keywords" content="ultra hızlı turnike, t300 hg120, 120 kişi dakika, mega kapasite, big data, ai destekli, stadyum turnike, mika teknoloji" />
       </Helmet>
 
@@ -134,13 +134,17 @@ export default function MTT300HG120DetailPage() {
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                    <Phone className="mr-2 h-5 w-5" />
-                    Hemen Ara
+                  <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+                    <a href="tel:+905467122296">
+                      <Phone className="mr-2 h-5 w-5" />
+                      Hemen Ara
+                    </a>
                   </Button>
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-                    <Mail className="mr-2 h-5 w-5" />
-                    Teklif Al
+                  <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                    <Link href="/iletisim">
+                      <Mail className="mr-2 h-5 w-5" />
+                      Teklif Al
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -292,13 +296,17 @@ export default function MTT300HG120DetailPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                <Phone className="mr-2 h-5 w-5" />
-                0546 712 22 96
+              <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+                <a href="tel:+905467122296">
+                  <Phone className="mr-2 h-5 w-5" />
+                  0546 712 22 96
+                </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-                <Mail className="mr-2 h-5 w-5" />
-                info@mikateknoloji.com
+              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                <a href="mailto:info@mikateknoloji.com">
+                  <Mail className="mr-2 h-5 w-5" />
+                  info@mikateknoloji.com
+                </a>
               </Button>
             </div>
             

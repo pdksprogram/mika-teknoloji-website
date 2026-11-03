@@ -23,7 +23,7 @@ export default function MTT350HG60ChubbyDetailPage() {
     title: "Premium Chubby Hızlı Geçiş",
     image: HIZLI_GECIS_TURNIKE_IMAGES.hg5,
     price: "Fiyat İçin Ara",
-    description: "En geniş geçiş alanına sahip premium turnike sistemi. 60 kişi/dakika kapasiteli, lüks havaalanları ve VIP terminaller için özel tasarım.",
+    description: "Geniş geçiş alanlı premium turnike sistemi. 60 kişi/dakika kapasiteli, lüks havaalanları ve VIP terminaller için özel tasarım.",
     
     teknikOzellikler: {
       "Geçiş Kapasitesi": "60 Kişi/Dakika",
@@ -89,7 +89,7 @@ export default function MTT350HG60ChubbyDetailPage() {
     <>
       <Helmet>
         <title>MT T350 HG60 Chubby Premium - Lüks Geniş Geçiş | Mika Teknoloji</title>
-        <meta name="description" content="MT T350 HG60 Chubby premium turnike. En geniş geçiş alanı, 60 kişi/dakika, lüks havaalanları ve VIP terminaller için özel tasarım." />
+        <meta name="description" content="MT T350 HG60 Chubby premium turnike. Geniş geçiş alanı, 60 kişi/dakika, lüks havaalanları ve VIP terminaller için özel tasarım." />
         <meta name="keywords" content="premium chubby, lüks turnike, geniş geçiş, vip turnike, t350 hg60, havaalanı premium, tekerlekli sandalye, mika teknoloji" />
       </Helmet>
 
@@ -133,13 +133,17 @@ export default function MTT350HG60ChubbyDetailPage() {
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                    <Phone className="mr-2 h-5 w-5" />
-                    Hemen Ara
+                  <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+                    <a href="tel:+905467122296">
+                      <Phone className="mr-2 h-5 w-5" />
+                      Hemen Ara
+                    </a>
                   </Button>
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-                    <Mail className="mr-2 h-5 w-5" />
-                    Teklif Al
+                  <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                    <Link href="/iletisim">
+                      <Mail className="mr-2 h-5 w-5" />
+                      Teklif Al
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -287,17 +291,21 @@ export default function MTT350HG60ChubbyDetailPage() {
               MT T350 HG60 Chubby Premium Turnikenizi Hemen Sipariş Edin
             </h2>
             <p className="text-xl mb-8 text-white/90">
-              En geniş geçiş alanı ile premium teknoloji, lüks mekanlar için mükemmel seçim.
+              Geniş geçiş alanı ile premium teknoloji, lüks mekanlar için mükemmel seçim.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                <Phone className="mr-2 h-5 w-5" />
-                0546 712 22 96
+              <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+                <a href="tel:+905467122296">
+                  <Phone className="mr-2 h-5 w-5" />
+                  0546 712 22 96
+                </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-                <Mail className="mr-2 h-5 w-5" />
-                info@mikateknoloji.com
+              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                <a href="mailto:info@mikateknoloji.com">
+                  <Mail className="mr-2 h-5 w-5" />
+                  info@mikateknoloji.com
+                </a>
               </Button>
             </div>
             

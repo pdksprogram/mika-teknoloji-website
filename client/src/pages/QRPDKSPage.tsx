@@ -85,7 +85,6 @@ export default function QRPDKSPage() {
         {/* Canonical and Hreflang */}
         <link rel="canonical" href="https://mikateknoloji.com/urunler/qr-pdks" />
         <link rel="alternate" hrefLang="tr" href="https://mikateknoloji.com/urunler/qr-pdks" />
-        <link rel="alternate" hrefLang="en" href="https://mikateknoloji.com/en/products/qr-pdks" />
         <link rel="alternate" hrefLang="x-default" href="https://mikateknoloji.com/urunler/qr-pdks" />
         
         {/* Preconnect for Performance */}

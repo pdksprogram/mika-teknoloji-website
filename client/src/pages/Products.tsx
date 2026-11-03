@@ -73,6 +73,7 @@ export default function Products() {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO title="Ürünler | Turnike, Bariyer, PDKS Cihazları | Mika Teknoloji" description="Turnike, bariyer, yüz tanıma ve parmak izi PDKS cihazları, kartlı ve QR geçiş ürünleri: Mika Teknoloji ürün kataloğu." />
+      <h1 className="sr-only">Ürünler | Turnike, Bariyer ve PDKS Cihazları</h1>
       {/* Hero Section with Images */}
       <div className="bg-white">
         <div className="container mx-auto px-4 py-8">

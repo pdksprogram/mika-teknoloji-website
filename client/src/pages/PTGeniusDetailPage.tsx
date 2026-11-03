@@ -65,7 +65,7 @@ export default function PTGeniusDetailPage() {
 
             <motion.div {...fadeInUp} className="space-y-8">
               <div>
-                <div className="inline-flex items-center px-4 py-2 rounded-xl bg-gradient-to-r from-red-600 to-rose-500 shadow-lg mb-4">
+                <div className="inline-flex items-center px-4 py-2 rounded-xl bg-gradient-to-r from-primary to-slate-800 shadow-lg mb-4">
                   <Zap className="w-4 h-4 text-white mr-2" />
                   <span className="text-white font-bold text-sm">Q3 - ULTRA HIZLI</span>
                 </div>
@@ -75,7 +75,7 @@ export default function PTGeniusDetailPage() {
                 <p className="text-xl text-primary font-semibold mb-6">
                   3 Saniye Hızlı Geçiş - Yandan Kollu Teknoloji
                 </p>
-                <div className="w-20 h-1 bg-gradient-to-r from-red-600 to-rose-500 rounded-full"></div>
+                <div className="w-20 h-1 bg-gradient-to-r from-primary to-slate-800 rounded-full"></div>
               </div>
 
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -107,7 +107,7 @@ export default function PTGeniusDetailPage() {
                 <div className="grid md:grid-cols-2 gap-4">
                   {features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-lg bg-gradient-to-br from-red-500 to-rose-500 flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-5 h-5 rounded-lg bg-gradient-to-br from-primary to-slate-800 flex items-center justify-center flex-shrink-0 mt-1">
                         <CheckCircle className="w-3 h-3 text-white" />
                       </div>
                       <span className="text-gray-700">{feature}</span>
@@ -116,7 +116,7 @@ export default function PTGeniusDetailPage() {
                 </div>
               </div>
 
-              <Card className="border-0 bg-gradient-to-br from-red-50 to-rose-50">
+              <Card className="border-0 bg-gradient-to-br from-slate-50 to-slate-100">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <Thermometer className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />

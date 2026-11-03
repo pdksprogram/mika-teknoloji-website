@@ -8,6 +8,7 @@ import {
   Phone, Mail, MapPin, CheckCircle2
 } from "lucide-react";
 import { Link } from "wouter";
+import { DEMO_TELEFON, DEMO_TELEFON_GORUNEN } from "@/components/PdksIcerik";
 import vardiyaPlanlama from "@assets/IMG_4278_1759780466857.png";
 import vardiyaOnay from "@assets/IMG_4279_1759780771668.png";
 import vardiyaBildirim from "@assets/IMG_4280_1759781022450.png";
@@ -424,9 +425,9 @@ export default function MagazaPersonelTakipPage() {
                   className="border-2 border-white text-white hover:bg-white/10 font-semibold px-8"
                   data-testid="cta-phone-button"
                 >
-                  <a href="tel:+908503051986">
+                  <a href={`tel:${DEMO_TELEFON}`}>
                     <Phone className="mr-2 h-5 w-5" />
-                    0850 305 1986
+                    {DEMO_TELEFON_GORUNEN}
                   </a>
                 </Button>
                 <Button 
@@ -451,7 +452,7 @@ export default function MagazaPersonelTakipPage() {
             <div className="flex flex-wrap justify-center gap-8 text-slate-600">
               <div className="flex items-center gap-2">
                 <Phone className="h-5 w-5 text-primary" />
-                <span className="font-medium">0850 305 1986</span>
+                <span className="font-medium">{DEMO_TELEFON_GORUNEN}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-5 w-5 text-primary" />

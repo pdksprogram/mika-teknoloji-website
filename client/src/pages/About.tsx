@@ -20,6 +20,7 @@ export default function About() {
   return (
     <div className="min-h-screen py-20">
       <SEO title="Hakkımızda | Mika Teknoloji" description="PDKS personel devam kontrol yazılımı, kartlı geçiş, turnike ve bariyer sistemleri üreten Mika Teknoloji hakkında." />
+      <h1 className="sr-only">Hakkımızda | Mika Teknoloji</h1>
       <div className="container mx-auto px-4">
         {/* Corporate Hero Section - Idenfit Style */}
         <section className="mb-20">

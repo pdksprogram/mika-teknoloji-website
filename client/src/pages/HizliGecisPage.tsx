@@ -63,7 +63,7 @@ export default function HizliGecisPage() {
       image: HIZLI_GECIS_TURNIKE_IMAGES.hg5,
       features: ["Ekstra Geniş Geçiş", "60 Kişi/Dakika", "Engelli Erişimi", "Büyük Bagaj Uyumlu", "Premium Malzeme", "Sessiz Çalışma"],
       price: "Fiyat İçin Ara",
-      description: "En geniş geçiş alanına sahip premium turnike. Lüks havaalanları ve VIP terminaller için."
+      description: "Geniş geçiş alanlı premium turnike. Lüks havaalanları ve VIP terminaller için."
     },
     {
       id: "mt-t300-hg120",
@@ -72,7 +72,7 @@ export default function HizliGecisPage() {
       image: HIZLI_GECIS_TURNIKE_IMAGES.hg6,
       features: ["120 Kişi/Dakika Ultra", "Çoklu Geçiş Modu", "Yığın Kontrol", "Akış Optimizasyonu", "Gerçek Zamanlı Analiz", "Merkezi Yönetim"],
       price: "Fiyat İçin Ara",
-      description: "En hızlı geçiş kapasiteli turnike sistemi. Mega alışveriş merkezleri ve büyük etkinlik alanları için."
+      description: "Yüksek geçiş kapasiteli turnike sistemi. Mega alışveriş merkezleri ve büyük etkinlik alanları için."
     },
     {
       id: "mt-t300-hg120-chubby",
@@ -81,7 +81,7 @@ export default function HizliGecisPage() {
       image: HIZLI_GECIS_TURNIKE_IMAGES.hg7,
       features: ["Maksimum Geçiş Alanı", "120 Kişi/Dakika", "Büyük Ekipman Uyumlu", "Çoklu Kullanıcı", "Gelişmiş Güvenlik", "Otomatik Temizlik"],
       price: "Fiyat İçin Ara",
-      description: "En geniş ve en hızlı geçiş sistemi. Büyük kongre merkezleri ve fuarlar için tasarlandı."
+      description: "Geniş geçiş alanlı, yüksek kapasiteli geçiş sistemi. Büyük kongre merkezleri ve fuarlar için tasarlandı."
     },
     {
       id: "mt-t300-slim-kisa",
@@ -186,13 +186,17 @@ export default function HizliGecisPage() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                <Phone className="mr-2 h-5 w-5" />
-                Hemen Ara: 0546 712 22 96
+              <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+                <a href="tel:+905467122296">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Hemen Ara: 0546 712 22 96
+                </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-                <Mail className="mr-2 h-5 w-5" />
-                Teklif Al
+              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                <Link href="/iletisim">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Teklif Al
+                </Link>
               </Button>
             </div>
           </motion.div>
@@ -344,13 +348,17 @@ export default function HizliGecisPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                <Phone className="mr-2 h-5 w-5" />
-                0546 712 22 96
+              <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+                <a href="tel:+905467122296">
+                  <Phone className="mr-2 h-5 w-5" />
+                  0546 712 22 96
+                </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-                <Mail className="mr-2 h-5 w-5" />
-                info@mikateknoloji.com
+              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                <a href="mailto:info@mikateknoloji.com">
+                  <Mail className="mr-2 h-5 w-5" />
+                  info@mikateknoloji.com
+                </a>
               </Button>
             </div>
             

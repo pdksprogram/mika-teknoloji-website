@@ -84,7 +84,7 @@ export default function Blog() {
     {
       id: 7,
       title: "WebPDKS Cloud Sistemi: Her Yerden Erişilebilir Personel Yönetimi",
-      excerpt: "Web tabanlı PDKS sistemi ile bulut teknolojisinin avantajları. Mobil uyumlu dashboard, 7/24 erişim ve hibrit çalışma modeli entegrasyonu.",
+      excerpt: "Web tabanlı PDKS sistemi ile bulut teknolojisinin avantajları. Mobil uyumlu dashboard, web üzerinden erişim ve hibrit çalışma modeli entegrasyonu.",
       date: "1 Ocak 2025",
       author: "Cloud Uzmanı",
       category: "WebPDKS",

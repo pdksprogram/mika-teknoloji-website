@@ -23,7 +23,7 @@ export default function MTT300HG120ChubbyDetailPage() {
     title: "Ultra Chubby Hızlı Geçiş",
     image: HIZLI_GECIS_TURNIKE_IMAGES.hg7,
     price: "Fiyat İçin Ara",
-    description: "En geniş ve en hızlı geçiş sistemi. 120 kişi/dakika ultra kapasiteli, maksimum geçiş alanı ile büyük kongre merkezleri ve fuarlar için tasarlandı.",
+    description: "Geniş geçiş alanlı, yüksek kapasiteli geçiş sistemi. 120 kişi/dakika ultra kapasiteli, maksimum geçiş alanı ile büyük kongre merkezleri ve fuarlar için tasarlandı.",
     
     teknikOzellikler: {
       "Geçiş Kapasitesi": "120 Kişi/Dakika",
@@ -55,7 +55,7 @@ export default function MTT300HG120ChubbyDetailPage() {
       "Gelişmiş güvenlik ve kontrol",
       "Big data ve AI destekli yönetim",
       "Endüstriyel ortam uyumlu",
-      "7/24 kesintisiz çalışma"
+      "Yoğun trafiğe uygun yapı"
     ],
 
     kullanımAlanlari: [
@@ -133,13 +133,17 @@ export default function MTT300HG120ChubbyDetailPage() {
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                    <Phone className="mr-2 h-5 w-5" />
-                    Hemen Ara
+                  <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+                    <a href="tel:+905467122296">
+                      <Phone className="mr-2 h-5 w-5" />
+                      Hemen Ara
+                    </a>
                   </Button>
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-                    <Mail className="mr-2 h-5 w-5" />
-                    Teklif Al
+                  <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                    <Link href="/iletisim">
+                      <Mail className="mr-2 h-5 w-5" />
+                      Teklif Al
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -291,13 +295,17 @@ export default function MTT300HG120ChubbyDetailPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                <Phone className="mr-2 h-5 w-5" />
-                0546 712 22 96
+              <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+                <a href="tel:+905467122296">
+                  <Phone className="mr-2 h-5 w-5" />
+                  0546 712 22 96
+                </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-                <Mail className="mr-2 h-5 w-5" />
-                info@mikateknoloji.com
+              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                <a href="mailto:info@mikateknoloji.com">
+                  <Mail className="mr-2 h-5 w-5" />
+                  info@mikateknoloji.com
+                </a>
               </Button>
             </div>
             

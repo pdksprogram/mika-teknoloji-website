@@ -114,7 +114,7 @@ export default function TuzaklarDetailPage() {
                     <div className="grid md:grid-cols-2 gap-3 mt-4">
                       {kapanFeatures.map((feature, idx) => (
                         <div key={idx} className="flex items-start gap-2">
-                          <div className="w-5 h-5 rounded-lg bg-gradient-to-br from-red-500 to-rose-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <div className="w-5 h-5 rounded-lg bg-gradient-to-br from-primary to-slate-800 flex items-center justify-center flex-shrink-0 mt-0.5">
                             <CheckCircle className="w-3 h-3 text-white" />
                           </div>
                           <span className="text-sm text-gray-700">{feature}</span>

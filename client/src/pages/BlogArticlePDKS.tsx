@@ -33,7 +33,7 @@ export default function BlogArticlePDKS() {
   ];
 
   const pdksAdvantages = [
-    { icon: TrendingUp, title: "Verimlilik Artışı", description: "Otomatik devam kontrolü ile %40'a kadar zaman tasarrufu" },
+    { icon: TrendingUp, title: "Verimlilik Artışı", description: "Giriş-çıkış kayıtlarının elle tutulmasına gerek kalmaz" },
     { icon: Users, title: "Adil Çalışma", description: "Objektif ölçümlerle çalışanlar arası adalet sağlama" },
     { icon: Building, title: "Maliyet Kontrolü", description: "Manuel süreçlerin elimine edilmesi ve operasyonel tasarruf" },
     { icon: CheckCircle, title: "Güvenilirlik", description: "Biyometrik doğrulama ile kişiye bağlı kayıt" }
@@ -293,7 +293,7 @@ export default function BlogArticlePDKS() {
                         <li><strong>Mobil Uyumluluk:</strong> Tablet ve smartphone desteği</li>
                         <li><strong>Dashboard Yönetimi:</strong> Anlık raporlar ve grafiksel analizler</li>
                         <li><strong>Yetkiye Göre Erişim:</strong> Kullanıcı yalnız yetkili olduğu kayıtları görür</li>
-                        <li><strong>7/24 Erişim:</strong> Kesintisiz personel takibi</li>
+                        <li><strong>Web Üzerinden Erişim:</strong> Tarayıcıdan personel takibi</li>
                       </ul>
                     </div>
                   </section>
@@ -321,16 +321,6 @@ export default function BlogArticlePDKS() {
                       ))}
                     </div>
 
-                    <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                      <h4 className="font-semibold text-gray-900 mb-4">📊 ROI (Yatırım Geri Dönüşü) Analizi</h4>
-                      <p className="text-gray-700 text-sm leading-relaxed">
-                        Ortalama 100 çalışanlı bir işletmede PDKS sistemi kurulumu:
-                        <br />• Manuel süreç maliyeti: Aylık ~15.000 TL
-                        <br />• PDKS sistem maliyeti: Aylık ~3.000 TL  
-                        <br />• <strong>Aylık tasarruf: ~12.000 TL (%80 maliyet azaltım)</strong>
-                        <br />• Yatırım geri dönüş süresi: 3-6 ay
-                      </p>
-                    </div>
                   </section>
 
                   <Separator className="my-8" />

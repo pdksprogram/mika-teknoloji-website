@@ -189,7 +189,6 @@ export default function PersonelTakipPage() {
         {/* Canonical and Hreflang */}
         <link rel="canonical" href="https://mikateknoloji.com/urunler/personel-takip" />
         <link rel="alternate" hrefLang="tr" href="https://mikateknoloji.com/urunler/personel-takip" />
-        <link rel="alternate" hrefLang="en" href="https://mikateknoloji.com/en/products/personnel-tracking" />
         <link rel="alternate" hrefLang="x-default" href="https://mikateknoloji.com/urunler/personel-takip" />
         
         {/* Preconnect for Performance */}

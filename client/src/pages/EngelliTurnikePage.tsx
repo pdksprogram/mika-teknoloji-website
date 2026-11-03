@@ -220,9 +220,9 @@ export default function EngelliTurnikePage() {
       <div id="modeller" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Engelli Turnike Modelleri
-            </h1>
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               VIP erişim, yaprak kapılar ve otomatik geçiş kontrol sistemleri. Her ihtiyaca uygun engelli dostu turnike çözümleri.
             </p>

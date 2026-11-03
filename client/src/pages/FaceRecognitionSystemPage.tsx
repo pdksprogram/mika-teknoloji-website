@@ -162,7 +162,7 @@ export default function FaceRecognitionSystemPage() {
                       ))}
                     </ul>
                     
-                    <Button 
+                    <Button asChild 
                       className="w-full"
                       variant="outline"
                       data-testid={`device-info-${device.name.toLowerCase().replace(/\s+/g, '-')}`}

@@ -132,13 +132,17 @@ export default function T250EcoDetailPage() {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
-                  <Phone className="h-5 w-5 mr-2" />
-                  Fiyat Teklifi Al
+                <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
+                  <Link href="/iletisim">
+                    <Phone className="h-5 w-5 mr-2" />
+                    Fiyat Teklifi Al
+                  </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                  <Download className="h-5 w-5 mr-2" />
-                  Teknik Döküman
+                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                  <Link href="/iletisim">
+                    <Download className="h-5 w-5 mr-2" />
+                    Teknik Doküman
+                  </Link>
                 </Button>
               </div>
             </motion.div>

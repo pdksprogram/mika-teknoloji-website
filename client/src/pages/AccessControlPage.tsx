@@ -478,12 +478,14 @@ export default function AccessControlPage() {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button 
+                <Button asChild 
                   variant="outline" 
                   size="lg"
                   className="border-primary text-primary hover:bg-primary/5 px-8 py-3"
                 >
-                  Teknik Bilgi Alın
+                  <Link href="/iletisim">
+                    Teknik Bilgi Alın
+                  </Link>
                 </Button>
               </div>
             </motion.div>

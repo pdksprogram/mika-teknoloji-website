@@ -37,7 +37,7 @@ const benefits = [
   "Kontrolsüz alan kalmasını engeller", 
   "Personel performans analizi",
   "Yasal raporlama kolaylığı",
-  "7/24 gerçek zamanlı izleme",
+  "Gerçek zamanlı izleme",
   "Maliyet optimizasyonu"
 ];
 
@@ -363,13 +363,15 @@ export default function QRPatrolPage() {
                   Ücretsiz Demo İsteyin <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button 
+              <Button asChild 
                 variant="outline" 
                 size="lg"
                 className="border-white text-white hover:bg-white hover:text-purple-600 font-semibold px-8 py-4 text-lg"
               >
-                <Download className="mr-2 h-5 w-5" />
-                Ürün Kataloğu İndir
+                <Link href="/iletisim">
+                  <Download className="mr-2 h-5 w-5" />
+                  Ürün Kataloğu İste
+                </Link>
               </Button>
             </div>
           </motion.div>

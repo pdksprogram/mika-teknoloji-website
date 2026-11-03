@@ -96,6 +96,7 @@ export default function TurnstileSystemsPage() {
         jsonLd={[productJsonLd]}
       />
 
+      <h1 className="sr-only">Turnike Sistemleri | Mika Teknoloji</h1>
       {/* Breadcrumb */}
       <section className="bg-gray-50 py-4">
         <div className="container mx-auto px-4">

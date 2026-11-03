@@ -137,13 +137,17 @@ export default function JetonluT250DetailPage() {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-white text-orange-500 hover:bg-gray-100">
-                  <Phone className="h-5 w-5 mr-2" />
-                  Jetonlu Sistem Teklifi
+                <Button asChild size="lg" className="bg-white text-orange-500 hover:bg-gray-100">
+                  <Link href="/iletisim">
+                    <Phone className="h-5 w-5 mr-2" />
+                    Jetonlu Sistem Teklifi
+                  </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                  <Download className="h-5 w-5 mr-2" />
-                  Ödeme Sistemi Kataloğu
+                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                  <Link href="/iletisim">
+                    <Download className="h-5 w-5 mr-2" />
+                    Ödeme Sistemi Kataloğu
+                  </Link>
                 </Button>
               </div>
             </motion.div>
