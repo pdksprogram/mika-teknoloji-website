@@ -10,10 +10,7 @@ import giriscikisListesiImage from "@assets/IMG_4251_1759436174932.png";
 import talepOlusturImage from "@assets/IMG_4252_1759436659395.png";
 import avansTalepImage from "@assets/IMG_4253_1759436694818.png";
 import yillikIzinBilgileriImage from "@assets/IMG_4254_1759437242409.png";
-import vardiyaKartiImage from "@assets/IMG_4255_1759437674529.png";
 import sikayetOlusturImage from "@assets/IMG_4256_1759438160354.png";
-import anketPortaliImage from "@assets/IMG_4257_1759438578441.png";
-import bordroPortaliImage from "@assets/IMG_4258_1759438746593.png";
 
 type Bolum = { id: string; ust: string; baslik: string; gorseller: { src: string; alt: string }[]; metin: ReactNode; maddeler: string[] };
 
@@ -45,7 +42,7 @@ const BOLUMLER: Bolum[] = [
     metin: (
       <>
         <p><strong className="text-slate-900 font-semibold">Klasik PDKS sistemlerinde</strong> personel çıkış yapmayı unuttuğunda, yöneticiler personeli arayıp kaçta çıktığını öğrenip elle müdahale etmek zorunda kalıyordu.</p>
-        <p><strong className="text-slate-900 font-semibold">QR Kod PDKS bulut sistemimizde</strong> artık bu iş yükü ortadan kalkıyor! Personel düzeltme kaydını mobil uygulamadan girer, amirine otomatik bildirim gider. Amir onayladıktan sonra kayıt İK'ya düşer. İK kimin onayladığını görür ve onaylayınca <span className="text-slate-900 font-medium">hareket otomatik olarak düzenlenir</span>.</p>
+        <p><strong className="text-slate-900 font-semibold">QR Kod PDKS bulut sistemimizde</strong> artık bu iş yükü ortadan kalkıyor. Personel düzeltme kaydını mobil uygulamadan girer, amirine otomatik bildirim gider. Amir onayladıktan sonra kayıt İK'ya düşer. İK kimin onayladığını görür ve onaylayınca <span className="text-slate-900 font-medium">hareket otomatik olarak düzenlenir</span>.</p>
         <p>İş yükünüzü azaltıyor, süreçlerinizi disipline sokuyoruz.</p>
       </>
     ),
@@ -83,7 +80,7 @@ const BOLUMLER: Bolum[] = [
     id: "Q5",
     ust: "Akıllı Vardiya",
     baslik: "Mobil Shift Planlama Sistemi",
-    gorseller: [{ src: vardiyaKartiImage, alt: "Vardiya Kartı - Mika Teknoloji PDKS" }],
+    gorseller: [],
     metin: (
       <>
         <p><strong className="text-slate-900 font-semibold">Hastane personel devam kontrol sistemi</strong> ve <strong className="text-slate-900 font-semibold"> mağaza personel devam kontrol sisteminde</strong> shift yapıldığında, personel hangi vardiyaya geleceğini mobil sisteminden anında görebilmektedir.</p>
@@ -111,7 +108,7 @@ const BOLUMLER: Bolum[] = [
     id: "Q7",
     ust: "Geri Bildirim",
     baslik: "Mobil Anket ve Geri Bildirim Platformu",
-    gorseller: [{ src: anketPortaliImage, alt: "Anket Portalı - Mika Teknoloji PDKS" }],
+    gorseller: [],
     metin: (
       <>
         <p><strong className="text-slate-900 font-semibold">Anket Portalı</strong> ile personellerinizin görüş ve önerilerini mobil uygulama üzerinden toplayın.</p>
@@ -124,7 +121,7 @@ const BOLUMLER: Bolum[] = [
     id: "Q8",
     ust: "Elektronik İmza",
     baslik: "Dijital Bordro Onay ve Elektronik İmza Sistemi",
-    gorseller: [{ src: bordroPortaliImage, alt: "Bordro Portalı - Elektronik İmza Sistemi - Mika Teknoloji PDKS" }],
+    gorseller: [],
     metin: (
       <>
         <p><strong className="text-slate-900 font-semibold">Yeni nesil personel devam kontrol sisteminde</strong> bordro bilgileri istenildiği taktirde personellerin mobil aplikasyonlarına push bildirim ile gönderilir.</p>
@@ -329,6 +326,7 @@ export default function QRPDKSPage() {
         <section key={b.id} data-testid={b.id} className={`py-16 ${i % 2 === 0 ? "bg-white" : "bg-slate-50"}`}>
           <div className="container mx-auto px-4">
             <div className={`max-w-6xl mx-auto flex flex-col gap-10 lg:gap-16 items-center ${i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"}`}>
+              {b.gorseller.length > 0 && (
               <div className="lg:w-2/5 flex justify-center gap-4">
                 {b.gorseller.map((g) => (
                   <img
@@ -340,7 +338,8 @@ export default function QRPDKSPage() {
                   />
                 ))}
               </div>
-              <div className="lg:w-3/5">
+              )}
+              <div className={b.gorseller.length > 0 ? "lg:w-3/5" : "w-full max-w-4xl"}>
                 <p className="text-sm font-semibold tracking-wider uppercase text-slate-500 mb-3">{b.ust}</p>
                 <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 leading-tight">{b.baslik}</h3>
                 <div className="space-y-4 text-lg text-slate-600 leading-relaxed">{b.metin}</div>
