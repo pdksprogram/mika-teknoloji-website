@@ -115,10 +115,7 @@ export default function HeroCarousel() {
             >
               <div className="container mx-auto px-4 pt-6 pb-24 lg:py-20 grid lg:grid-cols-2 gap-6 lg:gap-10 items-center lg:min-h-[560px]">
                 <div>
-                  <span className="text-sm font-semibold tracking-wider uppercase text-primary">
-                    Mika Teknoloji
-                  </span>
-                  <h2 className="mt-2 lg:mt-3 text-3xl md:text-5xl font-bold text-white leading-tight">
+                  <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
                     {slide.title}
                   </h2>
                   <p className="mt-3 text-xl text-slate-300">{slide.subtitle}</p>
@@ -134,15 +131,15 @@ export default function HeroCarousel() {
                     ))}
                   </ul>
                   <div className="mt-6 lg:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
-                    <Button asChild size="lg" data-testid="hero-detail-button">
+                    <Button asChild size="lg">
+                      <Link href="/iletisim" tabIndex={selectedIndex === index ? 0 : -1}>
+                        {slide.tur === "yazilim" ? CTA_YAZILIM : CTA_DONANIM}
+                      </Link>
+                    </Button>
+                    <Button asChild size="lg" variant="outlineLight" data-testid="hero-detail-button">
                       <Link href={slide.href} tabIndex={selectedIndex === index ? 0 : -1}>
                         Detayları İncele
                         <ArrowRight className="ml-2 h-5 w-5" />
-                      </Link>
-                    </Button>
-                    <Button asChild size="lg" variant="outlineLight">
-                      <Link href="/iletisim" tabIndex={selectedIndex === index ? 0 : -1}>
-                        {slide.tur === "yazilim" ? CTA_YAZILIM : CTA_DONANIM}
                       </Link>
                     </Button>
                   </div>
