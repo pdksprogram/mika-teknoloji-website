@@ -3,7 +3,7 @@ import { MessageCircle, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { DEMO_WHATSAPP } from "@/lib/iletisim";
 
-export default function WhatsAppWidget() {
+export default function WhatsAppWidget({ mobildeGizle = false }: { mobildeGizle?: boolean }) {
   const [isOpen, setIsOpen] = useState(false);
   const [showWidget, setShowWidget] = useState(false);
 
@@ -23,7 +23,7 @@ export default function WhatsAppWidget() {
   if (!showWidget) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className={`fixed bottom-6 right-6 z-40${mobildeGizle ? " hidden sm:block" : ""}`}>
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -40,7 +40,6 @@ export default function WhatsAppWidget() {
                   </div>
                   <div>
                     <h3 className="font-bold">Mika Teknoloji</h3>
-                    <p className="text-xs text-green-50">Genellikle birkaç dakika içinde yanıt verir</p>
                   </div>
                 </div>
                 <button
@@ -71,9 +70,6 @@ export default function WhatsAppWidget() {
                 <span>WhatsApp'ta Sohbet Başlat</span>
               </button>
 
-              <p className="text-center text-xs text-gray-400 mt-3">
-                WhatsApp ile güvenli mesajlaşma
-              </p>
             </div>
           </motion.div>
         )}

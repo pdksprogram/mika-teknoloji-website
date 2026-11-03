@@ -173,8 +173,10 @@ function Router() {
 // Videolar sayfası kendi WhatsApp düğmesini taşır (o sayfaya dokunulmaz); orada genel düğme çift görünmesin.
 function SiteWhatsApp() {
   const [konum] = useLocation();
-  if (konum.replace(/\/+$/, "") === "/videolar") return null;
-  return <WhatsAppWidget />;
+  const yol = konum.replace(/\/+$/, "");
+  if (yol === "/videolar") return null;
+  // İletişim sayfası formun yanında kendi WhatsApp düğmesini taşır; mobilde yüzen düğme formu örtmesin.
+  return <WhatsAppWidget mobildeGizle={yol === "/iletisim"} />;
 }
 
 // onRenderli: main.tsx/entry-server.tsx imzası korunur; yükleme ekranı kalktığı için artık davranışı değiştirmez.
