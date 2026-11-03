@@ -57,7 +57,7 @@ export default function WhatsAppWidget() {
             <div className="p-6 bg-gray-50">
               <div className="bg-white p-4 rounded-lg shadow-sm mb-4">
                 <p className="text-gray-700 text-sm">
-                  Merhaba! Size nasıl yardımcı olabiliriz?
+                  Merhaba, size nasıl yardımcı olabiliriz?
                 </p>
                 <p className="text-gray-500 text-xs mt-2">
                   PDKS sistemleri, bariyer çözümleri ve diğer ürünlerimiz hakkında bilgi almak için mesaj gönderin.

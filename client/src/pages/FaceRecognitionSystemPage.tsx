@@ -50,7 +50,7 @@ export default function FaceRecognitionSystemPage() {
     <div className="min-h-screen bg-gray-50 py-8">
       <Helmet>
         <title>Yüz Tanıma Sistem | Mika Teknoloji - Temassız PDKS Cihazları MTFD15, MTFP15, MTFDP50</title>
-        <meta name="description" content="Gelişmiş yüz tanıma sistem ve temassız PDKS cihazları. MTFD15, MTFP15, MTFDP50, MTFDP200 modelleri. 20.000 kapasite, Wi-Fi desteği, TCP/IP bağlantı. Ücretsiz demo!" />
+        <meta name="description" content="Gelişmiş yüz tanıma sistem ve temassız PDKS cihazları. MTFD15, MTFP15, MTFDP50, MTFDP200 modelleri. 20.000 kapasite, Wi-Fi desteği, TCP/IP bağlantı. Ücretsiz demo." />
         <meta name="keywords" content="yüz tanıma sistem, yüz tanıma PDKS, temassız personel takip, facial recognition, MTFD15, MTFP15, MTFDP50, MTFDP200, biyometrik güvenlik sistemi" />
         
         <meta property="og:title" content="Yüz Tanıma Sistem | Mika Teknoloji" />
@@ -96,31 +96,7 @@ export default function FaceRecognitionSystemPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="h-full hover:shadow-lg transition-shadow duration-300 relative">
-                  {/* YENİ Badge - 2. ve 3. cihaz için */}
-                  {(device.id === 2 || device.id === 3) && (
-                    <div className="absolute top-3 right-3 z-10">
-                      <div className="relative">
-                        <div className="bg-slate-900 text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl">
-                          <div className="flex items-center gap-1">
-                            <span>YENİ</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
                   
-                  {/* Wi-Fi Badge - Tüm cihazlar için */}
-                  {(device.id === 1 || device.id === 2 || device.id === 3 || device.id === 4) && (
-                    <div className="absolute bottom-3 left-3 z-10">
-                      <div className="relative">
-                        <div className="bg-slate-900 text-white px-3 py-2 rounded-full text-xs font-bold shadow-xl">
-                          <div className="flex items-center gap-1">
-                            <span>Wi-Fi</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
                   <CardContent className="p-6">
                     <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden border border-gray-200">
                       {device.image && device.image !== "/placeholder-device.jpg" ? (

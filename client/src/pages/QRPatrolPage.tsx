@@ -134,15 +134,7 @@ export default function QRPatrolPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="bg-white shadow-lg text-primary px-6 py-3 rounded-full text-base font-semibold border border-slate-200">
-                Mobil Uygulama
-              </div>
-              <div className="bg-white shadow-lg text-primary px-6 py-3 rounded-full text-base font-semibold border border-slate-200">
-                Canlı Konum Takibi
-              </div>
-              <div className="bg-white shadow-lg text-primary px-6 py-3 rounded-full text-base font-semibold border border-slate-200">
-                Otomatik Raporlama
-              </div>
+              <p className="text-base text-slate-600">Mobil Uygulama · Canlı Konum Takibi · Otomatik Raporlama</p>
             </motion.div>
           </div>
 

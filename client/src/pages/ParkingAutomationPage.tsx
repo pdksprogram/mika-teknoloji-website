@@ -121,17 +121,7 @@ export default function ParkingAutomationPage() {
               Plaka tanıma teknolojisi ile tam otomatik otopark yönetimi. 
               Bariyer kontrolü, ücretlendirme sistemi ve güvenlik kamerası entegrasyonu.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="bg-primary px-4 py-2 rounded-full">
-                <span className="font-semibold">Plaka Tanıma</span>
-              </div>
-              <div className="bg-primary px-4 py-2 rounded-full">
-                <span className="font-semibold">Otomatik Bariyer</span>
-              </div>
-              <div className="bg-primary px-4 py-2 rounded-full">
-                <span className="font-semibold">Ücretlendirme</span>
-              </div>
-            </div>
+            <p className="text-base text-white/80 mb-8">Plaka Tanıma · Otomatik Bariyer · Ücretlendirme</p>
           </motion.div>
         </div>
       </section>

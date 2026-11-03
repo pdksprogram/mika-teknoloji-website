@@ -131,17 +131,7 @@ export default function CardAccessSystemPage() {
               RFID kart teknolojisi ile güvenli ve hızlı geçiş kontrol sistemi. 
               Proximity, MIFARE ve UHF kart desteği ile PDKS entegrasyonu.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="bg-primary px-4 py-2 rounded-full">
-                <span className="font-semibold">3 Kart Tipi</span>
-              </div>
-              <div className="bg-primary px-4 py-2 rounded-full">
-                <span className="font-semibold">Temassız Okuma</span>
-              </div>
-              <div className="bg-primary px-4 py-2 rounded-full">
-                <span className="font-semibold">PDKS Entegrasyonu</span>
-              </div>
-            </div>
+            <p className="text-base text-white/80 mb-8">3 Kart Tipi · Temassız Okuma · PDKS Entegrasyonu</p>
           </motion.div>
         </div>
       </section>

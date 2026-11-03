@@ -307,7 +307,7 @@ export default function Home() {
               data-testid="cta-detail-button"
             >
               <Link href="/iletisim">
-                Hemen Detaylı Bilgi Alın! <ArrowRight className="ml-2 h-5 w-5" />
+                Detaylı Bilgi Alın <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </motion.div>

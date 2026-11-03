@@ -140,17 +140,7 @@ export default function QRAccessPage() {
               QR kod teknolojisi ile temassız, hijyenik ve güvenli geçiş kontrol sistemi. 
               Mobil uygulama entegrasyonu ve dinamik güvenlik kodları.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="bg-primary px-4 py-2 rounded-full">
-                <span className="font-semibold">Temassız Geçiş</span>
-              </div>
-              <div className="bg-primary px-4 py-2 rounded-full">
-                <span className="font-semibold">Mobil Uygulama</span>
-              </div>
-              <div className="bg-primary px-4 py-2 rounded-full">
-                <span className="font-semibold">Dinamik Kodlar</span>
-              </div>
-            </div>
+            <p className="text-base text-white/80 mb-8">Temassız Geçiş · Mobil Uygulama · Dinamik Kodlar</p>
           </motion.div>
         </div>
       </section>

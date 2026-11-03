@@ -93,9 +93,7 @@ export function KonuGiris({ ust, baslik, giris, sikisik = false }: { ust: string
   return (
     <section className={`relative ${sikisik ? "pt-4 pb-6" : "pt-12 pb-20"} px-4 bg-slate-50`}>
       <div className="container mx-auto text-center max-w-4xl">
-        <div className={`inline-flex items-center bg-primary/10 px-6 py-2 rounded-full ${sikisik ? "mb-3" : "mb-6"}`}>
-          <span className="text-primary font-medium text-sm tracking-wider uppercase">{ust}</span>
-        </div>
+        <p className={`text-sm font-semibold tracking-wider uppercase text-slate-500 ${sikisik ? "mb-2" : "mb-4"}`}>{ust}</p>
         <h1 className={sikisik ? "text-3xl md:text-4xl font-bold text-slate-800 mb-2 leading-tight" : "text-4xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight"}>{baslik}</h1>
         <p className={sikisik ? "text-base md:text-lg text-slate-600" : "text-xl md:text-2xl text-slate-600 font-light mb-10"}>{giris}</p>
         {!sikisik && (

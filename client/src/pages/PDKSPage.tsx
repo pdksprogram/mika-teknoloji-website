@@ -472,13 +472,7 @@ export default function PDKSPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="mb-6">
-              <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold tracking-wide">
-                {pdks.brandMessage}
-              </span>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-800 mb-6 leading-tight">
+<h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-800 mb-6 leading-tight">
               {pdks.title}
             </h1>
             <h2 className="text-xl md:text-2xl text-slate-600 font-light mb-8 leading-relaxed">
@@ -489,20 +483,11 @@ export default function PDKSPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild 
-                size="lg" 
-                className="px-8 py-4"
-                data-testid="pdks-demo-button"
-              >
-                <Link href="/iletisim">DEMO VE KEŞİF TALEP EDİN</Link>
+              <Button asChild size="lg" data-testid="pdks-demo-button">
+                <Link href="/iletisim">Demo ve Keşif Talep Edin</Link>
               </Button>
-              <Button asChild 
-                size="lg" 
-                variant="outline" 
-                className="px-8 py-4 transition-all duration-300"
-                data-testid="pdks-contact-button"
-              >
-                <Link href="/iletisim">FİYAT TEKLİFİ AL</Link>
+              <Button asChild size="lg" variant="outline" data-testid="pdks-contact-button">
+                <Link href="/iletisim">Fiyat Teklifi Alın</Link>
               </Button>
             </div>
             

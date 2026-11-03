@@ -239,7 +239,7 @@ export default function AccessControlPage() {
       },
       contact: {
         title: "Hemen bizimle iletişime geçerek en uygun kartlı geçiş sistemini belirleyelim.",
-        button: "MIKA İLETİŞİM"
+        button: "Bize Ulaşın"
       }
     },
     en: {
@@ -381,7 +381,7 @@ export default function AccessControlPage() {
       },
       contact: {
         title: "Contact us immediately to determine the most suitable card access system.",
-        button: "MIKA CONTACT"
+        button: "Contact Us"
       }
     }
   };
@@ -405,13 +405,7 @@ export default function AccessControlPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="mb-4">
-                <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold tracking-wide">
-                  {t.brandMessage}
-                </span>
-              </div>
-              
-              <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight">
+<h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight">
                 {t.title}
               </h1>
               
