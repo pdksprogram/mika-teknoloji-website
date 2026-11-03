@@ -246,6 +246,27 @@ async function main() {
     }
   }
 
+  // 404: tanımsız bir adres çizilir ve dist/public/404.html'e yazılır (site haritasına girmez).
+  // vercel.json yakalama rotası bu dosyayı 404 durum koduyla döner; ilk açılışta sekme başlığı doğru gelir.
+  // data-rota boş: istemci adres eşleşmediği için hydrate etmez, aynı içeriği yeniden çizer.
+  try {
+    const { html, helmet } = render("/__mika-404__");
+    const bas = [helmet.title, helmet.meta, helmet.link, helmet.script]
+      .map((p) => p.toString())
+      .join("\n    ")
+      .replace(/<link[^>]*rel="canonical"[^>]*>\s*/gi, () => "")
+      .replace(/<meta[^>]*property="og:url"[^>]*>\s*/gi, () => "");
+    const sayfa = sablon
+      .replace(/<title>[\s\S]*?<\/title>\s*/i, () => "")
+      .replace(/<meta\s+name="description"[^>]*>\s*/i, () => "")
+      .replace("</head>", () => `    ${bas}\n  </head>`)
+      .replace(BOS_KOK, () => `<div id="root" data-rota="">${html}</div>`);
+    if (!sayfa.includes("Sayfa bulunamadı")) throw new Error("404 içeriği çizilmedi");
+    fs.writeFileSync(path.join(istemciCikti, "404.html"), sayfa);
+  } catch (e) {
+    hatalar.push(`404: ${e && e.message ? e.message : e}`);
+  }
+
   console.log(`[on-render] ${rotalar.length - hatalar.length}/${rotalar.length} rota üretildi.`);
   if (hatalar.length) {
     console.error("[on-render] Hatalı rotalar:\n  " + hatalar.join("\n  "));

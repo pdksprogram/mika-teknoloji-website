@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
+import { Button } from "@/components/ui/button";
 
 // Tanımsız adresler: Header ve Footer App.tsx'te ortak; burada yalnız gövde.
 export default function NotFound() {
@@ -10,22 +11,16 @@ export default function NotFound() {
         <meta name="robots" content="noindex,nofollow" />
       </Helmet>
       <section className="container mx-auto px-4 py-24 text-center">
-        <p className="text-sm font-semibold text-primary mb-3">404</p>
-        <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Sayfa bulunamadı</h1>
-        <p className="text-lg text-gray-600 mb-10">Aradığınız sayfa taşınmış ya da kaldırılmış olabilir.</p>
+        <p className="text-sm font-semibold text-slate-500 mb-3">404</p>
+        <h1 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">Sayfa bulunamadı</h1>
+        <p className="text-lg text-slate-600 mb-10">Aradığınız sayfa taşınmış ya da kaldırılmış olabilir.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/"
-            className="bg-primary hover:opacity-90 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg transition-opacity"
-          >
-            Ana Sayfa
-          </Link>
-          <Link
-            href="/pdks-programi"
-            className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors"
-          >
-            PDKS Programı
-          </Link>
+          <Button asChild size="lg">
+            <Link href="/">Ana Sayfa</Link>
+          </Button>
+          <Button asChild size="lg" variant="outline">
+            <Link href="/pdks-programi">PDKS Programı</Link>
+          </Button>
         </div>
       </section>
     </main>
