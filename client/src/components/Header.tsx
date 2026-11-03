@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Search, ChevronDown } from "lucide-react";
+import { Menu, X, Search, ChevronDown, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -18,6 +18,7 @@ import {
 // import { useIsMobile } from "@/hooks/use-mobile"; // Not used currently
 import { useLanguage } from "@/hooks/useLanguage";
 import { menuSuz } from "@/lib/rotalar";
+import { CTA_ARA, CTA_DONANIM, DEMO_TELEFON } from "@/lib/iletisim";
 const mikaLogo = "/mika-logo.jpg"; // Real Mika logo
 const MEGA_SUTUN: Record<number, string> = { 1: "grid-cols-1", 2: "grid-cols-2", 3: "grid-cols-3", 4: "grid-cols-4" };
 const MEGA_GENISLIK: Record<number, string> = { 1: "w-80", 2: "w-[36rem]", 3: "w-[52rem]", 4: "w-[64rem]" };
@@ -454,8 +455,21 @@ export default function Header() {
                 ))}
                 
                 <div className="pt-4 border-t space-y-3">
-                  <Button 
-                    asChild 
+                  {/* Birincil çağrı + telefon */}
+                  <div className="grid grid-cols-2 gap-3">
+                    <Button asChild size="lg" data-testid="mobile-cta-button">
+                      <Link href="/iletisim" onClick={() => setIsMenuOpen(false)}>{CTA_DONANIM}</Link>
+                    </Button>
+                    <Button asChild size="lg" variant="outline" data-testid="mobile-call-button">
+                      <a href={`tel:${DEMO_TELEFON}`}>
+                        <Phone className="h-4 w-4" />
+                        {CTA_ARA}
+                      </a>
+                    </Button>
+                  </div>
+
+                  <Button
+                    asChild
                     variant="outline"
                     className="w-full"
                     data-testid="mobile-webpdks-button"
@@ -463,8 +477,9 @@ export default function Header() {
                     <a href="https://pdkspersoneltakip.com/" target="_blank" rel="noopener noreferrer">WebPDKS</a>
                   </Button>
                   
-                  {/* Mobile Search Button */}
-                  <Button 
+                  {/* Site içi arama: telefonla karışmasın diye ikincil düğme */}
+                  <Button
+                    variant="outline"
                     className="w-full"
                     onClick={() => {
                       setIsSearchOpen(true);
@@ -472,8 +487,8 @@ export default function Header() {
                     }}
                     data-testid="mobile-search-button"
                   >
-                    <Search className="h-4 w-4 mr-2" />
-                    Ara
+                    <Search className="h-4 w-4" />
+                    Site içinde ara
                   </Button>
                   
                   {/* Mobile Language Selector */}

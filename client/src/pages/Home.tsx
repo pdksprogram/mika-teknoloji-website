@@ -1,10 +1,9 @@
-import { Play, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import HeroCarousel from "@/components/HeroCarousel";
+import { ReferansSeridi } from "@/components/TurnikeReferanslari";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 export default function Home() {
 
@@ -138,6 +137,8 @@ export default function Home() {
         <HeroCarousel />
       </section>
 
+      <ReferansSeridi />
+
       {/* Reference Section - Following Meyer's approach */}
       <section className="relative py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -199,7 +200,7 @@ export default function Home() {
                     birleştiren hibrit çözümler: MT1100, MTP50, MTFDP200, MTFD15 serisi cihazlar.
                   </p>
                   <p>
-                    <strong>20.000 kullanıcı kapasitesi, TCP/IP ve Wi-Fi desteği</strong> ile ölçeklenebilir 
+                    <strong>TCP/IP ve Wi-Fi desteği</strong> ile ölçeklenebilir 
                     altyapı sağlıyoruz. Bordro entegrasyonu, mesai hesaplama, vardiya takibi ve 
                     detaylı raporlama özellikleri ile tam bir personel yönetim sistemi.
                   </p>
@@ -228,37 +229,37 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-slate-800 mb-6 text-center">Sistem Özellikleri</h3>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="text-primary font-bold text-lg mb-2">Kapasite</div>
+                  <div className="text-slate-800 font-bold text-lg mb-2">Kapasite</div>
                   <div className="text-slate-600 text-sm">
-                    20.000 kullanıcı, 500.000 kayıt
+                    Cihaz modeline göre kullanıcı ve kayıt kapasitesi
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-primary font-bold text-lg mb-2">Bağlantı</div>
+                  <div className="text-slate-800 font-bold text-lg mb-2">Bağlantı</div>
                   <div className="text-slate-600 text-sm">
                     TCP/IP, Wi-Fi, USB, RS485 desteği
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-primary font-bold text-lg mb-2">Güvenlik</div>
+                  <div className="text-slate-800 font-bold text-lg mb-2">Güvenlik</div>
                   <div className="text-slate-600 text-sm">
                     SSL şifreleme, KVKK uygun
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-primary font-bold text-lg mb-2">Entegrasyon</div>
+                  <div className="text-slate-800 font-bold text-lg mb-2">Entegrasyon</div>
                   <div className="text-slate-600 text-sm">
                     Bordroya hazır puantaj, Excel (.xlsx) çıktısı
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-primary font-bold text-lg mb-2">Platform</div>
+                  <div className="text-slate-800 font-bold text-lg mb-2">Platform</div>
                   <div className="text-slate-600 text-sm">
                     Web, Mobil, Desktop uygulamaları
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-primary font-bold text-lg mb-2">Destek</div>
+                  <div className="text-slate-800 font-bold text-lg mb-2">Destek</div>
                   <div className="text-slate-600 text-sm">
                     Teknik destek ve bakım
                   </div>
@@ -281,7 +282,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Tüm PDKS Çözümlerimiz İçin Ücretsiz Danışmanlık Alabilirsiniz
+            PDKS Çözümünüzü Birlikte Planlayalım
           </motion.h2>
           <motion.p 
             className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto"
@@ -291,7 +292,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             Personel devam kontrol sistemi, parmak izi takip sistemi ve yüz tanıma çözümleriniz için hemen iletişime geçin. 
-            MT serisi cihazlarımız ile 20.000 kapasite, TCP/IP ve Wi-Fi destekli çözümler.
+            MT serisi cihazlarımız TCP/IP ve Wi-Fi bağlantısıyla çalışır.
           </motion.p>
           <motion.div
             initial={false}
@@ -299,21 +300,11 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <Button 
-              asChild 
-              size="lg" 
-              className="px-8"
-              data-testid="cta-detail-button"
-            >
-              <Link href="/iletisim">
-                Detaylı Bilgi Alın <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+            <CtaDugmeleri tur="yazilim" koyu sinif="justify-center" />
           </motion.div>
         </div>
       </section>
 
-      {/* WhatsApp Widget */}
     </div>
   );
 }

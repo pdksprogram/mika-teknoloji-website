@@ -3,6 +3,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'wouter';
+import { CTA_DONANIM, CTA_YAZILIM } from '@/lib/iletisim';
 
 // Slaytlarda yalnız gerçek ürün fotoğrafı ve gerçek (KVKK maskeli) program ekranı kullanılır.
 interface CarouselSlide {
@@ -14,6 +15,7 @@ interface CarouselSlide {
   image: string;
   imageAlt: string;
   href: string;
+  tur: "yazilim" | "donanim";
 }
 
 const slides: CarouselSlide[] = [
@@ -26,6 +28,7 @@ const slides: CarouselSlide[] = [
     image: "/images/slayt/qr-pdks-mobil.jpg",
     imageAlt: "Mika QR PDKS mobil uygulama ekranı",
     href: "/qr-pdks",
+    tur: "yazilim",
   },
   {
     id: 2,
@@ -36,6 +39,7 @@ const slides: CarouselSlide[] = [
     image: "/images/slayt/turnike-t345.jpg",
     imageAlt: "T345 elektromekanik bel tipi turnike",
     href: "/turnike-sistemleri",
+    tur: "donanim",
   },
   {
     id: 3,
@@ -46,6 +50,7 @@ const slides: CarouselSlide[] = [
     image: "/images/slayt/yuz-tanima-cihazi.jpg",
     imageAlt: "Yüz tanıma ve parmak izi PDKS cihazı",
     href: "/urunler/yuz-tanima",
+    tur: "donanim",
   },
   {
     id: 4,
@@ -56,6 +61,7 @@ const slides: CarouselSlide[] = [
     image: "/images/slayt/bulut-pdks-paneli.jpg",
     imageAlt: "Mika bulut PDKS programı giriş-çıkış listesi",
     href: "/pdks-programi",
+    tur: "yazilim",
   },
 ];
 
@@ -106,19 +112,19 @@ export default function HeroCarousel() {
               aria-roledescription="slayt"
               aria-hidden={selectedIndex !== index}
             >
-              <div className="container mx-auto px-4 pt-14 pb-24 lg:py-20 grid lg:grid-cols-2 gap-10 items-center min-h-[560px]">
+              <div className="container mx-auto px-4 pt-6 pb-24 lg:py-20 grid lg:grid-cols-2 gap-6 lg:gap-10 items-center lg:min-h-[560px]">
                 <div>
                   <span className="text-sm font-semibold tracking-wider uppercase text-primary">
                     Mika Teknoloji
                   </span>
-                  <h2 className="mt-3 text-4xl md:text-5xl font-bold text-white leading-tight">
+                  <h2 className="mt-2 lg:mt-3 text-3xl md:text-5xl font-bold text-white leading-tight">
                     {slide.title}
                   </h2>
                   <p className="mt-3 text-xl text-slate-300">{slide.subtitle}</p>
-                  <p className="mt-6 text-lg text-slate-300 leading-relaxed max-w-xl">
+                  <p className="mt-4 lg:mt-6 text-lg text-slate-300 leading-relaxed max-w-xl">
                     {slide.description}
                   </p>
-                  <ul className="mt-6 space-y-2">
+                  <ul className="hidden sm:block mt-6 space-y-2">
                     {slide.features.map((feature) => (
                       <li key={feature} className="flex items-center gap-3 text-slate-200">
                         <span className="h-1.5 w-1.5 bg-primary shrink-0" />
@@ -126,7 +132,7 @@ export default function HeroCarousel() {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                  <div className="mt-6 lg:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
                     <Button asChild size="lg" data-testid="hero-detail-button">
                       <Link href={slide.href} tabIndex={selectedIndex === index ? 0 : -1}>
                         Detayları İncele
@@ -135,19 +141,21 @@ export default function HeroCarousel() {
                     </Button>
                     <Button asChild size="lg" variant="outlineLight">
                       <Link href="/iletisim" tabIndex={selectedIndex === index ? 0 : -1}>
-                        Teklif Al
+                        {slide.tur === "yazilim" ? CTA_YAZILIM : CTA_DONANIM}
                       </Link>
                     </Button>
                   </div>
                 </div>
 
-                <div className="hidden lg:flex items-center justify-center">
-                  <div className="bg-white rounded-xl p-6 shadow-2xl max-w-full">
+                {/* Mobilde görsel metnin üstünde, oran korunur */}
+                <div className="order-first lg:order-none flex items-center justify-center">
+                  <div className="bg-white rounded-xl p-3 lg:p-6 shadow-2xl max-w-full">
                     <img
                       src={slide.image}
                       alt={slide.imageAlt}
-                      className="block max-h-[400px] w-auto max-w-full object-contain"
+                      className="block max-h-[180px] lg:max-h-[400px] w-auto max-w-full object-contain"
                       loading={index === 0 ? 'eager' : 'lazy'}
+                      {...(index === 0 ? { fetchpriority: "high" } : {})}
                     />
                   </div>
                 </div>
