@@ -34,11 +34,38 @@ export function saatiDakikaya(s: string): number | null {
   return sa * 60 + dk;
 }
 
-// Türkçe ondalık (virgül) kabul eder: "1,5" -> 1.5; boş ya da geçersizse null; eksi değer null.
+// Kabul edilen üst sınırlar; aşan değer geçersiz sayılır (çok büyük sayı üstel gösterime düşmesin).
+export const ENFAZLA_SINIR_SAAT = 168; // bir haftadaki saat sayısı
+export const ENFAZLA_UCRET = 1_000_000; // TL / saat
+export const ENFAZLA_KATSAYI = 10;
+export const ENFAZLA_MOLA_DK = GUN_DK;
+
+// Türkçe sayı girişi: "1.000" -> 1000, "1.250,50" -> 1250.5, "100,25" -> 100.25, "1.5" -> 1.5.
+// Nokta yalnız ardından tam 3 haneli gruplar geliyorsa binlik ayıracıdır; aksi halde ondalıktır.
+// Boş, eksi, üstel ("1e3") ya da bozuk biçim null döner.
 export function sayiOku(s: string): number | null {
-  const t = s.trim().replace(/\s/g, "").replace(",", ".");
-  if (t === "" || !/^\d+(\.\d+)?$/.test(t)) return null;
-  return Number(t);
+  const t = s.trim().replace(/\s/g, "");
+  let duz: string;
+  if (/^\d{1,3}(\.\d{3})+(,\d+)?$/.test(t)) {
+    duz = t.replace(/\./g, "").replace(",", ".");
+  } else if (/^\d+([.,]\d+)?$/.test(t)) {
+    duz = t.replace(",", ".");
+  } else {
+    return null;
+  }
+  const n = Number(duz);
+  return Number.isFinite(n) ? n : null;
+}
+
+// sayiOku + üst sınır: değer 0 ile enFazla arasında değilse null.
+export function sinirliSayiOku(s: string, enFazla: number): number | null {
+  const n = sayiOku(s);
+  return n === null || n > enFazla ? null : n;
+}
+
+// Mola dakikası: boş = 0; dolu ama geçersiz (eksi, harf, 1440 dk üstü) = null.
+export function molaOku(s: string): number | null {
+  return s.trim() === "" ? 0 : sinirliSayiOku(s, ENFAZLA_MOLA_DK);
 }
 
 // Bir günün net çalışma süresi (dakika). Giriş ya da çıkış boşsa / geçersizse null.
@@ -47,7 +74,7 @@ export function gunlukNetDakika(g: GunGirdisi): number | null {
   const cikis = saatiDakikaya(g.cikis);
   if (giris === null || cikis === null) return null;
   const sure = cikis >= giris ? cikis - giris : cikis + GUN_DK - giris;
-  const mola = g.mola.trim() === "" ? 0 : sayiOku(g.mola);
+  const mola = molaOku(g.mola);
   if (mola === null) return null;
   return Math.max(0, sure - Math.round(mola));
 }

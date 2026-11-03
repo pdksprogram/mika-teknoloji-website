@@ -19,18 +19,27 @@ import {
 } from "@/components/PdksIcerik";
 import type { KirintiMaddesi, SssMaddesi } from "@/components/PdksIcerik";
 import {
+  ENFAZLA_KATSAYI,
+  ENFAZLA_MOLA_DK,
+  ENFAZLA_UCRET,
+  ENFAZLA_SINIR_SAAT,
   HAFTANIN_GUNLERI,
   VARSAYILAN_SINIR_SAAT,
   fazlaMesaiTutari,
   haftayiHesapla,
+  molaOku,
   ondalikSaat,
-  sayiOku,
+  sinirliSayiOku,
   sureMetni,
   tutarMetni,
 } from "@/lib/fazlaMesai";
 import type { GunGirdisi } from "@/lib/fazlaMesai";
 
 const YOL = "/fazla-mesai-hesaplama";
+
+// Hatalı giriş kutusu ve altındaki kısa uyarı (shadcn Input'un kendi hata stili yok).
+const HATALI_KUTU = "border-red-500 focus-visible:ring-red-500";
+const UYARI_METNI = "mt-2 text-sm text-red-600";
 
 const KIRINTI: KirintiMaddesi[] = [
   { ad: "Ana Sayfa", yol: "/" },
@@ -88,12 +97,32 @@ function HesaplamaAraci() {
   const [ucret, setUcret] = useState("");
   const [katsayi, setKatsayi] = useState("");
 
-  const sinirSayi = sayiOku(sinir);
-  const sonuc = haftayiHesapla(gunler, sinirSayi ?? VARSAYILAN_SINIR_SAAT);
-  const tutar = fazlaMesaiTutari(sonuc.fazlaDk, sayiOku(ucret), sayiOku(katsayi));
+  // Sınır zorunludur: boş ya da geçersizse normal çalışma, fazla mesai ve tutar "—" olur.
+  const sinirSayi = sinirliSayiOku(sinir, ENFAZLA_SINIR_SAAT);
+  const sinirHatali = sinirSayi === null;
+  // Ücret ve katsayı isteğe bağlıdır: boşken uyarı yok, yalnız dolu ama geçersizken uyarı.
+  const ucretSayi = sinirliSayiOku(ucret, ENFAZLA_UCRET);
+  const ucretHatali = ucret.trim() !== "" && ucretSayi === null;
+  const katsayiSayi = sinirliSayiOku(katsayi, ENFAZLA_KATSAYI);
+  const katsayiHatali = katsayi.trim() !== "" && katsayiSayi === null;
+  const molaHatali = gunler.some((g) => molaOku(g.mola) === null);
+
+  const sonuc = haftayiHesapla(gunler, sinirSayi ?? 0);
+  const tutar = sinirHatali ? null : fazlaMesaiTutari(sonuc.fazlaDk, ucretSayi, katsayiSayi);
 
   const guncelle = (i: number, alan: keyof GunGirdisi, deger: string) =>
     setGunler((onceki) => onceki.map((g, j) => (j === i ? { ...g, [alan]: deger } : g)));
+
+  const ornekHafta = () => {
+    setGunler(ORNEK_HAFTA);
+    setSinir(String(VARSAYILAN_SINIR_SAAT));
+  };
+  const temizle = () => {
+    setGunler(BOS_HAFTA);
+    setSinir(String(VARSAYILAN_SINIR_SAAT));
+    setUcret("");
+    setKatsayi("");
+  };
 
   return (
     <section className="py-16 bg-white" aria-labelledby="hesaplama-baslik">
@@ -103,28 +132,36 @@ function HesaplamaAraci() {
         </div>
         <Card className="max-w-5xl mx-auto border-0 shadow-lg">
           <CardContent className="p-4 md:p-8">
-            <div className="flex flex-col sm:flex-row sm:items-end gap-4 mb-6">
-              <div className="sm:w-64">
-                <Label htmlFor="fm-sinir" className="text-slate-700">Haftalık normal çalışma sınırı (saat)</Label>
-                <Input
-                  id="fm-sinir"
-                  type="text"
-                  inputMode="decimal"
-                  className="mt-2"
-                  value={sinir}
-                  onChange={(e) => setSinir(e.target.value)}
-                  aria-invalid={sinirSayi === null}
-                />
+            <div className="mb-6">
+              <div className="flex flex-col sm:flex-row sm:items-end gap-4">
+                <div className="sm:w-64">
+                  <Label htmlFor="fm-sinir" className="text-slate-700">Haftalık normal çalışma sınırı (saat)</Label>
+                  <Input
+                    id="fm-sinir"
+                    type="text"
+                    inputMode="decimal"
+                    className={sinirHatali ? `mt-2 ${HATALI_KUTU}` : "mt-2"}
+                    value={sinir}
+                    onChange={(e) => setSinir(e.target.value)}
+                    aria-invalid={sinirHatali}
+                    aria-describedby={sinirHatali ? "fm-sinir-uyari" : undefined}
+                  />
+                </div>
+                <div className="flex gap-3 sm:ml-auto">
+                  <Button type="button" variant="outline" onClick={ornekHafta}>
+                    Örnek Hafta
+                  </Button>
+                  <Button type="button" variant="outline" onClick={temizle}>
+                    <RotateCcw className="mr-2 h-4 w-4" />
+                    Temizle
+                  </Button>
+                </div>
               </div>
-              <div className="flex gap-3 sm:ml-auto">
-                <Button type="button" variant="outline" onClick={() => setGunler(ORNEK_HAFTA)}>
-                  Örnek Hafta
-                </Button>
-                <Button type="button" variant="outline" onClick={() => setGunler(BOS_HAFTA)}>
-                  <RotateCcw className="mr-2 h-4 w-4" />
-                  Temizle
-                </Button>
-              </div>
+              {sinirHatali && (
+                <p id="fm-sinir-uyari" className={UYARI_METNI}>
+                  Haftalık sınırı 0 ile {ENFAZLA_SINIR_SAAT} arasında bir sayı olarak girin.
+                </p>
+              )}
             </div>
 
             <div className="overflow-x-auto">
@@ -163,11 +200,11 @@ function HesaplamaAraci() {
                         </td>
                         <td className="py-2 px-2">
                           <Input
-                            type="number"
+                            type="text"
                             inputMode="numeric"
-                            min={0}
-                            step={5}
                             aria-label={`${gun} mola süresi, dakika`}
+                            className={molaOku(gunler[i].mola) === null ? HATALI_KUTU : undefined}
+                            aria-invalid={molaOku(gunler[i].mola) === null}
                             value={gunler[i].mola}
                             onChange={(e) => guncelle(i, "mola", e.target.value)}
                           />
@@ -181,6 +218,9 @@ function HesaplamaAraci() {
                 </tbody>
               </table>
             </div>
+            {molaHatali && (
+              <p className={UYARI_METNI}>Molayı 0 ile {ENFAZLA_MOLA_DK} arasında dakika olarak girin; hatalı günün süresi hesaplanmaz.</p>
+            )}
 
             <div className="grid sm:grid-cols-2 gap-4 mt-6">
               <div>
@@ -189,10 +229,17 @@ function HesaplamaAraci() {
                   id="fm-ucret"
                   type="text"
                   inputMode="decimal"
-                  className="mt-2"
+                  className={ucretHatali ? `mt-2 ${HATALI_KUTU}` : "mt-2"}
                   value={ucret}
                   onChange={(e) => setUcret(e.target.value)}
+                  aria-invalid={ucretHatali}
+                  aria-describedby={ucretHatali ? "fm-ucret-uyari" : undefined}
                 />
+                {ucretHatali && (
+                  <p id="fm-ucret-uyari" className={UYARI_METNI}>
+                    Saatlik ücreti 1.000.000 TL'yi aşmayan bir sayı olarak girin.
+                  </p>
+                )}
               </div>
               <div>
                 <Label htmlFor="fm-katsayi" className="text-slate-700">Fazla mesai katsayısı</Label>
@@ -200,10 +247,17 @@ function HesaplamaAraci() {
                   id="fm-katsayi"
                   type="text"
                   inputMode="decimal"
-                  className="mt-2"
+                  className={katsayiHatali ? `mt-2 ${HATALI_KUTU}` : "mt-2"}
                   value={katsayi}
                   onChange={(e) => setKatsayi(e.target.value)}
+                  aria-invalid={katsayiHatali}
+                  aria-describedby={katsayiHatali ? "fm-katsayi-uyari" : undefined}
                 />
+                {katsayiHatali && (
+                  <p id="fm-katsayi-uyari" className={UYARI_METNI}>
+                    Katsayıyı {ENFAZLA_KATSAYI}'u aşmayan bir sayı olarak girin, örneğin 1,5.
+                  </p>
+                )}
               </div>
             </div>
 
@@ -217,13 +271,21 @@ function HesaplamaAraci() {
               <div className="flex justify-between py-3">
                 <dt className="text-slate-600">Normal çalışma</dt>
                 <dd className="font-semibold text-slate-800 tabular-nums">
-                  {sureMetni(sonuc.normalDk)} <span className="text-slate-500 font-normal">({ondalikSaat(sonuc.normalDk)} saat)</span>
+                  {sinirHatali ? "—" : (
+                    <>
+                      {sureMetni(sonuc.normalDk)} <span className="text-slate-500 font-normal">({ondalikSaat(sonuc.normalDk)} saat)</span>
+                    </>
+                  )}
                 </dd>
               </div>
               <div className="flex justify-between py-3">
                 <dt className="text-slate-800 font-semibold">Fazla mesai</dt>
                 <dd className="font-bold text-primary tabular-nums">
-                  {sureMetni(sonuc.fazlaDk)} <span className="text-slate-500 font-normal">({ondalikSaat(sonuc.fazlaDk)} saat)</span>
+                  {sinirHatali ? "—" : (
+                    <>
+                      {sureMetni(sonuc.fazlaDk)} <span className="text-slate-500 font-normal">({ondalikSaat(sonuc.fazlaDk)} saat)</span>
+                    </>
+                  )}
                 </dd>
               </div>
               <div className="flex justify-between py-3">
@@ -234,6 +296,7 @@ function HesaplamaAraci() {
 
             <p className="mt-6 text-sm text-slate-500">
               Bu araç bilgi amaçlıdır ve tek bir haftayı hesaplar; denkleştirme, hafta tatili ve resmi tatil çalışması hesaba katılmaz.
+              Giriş ve çıkış saati aynıysa o gün 0 sayılır; 24 saatlik vardiya girilemez.
             </p>
           </CardContent>
         </Card>
