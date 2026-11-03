@@ -11,7 +11,7 @@ export type Karsilastirma = {
 };
 
 export const BARIYER_TABLOSU: Karsilastirma = {
-  baslik: "Bariyer Modelleri Karşılaştırma",
+  baslik: "Bariyer Modelleri Karşılaştırması",
   sutunlar: ["Model", "Tür", "Öne çıkan değerler"],
   satirlar: [
     { ad: "MT Plus Bariyer Sistemi", yol: "/urunler/pt-plus-bariyer", hucreler: ["Kollu bariyer", "5,25 m LED'li kol · 7 sn açılma · IP 54"] },
@@ -24,7 +24,7 @@ export const BARIYER_TABLOSU: Karsilastirma = {
 };
 
 export const TURNIKE_TABLOSU: Karsilastirma = {
-  baslik: "Bel Tipi Turnike Modelleri Karşılaştırma",
+  baslik: "Bel Tipi Turnike Karşılaştırması",
   sutunlar: ["Model", "Geçiş hızı", "Koruma", "Çalışma sıcaklığı", "Ağırlık", "Ortam"],
   satirlar: [
     { ad: "MT 250 ECO", yol: "/urunler/t250-eco-turnike", hucreler: ["25 kişi/dk", "IP 44", "-15 °C / +60 °C", "28 kg", "İç ortam"] },

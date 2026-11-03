@@ -310,7 +310,7 @@ export default function QRAccessPage() {
               QR Kod Geçiş Sistemi İçin Demo Alın
             </h2>
             <p className="text-xl text-slate-200 mb-8 max-w-2xl mx-auto">
-              Temassız QR kod teknolojisi ile güvenli geçiş kontrolü için ücretsiz demo ve teklif hizmeti
+              Temassız QR kod teknolojisi ile güvenli geçiş kontrolü için demo ve teklif hizmeti
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/iletisim">
