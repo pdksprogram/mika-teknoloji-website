@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { useEffect } from "react";
 import { trackPDKSView, trackProductView } from "@/lib/analytics";
-import SEO from "@/seo/SEO";
+import SEO, { ASIL_ADRES, kanonikAdres } from "@/seo/SEO";
 
 // Real device images
 const facialRecognitionDevice = "/facial-device.png";
@@ -447,7 +447,7 @@ export default function PDKSPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
-      <SEO title={title} description={description} />
+      <SEO title={title} description={description} canonical={kanonikAdres(ASIL_ADRES.pdks)} />
       
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">

@@ -5,6 +5,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { execFileSync } from "node:child_process";
 import { build } from "vite";
 
 process.env.NODE_ENV = "production";
@@ -17,6 +18,8 @@ const ssrCikti = path.join(kok, "dist", "ssr");
 // `path` özniteliği etiketin herhangi bir yerinde olabilir. Parametreli rotalar ve dosya uzantılı
 // adresler (ör. .php) ön-render edilmez, SPA kabuğuyla kalır. Her <Route sayılır; ön-render dışı
 // kalan her etiket nedeniyle raporlanır, açıklanamayan fark derlemeyi düşürmeden uyarır.
+const rotaBileseni = new Map(); // rota -> App.tsx'teki component adı (site haritası lastmod için)
+
 function rotalariOku() {
   const kaynak = fs.readFileSync(path.join(kok, "client", "src", "App.tsx"), "utf8");
   const toplam = [...kaynak.matchAll(/<Route\b/g)].length;
@@ -34,6 +37,8 @@ function rotalariOku() {
     if (r.includes(":") || r.includes("*") || /\.[a-z0-9]+$/i.test(r)) { say.atlanan.push(r); continue; }
     if (rotalar.has(r)) { say.tekrar.push(r); continue; }
     rotalar.add(r);
+    const b = /\bcomponent\s*=\s*\{\s*([A-Za-z_$][\w$]*)\s*\}/.exec(oz);
+    if (b) rotaBileseni.set(r, b[1]);
   }
   const islenen = rotalar.size + say.yolsuz + say.atlanan.length + say.tekrar.length + say.okunamayan.length;
   const acik = toplam - islenen + say.okunamayan.length;
@@ -49,6 +54,94 @@ function rotalariOku() {
     );
   }
   return [...rotalar];
+}
+
+// ---- Site haritası + robots.txt (el yazması liste yok; ön-render edilen rotalardan üretilir) ----
+
+const SITE_HARITASI_ADRESI = "https://mikateknoloji.com/sitemap.xml";
+
+// App.tsx import'larından component adı -> sayfa kaynak dosyası (ör. PDKSPage -> client/src/pages/PDKSPage.tsx).
+function bilesenDosyalari() {
+  const srcKok = path.join(kok, "client", "src");
+  const kaynak = fs.readFileSync(path.join(srcKok, "App.tsx"), "utf8");
+  const harita = new Map();
+  for (const m of kaynak.matchAll(/^import\s+([^;]+?)\s+from\s+["']([^"']+)["']/gm)) {
+    const yol = m[2].replace(/^@\//, "./");
+    if (!yol.startsWith("./")) continue;
+    const dosya = [".tsx", ".ts", "/index.tsx"].map((u) => path.join(srcKok, yol + u)).find((d) => fs.existsSync(d));
+    if (!dosya) continue;
+    for (const ad of m[1].replace(/[{}]/g, " ").split(/[\s,]+/).filter(Boolean)) harita.set(ad, dosya);
+  }
+  return harita;
+}
+
+function git(args) {
+  return execFileSync("git", ["-c", "core.longpaths=true", ...args], {
+    cwd: kok,
+    encoding: "utf8",
+    stdio: ["ignore", "pipe", "ignore"],
+  }).trim();
+}
+
+// lastmod = sayfa kaynak dosyasının GERÇEK son değişiklik tarihi: commit'lenmemiş değişiklik varsa
+// bugün, yoksa dosyanın son commit tarihi. Git yoksa ya da sığ klonsa (tarih güvenilmez) derleme günü.
+function sonDegisiklikTarihi() {
+  const bugun = new Date().toISOString().slice(0, 10);
+  let gitVar = false;
+  try {
+    gitVar = git(["rev-parse", "--is-shallow-repository"]) === "false";
+  } catch {}
+  if (!gitVar) console.warn("[site-haritası] UYARI: tam git geçmişi yok; lastmod derleme günü yazılır.");
+  const onbellek = new Map();
+  return (dosya) => {
+    if (!dosya || !gitVar) return bugun;
+    if (onbellek.has(dosya)) return onbellek.get(dosya);
+    let t = bugun;
+    try {
+      if (!git(["status", "--porcelain", "--", dosya])) t = git(["log", "-1", "--format=%cs", "--", dosya]) || bugun;
+    } catch {}
+    onbellek.set(dosya, t);
+    return t;
+  };
+}
+
+// kayitlar: [{ rota, kanonik, noindex }] (ön-render çıktısından). Haritaya yalnız canonical'ı
+// KENDİSİ olan, noindex olmayan adresler girer; diğer her adresin canonical'ı haritadaki bir adresi
+// göstermek zorundadır, göstermiyorsa derleme düşer.
+function siteHaritasiYaz(kayitlar, kanonikAdres) {
+  const dosyasi = bilesenDosyalari();
+  const tarih = sonDegisiklikTarihi();
+  const girenler = kayitlar.filter((k) => !k.noindex && k.kanonik === kanonikAdres(k.rota));
+  const girenAdres = new Set(girenler.map((k) => k.kanonik));
+  const sorun = kayitlar
+    .filter((k) => !k.noindex && !girenAdres.has(k.kanonik))
+    .map((k) => `${k.rota} -> canonical ${k.kanonik || "(yok)"}`);
+  if (sorun.length) throw new Error("Canonical'ı site haritasında olmayan adres:\n  " + sorun.join("\n  "));
+  const satirlar = girenler.map((k) => {
+    const lastmod = tarih(dosyasi.get(rotaBileseni.get(k.rota)));
+    return `  <url>\n    <loc>${k.kanonik}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`;
+  });
+  const xml =
+    `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<!-- Derlemede scripts/prerender.mjs üretir; elle düzenlemeyin. -->\n` +
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${satirlar.join("\n")}\n</urlset>\n`;
+  fs.writeFileSync(path.join(istemciCikti, "sitemap.xml"), xml);
+
+  // robots.txt: client/public/robots.txt kuralları korunur, Sitemap satırı tek ve üretilen adres olur.
+  const robotsKaynak = fs.readFileSync(path.join(kok, "client", "public", "robots.txt"), "utf8");
+  const robots =
+    robotsKaynak
+      .split(/\r?\n/)
+      .filter((s) => !/^\s*sitemap\s*:/i.test(s))
+      .join("\n")
+      .replace(/\s+$/, () => "") + `\n\nSitemap: ${SITE_HARITASI_ADRESI}\n`;
+  fs.writeFileSync(path.join(istemciCikti, "robots.txt"), robots);
+
+  const disarida = kayitlar.length - girenler.length;
+  console.log(
+    `[site-haritası] ${girenler.length} adres yazıldı; ${disarida} adres dışarıda ` +
+      `(canonical başka adres ya da noindex). robots.txt Sitemap: ${SITE_HARITASI_ADRESI}`,
+  );
 }
 
 function hedefDosya(rota) {
@@ -87,10 +180,11 @@ async function main() {
     },
   });
 
-  const { render } = await import(pathToFileURL(path.join(ssrCikti, "entry-server.mjs")).href);
+  const { render, kanonikAdres } = await import(pathToFileURL(path.join(ssrCikti, "entry-server.mjs")).href);
 
   const rotalar = rotalariOku();
   const hatalar = [];
+  const kayitlar = []; // site haritası için: her rotanın canonical'ı ve noindex durumu
   for (const rota of rotalar) {
     try {
       const { html, helmet } = render(rota);
@@ -113,6 +207,13 @@ async function main() {
       const hedef = hedefDosya(rota);
       fs.mkdirSync(path.dirname(hedef), { recursive: true });
       fs.writeFileSync(hedef, sayfa);
+      const linkler = helmet ? helmet.link.toString() : "";
+      const kanonik = /<link[^>]*rel="canonical"[^>]*href="([^"]+)"/.exec(linkler);
+      kayitlar.push({
+        rota,
+        kanonik: kanonik ? kanonik[1] : "",
+        noindex: helmet ? /name="robots"[^>]*noindex/i.test(helmet.meta.toString()) : false,
+      });
     } catch (e) {
       hatalar.push(`${rota}: ${e && e.message ? e.message : e}`);
     }
@@ -123,6 +224,7 @@ async function main() {
     console.error("[on-render] Hatalı rotalar:\n  " + hatalar.join("\n  "));
     process.exit(1);
   }
+  siteHaritasiYaz(kayitlar, kanonikAdres);
 }
 
 main().catch((e) => {

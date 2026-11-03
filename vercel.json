@@ -13,6 +13,16 @@
       "dest": "/api/plaka-anahtar.js"
     },
     {
+      "src": "/cozumler/pdks/?",
+      "status": 301,
+      "headers": { "Location": "/pdks-programi" }
+    },
+    {
+      "src": "/personel-devam-kontrol-sistemi/?",
+      "status": 301,
+      "headers": { "Location": "/pdks-programi" }
+    },
+    {
       "handle": "filesystem"
     },
     {

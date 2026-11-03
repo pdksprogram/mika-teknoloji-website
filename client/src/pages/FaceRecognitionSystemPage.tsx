@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Shield } from "lucide-react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
+import { ASIL_ADRES, Kanonik } from "@/seo/SEO";
 import { useEffect } from "react";
 import { trackFaceRecognitionView, trackProductView } from "@/lib/analytics";
 
@@ -54,8 +55,6 @@ export default function FaceRecognitionSystemPage() {
         
         <meta property="og:title" content="Yüz Tanıma Sistem | Mika Teknoloji" />
         <meta property="og:description" content="Gelişmiş yüz tanıma sistem ve temassız PDKS cihazları. 20.000 kapasite, Wi-Fi desteği." />
-        <meta property="og:url" content="https://mikateknoloji.com/yuz-tanima-sistem" />
-        
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -72,6 +71,8 @@ export default function FaceRecognitionSystemPage() {
           })}
         </script>
       </Helmet>
+      {/* canonical + og:url ortak SEO bileşeninden; iki adres de (/urunler/yuz-tanima) asıl adresi gösterir */}
+      <Kanonik yol={ASIL_ADRES.yuzTanima} />
 
       {/* Devices Grid */}
       <section className="container mx-auto px-4">

@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Shield } from "lucide-react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
+import { ASIL_ADRES, Kanonik } from "@/seo/SEO";
 import { useEffect } from "react";
 import { trackFingerprintView, trackProductView } from "@/lib/analytics";
 
@@ -54,8 +55,6 @@ export default function FingerprintSystemPage() {
         
         <meta property="og:title" content="Parmak İzi Takip Sistemi | Mika Teknoloji" />
         <meta property="og:description" content="Profesyonel parmak izi takip sistemi ve PDKS cihazları. 20.000 kapasite, Wi-Fi desteği." />
-        <meta property="og:url" content="https://mikateknoloji.com/parmak-izi-takip-sistemi" />
-        
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -72,6 +71,8 @@ export default function FingerprintSystemPage() {
           })}
         </script>
       </Helmet>
+      {/* canonical + og:url ortak SEO bileşeninden; iki adres de (/urunler/parmak-izi-tanima) asıl adresi gösterir */}
+      <Kanonik yol={ASIL_ADRES.parmakIzi} />
 
       {/* Devices Grid */}
       <section className="container mx-auto px-4">

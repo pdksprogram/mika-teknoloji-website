@@ -46,11 +46,11 @@ export default function Header() {
 
   // Site içi arama verileri
   const searchableContent = [
-    { title: "PDKS Sistemleri", url: "/cozumler/pdks", description: "Personel devam kontrol sistemleri, yüz tanıma, parmak izi" },
-    { title: "Yüz Tanıma PDKS", url: "/cozumler/pdks#facial", description: "Temassız yüz tanıma teknolojisi ile personel takibi" },
-    { title: "Parmak İzi PDKS", url: "/cozumler/pdks#fingerprint", description: "Biyometrik parmak izi ile güvenli personel kontrolü" },
-    { title: "QR Tabanlı PDKS", url: "/cozumler/pdks#qr", description: "Mobil uygulama destekli QR kod sistemi" },
-    { title: "RFID Kartlı PDKS", url: "/cozumler/pdks#rfid", description: "Temassız kart teknolojisi ile personel takibi" },
+    { title: "PDKS Sistemleri", url: "/pdks-programi", description: "Personel devam kontrol sistemleri, yüz tanıma, parmak izi" },
+    { title: "Yüz Tanıma PDKS", url: "/pdks-programi#facial", description: "Temassız yüz tanıma teknolojisi ile personel takibi" },
+    { title: "Parmak İzi PDKS", url: "/pdks-programi#fingerprint", description: "Biyometrik parmak izi ile güvenli personel kontrolü" },
+    { title: "QR Tabanlı PDKS", url: "/pdks-programi#qr", description: "Mobil uygulama destekli QR kod sistemi" },
+    { title: "RFID Kartlı PDKS", url: "/pdks-programi#rfid", description: "Temassız kart teknolojisi ile personel takibi" },
     { title: "WebPDKS", url: "https://pdkspersoneltakip.com/", description: "Web tabanlı personel takip sistemi" },
     { title: "Hakkımızda", url: "/hakkimizda", description: "Mika Teknoloji kurumsal bilgileri" },
     { title: "Çözümler", url: "/cozumler", description: "Teknoloji çözümlerimiz ve hizmetlerimiz" },
@@ -120,7 +120,7 @@ export default function Header() {
   // Çözümler menüsü
   const solutionsMenuData = {
     "Çözümler": [
-      { name: "PDKS (Personel Devam Kontrol)", href: "/cozumler/pdks" },
+      { name: "PDKS (Personel Devam Kontrol)", href: "/pdks-programi" },
       { name: "Access Geçiş Kontrol Sistemleri", href: "/access-control" },
       { name: "Bekçi Tur Kontrol Sistemi", href: "/bekci-tur" },
       { name: "QR Bekçi Sistemi", href: "/qr-bekci" },

@@ -11,6 +11,15 @@ export function kanonikAdres(yol: string): string {
   return `${SITE_KOKU}${temiz || '/'}`;
 }
 
+// Aynı içeriği birden çok adresten veren sayfaların TEK asıl adresi. Diğer adresler ya
+// vercel.json'da 301 ile buraya gider (PDKS) ya da canonical ile buraya işaret eder.
+// Site haritası (scripts/prerender.mjs) yalnız canonical'ı kendisi olan adresleri yazar.
+export const ASIL_ADRES = {
+  pdks: '/pdks-programi',
+  parmakIzi: '/parmak-izi-takip-sistemi',
+  yuzTanima: '/yuz-tanima-sistem',
+} as const;
+
 interface SEOProps {
   title?: string;
   description?: string;
@@ -63,16 +72,30 @@ export default function SEO({
     </Helmet>
   );
 }
-// Kendi kanonik adresini yazmayan sayfalar için varsayılan: o sayfanın kendi adresi.
+// Asıl adres (canonical) ve og:url HER ZAMAN birlikte ve aynı değerle yazılır.
+// Kendi <Helmet>'ini kullanan sayfalar asıl adresi bununla verir; ayrı/sabit og:url yazılmaz.
+export function Kanonik({ yol }: { yol: string }) {
+  const url = kanonikAdres(yol);
+  return (
+    <Helmet>
+      <link rel="canonical" href={url} />
+      <meta property="og:url" content={url} />
+    </Helmet>
+  );
+}
+
+// Kendi kanonik adresini yazmayan sayfalar için varsayılan: o sayfanın kendi adresi (og:url dahil).
 // App'te rotalardan ÖNCE çizilir; sayfa kendi canonical'ını verirse Helmet onu kullanır (son yazan kazanır).
 export function VarsayilanKanonik() {
   const [location] = useLocation();
   // <html lang> her sayfada dil seçimini izler (SEO bileşenini kullanmayan sayfalar dahil).
   const dil = useSeciliDil();
   return (
-    <Helmet>
-      <html lang={dil} />
-      <link rel="canonical" href={kanonikAdres(location)} />
-    </Helmet>
+    <>
+      <Helmet>
+        <html lang={dil} />
+      </Helmet>
+      <Kanonik yol={location} />
+    </>
   );
 }

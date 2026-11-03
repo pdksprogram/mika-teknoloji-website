@@ -6,6 +6,9 @@ import { HelmetProvider, type HelmetServerState } from "react-helmet-async";
 import { Router } from "wouter";
 import App from "./App";
 
+// Site haritası üretimi asıl adresi istemciyle AYNI fonksiyonla kurar (tek kaynak).
+export { kanonikAdres } from "./seo/SEO";
+
 export function render(url: string) {
   const helmetContext: { helmet?: HelmetServerState } = {};
   const html = renderToString(
