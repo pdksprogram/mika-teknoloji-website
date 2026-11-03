@@ -150,14 +150,14 @@ export default function BlogArticlePDKS() {
 
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             
             {/* Table of Contents - Sidebar */}
             <motion.div 
               initial={false}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.8 }}
-              className="lg:col-span-1"
+              className="lg:col-span-1 min-w-0"
             >
               <div className="sticky top-8">
                 <Card>
@@ -188,7 +188,7 @@ export default function BlogArticlePDKS() {
               initial={false}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 1.0 }}
-              className="lg:col-span-3"
+              className="lg:col-span-3 min-w-0"
             >
               <div className="bg-white rounded-2xl shadow-sm border p-8 lg:p-12">
                 
