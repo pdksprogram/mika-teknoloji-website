@@ -45,9 +45,9 @@ export default function BlogQrKodIlePersonelGirisCikis() {
 
       <YaziBolumu baslik="Konum bilgisi ne zaman kaydedilir?">
         <Paragraf>
-          Mobil uygulamadan yapılan her okutmaya konum bilgisi eklenir. Bu, sahada çalışan ekiplerde kaydın nereden atıldığını
-          görmeyi sağlar. Konumun raporlarda görünmesini istemeyen iş yerleri için Konum Gizle ayarı vardır; açıldığında konum
-          raporlarda gösterilmez.
+          Mobil uygulama okutma sırasında telefonun konumunu da gönderir. Bu, sahada
+          çalışan ekiplerde kaydın nereden atıldığını görmeyi sağlar. Konumun görünmesini istemeyen iş yerleri için Konum
+          Gizle ayarı vardır; işaretlendiğinde konum raporlarda gösterilmez ve giriş-çıkış kaydının açıklamasına taşınmaz.
         </Paragraf>
         <Paragraf>
           Konum kullanılacaksa bunu çalışanlara kurulum gününde açıkça söyleyin. Neyin, ne zaman kaydedildiğini bilen ekip
@@ -57,9 +57,9 @@ export default function BlogQrKodIlePersonelGirisCikis() {
 
       <YaziBolumu baslik="Molalar ve görev çıkışları">
         <Paragraf>
-          Uygulamada yalnız giriş ve çıkış yoktur. Kahve Molası, Yemek Molası ve Görev ayrı türler olarak kaydedilir. Böylece
-          iş için dışarı çıkan bir çalışanın kaydı moladan ve işten çıkıştan ayrı görünür, molalar da kendi başlığı altında
-          izlenir.
+          Ofis dışı çalışma açık olan cihazlarda uygulama, giriş ve çıkışın yanında Kahve Molası, Yemek Molası ya da Görev
+          seçimi de sunar. Seçilen başlık kaydın açıklamasına yazılır; böylece iş için dışarı çıkan bir çalışanın kaydı
+          moladan ve işten çıkıştan ayırt edilebilir.
         </Paragraf>
       </YaziBolumu>
 

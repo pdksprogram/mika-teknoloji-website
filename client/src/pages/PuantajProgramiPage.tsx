@@ -121,7 +121,7 @@ export default function PuantajProgramiPage() {
         videoIdleri={["pdks-aylik-puantaj-olusturma", "pdks-aylik-puantaj-raporlar"]}
       />
       <SssBolumu maddeler={SSS} />
-      <IlgiliSayfalar mevcutYol={YOL} />
+      <IlgiliSayfalar mevcutYol={YOL} ekler={[{ ad: "Puantaj Nasıl Tutulur?", yol: "/blog/puantaj-nasil-tutulur" }]} />
       <DemoTalebi />
     </div>
   );

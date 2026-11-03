@@ -108,7 +108,13 @@ export default function QRPersonelTakipPage() {
       <Adimlar baslik="QR ile Giriş-Çıkış Nasıl Yapılır?" maddeler={ADIMLAR} />
       <VideoBolumu baslik="PDKS Tanıtım Videosu" videoIdleri={["pdks-genel-anlatim"]} />
       <SssBolumu maddeler={SSS} />
-      <IlgiliSayfalar mevcutYol={YOL} ekler={[{ ad: "QR Kod PDKS Ürünü", yol: "/urunler/qr-pdks" }]} />
+      <IlgiliSayfalar
+        mevcutYol={YOL}
+        ekler={[
+          { ad: "QR Kod PDKS Ürünü", yol: "/urunler/qr-pdks" },
+          { ad: "QR Kodla Giriş-Çıkış Nasıl Çalışır?", yol: "/blog/qr-kod-ile-personel-giris-cikis" },
+        ]}
+      />
       <DemoTalebi />
     </div>
   );

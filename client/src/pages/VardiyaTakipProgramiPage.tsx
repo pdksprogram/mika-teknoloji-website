@@ -121,7 +121,10 @@ export default function VardiyaTakipProgramiPage() {
         videoIdleri={["vardiya-planlama-pdks", "shift-plan-kart-tanitim"]}
       />
       <SssBolumu maddeler={SSS} />
-      <IlgiliSayfalar mevcutYol={YOL} />
+      <IlgiliSayfalar
+        mevcutYol={YOL}
+        ekler={[{ ad: "Vardiya Planı Nasıl Hazırlanır?", yol: "/blog/vardiya-plani-nasil-hazirlanir" }]}
+      />
       <DemoTalebi />
     </div>
   );

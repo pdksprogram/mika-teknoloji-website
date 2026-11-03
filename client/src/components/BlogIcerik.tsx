@@ -82,6 +82,7 @@ export function makaleJsonLd(yazi: BlogYazisi) {
     inLanguage: "tr-TR",
     datePublished: yazi.yayin,
     dateModified: yazi.guncelleme,
+    image: KURUM_LOGOSU,
     mainEntityOfPage: { "@type": "WebPage", "@id": kanonikAdres(yazi.yol) },
     author: KURUM,
     publisher: { ...KURUM, logo: { "@type": "ImageObject", url: KURUM_LOGOSU } },

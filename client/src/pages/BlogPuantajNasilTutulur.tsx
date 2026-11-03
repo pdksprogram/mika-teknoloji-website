@@ -45,9 +45,10 @@ export default function BlogPuantajNasilTutulur() {
 
       <YaziBolumu baslik="1. Adım: Giriş-çıkış kayıtlarını aktarın">
         <Paragraf>
-          İlk iş, cihazlarda biriken okutmaları programa almaktır. Kartlı okuyucu, parmak izi, yüz tanıma ya da QR ile
-          yapılan bütün okutmalar Kayıt Aktarım ekranından içeri alınır. Çalışanların telefondan{" "}
-          <IcLink href="/qr-pdks">QR kodla</IcLink> yaptığı giriş-çıkışlar da aynı yere gelir.
+          İlk iş, cihazlarda biriken okutmaları programa almaktır. Kartlı okuyucu, parmak izi ya da yüz tanıma cihazlarındaki
+          okutmalar programa aktarılır; aktarılan ve bekleyen kayıtlar Kayıt Aktarım Formu'nda görülür. Çalışanların
+          telefondan <IcLink href="/qr-pdks">QR kodla</IcLink> yaptığı giriş-çıkışlar ise uygulamadan doğrudan sunucuya
+          gönderilir ve aynı giriş-çıkış listesine işlenir.
         </Paragraf>
         <Paragraf>
           Bu aşamada elinizde yalnız ham kayıt vardır: kim, hangi gün, saat kaçta okuttu. Henüz hiçbir şey "geç
@@ -58,8 +59,9 @@ export default function BlogPuantajNasilTutulur() {
       <YaziBolumu baslik="2. Adım: Hareketleri düzenleyin">
         <Paragraf>
           Ham kayıtlar, çalışanın o günkü vardiyasıyla eşleştirilir. Hareket Düzenleme adımı, eksik ya da hatalı okutmaları
-          bulup düzeltmek içindir. En sık görülen iki durum şunlardır: çalışan akşam çıkışta okutmayı unutmuştur ya da
-          kapıda aynı dakika içinde iki kez okutmuştur.
+          bulup düzeltmek içindir. En sık görülen durum, çalışanın girişte okutup akşam çıkışta okutmayı unutmasıdır: o gün
+          ÇIKIŞ YOK olarak görünür, satır açılıp çıkış saati girilir. Aynı dakika içinde iki kez okutulan kayıtları ise
+          program bu adımda kendisi ayıklar.
         </Paragraf>
         <Paragraf>
           Düzeltmeyi ayın sonuna bırakmayın. Haftada bir eksik okutmalara bakmak, ay bittiğinde dört hafta geriye gidip

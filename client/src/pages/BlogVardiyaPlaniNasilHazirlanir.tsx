@@ -35,16 +35,16 @@ export default function BlogVardiyaPlaniNasilHazirlanir() {
           kapatan bir ara vardiya. Kalıp sayısı az olduğunda plan okunur kalır ve çalışanlar kendi saatini kolayca hatırlar.
         </Paragraf>
         <Paragraf>
-          Mika PDKS'te bu kalıplar çalışma planı olarak tanımlanır: başlangıç ve bitiş saati ile mola süresi kalıbın içine
-          yazılır, kalıp ilgili personel grubuna bağlanır. Molayı tanıma doğru yazmak önemlidir; program çalışma süresini
-          hesaplarken molayı buradan alıp düşer.
+          Mika PDKS'te bu kalıplar Çalışma Planları ekranında, bir çalışma grubunun altında vardiya olarak tanımlanır:
+          başlangıç ve bitiş saati vardiyaya, molalar Mola Tanımları bölümüne yazılır; çalışanlar da bu çalışma grubuna
+          bağlanır. Molayı tanıma doğru yazmak önemlidir; program çalışma süresini hesaplarken molayı buradan alıp düşer.
         </Paragraf>
       </YaziBolumu>
 
       <YaziBolumu baslik="3. Haftalık planı yazın">
         <Paragraf>
-          Planı yazan kişi genellikle ekibi yakından tanıyan kişidir; bir mağazada bu çoğunlukla mağaza müdürüdür. Haftalık plan
-          tablosunda her çalışanın satırına günler boyunca vardiya kalıbı seçilir. Yazarken şu sırayı izlemek işi kolaylaştırır:
+          Vardiya planı, onay ve kilit ekranları vardiya planı modülü açık firmalarda kullanılır. Planı yazan kişi genellikle
+          ekibi yakından tanıyan kişidir; bir mağazada bu çoğunlukla mağaza müdürüdür. Haftalık plan tablosunda her çalışanın satırına günler boyunca vardiya kalıbı seçilir. Yazarken şu sırayı izlemek işi kolaylaştırır:
         </Paragraf>
         <Liste
           maddeler={[
@@ -70,12 +70,14 @@ export default function BlogVardiyaPlaniNasilHazirlanir() {
 
       <YaziBolumu baslik="5. Onaya gönderin">
         <Paragraf>
-          Birden fazla şube ya da ekip varsa planların bir üst yetkili tarafından görülmesi işe yarar. Onaycı gelen planı
-          onaylayabilir, reddedebilir ya da düzeltme isteyebilir. Düzeltme isteğinde neyin değişmesi gerektiğini açık yazın;
-          "pazartesi akşamına bir kişi daha" gibi bir not, planı yazanın işini dakikalar içinde bitirir.
+          Birden fazla şube ya da ekip varsa planların bir üst yetkili tarafından görülmesi işe yarar. Onaycı planı Onayla ve
+          kilitle düğmesiyle onaylar; onaylanan plan kilitlenir, Toplu Düzenle kapanır. Kilit, onaydan sonra planın fark
+          edilmeden değiştirilmesini önler.
         </Paragraf>
         <Paragraf>
-          Onaylanan plan istenirse kilitlenir. Kilit, onaydan sonra planın fark edilmeden değiştirilmesini önler.
+          Onaydan sonra değişiklik gerekirse planı yazan Düzeltme İste ile neyin değişeceğini yazar; onaycı talebi onaylar ya
+          da gerekçe yazarak reddeder. "Pazartesi akşamına bir kişi daha" gibi açık bir not, talebin çabuk sonuçlanmasını
+          sağlar.
         </Paragraf>
       </YaziBolumu>
 
