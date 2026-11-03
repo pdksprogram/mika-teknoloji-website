@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import SEO from "@/seo/SEO";
 import { Kirinti, kirintiJsonLd, type KirintiMaddesi } from "@/components/PdksIcerik";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 const KIRINTI: KirintiMaddesi[] = [
   { ad: "Ana Sayfa", yol: "/" },
@@ -24,12 +25,13 @@ export default function About() {
       />
       <Kirinti maddeler={KIRINTI} icSinif="pb-4" />
 
-      <section className="bg-slate-900 border-b-4 border-primary text-white py-12">
+      <section className="bg-slate-900 border-b-4 border-primary text-white py-8 md:py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Hakkımızda</h1>
           <p className="text-slate-300 max-w-2xl">
             İstanbul merkezli; PDKS yazılımı, geçiş kontrol, turnike ve bariyer sistemleri üreten teknoloji şirketi.
           </p>
+          <CtaDugmeleri tur="donanim" koyu sinif="mt-6" />
         </div>
       </section>
 

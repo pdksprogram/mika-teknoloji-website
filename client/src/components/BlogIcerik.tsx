@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import SEO, { kanonikAdres } from "@/seo/SEO";
 import { DemoTalebi, IlgiliSayfalar, Kirinti, kirintiJsonLd } from "@/components/PdksIcerik";
 import type { KirintiMaddesi } from "@/components/PdksIcerik";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 // Blog yazılarının ortak parçaları. Görsel dil PDKS konu sayfalarından (PdksIcerik) gelir.
 // Tarihler sabit metindir (ön-render ile tarayıcı aynı çıktıyı üretsin diye Date/Intl kullanılmaz);
@@ -154,13 +155,14 @@ export function BlogYaziSablonu({ yazi, giris, children }: { yazi: BlogYazisi; g
         jsonLd={[makaleJsonLd(yazi), kirintiJsonLd(kirinti)]}
       />
       <Kirinti maddeler={kirinti} icSinif="max-w-3xl mx-auto" />
-      <article className="container mx-auto px-4 pt-10 pb-16">
+      <article className="container mx-auto px-4 pt-6 pb-16">
         <div className="max-w-3xl mx-auto">
-          <header className="border-b border-slate-200 pb-8">
-            <h1 className="text-3xl md:text-5xl font-bold text-slate-800 leading-tight mb-5">{yazi.baslik}</h1>
+          <header className="border-b border-slate-200 pb-6">
+            <h1 className="text-3xl md:text-5xl font-bold text-slate-800 leading-tight mb-3">{yazi.baslik}</h1>
             <p className="text-sm text-slate-500">
               <time dateTime={yazi.yayin}>{yazi.yayinGorunen}</time> · Mika Teknoloji
             </p>
+            <CtaDugmeleri tur="yazilim" boyut="default" sinif="mt-5" />
           </header>
           <p className="text-xl text-slate-700 leading-relaxed mt-8">{giris}</p>
           {children}

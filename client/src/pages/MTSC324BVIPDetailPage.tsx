@@ -106,7 +106,7 @@ export default function MTSC324BVIPDetailPage() {
       <Kirinti maddeler={[{ ad: "Ana Sayfa", yol: "/" }, { ad: "Ürünler", yol: "/urunler" }, { ad: "Engelli Turnikeler", yol: "/urunler/engelli-turnike" }, { ad: "MT SC324B VIP Turnike", yol: "/urunler/mt-sc324b-vip-turnike" }]} />
 
       {/* Ürün Detay Hero */}
-      <div className="py-16 bg-white">
+      <div className="py-8 md:py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Ürün Görseli */}
@@ -139,15 +139,14 @@ export default function MTSC324BVIPDetailPage() {
                 <h2 className="text-xl font-normal text-slate-600 mb-4">
                   {productDetails.title}
                 </h2>
-                <p className="text-lg text-gray-600 mb-6">
+                <p className="text-lg text-gray-600 mb-5">
                   {productDetails.subtitle}
                 </p>
+                <CtaDugmeleri tur="donanim" sinif="mb-5" />
                 <p className="text-gray-700 leading-relaxed">
                   {productDetails.description}
                 </p>
               </div>
-
-              <CtaDugmeleri tur="donanim" sinif="py-4" />
 
               <div className="pt-4">
                 <Button asChild variant="outline">

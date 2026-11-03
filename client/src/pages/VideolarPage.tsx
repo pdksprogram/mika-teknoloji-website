@@ -1037,12 +1037,13 @@ export default function VideolarPage() {
 
       <div className="min-h-screen bg-white">
         <Kirinti maddeler={KIRINTI} icSinif="pb-4" />
-        <section className="bg-slate-900 border-b-4 border-primary text-white py-12">
+        <section className="bg-slate-900 border-b-4 border-primary text-white py-8 md:py-12">
           <div className="container mx-auto px-4">
             <h1 className="text-3xl md:text-4xl font-bold mb-3">PDKS Eğitim Videoları</h1>
             <p className="text-slate-300 max-w-2xl">
               {videos.length} video: kullanım rehberleri, kurulum videoları ve canlı demolar.
             </p>
+            <CtaDugmeleri tur="yazilim" koyu sinif="mt-6" />
           </div>
         </section>
         <section className="py-8 bg-slate-50 border-b border-slate-200">

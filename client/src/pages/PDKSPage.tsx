@@ -473,7 +473,7 @@ export default function PDKSPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-<h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-800 mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-800 mb-6 leading-tight">
               {pdks.title}
             </h1>
             <h2 className="text-xl md:text-2xl text-slate-600 font-light mb-8 leading-relaxed">

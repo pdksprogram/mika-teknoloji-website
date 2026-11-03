@@ -91,11 +91,11 @@ export function Kirinti({ maddeler, icSinif = "" }: { maddeler: KirintiMaddesi[]
 // sikisik: araç sayfaları için kısa giriş; araç ilk ekranda görünsün diye düğmeler gösterilmez.
 export function KonuGiris({ ust, baslik, giris, sikisik = false }: { ust: string; baslik: string; giris: string; sikisik?: boolean }) {
   return (
-    <section className={`relative ${sikisik ? "pt-4 pb-6" : "pt-12 pb-20"} px-4 bg-slate-50`}>
+    <section className={`relative ${sikisik ? "pt-4 pb-6" : "pt-8 pb-12"} px-4 bg-slate-50`}>
       <div className="container mx-auto text-center max-w-4xl">
         <p className={`text-sm font-semibold tracking-wider uppercase text-slate-500 ${sikisik ? "mb-2" : "mb-4"}`}>{ust}</p>
-        <h1 className={sikisik ? "text-3xl md:text-4xl font-bold text-slate-800 mb-2 leading-tight" : "text-4xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight"}>{baslik}</h1>
-        <p className={sikisik ? "text-base md:text-lg text-slate-600" : "text-xl md:text-2xl text-slate-600 font-light mb-10"}>{giris}</p>
+        <h1 className={sikisik ? "text-3xl md:text-4xl font-bold text-slate-800 mb-2 leading-tight" : "text-3xl md:text-5xl font-bold text-slate-800 mb-4 leading-tight"}>{baslik}</h1>
+        <p className={sikisik ? "text-base md:text-lg text-slate-600" : "text-lg md:text-xl text-slate-600 mb-6"}>{giris}</p>
         {!sikisik && (
         <CtaDugmeleri tur="yazilim" sinif="justify-center" />
         )}

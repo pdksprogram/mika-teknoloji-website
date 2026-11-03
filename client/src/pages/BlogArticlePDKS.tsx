@@ -6,6 +6,14 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
+import { Kirinti, type KirintiMaddesi } from "@/components/PdksIcerik";
+
+const KIRINTI: KirintiMaddesi[] = [
+  { ad: "Ana Sayfa", yol: "/" },
+  { ad: "Blog", yol: "/blog" },
+  { ad: "PDKS Sistemleri Nedir?", yol: "/blog/pdks-sistemleri-nedir-2025-rehberi" },
+];
 
 export default function BlogArticlePDKS() {
   const articleData = {
@@ -90,11 +98,13 @@ export default function BlogArticlePDKS() {
         <link rel="canonical" href="https://mikateknoloji.com/blog/pdks-sistemleri-nedir-2025-rehberi" />
       </Helmet>
 
+      <Kirinti maddeler={KIRINTI} icSinif="pb-4" />
+
       {/* Header Section */}
       <motion.div 
         initial={false}
         animate={{ opacity: 1 }}
-        className="bg-slate-900 border-b-4 border-primary text-white py-16"
+        className="bg-slate-900 border-b-4 border-primary text-white py-8 md:py-12"
       >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -102,25 +112,24 @@ export default function BlogArticlePDKS() {
               initial={false}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-center mb-8"
+              className="text-center mb-6"
             >
-              <Badge className="bg-white/20 text-white mb-4 px-4 py-2">
-                {articleData.category}
-              </Badge>
-              <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+              <p className="text-sm text-slate-300 mb-2">{articleData.category}</p>
+              <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
                 PDKS Sistemleri Nedir? 2025 Kapsamlı Rehberi
               </h1>
-              <p className="text-xl text-white/90 mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl text-white/90 mb-6 leading-relaxed">
                 Personel Devam Kontrol Sistemi ile modern çalışan takibi. Biyometrik teknoloji, 
                 web tabanlı erişim ve otomatik raporlamanın tüm avantajları.
               </p>
+              <CtaDugmeleri tur="yazilim" koyu sinif="justify-center" />
             </motion.div>
-            
+
             <motion.div 
               initial={false}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="flex flex-wrap items-center justify-center gap-6 text-sm"
+              className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-300"
             >
               <div className="flex items-center gap-2">
                 <User className="h-4 w-4" />
@@ -134,13 +143,6 @@ export default function BlogArticlePDKS() {
                 <Clock className="h-4 w-4" />
                 {articleData.readTime}
               </div>
-              <Button 
-                variant="outlineLight" 
-                size="sm"
-              >
-                <Share2 className="h-4 w-4 mr-2" />
-                Paylaş
-              </Button>
             </motion.div>
           </div>
         </div>
@@ -426,7 +428,7 @@ export default function BlogArticlePDKS() {
                     </div>
                     
                     <p className="text-sm text-gray-600 mt-4">
-                      *Kurulum, eğitim ve 1 yıl teknik destek dahil. Çoklu lokasyon ve özel entegrasyonlar için ek ücret uygulanabilir.
+                      *Kurulum, eğitim ve satış sonrası teknik destek dahil; cihazlarda 2 yıl garanti. Çoklu lokasyon ve özel entegrasyonlar için ek ücret uygulanabilir.
                     </p>
                   </section>
 
