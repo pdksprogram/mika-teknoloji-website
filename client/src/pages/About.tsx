@@ -43,6 +43,10 @@ export default function About() {
           ))}
         </dl>
 
+        <p className="max-w-3xl mx-auto text-xl md:text-2xl text-slate-700 leading-relaxed mb-20">
+          Hedefimiz, güvenilir bir teknoloji markası olarak mobil PDKS ve kontrol sistemleri alanında yenilikçi çözümler üretmek.
+        </p>
+
         {/* Leadership Section */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">
@@ -85,23 +89,7 @@ export default function About() {
                         <h4 className="font-semibold text-slate-700 mb-1">
                           Teknoloji Yetkinlikleri:
                         </h4>
-                        <div className="flex flex-wrap gap-2">
-                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
-                            C++
-                          </span>
-                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
-                            Java
-                          </span>
-                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
-                            ASP.NET
-                          </span>
-                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
-                            SQL
-                          </span>
-                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
-                            React
-                          </span>
-                        </div>
+                        <p className="text-slate-600">C++, Java, ASP.NET, SQL, React</p>
                       </div>
                       
                       <div className="pt-2">
@@ -117,12 +105,12 @@ export default function About() {
         {/* Company Hierarchy */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">
-            Arge Ve Üretim Müdürü
+            Ar-Ge ve Üretim Müdürü
           </h2>
           
           <div className="max-w-3xl mx-auto">
             <Card className="border-0 shadow-xl overflow-hidden">
-              <div className="p-8 text-center bg-slate-50">
+              <div className="p-8 bg-slate-50">
                 <div className="mb-6">
                   <img 
                     src="/images/about/leadership-2-kirpik.jpg" 
@@ -133,12 +121,12 @@ export default function About() {
                 </div>
                 <div className="space-y-4">
                   <div>
-                    <h3 className="text-xl font-bold text-slate-800 mb-2">
+                    <h3 className="text-xl font-bold text-slate-800 mb-2 text-center">
                       Tolga Akal
                     </h3>
-                    <div className="space-y-2 mb-4">
+                    <div className="space-y-2 mb-4 text-center">
                       <p className="text-lg font-semibold text-primary">
-                        Arge Ve Üretim Müdürü
+                        Ar-Ge ve Üretim Müdürü
                       </p>
                       <p className="text-slate-600">
                         Elektronik Mühendisi, Anakart Tasarımı ve Kontrol Sistemleri Uzmanı
@@ -150,10 +138,10 @@ export default function About() {
                         <h4 className="font-semibold text-slate-700 mb-1">
                           Geliştirdiği Ürünler:
                         </h4>
-                        <ul className="text-slate-600 space-y-1">
-                          <li>• Access Control Panel (Erişim Kontrol Paneli)</li>
-                          <li>• Guard MX Bekçi Kontrol Sistemi</li>
-                          <li>• Anakart Tasarımı ve PCB Geliştirme</li>
+                        <ul className="text-slate-600 space-y-1 list-disc pl-5">
+                          <li>Access Control Panel (Erişim Kontrol Paneli)</li>
+                          <li>Guard MX Bekçi Kontrol Sistemi</li>
+                          <li>Anakart Tasarımı ve PCB Geliştirme</li>
                         </ul>
                       </div>
                       
@@ -164,25 +152,25 @@ export default function About() {
                     </div>
                   </div>
                   
-                  <div className="grid md:grid-cols-2 gap-4 mt-6">
-                    <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <div className="grid md:grid-cols-2 gap-6 mt-6">
+                    <div>
                       <h4 className="font-semibold text-slate-700 mb-2">
                         Teknik Departman
                       </h4>
-                      <ul className="text-sm text-slate-600 space-y-1">
-                        <li>• Elektronik Tasarım</li>
-                        <li>• Anakart Geliştirme</li>
-                        <li>• Sistem Entegrasyonu</li>
+                      <ul className="text-sm text-slate-600 space-y-1 list-disc pl-5">
+                        <li>Elektronik Tasarım</li>
+                        <li>Anakart Geliştirme</li>
+                        <li>Sistem Entegrasyonu</li>
                       </ul>
                     </div>
-                    <div className="bg-white p-4 rounded-lg shadow-sm">
+                    <div>
                       <h4 className="font-semibold text-slate-700 mb-2">
                         Yazılım Departmanı  
                       </h4>
-                      <ul className="text-sm text-slate-600 space-y-1">
-                        <li>• PDKS Sistemleri</li>
-                        <li>• Web Uygulamaları</li>
-                        <li>• Mobil Çözümler</li>
+                      <ul className="text-sm text-slate-600 space-y-1 list-disc pl-5">
+                        <li>PDKS Sistemleri</li>
+                        <li>Web Uygulamaları</li>
+                        <li>Mobil Çözümler</li>
                       </ul>
                     </div>
                   </div>
@@ -234,33 +222,20 @@ export default function About() {
                         <h4 className="font-semibold text-slate-700 mb-1">
                           Mobil Teknolojileri:
                         </h4>
-                        <div className="flex flex-wrap gap-2">
-                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
-                            Android
-                          </span>
-                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
-                            iOS
-                          </span>
-                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
-                            React Native
-                          </span>
-                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
-                            Flutter
-                          </span>
-                        </div>
+                        <p className="text-slate-600">Android, iOS, React Native, Flutter</p>
                       </div>
                       
                       <div>
                         <h4 className="font-semibold text-slate-700 mb-1">
                           Mobil Uygulama Özellikleri:
                         </h4>
-                        <ul className="text-slate-600 space-y-1 text-sm">
-                          <li>• Offline Çalışma Desteği</li>
-                          <li>• GPS Konum Takibi</li>
-                          <li>• Push Notification</li>
-                          <li>• Biyometrik Kimlik Doğrulama</li>
-                          <li>• QR Code Tarama</li>
-                          <li>• Real-time Senkronizasyon</li>
+                        <ul className="text-slate-600 space-y-1 text-sm list-disc pl-5">
+                          <li>Offline Çalışma Desteği</li>
+                          <li>GPS Konum Takibi</li>
+                          <li>Push Notification</li>
+                          <li>Biyometrik Kimlik Doğrulama</li>
+                          <li>QR Code Tarama</li>
+                          <li>Real-time Senkronizasyon</li>
                         </ul>
                       </div>
                       
@@ -320,32 +295,19 @@ export default function About() {
                         <h4 className="font-semibold text-slate-700 mb-1">
                           Satış Alanları:
                         </h4>
-                        <div className="flex flex-wrap gap-2">
-                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
-                            PDKS Sistemleri
-                          </span>
-                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
-                            Erişim Kontrol
-                          </span>
-                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
-                            Guard MX
-                          </span>
-                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
-                            Turnike Sistemleri
-                          </span>
-                        </div>
+                        <p className="text-slate-600">PDKS Sistemleri, Erişim Kontrol, Guard MX, Turnike Sistemleri</p>
                       </div>
                       
                       <div>
                         <h4 className="font-semibold text-slate-700 mb-1">
                           Hizmet Alanları:
                         </h4>
-                        <ul className="text-slate-600 space-y-1 text-sm">
-                          <li>• Kurumsal Çözüm Danışmanlığı</li>
-                          <li>• Teknik Ürün Sunumları</li>
-                          <li>• Proje Yönetimi ve Koordinasyon</li>
-                          <li>• Müşteri Destek ve İlişki Yönetimi</li>
-                          <li>• Satış Sonrası Teknik Destek</li>
+                        <ul className="text-slate-600 space-y-1 text-sm list-disc pl-5">
+                          <li>Kurumsal Çözüm Danışmanlığı</li>
+                          <li>Teknik Ürün Sunumları</li>
+                          <li>Proje Yönetimi ve Koordinasyon</li>
+                          <li>Müşteri Destek ve İlişki Yönetimi</li>
+                          <li>Satış Sonrası Teknik Destek</li>
                         </ul>
                       </div>
                       
