@@ -89,7 +89,7 @@ const slides: CarouselSlide[] = [
     ],
     icon: Scan,
     image: xrayImage,
-    href: "/cozumler/xray",
+    href: "/iletisim",
     bgGradient: "from-orange-600 via-red-600 to-pink-500",
     overlayColor: "bg-red-900/40"
   }
@@ -249,7 +249,7 @@ export default function HeroCarousel() {
                         data-testid="hero-detail-button"
                       >
                         <Link href={slide.href} className="flex items-center">
-                          <span>Detayları İncele</span>
+                          <span>{slide.href === "/iletisim" ? "Bilgi Alın" : "Detayları İncele"}</span>
                           <ArrowRight className="ml-3 h-5 w-5" />
                         </Link>
                       </Button>

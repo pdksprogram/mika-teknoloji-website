@@ -25,8 +25,6 @@ import {
   Video,
   MessageCircle,
   HelpCircle,
-  Users,
-  Award,
   Database,
   ChevronDown
 } from "lucide-react";
@@ -856,7 +854,7 @@ export default function PersonelTakipPage() {
               {
                 icon: MapPin,
                 title: "GPS Konum Doğrulama",
-                desc: "Mobil giriş-çıkış kaydına konum bilgisi eklenir",
+                desc: "Mobil kayda konum eklenir; sahte konum (Fake GPS) tespit edilirse kayıt alınmaz",
                 gradient: "from-blue-500 to-cyan-500"
               },
               {
@@ -868,7 +866,7 @@ export default function PersonelTakipPage() {
               {
                 icon: Database,
                 title: "Kurumsal Veri Güvenliği",
-                desc: "SSL şifreleme ve yedekleme",
+                desc: "SSL şifreleme ve yetkiye göre erişim",
                 gradient: "from-green-500 to-emerald-500"
               },
               {

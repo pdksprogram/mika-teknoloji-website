@@ -82,7 +82,7 @@ const segments = [
     id: "Q4",
     title: "MT Guard Bariyer Sistemi",
     subtitle: "Yüksek Güvenlik ve Dayanıklılık",
-    description: "Maksimum güvenlik gerektiren noktalarda kullanılmak üzere tasarlanan MT Guard bariyer sistemi, üstün dayanıklılık ve güvenilirlik sunar. Askeri standartlarda üretilmiş, yüksek darbe emilimi özellikli yapısı ile kritik güvenlik noktalarında tercih edilir.",
+    description: "Yüksek güvenlik gerektiren noktalarda kullanılmak üzere tasarlanan MT Guard bariyer sistemi, üstün dayanıklılık ve güvenilirlik sunar. Askeri standartlarda üretilmiş, yüksek darbe emilimi özellikli yapısı ile kritik güvenlik noktalarında tercih edilir.",
     image: "https://betaper.com.tr/bariyer-sistemleri/pt-guard-bariyerler.jpg",
     gradient: "from-indigo-600 via-indigo-500 to-purple-500",
     bgGradient: "from-indigo-50 via-white to-purple-50",
@@ -92,14 +92,14 @@ const segments = [
       "Yüksek dayanıklılık",
       "Askeri standart üretim",
       "Darbe emilim sistemi",
-      "Maksimum güvenlik",
+      "Yüksek güvenlik",
       "Uzun ömür garantisi",
       "Minimum bakım gereksinimi"
     ],
     specs: [
       { label: "Güvenlik Seviyesi", value: "Yüksek Seviye" },
       { label: "Dayanıklılık", value: "Askeri Standart" },
-      { label: "Darbe Emilimi", value: "Maksimum Koruma" },
+      { label: "Darbe Emilimi", value: "Yüksek Koruma" },
       { label: "Kullanım Alanı", value: "Kritik Noktalar" }
     ]
   },
@@ -125,7 +125,7 @@ const segments = [
       { label: "Sistem Tipi", value: "Yeraltı Hidrolik" },
       { label: "Aktivasyon", value: "Otomatik/Manuel" },
       { label: "Tepki Süresi", value: "Anlık" },
-      { label: "Güvenlik", value: "Maksimum Seviye" }
+      { label: "Güvenlik", value: "Yüksek" }
     ]
   },
   {
@@ -162,7 +162,7 @@ const segments = [
   {
     id: "Q7",
     title: "Road Blocker Sistemler",
-    subtitle: "Terör Önleme ve Maksimum Güvenlik",
+    subtitle: "Terör Önleme ve Yüksek Güvenlik",
     description: "Terör eylemlerine karşı tasarlanan, elektronik kontrollü hidrolik yol kesici sistem. Yüksek dayanıklılık ve güvenilirlik özelliği ile kritik noktalarda kullanılır. 4 adet güneş enerjili LED ile gece görünürlüğü sağlanmıştır.",
     image: "https://betaper.com.tr/bariyer-sistemleri/roadblocker.jpg",
     gradient: "from-cyan-600 via-cyan-500 to-blue-500",
@@ -219,7 +219,7 @@ const faqs = [
   },
   {
     question: "Road Blocker sistemi nedir ve nerede kullanılır?",
-    answer: "Road Blocker, terör saldırılarına karşı maksimum koruma sağlayan hidrolik yol kesici sistemdir. Askeri tesisler, elçilikler, havalimanları ve kritik altyapı tesislerinde kullanılır."
+    answer: "Road Blocker, terör saldırılarına karşı yüksek koruma sağlayan hidrolik yol kesici sistemdir. Askeri tesisler, elçilikler, havalimanları ve kritik altyapı tesislerinde kullanılır."
   }
 ];
 
@@ -232,7 +232,7 @@ const benefits = [
   {
     icon: Users,
     title: "Uzman Ekip",
-    description: "Kurulum ve bakımı kendi ekibimiz yapar"
+    description: "Kurulum ve devreye alma desteği sağlanır"
   },
   {
     icon: TrendingUp,
@@ -242,7 +242,7 @@ const benefits = [
   {
     icon: Wrench,
     title: "Teknik Destek",
-    description: "Ömür boyu ücretsiz danışmanlık hizmeti"
+    description: "Kurulum sonrası teknik destek ve danışmanlık"
   }
 ];
 
@@ -317,12 +317,12 @@ export default function BariyerSistemleriPage() {
     <>
       <Helmet>
         <title>Bariyer Sistemleri: Mantar Bariyer, Road Blocker, Tuzak Kapanlar | Mika Teknoloji 2025</title>
-        <meta name="description" content="✅ Profesyonel bariyer sistemleri: Mantar bariyer, road blocker, tuzak kapanlar, otopark bariyeri ve hidrolik güvenlik sistemleri. 2 yıl garanti, ücretsiz keşif." />
+        <meta name="description" content="✅ Profesyonel bariyer sistemleri: Mantar bariyer, road blocker, tuzak kapanlar, otopark bariyeri ve hidrolik güvenlik sistemleri. 2 yıl garanti. Keşif için bize ulaşın." />
         <meta name="keywords" content="bariyer sistemleri, otopark bariyeri, hidrolik bariyer, mantar bariyer, road blocker, güvenlik bariyeri, PT PLUS bariyer, dinamik bariyer, tuzak sistemleri, bariyer fiyatları, otopark bariyeri kurulumu, otomatik bariyer, kollu bariyer, bariyer montajı, araç giriş kontrol, park bariyeri, bariyer sistemi fiyat, uzaktan kumandalı bariyer, fotoselli bariyer" />
         
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Mantar Bariyer, Road Blocker ve Tuzak Kapanlar | Mika Teknoloji Bariyer Sistemleri" />
-        <meta property="og:description" content="Profesyonel bariyer sistemleri: Otopark bariyeri, hidrolik bariyer, road blocker. 2 yıl garanti, ücretsiz keşif." />
+        <meta property="og:description" content="Profesyonel bariyer sistemleri: Otopark bariyeri, hidrolik bariyer, road blocker. 2 yıl garanti. Keşif için bize ulaşın." />
         <meta property="og:type" content="product.group" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/bariyer-sistemleri" />
         <meta property="og:image" content="https://mikateknoloji.com/assets/bariyer-sistemleri-og.jpg" />
@@ -331,7 +331,7 @@ export default function BariyerSistemleriPage() {
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Bariyer Sistemleri - Otopark Bariyeri & Hidrolik Bariyer" />
-        <meta name="twitter:description" content="Bariyer sistemleri: otopark bariyeri, hidrolik bariyer, road blocker çözümleri. Ücretsiz keşif!" />
+        <meta name="twitter:description" content="Bariyer sistemleri: otopark bariyeri, hidrolik bariyer, road blocker çözümleri. Keşif için bize ulaşın." />
         
         {/* Additional SEO Meta Tags */}
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -390,7 +390,7 @@ export default function BariyerSistemleriPage() {
               Mantar Bariyer, Road Blocker ve Tuzak Kapan Sistemleri
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Hidrolik mantar bariyer, road blocker yol kesici ve tuzak kapan sistemleri ile maksimum güvenlik
+              Hidrolik mantar bariyer, road blocker yol kesici ve tuzak kapan sistemleri ile yüksek güvenlik
             </p>
           </motion.div>
 
@@ -553,7 +553,7 @@ export default function BariyerSistemleriPage() {
             viewport={{ once: true }}
           >
             {[
-              { step: "1", title: "Keşif ve Analiz", desc: "Ücretsiz yerinde keşif, ihtiyaç analizi ve ölçüm", time: "1 Gün", color: "blue" },
+              { step: "1", title: "Keşif ve Analiz", desc: "Yerinde keşif, ihtiyaç analizi ve ölçüm", time: "1 Gün", color: "blue" },
               { step: "2", title: "Proje ve Teklif", desc: "Detaylı proje planı ve uygun fiyat teklifi hazırlama", time: "1-2 Gün", color: "purple" },
               { step: "3", title: "Kurulum", desc: "Profesyonel montaj ekibi ile güvenli kurulum", time: "2-4 Saat", color: "green" },
               { step: "4", title: "Test ve Eğitim", desc: "Sistem testleri ve kullanıcı eğitimi", time: "1 Saat", color: "orange" }
@@ -896,7 +896,7 @@ export default function BariyerSistemleriPage() {
             </h2>
             <p className="text-xl text-slate-300 mb-12 leading-relaxed">
               Profesyonel ekibimiz, size en uygun bariyer sistemini seçmenizde ve kurulumunda yardımcı olmaya hazır. 
-              Ücretsiz keşif ve detaylı fiyat teklifi için hemen iletişime geçin.
+              Keşif ve detaylı fiyat teklifi için bize ulaşın.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">

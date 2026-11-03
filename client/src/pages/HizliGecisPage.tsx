@@ -340,7 +340,7 @@ export default function HizliGecisPage() {
               Hızlı Geçiş Turnike Sisteminizi Şimdi Kurun
             </h2>
             <p className="text-xl mb-8 text-white/90">
-              Profesyonel ekibimiz size en uygun hızlı geçiş turnike çözümünü sunmak için hazır. Ücretsiz keşif ve detaylı teklif alın.
+              Profesyonel ekibimiz size en uygun hızlı geçiş turnike çözümünü sunmak için hazır. Keşif ve detaylı teklif için bize ulaşın.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

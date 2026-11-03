@@ -350,8 +350,8 @@ export default function AccessControlSystemPage() {
                     <Share2 className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">API Paylaşım</h4>
-                    <p className="text-sm text-gray-600">RESTful API entegrasyonu ile mevcut ERP, İK ve bordro sistemlerinize sorunsuz bağlantı ve veri senkronizasyonu sağlama.</p>
+                    <h4 className="font-bold text-gray-900 mb-2">Entegrasyon</h4>
+                    <p className="text-sm text-gray-600">Mevcut ERP, İK ve bordro sistemlerinizle entegrasyon desteği için bize ulaşın.</p>
                   </div>
                 </div>
 

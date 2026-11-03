@@ -203,7 +203,7 @@ export default function FaceRecognitionSystemPage() {
                 <p className="text-gray-600">
                   <strong>Wi-Fi desteği, TCP/IP bağlantı</strong> ve <strong>500.000'e kadar log kapasitesi</strong> ile modern işletmeler için 
                   ideal <strong>PDKS çözümleri</strong> sağlıyoruz. Hem <strong>parmak izi hem de yüz tanıma</strong> teknolojilerini 
-                  tek cihazda birleştiren hibrit modellerimiz sayesinde maksimum güvenlik elde edebilirsiniz.
+                  tek cihazda birleştiren hibrit modellerimiz sayesinde güvenlik seviyesini artırabilirsiniz.
                 </p>
               </div>
 

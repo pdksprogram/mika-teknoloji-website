@@ -331,7 +331,7 @@ export default function MT1350YarimBoyDetailPage() {
               MT 1350 Yarım Boy Turnike ile Ekonomik Güvenlik Çözümü
             </h2>
             <p className="text-white/90 mb-6 max-w-2xl mx-auto">
-              Hızlı kurulum ve uygun maliyetle güvenlik ihtiyacınızı karşılayın. Uzman ekibimizden ücretsiz keşif hizmeti alın.
+              Hızlı kurulum ve uygun maliyetle güvenlik ihtiyacınızı karşılayın. Keşif için bize ulaşın.
             </p>
             
             <div className="grid md:grid-cols-3 gap-6 mb-8">

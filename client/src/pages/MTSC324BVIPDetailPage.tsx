@@ -80,7 +80,7 @@ export default function MTSC324BVIPDetailPage() {
     {
       icon: <Shield className="h-8 w-8 text-blue-600" />,
       title: "Premium Güvenlik",
-      description: "%100 paslanmaz çelik ile maksimum dayanıklılık ve güvenlik"
+      description: "%100 paslanmaz çelik ile yüksek dayanıklılık ve güvenlik"
     },
     {
       icon: <Zap className="h-8 w-8 text-yellow-600" />,
@@ -328,12 +328,12 @@ export default function MTSC324BVIPDetailPage() {
               MT SC324B VIP Turnike Sistemi
             </h2>
             <p className="text-xl mb-8">
-              Engelli dostu ve VIP erişim çözümleri için profesyonel destek alın. Ücretsiz keşif ve detaylı teklif için hemen iletişime geçin.
+              Engelli dostu ve VIP erişim çözümleri için profesyonel destek alın. Keşif ve detaylı teklif için bize ulaşın.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
-                <Link href="/iletisim">Ücretsiz Keşif</Link>
+                <Link href="/iletisim">Keşif Talep Edin</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
                 <a href="tel:+905467122296">

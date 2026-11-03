@@ -288,7 +288,7 @@ export default function CardAccessSystemPage() {
               Kartlı Geçiş Sistemi İçin Teklif Alın
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              RFID kart teknolojisi ile güvenli geçiş kontrolü için ücretsiz keşif ve teklif hizmeti
+              RFID kartlı geçiş kontrolü için keşif ve teklif almak üzere bize ulaşın
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/iletisim">

@@ -337,7 +337,7 @@ export default function FingerprintSystemPage() {
                 <ul className="space-y-2 text-gray-600">
                   <li>• <strong>Kolay kurulum:</strong> Plug & play özelliği ile hızlı devreye alma</li>
                   <li>• <strong>SDK desteği:</strong> Kendi yazılımınıza entegrasyon imkanı</li>
-                  <li>• <strong>API entegrasyonu:</strong> Web servisleri ile veri transferi</li>
+                  <li>• <strong>Entegrasyon:</strong> Entegrasyon desteği için bize ulaşın</li>
                   <li>• <strong>Bulut uyumluluk:</strong> Cloud tabanlı PDKS sistemleri desteği</li>
                   <li>• <strong>Mobil uygulama:</strong> Smartphone ile uzaktan yönetim</li>
                 </ul>
@@ -382,7 +382,7 @@ export default function FingerprintSystemPage() {
             {/* Call to Action */}
             <div className="text-center mt-12 bg-gradient-to-r from-primary to-pink-600 text-white rounded-xl p-8">
               <h3 className="text-2xl font-bold mb-4">
-                Parmak İzi Okuyucu Sistemi Fiyatları ve Ücretsiz Keşif
+                Parmak İzi Okuyucu Sistemi Fiyatları ve Keşif
               </h3>
               <p className="text-lg mb-6 opacity-90">
                 İşletmeniz için en uygun parmak izi PDKS çözümünü belirlemek ve detaylı fiyat teklifi almak için uzmanlarımızla görüşün.
@@ -394,7 +394,7 @@ export default function FingerprintSystemPage() {
                   className="bg-white text-primary hover:bg-gray-100 font-semibold px-8"
                   data-testid="fingerprint-contact-button"
                 >
-                  <Link href="/iletisim">📞 Ücretsiz Keşif Talep Et</Link>
+                  <Link href="/iletisim">📞 Keşif Talep Edin</Link>
                 </Button>
                 <Button 
                   asChild 

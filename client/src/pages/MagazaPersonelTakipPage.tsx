@@ -75,7 +75,7 @@ export default function MagazaPersonelTakipPage() {
     {
       icon: TrendingUp,
       title: "Hiyerarşik Onay Sistemi ve Plan Takibi",
-      description: "Mağaza müdürleri haftalık vardiya planlarını oluşturur ve bu planlar bölge müdürleri tarafından onaylanır. Mobil uygulama üzerinden onaylı ve onay bekleyen planların durumu anlık olarak takip edilebilir. Detaylı raporlama özellikleri sayesinde bölge müdürleri tüm süreçleri kontrol altında tutar ve mağaza müdürlerine etkin bir yönetim avantajı sağlar.",
+      description: "Mağaza müdürleri haftalık vardiya planlarını oluşturur ve bu planlar bölge müdürleri tarafından onaylanır. Haftalık 45 saat kuralı açıksa (4857 sayılı İş Kanunu m.63: haftada en çok 45 saat) 45 saati aşan süre puantajda fazla mesai olarak ayrılır. Mobil uygulama üzerinden onaylı ve onay bekleyen planların durumu anlık olarak takip edilebilir. Detaylı raporlama özellikleri sayesinde bölge müdürleri tüm süreçleri kontrol altında tutar ve mağaza müdürlerine etkin bir yönetim avantajı sağlar.",
       gradient: "from-purple-500 to-pink-500",
       keywords: "plan onay sistemi, bölge müdürü kontrolü, vardiya onaylama, hiyerarşik yönetim",
       imagePlaceholder: "plan-onay-sistemi.jpg"
@@ -121,7 +121,7 @@ export default function MagazaPersonelTakipPage() {
     },
     {
       question: "Hiyerarşik onay sistemi nasıl çalışır?",
-      answer: "Mağaza müdürleri haftalık vardiya planlarını mobil uygulama üzerinden oluşturur. Bu planlar bölge müdürleri tarafından incelenir ve onaylanır. Sistemde hangi planların onaylandığı, hangilerinin onay beklendiği anlık olarak görülebilir. Detaylı raporlama sayesinde tüm süreç şeffaf şekilde yönetilir."
+      answer: "Mağaza müdürleri haftalık vardiya planlarını mobil uygulama üzerinden oluşturur. Bu planlar bölge müdürleri tarafından incelenir ve onaylanır. Haftalık 45 saat kuralı açıksa 45 saati aşan süre puantajda fazla mesai olarak ayrılır. Sistemde hangi planların onaylandığı, hangilerinin onay beklendiği anlık olarak görülebilir. Detaylı raporlama sayesinde tüm süreç şeffaf şekilde yönetilir."
     },
     {
       question: "Personel vardiya bildirimlerini nasıl alır?",

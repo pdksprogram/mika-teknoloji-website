@@ -286,7 +286,7 @@ export default function MTT300HG20DetailPage() {
               MT T300 HG20 Hızlı Geçiş Turnikenizi Hemen Sipariş Edin
             </h2>
             <p className="text-xl mb-8 text-white/90">
-              20 kişi/dakika kapasiteli profesyonel çözüm için hemen iletişime geçin. Ücretsiz keşif ve detaylı teklif.
+              20 kişi/dakika kapasiteli profesyonel çözüm için hemen iletişime geçin. Keşif ve detaylı teklif için bize ulaşın.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

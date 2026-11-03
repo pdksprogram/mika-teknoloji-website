@@ -277,7 +277,7 @@ export default function T250EcoDetailPage() {
                 MT 250 ECO İle Ekonomik Güvenlik Çözümü
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                Küçük bütçenizle büyük güvenlik sağlayın. Ücretsiz keşif ve detaylı fiyat teklifi için hemen iletişime geçin.
+                Küçük bütçenizle büyük güvenlik sağlayın. Keşif ve detaylı fiyat teklifi için bize ulaşın.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

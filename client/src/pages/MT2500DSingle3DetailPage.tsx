@@ -271,7 +271,7 @@ export default function MT2500DSingle3DetailPage() {
               MT 2500D Single 3 Kollu Turnike Sistemi Hakkında Detaylı Bilgi Alın
             </h2>
             <p className="text-white/90 mb-6 max-w-2xl mx-auto">
-              Uzman ekibimizden ücretsiz keşif hizmeti alın. İşletmeniz için en uygun güvenlik çözümünü birlikte belirleyelim.
+              Keşif için bize ulaşın. İşletmeniz için en uygun güvenlik çözümünü birlikte belirleyelim.
             </p>
             
             <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -295,7 +295,7 @@ export default function MT2500DSingle3DetailPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
                 <Link href="/iletisim">
-                  Ücretsiz Keşif Talep Et
+                  Keşif Talep Edin
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">

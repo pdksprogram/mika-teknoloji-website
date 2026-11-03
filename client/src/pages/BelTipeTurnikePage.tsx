@@ -267,7 +267,7 @@ export default function BelTipeTurnikePage() {
               İşletmeniz İçin En Uygun Turnike Sistemini Belirleyelim
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Ücretsiz keşif ve detaylı teklif için uzman ekibimizle iletişime geçin. 
+              Keşif ve detaylı teklif için bize ulaşın. 
               İhtiyacınıza uygun çözümü birlikte belirleyelim.
             </p>
             
@@ -292,7 +292,7 @@ export default function BelTipeTurnikePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
                 <Link href="/iletisim">
-                  Ücretsiz Keşif Talep Et
+                  Keşif Talep Edin
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">

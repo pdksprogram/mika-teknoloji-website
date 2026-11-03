@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, MapPin, Star } from 'lucide-react';
+import { Users, MapPin } from 'lucide-react';
 import SEO from "@/seo/SEO";
 // Removed problematic import
 // Removed problematic import
@@ -16,9 +16,6 @@ const customers = [
     employees: 400,
     locations: 80,
     sector: "Tekstil & Moda",
-    testimonial: "Mika Teknoloji'nin PDKS sistemi sayesinde vardiya yönetimimiz tamamen dijitalleşti. Süreç çok pratik: Mağaza müdürümüz shift planını yapıyor, bölge müdürümüz onaylıyor ve personelimiz kendi vardiyasını cep telefonu üzerinden anında görebiliyor. Bildirim sistemi ile herkes zamanında haberdar oluyor. 80 lokasyonumuzda bu mobil çözüm sayesinde iş gücü yönetimimiz hem hızlandı hem de hatasız hale geldi.",
-    person: "Satiye YILDIZ",
-    position: "İK Direktörü",
     solutions: ["WebPDKS", "QR Personel Takip", "Vardiya Yönetimi"]
   },
   {
@@ -28,9 +25,6 @@ const customers = [
     employees: 1200,
     locations: 65,
     sector: "Mobilya & Dekorasyon",
-    testimonial: "Mika Teknoloji'nin kapsamlı Mobil PDKS çözümü ile insan kaynakları süreçlerimizi tamamen dijitalleştirdik. Çalışanlarımız artık mobil uygulama üzerinden izin taleplerini, avans taleplerini kolayca oluşturabiliyor ve anlık onay alıyor. Şikayet ve Anket Portalı sayesinde çalışan memnuniyetini sürekli takip ediyoruz. Ayrıca bordro gönderme işlemlerimiz otomatikleşti, 1200 çalışanımız bordrolarını mobil uygulamadan güvenli şekilde görüntüleyebiliyor. 65 lokasyonumuzda bu entegre sistem ile hem operasyonel verimlilik hem de çalışan memnuniyeti önemli ölçüde arttı.",
-    person: "Selma Özkan",
-    position: "Operasyon Müdürü",
     solutions: ["Mobil PDKS", "Shift Yönetimi", "Vardiya Planlama"]
   },
   {
@@ -40,9 +34,6 @@ const customers = [
     employees: 2500,
     locations: 28,
     sector: "Otomotiv",
-    testimonial: "28 şubemize ve üretim tesislerimize PDKS kartlı geçiş sistemi ile yemekhane sistemini kurduk. 4 yıldır Mika Teknoloji ile başarılı bir şekilde çalışmaktayız. Çözüm ortağımız PARMATEK ile birlikte hayata geçirdiğimiz bu entegre sistem, hem güvenlik hem de operasyonel verimliliğimizi önemli ölçüde artırdı.",
-    person: "Mehmet Demir",
-    position: "Güvenlik ve İK Direktörü",
     solutions: ["Turnike Sistemleri", "Güvenlik Guard Kontrol", "PDKS"]
   },
   {
@@ -52,9 +43,6 @@ const customers = [
     employees: 3200,
     locations: 12,
     sector: "Sağlık",
-    testimonial: "Mika Teknoloji ve çözüm ortağımız Sentez Bilgisayar Güvenlik Sistemleri ile birlikte kartlı şifreli geçiş sistemi ve barkod sistemi entegrasyonunu başarıyla hayata geçirdik. Bu entegre güvenlik çözümü sayesinde 3200 personelimizin ve ziyaretçilerimizin hastane içindeki hareketlerini güvenli ve kontrollü bir şekilde yönetiyoruz. Sistem hem güvenlik hem de operasyonel verimlilik açısından beklentilerimizi fazlasıyla karşıladı.",
-    person: "Dr. Fatma Yılmaz",
-    position: "Başhekim Yardımcısı",
     solutions: ["X-Ray Güvenlik", "PDKS", "Güvenlik Kontrol"]
   },
   {
@@ -64,9 +52,6 @@ const customers = [
     employees: 7000,
     locations: 1,
     sector: "Sağlık & Eğitim",
-    testimonial: "İstanbul Üniversitesi Cerrahpaşa Tıp Fakültesi olarak 7000 kişilik büyük ünitemizde yemekhane sistemini başarıyla kurarak operasyonel verimliliğimizi önemli ölçüde artırdık. Mika Teknoloji'nin sunduğu entegre yemekhane çözümü ile öğrenci, akademisyen ve personelimizin yemek hizmetlerini dijitalleştirdik. Sistem, kartlı ödeme altyapısı, mönü yönetimi ve raporlama modülleri ile tam entegre çalışıyor. 7000 kişilik kapasitemizde günlük yemek operasyonlarımızı sorunsuz ve verimli bir şekilde yürütebiliyoruz.",
-    person: "Prof. Dr. Murat Karadayı",
-    position: "İdari ve Mali İşler Direktörü",
     solutions: ["Yemekhane Sistemi", "Kartlı Ödeme", "Entegre Çözümler"]
   },
   {
@@ -76,9 +61,6 @@ const customers = [
     employees: 1800,
     locations: 95,
     sector: "Teknoloji Perakende",
-    testimonial: "Elektronik mağaza zinciri olarak güvenlik önlemlerimiz çok önemli. Mika Teknoloji'nin turnike sistemleri ve güvenlik kontrol çözümleri ile mağazalarımızın güvenliğini sağlıyoruz. Personel takip sistemi de çok kullanışlı.",
-    person: "Deniz Kurtul",
-    position: "Güvenlik Müdürü",
     solutions: ["Turnike Sistemleri", "Güvenlik Kontrol", "PDKS"]
   },
   {
@@ -88,9 +70,6 @@ const customers = [
     employees: 2200,
     locations: 120,
     sector: "Tekstil & Moda",
-    testimonial: "Koton olarak tüm mağazalarımızda standardizasyonu sağlamak için Mika Teknoloji'nin PDKS çözümlerini kullanıyoruz. Web tabanlı sistem sayesinde merkezi yönetim çok kolay. Çalışan memnuniyeti de arttı.",
-    person: "Ayşe Terzi",
-    position: "İK Grup Müdürü",
     solutions: ["WebPDKS", "Merkezi Yönetim", "Raporlama"]
   },
   {
@@ -100,9 +79,6 @@ const customers = [
     employees: 4500,
     locations: 180,
     sector: "Perakende",
-    testimonial: "Binlerce çalışanımızın takibini yapmak için Mika Teknoloji'nin gelişmiş PDKS sistemini tercih ettik. RFID teknolojisi ile hızlı ve güvenli giriş-çıkış sağlıyoruz. Sistem performansı mükemmel.",
-    person: "Okan Başar",
-    position: "Operasyon Direktörü",
     solutions: ["RFID Sistem", "PDKS", "Çoklu Lokasyon"]
   },
   {
@@ -112,9 +88,6 @@ const customers = [
     employees: 3800,
     locations: 85,
     sector: "Bankacılık",
-    testimonial: "Bankacılık sektöründe güvenlik kritik öneme sahip. Mika Teknoloji'nin X-Ray güvenlik sistemleri ve güvenlik personeli kontrol çözümleri ile şubelerimizin güvenliğini en üst seviyede tutuyoruz.",
-    person: "Murat Özdemir",
-    position: "Güvenlik Direktörü",
     solutions: ["X-Ray Güvenlik", "Guard Kontrol", "Güvenlik Yönetimi"]
   },
   {
@@ -124,9 +97,6 @@ const customers = [
     employees: 5200,
     locations: 110,
     sector: "Telekomünikasyon",
-    testimonial: "Teknoloji şirketi olarak en güncel çözümleri tercih ediyoruz. Mika Teknoloji'nin QR kod tabanlı personel takip sistemi ile çalışanlarımız kolayca giriş-çıkış yapabiliyor. Mobil uyumlu yapısı çok başarılı.",
-    person: "Elif Koç",
-    position: "İnsan Kaynakları Genel Müdür Yardımcısı",
     solutions: ["QR Personel Takip", "Mobil PDKS", "Dijital Çözümler"]
   }
 ];
@@ -229,14 +199,6 @@ const References: React.FC = () => {
                       <div className="absolute -bottom-6 left-6 bg-white rounded-xl px-6 py-4 shadow-lg border border-gray-100">
                         <h3 className="text-xl font-bold text-gray-900 mb-1">{customer.name}</h3>
                         <p className="text-primary font-semibold text-sm">{customer.sector}</p>
-                        <div className="flex items-center mt-2 space-x-2">
-                          <div className="flex text-yellow-400">
-                            {[...Array(5)].map((_, i) => (
-                              <Star key={i} className="w-3 h-3 fill-current" />
-                            ))}
-                          </div>
-                          <span className="text-xs text-gray-500">5.0</span>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -249,7 +211,7 @@ const References: React.FC = () => {
                         <div className="flex items-center justify-between">
                           <Users className="w-8 h-8 text-primary" />
                           <div className="text-right">
-                            <div className="text-2xl font-bold text-gray-900">{customer.employees.toLocaleString()}</div>
+                            <div className="text-2xl font-bold text-gray-900">{String(customer.employees).replace(/\B(?=(\d{3})+(?!\d))/g, '.')}</div>
                             <div className="text-sm text-gray-600">Çalışan</div>
                           </div>
                         </div>
@@ -277,27 +239,6 @@ const References: React.FC = () => {
                             {solution}
                           </span>
                         ))}
-                      </div>
-                    </div>
-
-                    {/* Professional Testimonial */}
-                    <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                      <div className="flex items-start space-x-4">
-                        <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center">
-                            <span className="text-gray-700 font-bold text-lg">{customer.person.charAt(0)}</span>
-                          </div>
-                        </div>
-                        <div className="flex-1">
-                          <blockquote className="text-gray-700 text-lg leading-relaxed mb-4 italic">
-                            "{customer.testimonial}"
-                          </blockquote>
-                          <div>
-                            <p className="font-bold text-gray-900">{customer.person}</p>
-                            <p className="text-gray-600">{customer.position}</p>
-                            <p className="text-primary font-medium text-sm mt-1">{customer.name}</p>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>

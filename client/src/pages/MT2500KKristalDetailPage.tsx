@@ -136,7 +136,7 @@ export default function MT2500KKristalDetailPage() {
                 </h1>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   VIP alanlar ve lüks mekanlar için özel tasarlanmış kristal panelli premium boy tipi turnike sistemi. 
-                  Şeffaf kristal panelleri ile modern estetik sunarken, en yüksek güvenlik standartlarını karşılar.
+                  Şeffaf kristal panelleri ile modern estetik sunarken, yüksek güvenlik gerektiren alanlarda kullanılır.
                 </p>
               </div>
 

@@ -37,7 +37,7 @@ export default function RoadBlockerDetailPage() {
     <>
       <Helmet>
         <title>Road Blocker Sistem - Yol Kesici Güvenlik Bariyeri | Mika Teknoloji</title>
-        <meta name="description" content="Road Blocker yol kesici sistemi ile terör eylemlerine karşı maksimum koruma. Elektronik kontrollü hidrolik sistem, güneş enerjili LED aydınlatma ve yüksek dayanıklılık." />
+        <meta name="description" content="Road Blocker yol kesici sistemi ile terör eylemlerine karşı yüksek koruma. Elektronik kontrollü hidrolik sistem, güneş enerjili LED aydınlatma ve yüksek dayanıklılık." />
       </Helmet>
 
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-50 to-white">
@@ -77,7 +77,7 @@ export default function RoadBlockerDetailPage() {
                   Road Blocker Sistem
                 </h1>
                 <p className="text-xl text-primary font-semibold mb-6">
-                  Yol Kesici Güvenlik Sistemi - Maksimum Koruma
+                  Yol Kesici Güvenlik Sistemi - Yüksek Koruma
                 </p>
                 <div className="w-20 h-1 bg-gradient-to-r from-cyan-600 to-teal-500 rounded-full"></div>
               </div>

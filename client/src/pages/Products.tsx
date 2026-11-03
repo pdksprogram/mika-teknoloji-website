@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
+import { rotaTanimli } from "@/lib/rotalar";
 
 export default function Products() {
   const productCategories = [
@@ -32,7 +33,7 @@ export default function Products() {
       title: "Yazılımlar",
       items: [
         { name: "Web PDKS", href: "https://pdkspersoneltakip.com/" },
-        { name: "Access Kontrol Programı", href: "/yazilim/access" },
+        { name: "Access Kontrol Programı", href: "/access-control" },
         { name: "StartUp Puantaj Yazılımı", href: "/yazilim/startup" },
         { name: "Öğretmen Takip Yazılımı", href: "/yazilim/ogretmen" },
         { name: "Yemekhane Takip Sistemi", href: "/yazilim/yemekhane" },
@@ -110,13 +111,19 @@ export default function Products() {
                   <ul className="space-y-3">
                     {category.items.map((item, itemIndex) => (
                       <li key={itemIndex}>
-                        <Link 
-                          href={item.href}
-                          className="text-slate-700 hover:text-primary transition-colors text-sm leading-relaxed block py-1"
-                          data-testid={`product-link-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
-                        >
-                          {item.name}
-                        </Link>
+                        {rotaTanimli(item.href) ? (
+                          <Link
+                            href={item.href}
+                            className="text-slate-700 hover:text-primary transition-colors text-sm leading-relaxed block py-1"
+                            data-testid={`product-link-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
+                          >
+                            {item.name}
+                          </Link>
+                        ) : (
+                          <span className="text-slate-700 text-sm leading-relaxed block py-1">
+                            {item.name}
+                          </span>
+                        )}
                       </li>
                     ))}
                   </ul>

@@ -672,7 +672,7 @@ const faqItems = [
   },
   {
     question: "PDKS kurulumu nasıl yapılır?",
-    answer: "Mika Teknoloji tüm PDKS sistemlerinin kurulumunu ücretsiz olarak gerçekleştirmektedir. Turnike, yüz tanıma cihazı, bariyer ve kart okuyucu montajları profesyonel ekibimiz tarafından yapılır. Bulut tabanlı WebPDKS için herhangi bir fiziksel kurulum gerekmez.",
+    answer: "Turnike, yüz tanıma cihazı, bariyer ve kart okuyucu için kurulum ve devreye alma desteği sağlanır. Bulut tabanlı WebPDKS için herhangi bir fiziksel kurulum gerekmez.",
   },
   {
     question: "Bu eğitim videoları güncel mi?",
@@ -1008,7 +1008,7 @@ export default function VideolarPage() {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-        <section className="py-10 sm:py-16 bg-gradient-to-br from-primary/5 to-pink-50 relative">
+        <section className="py-10 sm:py-16 bg-gradient-to-br from-slate-100 via-white to-slate-50 border-b border-slate-200 relative">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -1177,7 +1177,7 @@ export default function VideolarPage() {
                 İlgili Çözümlerimiz
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-                <Link href="/urunler/webpdks" className="block p-3 sm:p-4 rounded-xl border border-slate-200 hover:border-primary hover:shadow-md transition-all text-center group">
+                <Link href="/pdks-programi" className="block p-3 sm:p-4 rounded-xl border border-slate-200 hover:border-primary hover:shadow-md transition-all text-center group">
                   <Monitor className="h-6 w-6 sm:h-8 sm:w-8 text-primary mx-auto mb-2 group-hover:scale-110 transition-transform" />
                   <h3 className="text-xs sm:text-sm font-semibold text-slate-800">WebPDKS</h3>
                   <p className="text-[10px] sm:text-xs text-slate-500 mt-1 hidden sm:block">Bulut Tabanlı PDKS</p>

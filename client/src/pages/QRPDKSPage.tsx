@@ -351,7 +351,7 @@ export default function QRPDKSPage() {
                       <div className="space-y-6">
                         <p className="text-xl text-slate-700 leading-relaxed font-light">
                           <strong className="text-slate-800 font-semibold">Konum doğrulama</strong> ile 
-                          giriş-çıkışın tanımlı alanda yapıldığını kontrol edin.
+                          giriş-çıkışın tanımlı alanda yapıldığını kontrol edin. Sahte konum (Fake GPS) tespit edilirse kayıt alınmaz.
                         </p>
                         <p className="text-lg text-slate-600 leading-relaxed">
                           Mükerrer kayıt önleme, konum doğrulama ve 
@@ -364,7 +364,7 @@ export default function QRPDKSPage() {
                       <div className="grid grid-cols-2 gap-6 pt-6">
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Jeofencing</span>
+                          <span className="text-slate-600 font-medium">Fake GPS Tespiti</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-blue-500 rounded-full"></div>

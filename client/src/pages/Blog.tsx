@@ -36,7 +36,7 @@ export default function Blog() {
     {
       id: 3,
       title: "Boy Tipi Turnike Sistemleri: Full Height Güvenlik Çözümleri",
-      excerpt: "Maksimum güvenlik için boy tipi turnike sistemleri. Stadium, ceza evi ve yüksek güvenlik alanları için tam boy turnike modelleri, özellikleri ve uygulama alanları.",
+      excerpt: "Yüksek güvenlik için boy tipi turnike sistemleri. Stadium, ceza evi ve yüksek güvenlik alanları için tam boy turnike modelleri, özellikleri ve uygulama alanları.",
       date: "10 Ocak 2025",
       author: "Güvenlik Sistemleri Uzmanı",
       category: "Güvenlik",
@@ -84,7 +84,7 @@ export default function Blog() {
     {
       id: 7,
       title: "WebPDKS Cloud Sistemi: Her Yerden Erişilebilir Personel Yönetimi",
-      excerpt: "Web tabanlı PDKS sistemi ile bulut teknolojisinin avantajları. Mobil uyumlu dashboard, 7/24 erişim, otomatik yedekleme ve hibrit çalışma modeli entegrasyonu.",
+      excerpt: "Web tabanlı PDKS sistemi ile bulut teknolojisinin avantajları. Mobil uyumlu dashboard, 7/24 erişim ve hibrit çalışma modeli entegrasyonu.",
       date: "1 Ocak 2025",
       author: "Cloud Uzmanı",
       category: "WebPDKS",

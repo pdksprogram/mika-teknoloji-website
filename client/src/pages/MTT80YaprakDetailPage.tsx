@@ -333,7 +333,7 @@ export default function MTT80YaprakDetailPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
-                <Link href="/iletisim">Ücretsiz Keşif</Link>
+                <Link href="/iletisim">Keşif Talep Edin</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
                 <a href="tel:+905467122296">

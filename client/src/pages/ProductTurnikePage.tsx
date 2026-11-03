@@ -61,7 +61,7 @@ export default function ProductTurnikePage() {
       description: "Dezenfektan dispenseri entegreli hijyen odaklı turnike sistemleri",
       features: ["Otomatik Dezenfektan", "Temassız Geçiş", "Ateş Ölçer Entegrasyonu", "UV Sterilizasyon"],
       price: "Fiyat İçin İletişime Geçin",
-      href: "/urunler/hijyen-turnike"
+      href: "/iletisim"
     },
     {
       id: 6,
@@ -71,7 +71,7 @@ export default function ProductTurnikePage() {
       description: "Ödeme sistemli jeton/kart okuyuculu turnike çözümleri",
       features: ["Jeton/Kart Okuyucu", "Ödeme Entegrasyonu", "Para Üstü Sistemi", "Geri Sayım Display"],
       price: "Fiyat İçin İletişime Geçin",
-      href: "/urunler/jetonlu-turnike"
+      href: "/urunler/jetonlu-t250-turnike"
     }
   ];
 
@@ -295,7 +295,7 @@ export default function ProductTurnikePage() {
                       data-testid={`product-detail-${product.id}`}
                     >
                       <Link href={product.href}>
-                        Detayları Gör
+                        {product.href === "/iletisim" ? "Bilgi Alın" : "Detayları Gör"}
                         <ChevronRight className="w-4 h-4 ml-1" />
                       </Link>
                     </Button>
@@ -342,7 +342,7 @@ export default function ProductTurnikePage() {
           </h2>
           <p className="text-blue-100 text-lg mb-6 max-w-2xl mx-auto">
             Uzman ekibimiz size en uygun turnike çözümünü bulmak için hazır. 
-            Ücretsiz keşif ve teknik destek için bizimle iletişime geçin.
+            Keşif ve teknik destek için bize ulaşın.
           </p>
           <Button 
             asChild
@@ -376,7 +376,7 @@ export default function ProductTurnikePage() {
                 <p className="text-lg mb-6">
                   <strong>Turnike sistemi</strong>, modern güvenlik ihtiyaçlarının vazgeçilmez bir parçası haline gelmiştir. 
                   <strong>Bel tipi turnike</strong> modelleri, kompakt yapısı ve yüksek güvenlik standartları ile ofisler ve küçük alanlarda tercih edilirken, 
-                  <strong>boy tipi turnike</strong> sistemleri maksimum güvenlik gerektiren alanlarda kullanılır. 
+                  <strong>boy tipi turnike</strong> sistemleri yüksek güvenlik gerektiren alanlarda kullanılır. 
                   <strong>Hızlı geçiş turnike</strong> çözümleri ise yoğun trafikli alanlarda akıcı geçişler sağlar.
                 </p>
                 
@@ -495,7 +495,7 @@ export default function ProductTurnikePage() {
                   <h4 className="font-semibold text-gray-800 mb-2">İstanbul turnike sistemi kurulumu nasıl yapılır?</h4>
                   <p className="text-gray-700">
                     <strong>İstanbul turnike sistemi</strong> kurulumu için önce keşif yapılır, alan analizi gerçekleştirilir. 
-                    Montajı kendi ekibimiz yapar ve sistem entegrasyonunu tamamlar.
+                    Kurulum ve devreye alma desteği sağlanır.
                   </p>
                 </div>
                 
@@ -522,11 +522,11 @@ export default function ProductTurnikePage() {
               </h3>
               <p className="text-gray-700 mb-6">
                 <strong>Turnike sistemi</strong> kurulumu, bakımı ve teknik desteği için uzman ekibimizle çalışın. 
-                Ücretsiz keşif hizmeti ve uygun fiyat garantisi ile güvenli geçişler için doğru adrestesiniz.
+                Keşif için bize ulaşın.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
-                  <Link href="/iletisim">Ücretsiz Keşif Talep Edin</Link>
+                  <Link href="/iletisim">Keşif Talep Edin</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <Link href="tel:+905467122296">0546 712 22 96</Link>

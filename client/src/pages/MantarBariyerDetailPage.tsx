@@ -95,7 +95,7 @@ export default function MantarBariyerDetailPage() {
                   <div className="flex items-start gap-4">
                     <Shield className="w-8 h-8 text-violet-600 flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="text-lg font-bold text-slate-900 mb-2">Maksimum Güvenlik ve Dayanıklılık</h3>
+                      <h3 className="text-lg font-bold text-slate-900 mb-2">Yüksek Güvenlik ve Dayanıklılık</h3>
                       <p className="text-gray-700 leading-relaxed">
                         HİDROLİK MANTAR BARİYER sağlam yapısı (hareketli kısım 304 paslanmaz çelik, alt kısım galvaniz, flanşör ve kapak alüminyum) ile yüksek güvenlik ihtiyacı duyulan ve bunun yanı sıra şehrin trafik akışının yoğun olduğu yerlerde yaya trafiğini aksatmadan yalnızca araç trafiğini engelleyecek şekilde tasarlanmıştır. Araç çarpması durumunda, mantar bariyer yatay yataklama sistemiyle, aracın önemli kısımlarını tahrip eder ve böylece araç hareket edemez.
                       </p>

@@ -79,7 +79,7 @@ export default function PTGeniusDetailPage() {
               </div>
 
               <p className="text-lg text-gray-700 leading-relaxed">
-                Ultra hızlı 3 saniye açılma süresi ve 5.5 metre kol uzunluğu ile yoğun trafikte maksimum verimlilik sağlar. Geniş sıcaklık aralığı sayesinde her iklim koşulunda güvenilir performans sunar.
+                Ultra hızlı 3 saniye açılma süresi ve 5.5 metre kol uzunluğu ile yoğun trafikte verimli çalışır. Geniş sıcaklık aralığı sayesinde her iklim koşulunda güvenilir performans sunar.
               </p>
 
               <Card className="border-0 shadow-lg">

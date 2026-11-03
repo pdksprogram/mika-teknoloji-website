@@ -228,7 +228,7 @@ export default function PDKSPage() {
           },
           {
             title: "Güvenli Altyapı",
-            description: "Veri koruması ve otomatik yedekleme"
+            description: "Veri koruması ve yetkiye göre erişim"
           },
           {
             title: "Kolay Entegrasyon",
@@ -247,8 +247,8 @@ export default function PDKSPage() {
           "İzin ve rapor takibi",
           "Esnek mesai hesaplama",
           "Çoklu lokasyon yönetimi",
-          "API entegrasyon desteği",
-          "Otomatik yedekleme sistemi"
+          "Entegrasyon desteği için bize ulaşın",
+          "Excel (.xlsx) puantaj çıktısı"
         ]
       },
       cta: {
@@ -369,7 +369,7 @@ export default function PDKSPage() {
           },
           {
             title: "Secure Infrastructure",
-            description: "Data protection and automatic backup"
+            description: "Data protection and role-based access"
           },
           {
             title: "Easy Integration",
@@ -388,8 +388,8 @@ export default function PDKSPage() {
           "Leave and report tracking",
           "Flexible working time calculation",
           "Multi-location management",
-          "API integration support",
-          "Automatic backup system"
+          "Contact us for integration support",
+          "Excel (.xlsx) timesheet export"
         ]
       },
       cta: {
@@ -495,7 +495,7 @@ export default function PDKSPage() {
                 className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white font-bold px-8 py-4 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
                 data-testid="pdks-demo-button"
               >
-                <Link href="/iletisim">ÜCRETSİZ DEMO + KEŞİF</Link>
+                <Link href="/iletisim">DEMO VE KEŞİF TALEP EDİN</Link>
               </Button>
               <Button 
                 size="lg" 
@@ -671,7 +671,7 @@ export default function PDKSPage() {
           </motion.div>
 
           <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
@@ -795,7 +795,7 @@ export default function PDKSPage() {
                   KVKK uyumluluğu nasıl sağlanıyor?
                 </h3>
                 <p className="text-slate-600">
-                  Mobil kayıtlara eklenen konum bilgisi KVKK gereği raporlarda gizlenebilir.
+                  Mika PDKS, KVKK kapsamında aydınlatma, açık rıza ve erişim yetkilendirmesi süreçlerine uygun kullanılabilir. Kullanıcılar yalnız yetkili oldukları kayıtları görür; mobil kayıtlara eklenen konum bilgisi istenirse raporlarda gizlenir.
                 </p>
               </div>
             </div>

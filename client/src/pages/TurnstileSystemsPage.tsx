@@ -50,14 +50,14 @@ const turnstileCategories = [
     name: "Hijyen Turnikeleri",
     subtitle: "",
     image: hijyenTurnike,
-    link: "/hijyen-turnikeleri"
+    link: "/iletisim"
   },
   {
     id: 6,
     name: "Jetonlu Turnikeler",
     subtitle: "",
     image: jetonluTurnike,
-    link: "/jetonlu-turnikeler"
+    link: "/urunler/jetonlu-t250-turnike"
   }
 ];
 

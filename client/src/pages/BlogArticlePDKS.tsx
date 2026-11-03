@@ -292,7 +292,7 @@ export default function BlogArticlePDKS() {
                         <li><strong>Cloud Teknolojisi:</strong> Internet üzerinden her yerden erişim</li>
                         <li><strong>Mobil Uyumluluk:</strong> Tablet ve smartphone desteği</li>
                         <li><strong>Dashboard Yönetimi:</strong> Anlık raporlar ve grafiksel analizler</li>
-                        <li><strong>Otomatik Yedekleme:</strong> Veri güvenliği ve kayıp önleme</li>
+                        <li><strong>Yetkiye Göre Erişim:</strong> Kullanıcı yalnız yetkili olduğu kayıtları görür</li>
                         <li><strong>7/24 Erişim:</strong> Kesintisiz personel takibi</li>
                       </ul>
                     </div>
@@ -518,12 +518,12 @@ export default function BlogArticlePDKS() {
                   <h3 className="text-2xl font-bold mb-4">PDKS Sisteminde Uzman Desteği Alın</h3>
                   <p className="text-lg mb-6 opacity-90">
                     İşletmeniz için uygun PDKS çözümünü birlikte belirleyelim. 
-                    Ücretsiz keşif ve detaylı teklif için hemen iletişime geçin.
+                    Keşif ve detaylı teklif için bize ulaşın.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
                       <Link href="/iletisim">
-                        Ücretsiz Keşif Talep Et
+                        Keşif Talep Edin
                       </Link>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">

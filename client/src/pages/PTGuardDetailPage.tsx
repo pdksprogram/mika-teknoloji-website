@@ -82,7 +82,7 @@ export default function PTGuardDetailPage() {
                   <div className="flex items-start gap-4">
                     <Lock className="w-8 h-8 text-indigo-600 flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="text-xl font-bold text-slate-900 mb-3">Maksimum Güvenlik</h3>
+                      <h3 className="text-xl font-bold text-slate-900 mb-3">Yüksek Güvenlik</h3>
                       <p className="text-gray-700 leading-relaxed">
                         Askeri tesisler, özel güvenlik bölgeleri, kritik altyapılar ve yüksek güvenlik gerektiren tüm alanlarda kullanılmak üzere özel olarak tasarlanmıştır. Yüksek dayanıklılık ve güvenilir performans sağlar.
                       </p>

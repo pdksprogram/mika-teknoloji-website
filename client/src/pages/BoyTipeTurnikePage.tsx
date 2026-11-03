@@ -47,9 +47,9 @@ export default function BoyTipeTurnikePage() {
       model: "MT 2500D Double",
       title: "4 Kollu Çift Yönlü Boy Tipi Turnike",
       image: BOY_TURNIKE_IMAGES.bt4,
-      features: ["Çift Yönlü Geçiş", "4 Kollu Güvenlik", "Maksimum Güvenlik", "Yoğun Kullanım", "Profesyonel Kontrol"],
+      features: ["Çift Yönlü Geçiş", "4 Kollu Güvenlik", "Yüksek Güvenlik", "Yoğun Kullanım", "Profesyonel Kontrol"],
       price: "Fiyat İçin Ara",
-      description: "En yüksek güvenlik seviyesi için 4 kollu çift yönlü boy tipi turnike sistemi."
+      description: "Yüksek güvenlik gerektiren alanlar için 4 kollu çift yönlü boy tipi turnike sistemi."
     },
     {
       id: "mt2500k-single-3",
@@ -306,7 +306,7 @@ export default function BoyTipeTurnikePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
                 <Link href="/iletisim">
-                  Ücretsiz Güvenlik Keşfi
+                  Keşif Talep Edin
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">

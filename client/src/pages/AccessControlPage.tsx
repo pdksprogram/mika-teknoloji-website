@@ -104,7 +104,7 @@ export default function AccessControlPage() {
       title: "Profesyonel Access Control Sistemleri",
       subtitle: "Kurumsal Güvenlik Teknolojilerinde İleri Çözümler",
       brandMessage: "Mika Teknoloji Access Control",
-      description: "Mika Teknoloji olarak RFID kartlı geçiş, biyometrik parmak izi, yüz tanıma ve QR kodlu mobil erişim sistemleri ile kapsamlı access control çözümleri sunuyoruz. HID, EM, Mifare, Desfire, Iclass kart teknolojileri ve PDKS entegrasyonu ile işletmenizin güvenliğini maksimum seviyeye çıkarıyoruz.",
+      description: "Mika Teknoloji olarak RFID kartlı geçiş, biyometrik parmak izi, yüz tanıma ve QR kodlu mobil erişim sistemleri ile kapsamlı access control çözümleri sunuyoruz. HID, EM, Mifare, Desfire, Iclass kart teknolojileri ve PDKS entegrasyonu ile işletmenizin geçiş güvenliğini yönetmenizi sağlıyoruz.",
       breadcrumb: "Anasayfa > Geçiş Kontrol Sistemleri > Access Control",
       devices: {
         title: "Mika Teknoloji Access Kontrol Panelleri",
@@ -113,25 +113,25 @@ export default function AccessControlPage() {
             title: "2'li Access Kontrol Paneli",
             subtitle: "Mika Teknoloji Üretimi - Profesyonel 2 Kanal Kart Okuyucu",
             image: accessControlProfessional,
-            href: "/2li-access-kontrol-paneli"
+            href: "/urunler/gecis-kontrol"
           },
           {
             title: "4'lü Access Kontrol Paneli", 
             subtitle: "Mika Teknoloji Üretimi - 4 Kanal Access Kontrol Sistemi",
             image: accessControlPanel,
-            href: "/4lu-access-kontrol-paneli"
+            href: "/urunler/gecis-kontrol"
           },
           {
             title: "QR Mobil Access Sistemi",
             subtitle: "Mika Teknoloji Üretimi - QR Kod + Mobil Giriş Sistemi", 
             image: qrMobileAccess,
-            href: "/qr-mobil-access"
+            href: "/qr-gecis"
           },
           {
             title: "Access Kontrol Paneli Kutusu",
             subtitle: "Mika Teknoloji Üretimi - Korumalı Kutu Sistemi",
             image: accessControlPanel,
-            href: "/access-kontrol-kutu"
+            href: "/urunler/gecis-kontrol"
           }
         ]
       },
@@ -230,7 +230,7 @@ export default function AccessControlPage() {
       },
       advantages: {
         title: "Neden Mika Access Control Sistemleri?",
-        description: "Keşiften kuruluma ve bakıma kadar access control projelerini kendi ekibimizle yürütüyoruz.",
+        description: "Keşiften kuruluma ve bakıma kadar access control projelerinde destek sağlanır.",
         items: [
           {
             title: "Keşif ve Proje",
@@ -238,7 +238,7 @@ export default function AccessControlPage() {
           },
           {
             title: "Kurulum ve Montaj",
-            description: "Turnike ve kartlı geçiş montajını kendi ekibimiz yapar."
+            description: "Kurulum ve devreye alma desteği sağlanır."
           },
           {
             title: "Teknik Destek",
@@ -258,8 +258,8 @@ export default function AccessControlPage() {
     en: {
       title: "Professional Access Control Systems",
       subtitle: "Advanced Solutions in Corporate Security Technologies",
-      brandMessage: "Mika Technology - Turkey's Trusted Technology Partner",
-      description: "Mika Technology offers comprehensive access control solutions with RFID card access, biometric fingerprint, face recognition and QR mobile access systems. With HID, EM, Mifare, Desfire, Iclass card technologies and PDKS integration, we maximize your business security.",
+      brandMessage: "Mika Technology Access Control",
+      description: "Mika Technology offers comprehensive access control solutions with RFID card access, biometric fingerprint, face recognition and QR mobile access systems. With HID, EM, Mifare, Desfire, Iclass card technologies and PDKS integration, we help you manage access security at your business.",
       breadcrumb: "Home > Access Control Systems > Professional Solutions",
       devices: {
         title: "Mika Technology Access Control Panels",
@@ -268,25 +268,25 @@ export default function AccessControlPage() {
             title: "2-Channel Access Control Panel",
             subtitle: "Mika Technology Production - Professional 2 Channel Card Reader",
             image: accessControlProfessional,
-            href: "/2-channel-access-control"
+            href: "/urunler/gecis-kontrol"
           },
           {
             title: "4-Channel Access Control Panel", 
             subtitle: "Mika Technology Production - 4 Channel Access Control System",
             image: accessControlPanel,
-            href: "/4-channel-access-control"
+            href: "/urunler/gecis-kontrol"
           },
           {
             title: "QR Mobile Access System",
             subtitle: "Mika Technology Production - QR Code + Mobile Entry System", 
             image: qrMobileAccess,
-            href: "/qr-mobile-access"
+            href: "/qr-gecis"
           },
           {
             title: "Access Control Panel Box",
             subtitle: "Mika Technology Production - Protected Box System",
             image: accessControlPanel,
-            href: "/access-control-box"
+            href: "/urunler/gecis-kontrol"
           }
         ]
       },
@@ -385,7 +385,7 @@ export default function AccessControlPage() {
       },
       advantages: {
         title: "Why Mika Access Control Systems?",
-        description: "We run access control projects with our own team, from site survey to installation and maintenance.",
+        description: "Support is provided for access control projects, from site survey to installation and maintenance.",
         items: [
           {
             title: "Site Survey and Planning",
@@ -393,7 +393,7 @@ export default function AccessControlPage() {
           },
           {
             title: "Installation",
-            description: "Turnstile and card access installation is done by our own team."
+            description: "Installation and commissioning support is provided."
           },
           {
             title: "Technical Support",
@@ -474,7 +474,7 @@ export default function AccessControlPage() {
                   className="bg-primary hover:bg-primary/90 text-white px-8 py-3"
                 >
                   <Link href="/iletisim">
-                    Ücretsiz Keşif Talep Edin
+                    Keşif Talep Edin
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>

@@ -1,4 +1,4 @@
-import { Building, Users, Award, Globe, Timer, Smartphone, ArrowRight, Shield, Database, Wifi, Fingerprint, BarChart3, Network, Cpu, Gauge } from "lucide-react";
+import { Building, Globe, Timer, Smartphone, ArrowRight, Shield, Database, Wifi, Fingerprint, BarChart3, Network, Cpu, Gauge } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -683,7 +683,7 @@ export default function About() {
                       
                       <div className="pt-2">
                         <p className="text-slate-600 italic">
-                          "PDKS mobil uygulamalarında kullanıcı deneyimini en üst seviyede tutarak, 
+                          "PDKS mobil uygulamalarında kullanıcı deneyimini ön planda tutarak, 
                           her platformda kesintisiz çalışan çözümler geliştiriyorum."
                         </p>
                       </div>

@@ -258,7 +258,7 @@ export default function Home() {
           >
             <div className="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-lg transition-shadow duration-200">
               <h3 className="font-bold text-lg mb-4 text-slate-800">Kurulum ve Montaj</h3>
-              <p className="text-slate-600">Turnike, yüz tanıma ve bariyer montajını kendi ekibimiz yapar</p>
+              <p className="text-slate-600">Turnike, yüz tanıma ve bariyer için kurulum ve devreye alma desteği sağlanır</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-lg transition-shadow duration-200">
               <h3 className="font-bold text-lg mb-4 text-slate-800">Ücretsiz Danışmanlık</h3>
@@ -312,7 +312,7 @@ export default function Home() {
                   <p>
                     <strong>Web tabanlı PDKS programı</strong> sayesinde kurulum gerektirmeden 
                     herhangi bir internet bağlantısı bulunan yerden sisteminizi yönetebilirsiniz. 
-                    Mobil cihazlardan takip, evden çalışma desteği ve bulut tabanlı yedekleme hizmetlerimiz mevcuttur.
+                    Mobil cihazlardan takip ve evden çalışma desteği mevcuttur.
                   </p>
                   <p>
                     <strong>Biyometrik güvenlik sistemleri</strong> kategorisinde sunduğumuz çözümler:

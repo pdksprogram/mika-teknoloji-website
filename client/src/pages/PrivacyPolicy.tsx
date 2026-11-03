@@ -193,13 +193,9 @@ export default function PrivacyPolicy() {
                     <Shield className="h-4 w-4 mr-1" />
                     KVKK Uyumlu
                   </span>
-                  <span className="flex items-center">
-                    <FileText className="h-4 w-4 mr-1" />
-                    GDPR Uyumlu
-                  </span>
                 </div>
                 <p className="text-center text-xs text-slate-500 mt-4">
-                  Bu gizlilik politikası uluslararası veri koruma standartlarına uygun olarak hazırlanmıştır.
+                  Bu gizlilik politikası 6698 sayılı KVKK kapsamında hazırlanmıştır.
                 </p>
               </div>
             </div>
