@@ -260,7 +260,7 @@ export default function QRPDKSPage() {
               <span className="text-primary font-bold text-sm tracking-widest uppercase">Kurumsal Teknoloji Çözümleri</span>
             </div>
             
-            <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+            <h2 className="text-4xl md:text-7xl font-bold text-white mb-8 leading-tight">
               QR Kod PDKS 
               <span className="text-transparent bg-gradient-to-r from-primary via-slate-700 to-primary bg-clip-text animate-pulse">
                 Avantajları
@@ -283,7 +283,7 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Q1 - QR Kod Okutma */}
-      <section data-testid="Q1" className="relative py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50">
+      <section data-testid="Q1" className="relative overflow-hidden py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50">
         
         {/* Decorative Background */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-primary/5 to-transparent rounded-full blur-3xl"></div>
@@ -394,7 +394,7 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Q2 - Mobil Uygulama */}
-      <section data-testid="Q2" className="relative py-20 bg-gradient-to-br from-slate-100 via-white to-slate-100">
+      <section data-testid="Q2" className="relative overflow-hidden py-20 bg-gradient-to-br from-slate-100 via-white to-slate-100">
         
         {/* Decorative Background */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
@@ -509,7 +509,7 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Q3 - Temassız Sistem */}
-      <section data-testid="Q3" className="relative py-20 bg-slate-50">
+      <section data-testid="Q3" className="relative overflow-hidden py-20 bg-slate-50">
         
         {/* Decorative Background */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
@@ -650,7 +650,7 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Q4 - Bulut Tabanlı Altyapı */}
-      <section data-testid="Q4" className="relative py-20 bg-slate-50">
+      <section data-testid="Q4" className="relative overflow-hidden py-20 bg-slate-50">
         
         {/* Decorative Background */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
@@ -766,7 +766,7 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Q5 - Kolay Kurulum */}
-      <section data-testid="Q5" className="relative py-20 bg-slate-50">
+      <section data-testid="Q5" className="relative overflow-hidden py-20 bg-slate-50">
         
         {/* Decorative Background */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
@@ -882,7 +882,7 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Q6 - Mobil Şikayet ve Talep */}
-      <section data-testid="Q6" className="relative py-20 bg-slate-50">
+      <section data-testid="Q6" className="relative overflow-hidden py-20 bg-slate-50">
         
         {/* Decorative Background */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
@@ -998,7 +998,7 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Q7 - Anket ve Geri Bildirim Sistemi */}
-      <section data-testid="Q7" className="relative py-20 bg-slate-50">
+      <section data-testid="Q7" className="relative overflow-hidden py-20 bg-slate-50">
         
         {/* Decorative Background */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
@@ -1101,7 +1101,7 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Q8 - Elektronik Bordro Onay Sistemi */}
-      <section data-testid="Q8" className="relative py-20 bg-slate-50">
+      <section data-testid="Q8" className="relative overflow-hidden py-20 bg-slate-50">
         
         {/* Decorative Background */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
