@@ -11,6 +11,7 @@ import LoadingScreen from "@/components/LoadingScreen";
 import { LanguageProvider } from "@/hooks/useLanguage";
 import { initGA } from "@/lib/analytics";
 import { useAnalytics } from "@/hooks/use-analytics";
+import { VarsayilanKanonik } from "@/seo/SEO";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Solutions from "@/pages/Solutions";
@@ -157,7 +158,9 @@ function Router() {
 }
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  // Ön-render (sunucu, window yok) yükleme ekranını atlar ki ham HTML'de sayfa içeriği bulunsun;
+  // tarayıcıda davranış değişmez.
+  const [isLoading, setIsLoading] = useState(typeof window !== "undefined");
 
   useEffect(() => {
     // Initialize Google Analytics when app loads
@@ -192,6 +195,7 @@ function App() {
             >
               <Header />
               <main>
+                <VarsayilanKanonik />
                 <Router />
               </main>
               <SiteFooter />

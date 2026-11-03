@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import { Shield, FileText, Eye, Lock } from "lucide-react";
+import SEO from "@/seo/SEO";
 // Removed problematic import
 
 export default function PrivacyPolicy() {
   return (
+    <>
+    <SEO title="Mobil Uygulama Gizlilik Sözleşmesi | Mika Teknoloji" description="Mika Teknoloji mobil uygulamaları (Google Play ve App Store) için gizlilik politikası: toplanan veriler, kullanım amacı ve haklarınız." />
     <motion.div 
       className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-16"
       initial={{ opacity: 0 }}
@@ -208,5 +211,6 @@ export default function PrivacyPolicy() {
         </motion.div>
       </div>
     </motion.div>
+    </>
   );
 }

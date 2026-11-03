@@ -2,6 +2,7 @@ import { Shield, Clock, Users, Key, Eye, CreditCard } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import SEO from "@/seo/SEO";
 
 export default function Solutions() {
   const solutions = [
@@ -45,6 +46,7 @@ export default function Solutions() {
 
   return (
     <div className="min-h-screen py-20">
+      <SEO title="Çözümler | PDKS ve Geçiş Kontrol | Mika Teknoloji" description="Personel devam kontrol, kartlı ve QR geçiş, bekçi tur, otopark ve turnike çözümleri: işletmenize uygun Mika Teknoloji çözümleri." />
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

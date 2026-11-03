@@ -1,11 +1,14 @@
 // Yasal sayfalar (Deniz 23.09): Meta uygulama ayarları (Hizmet Şartları, Veri Silme URL'si) + WhatsApp
 // kvkk_foto_onay şablonundaki aydınlatma bağlantısı + PayTR canlı mod. Dil PrivacyPolicy.tsx ile aynı.
 // Metinler taslaktır; hukuki son kontrol Deniz/avukat onayındadır.
+import SEO from "@/seo/SEO";
+
 type Bolum = { baslik: string; metin: string[] };
 
 function YasalSayfa({ baslik, alt, bolumler }: { baslik: string; alt: string; bolumler: Bolum[] }) {
   return (
     <div className="min-h-screen bg-slate-50 py-16">
+      <SEO title={`${baslik} | Mika Teknoloji`} description={`${alt}.`} />
       <div className="container mx-auto max-w-4xl px-4">
         <div className="rounded-2xl border-t-4 border-primary bg-white p-8 shadow-lg">
           <h1 className="mb-2 text-3xl font-bold text-slate-800">{baslik}</h1>

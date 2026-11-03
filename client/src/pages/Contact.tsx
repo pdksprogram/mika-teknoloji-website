@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import SEO from "@/seo/SEO";
 
 export default function Contact() {
   const contactInfo = [
@@ -41,6 +42,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen py-20">
+      <SEO title="İletişim | Mika Teknoloji" description="PDKS, kartlı geçiş, turnike ve bariyer sistemleri için teklif ve destek: Mika Teknoloji iletişim bilgileri, adres ve telefon." />
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

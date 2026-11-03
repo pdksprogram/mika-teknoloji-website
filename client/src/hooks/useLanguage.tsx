@@ -96,7 +96,8 @@ const translations = {
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [selectedLanguage, setSelectedLanguage] = useState<Language>(() => {
     // Get from localStorage or default to Turkish
-    const saved = localStorage.getItem('language');
+    // Ön-render (sunucu) ortamında localStorage yoktur; Türkçe ile üretilir.
+    const saved = typeof localStorage !== 'undefined' ? localStorage.getItem('language') : null;
     return (saved as Language) || 'tr';
   });
 

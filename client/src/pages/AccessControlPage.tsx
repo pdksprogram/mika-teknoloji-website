@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useEffect } from "react";
 import { trackAccessControlView, trackProductView } from "@/lib/analytics";
+import SEO from "@/seo/SEO";
 
 // Access Control Panel images  
 const accessControlPanel = "/access-control-panel.png";
@@ -21,29 +22,17 @@ export default function AccessControlPage() {
     trackProductView('Access Control Sistemleri', 'access_control_sistemleri');
   }, []);
 
-  // SEO Meta Tags
-  useEffect(() => {
-    const title = selectedLanguage === 'tr' 
+  // SEO başlık/açıklama: <SEO> (Helmet) ile yazılır; ön-render ham HTML'e de girer.
+    const title = selectedLanguage === 'tr'
       ? 'Profesyonel Access Control Sistemleri | Mika Teknoloji - Kurumsal Güvenlik Teknolojileri'
       : 'Professional Access Control Systems | Mika Technology - Corporate Security Technologies';
-    
+
     const description = selectedLanguage === 'tr'
       ? 'Mika Teknoloji RFID kartlı geçiş, biyometrik parmak izi, yüz tanıma ve QR kodlu mobil erişim sistemleri ile kapsamlı access control çözümleri. PDKS entegrasyonu, turnike sistemleri.'
       : 'Mika Technology comprehensive access control solutions with RFID card access, biometric fingerprint, face recognition and QR mobile access systems. PDKS integration, turnstile systems.';
-      
-    document.title = title;
-    
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', description);
-    } else {
-      metaDesc = document.createElement('meta');
-      metaDesc.setAttribute('name', 'description');
-      metaDesc.setAttribute('content', description);
-      document.head.appendChild(metaDesc);
-    }
 
-    // Keywords
+  // Keywords
+  useEffect(() => {
     const keywords = selectedLanguage === 'tr'
       ? 'access control, geçiş kontrol sistemleri, RFID kartlı geçiş, parmak izi sistemi, yüz tanıma, QR mobil erişim, PDKS, turnike sistemleri, güvenlik sistemleri, personel takip'
       : 'access control systems, RFID card access, fingerprint systems, face recognition, QR mobile access, PDKS, turnstile systems, security systems, personnel tracking';
@@ -427,6 +416,7 @@ export default function AccessControlPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO title={title} description={description} />
       {/* Hero Section with Animation */}
       <section className="relative py-20 bg-gradient-to-br from-primary/5 via-white to-primary/10 overflow-hidden">
         <div className="container mx-auto px-4">

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
+import SEO from "@/seo/SEO";
 
 export default function Blog() {
   // Professional SEO-optimized blog posts based on Meyer and Perkotek research
@@ -110,6 +111,7 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO title="Blog | PDKS ve Geçiş Kontrol Rehberleri | Mika Teknoloji" description="PDKS, personel takip, kartlı geçiş ve turnike sistemleri üzerine rehber yazılar ve sektör bilgileri." />
       {/* Header Section */}
       <motion.div 
         initial={{ opacity: 0, y: -20 }}

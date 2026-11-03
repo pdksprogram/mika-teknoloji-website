@@ -1,4 +1,7 @@
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'wouter';
+
+const SITE_KOKU = 'https://mikateknoloji.com';
 
 interface SEOProps {
   title?: string;
@@ -15,7 +18,9 @@ export default function SEO({
   jsonLd = null,
   noindex = false
 }: SEOProps) {
-  const url = typeof window !== 'undefined' ? (canonical || window.location.href) : (canonical || 'https://mikateknoloji.com/');
+  // Kanonik adres sorgu dizesiz, sabit alan adıyla kurulur; ön-render ve tarayıcıda aynı sonucu verir.
+  const [location] = useLocation();
+  const url = canonical || `${SITE_KOKU}${location}`;
   
   return (
     <Helmet>
@@ -46,6 +51,16 @@ export default function SEO({
             ))
           : <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       )}
+    </Helmet>
+  );
+}
+// Kendi kanonik adresini yazmayan sayfalar için varsayılan: o sayfanın kendi adresi.
+// App'te rotalardan ÖNCE çizilir; sayfa kendi canonical'ını verirse Helmet onu kullanır (son yazan kazanır).
+export function VarsayilanKanonik() {
+  const [location] = useLocation();
+  return (
+    <Helmet>
+      <link rel="canonical" href={`${SITE_KOKU}${location}`} />
     </Helmet>
   );
 }

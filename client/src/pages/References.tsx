@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, MapPin, Star } from 'lucide-react';
+import SEO from "@/seo/SEO";
 // Removed problematic import
 // Removed problematic import
 // Removed problematic import
@@ -133,6 +134,7 @@ const customers = [
 const References: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
+      <SEO title="Referanslar | Mika Teknoloji" description="PDKS, turnike ve kartlı geçiş sistemlerimizi kullanan kurumlar ve müşteri başarı hikâyeleri." />
       {/* Professional Hero Section */}
       <section className="relative py-24 bg-gradient-to-r from-slate-900 via-gray-800 to-slate-900">
         <div className="absolute inset-0 bg-gray-900/95"></div>

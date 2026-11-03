@@ -131,7 +131,10 @@ export default function Home() {
           ])}
         </script>
       </Helmet>
-      
+
+      {/* Sayfanın tek H1'i: görsel tasarımı değiştirmez, arama motoru ve ekran okuyucu içindir. */}
+      <h1 className="sr-only">PDKS ve Kartlı Geçiş Sistemleri | Mika Teknoloji</h1>
+
       {/* Hero Carousel Section */}
       <section className="relative">
         <div className="absolute top-4 right-4 z-20 text-xs font-semibold text-pink-600 bg-white/80 px-2 py-1 rounded">S1</div>

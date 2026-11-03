@@ -2,6 +2,7 @@ import { Building, Users, Award, Globe, Timer, Smartphone, ArrowRight, Shield, D
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import SEO from "@/seo/SEO";
 // Removed problematic import
 // Removed problematic import
 // Removed problematic import
@@ -18,6 +19,7 @@ export default function About() {
 
   return (
     <div className="min-h-screen py-20">
+      <SEO title="Hakkımızda | Mika Teknoloji" description="30 yılı aşkın deneyimle PDKS personel devam kontrol yazılımı, kartlı geçiş, turnike ve bariyer sistemleri üreten Mika Teknoloji hakkında." />
       <div className="container mx-auto px-4">
         {/* Corporate Hero Section - Idenfit Style */}
         <section className="mb-20">

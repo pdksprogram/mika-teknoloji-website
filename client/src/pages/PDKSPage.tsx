@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { useEffect } from "react";
 import { trackPDKSView, trackProductView } from "@/lib/analytics";
+import SEO from "@/seo/SEO";
 
 // Real device images
 const facialRecognitionDevice = "/facial-device.png";
@@ -22,29 +23,17 @@ export default function PDKSPage() {
     trackProductView('PDKS Personel Devam Kontrol Sistemi', 'pdks_sistemleri');
   }, []);
 
-  // SEO Meta Tags
-  useEffect(() => {
-    const title = selectedLanguage === 'tr' 
+  // SEO başlık/açıklama: <SEO> (Helmet) ile yazılır; ön-render ham HTML'e de girer.
+    const title = selectedLanguage === 'tr'
       ? 'Profesyonel PDKS Sistemleri | Mika Teknoloji - Personel Devam Kontrol Çözümleri'
       : 'Professional PDKS Systems | Mika Technology - Personnel Attendance Control Solutions';
-    
+
     const description = selectedLanguage === 'tr'
       ? 'Türkiye\'nin lider PDKS sistemi sağlayıcısı. Yüz tanıma, parmak izi, QR kod ve RFID kartlı personel devam kontrol sistemleri. 30+ yıl deneyim, 100.000+ kullanıcı.'
       : 'Turkey\'s leading PDKS system provider. Facial recognition, fingerprint, QR code and RFID card personnel attendance control systems. 30+ years experience, 100,000+ users.';
-      
-    document.title = title;
-    
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', description);
-    } else {
-      metaDesc = document.createElement('meta');
-      metaDesc.setAttribute('name', 'description');
-      metaDesc.setAttribute('content', description);
-      document.head.appendChild(metaDesc);
-    }
 
-    // Keywords
+  // Keywords
+  useEffect(() => {
     const keywords = selectedLanguage === 'tr'
       ? 'PDKS, personel devam kontrol sistemi, yüz tanıma PDKS, parmak izi sistemi, QR kod personel takip, RFID kart sistemi, mesai hesaplama, vardiya yönetimi, bordro entegrasyonu'
       : 'PDKS, personnel attendance control system, facial recognition PDKS, fingerprint system, QR code personnel tracking, RFID card system, working time calculation, shift management, payroll integration';
@@ -458,7 +447,7 @@ export default function PDKSPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
-      {/* SEO Head would go here in a real implementation */}
+      <SEO title={title} description={description} />
       
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
