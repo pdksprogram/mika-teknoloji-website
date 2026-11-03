@@ -29,7 +29,6 @@ import {
   ChevronDown
 } from "lucide-react";
 import { Link } from "wouter";
-import videoDemo from "@assets/personel-takip-demo.mp4";
 import mobilAppImage from "@assets/mobile-app-interface.png";
 import mobileAdminImage from "@assets/mobile-admin-interface.png";
 import vardiyaYonetimiImage from "@assets/vardiya-yonetimi-interface.png";
@@ -300,9 +299,9 @@ export default function PersonelTakipPage() {
               Bulut Tabanlı Personel Takip ve İnsan Kaynakları Yönetimi
             </h1>
             
-            <h2 className="text-xl md:text-2xl text-slate-600 font-light mb-8">
-              İstanbul, İzmir, Ankara, Bursa ve tüm Türkiye'deki fabrikalar, üretim tesisleri, ofisler ve perakende mağazaları için <Link href="/urunler" className="text-primary hover:text-primary/80 font-medium underline">bulut tabanlı personel takip çözümleri</Link>. PDKS sistemi ile vardiya yönetimi, mesai takibi ve insan kaynakları süreçlerinizi dijitalleştirin.
-            </h2>
+            <p className="text-xl md:text-2xl text-slate-600 font-light mb-8">
+              Vardiya, mesai ve izin takibi tek bulut panelde.
+            </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
               <Button 
@@ -330,46 +329,15 @@ export default function PersonelTakipPage() {
               </Button>
             </div>
 
-            {/* Hero Video */}
-            <div className="relative bg-white rounded-2xl shadow-2xl p-2 max-w-4xl mx-auto">
-              <video 
-                className="w-full aspect-video rounded-xl object-cover"
-                autoPlay
-                loop
-                muted
-                playsInline
-                disablePictureInPicture
-                preload="metadata"
-                poster="/images/slayt/bulut-pdks-paneli.jpg"
-                aria-label="Mika Teknoloji personel takip sistemi demo videosu"
-              >
-                <source src={videoDemo} type="video/mp4" />
-                <div className="aspect-video bg-slate-50 rounded-xl flex items-center justify-center">
-                  <div className="text-center">
-                    <Video className="h-16 w-16 text-slate-400 mx-auto mb-4" />
-                    <p className="text-slate-600 font-medium">Tarayıcınız video oynatmayı desteklemiyor</p>
-                  </div>
-                </div>
-              </video>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Client Logos */}
-      <section data-testid="P2" className="relative py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-12"
-            {...fadeInUp}
-          >
-            <p className="text-slate-500 font-medium mb-8">Referanslarımızdan bazıları</p>
-            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-              {[1,2,3,4,5,6].map((i) => (
-                <div key={i} className="w-24 h-12 bg-slate-200 rounded flex items-center justify-center">
-                  <span className="text-slate-400 text-xs">LOGO {i}</span>
-                </div>
-              ))}
+            {/* Ürün görseli: gerçek bulut PDKS paneli (kişisel veriler maskeli) */}
+            <div className="bg-white rounded-lg border border-slate-200 shadow-xl p-2 max-w-4xl mx-auto">
+              <img
+                src="/images/slayt/bulut-pdks-paneli.jpg"
+                alt="Mika bulut PDKS paneli giriş-çıkış kayıtları ekranı"
+                width={1400}
+                height={603}
+                className="w-full h-auto rounded"
+              />
             </div>
           </motion.div>
         </div>
@@ -1055,6 +1023,9 @@ export default function PersonelTakipPage() {
               </Card>
             ))}
           </motion.div>
+          <p className="max-w-4xl mx-auto mt-10 text-sm text-slate-500">
+            İstanbul, İzmir, Ankara, Bursa ve tüm Türkiye'deki fabrika, üretim tesisi, ofis ve perakende mağazalarına <Link href="/urunler" className="text-primary hover:underline">bulut tabanlı personel takip</Link> hizmeti veriyoruz.
+          </p>
         </div>
       </section>
     </div>

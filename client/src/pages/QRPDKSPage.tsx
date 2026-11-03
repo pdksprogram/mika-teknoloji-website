@@ -1,16 +1,11 @@
+import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Helmet } from "react-helmet-async";
 import { trackEvent } from "@/lib/analytics";
-import { 
-  ArrowRight, 
-  QrCode, 
-  Phone
-} from "lucide-react";
+import { ArrowRight, Check, Phone } from "lucide-react";
 import { Link } from "wouter";
 import qrKodOkumaImage from "@assets/image_1758816518741.png";
-import qrPdksDemoVideo from "@assets/Untitled Video_1759323015173.mp4";
 import giriscikisListesiImage from "@assets/IMG_4251_1759436174932.png";
 import talepOlusturImage from "@assets/IMG_4252_1759436659395.png";
 import avansTalepImage from "@assets/IMG_4253_1759436694818.png";
@@ -19,6 +14,127 @@ import vardiyaKartiImage from "@assets/IMG_4255_1759437674529.png";
 import sikayetOlusturImage from "@assets/IMG_4256_1759438160354.png";
 import anketPortaliImage from "@assets/IMG_4257_1759438578441.png";
 import bordroPortaliImage from "@assets/IMG_4258_1759438746593.png";
+
+type Bolum = { id: string; ust: string; baslik: string; gorseller: { src: string; alt: string }[]; metin: ReactNode; maddeler: string[] };
+
+const GIRIS_EKRANLARI = [
+  { src: giriscikisListesiImage, alt: "QR PDKS mobil uygulama giriş-çıkış listesi ekranı" },
+  { src: yillikIzinBilgileriImage, alt: "QR PDKS mobil uygulama yıllık izin bilgileri ekranı" },
+  { src: talepOlusturImage, alt: "QR PDKS mobil uygulama izin talebi ekranı" },
+];
+
+const BOLUMLER: Bolum[] = [
+  {
+    id: "Q1",
+    ust: "Teknolojik Üstünlük",
+    baslik: "QR Kod PDKS + Güvenlik Sistemi",
+    gorseller: [{ src: qrKodOkumaImage, alt: "QR Kod Okuma Mobil Uygulama - Mika Teknoloji PDKS" }],
+    metin: (
+      <>
+        <p><strong className="text-slate-900 font-semibold">Konum doğrulama</strong> ile giriş-çıkışın tanımlı alanda yapıldığını kontrol edin. Sahte konum (Fake GPS) tespit edilirse kayıt alınmaz.</p>
+        <p>Mükerrer kayıt önleme, konum doğrulama ve jeofencing birlikte çalışır; <span className="text-slate-900 font-medium">konum kontrollü PDKS</span> çözümü.</p>
+      </>
+    ),
+    maddeler: ["Fake GPS Tespiti", "Konum Doğrulama", "Mükerrer ID Önleme", "Jeofencing", "Root/Jailbreak Tespiti", "VPN/Proxy Kontrolü"],
+  },
+  {
+    id: "Q2",
+    ust: "Akıllı Onay Sistemi",
+    baslik: "Bulut Tabanlı Otomatik Düzeltme ve Onay Akışı",
+    gorseller: [{ src: giriscikisListesiImage, alt: "Giriş Çıkış Listesi - Mika Teknoloji PDKS" }],
+    metin: (
+      <>
+        <p><strong className="text-slate-900 font-semibold">Klasik PDKS sistemlerinde</strong> personel çıkış yapmayı unuttuğunda, yöneticiler personeli arayıp kaçta çıktığını öğrenip elle müdahale etmek zorunda kalıyordu.</p>
+        <p><strong className="text-slate-900 font-semibold">QR Kod PDKS bulut sistemimizde</strong> artık bu iş yükü ortadan kalkıyor! Personel düzeltme kaydını mobil uygulamadan girer, amirine otomatik bildirim gider. Amir onayladıktan sonra kayıt İK'ya düşer. İK kimin onayladığını görür ve onaylayınca <span className="text-slate-900 font-medium">hareket otomatik olarak düzenlenir</span>.</p>
+        <p>İş yükünüzü azaltıyor, süreçlerinizi disipline sokuyoruz.</p>
+      </>
+    ),
+    maddeler: ["Personel Düzeltme Talebi", "Amir Onay Sistemi", "İK Kontrol Paneli", "Otomatik Düzeltme", "Anlık Bildirimler", "Onay Geçmişi"],
+  },
+  {
+    id: "Q3",
+    ust: "Hiyerarşik Onay Sistemi",
+    baslik: "İzin ve Avans Talep Yönetimi",
+    gorseller: [{ src: talepOlusturImage, alt: "Talep Oluşturma Ekranı - Mika Teknoloji PDKS" }, { src: avansTalepImage, alt: "Avans Talep Ekranı - Mika Teknoloji PDKS" }],
+    metin: (
+      <>
+        <p><strong className="text-slate-900 font-semibold">QR tabanlı personel devam kontrol sistemimizde</strong> izin ve avans talepleri tamamen dijital ve hiyerarşik onay akışıyla yönetiliyor.</p>
+        <p>Personel, <strong className="text-slate-900 font-semibold">yeni nesil personel devam kontrol sistemi</strong> mobil uygulamasından izin talebini girer ve ilgili tarihteki izin yöneticisine otomatik düşer. Yönetici onayladıktan sonra talep İK'ya (İnsan Kaynakları) ulaşır. İK da onayladığında <span className="text-slate-900 font-medium">izin otomatik olarak sisteme yansır</span>.</p>
+        <p>Aynı şekilde avans talepleri de <strong className="text-slate-900 font-semibold">bulut tabanlı personel kontrol sisteminde</strong> aynı hiyerarşik yapıyla yönetilir. Personel → Yönetici → İK onay zinciri ile tüm süreç şeffaf, denetlenebilir ve tamamen otomatik hale gelir.</p>
+      </>
+    ),
+    maddeler: ["İzin Talep Sistemi", "Avans Yönetimi", "Hiyerarşik Onay", "Otomatik İK Akışı", "Şeffaf Süreç", "Mobil Erişim"],
+  },
+  {
+    id: "Q4",
+    ust: "Mobil İzin Takibi",
+    baslik: "Yıllık İzin Yönetim Sistemi",
+    gorseller: [{ src: yillikIzinBilgileriImage, alt: "Yıllık İzin Bilgilerim - Mika Teknoloji PDKS" }],
+    metin: (
+      <>
+        <p><strong className="text-slate-900 font-semibold">Yeni nesil personel devam kontrol sistemimizde</strong> personeller ne kadar yıllık izin kaldığını ve ne kadar kullandığını cep telefonlarından anında görüntüleyebiliyor.</p>
+        <p><strong className="text-slate-900 font-semibold">İnsan kaynakları yönetiminin etkinliğini</strong> artırarak, işletmedeki yıllık izin durumlarını personeller hak edişlerine ve işe giriş tarihlerine göre <span className="text-slate-900 font-medium">sistematik şekilde</span> cep telefonlarından görebilmektedirler.</p>
+        <p>Kalan izin günleri, kullanılan izinler, hak ediş bilgileri ve izin geçmişi mobil uygulamada tek ekranda şeffaf bir şekilde sunulur. Bu sayede personel planlaması kolaylaşır ve izin yönetimi tamamen otomatik hale gelir.</p>
+      </>
+    ),
+    maddeler: ["Anlık İzin Takibi", "Hak Ediş Hesaplama", "İzin Geçmişi", "Mobil Erişim", "Otomatik Güncelleme", "Şeffaf Raporlama"],
+  },
+  {
+    id: "Q5",
+    ust: "Akıllı Vardiya",
+    baslik: "Mobil Shift Planlama Sistemi",
+    gorseller: [{ src: vardiyaKartiImage, alt: "Vardiya Kartı - Mika Teknoloji PDKS" }],
+    metin: (
+      <>
+        <p><strong className="text-slate-900 font-semibold">Hastane personel devam kontrol sistemi</strong> ve <strong className="text-slate-900 font-semibold"> mağaza personel devam kontrol sisteminde</strong> shift yapıldığında, personel hangi vardiyaya geleceğini mobil sisteminden anında görebilmektedir.</p>
+        <p>Personelin müdürü ya da amiri tarafından yapılan <strong className="text-slate-900 font-semibold">shift planlama</strong>, doğrudan personelin uygulama kısmına düşer. Bu sayede sistematik bir şekilde akış düzenlenir ve <span className="text-slate-900 font-medium">yeni nesil personel devam kontrol sistemi</span> olan ESOFT için +1 özellik katmaktadır.</p>
+        <p>Gerek hastanelerde, gerekse mağaza yönetim sistemlerinde vardiya çizelgeleri otomatik olarak güncellenir. Personeller hangi gün, hangi saatte ve hangi lokasyonda çalışacaklarını mobil cihazlarından takip edebilirler.</p>
+      </>
+    ),
+    maddeler: ["Otomatik Shift Bildirimi", "Vardiya Takibi", "Anlık Güncelleme", "Çoklu Lokasyon", "Hastane PDKS", "Mağaza PDKS"],
+  },
+  {
+    id: "Q6",
+    ust: "İletişim Platformu",
+    baslik: "Mobil Şikayet ve Talep Yönetimi",
+    gorseller: [{ src: sikayetOlusturImage, alt: "Yeni Şikayet Oluştur - Mika Teknoloji PDKS" }],
+    metin: (
+      <>
+        <p>Personeller işletme ile ilgili şikayetlerini <strong className="text-slate-900 font-semibold">mobil aplikasyon üzerinden</strong> anlık olarak İK platformuna ileterek, insan kaynakları departmanı ile doğrudan iletişime geçebilmektedir.</p>
+        <p><strong className="text-slate-900 font-semibold">Yeni nesil personel devam kontrol sisteminde</strong> personeller, olayların fotoğraflarını çekerek, açıklama ekleyerek ve kategori kodu girerek şikayetlerini insan kaynakları departmanına ve ilgili müdürlüklere mobil aplikasyon üzerinden iletmektedir.</p>
+        <p>Bu özellik hem <span className="text-slate-900 font-medium">erişilebilirlik</span> hem de <span className="text-slate-900 font-medium">personel memnuniyeti</span> yönünden firmaya önemli bir üstünlük sağlamaktadır. Şeffaf iletişim kanalları sayesinde çalışan bağlılığı artar ve sorunlar hızla çözüme kavuşturulur.</p>
+      </>
+    ),
+    maddeler: ["Fotoğraf Ekleme", "İK İletişimi", "Kategori Kodları", "Anlık Bildirim", "Şeffaf Süreç", "Hızlı Çözüm"],
+  },
+  {
+    id: "Q7",
+    ust: "Geri Bildirim",
+    baslik: "Mobil Anket ve Geri Bildirim Platformu",
+    gorseller: [{ src: anketPortaliImage, alt: "Anket Portalı - Mika Teknoloji PDKS" }],
+    metin: (
+      <>
+        <p><strong className="text-slate-900 font-semibold">Anket Portalı</strong> ile personellerinizin görüş ve önerilerini mobil uygulama üzerinden toplayın.</p>
+        <p>Çalışan memnuniyeti anketleri, performans değerlendirmeleri, öneri sistemleri ve geri bildirim formları ile işletme içi iletişimi güçlendirin. Tüm anket sonuçları <span className="text-slate-900 font-medium">otomatik raporlanır</span> ve analiz edilir.</p>
+      </>
+    ),
+    maddeler: ["Anket Oluşturma", "Mobil Katılım", "Otomatik Raporlama", "Analiz Araçları"],
+  },
+  {
+    id: "Q8",
+    ust: "Elektronik İmza",
+    baslik: "Dijital Bordro Onay ve Elektronik İmza Sistemi",
+    gorseller: [{ src: bordroPortaliImage, alt: "Bordro Portalı - Elektronik İmza Sistemi - Mika Teknoloji PDKS" }],
+    metin: (
+      <>
+        <p><strong className="text-slate-900 font-semibold">Yeni nesil personel devam kontrol sisteminde</strong> bordro bilgileri istenildiği taktirde personellerin mobil aplikasyonlarına push bildirim ile gönderilir.</p>
+        <p>Personel günlük giriş-çıkışlarını ve mesai saatlerini tek tek kontrol ederek onaylar ve <strong className="text-slate-900 font-semibold"> İK departmanına elektronik ortamda</strong> gönderir. Onay sonrası tüm giriş-çıkışlar kilitlenir ve İK departmanı sorumlusu hariç kimse değişiklik yapamaz.</p>
+        <p>Bu şekilde giriş-çıkışlar <span className="text-slate-900 font-medium">elektronik ortamda imzalanmış</span> olur. İleride personel ile ilgili doğacak resmi anlaşmazlıklarda yasal bir delil olarak firma tarafından belge niteliğinde tutulmaktadır. Bu özellik firmaya çok önemli bir hukuki güvence sağlamaktadır.</p>
+      </>
+    ),
+    maddeler: ["Push Bildirim", "Elektronik Onay", "Kayıt Kilitleme", "Yasal Delil", "Bordro Entegrasyonu", "Hukuki Güvence"],
+  },
+];
 
 export default function QRPDKSPage() {
   const handleDemoRequest = () => {
@@ -162,1059 +278,85 @@ export default function QRPDKSPage() {
         </script>
       </Helmet>
 
-      {/* Hero Section with Video Header */}
-      <section data-testid="hero-section" className="relative py-20 px-4 bg-slate-50">
-        <div className="container mx-auto text-center">
-          <motion.div 
-            className="max-w-4xl mx-auto"
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <motion.div 
-              className="inline-flex items-center bg-primary/10 px-6 py-2 rounded-full mb-6"
-              initial={false}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <QrCode className="w-4 h-4 text-primary mr-3" />
-              <span className="text-primary font-medium text-sm tracking-wider uppercase">
-                QR Kod Teknolojisi
-              </span>
-            </motion.div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight">
+      {/* Giriş */}
+      <section data-testid="hero-section" className="py-16 px-4 bg-slate-50 border-b border-slate-200">
+        <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-sm font-semibold tracking-wider uppercase text-primary mb-4">QR Kod PDKS</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
               QR Kod PDKS - Mobil Personel Takip Sistemi
             </h1>
-            
-            <h2 className="text-xl md:text-2xl text-slate-600 font-light mb-8">
-              Akıllı telefonlarla QR kod okutarak personel giriş-çıkış takibi yapın. 
-              <Link href="/urunler" className="text-primary hover:text-primary/80 font-medium underline"> Temassız PDKS çözümü</Link> ile 
-              İstanbul, İzmir, Ankara ve tüm Türkiye'deki işletmeler için güvenli personel kontrolü.
-            </h2>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-              <Button 
-                asChild 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-                onClick={handleDemoRequest}
-                data-testid="button-demo-request"
-              >
+            <p className="text-xl text-slate-600 mb-8">
+              Personel, akıllı telefonuyla QR kod okutarak giriş-çıkış yapar; konum doğrulanır, kayıt anında panele düşer.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button asChild size="lg" onClick={handleDemoRequest} data-testid="button-demo-request">
                 <Link href="/iletisim">
-                  <span>Ücretsiz Demo Talep Et</span>
-                  <ArrowRight className="ml-3 h-5 w-5" />
+                  Ücretsiz Demo Talep Et
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              
-              <Button 
-                asChild 
-                variant="outline" 
-                size="lg" 
-                className="border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-4 rounded-xl font-semibold text-lg"
-                onClick={handleContactRequest}
-                data-testid="button-contact-request"
-              >
-                <Link href="/iletisim">
-                  <span>Online Sunum Talep Et</span>
-                </Link>
+              <Button asChild size="lg" variant="outline" onClick={handleContactRequest} data-testid="button-contact-request">
+                <Link href="/iletisim">Online Sunum Talep Et</Link>
               </Button>
             </div>
+          </div>
+          <div className="flex justify-center gap-3 sm:gap-4">
+            {GIRIS_EKRANLARI.map((e, i) => (
+              <img
+                key={e.alt}
+                src={e.src}
+                alt={e.alt}
+                width={1290}
+                height={2796}
+                className={`w-1/3 max-w-[200px] h-auto rounded-2xl border border-slate-200 shadow-lg ${i === 1 ? "" : "mt-8"}`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* Video Header Section */}
-            <div className="relative bg-white rounded-2xl shadow-2xl p-2 max-w-4xl mx-auto">
-              <div className="aspect-video rounded-xl overflow-hidden bg-black">
-                <video 
-                  src={qrPdksDemoVideo}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  disablePictureInPicture
-                  className="w-full h-full object-contain"
-                  data-testid="qr-pdks-demo-video"
-                >
-                  Tarayıcınız video etiketini desteklemiyor.
-                </video>
+      <section className="pt-20 pb-4 bg-white">
+        <div className="container mx-auto px-4 text-center max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">QR Kod PDKS Avantajları</h2>
+          <p className="text-lg text-slate-600">
+            Giriş-çıkış, izin, avans, vardiya ve bordro onayı tek mobil uygulamada.
+          </p>
+        </div>
+      </section>
+
+      {BOLUMLER.map((b, i) => (
+        <section key={b.id} data-testid={b.id} className={`py-16 ${i % 2 === 0 ? "bg-white" : "bg-slate-50"}`}>
+          <div className="container mx-auto px-4">
+            <div className={`max-w-6xl mx-auto flex flex-col gap-10 lg:gap-16 items-center ${i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"}`}>
+              <div className="lg:w-2/5 flex justify-center gap-4">
+                {b.gorseller.map((g) => (
+                  <img
+                    key={g.alt}
+                    src={g.src}
+                    alt={g.alt}
+                    loading="lazy"
+                    className="w-1/2 max-w-[220px] h-auto rounded-2xl border border-slate-200 shadow-lg"
+                  />
+                ))}
+              </div>
+              <div className="lg:w-3/5">
+                <p className="text-sm font-semibold tracking-wider uppercase text-slate-500 mb-3">{b.ust}</p>
+                <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 leading-tight">{b.baslik}</h3>
+                <div className="space-y-4 text-lg text-slate-600 leading-relaxed">{b.metin}</div>
+                <ul className="grid grid-cols-2 gap-x-6 gap-y-3 mt-8">
+                  {b.maddeler.map((m) => (
+                    <li key={m} className="flex items-center gap-2 text-slate-700 font-medium">
+                      <Check className="h-4 w-4 text-primary shrink-0" />
+                      {m}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Features Section Header */}
-      <section className="relative py-24 bg-gradient-to-br from-slate-900 to-slate-800 overflow-hidden">
-        {/* Decorative Elements */}
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-48 h-48 bg-slate-500/10 rounded-full blur-3xl"></div>
-        </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            className="text-center max-w-6xl mx-auto"
-            {...fadeInUp}
-          >
-            <div className="inline-flex items-center bg-gradient-to-r from-primary/20 to-slate-800/20 backdrop-blur-sm border border-primary/30 px-8 py-4 rounded-full mb-10">
-              <div className="w-3 h-3 bg-primary rounded-full mr-4 animate-pulse"></div>
-              <span className="text-primary font-bold text-sm tracking-widest uppercase">Kurumsal Teknoloji Çözümleri</span>
-            </div>
-            
-            <h2 className="text-4xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              QR Kod PDKS 
-              <span className="text-transparent bg-gradient-to-r from-primary via-slate-700 to-primary bg-clip-text animate-pulse">
-                Avantajları
-              </span>
-            </h2>
-            
-            <p className="text-xl md:text-2xl text-slate-300 max-w-5xl mx-auto leading-relaxed mb-12">
-              Mobil teknoloji ile 
-              personel takibini kolaylaştıran QR kod PDKS sistemi, işletmenize dijital dönüşüm, 
-              operasyonel verimlilik ve güvenlik katıyor.
-            </p>
-            
-            <div className="flex justify-center items-center space-x-4 mb-8">
-              <div className="w-8 h-1 bg-primary rounded-full"></div>
-              <div className="w-16 h-1 bg-gradient-to-r from-primary to-slate-800 rounded-full"></div>
-              <div className="w-8 h-1 bg-primary rounded-full"></div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Q1 - QR Kod Okutma */}
-      <section data-testid="Q1" className="relative overflow-hidden py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50">
-        
-        {/* Decorative Background */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-primary/5 to-transparent rounded-full blur-3xl"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            className="max-w-7xl mx-auto"
-            {...fadeInUp}
-          >
-            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-2 bg-white/80 backdrop-blur-sm overflow-hidden">
-              <CardContent className="p-0">
-                <div className="flex flex-col lg:flex-row min-h-[400px]">
-                  {/* Resim Alanı - Büyük ve Premium */}
-                  <div className="lg:w-2/5 relative bg-gradient-to-br from-primary/10 via-primary/5 to-slate-800/10">
-                    {/* Premium Image Container */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
-                    <div className="relative h-full flex items-center justify-center p-8">
-                      <div className="relative w-full max-w-[200px] mx-auto">
-                        {/* iPhone Çerçevesi */}
-                        <div className="relative">
-                          {/* iPhone Dış Çerçeve */}
-                          <div className="bg-gray-900 rounded-[2.5rem] p-1 shadow-2xl">
-                            {/* iPhone İç Ekran */}
-                            <div className="bg-white rounded-[2.2rem] overflow-hidden relative" style={{aspectRatio: '375/812'}}>
-                              {/* Üst çentik (notch) */}
-                              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-5 bg-gray-900 rounded-b-xl z-10"></div>
-                              {/* QR Kod Okuma Resmi */}
-                              <img 
-                                src={qrKodOkumaImage} 
-                                alt="QR Kod Okuma Mobil Uygulama - Mika Teknoloji PDKS"
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                          </div>
-                          {/* Home Indicator */}
-                          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-white rounded-full"></div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Decorative Corner */}
-                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-slate-700 to-primary"></div>
-                  </div>
-                  
-                  {/* İçerik Alanı - Premium Typography */}
-                  <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
-                    <div className="space-y-8">
-                      {/* Premium Badge */}
-                      <div className="inline-flex items-center bg-gradient-to-r from-primary/20 to-slate-800/20 px-6 py-3 rounded-full border border-primary/30">
-                        <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-pulse"></div>
-                        <span className="text-primary font-semibold text-sm tracking-wider uppercase">Teknolojik Üstünlük</span>
-                      </div>
-                      
-                      {/* Premium Title */}
-                      <div>
-                        <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
-                          QR Kod PDKS + Güvenlik Sistemi
-                        </h3>
-                        <div className="w-24 h-1 bg-gradient-to-r from-primary to-slate-800 rounded-full mb-8"></div>
-                      </div>
-                      
-                      {/* Premium Description */}
-                      <div className="space-y-6">
-                        <p className="text-xl text-slate-700 leading-relaxed font-light">
-                          <strong className="text-slate-800 font-semibold">Konum doğrulama</strong> ile 
-                          giriş-çıkışın tanımlı alanda yapıldığını kontrol edin. Sahte konum (Fake GPS) tespit edilirse kayıt alınmaz.
-                        </p>
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                          Mükerrer kayıt önleme, konum doğrulama ve 
-                          jeofencing birlikte çalışır; 
-                          <span className="text-primary font-medium"> konum kontrollü PDKS</span> çözümü.
-                        </p>
-                      </div>
-                      
-                      {/* Premium Features */}
-                      <div className="grid grid-cols-2 gap-6 pt-6">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Fake GPS Tespiti</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Konum Doğrulama</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-primary rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Mükerrer ID Önleme</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Jeofencing</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-primary rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Root/Jailbreak Tespiti</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-slate-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">VPN/Proxy Kontrolü</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Q2 - Mobil Uygulama */}
-      <section data-testid="Q2" className="relative overflow-hidden py-20 bg-gradient-to-br from-slate-100 via-white to-slate-100">
-        
-        {/* Decorative Background */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            className="max-w-7xl mx-auto"
-            {...fadeInUp}
-          >
-            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-2 bg-white/80 backdrop-blur-sm overflow-hidden">
-              <CardContent className="p-0">
-                <div className="flex flex-col lg:flex-row-reverse min-h-[400px]">
-                  {/* Resim Alanı - Büyük ve Premium */}
-                  <div className="lg:w-2/5 relative bg-slate-50">
-                    {/* Premium Image Container */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
-                    <div className="relative h-full flex items-center justify-center p-8">
-                      <div className="relative w-full max-w-[200px] mx-auto">
-                        {/* iPhone Çerçevesi */}
-                        <div className="relative">
-                          {/* iPhone Dış Çerçeve */}
-                          <div className="bg-gray-900 rounded-[2.5rem] p-1 shadow-2xl">
-                            {/* iPhone İç Ekran */}
-                            <div className="bg-white rounded-[2.2rem] overflow-hidden relative" style={{aspectRatio: '375/812'}}>
-                              {/* Üst çentik (notch) */}
-                              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-5 bg-gray-900 rounded-b-xl z-10"></div>
-                              {/* Giriş-Çıkış Listesi Resmi */}
-                              <img 
-                                src={giriscikisListesiImage} 
-                                alt="Giriş Çıkış Listesi - Mika Teknoloji PDKS"
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                          </div>
-                          {/* Home Indicator */}
-                          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-white rounded-full"></div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Decorative Corner */}
-                    <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
-                  </div>
-                  
-                  {/* İçerik Alanı - Premium Typography */}
-                  <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
-                    <div className="space-y-8">
-                      {/* Premium Badge */}
-                      <div className="inline-flex items-center bg-slate-50 px-6 py-3 rounded-full border border-blue-500/30">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
-                        <span className="text-blue-600 font-semibold text-sm tracking-wider uppercase">Akıllı Onay Sistemi</span>
-                      </div>
-                      
-                      {/* Premium Title */}
-                      <div>
-                        <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
-                          Bulut Tabanlı Otomatik Düzeltme ve Onay Akışı
-                        </h3>
-                        <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
-                      </div>
-                      
-                      {/* Premium Description */}
-                      <div className="space-y-6">
-                        <p className="text-xl text-slate-700 leading-relaxed font-light">
-                          <strong className="text-slate-800 font-semibold">Klasik PDKS sistemlerinde</strong> personel çıkış yapmayı unuttuğunda, 
-                          yöneticiler personeli arayıp kaçta çıktığını öğrenip elle müdahale etmek zorunda kalıyordu.
-                        </p>
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                          <strong className="text-slate-800 font-semibold">QR Kod PDKS bulut sistemimizde</strong> artık bu iş yükü ortadan kalkıyor! 
-                          Personel düzeltme kaydını mobil uygulamadan girer, amirine otomatik bildirim gider. 
-                          Amir onayladıktan sonra kayıt İK'ya düşer. İK kimin onayladığını görür ve 
-                          onaylayınca <span className="text-blue-600 font-medium">hareket otomatik olarak düzenlenir</span>.
-                        </p>
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                          İş yükünüzü azaltıyor, süreçlerinizi disipline sokuyoruz.
-                        </p>
-                      </div>
-                      
-                      {/* Premium Features */}
-                      <div className="grid grid-cols-2 gap-6 pt-6">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Personel Düzeltme Talebi</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Amir Onay Sistemi</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-primary rounded-full"></div>
-                          <span className="text-slate-600 font-medium">İK Kontrol Paneli</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-primary rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Otomatik Düzeltme</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-slate-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Anlık Bildirimler</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-teal-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Onay Geçmişi</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Q3 - Temassız Sistem */}
-      <section data-testid="Q3" className="relative overflow-hidden py-20 bg-slate-50">
-        
-        {/* Decorative Background */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            className="max-w-7xl mx-auto"
-            {...fadeInUp}
-          >
-            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-2 bg-white/80 backdrop-blur-sm overflow-hidden">
-              <CardContent className="p-0">
-                <div className="flex flex-col lg:flex-row min-h-[400px]">
-                  {/* Resim Alanı - İki iPhone Yan Yana */}
-                  <div className="lg:w-2/5 relative bg-slate-50">
-                    {/* Premium Image Container */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
-                    <div className="relative h-full flex items-center justify-center p-6">
-                      <div className="flex gap-4 items-center">
-                        {/* İlk iPhone - Talep Oluştur */}
-                        <div className="relative w-[140px]">
-                          <div className="relative">
-                            {/* iPhone Dış Çerçeve */}
-                            <div className="bg-gray-900 rounded-[2rem] p-[3px] shadow-2xl">
-                              {/* iPhone İç Ekran */}
-                              <div className="bg-white rounded-[1.8rem] overflow-hidden relative" style={{aspectRatio: '375/812'}}>
-                                {/* Üst çentik (notch) */}
-                                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-16 h-4 bg-gray-900 rounded-b-lg z-10"></div>
-                                {/* Talep Oluştur Resmi */}
-                                <img 
-                                  src={talepOlusturImage} 
-                                  alt="Talep Oluşturma Ekranı - Mika Teknoloji PDKS"
-                                  className="w-full h-full object-cover"
-                                />
-                              </div>
-                            </div>
-                            {/* Home Indicator */}
-                            <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-14 h-[3px] bg-white rounded-full"></div>
-                          </div>
-                        </div>
-
-                        {/* İkinci iPhone - Avans Talep */}
-                        <div className="relative w-[140px]">
-                          <div className="relative">
-                            {/* iPhone Dış Çerçeve */}
-                            <div className="bg-gray-900 rounded-[2rem] p-[3px] shadow-2xl">
-                              {/* iPhone İç Ekran */}
-                              <div className="bg-white rounded-[1.8rem] overflow-hidden relative" style={{aspectRatio: '375/812'}}>
-                                {/* Üst çentik (notch) */}
-                                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-16 h-4 bg-gray-900 rounded-b-lg z-10"></div>
-                                {/* Avans Talep Resmi */}
-                                <img 
-                                  src={avansTalepImage} 
-                                  alt="Avans Talep Ekranı - Mika Teknoloji PDKS"
-                                  className="w-full h-full object-cover"
-                                />
-                              </div>
-                            </div>
-                            {/* Home Indicator */}
-                            <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-14 h-[3px] bg-white rounded-full"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Decorative Corner */}
-                    <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
-                  </div>
-                  
-                  {/* İçerik Alanı - Premium Typography */}
-                  <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
-                    <div className="space-y-8">
-                      {/* Premium Badge */}
-                      <div className="inline-flex items-center bg-slate-50 px-6 py-3 rounded-full border border-emerald-500/30">
-                        <div className="w-2 h-2 bg-emerald-500 rounded-full mr-3 animate-pulse"></div>
-                        <span className="text-emerald-600 font-semibold text-sm tracking-wider uppercase">Hiyerarşik Onay Sistemi</span>
-                      </div>
-                      
-                      {/* Premium Title */}
-                      <div>
-                        <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
-                          İzin ve Avans Talep Yönetimi
-                        </h3>
-                        <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
-                      </div>
-                      
-                      {/* Premium Description */}
-                      <div className="space-y-6">
-                        <p className="text-xl text-slate-700 leading-relaxed font-light">
-                          <strong className="text-slate-800 font-semibold">QR tabanlı personel devam kontrol sistemimizde</strong> izin ve avans 
-                          talepleri tamamen dijital ve hiyerarşik onay akışıyla yönetiliyor.
-                        </p>
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                          Personel, <strong className="text-slate-800 font-semibold">yeni nesil personel devam kontrol sistemi</strong> mobil uygulamasından 
-                          izin talebini girer ve ilgili tarihteki izin yöneticisine otomatik düşer. Yönetici onayladıktan sonra 
-                          talep İK'ya (İnsan Kaynakları) ulaşır. İK da onayladığında 
-                          <span className="text-emerald-600 font-medium"> izin otomatik olarak sisteme yansır</span>.
-                        </p>
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                          Aynı şekilde avans talepleri de <strong className="text-slate-800 font-semibold">bulut tabanlı personel kontrol sisteminde</strong> 
-                          aynı hiyerarşik yapıyla yönetilir. Personel → Yönetici → İK onay zinciri ile 
-                          tüm süreç şeffaf, denetlenebilir ve tamamen otomatik hale gelir.
-                        </p>
-                      </div>
-                      
-                      {/* Premium Features */}
-                      <div className="grid grid-cols-2 gap-6 pt-6">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">İzin Talep Sistemi</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-emerald-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Avans Yönetimi</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-teal-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Hiyerarşik Onay</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-cyan-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Otomatik İK Akışı</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Şeffaf Süreç</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-primary rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Mobil Erişim</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Q4 - Bulut Tabanlı Altyapı */}
-      <section data-testid="Q4" className="relative overflow-hidden py-20 bg-slate-50">
-        
-        {/* Decorative Background */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            className="max-w-7xl mx-auto"
-            {...fadeInUp}
-          >
-            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-2 bg-white/80 backdrop-blur-sm overflow-hidden">
-              <CardContent className="p-0">
-                <div className="flex flex-col lg:flex-row-reverse min-h-[400px]">
-                  {/* Resim Alanı - iPhone Mockup */}
-                  <div className="lg:w-2/5 relative bg-slate-50">
-                    {/* Premium Image Container */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
-                    <div className="relative h-full flex items-center justify-center p-8">
-                      <div className="relative w-full max-w-[200px] mx-auto">
-                        {/* iPhone Çerçevesi */}
-                        <div className="relative">
-                          {/* iPhone Dış Çerçeve */}
-                          <div className="bg-gray-900 rounded-[2.5rem] p-1 shadow-2xl">
-                            {/* iPhone İç Ekran */}
-                            <div className="bg-white rounded-[2.2rem] overflow-hidden relative" style={{aspectRatio: '375/812'}}>
-                              {/* Üst çentik (notch) */}
-                              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-5 bg-gray-900 rounded-b-xl z-10"></div>
-                              {/* Yıllık İzin Bilgileri Resmi */}
-                              <img 
-                                src={yillikIzinBilgileriImage} 
-                                alt="Yıllık İzin Bilgilerim - Mika Teknoloji PDKS"
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                          </div>
-                          {/* Home Indicator */}
-                          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-white rounded-full"></div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Decorative Corner */}
-                    <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
-                  </div>
-                  
-                  {/* İçerik Alanı - Premium Typography */}
-                  <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
-                    <div className="space-y-8">
-                      {/* Premium Badge */}
-                      <div className="inline-flex items-center bg-slate-50 px-6 py-3 rounded-full border border-primary/30">
-                        <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-pulse"></div>
-                        <span className="text-primary font-semibold text-sm tracking-wider uppercase">Mobil İzin Takibi</span>
-                      </div>
-                      
-                      {/* Premium Title */}
-                      <div>
-                        <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
-                          Yıllık İzin Yönetim Sistemi
-                        </h3>
-                        <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
-                      </div>
-                      
-                      {/* Premium Description */}
-                      <div className="space-y-6">
-                        <p className="text-xl text-slate-700 leading-relaxed font-light">
-                          <strong className="text-slate-800 font-semibold">Yeni nesil personel devam kontrol sistemimizde</strong> personeller 
-                          ne kadar yıllık izin kaldığını ve ne kadar kullandığını cep telefonlarından anında görüntüleyebiliyor.
-                        </p>
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                          <strong className="text-slate-800 font-semibold">İnsan kaynakları yönetiminin etkinliğini</strong> artırarak, 
-                          işletmedeki yıllık izin durumlarını personeller hak edişlerine ve işe giriş tarihlerine göre 
-                          <span className="text-primary font-medium"> sistematik şekilde</span> cep telefonlarından görebilmektedirler.
-                        </p>
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                          Kalan izin günleri, kullanılan izinler, hak ediş bilgileri ve izin geçmişi mobil uygulamada 
-                          tek ekranda şeffaf bir şekilde sunulur. Bu sayede personel planlaması kolaylaşır ve izin yönetimi 
-                          tamamen otomatik hale gelir.
-                        </p>
-                      </div>
-                      
-                      {/* Premium Features */}
-                      <div className="grid grid-cols-2 gap-6 pt-6">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Anlık İzin Takibi</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-primary rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Hak Ediş Hesaplama</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-cyan-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">İzin Geçmişi</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Mobil Erişim</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-primary rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Otomatik Güncelleme</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-slate-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Şeffaf Raporlama</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Q5 - Kolay Kurulum */}
-      <section data-testid="Q5" className="relative overflow-hidden py-20 bg-slate-50">
-        
-        {/* Decorative Background */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            className="max-w-7xl mx-auto"
-            {...fadeInUp}
-          >
-            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-2 bg-white/80 backdrop-blur-sm overflow-hidden">
-              <CardContent className="p-0">
-                <div className="flex flex-col lg:flex-row min-h-[400px]">
-                  {/* Resim Alanı - iPhone Mockup */}
-                  <div className="lg:w-2/5 relative bg-slate-50">
-                    {/* Premium Image Container */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
-                    <div className="relative h-full flex items-center justify-center p-8">
-                      <div className="relative w-full max-w-[200px] mx-auto">
-                        {/* iPhone Çerçevesi */}
-                        <div className="relative">
-                          {/* iPhone Dış Çerçeve */}
-                          <div className="bg-gray-900 rounded-[2.5rem] p-1 shadow-2xl">
-                            {/* iPhone İç Ekran */}
-                            <div className="bg-white rounded-[2.2rem] overflow-hidden relative" style={{aspectRatio: '375/812'}}>
-                              {/* Üst çentik (notch) */}
-                              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-5 bg-gray-900 rounded-b-xl z-10"></div>
-                              {/* Vardiya Kartı Resmi */}
-                              <img 
-                                src={vardiyaKartiImage} 
-                                alt="Vardiya Kartı - Mika Teknoloji PDKS"
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                          </div>
-                          {/* Home Indicator */}
-                          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-white rounded-full"></div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Decorative Corner */}
-                    <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
-                  </div>
-                  
-                  {/* İçerik Alanı - Premium Typography */}
-                  <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
-                    <div className="space-y-8">
-                      {/* Premium Badge */}
-                      <div className="inline-flex items-center bg-slate-50 px-6 py-3 rounded-full border border-amber-500/30">
-                        <div className="w-2 h-2 bg-amber-500 rounded-full mr-3 animate-pulse"></div>
-                        <span className="text-amber-600 font-semibold text-sm tracking-wider uppercase">Akıllı Vardiya</span>
-                      </div>
-                      
-                      {/* Premium Title */}
-                      <div>
-                        <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
-                          Mobil Shift Planlama Sistemi
-                        </h3>
-                        <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
-                      </div>
-                      
-                      {/* Premium Description */}
-                      <div className="space-y-6">
-                        <p className="text-xl text-slate-700 leading-relaxed font-light">
-                          <strong className="text-slate-800 font-semibold">Hastane personel devam kontrol sistemi</strong> ve 
-                          <strong className="text-slate-800 font-semibold"> mağaza personel devam kontrol sisteminde</strong> shift yapıldığında, 
-                          personel hangi vardiyaya geleceğini mobil sisteminden anında görebilmektedir.
-                        </p>
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                          Personelin müdürü ya da amiri tarafından yapılan <strong className="text-slate-800 font-semibold">shift planlama</strong>, 
-                          doğrudan personelin uygulama kısmına düşer. Bu sayede sistematik bir şekilde akış düzenlenir ve 
-                          <span className="text-amber-600 font-medium"> yeni nesil personel devam kontrol sistemi</span> olan ESOFT için +1 özellik katmaktadır.
-                        </p>
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                          Gerek hastanelerde, gerekse mağaza yönetim sistemlerinde vardiya çizelgeleri otomatik olarak güncellenir. 
-                          Personeller hangi gün, hangi saatte ve hangi lokasyonda çalışacaklarını mobil cihazlarından takip edebilirler.
-                        </p>
-                      </div>
-                      
-                      {/* Premium Features */}
-                      <div className="grid grid-cols-2 gap-6 pt-6">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Otomatik Shift Bildirimi</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-amber-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Vardiya Takibi</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-primary rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Anlık Güncelleme</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Çoklu Lokasyon</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Hastane PDKS</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-primary rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Mağaza PDKS</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Q6 - Mobil Şikayet ve Talep */}
-      <section data-testid="Q6" className="relative overflow-hidden py-20 bg-slate-50">
-        
-        {/* Decorative Background */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            className="max-w-7xl mx-auto"
-            {...fadeInUp}
-          >
-            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-2 bg-white/80 backdrop-blur-sm overflow-hidden">
-              <CardContent className="p-0">
-                <div className="flex flex-col lg:flex-row-reverse min-h-[400px]">
-                  {/* Resim Alanı - iPhone Mockup */}
-                  <div className="lg:w-2/5 relative bg-slate-50">
-                    {/* Premium Image Container */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
-                    <div className="relative h-full flex items-center justify-center p-8">
-                      <div className="relative w-full max-w-[200px] mx-auto">
-                        {/* iPhone Çerçevesi */}
-                        <div className="relative">
-                          {/* iPhone Dış Çerçeve */}
-                          <div className="bg-gray-900 rounded-[2.5rem] p-1 shadow-2xl">
-                            {/* iPhone İç Ekran */}
-                            <div className="bg-white rounded-[2.2rem] overflow-hidden relative" style={{aspectRatio: '375/812'}}>
-                              {/* Üst çentik (notch) */}
-                              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-5 bg-gray-900 rounded-b-xl z-10"></div>
-                              {/* Şikayet Oluştur Resmi */}
-                              <img 
-                                src={sikayetOlusturImage} 
-                                alt="Yeni Şikayet Oluştur - Mika Teknoloji PDKS"
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                          </div>
-                          {/* Home Indicator */}
-                          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-white rounded-full"></div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Decorative Corner */}
-                    <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
-                  </div>
-                  
-                  {/* İçerik Alanı - Premium Typography */}
-                  <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
-                    <div className="space-y-8">
-                      {/* Premium Badge */}
-                      <div className="inline-flex items-center bg-slate-50 px-6 py-3 rounded-full border border-primary/30">
-                        <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-pulse"></div>
-                        <span className="text-primary font-semibold text-sm tracking-wider uppercase">İletişim Platformu</span>
-                      </div>
-                      
-                      {/* Premium Title */}
-                      <div>
-                        <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
-                          Mobil Şikayet ve Talep Yönetimi
-                        </h3>
-                        <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
-                      </div>
-                      
-                      {/* Premium Description */}
-                      <div className="space-y-6">
-                        <p className="text-xl text-slate-700 leading-relaxed font-light">
-                          Personeller işletme ile ilgili şikayetlerini <strong className="text-slate-800 font-semibold">mobil aplikasyon üzerinden</strong> anlık 
-                          olarak İK platformuna ileterek, insan kaynakları departmanı ile doğrudan iletişime geçebilmektedir.
-                        </p>
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                          <strong className="text-slate-800 font-semibold">Yeni nesil personel devam kontrol sisteminde</strong> personeller, 
-                          olayların fotoğraflarını çekerek, açıklama ekleyerek ve kategori kodu girerek şikayetlerini 
-                          insan kaynakları departmanına ve ilgili müdürlüklere mobil aplikasyon üzerinden iletmektedir.
-                        </p>
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                          Bu özellik hem <span className="text-primary font-medium">erişilebilirlik</span> hem de 
-                          <span className="text-primary font-medium"> personel memnuniyeti</span> yönünden firmaya önemli bir üstünlük sağlamaktadır. 
-                          Şeffaf iletişim kanalları sayesinde çalışan bağlılığı artar ve sorunlar hızla çözüme kavuşturulur.
-                        </p>
-                      </div>
-                      
-                      {/* Premium Features */}
-                      <div className="grid grid-cols-2 gap-6 pt-6">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Fotoğraf Ekleme</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-primary rounded-full"></div>
-                          <span className="text-slate-600 font-medium">İK İletişimi</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-primary rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Kategori Kodları</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-primary rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Anlık Bildirim</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Şeffaf Süreç</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-slate-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Hızlı Çözüm</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Q7 - Anket ve Geri Bildirim Sistemi */}
-      <section data-testid="Q7" className="relative overflow-hidden py-20 bg-slate-50">
-        
-        {/* Decorative Background */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            className="max-w-7xl mx-auto"
-            {...fadeInUp}
-          >
-            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-2 bg-white/80 backdrop-blur-sm overflow-hidden">
-              <CardContent className="p-0">
-                <div className="flex flex-col lg:flex-row min-h-[400px]">
-                  {/* Resim Alanı - iPhone Mockup */}
-                  <div className="lg:w-2/5 relative bg-slate-50">
-                    {/* Premium Image Container */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
-                    <div className="relative h-full flex items-center justify-center p-8">
-                      <div className="relative w-full max-w-[200px] mx-auto">
-                        {/* iPhone Çerçevesi */}
-                        <div className="relative">
-                          {/* iPhone Dış Çerçeve */}
-                          <div className="bg-gray-900 rounded-[2.5rem] p-1 shadow-2xl">
-                            {/* iPhone İç Ekran */}
-                            <div className="bg-white rounded-[2.2rem] overflow-hidden relative" style={{aspectRatio: '375/812'}}>
-                              {/* Üst çentik (notch) */}
-                              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-5 bg-gray-900 rounded-b-xl z-10"></div>
-                              {/* Anket Portalı Resmi */}
-                              <img 
-                                src={anketPortaliImage} 
-                                alt="Anket Portalı - Mika Teknoloji PDKS"
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                          </div>
-                          {/* Home Indicator */}
-                          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-white rounded-full"></div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Decorative Corner */}
-                    <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
-                  </div>
-                  
-                  {/* İçerik Alanı - Premium Typography */}
-                  <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
-                    <div className="space-y-8">
-                      {/* Premium Badge */}
-                      <div className="inline-flex items-center bg-slate-50 px-6 py-3 rounded-full border border-teal-500/30">
-                        <div className="w-2 h-2 bg-teal-500 rounded-full mr-3 animate-pulse"></div>
-                        <span className="text-teal-600 font-semibold text-sm tracking-wider uppercase">Geri Bildirim</span>
-                      </div>
-                      
-                      {/* Premium Title */}
-                      <div>
-                        <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
-                          Mobil Anket ve Geri Bildirim Platformu
-                        </h3>
-                        <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
-                      </div>
-                      
-                      {/* Premium Description */}
-                      <div className="space-y-6">
-                        <p className="text-xl text-slate-700 leading-relaxed font-light">
-                          <strong className="text-slate-800 font-semibold">Anket Portalı</strong> ile personellerinizin 
-                          görüş ve önerilerini mobil uygulama üzerinden toplayın.
-                        </p>
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                          Çalışan memnuniyeti anketleri, performans değerlendirmeleri, öneri sistemleri ve 
-                          geri bildirim formları ile işletme içi iletişimi güçlendirin. Tüm anket sonuçları 
-                          <span className="text-teal-600 font-medium"> otomatik raporlanır</span> ve analiz edilir.
-                        </p>
-                      </div>
-                      
-                      {/* Premium Features */}
-                      <div className="grid grid-cols-2 gap-6 pt-6">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Anket Oluşturma</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-teal-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Mobil Katılım</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-cyan-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Otomatik Raporlama</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Analiz Araçları</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Q8 - Elektronik Bordro Onay Sistemi */}
-      <section data-testid="Q8" className="relative overflow-hidden py-20 bg-slate-50">
-        
-        {/* Decorative Background */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            className="max-w-7xl mx-auto"
-            {...fadeInUp}
-          >
-            <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-2 bg-white/80 backdrop-blur-sm overflow-hidden">
-              <CardContent className="p-0">
-                <div className="flex flex-col lg:flex-row-reverse min-h-[400px]">
-                  {/* Resim Alanı - iPhone Mockup */}
-                  <div className="lg:w-2/5 relative bg-slate-50">
-                    {/* Premium Image Container */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
-                    <div className="relative h-full flex items-center justify-center p-8">
-                      <div className="relative w-full max-w-[200px] mx-auto">
-                        {/* iPhone Çerçevesi */}
-                        <div className="relative">
-                          {/* iPhone Dış Çerçeve */}
-                          <div className="bg-gray-900 rounded-[2.5rem] p-1 shadow-2xl">
-                            {/* iPhone İç Ekran */}
-                            <div className="bg-white rounded-[2.2rem] overflow-hidden relative" style={{aspectRatio: '375/812'}}>
-                              {/* Üst çentik (notch) */}
-                              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-5 bg-gray-900 rounded-b-xl z-10"></div>
-                              {/* Bordro Portalı Resmi */}
-                              <img 
-                                src={bordroPortaliImage} 
-                                alt="Bordro Portalı - Elektronik İmza Sistemi - Mika Teknoloji PDKS"
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                          </div>
-                          {/* Home Indicator */}
-                          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-white rounded-full"></div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Decorative Corner */}
-                    <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
-                  </div>
-                  
-                  {/* İçerik Alanı - Premium Typography */}
-                  <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
-                    <div className="space-y-8">
-                      {/* Premium Badge */}
-                      <div className="inline-flex items-center bg-slate-50 px-6 py-3 rounded-full border border-emerald-500/30">
-                        <div className="w-2 h-2 bg-emerald-500 rounded-full mr-3 animate-pulse"></div>
-                        <span className="text-emerald-600 font-semibold text-sm tracking-wider uppercase">Elektronik İmza</span>
-                      </div>
-                      
-                      {/* Premium Title */}
-                      <div>
-                        <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
-                          Dijital Bordro Onay ve Elektronik İmza Sistemi
-                        </h3>
-                        <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
-                      </div>
-                      
-                      {/* Premium Description */}
-                      <div className="space-y-6">
-                        <p className="text-xl text-slate-700 leading-relaxed font-light">
-                          <strong className="text-slate-800 font-semibold">Yeni nesil personel devam kontrol sisteminde</strong> bordro bilgileri 
-                          istenildiği taktirde personellerin mobil aplikasyonlarına push bildirim ile gönderilir.
-                        </p>
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                          Personel günlük giriş-çıkışlarını ve mesai saatlerini tek tek kontrol ederek onaylar ve 
-                          <strong className="text-slate-800 font-semibold"> İK departmanına elektronik ortamda</strong> gönderir. 
-                          Onay sonrası tüm giriş-çıkışlar kilitlenir ve İK departmanı sorumlusu hariç kimse değişiklik yapamaz.
-                        </p>
-                        <p className="text-lg text-slate-600 leading-relaxed">
-                          Bu şekilde giriş-çıkışlar <span className="text-emerald-600 font-medium">elektronik ortamda imzalanmış</span> olur. 
-                          İleride personel ile ilgili doğacak resmi anlaşmazlıklarda yasal bir delil olarak firma tarafından 
-                          belge niteliğinde tutulmaktadır. Bu özellik firmaya çok önemli bir hukuki güvence sağlamaktadır.
-                        </p>
-                      </div>
-                      
-                      {/* Premium Features */}
-                      <div className="grid grid-cols-2 gap-6 pt-6">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Push Bildirim</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-emerald-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Elektronik Onay</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-teal-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Kayıt Kilitleme</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-lime-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Yasal Delil</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-cyan-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Bordro Entegrasyonu</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Hukuki Güvence</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
+          </div>
+        </section>
+      ))}
 
       {/* How It Works Section */}
       <section data-testid="how-it-works" className="py-20 bg-white">
@@ -1274,48 +416,32 @@ export default function QRPDKSPage() {
               QR Kodlu Personel Takibi: giriş-çıkış adımları ve sık sorulan sorular
             </Link>
           </p>
+          <p className="text-center mt-6 text-sm text-slate-500 max-w-3xl mx-auto">
+            İstanbul, İzmir, Ankara ve tüm Türkiye'deki işletmeler için <Link href="/urunler" className="text-primary hover:underline">temassız PDKS çözümü</Link>.
+          </p>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section data-testid="cta-section" className="py-20 bg-gradient-to-r from-primary to-slate-800 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div 
-            className="max-w-3xl mx-auto"
-            {...fadeInUp}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              QR Kod PDKS ile Personel Takibini Modernize Edin
-            </h2>
-            <p className="text-xl mb-8 text-slate-100">
-              Ücretsiz demo ile QR kod PDKS sisteminin avantajlarını keşfedin. 
-              Kurulum ve kullanım desteği dahil.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                asChild 
-                size="lg" 
-                className="bg-white text-primary hover:bg-slate-50 px-8 py-4 rounded-xl font-semibold text-lg"
-                data-testid="button-cta-demo"
-              >
-                <Link href="/iletisim">
-                  <Phone className="mr-3 h-5 w-5" />
-                  <span>Hemen Demo Talep Et</span>
-                </Link>
-              </Button>
-              <Button 
-                asChild 
-                variant="outlineLight" 
-                size="lg" 
-                className="px-8 py-4 rounded-xl font-semibold text-lg"
-                data-testid="button-cta-products"
-              >
-                <Link href="/urunler">
-                  <span>Tüm Ürünleri İncele</span>
-                </Link>
-              </Button>
-            </div>
-          </motion.div>
+      <section data-testid="cta-section" className="py-16 bg-slate-900 border-t-4 border-primary text-white">
+        <div className="container mx-auto px-4 text-center max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            QR Kod PDKS ile Personel Takibini Modernize Edin
+          </h2>
+          <p className="text-lg mb-8 text-slate-300">
+            Ücretsiz demo; kurulum ve kullanım desteği dahil.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" data-testid="button-cta-demo">
+              <Link href="/iletisim">
+                <Phone className="mr-2 h-5 w-5" />
+                Hemen Demo Talep Et
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outlineLight" data-testid="button-cta-products">
+              <Link href="/urunler">Tüm Ürünleri İncele</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </div>
