@@ -37,6 +37,7 @@ export const PDKS_KONU_SAYFALARI: KirintiMaddesi[] = [
   { ad: "Puantaj Programı", yol: "/puantaj-programi" },
   { ad: "Vardiya Takip Programı", yol: "/vardiya-takip-programi" },
   { ad: "QR Kodlu Personel Takibi", yol: "/qr-pdks" },
+  { ad: "Fazla Mesai Hesaplama", yol: "/fazla-mesai-hesaplama" },
 ];
 
 export function sssJsonLd(maddeler: SssMaddesi[]) {

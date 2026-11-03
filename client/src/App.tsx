@@ -70,6 +70,7 @@ import VideolarPage from "@/pages/VideolarPage";
 import PuantajProgramiPage from "@/pages/PuantajProgramiPage";
 import VardiyaTakipProgramiPage from "@/pages/VardiyaTakipProgramiPage";
 import QRPersonelTakipPage from "@/pages/QRPersonelTakipPage";
+import FazlaMesaiHesaplamaPage from "@/pages/FazlaMesaiHesaplamaPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -157,6 +158,7 @@ function Router() {
       <Route path="/puantaj-programi" component={PuantajProgramiPage} />
       <Route path="/vardiya-takip-programi" component={VardiyaTakipProgramiPage} />
       <Route path="/qr-pdks" component={QRPersonelTakipPage} />
+      <Route path="/fazla-mesai-hesaplama" component={FazlaMesaiHesaplamaPage} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>

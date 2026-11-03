@@ -124,6 +124,7 @@ export default function Header() {
       { name: "Puantaj Programı", href: "/puantaj-programi" },
       { name: "Vardiya Takip Programı", href: "/vardiya-takip-programi" },
       { name: "QR Kodlu Personel Takibi", href: "/qr-pdks" },
+      { name: "Fazla Mesai Hesaplama", href: "/fazla-mesai-hesaplama" },
       { name: "Access Geçiş Kontrol Sistemleri", href: "/access-control" },
       { name: "Bekçi Tur Kontrol Sistemi", href: "/bekci-tur" },
       { name: "QR Bekçi Sistemi", href: "/qr-bekci" },
