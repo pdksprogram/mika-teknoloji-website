@@ -12,23 +12,23 @@ export const IMAGES = {
   t7: "/mt-jetonlu-turnike.png", // Jetonlu turnikeler (YENİ)
 } as const;
 
-// Bel Tipi Turnike Modelleri - BETAPER.COM'dan alınan gerçek resimler
+// Bel Tipi Turnike Modelleri (turnike ürün görselleri)
 export const BEL_TURNIKE_IMAGES = {
-  bt1: `/t-250-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 250 - Betaper'daki asıl resim
-  bt2: `/t-250-eco-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 250 ECO - Betaper'daki asıl resim
-  bt3: `/t-250-a2-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 250 A2 - Betaper'daki asıl resim
-  bt4: `/t-250-eco-a2-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 250 A2 ECO - Betaper'daki asıl resim
-  bt5: `/t-250-gt-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 250 GT - Betaper'daki asıl resim
-  bt6: `/t-345-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 345 - Betaper'daki asıl resim
-  bt7: `/t-345-eco-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 345 ECO - Betaper'daki asıl resim
-  bt8: `/t-250-s-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 250 S - Betaper'daki asıl resim
-  bt9: `/t-450-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 450 - Betaper'daki asıl resim
-  bt10: `/t-281-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 281 - Betaper'daki asıl resim
-  bt11: `/jetonlu-turnike-sistemi-t250.jpg?t=${CACHE_BUST}`, // T 250 Jetonlu - Betaper'daki asıl resim
-  bt12: `/jetonlu-turnike-sistemi-t345.jpg?t=${CACHE_BUST}`, // T 345 Jetonlu - Betaper'daki asıl resim
+  bt1: `/t-250-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 250
+  bt2: `/t-250-eco-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 250 ECO
+  bt3: `/t-250-a2-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 250 A2
+  bt4: `/t-250-eco-a2-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 250 A2 ECO
+  bt5: `/t-250-gt-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 250 GT
+  bt6: `/t-345-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 345
+  bt7: `/t-345-eco-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 345 ECO
+  bt8: `/t-250-s-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 250 S
+  bt9: `/t-450-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 450
+  bt10: `/t-281-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // T 281
+  bt11: `/jetonlu-turnike-sistemi-t250.jpg?t=${CACHE_BUST}`, // T 250 Jetonlu
+  bt12: `/jetonlu-turnike-sistemi-t345.jpg?t=${CACHE_BUST}`, // T 345 Jetonlu
 } as const;
 
-// Boy Tipi Turnike Modelleri - BETAPER.COM'dan alınan gerçek resimler
+// Boy Tipi Turnike Modelleri (turnike ürün görselleri)
 export const BOY_TURNIKE_IMAGES = {
   bt1: `/t-2500d-single-3-kollu-paslanmaz-turnike.jpg?t=${CACHE_BUST}`, // MT 2500D Single 3 Kollu
   bt2: `/t-2500d-single-4-kollu-paslanmaz-turnike.jpg?t=${CACHE_BUST}`, // MT 2500D Single 4 Kollu
@@ -46,7 +46,7 @@ export const BOY_TURNIKE_IMAGES = {
   bt14: `/yarim-boy-turnike-sistemi-t1400-elektromekanik-turnike.jpg?t=${CACHE_BUST}`, // MT 1400 Yarım Boy
 } as const;
 
-// Engelli Turnike Modelleri - BETAPER.COM'dan alınan gerçek resimler
+// Engelli Turnike Modelleri (turnike ürün görselleri)
 export const ENGELLI_TURNIKE_IMAGES = {
   et1: `/sc324b-vip-turnike.jpg?t=${CACHE_BUST}`, // MT SC324B VIP Turnike
   et2: `/sc324c-vip-turnike.jpg?t=${CACHE_BUST}`, // MT SC324C VIP Turnike
@@ -59,7 +59,7 @@ export const ENGELLI_TURNIKE_IMAGES = {
   et9: `/turnike-seperator.jpg?t=${CACHE_BUST}`, // MT Turnike Seperatör
 } as const;
 
-// Hızlı Geçiş Turnike Modelleri - BETAPER.COM'dan alınan gerçek resimler
+// Hızlı Geçiş Turnike Modelleri (turnike ürün görselleri)
 export const HIZLI_GECIS_TURNIKE_IMAGES = {
   hg1: `/t-300-hg20-hizli-gecis-turnikesi.jpg?t=${CACHE_BUST}`, // MT T300 HG20 Hızlı Geçiş
   hg2: `/t-300-hg20-chubby-hizli-gecis-turnikesi.jpg?t=${CACHE_BUST}`, // MT T300 HG20 Chubby Hızlı Geçiş

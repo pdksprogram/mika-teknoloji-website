@@ -108,7 +108,7 @@ export default function HizliGecisPage() {
     <>
       <Helmet>
         <title>Hızlı Geçiş Turnike Sistemleri - Yüksek Kapasiteli | Mika Teknoloji</title>
-        <meta name="description" content="Hızlı geçiş turnike sistemleri. 20-120 kişi/dakika kapasiteli, havaalanı, metro, alışveriş merkezi için profesyonel çözümler. Betaper kalitesi ile." />
+        <meta name="description" content="Hızlı geçiş turnike sistemleri. 20-120 kişi/dakika kapasiteli, havaalanı, metro, alışveriş merkezi için profesyonel çözümler." />
         <meta name="keywords" content="hızlı geçiş turnike, yüksek kapasiteli turnike, havaalanı turnike, metro turnike, chubby turnike, slim turnike, mika teknoloji" />
       </Helmet>
 

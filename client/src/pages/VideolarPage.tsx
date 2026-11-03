@@ -583,13 +583,13 @@ const tumVideolar: VideoItem[] = [
   },
   {
     id: "bariyer-sistemleri",
-    title: "Bariyer Sistemleri Tanıtım - PT Plus, PT Genius, PT Guard",
-    description: "Mika Teknoloji bariyer ürün ailesi: PT Plus, PT Genius ve PT Guard modellerinin karşılaştırması ve özellik tanıtımı.",
+    title: "Bariyer Sistemleri Tanıtım - MT Plus, MT Genius, MT Guard",
+    description: "Mika Teknoloji bariyer ürün ailesi: MT Plus, MT Genius ve MT Guard modellerinin karşılaştırması ve özellik tanıtımı.",
     src: "/bariyer-sistemleri.mp4",
     duration: "3:30",
     category: "Tanıtım",
     subcategory: "Ürün Tanıtımı",
-    keywords: "bariyer sistemleri, PT Plus, PT Genius, PT Guard, otopark bariyeri, araç bariyeri",
+    keywords: "bariyer sistemleri, MT Plus, MT Genius, MT Guard, otopark bariyeri, araç bariyeri",
     level: "Başlangıç",
   },
   {

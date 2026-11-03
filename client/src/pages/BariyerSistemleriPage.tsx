@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
-import { Shield, Clock, Settings, CheckCircle2, CheckCircle, ArrowRight, Lock, Gauge, AlertTriangle } from "lucide-react";
+import { Clock, CheckCircle, ArrowRight, Phone } from "lucide-react";
+import { CTA_ARA, CTA_DONANIM, DEMO_TELEFON, DEMO_TELEFON_GORUNEN } from "@/lib/iletisim";
 import { Link } from "wouter";
 import { trackEvent } from "@/lib/analytics";
 
@@ -10,10 +11,6 @@ const segments = [
     title: "MT PLUS Bariyer Sistemi",
     subtitle: "Orta Seviye Güvenlik Çözümü",
     description: "Orta seviye güvenlik ihtiyaçları için ideal olan MT PLUS bariyer sistemi, kolay montaj ve güvenilir performans sunar. 5,25 metre ledli kol uzunluğu ile geniş geçiş alanlarında kullanım için tasarlanmıştır.",
-    image: "/images/bariyer/pt-plus-bariyer.jpg",
-    gradient: "from-slate-900 to-slate-800",
-    bgGradient: "from-slate-50 to-white",
-    icon: CheckCircle2,
     detailUrl: "/urunler/pt-plus-bariyer",
     features: [
       "Ledli 5,25 mt kol",
@@ -25,7 +22,7 @@ const segments = [
     ],
     specs: [
       { label: "Kontrol Voltajı", value: "220 V 50 Hz" },
-      { label: "Güç Tüketimi", value: "24 V DC" },
+      { label: "Çalışma Gerilimi", value: "24 V DC" },
       { label: "Açılma Süresi", value: "7 saniye" },
       { label: "Kol Uzunluğu", value: "5,25 metre" },
       { label: "Koruma Derecesi", value: "IP 54" },
@@ -39,10 +36,6 @@ const segments = [
     title: "MT Genius Bariyer Sistemi",
     subtitle: "Akıllı Kontrol ve Yönetim",
     description: "İleri teknoloji ile donatılmış MT Genius bariyer sistemi, akıllı kontrol özellikleri ve entegrasyon kabiliyeti ile öne çıkar. Gelişmiş sensör teknolojisi ve otomatik ayar özellikleri ile kusursuz performans sunar.",
-    image: "/images/bariyer/pt-genius-bariyer.jpg",
-    gradient: "from-primary via-primary to-slate-800",
-    bgGradient: "from-slate-50 via-white to-slate-100",
-    icon: Settings,
     detailUrl: "/urunler/pt-genius-bariyer",
     features: [
       "Akıllı kontrol sistemi",
@@ -64,10 +57,6 @@ const segments = [
     title: "MT Guard Bariyer Sistemi",
     subtitle: "Yüksek Güvenlik ve Dayanıklılık",
     description: "Yüksek güvenlik gerektiren noktalarda kullanılmak üzere tasarlanan MT Guard bariyer sistemi, üstün dayanıklılık ve güvenilirlik sunar. Yüksek darbe emilimi özellikli yapısı ile kritik güvenlik noktalarında tercih edilir.",
-    image: "/images/bariyer/pt-guard-bariyer.jpg",
-    gradient: "from-slate-900 to-slate-800",
-    bgGradient: "from-slate-50 to-white",
-    icon: Shield,
     detailUrl: "/urunler/pt-guard-bariyer",
     features: [
       "Yüksek dayanıklılık",
@@ -76,17 +65,18 @@ const segments = [
       "Uzun ömürlü yapı",
       "Minimum bakım gereksinimi"
     ],
-    specs: [] as { label: string; value: string }[]
+    specs: [
+      { label: "Güvenlik Seviyesi", value: "Yüksek Seviye" },
+      { label: "Dayanıklılık", value: "Ağır Hizmet Tipi" },
+      { label: "Darbe Emilimi", value: "Yüksek Koruma" },
+      { label: "Kullanım Alanı", value: "Kritik Noktalar" }
+    ]
   },
   {
     id: "Q5",
     title: "Tuzaklar & Kapanlar",
     subtitle: "Yeraltı Güvenlik Sistemleri",
     description: "Yeraltına gömülen hidrolik tuzak sistemleri, görünmeyen ancak son derece etkili güvenlik çözümleri sunar. Acil durumlarda otomatik aktive olan bu sistemler, yetkisiz araç girişlerini engellemek için tasarlanmıştır.",
-    image: "/images/bariyer/tuzak-kapan.jpg",
-    gradient: "from-slate-900 to-slate-800",
-    bgGradient: "from-slate-50 to-white",
-    icon: AlertTriangle,
     detailUrl: "/urunler/tuzaklar-kapanlar",
     features: [
       "Yeraltı gömme sistemi",
@@ -107,10 +97,6 @@ const segments = [
     title: "MT Mantar Bariyer (Hidrolik)",
     subtitle: "Hidrolik Yükselen Bariyer Sistemi",
     description: "Yüksek güvenlik ihtiyacı duyulan noktalarda araç trafiğini engelleyecek şekilde tasarlanmış, 304 paslanmaz çelik yapılı hidrolik bariyer sistemi. PLC kontrol sistemi ve 100 bar hidrolik güç ile maksimum performans sağlar.",
-    image: "/images/bariyer/mantar-bariyer.jpg",
-    gradient: "from-slate-900 to-slate-800",
-    bgGradient: "from-slate-50 to-white",
-    icon: Lock,
     detailUrl: "/urunler/mantar-bariyer",
     features: [
       "304 paslanmaz çelik yapı",
@@ -138,10 +124,6 @@ const segments = [
     title: "Road Blocker Sistemler",
     subtitle: "Terör Önleme ve Yüksek Güvenlik",
     description: "Terör eylemlerine karşı tasarlanan, elektronik kontrollü hidrolik yol kesici sistem. Yüksek dayanıklılık ve güvenilirlik özelliği ile kritik noktalarda kullanılır. 4 adet güneş enerjili LED ile gece görünürlüğü sağlanmıştır.",
-    image: "/images/bariyer/road-blocker.jpg",
-    gradient: "from-slate-900 to-slate-800",
-    bgGradient: "from-slate-50 to-white",
-    icon: Gauge,
     detailUrl: "/urunler/road-blocker",
     features: [
       "Terör eylemlerine karşı tasarım",
@@ -254,9 +236,8 @@ const faqSchema = {
 };
 
 export default function BariyerSistemleriPage() {
-  const handleContactClick = () => {
+  const teklifTiklandi = () => {
     trackEvent('Contact Request', 'bariyer_contact', 'Bariyer Sistemleri Page - Contact Button');
-    window.location.href = '/iletisim';
   };
 
   return (
@@ -304,36 +285,33 @@ export default function BariyerSistemleriPage() {
         </script>
       </Helmet>
 
-      {/* Giris bandi: duz lacivert, yerel gercek urun gorseli */}
-      <section className="bg-slate-900 pt-28 pb-12 lg:pt-32 lg:pb-16">
+      {/* Giris bandi: duz lacivert, gorselsiz siki duzen; guven seridi */}
+      <section className="bg-slate-900 border-b-4 border-primary py-8 md:py-12">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div>
-              <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-                Mantar Bariyer, Road Blocker ve Tuzak Kapan Sistemleri
-              </h1>
-              <p className="text-lg text-slate-300 mb-8">
-                Hidrolik mantar bariyer, road blocker yol kesici ve tuzak kapan sistemleri ile yüksek güvenlik
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Button size="lg" data-testid="button-hero-contact" onClick={handleContactClick}>
-                  Teklif Alın
+          <div className="max-w-6xl mx-auto">
+            <h1 className="text-3xl lg:text-5xl font-bold text-white mb-3 leading-tight">
+              Mantar Bariyer, Road Blocker ve Tuzak Kapan Sistemleri
+            </h1>
+            <p className="text-lg text-slate-300 mb-6 max-w-3xl">
+              Hidrolik mantar bariyer, road blocker yol kesici ve tuzak kapan sistemleri ile yüksek güvenlik
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Button asChild size="lg" data-testid="button-hero-contact">
+                <Link href="/iletisim" onClick={teklifTiklandi}>
+                  {CTA_DONANIM}
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-                <Button asChild size="lg" variant="outlineLight">
-                  <a href="tel:+905467122296">0546 712 22 96</a>
-                </Button>
-              </div>
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outlineLight">
+                <a href={`tel:${DEMO_TELEFON}`}>
+                  <Phone className="w-4 h-4 mr-2" />
+                  {CTA_ARA}
+                </a>
+              </Button>
             </div>
-            <div className="bg-white rounded-lg overflow-hidden">
-              <img
-                src="/images/bariyer/pt-dinamik-bariyer.jpg"
-                alt="MT Dinamik otopark bariyeri ve ölçü çizimi"
-                className="w-full h-56 sm:h-72 lg:h-80 object-contain p-4"
-                width={800}
-                height={569}
-              />
-            </div>
+            <p className="text-sm text-slate-300 mt-6" data-testid="bariyer-guven">
+              2 yıl garanti · Satış sonrası teknik destek · Keşif, kurulum ve periyodik bakım
+            </p>
           </div>
         </div>
       </section>
@@ -341,31 +319,17 @@ export default function BariyerSistemleriPage() {
       <section className="py-12 lg:py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto divide-y divide-slate-200">
-            {segments.map((segment, index) => {
-              const isEven = index % 2 === 0;
-
+            {segments.map((segment) => {
               return (
                 <div key={segment.id} className="py-10 first:pt-0 last:pb-0">
-                  <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-6 lg:gap-10`}>
-                    {/* Görsel */}
-                    <div className="lg:w-5/12">
-                      <div className="bg-white rounded-lg flex items-center justify-center overflow-hidden border border-slate-200">
-                        <img
-                          src={segment.image}
-                          alt={`${segment.title} - ${segment.subtitle}`}
-                          className="w-full h-56 lg:h-72 object-contain p-4"
-                          loading="lazy"
-                        />
-                      </div>
-                    </div>
-
+                  <div>
                     {/* İçerik */}
-                    <div className="lg:w-7/12">
+                    <div>
                       <h2 className="text-2xl font-bold text-slate-900 mb-1">{segment.title}</h2>
                       <p className="font-medium mb-3 text-slate-500">{segment.subtitle}</p>
                       <p className="text-slate-600 mb-5 leading-relaxed">{segment.description}</p>
 
-                      <div className="grid sm:grid-cols-2 gap-x-8 gap-y-5 mb-6">
+                      <div className="grid md:grid-cols-2 gap-x-10 gap-y-5 mb-6">
                         {/* Teknik Özellikler */}
                         {segment.specs.length > 0 && (
                           <div>
@@ -417,10 +381,24 @@ export default function BariyerSistemleriPage() {
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">
               Bariyer Sistemleri Uygulama Alanları
             </h2>
-            <p className="text-lg text-slate-600 leading-relaxed">
-              Otopark ve garajlar, sanayi tesisleri, alışveriş merkezleri, askeri ve resmi kurumlar, havalimanları,
-              konut siteleri, oteller, hastaneler ve kamu binaları.
-            </p>
+            <dl className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 border border-slate-200 rounded-lg overflow-hidden" data-testid="bariyer-uygulama">
+              {[
+                { title: "Otopark ve Garajlar", desc: "AVM, rezidans, ofis ve site otoparkları için otomatik otopark bariyerleri" },
+                { title: "Sanayi Tesisleri", desc: "Fabrika ve üretim tesislerinde araç giriş-çıkış kontrolü" },
+                { title: "Alışveriş Merkezleri", desc: "Çok katlı otopark sistemleri ve vale hizmeti için bariyer çözümleri" },
+                { title: "Askeri ve Resmi Kurumlar", desc: "Road blocker ve yüksek güvenlikli bariyer sistemleri" },
+                { title: "Havalimanları", desc: "Terminal giriş-çıkış noktaları ve park alanları için hidrolik bariyerler" },
+                { title: "Konut Siteleri", desc: "Rezidans, villa ve site girişleri için uzaktan kumandalı bariyerler" },
+                { title: "Oteller ve Tesisler", desc: "Misafir araç park kontrolü ve otopark yönetim sistemleri" },
+                { title: "Hastaneler", desc: "Acil servis ve doktor park alanları için özel bariyer çözümleri" },
+                { title: "Kamu Binaları", desc: "Belediye, valilik ve resmi kurumlar için güvenlik bariyerleri" },
+              ].map((alan) => (
+                <div key={alan.title} className="bg-white px-5 py-4">
+                  <dt className="font-semibold text-slate-900 mb-1">{alan.title}</dt>
+                  <dd className="text-sm text-slate-600 leading-relaxed">{alan.desc}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </div>
       </section>
@@ -472,8 +450,8 @@ export default function BariyerSistemleriPage() {
                 <thead className="bg-slate-900">
                   <tr>
                     <th className="px-4 py-3 text-left text-white font-semibold">Özellik</th>
-                    <th className="px-4 py-3 text-center text-white font-semibold">PT Dinamik</th>
-                    <th className="px-4 py-3 text-center text-white font-semibold">PT PLUS</th>
+                    <th className="px-4 py-3 text-center text-white font-semibold">MT Dinamik</th>
+                    <th className="px-4 py-3 text-center text-white font-semibold">MT PLUS</th>
                     <th className="px-4 py-3 text-center text-white font-semibold">Mantar Bariyer</th>
                     <th className="px-4 py-3 text-center text-white font-semibold">Road Blocker</th>
                   </tr>
@@ -578,20 +556,18 @@ export default function BariyerSistemleriPage() {
               Size en uygun bariyer sistemini seçmenizde ve kurulumunda yardımcı oluyoruz. Keşif ve detaylı fiyat teklifi için bize ulaşın.
             </p>
             <p className="text-slate-300 mb-8">
-              <a href="tel:+905467122296" className="text-white font-semibold hover:underline">0546 712 22 96</a>
+              <a href={`tel:${DEMO_TELEFON}`} className="text-white font-semibold hover:underline">{DEMO_TELEFON_GORUNEN}</a>
               <span className="mx-2 text-slate-500">·</span>
               <a href="mailto:info@mikateknoloji.com" className="hover:underline">info@mikateknoloji.com</a>
               <span className="mx-2 text-slate-500">·</span>
               İstanbul
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button
-                size="lg"
-                data-testid="button-cta-contact"
-                onClick={handleContactClick}
-              >
-                İletişime Geçin
-                <ArrowRight className="w-4 h-4 ml-2" />
+              <Button asChild size="lg" data-testid="button-cta-contact">
+                <Link href="/iletisim" onClick={teklifTiklandi}>
+                  {CTA_DONANIM}
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
               </Button>
               <Button
                 asChild
@@ -599,7 +575,7 @@ export default function BariyerSistemleriPage() {
                 variant="outlineLight"
                 data-testid="button-cta-phone"
               >
-                <a href="tel:+905467122296">Hemen Ara</a>
+                <a href={`tel:${DEMO_TELEFON}`}>{CTA_ARA}</a>
               </Button>
             </div>
           </div>

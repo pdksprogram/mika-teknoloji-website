@@ -58,19 +58,7 @@ export default function MantarBariyerDetailPage() {
       <section className="pt-6 pb-20 bg-slate-50">
         <div className="container mx-auto px-4">
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <motion.div {...fadeInUp} initial={false}>
-              <div className="sticky top-24">
-                <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-                  <img 
-                    src="/images/bariyer/mantar-bariyer.jpg"
-                    alt="Hidrolik Mantar Bariyer"
-                    className="w-full h-auto object-contain rounded-2xl"
-                  />
-                </div>
-              </div>
-            </motion.div>
-
+          <div className="max-w-3xl">
             <motion.div {...fadeInUp} initial={false} className="space-y-8">
               <div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">

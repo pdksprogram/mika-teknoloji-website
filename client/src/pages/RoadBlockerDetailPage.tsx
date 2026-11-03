@@ -45,25 +45,8 @@ export default function RoadBlockerDetailPage() {
       <section className="pt-6 pb-20 bg-slate-50">
         <div className="container mx-auto px-4">
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <motion.div {...fadeInUp} initial={false} className="space-y-6">
-              <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-                <img 
-                  src="/images/bariyer/road-blocker.jpg"
-                  alt="Road Blocker Sistem"
-                  className="w-full h-auto object-contain rounded-2xl"
-                />
-              </div>
-              <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-                <img 
-                  src="/images/bariyer/roadblocker-teknik.jpg"
-                  alt="Road Blocker Teknik Detay"
-                  className="w-full h-auto object-contain rounded-2xl"
-                />
-              </div>
-            </motion.div>
-
-            <motion.div {...fadeInUp} initial={false} className="space-y-8 lg:sticky lg:top-24">
+          <div className="max-w-3xl">
+            <motion.div {...fadeInUp} initial={false} className="space-y-8">
               <div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
                   Road Blocker Sistem
