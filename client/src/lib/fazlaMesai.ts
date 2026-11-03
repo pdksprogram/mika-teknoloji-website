@@ -79,6 +79,16 @@ export function gunlukNetDakika(g: GunGirdisi): number | null {
   return Math.max(0, sure - Math.round(mola));
 }
 
+// Mola, giriş ile çıkış arasındaki süreden uzunsa true; net süre sessizce 0 olmasın diye uyarılır.
+export function molaSureyiAsiyor(g: GunGirdisi): boolean {
+  const giris = saatiDakikaya(g.giris);
+  const cikis = saatiDakikaya(g.cikis);
+  const mola = molaOku(g.mola);
+  if (giris === null || cikis === null || mola === null || mola === 0) return false;
+  const sure = cikis >= giris ? cikis - giris : cikis + GUN_DK - giris;
+  return mola > sure;
+}
+
 export function haftayiHesapla(gunler: GunGirdisi[], sinirSaat: number): HaftaSonucu {
   const gunlukDk = gunler.map(gunlukNetDakika);
   const toplamDk = gunlukDk.reduce<number>((t, d) => t + (d ?? 0), 0);

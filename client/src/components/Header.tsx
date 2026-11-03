@@ -17,7 +17,10 @@ import {
 } from "@/components/ui/accordion";
 // import { useIsMobile } from "@/hooks/use-mobile"; // Not used currently
 import { useLanguage } from "@/hooks/useLanguage";
+import { menuSuz } from "@/lib/rotalar";
 const mikaLogo = "/mika-logo.jpg"; // Real Mika logo
+const MEGA_SUTUN: Record<number, string> = { 1: "grid-cols-1", 2: "grid-cols-2", 3: "grid-cols-3", 4: "grid-cols-4" };
+const MEGA_GENISLIK: Record<number, string> = { 1: "w-80", 2: "w-[36rem]", 3: "w-[52rem]", 4: "w-[64rem]" };
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -126,27 +129,27 @@ export default function Header() {
       { name: "QR Kodlu Personel Takibi", href: "/qr-pdks" },
       { name: "Fazla Mesai Hesaplama", href: "/fazla-mesai-hesaplama" },
       { name: "Access Geçiş Kontrol Sistemleri", href: "/access-control" },
-      { name: "Bekçi Tur Kontrol Sistemi", href: "/bekci-tur" },
+      { name: "Bekçi Tur Kontrol Sistemi", href: "/qr-bekci" },
       { name: "QR Bekçi Sistemi", href: "/qr-bekci" },
-      { name: "Turnike Sistemleri", href: "/turnike" },
+      { name: "Turnike Sistemleri", href: "/turnike-sistemleri" },
       { name: "Otel Kapı Kilit Sistemleri", href: "/otel-kilit" },
       { name: "Anahtar/Dolap Takip Sistemi", href: "/anahtar-takip" }
     ],
     "Donanımlar": [
-      { name: "Biyometrik Yüz Tanıma Sistemi", href: "/yuz-tanima" },
-      { name: "Parmak İzi Okuyucu", href: "/parmak-izi" },
-      { name: "Kartlı Geçiş Sistemi (RFID)", href: "/rfid" },
+      { name: "Biyometrik Yüz Tanıma Sistemi", href: "/urunler/yuz-tanima" },
+      { name: "Parmak İzi Okuyucu", href: "/urunler/parmak-izi-tanima" },
+      { name: "Kartlı Geçiş Sistemi (RFID)", href: "/kartli-gecis-sistemi" },
       { name: "Şifreli Passcode Sistemleri", href: "/passcode" },
-      { name: "Bekçi Tur Kontrol Sistemi", href: "/bekci-kontrol" },
-      { name: "Turnike Sistemleri", href: "/turnike-donanim" },
+      { name: "Bekçi Tur Kontrol Sistemi", href: "/qr-bekci" },
+      { name: "Turnike Sistemleri", href: "/urunler/turnike" },
       { name: "Bariyer Sistemleri", href: "/urunler/bariyer-sistemleri" }
     ],
     "Yazılımlar": [
       { name: "Web PDKS", href: "https://pdkspersoneltakip.com/" },
-      { name: "Access Kontrol Programı", href: "/access-program" },
-      { name: "Startıp Puanlama Yazılımı", href: "/startup-puanlama" },
+      { name: "Access Kontrol Programı", href: "/access-control" },
+      { name: "Startup Puanlama Yazılımı", href: "/startup-puanlama" },
       { name: "Ogar Puanlama Yazılımı", href: "/ogar-puanlama" },
-      { name: "Yemekahane Takip Sistemi", href: "/yemekhane" },
+      { name: "Yemekhane Takip Sistemi", href: "/yemekhane" },
       { name: "Turnike Takip Programı", href: "/turnike-program" },
       { name: "Üye Takip Programı", href: "/uye-takip" }
     ],
@@ -171,12 +174,16 @@ export default function Header() {
       { name: "Mağaza Personel Takip Programı", href: "/urunler/magaza-personel-takip" },
       { name: "OGS & HGS Geçiş Sistemleri", href: "/urunler/ogs-hgs" },
       { name: "AR-GE Takip Sistemi", href: "/urunler/arge-takip" },
-      { name: "Bekçi & Devriye Tur Sistemleri", href: "/urunler/bekci-devriye" },
+      { name: "Bekçi & Devriye Tur Sistemleri", href: "/urunler/bekci-tur-kontrol" },
       { name: "Yemekhane Takip Sistemi", href: "/urunler/yemekhane" },
       { name: "Üye Takip Sistemi", href: "/urunler/uye-takip" },
       { name: "Kablosuz Alarm Sistemleri", href: "/urunler/kablosuz-alarm" }
     ]
   };
+
+  const cozumSutunlari = menuSuz(solutionsMenuData);
+  const urunSutunlari = menuSuz(productsMenuData);
+  const aktifSutunlar = activeMenuType === 'products' ? urunSutunlari : cozumSutunlari;
 
   const isActiveLink = (href: string) => {
     if (href === "/") {
@@ -308,9 +315,9 @@ export default function Header() {
                   
                   {/* Mega Menu Dropdown */}
                   {item.hasDropdown && isDropdownOpen && activeMenuType && item.menuType === activeMenuType && (
-                    <div className={`absolute top-full left-0 w-screen ${activeMenuType === 'products' ? 'max-w-2xl' : 'max-w-5xl'} bg-white shadow-2xl border-t-4 border-primary z-50 transform -translate-x-1/4`}>
-                      <div className={`grid ${activeMenuType === 'products' ? 'grid-cols-2' : 'grid-cols-4'} gap-6 p-8`}>
-                        {Object.entries(activeMenuType === 'products' ? productsMenuData : solutionsMenuData).map(([category, items]) => (
+                    <div className={`absolute top-full left-1/2 -translate-x-1/2 max-w-[calc(100vw-2rem)] ${MEGA_GENISLIK[aktifSutunlar.length] ?? MEGA_GENISLIK[4]} bg-white shadow-2xl border-t-4 border-primary z-50`}>
+                      <div className={`grid ${MEGA_SUTUN[aktifSutunlar.length] ?? MEGA_SUTUN[4]} gap-6 p-8`}>
+                        {aktifSutunlar.map(([category, items]) => (
                           <div key={category} className="space-y-4">
                             <h3 className="font-bold text-gray-900 text-lg border-b-2 border-primary pb-2">
                               {category}
@@ -439,7 +446,7 @@ export default function Header() {
                         </AccordionTrigger>
                         <AccordionContent className="px-4 pb-2">
                           <div className="space-y-1">
-                            {Object.entries(item.menuType === 'products' ? productsMenuData : solutionsMenuData).map(([category, items]) => (
+                            {(item.menuType === 'products' ? urunSutunlari : cozumSutunlari).map(([category, items]) => (
                               <div key={category} className="py-2">
                                 <h4 className="font-semibold text-slate-800 text-sm mb-2 border-b border-slate-200 pb-1">
                                   {category}

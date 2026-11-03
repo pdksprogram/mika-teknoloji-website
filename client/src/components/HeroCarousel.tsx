@@ -38,7 +38,7 @@ const slides: CarouselSlide[] = [
     ],
     icon: Smartphone,
     image: qrTrackingImage,
-    href: "/cozumler/qr-personel",
+    href: "/qr-pdks",
     bgGradient: "from-blue-600 via-purple-600 to-cyan-500",
     overlayColor: "bg-blue-900/40"
   },
@@ -55,7 +55,7 @@ const slides: CarouselSlide[] = [
     ],
     icon: Shield,
     image: turnstileImage,
-    href: "/cozumler/turnike",
+    href: "/turnike-sistemleri",
     bgGradient: "from-emerald-600 via-teal-600 to-green-500",
     overlayColor: "bg-emerald-900/40"
   },

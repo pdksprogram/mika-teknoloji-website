@@ -22,28 +22,28 @@ const turnstileCategories = [
     name: "Bel Tipi Turnikeler",
     subtitle: "( Üç Kollu Turnikeler )",
     image: belTipiTurnike,
-    link: "/bel-tipi-turnikeler"
+    link: "/urunler/bel-tipi-turnike"
   },
   {
     id: 2,
     name: "Boy Tipi Turnikeler",
     subtitle: "",
     image: boyTipiTurnike,
-    link: "/boy-tipi-turnikeler"
+    link: "/urunler/boy-tipi-turnike"
   },
   {
     id: 3,
     name: "Engelli Turnikeleri",
     subtitle: "( VIP Turnikeler )",
     image: engelliTurnike,
-    link: "/engelli-turnikeleri"
+    link: "/urunler/engelli-turnike"
   },
   {
     id: 4,
     name: "Hızlı Geçiş Turnikeleri",
     subtitle: "",
     image: hizliGecisTurnike,
-    link: "/hizli-gecis-turnikeleri"
+    link: "/urunler/hizli-gecis-turnike"
   },
   {
     id: 5,

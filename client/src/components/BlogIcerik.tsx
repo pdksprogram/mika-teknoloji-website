@@ -153,7 +153,7 @@ export function BlogYaziSablonu({ yazi, giris, children }: { yazi: BlogYazisi; g
         canonical={kanonikAdres(yazi.yol)}
         jsonLd={[makaleJsonLd(yazi), kirintiJsonLd(kirinti)]}
       />
-      <Kirinti maddeler={kirinti} />
+      <Kirinti maddeler={kirinti} icSinif="max-w-3xl mx-auto" />
       <article className="container mx-auto px-4 pt-10 pb-16">
         <div className="max-w-3xl mx-auto">
           <header className="border-b border-slate-200 pb-8">

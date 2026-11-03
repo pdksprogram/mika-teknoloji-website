@@ -711,16 +711,14 @@ const VIDEO_KART_TEMA = {
 
 export type VideoKartTema = keyof typeof VIDEO_KART_TEMA;
 
-export function VideoCard({ video, tema = "pembe" }: { video: VideoItem; tema?: VideoKartTema }) {
+export function VideoCard({ video, tema = "mavi" }: { video: VideoItem; tema?: VideoKartTema }) {
   const t = VIDEO_KART_TEMA[tema];
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [baslatildi, setBaslatildi] = useState(false);
 
   const handlePlay = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
-      setIsPlaying(true);
-    }
+    setBaslatildi(true);
+    videoRef.current?.play();
   };
 
   return (
@@ -728,7 +726,7 @@ export function VideoCard({ video, tema = "pembe" }: { video: VideoItem; tema?: 
       <Card className={`h-full overflow-hidden border-2 border-slate-200 ${t.kenar} transition-all duration-300 group bg-white rounded-xl shadow-sm hover:shadow-lg`}>
         <CardContent className="p-0">
           <div className="relative bg-black overflow-hidden rounded-t-xl" style={{ aspectRatio: '16/9' }}>
-            <div className="w-full h-full" onClick={!isPlaying ? handlePlay : undefined}>
+            <div className="w-full h-full">
               <video
                 ref={videoRef}
                 className="w-full h-full object-contain"
@@ -736,29 +734,30 @@ export function VideoCard({ video, tema = "pembe" }: { video: VideoItem; tema?: 
                 playsInline
                 controls
                 controlsList="nodownload"
-                onPlay={() => setIsPlaying(true)}
-                onPause={() => setIsPlaying(false)}
+                onPlay={() => setBaslatildi(true)}
               >
                 <source src={video.src} type="video/mp4" />
               </video>
-              {!isPlaying && (
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/20 transition-all duration-300 pointer-events-none">
-                  <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full ${t.oynat} flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300`}>
-                    <Play className="h-8 w-8 sm:h-10 sm:w-10 text-white ml-1" fill="white" />
-                  </div>
-                </div>
+              {!baslatildi && (
+                <button
+                  type="button"
+                  onClick={handlePlay}
+                  aria-label="Oynat"
+                  className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 rounded-full ${t.oynat} flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300`}
+                >
+                  <Play className="h-8 w-8 sm:h-10 sm:w-10 text-white ml-1" fill="white" aria-hidden="true" />
+                </button>
               )}
             </div>
             <div className="absolute top-2 left-2 sm:top-3 sm:left-3 flex gap-2 pointer-events-none z-10">
               <span className={`${t.rozet} text-white text-[10px] sm:text-xs px-2 sm:px-3 py-0.5 sm:py-1 rounded-full font-medium`}>
                 {video.subcategory}
               </span>
-              <span className={`text-[10px] sm:text-xs px-2 sm:px-3 py-0.5 sm:py-1 rounded-full font-medium ${levelColors[video.level]}`}>
-                {video.level}
-              </span>
-            </div>
-            <div className="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 bg-black/70 text-white text-[10px] sm:text-xs px-2 py-0.5 sm:py-1 rounded backdrop-blur-sm pointer-events-none z-10">
-              {video.duration}
+              {!video.subcategory.includes(video.level) && (
+                <span className={`text-[10px] sm:text-xs px-2 sm:px-3 py-0.5 sm:py-1 rounded-full font-medium ${levelColors[video.level]}`}>
+                  {video.level}
+                </span>
+              )}
             </div>
           </div>
           <div className="p-3 sm:p-5">
@@ -794,7 +793,7 @@ function FAQItem({ item, isOpen, onToggle }: { item: typeof faqItems[0]; isOpen:
         className="w-full flex items-center justify-between p-4 sm:p-5 text-left hover:bg-slate-50 transition-colors"
       >
         <span className="font-semibold text-sm sm:text-base text-slate-800 pr-4">{item.question}</span>
-        {isOpen ? <ChevronUp className="h-5 w-5 text-pink-600 flex-shrink-0" /> : <ChevronDown className="h-5 w-5 text-slate-400 flex-shrink-0" />}
+        {isOpen ? <ChevronUp className="h-5 w-5 text-primary flex-shrink-0" /> : <ChevronDown className="h-5 w-5 text-slate-400 flex-shrink-0" />}
       </button>
       {isOpen && (
         <div className="px-4 sm:px-5 pb-4 sm:pb-5">
@@ -829,7 +828,6 @@ export default function VideolarPage() {
     "contentUrl": `https://mikateknoloji.com${video.src}`,
     "thumbnailUrl": "https://mikateknoloji.com/images/logos/mika-logo.jpg",
     "uploadDate": "2025-01-15",
-    "duration": `PT${video.duration.split(":")[0]}M${video.duration.split(":")[1]}S`,
     "publisher": {
       "@type": "Organization",
       "name": "Mika Teknoloji Kontrol Sistemleri",
@@ -975,8 +973,8 @@ export default function VideolarPage() {
   return (
     <>
       <Helmet>
-        <title>PDKS Eğitim Videoları | Personel Devam Kontrol Sistemi Rehber | Mika Teknoloji 2025</title>
-        <meta name="description" content="PDKS (Personel Devam Kontrol Sistemi) eğitim videoları 2025. Giriş-çıkış takibi, vardiya planlama, izin yönetimi, puantaj, turnike ve bariyer montaj rehberleri. 30+ ücretsiz video ile PDKS kullanmayı öğrenin." />
+        <title>PDKS Eğitim Videoları | Personel Devam Kontrol Sistemi Rehber | Mika Teknoloji</title>
+        <meta name="description" content="PDKS (Personel Devam Kontrol Sistemi) eğitim videoları. Giriş-çıkış takibi, vardiya planlama, izin yönetimi, puantaj, turnike ve bariyer montaj rehberleri. 30+ ücretsiz video ile PDKS kullanmayı öğrenin." />
         <meta name="keywords" content="PDKS eğitim videoları, personel devam kontrol sistemi, PDKS nasıl kullanılır, QR PDKS, vardiya planlama videosu, turnike montaj, bariyer kurulum, izin yönetimi, puantaj oluşturma, mesai takibi, personel takip sistemi, WebPDKS eğitim, mobil PDKS, shift planlama, PDKS kurulum rehberi 2025" />
         <meta name="robots" content="index,follow,max-video-preview:-1,max-image-preview:large,max-snippet:-1" />
         <link rel="canonical" href="https://mikateknoloji.com/videolar" />
@@ -1011,7 +1009,6 @@ export default function VideolarPage() {
 
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         <section className="py-10 sm:py-16 bg-gradient-to-br from-primary/5 to-pink-50 relative">
-          <div className="absolute top-4 right-4 text-slate-400 text-sm font-medium">S1</div>
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -1019,7 +1016,7 @@ export default function VideolarPage() {
               transition={{ duration: 0.6 }}
               className="flex items-center justify-center mb-4 sm:mb-6"
             >
-              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-pink-600 flex items-center justify-center">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-primary flex items-center justify-center">
                 <Film className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
               </div>
             </motion.div>
@@ -1061,7 +1058,7 @@ export default function VideolarPage() {
                   placeholder="Video ara... (örn: vardiya, izin, puantaj)"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-9 sm:pl-12 pr-4 py-2.5 sm:py-3 rounded-full border border-slate-200 bg-white text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent shadow-sm"
+                  className="w-full pl-9 sm:pl-12 pr-4 py-2.5 sm:py-3 rounded-full border border-slate-200 bg-white text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent shadow-sm"
                 />
               </div>
             </motion.div>
@@ -1079,8 +1076,8 @@ export default function VideolarPage() {
                   onClick={() => setActiveCategory(cat)}
                   size="sm"
                   className={activeCategory === cat
-                    ? "bg-pink-600 hover:bg-pink-700 text-white text-xs sm:text-sm"
-                    : "border-pink-300 text-pink-600 hover:bg-pink-50 text-xs sm:text-sm"
+                    ? "bg-primary hover:opacity-90 text-white text-xs sm:text-sm"
+                    : "border-primary text-primary hover:bg-slate-50 text-xs sm:text-sm"
                   }
                 >
                   {cat} {cat !== "Tümü" && `(${videos.filter(v => v.category === cat).length})`}
@@ -1091,7 +1088,6 @@ export default function VideolarPage() {
         </section>
 
         <section className="py-8 sm:py-16 relative">
-          <div className="absolute top-4 right-4 text-slate-400 text-sm font-medium">S2</div>
           <div className="container mx-auto px-3 sm:px-4">
             {searchQuery && (
               <p className="text-center text-sm text-slate-500 mb-6">
@@ -1108,8 +1104,8 @@ export default function VideolarPage() {
               return (
                 <div key={subcategory} className="mb-10 sm:mb-16">
                   <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 max-w-5xl mx-auto">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-pink-100 flex items-center justify-center">
-                      <IconComponent className="h-4 w-4 sm:h-5 sm:w-5 text-pink-600" />
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-slate-100 flex items-center justify-center">
+                      <IconComponent className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                     </div>
                     <h2 className="text-lg sm:text-2xl font-bold text-slate-800">{subcategory}</h2>
                     <span className="text-xs sm:text-sm text-slate-400 ml-1">({subcatVideos.length} video)</span>
@@ -1140,7 +1136,6 @@ export default function VideolarPage() {
         </section>
 
         <section className="py-8 sm:py-16 bg-slate-50 relative" aria-label="PDKS Hakkında Sıkça Sorulan Sorular">
-          <div className="absolute top-4 right-4 text-slate-400 text-sm font-medium">S3</div>
           <div className="container mx-auto px-3 sm:px-4">
             <motion.div
               className="max-w-3xl mx-auto"
@@ -1170,7 +1165,6 @@ export default function VideolarPage() {
         </section>
 
         <section className="py-8 sm:py-12 bg-white relative">
-          <div className="absolute top-4 right-4 text-slate-400 text-sm font-medium">S4</div>
           <div className="container mx-auto px-3 sm:px-4">
             <motion.div
               className="max-w-4xl mx-auto"
@@ -1183,23 +1177,23 @@ export default function VideolarPage() {
                 İlgili Çözümlerimiz
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-                <Link href="/urunler/webpdks" className="block p-3 sm:p-4 rounded-xl border border-slate-200 hover:border-pink-500 hover:shadow-md transition-all text-center group">
-                  <Monitor className="h-6 w-6 sm:h-8 sm:w-8 text-pink-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                <Link href="/urunler/webpdks" className="block p-3 sm:p-4 rounded-xl border border-slate-200 hover:border-primary hover:shadow-md transition-all text-center group">
+                  <Monitor className="h-6 w-6 sm:h-8 sm:w-8 text-primary mx-auto mb-2 group-hover:scale-110 transition-transform" />
                   <h3 className="text-xs sm:text-sm font-semibold text-slate-800">WebPDKS</h3>
                   <p className="text-[10px] sm:text-xs text-slate-500 mt-1 hidden sm:block">Bulut Tabanlı PDKS</p>
                 </Link>
-                <Link href="/urunler/qr-patrol" className="block p-3 sm:p-4 rounded-xl border border-slate-200 hover:border-pink-500 hover:shadow-md transition-all text-center group">
-                  <Smartphone className="h-6 w-6 sm:h-8 sm:w-8 text-pink-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                <Link href="/qr-bekci" className="block p-3 sm:p-4 rounded-xl border border-slate-200 hover:border-primary hover:shadow-md transition-all text-center group">
+                  <Smartphone className="h-6 w-6 sm:h-8 sm:w-8 text-primary mx-auto mb-2 group-hover:scale-110 transition-transform" />
                   <h3 className="text-xs sm:text-sm font-semibold text-slate-800">QR-Patrol</h3>
                   <p className="text-[10px] sm:text-xs text-slate-500 mt-1 hidden sm:block">Mobil Devriye</p>
                 </Link>
-                <Link href="/urunler/yuz-tanima" className="block p-3 sm:p-4 rounded-xl border border-slate-200 hover:border-pink-500 hover:shadow-md transition-all text-center group">
-                  <Users className="h-6 w-6 sm:h-8 sm:w-8 text-pink-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                <Link href="/urunler/yuz-tanima" className="block p-3 sm:p-4 rounded-xl border border-slate-200 hover:border-primary hover:shadow-md transition-all text-center group">
+                  <Users className="h-6 w-6 sm:h-8 sm:w-8 text-primary mx-auto mb-2 group-hover:scale-110 transition-transform" />
                   <h3 className="text-xs sm:text-sm font-semibold text-slate-800">Yüz Tanıma</h3>
                   <p className="text-[10px] sm:text-xs text-slate-500 mt-1 hidden sm:block">Biyometrik Geçiş</p>
                 </Link>
-                <Link href="/cozumler" className="block p-3 sm:p-4 rounded-xl border border-slate-200 hover:border-pink-500 hover:shadow-md transition-all text-center group">
-                  <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-pink-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                <Link href="/cozumler" className="block p-3 sm:p-4 rounded-xl border border-slate-200 hover:border-primary hover:shadow-md transition-all text-center group">
+                  <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-primary mx-auto mb-2 group-hover:scale-110 transition-transform" />
                   <h3 className="text-xs sm:text-sm font-semibold text-slate-800">Tüm Çözümler</h3>
                   <p className="text-[10px] sm:text-xs text-slate-500 mt-1 hidden sm:block">Kapsamlı Güvenlik</p>
                 </Link>
@@ -1208,8 +1202,7 @@ export default function VideolarPage() {
           </div>
         </section>
 
-        <section className="py-10 sm:py-16 bg-gradient-to-r from-pink-600 to-pink-700 relative">
-          <div className="absolute top-4 right-4 text-white/40 text-sm font-medium">S5</div>
+        <section className="py-10 sm:py-16 bg-primary relative">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -1227,7 +1220,7 @@ export default function VideolarPage() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-white text-pink-600 hover:bg-white/90 font-semibold text-sm sm:text-base"
+                  className="bg-white text-primary hover:bg-white/90 font-semibold text-sm sm:text-base"
                 >
                   <a href="https://wa.me/905467122296" target="_blank" rel="noopener noreferrer">
                     WhatsApp ile İletişim
@@ -1249,7 +1242,6 @@ export default function VideolarPage() {
         </section>
 
         <section className="py-6 sm:py-10 bg-white relative" aria-label="PDKS Eğitim İçerikleri SEO Metin">
-          <div className="absolute top-4 right-4 text-slate-400 text-sm font-medium">S6</div>
           <div className="container mx-auto px-3 sm:px-4">
             <div className="max-w-4xl mx-auto prose prose-sm sm:prose prose-slate">
               <h2 className="text-lg sm:text-2xl font-bold text-slate-800 mb-3 sm:mb-4">PDKS Eğitim Videoları ile Sisteminizi Kolayca Öğrenin</h2>

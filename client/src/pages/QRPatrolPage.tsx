@@ -105,7 +105,6 @@ export default function QRPatrolPage() {
       
       {/* [S1] Hero Section */}
       <section id="s1" data-section="S1" className="relative min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50 overflow-hidden">
-        <div className="pointer-events-none select-none absolute top-4 left-4 z-20 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">S1</div>
         
         <div className="container mx-auto px-4 py-20">
           {/* Main Hero Content */}
@@ -201,7 +200,6 @@ export default function QRPatrolPage() {
 
       {/* [S2] Benefits Section */}
       <section id="s2" data-section="S2" className="relative py-32 bg-gray-50">
-        <div className="pointer-events-none select-none absolute top-4 left-4 z-20 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">S2</div>
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -241,7 +239,6 @@ export default function QRPatrolPage() {
 
       {/* [S3] How It Works Section */}
       <section id="s3" data-section="S3" className="relative py-32 bg-white">
-        <div className="pointer-events-none select-none absolute top-4 left-4 z-20 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">S3</div>
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -306,7 +303,6 @@ export default function QRPatrolPage() {
 
       {/* [S4] FAQ Section */}
       <section id="s4" data-section="S4" className="relative py-32 bg-gray-50">
-        <div className="pointer-events-none select-none absolute top-4 left-4 z-20 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">S4</div>
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -343,7 +339,6 @@ export default function QRPatrolPage() {
 
       {/* [S5] CTA Section */}
       <section id="s5" data-section="S5" className="relative py-32 bg-gradient-to-br from-purple-600 via-pink-600 to-violet-500">
-        <div className="pointer-events-none select-none absolute top-4 left-4 z-20 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">S5</div>
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

@@ -424,7 +424,7 @@ export default function PersonelTakipPage() {
                     Özellikle büyük ve hareketli işyerleri için idealdir.
                   </p>
                   <Button asChild variant="outline" className="w-full">
-                    <Link href="/urunler/qr-patrol">Detayları İncele</Link>
+                    <Link href="/qr-bekci">Detayları İncele</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -474,7 +474,7 @@ export default function PersonelTakipPage() {
                     giriş-çıkış kontrolü sağlar.
                   </p>
                   <Button asChild variant="outline" className="w-full">
-                    <Link href="/cozumler/parmak-izi">Detayları İncele</Link>
+                    <Link href="/urunler/parmak-izi-tanima">Detayları İncele</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -977,7 +977,7 @@ export default function PersonelTakipPage() {
               Her zaman yanınızdayız!
             </h2>
             <p className="text-lg text-slate-600">
-              Personel takip sistemi, <Link href="/urunler/qr-patrol" className="text-primary hover:text-primary/80 underline font-medium">QR-Patrol güvenlik sistemi</Link>, <Link href="/urunler/turnike-sistemleri" className="text-primary hover:text-primary/80 underline font-medium">turnike sistemleri</Link> ve tüm teknoloji çözümlerimiz için destek ve bilgi sunuyoruz.
+              Personel takip sistemi, <Link href="/qr-bekci" className="text-primary hover:text-primary/80 underline font-medium">QR-Patrol güvenlik sistemi</Link>, <Link href="/turnike-sistemleri" className="text-primary hover:text-primary/80 underline font-medium">turnike sistemleri</Link> ve tüm teknoloji çözümlerimiz için destek ve bilgi sunuyoruz.
             </p>
           </motion.div>
 

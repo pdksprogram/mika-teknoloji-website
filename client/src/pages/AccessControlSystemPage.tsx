@@ -73,7 +73,6 @@ export default function AccessControlSystemPage() {
       
       {/* [S1] Hero Section - Corporate Style */}
       <section id="s1" data-section="S1" className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
-        <div className="pointer-events-none select-none absolute top-4 left-4 z-20 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">S1</div>
         
         <div className="container mx-auto px-4 py-20">
           {/* Main Hero Content */}
@@ -198,7 +197,6 @@ export default function AccessControlSystemPage() {
 
       {/* [S2] Cloud Based Access Control Section */}
       <section id="s2" data-section="S2" className="relative py-32 bg-gray-50">
-        <div className="pointer-events-none select-none absolute top-4 left-4 z-20 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">S2</div>
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
@@ -292,7 +290,6 @@ export default function AccessControlSystemPage() {
 
       {/* [S3] Advanced Features Section */}
       <section id="s3" data-section="S3" className="relative py-32 bg-white">
-        <div className="pointer-events-none select-none absolute top-4 left-4 z-20 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">S3</div>
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Content - Advanced Dashboard */}
@@ -387,7 +384,6 @@ export default function AccessControlSystemPage() {
 
       {/* [S4] Hardware Section */}
       <section id="s4" data-section="S4" className="relative py-32 bg-gray-50">
-        <div className="pointer-events-none select-none absolute top-4 left-4 z-20 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">S4</div>
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-20"
@@ -536,7 +532,6 @@ export default function AccessControlSystemPage() {
 
       {/* [S5] Cloud Based System */}
       <section id="s5" data-section="S5" className="relative py-32 bg-white">
-        <div className="pointer-events-none select-none absolute top-4 left-4 z-20 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">S5</div>
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left - QR Visitor System */}

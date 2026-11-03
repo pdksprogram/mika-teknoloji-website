@@ -136,13 +136,11 @@ export default function Home() {
 
       {/* Hero Carousel Section */}
       <section className="relative">
-        <div className="absolute top-4 right-4 z-20 text-xs font-semibold text-pink-600 bg-white/80 px-2 py-1 rounded">S1</div>
         <HeroCarousel />
       </section>
 
       {/* Project Videos Section */}
       <section className="relative py-20 bg-white">
-        <div className="absolute top-4 right-4 text-xs font-semibold text-pink-600 bg-pink-50 px-2 py-1 rounded">S2</div>
         <div className="container mx-auto px-4">
           {/* Tamamlanmış Proje Referanslarımız */}
           <motion.div
@@ -234,10 +232,9 @@ export default function Home() {
 
       {/* Reference Section - Following Meyer's approach */}
       <section className="relative py-20 bg-gray-50">
-        <div className="absolute top-4 right-4 text-xs font-semibold text-pink-600 bg-white px-2 py-1 rounded">S3</div>
         <div className="container mx-auto px-4">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-10"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -246,14 +243,14 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
               Mika Teknoloji PDKS
             </h2>
-            <p className="text-lg text-slate-600 mb-8">
+            <p className="text-lg text-slate-600">
               Büyük şirketlerden KOBİ'lere kadar PDKS, geçiş kontrol ve güvenlik projeleri
             </p>
           </motion.div>
 
           {/* Advantages Section like Meyer */}
           <motion.div 
-            className="grid md:grid-cols-3 gap-8 mb-16"
+            className="grid md:grid-cols-3 gap-8"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -277,7 +274,6 @@ export default function Home() {
 
       {/* Detailed Content Section - For SEO */}
       <section className="relative py-20 bg-white">
-        <div className="absolute top-4 right-4 text-xs font-semibold text-pink-600 bg-pink-50 px-2 py-1 rounded">S4</div>
         <div className="container mx-auto px-4">
           <motion.div
             className="max-w-4xl mx-auto"
@@ -380,7 +376,6 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="relative py-20 bg-slate-800 text-white">
-        <div className="absolute top-4 right-4 text-xs font-semibold text-pink-600 bg-white px-2 py-1 rounded">S5</div>
         <div className="container mx-auto px-4 text-center">
           <motion.h2 
             className="text-3xl md:text-4xl font-bold mb-4" 

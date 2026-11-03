@@ -1,26 +1,33 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { AlertCircle } from "lucide-react";
+import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
 
+// Tanımsız adresler: Header ve Footer App.tsx'te ortak; burada yalnız gövde.
 export default function NotFound() {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
+    <main className="bg-white">
       <Helmet>
-        <title>404 - Sayfa Bulunamadı | Mika Teknoloji</title>
+        <title>Sayfa bulunamadı | Mika Teknoloji</title>
         <meta name="robots" content="noindex,nofollow" />
       </Helmet>
-      <Card className="w-full max-w-md mx-4">
-        <CardContent className="pt-6">
-          <div className="flex mb-4 gap-2">
-            <AlertCircle className="h-8 w-8 text-red-500" />
-            <h1 className="text-2xl font-bold text-gray-900">404 Page Not Found</h1>
-          </div>
-
-          <p className="mt-4 text-sm text-gray-600">
-            Did you forget to add the page to the router?
-          </p>
-        </CardContent>
-      </Card>
-    </div>
+      <section className="container mx-auto px-4 py-24 text-center">
+        <p className="text-sm font-semibold text-primary mb-3">404</p>
+        <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Sayfa bulunamadı</h1>
+        <p className="text-lg text-gray-600 mb-10">Aradığınız sayfa taşınmış ya da kaldırılmış olabilir.</p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
+            href="/"
+            className="bg-primary hover:opacity-90 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg transition-opacity"
+          >
+            Ana Sayfa
+          </Link>
+          <Link
+            href="/pdks-programi"
+            className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors"
+          >
+            PDKS Programı
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 }

@@ -7,8 +7,8 @@ export default function Products() {
       title: "Çözümler",
       items: [
         { name: "PDKS (Personel Devam Kontrol)", href: "/pdks-programi" },
-        { name: "Access Geçiş Kontrol Sistemleri", href: "/cozumler/access" },
-        { name: "Bekçi Tur Kontrol Sistemi", href: "/cozumler/bekci-tur" },
+        { name: "Access Geçiş Kontrol Sistemleri", href: "/access-control" },
+        { name: "Bekçi Tur Kontrol Sistemi", href: "/qr-bekci" },
         { name: "Otel Kapı Kilit Sistemleri", href: "/urunler/otel-kilit" },
         { name: "Anahtar/Dolap Takip Sistemi", href: "/urunler/anahtar" }
       ]
@@ -17,8 +17,8 @@ export default function Products() {
       title: "Donanımlar",
       items: [
         { name: "1. Biyometrik Yüz Tanıma Sistemi", href: "/urunler/yuz-tanima" },
-        { name: "2. Parmak İzi Okuyucu", href: "/urunler/parmak-izi" },
-        { name: "3. Kartlı Geçiş Sistemi (RFID)", href: "/urunler/rfid" },
+        { name: "2. Parmak İzi Okuyucu", href: "/urunler/parmak-izi-tanima" },
+        { name: "3. Kartlı Geçiş Sistemi (RFID)", href: "/kartli-gecis-sistemi" },
         { name: "4. Şifreli Geçiş/Takip Sistemi", href: "/urunler/sifreli" },
         { name: "5. Şifreli Passcode Sistemleri", href: "/urunler/passcode" },
         { name: "6. Bekçi Tur Kontrol Sistemi", href: "/urunler/bekci-tur-kontrol" },

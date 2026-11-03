@@ -58,6 +58,24 @@ function rotalariOku() {
   return [...rotalar];
 }
 
+// Menü süzgecinin rota listesi (client/src/lib/rotalar.ts) App.tsx'teki path'lerle birebir aynı olmalı;
+// aksi halde menü var olan sayfayı gizler ya da kırık adres gösterir. Fark varsa derleme durur.
+function menuRotalariniDenetle() {
+  const app = fs.readFileSync(path.join(kok, "client", "src", "App.tsx"), "utf8");
+  const liste = fs.readFileSync(path.join(kok, "client", "src", "lib", "rotalar.ts"), "utf8");
+  const appYollari = new Set([...app.matchAll(/<Route\b[^>]*\bpath\s*=\s*"([^"]+)"/g)].map((m) => m[1]));
+  const blok = /TANIMLI_ROTALAR[^=]*=\s*\[([\s\S]*?)\]/.exec(liste);
+  const listeYollari = new Set(blok ? [...blok[1].matchAll(/"([^"]+)"/g)].map((m) => m[1]) : []);
+  const eksik = [...appYollari].filter((r) => !listeYollari.has(r));
+  const fazla = [...listeYollari].filter((r) => !appYollari.has(r));
+  if (eksik.length || fazla.length) {
+    throw new Error(
+      `rotalar.ts App.tsx ile uyuşmuyor. Listede eksik: [${eksik.join(", ")}]; listede fazla: [${fazla.join(", ")}]`,
+    );
+  }
+  console.log(`[on-render] Menü rota listesi App.tsx ile aynı (${listeYollari.size} adres).`);
+}
+
 // ---- Site haritası + robots.txt (el yazması liste yok; ön-render edilen rotalardan üretilir) ----
 
 const SITE_HARITASI_ADRESI = "https://mikateknoloji.com/sitemap.xml";
@@ -190,6 +208,7 @@ async function main() {
 
   const { render, kanonikAdres } = await import(pathToFileURL(path.join(ssrCikti, "entry-server.mjs")).href);
 
+  menuRotalariniDenetle();
   const rotalar = rotalariOku();
   const hatalar = [];
   const kayitlar = []; // site haritası için: her rotanın canonical'ı ve noindex durumu

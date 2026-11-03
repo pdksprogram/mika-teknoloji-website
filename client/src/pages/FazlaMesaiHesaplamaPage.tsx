@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { Link } from "wouter";
 import { ArrowRight, RotateCcw } from "lucide-react";
 import SEO, { kanonikAdres } from "@/seo/SEO";
@@ -28,6 +28,7 @@ import {
   fazlaMesaiTutari,
   haftayiHesapla,
   molaOku,
+  molaSureyiAsiyor,
   ondalikSaat,
   sinirliSayiOku,
   sureMetni,
@@ -106,6 +107,9 @@ function HesaplamaAraci() {
   const katsayiSayi = sinirliSayiOku(katsayi, ENFAZLA_KATSAYI);
   const katsayiHatali = katsayi.trim() !== "" && katsayiSayi === null;
   const molaHatali = gunler.some((g) => molaOku(g.mola) === null);
+  // Başında eksi olan değer için uyarı "eksi olamaz" der.
+  const ucretEksi = ucret.trim().startsWith("-");
+  const katsayiEksi = katsayi.trim().startsWith("-");
 
   const sonuc = haftayiHesapla(gunler, sinirSayi ?? 0);
   const tutar = sinirHatali ? null : fazlaMesaiTutari(sonuc.fazlaDk, ucretSayi, katsayiSayi);
@@ -125,14 +129,14 @@ function HesaplamaAraci() {
   };
 
   return (
-    <section className="py-16 bg-white" aria-labelledby="hesaplama-baslik">
+    <section className="pt-6 pb-16 bg-white" aria-labelledby="hesaplama-baslik">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-10">
-          <h2 id="hesaplama-baslik" className="text-3xl md:text-4xl font-bold text-slate-800">Haftalık Fazla Mesai Hesabı</h2>
+        <div className="text-center mb-4">
+          <h2 id="hesaplama-baslik" className="text-2xl md:text-3xl font-bold text-slate-800">Haftalık Fazla Mesai Hesabı</h2>
         </div>
         <Card className="max-w-5xl mx-auto border-0 shadow-lg">
-          <CardContent className="p-4 md:p-8">
-            <div className="mb-6">
+          <CardContent className="p-4 md:p-6">
+            <div className="mb-4">
               <div className="flex flex-col sm:flex-row sm:items-end gap-4">
                 <div className="sm:w-64">
                   <Label htmlFor="fm-sinir" className="text-slate-700">Haftalık normal çalışma sınırı (saat)</Label>
@@ -165,24 +169,28 @@ function HesaplamaAraci() {
             </div>
 
             <div className="overflow-x-auto">
-              <table className="w-full min-w-[560px] text-left">
+              <table className="w-full min-w-[560px] table-fixed text-left">
                 <caption className="sr-only">Günlük giriş, çıkış ve mola süreleri</caption>
                 <thead>
                   <tr className="border-b-2 border-slate-200 text-sm text-slate-600">
-                    <th scope="col" className="py-3 pr-3 font-semibold">Gün</th>
-                    <th scope="col" className="py-3 px-2 font-semibold">Giriş</th>
-                    <th scope="col" className="py-3 px-2 font-semibold">Çıkış</th>
-                    <th scope="col" className="py-3 px-2 font-semibold">Mola (dk)</th>
-                    <th scope="col" className="py-3 pl-3 font-semibold text-right">Net Çalışma</th>
+                    <th scope="col" className="w-[20%] py-2 pr-3 font-semibold">Gün</th>
+                    <th scope="col" className="w-[22%] py-2 px-2 font-semibold">Giriş</th>
+                    <th scope="col" className="w-[22%] py-2 px-2 font-semibold">Çıkış</th>
+                    <th scope="col" className="w-[16%] py-2 px-2 font-semibold">Mola (dk)</th>
+                    <th scope="col" className="w-[20%] py-2 pl-3 font-semibold text-right">Net Çalışma</th>
                   </tr>
                 </thead>
                 <tbody>
                   {HAFTANIN_GUNLERI.map((gun, i) => {
                     const net = sonuc.gunlukDk[i];
+                    const molaAsiyor = molaSureyiAsiyor(gunler[i]);
+                    const molaKutuHatali = molaAsiyor || molaOku(gunler[i].mola) === null;
+                    const uyariId = `fm-mola-uyari-${i}`;
                     return (
-                      <tr key={gun} className="border-b border-slate-100">
-                        <th scope="row" className="py-2 pr-3 font-medium text-slate-800">{gun}</th>
-                        <td className="py-2 px-2">
+                      <Fragment key={gun}>
+                      <tr className={molaAsiyor ? "" : "border-b border-slate-100"}>
+                        <th scope="row" className="py-1.5 pr-3 font-medium text-slate-800">{gun}</th>
+                        <td className="py-1.5 px-2">
                           <Input
                             type="time"
                             aria-label={`${gun} giriş saati`}
@@ -190,7 +198,7 @@ function HesaplamaAraci() {
                             onChange={(e) => guncelle(i, "giris", e.target.value)}
                           />
                         </td>
-                        <td className="py-2 px-2">
+                        <td className="py-1.5 px-2">
                           <Input
                             type="time"
                             aria-label={`${gun} çıkış saati`}
@@ -198,21 +206,30 @@ function HesaplamaAraci() {
                             onChange={(e) => guncelle(i, "cikis", e.target.value)}
                           />
                         </td>
-                        <td className="py-2 px-2">
+                        <td className="py-1.5 px-2">
                           <Input
                             type="text"
                             inputMode="numeric"
                             aria-label={`${gun} mola süresi, dakika`}
-                            className={molaOku(gunler[i].mola) === null ? HATALI_KUTU : undefined}
-                            aria-invalid={molaOku(gunler[i].mola) === null}
+                            className={molaKutuHatali ? HATALI_KUTU : undefined}
+                            aria-invalid={molaKutuHatali}
+                            aria-describedby={molaAsiyor ? uyariId : undefined}
                             value={gunler[i].mola}
                             onChange={(e) => guncelle(i, "mola", e.target.value)}
                           />
                         </td>
-                        <td className="py-2 pl-3 text-right tabular-nums text-slate-800">
+                        <td className="py-1.5 pl-3 text-right tabular-nums text-slate-800">
                           {net === null ? "—" : sureMetni(net)}
                         </td>
                       </tr>
+                      {molaAsiyor && (
+                        <tr className="border-b border-slate-100">
+                          <td colSpan={5} className="pb-2">
+                            <p id={uyariId} className="text-sm text-red-600">Mola süresi çalışma süresini aşıyor.</p>
+                          </td>
+                        </tr>
+                      )}
+                      </Fragment>
                     );
                   })}
                 </tbody>
@@ -237,7 +254,7 @@ function HesaplamaAraci() {
                 />
                 {ucretHatali && (
                   <p id="fm-ucret-uyari" className={UYARI_METNI}>
-                    Saatlik ücreti 1.000.000 TL'yi aşmayan bir sayı olarak girin.
+                    {ucretEksi ? "Saatlik ücret eksi olamaz." : "Saatlik ücreti 1.000.000 TL'yi aşmayan bir sayı olarak girin."}
                   </p>
                 )}
               </div>
@@ -255,7 +272,7 @@ function HesaplamaAraci() {
                 />
                 {katsayiHatali && (
                   <p id="fm-katsayi-uyari" className={UYARI_METNI}>
-                    Katsayıyı {ENFAZLA_KATSAYI}'u aşmayan bir sayı olarak girin, örneğin 1,5.
+                    {katsayiEksi ? "Katsayı eksi olamaz." : `Katsayıyı ${ENFAZLA_KATSAYI}'u aşmayan bir sayı olarak girin, örneğin 1,5.`}
                   </p>
                 )}
               </div>
@@ -316,6 +333,7 @@ export default function FazlaMesaiHesaplamaPage() {
       />
       <Kirinti maddeler={KIRINTI} />
       <KonuGiris
+        sikisik
         ust="PDKS · Hesaplama"
         baslik="Fazla Mesai Hesaplama"
         giris="Haftanın her günü için giriş, çıkış ve mola süresini girin; haftalık toplam çalışma, normal çalışma ve fazla mesai anında hesaplanır."

@@ -20,7 +20,7 @@ export default function BlogListesiPage() {
         canonical={kanonikAdres(BLOG_YOLU)}
         jsonLd={[kirintiJsonLd(KIRINTI)]}
       />
-      <Kirinti maddeler={KIRINTI} />
+      <Kirinti maddeler={KIRINTI} icSinif="max-w-4xl mx-auto" />
       <section className="container mx-auto px-4 pt-10 pb-16">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">Blog</h1>

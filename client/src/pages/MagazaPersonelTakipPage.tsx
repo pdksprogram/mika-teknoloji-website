@@ -166,7 +166,6 @@ export default function MagazaPersonelTakipPage() {
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         {/* SEGMENT 1: Hero */}
         <section className="py-16 bg-gradient-to-br from-primary/5 to-pink-50 relative">
-          <div className="absolute top-4 right-4 text-slate-400 text-sm font-medium">S1</div>
           <div className="container mx-auto px-4 text-center">
             <motion.h1 
               className="text-4xl md:text-5xl font-bold text-slate-800 mb-6"
@@ -189,7 +188,6 @@ export default function MagazaPersonelTakipPage() {
 
         {/* SEGMENT 2: Video */}
         <section className="py-16 bg-white relative">
-          <div className="absolute top-4 right-4 text-slate-400 text-sm font-medium">S2</div>
           
           <div className="container mx-auto px-4">
             <motion.div
@@ -219,7 +217,6 @@ export default function MagazaPersonelTakipPage() {
         {/* SEGMENT 3: Ana Özellikler Kartları */}
         <section className="py-16 bg-slate-50 relative">
           {/* Segment İşareti - Sağ Üst Köşe */}
-          <div className="absolute top-4 right-4 text-slate-400 text-sm font-medium">S3</div>
           
           <div className="container mx-auto px-4">
             <motion.div 
@@ -309,7 +306,6 @@ export default function MagazaPersonelTakipPage() {
         {/* SEGMENT 4: Kullanım Alanları */}
         <section className="py-16 bg-white relative">
           {/* Segment İşareti - Sağ Üst Köşe */}
-          <div className="absolute top-4 right-4 text-slate-400 text-sm font-medium">S4</div>
           
           <div className="container mx-auto px-4">
             <motion.div 
@@ -359,7 +355,6 @@ export default function MagazaPersonelTakipPage() {
         {/* SEGMENT 5: FAQ */}
         <section className="py-16 bg-slate-50 relative">
           {/* Segment İşareti - Sağ Üst Köşe */}
-          <div className="absolute top-4 right-4 text-slate-400 text-sm font-medium">S5</div>
           
           <div className="container mx-auto px-4">
             <motion.div 
@@ -403,7 +398,6 @@ export default function MagazaPersonelTakipPage() {
         {/* SEGMENT 6: CTA (Çağrı) */}
         <section className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white relative">
           {/* Segment İşareti - Sağ Üst Köşe */}
-          <div className="absolute top-4 right-4 text-white/60 text-sm font-medium">S6</div>
           
           <div className="container mx-auto px-4 text-center">
             <motion.div

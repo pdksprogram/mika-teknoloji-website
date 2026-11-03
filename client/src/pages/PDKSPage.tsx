@@ -537,12 +537,12 @@ export default function PDKSPage() {
             viewport={{ once: true }}
           >
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 border-l-4 border-primary">
-              <h2 className="text-3xl font-bold text-slate-800 mb-6 flex items-center">
-                <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-4">
+              <div className="flex items-center mb-6">
+                <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-4" aria-hidden="true">
                   <span className="text-white text-lg font-bold">?</span>
                 </div>
-                {pdks.whatIsPdks.title}
-              </h2>
+                <h2 className="text-3xl font-bold text-slate-800">{pdks.whatIsPdks.title}</h2>
+              </div>
               <p className="text-lg text-slate-700 leading-relaxed">
                 <strong>Personel Devam Kontrol Sistemi (PDKS)</strong>, çalışanların iş yerindeki giriş-çıkış saatlerini, mesai sürelerini ve vardiya bilgilerini otomatik olarak kaydeden dijital sistemlerdir. Modern PDKS çözümleri, sadece basit puantaj kayıtları tutmakla kalmaz, aynı zamanda <strong>bordro entegrasyonu, raporlama, analiz ve insan kaynakları yönetimi</strong> için kapsamlı veriler sunar.
               </p>
@@ -553,7 +553,7 @@ export default function PDKSPage() {
               <p className="text-slate-600 text-center">
                 <strong>İlgili Çözümlerimiz:</strong> 
                 <Link href="/access-control" className="text-primary hover:underline ml-2">Access Control Sistemleri</Link> |
-                <Link href="/cozumler/turnike" className="text-primary hover:underline ml-2">Turnike Sistemleri</Link> |
+                <Link href="/turnike-sistemleri" className="text-primary hover:underline ml-2">Turnike Sistemleri</Link> |
                 <Link href="/cozumler/bekci-kontrol" className="text-primary hover:underline ml-2">Bekçi Kontrol</Link>
               </p>
             </div>

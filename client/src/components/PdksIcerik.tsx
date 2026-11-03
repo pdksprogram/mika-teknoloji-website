@@ -65,10 +65,11 @@ export function kirintiJsonLd(maddeler: KirintiMaddesi[]) {
   };
 }
 
-export function Kirinti({ maddeler }: { maddeler: KirintiMaddesi[] }) {
+// icSinif: yol çubuğunu içerik sütunuyla hizalamak için (ör. blog yazısında "max-w-3xl mx-auto").
+export function Kirinti({ maddeler, icSinif = "" }: { maddeler: KirintiMaddesi[]; icSinif?: string }) {
   return (
     <nav aria-label="Sayfa yolu" className="container mx-auto px-4 pt-6">
-      <ol className="flex flex-wrap items-center gap-1 text-sm text-slate-500">
+      <ol className={`flex flex-wrap items-center gap-1 text-sm text-slate-500 ${icSinif}`}>
         {maddeler.map((m, i) => {
           const son = i === maddeler.length - 1;
           return (
@@ -87,15 +88,17 @@ export function Kirinti({ maddeler }: { maddeler: KirintiMaddesi[] }) {
   );
 }
 
-export function KonuGiris({ ust, baslik, giris }: { ust: string; baslik: string; giris: string }) {
+// sikisik: araç sayfaları için kısa giriş; araç ilk ekranda görünsün diye düğmeler gösterilmez.
+export function KonuGiris({ ust, baslik, giris, sikisik = false }: { ust: string; baslik: string; giris: string; sikisik?: boolean }) {
   return (
-    <section className="relative pt-12 pb-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
+    <section className={`relative ${sikisik ? "pt-4 pb-6" : "pt-12 pb-20"} px-4 bg-gradient-to-br from-slate-50 to-blue-50`}>
       <div className="container mx-auto text-center max-w-4xl">
-        <div className="inline-flex items-center bg-primary/10 px-6 py-2 rounded-full mb-6">
+        <div className={`inline-flex items-center bg-primary/10 px-6 py-2 rounded-full ${sikisik ? "mb-3" : "mb-6"}`}>
           <span className="text-primary font-medium text-sm tracking-wider uppercase">{ust}</span>
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight">{baslik}</h1>
-        <p className="text-xl md:text-2xl text-slate-600 font-light mb-10">{giris}</p>
+        <h1 className={sikisik ? "text-3xl md:text-4xl font-bold text-slate-800 mb-2 leading-tight" : "text-4xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight"}>{baslik}</h1>
+        <p className={sikisik ? "text-base md:text-lg text-slate-600" : "text-xl md:text-2xl text-slate-600 font-light mb-10"}>{giris}</p>
+        {!sikisik && (
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg">
             <a href="#demo">
@@ -107,6 +110,7 @@ export function KonuGiris({ ust, baslik, giris }: { ust: string; baslik: string;
             <Link href="/pdks-programi">PDKS Programı</Link>
           </Button>
         </div>
+        )}
       </div>
     </section>
   );
