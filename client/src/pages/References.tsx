@@ -1,15 +1,13 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Building2 } from 'lucide-react';
 import { Link } from 'wouter';
 import SEO from "@/seo/SEO";
-// Removed problematic import
-// Removed problematic import
-// Removed problematic import
-// Removed problematic import
-// Removed problematic import
+import { Button } from "@/components/ui/button";
+import { Kirinti, kirintiJsonLd, type KirintiMaddesi } from "@/components/PdksIcerik";
 
 interface Musteri {
+  // gorselin dogal boyutu: kucuk gorsel buyutulmez
+  en: number;
+  boy: number;
   id: number;
   name: string;
   logo: string;
@@ -24,6 +22,8 @@ const customers: Musteri[] = [
     id: 1,
     name: "Lufian",
     logo: "/images/logos/lufian.jpg",
+    en: 259,
+    boy: 194,
     sector: "Tekstil & Moda",
     solutions: ["WebPDKS", "QR Personel Takip", "Vardiya Yönetimi"]
   },
@@ -31,6 +31,8 @@ const customers: Musteri[] = [
     id: 2,
     name: "Adore Mobilya",
     logo: "/images/logos/adore.jpeg",
+    en: 728,
+    boy: 340,
     sector: "Mobilya & Dekorasyon",
     solutions: ["Mobil PDKS", "Shift Yönetimi", "Vardiya Planlama"]
   },
@@ -38,13 +40,17 @@ const customers: Musteri[] = [
     id: 3,
     name: "Koluman Mercedes",
     logo: "/images/logos/koluman.jpg",
+    en: 1920,
+    boy: 1080,
     sector: "Otomotiv",
     solutions: ["Turnike Sistemleri", "Güvenlik Guard Kontrol", "PDKS"]
   },
   {
     id: 4,
-    name: "Antalya Devlet Hastanesi",
+    name: "Antalya Şehir Hastanesi",
     logo: "/images/logos/hastane-antalya.jpg",
+    en: 864,
+    boy: 486,
     sector: "Sağlık",
     solutions: ["X-Ray Güvenlik", "PDKS", "Güvenlik Kontrol"]
   },
@@ -52,6 +58,8 @@ const customers: Musteri[] = [
     id: 5,
     name: "Cerrahpaşa Üniversite Hastanesi",
     logo: "/images/logos/istanbul-cerrahpasa.jpg",
+    en: 259,
+    boy: 194,
     sector: "Sağlık & Eğitim",
     solutions: ["Yemekhane Sistemi", "Kartlı Ödeme", "Entegre Çözümler"]
   },
@@ -60,6 +68,8 @@ const customers: Musteri[] = [
     dogrulandi: false,
     name: "Teknosa",
     logo: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=300&fit=crop",
+    en: 0,
+    boy: 0,
     sector: "Teknoloji Perakende",
     solutions: ["Turnike Sistemleri", "Güvenlik Kontrol", "PDKS"]
   },
@@ -68,6 +78,8 @@ const customers: Musteri[] = [
     dogrulandi: false,
     name: "Koton",
     logo: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=400&h=300&fit=crop",
+    en: 0,
+    boy: 0,
     sector: "Tekstil & Moda",
     solutions: ["WebPDKS", "Merkezi Yönetim", "Raporlama"]
   },
@@ -76,6 +88,8 @@ const customers: Musteri[] = [
     dogrulandi: false,
     name: "Bim Market",
     logo: "https://images.unsplash.com/photo-1534723452862-4c874018d66d?w=400&h=300&fit=crop",
+    en: 0,
+    boy: 0,
     sector: "Perakende",
     solutions: ["RFID Sistem", "PDKS", "Çoklu Lokasyon"]
   },
@@ -84,6 +98,8 @@ const customers: Musteri[] = [
     dogrulandi: false,
     name: "Akbank",
     logo: "https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=400&h=300&fit=crop",
+    en: 0,
+    boy: 0,
     sector: "Bankacılık",
     solutions: ["X-Ray Güvenlik", "Guard Kontrol", "Güvenlik Yönetimi"]
   },
@@ -92,6 +108,8 @@ const customers: Musteri[] = [
     dogrulandi: false,
     name: "Turkcell",
     logo: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop",
+    en: 0,
+    boy: 0,
     sector: "Telekomünikasyon",
     solutions: ["QR Personel Takip", "Mobil PDKS", "Dijital Çözümler"]
   }
@@ -99,168 +117,77 @@ const customers: Musteri[] = [
 
 const gorunenMusteriler = customers.filter((c) => c.dogrulandi !== false);
 
+const KIRINTI: KirintiMaddesi[] = [
+  { ad: "Ana Sayfa", yol: "/" },
+  { ad: "Referanslar", yol: "/referanslar" },
+];
+
 const References: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO title="Referanslar | Mika Teknoloji" description="PDKS, turnike ve kartlı geçiş sistemlerimizi kullanan kurumlar ve müşteri başarı hikâyeleri." />
-      {/* Professional Hero Section */}
-      <section className="relative py-24 bg-gradient-to-r from-slate-900 via-gray-800 to-slate-900">
-        <div className="absolute inset-0 bg-gray-900/95"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            className="text-center text-white max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            {/* Corporate Badge */}
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-md px-6 py-2 mb-8 border border-white/20">
-              <span className="text-sm font-semibold tracking-wider uppercase">Güvenilir Çözüm Ortağı</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-              Müşteri 
-              <span className="text-primary"> Başarı Hikayeleri</span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              Bizimle çalışmayı seven, beraber büyüdüğümüz
-              <span className="text-white font-semibold"> işletmelerin başarı hikâyelerini</span> sizlerle paylaşıyoruz.
-            </p>
-          </motion.div>
+      <SEO
+        title="Referanslar | Mika Teknoloji"
+        description="PDKS, turnike ve kartlı geçiş sistemlerimizi kullanan kurumlar."
+        jsonLd={kirintiJsonLd(KIRINTI)}
+      />
+      <Kirinti maddeler={KIRINTI} icSinif="pb-4" />
+
+      <section className="bg-slate-900 border-b-4 border-primary text-white py-12">
+        <div className="container mx-auto px-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-3">Referanslarımız</h1>
+          <p className="text-slate-300 max-w-2xl">
+            Farklı sektörlerden, sistemlerimizi kullanan kurumlar.
+          </p>
         </div>
       </section>
 
-      {/* Professional Customer Stories - idenfit Style */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-slate-50">
         <div className="container mx-auto px-4">
-          {/* Professional Section Header */}
-          <motion.div 
-            className="text-center mb-20"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="inline-block bg-white shadow-sm rounded-lg px-6 py-2 mb-6">
-              <span className="text-gray-600 font-semibold text-sm uppercase tracking-wider">Müşteri Portföyümüz</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Başarı Hikayeleri
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Farklı sektörlerden çalıştığımız firmalar.
-            </p>
-          </motion.div>
-
-          {/* Customer Stories */}
-          <div className="space-y-32">
-            {gorunenMusteriler.map((customer, index) => (
-              <motion.div
-                key={customer.id}
-                className="relative"
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true, margin: "-100px" }}
-              >
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
-                  {/* Image Section */}
-                  <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                    <div className="relative bg-white rounded-2xl p-2 shadow-xl">
-                      <div className="aspect-[4/3] rounded-xl overflow-hidden">
-                        <img 
-                          src={customer.logo} 
-                          alt={customer.name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      
-                      {/* Company Badge */}
-                      <div className="absolute -bottom-6 left-6 bg-white rounded-xl px-6 py-4 shadow-lg border border-gray-100">
-                        <h3 className="text-xl font-bold text-gray-900 mb-1">{customer.name}</h3>
-                        <p className="text-primary font-semibold text-sm">{customer.sector}</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Content Section */}
-                  <div className={`space-y-8 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                    {/* Sektör */}
-                    <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex items-center gap-4">
-                      <Building2 className="w-8 h-8 text-primary flex-shrink-0" />
-                      <div>
-                        <div className="text-sm text-gray-600">Sektör</div>
-                        <div className="text-xl font-bold text-gray-900">{customer.sector}</div>
-                      </div>
-                    </div>
-
-                    {/* Solutions */}
-                    <div className="space-y-4">
-                      <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Kullanılan Çözümler</h4>
-                      <div className="flex flex-wrap gap-3">
-                        {customer.solutions.map((solution, idx) => (
-                          <span 
-                            key={idx}
-                            className="bg-white text-gray-700 px-4 py-2 rounded-lg text-sm font-medium shadow-sm border border-gray-200"
-                          >
-                            {solution}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {gorunenMusteriler.map((customer) => (
+              <li key={customer.id} className="bg-white border border-slate-200 rounded-lg overflow-hidden flex flex-col">
+                <div className="h-48 bg-slate-100 flex items-center justify-center">
+                  <img
+                    src={customer.logo}
+                    alt={`${customer.name} referans görseli`}
+                    width={customer.en}
+                    height={customer.boy}
+                    loading="lazy"
+                    className="w-auto h-auto max-w-full max-h-full object-contain"
+                  />
                 </div>
-              </motion.div>
+                <div className="p-5 flex-1">
+                  <h2 className="text-lg font-bold text-slate-900">{customer.name}</h2>
+                  <p className="text-sm text-primary font-medium mb-3">{customer.sector}</p>
+                  <ul className="flex flex-wrap gap-2">
+                    {customer.solutions.map((solution) => (
+                      <li key={solution} className="text-xs text-slate-700 bg-slate-100 border border-slate-200 rounded px-2 py-1">
+                        {solution}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
-      {/* Professional CTA Section */}
-      <section className="py-24 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center text-white max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="inline-block bg-white/10 rounded-lg px-6 py-2 mb-8">
-              <span className="text-sm font-semibold tracking-wider uppercase">İletişime Geçin</span>
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-              Siz de Başarı Hikayenizi 
-              <span className="text-primary"> Yazmaya Hazır mısınız?</span>
-            </h2>
-            
-            <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
-              Mika Teknoloji çözümleri ile işletmenizi bir sonraki seviyeye taşıyın. 
-              Ücretsiz demo talebi oluşturun ve farkı keşfedin.
-            </p>
-            
-            {/* Professional Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-10">
-              <Link
-                href="/iletisim"
-                className="bg-primary hover:opacity-90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 min-w-[200px] text-center shadow-lg hover:scale-[1.02]"
-              >
-                Ücretsiz Demo Talebi
-              </Link>
-
-              <Link
-                href="/urunler"
-                className="bg-transparent border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 min-w-[200px] text-center hover:scale-[1.02]"
-              >
-                Teknik Detaylar
-              </Link>
-            </div>
-
-            <p className="text-gray-400 text-sm">Teknik destek · Kurulum ve eğitim · 2 yıl garanti</p>
-          </motion.div>
+      <section className="py-16 bg-slate-900">
+        <div className="container mx-auto px-4 text-center text-white">
+          <h2 className="text-3xl font-bold mb-4">Sisteminizi Birlikte Planlayalım</h2>
+          <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
+            Ücretsiz demo talebi oluşturun; ihtiyacınıza uygun kurulumu birlikte belirleyelim.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg">
+              <Link href="/iletisim">Ücretsiz Demo Talebi</Link>
+            </Button>
+            <Button asChild size="lg" variant="outlineLight">
+              <Link href="/urunler">Ürünleri İnceleyin</Link>
+            </Button>
+          </div>
+          <p className="text-slate-400 text-sm mt-8">Teknik destek · Kurulum ve eğitim · 2 yıl garanti</p>
         </div>
       </section>
     </div>
