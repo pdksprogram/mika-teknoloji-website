@@ -131,7 +131,7 @@ export default function MT250DetailPage() {
             animate={{ y: 0, opacity: 1 }}
             className="text-center mb-12"
           >
-            <Badge className="mb-4 px-4 py-2 bg-primary text-white">
+            <Badge className="bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-100 mb-4 px-4 py-2">
               Elektromekanik Model
             </Badge>
             <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">

@@ -125,7 +125,7 @@ export default function MT2500DSingle3DetailPage() {
               className="space-y-6"
             >
               <div>
-                <Badge className="bg-blue-100 text-blue-800 mb-3">Boy Tipi Turnike</Badge>
+                <Badge className="bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-100 mb-3">Boy Tipi Turnike</Badge>
                 <h1 className="text-3xl font-bold text-gray-900 mb-4">
                   MT 2500D Single 3 Kollu Boy Tipi Turnike Sistemi
                 </h1>

@@ -135,7 +135,7 @@ export default function MT230MVIPSlimDetailPage() {
                   alt={productDetails.title}
                   className="w-full h-full object-contain"
                 />
-                <Badge className="absolute top-4 left-4 bg-blue-600 text-white text-sm px-3 py-1">
+                <Badge className="bg-white text-slate-800 border border-slate-200 hover:bg-white absolute top-4 left-4 text-sm px-3 py-1">
                   {productDetails.category}
                 </Badge>
               </div>

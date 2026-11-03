@@ -114,7 +114,7 @@ export default function JetonluT250DetailPage() {
       </div>
 
       {/* Hero Section */}
-      <div className="bg-slate-900 border-b-4 border-primary text-white py-16">
+      <div className="bg-white border-b border-slate-200 py-12">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -122,28 +122,28 @@ export default function JetonluT250DetailPage() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
-              <Badge className="bg-white/20 text-white border-white/30 mb-4">
+              <Badge className="bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-100 mb-4">
                 Jetonlu Sistem
               </Badge>
-              <h1 className="text-4xl font-bold mb-6">
+              <h1 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
                 MT 250 Jetonlu
-                <span className="block text-2xl font-normal text-white/90 mt-2">
+                <span className="block text-xl font-normal text-slate-600 mt-2">
                   Jetonlu Turnike Sistemi - WC Turnikesi
                 </span>
               </h1>
-              <p className="text-xl text-white/90 mb-8">
+              <p className="text-lg text-slate-600 mb-8">
                 Ücretli geçişler için tasarlanmış otomatik tahsilat sistemi. 
                 WC girişleri ve kamu alanları için mükemmel çözüm.
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
+                <Button asChild size="lg">
                   <Link href="/iletisim">
                     <Phone className="h-5 w-5 mr-2" />
                     Jetonlu Sistem Teklifi
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outlineLight">
+                <Button asChild size="lg" variant="outline">
                   <Link href="/iletisim">
                     <Download className="h-5 w-5 mr-2" />
                     Ödeme Sistemi Kataloğu
@@ -158,16 +158,13 @@ export default function JetonluT250DetailPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
             >
-              <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur p-8">
+              <div className="rounded-lg border border-slate-200 bg-white p-6">
                 <img 
                   src={BEL_TURNIKE_IMAGES.bt11}
                   alt="MT 250 Jetonlu Turnike Sistemi"
-                  className="w-full h-auto max-w-md mx-auto rounded-lg shadow-2xl"
+                  className="w-full h-auto max-w-md mx-auto"
                   loading="eager"
                 />
-                <div className="absolute -top-4 -right-4 bg-yellow-400 text-gray-800 px-4 py-2 rounded-full font-bold">
-                  ₺
-                </div>
               </div>
             </motion.div>
           </div>
@@ -193,8 +190,8 @@ export default function JetonluT250DetailPage() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-all"
               >
-                <div className="w-16 h-16 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="h-8 w-8 text-yellow-600" />
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
@@ -216,7 +213,7 @@ export default function JetonluT250DetailPage() {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Settings className="h-6 w-6 text-yellow-600" />
+                    <Settings className="h-6 w-6 text-primary" />
                     Teknik Özellikler
                   </CardTitle>
                 </CardHeader>
@@ -245,7 +242,7 @@ export default function JetonluT250DetailPage() {
                   <div className="space-y-3">
                     {advantages.map((advantage, index) => (
                       <div key={index} className="flex items-center gap-3">
-                        <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                         <span className="text-gray-700">{advantage}</span>
                       </div>
                     ))}
@@ -261,7 +258,7 @@ export default function JetonluT250DetailPage() {
                   <div className="grid grid-cols-1 gap-3">
                     {applicationAreas.map((area, index) => (
                       <div key={index} className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
                         <span className="text-gray-700 text-sm">{area}</span>
                       </div>
                     ))}
@@ -274,7 +271,7 @@ export default function JetonluT250DetailPage() {
       </div>
 
       {/* Call to Action */}
-      <div className="py-16 bg-slate-900 text-white">
+      <div className="py-16 bg-slate-900 border-t-4 border-primary text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -285,12 +282,12 @@ export default function JetonluT250DetailPage() {
               <h2 className="text-3xl font-bold mb-6">
                 MT 250 Jetonlu İle Otomatik Tahsilat
               </h2>
-              <p className="text-xl text-white/90 mb-8">
+              <p className="text-xl text-slate-300 mb-8">
                 WC girişlerinde otomatik para tahsilatı yapın. İnsan faktörünü ortadan kaldırın, gelir güvenliğinizi artırın.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
+                <Button asChild size="lg">
                   <Link href="/iletisim">
                     Jetonlu Sistem Teklifi Al
                   </Link>

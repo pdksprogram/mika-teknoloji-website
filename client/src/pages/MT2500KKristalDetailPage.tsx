@@ -107,7 +107,7 @@ export default function MT2500KKristalDetailPage() {
             >
               <div className="bg-slate-50 rounded-2xl shadow-lg p-8 relative overflow-hidden">
                 <div className="absolute top-4 right-4">
-                  <Badge className="bg-slate-900 text-white">
+                  <Badge className="bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-100">
                     <Star className="h-3 w-3 mr-1" />
                     PREMIUM
                   </Badge>
@@ -128,7 +128,7 @@ export default function MT2500KKristalDetailPage() {
               className="space-y-6"
             >
               <div>
-                <Badge className="bg-slate-50 text-primary mb-3">
+                <Badge className="bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-100 mb-3">
                   Premium Kristal Serisi
                 </Badge>
                 <h1 className="text-3xl font-bold text-gray-900 mb-4">
@@ -258,7 +258,7 @@ export default function MT2500KKristalDetailPage() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {kullanimAlanlari.map((alan, index) => (
-                <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gradient">
+                <Card key={index} className="text-center hover:shadow-xl transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="bg-slate-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                       <alan.icon className="h-8 w-8 text-primary" />
@@ -278,12 +278,9 @@ export default function MT2500KKristalDetailPage() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="bg-slate-900 rounded-2xl p-8 text-white text-center relative overflow-hidden"
           >
-            <div className="absolute inset-0 bg-slate-50 backdrop-blur-sm"></div>
             <div className="relative z-10">
               <div className="flex items-center justify-center gap-2 mb-4">
-                <Star className="h-6 w-6" />
                 <h2 className="text-2xl font-bold">Premium Kristal Turnike Sistemi</h2>
-                <Star className="h-6 w-6" />
               </div>
               <p className="text-white/90 mb-6 max-w-2xl mx-auto">
                 Lüks mekanınız için özel tasarım danışmanlığı alın. VIP alanlarınızda hem güvenlik hem estetik mükemmelliği yakalayın.

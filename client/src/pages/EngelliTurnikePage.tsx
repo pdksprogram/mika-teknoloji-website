@@ -235,7 +235,7 @@ export default function EngelliTurnikePage() {
                       className="w-full h-full object-cover xs:object-contain sm:object-cover bg-gray-50 group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />
-                    <Badge className="absolute top-3 left-3 bg-green-600 text-white">
+                    <Badge className="bg-white text-slate-800 border border-slate-200 hover:bg-white absolute top-3 left-3">
                       {model.model}
                     </Badge>
                   </div>

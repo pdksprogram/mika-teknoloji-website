@@ -115,7 +115,7 @@ export default function T345DetailPage() {
       </div>
 
       {/* Hero Section */}
-      <div className="bg-slate-900 border-b-4 border-primary text-white py-16">
+      <div className="bg-white border-b border-slate-200 py-12">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -123,28 +123,28 @@ export default function T345DetailPage() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
-              <Badge className="bg-primary/20 text-slate-200 border-primary/30 mb-4">
+              <Badge className="bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-100 mb-4">
                 Endüstriyel Sınıf
               </Badge>
-              <h1 className="text-4xl font-bold mb-6">
+              <h1 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
                 MT 345
-                <span className="block text-2xl font-normal text-white/90 mt-2">
+                <span className="block text-xl font-normal text-slate-600 mt-2">
                   Endüstriyel Elektromekanik Bel Tipi Turnike Sistemi
                 </span>
               </h1>
-              <p className="text-xl text-white/90 mb-8">
+              <p className="text-lg text-slate-600 mb-8">
                 Ağır sanayi koşulları için tasarlanmış, 
                 yoğun trafiğe uygun profesyonel turnike sistemi.
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary">
+                <Button asChild size="lg">
                   <Link href="/iletisim">
                     <Phone className="h-5 w-5 mr-2" />
                     Endüstriyel Teklif Al
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outlineLight">
+                <Button asChild size="lg" variant="outline">
                   <Link href="/iletisim">
                     <Download className="h-5 w-5 mr-2" />
                     Teknik Katalog
@@ -159,16 +159,13 @@ export default function T345DetailPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
             >
-              <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur p-8">
+              <div className="rounded-lg border border-slate-200 bg-white p-6">
                 <img 
                   src={BEL_TURNIKE_IMAGES.bt6}
                   alt="MT 345 Endüstriyel Bel Tipi Turnike"
-                  className="w-full h-auto max-w-md mx-auto rounded-lg shadow-2xl"
+                  className="w-full h-auto max-w-md mx-auto"
                   loading="eager"
                 />
-                <div className="absolute top-4 right-4 bg-primary text-white px-4 py-2 rounded-full font-bold">
-                  PRO
-                </div>
               </div>
             </motion.div>
           </div>
@@ -246,7 +243,7 @@ export default function T345DetailPage() {
                   <div className="space-y-3">
                     {advantages.map((advantage, index) => (
                       <div key={index} className="flex items-center gap-3">
-                        <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                         <span className="text-gray-700">{advantage}</span>
                       </div>
                     ))}
@@ -275,7 +272,7 @@ export default function T345DetailPage() {
       </div>
 
       {/* Call to Action */}
-      <div className="py-16 bg-gradient-to-r from-gray-800 to-slate-700 text-white">
+      <div className="py-16 bg-slate-900 border-t-4 border-primary text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -286,12 +283,12 @@ export default function T345DetailPage() {
               <h2 className="text-3xl font-bold mb-6">
                 MT 345 İle Endüstriyel Güvenlik Standardı
               </h2>
-              <p className="text-xl text-white/90 mb-8">
+              <p className="text-xl text-slate-300 mb-8">
                 Fabrikanızda kesintisiz güvenlik sağlayın. Endüstriyel keşif ve özel fiyat teklifi için uzman ekibimizle görüşün.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary">
+                <Button asChild size="lg">
                   <Link href="/iletisim">
                     Endüstriyel Keşif Talep Et
                   </Link>

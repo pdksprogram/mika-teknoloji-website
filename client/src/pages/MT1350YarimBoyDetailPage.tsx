@@ -111,7 +111,7 @@ export default function MT1350YarimBoyDetailPage() {
             >
               <div className="bg-white rounded-2xl shadow-lg p-8">
                 <div className="absolute top-4 right-4">
-                  <Badge className="bg-green-100 text-green-800">
+                  <Badge className="bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-100">
                     Yarım Boy
                   </Badge>
                 </div>
@@ -131,7 +131,7 @@ export default function MT1350YarimBoyDetailPage() {
               className="space-y-6"
             >
               <div>
-                <Badge className="bg-green-100 text-green-800 mb-3">Yarım Boy Serisi</Badge>
+                <Badge className="bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-100 mb-3">Yarım Boy Serisi</Badge>
                 <h1 className="text-3xl font-bold text-gray-900 mb-4">
                   MT 1350 Elektromekanik Yarım Boy Turnike Sistemi
                 </h1>

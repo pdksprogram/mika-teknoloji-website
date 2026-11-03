@@ -127,7 +127,7 @@ export default function MTT300HG20DetailPage() {
                 <div className="flex items-center gap-3 mb-4">
                   <Zap className="h-10 w-10 text-white" />
                   <div>
-                    <Badge className="bg-green-600 text-white mb-2">{urunDetay.model}</Badge>
+                    <Badge className="bg-white/10 text-white border border-white/20 hover:bg-white/10 mb-2">{urunDetay.model}</Badge>
                     <h1 className="text-3xl md:text-4xl font-bold">{urunDetay.title}</h1>
                   </div>
                 </div>
