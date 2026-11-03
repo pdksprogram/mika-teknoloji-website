@@ -35,8 +35,10 @@ export default function TuzaklarDetailPage() {
   return (
     <>
       <Helmet>
-        <title>Tuzaklar & Kapanlar - Güvenlik Engelleme Sistemleri | Mika Teknoloji</title>
+        <title>Tuzaklar ve Kapanlar – Ters Yön Engelleme | Mika</title>
         <meta name="description" content="Tuzak ve kapan sistemleri ile ters yönden girişleri engelleyin. Manuel ve otomatik seçenekler, yangın güvenlik entegrasyonu ve seyyar kullanım imkanı." />
+        <meta property="og:title" content="Tuzaklar ve Kapanlar – Ters Yön Engelleme | Mika" />
+        <meta property="og:description" content="Tuzak ve kapan sistemleri ile ters yönden girişleri engelleyin. Manuel ve otomatik seçenekler, yangın güvenlik entegrasyonu ve seyyar kullanım imkanı." />
       </Helmet>
 
       <Kirinti maddeler={[{ ad: "Ana Sayfa", yol: "/" }, { ad: "Ürünler", yol: "/urunler" }, { ad: "Bariyer Sistemleri", yol: "/urunler/bariyer-sistemleri" }, { ad: "Tuzaklar & Kapanlar", yol: "/urunler/tuzaklar-kapanlar" }]} />

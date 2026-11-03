@@ -51,8 +51,8 @@ export default function FaceRecognitionSystemPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <Helmet>
-        <title>Yüz Tanıma Sistem | Mika Teknoloji - Temassız PDKS Cihazları MTFD15, MTFP15, MTFDP50</title>
-        <meta name="description" content="Gelişmiş yüz tanıma sistem ve temassız PDKS cihazları. MTFD15, MTFP15, MTFDP50, MTFDP200 modelleri. 20.000 kapasite, Wi-Fi desteği, TCP/IP bağlantı. Ücretsiz demo." />
+        <title>Yüz Tanıma Sistemi ve Temassız PDKS Cihazları | Mika</title>
+        <meta name="description" content="Yüz tanıma sistemi ve temassız PDKS cihazları: MTFD15, MTFP15, MTFDP50, MTFDP200 modelleri. 20.000 kapasite, Wi-Fi ve TCP/IP. Ücretsiz demo." />
         <meta name="keywords" content="yüz tanıma sistem, yüz tanıma PDKS, temassız personel takip, facial recognition, MTFD15, MTFP15, MTFDP50, MTFDP200, biyometrik güvenlik sistemi" />
         
         <meta property="og:title" content="Yüz Tanıma Sistem | Mika Teknoloji" />

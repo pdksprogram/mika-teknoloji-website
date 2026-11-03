@@ -49,8 +49,8 @@ export default function FingerprintSystemPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <Helmet>
-        <title>Parmak İzi Takip Sistemi | Mika Teknoloji - Biyometrik PDKS Cihazları MT1100, MTP50, MTFDP200</title>
-        <meta name="description" content="Profesyonel parmak izi takip sistemi ve PDKS cihazları. MT1100, MTP50, MTFDP200, MT4051 modelleri. 20.000 kapasite, Wi-Fi desteği, TCP/IP bağlantı. Teklif alın." />
+        <title>Parmak İzi Takip Sistemi ve PDKS Cihazları | Mika Teknoloji</title>
+        <meta name="description" content="Parmak izi takip sistemi ve PDKS cihazları: MT1100, MTP50, MTFDP200, MT4051 modelleri. 20.000 kapasite, Wi-Fi ve TCP/IP bağlantı. Teklif alın." />
         <meta name="keywords" content="parmak izi takip sistemi, parmak izi okuyucu, PDKS cihazı, biyometrik güvenlik, personel takip sistemi, MT1100, MTP50, MTFDP200, MT4051, Wi-Fi parmak izi" />
         
         <meta property="og:title" content="Parmak İzi Takip Sistemi | Mika Teknoloji" />

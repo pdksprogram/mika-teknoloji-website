@@ -77,13 +77,16 @@ export default function JetonluT250DetailPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>MT 250 Jetonlu Turnike Sistemi - WC Turnikesi | Mika Teknoloji</title>
+        <title>Jetonlu Turnike MT 250 – WC Turnikesi | Mika Teknoloji</title>
         <meta name="description" content="MT 250 jetonlu turnike sistemi. WC turnikesi, ücretli geçişler için otomatik tahsilat. Jeton kabul sistemi, para üstü verme." />
         <meta name="keywords" content="jetonlu turnike, WC turnikesi, ücretli geçiş, otomatik tahsilat, jeton sistemi, para üstü" />
         
         <meta property="og:title" content="MT 250 Jetonlu Turnike - WC Turnikesi | Mika Teknoloji" />
         <meta property="og:description" content="Ücretli geçişler için MT 250 jetonlu turnike sistemi. Otomatik tahsilat ve para üstü sistemi." />
         <meta property="og:image" content="https://mikateknoloji.com/jetonlu-turnike-sistemi-t250.jpg" />
+        <meta property="og:image:width" content="1000" />
+        <meta property="og:image:height" content="1000" />
+        <meta name="twitter:image" content="https://mikateknoloji.com/jetonlu-turnike-sistemi-t250.jpg" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/jetonlu-t250-turnike" />
         
         <link rel="canonical" href="https://mikateknoloji.com/urunler/jetonlu-t250-turnike" />

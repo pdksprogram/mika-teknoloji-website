@@ -146,10 +146,10 @@ export default function QRPDKSPage() {
     <div className="min-h-screen bg-white">
       <Helmet>
         {/* Primary Meta Tags */}
-        <title>QR Kod PDKS | Mika Teknoloji - Mobil Personel Takip Sistemi</title>
+        <title>QR Kod ile Personel Giriş Çıkış Uygulaması | Mika</title>
         <meta 
           name="description" 
-          content="QR kod tabanlı personel devam kontrol sistemi (PDKS). Mobil uygulama ile QR kod okutma, personel giriş çıkış takibi, vardiya yönetimi. Bulut tabanlı QR PDKS çözümü." 
+          content="QR kod tabanlı personel devam kontrol uygulaması: mobil uygulamayla QR okutma, giriş-çıkış takibi ve vardiya yönetimi. Bulut tabanlı QR PDKS." 
         />
         <meta name="keywords" content="qr kod pdks, qr personel takip, mobil pdks, qr kod personel giriş çıkış, qr tabanlı personel takip sistemi, mobil personel kontrol sistemi, qr kod okuyucu pdks, akıllı telefon pdks, mobil vardiya takip, contactless pdks, temassız personel takip, qr code personnel tracking" />
         <meta name="author" content="Mika Teknoloji" />
@@ -160,8 +160,8 @@ export default function QRPDKSPage() {
         <meta name="geo.placename" content="Türkiye" />
         
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="QR Kod PDKS | Mika Teknoloji - Mobil Personel Takip Sistemi" />
-        <meta property="og:description" content="QR kod tabanlı personel devam kontrol sistemi (PDKS). Mobil uygulama ile QR kod okutma, personel giriş çıkış takibi, vardiya yönetimi. Bulut tabanlı QR PDKS çözümü." />
+        <meta property="og:title" content="QR Kod ile Personel Giriş Çıkış Uygulaması | Mika" />
+        <meta property="og:description" content="QR kod tabanlı personel devam kontrol uygulaması: mobil uygulamayla QR okutma, giriş-çıkış takibi ve vardiya yönetimi. Bulut tabanlı QR PDKS." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/qr-pdks" />
         <meta property="og:image" content="https://mikateknoloji.com/images/slayt/qr-pdks-mobil.jpg" />
@@ -174,11 +174,10 @@ export default function QRPDKSPage() {
         
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="QR Kod PDKS | Mika Teknoloji - Mobil Personel Takip Sistemi" />
+        <meta name="twitter:title" content="QR Kod ile Personel Giriş Çıkış Uygulaması | Mika" />
         <meta name="twitter:description" content="QR kod tabanlı personel devam kontrol sistemi (PDKS). Mobil uygulama ile QR kod okutma, personel giriş çıkış takibi, vardiya yönetimi." />
         <meta name="twitter:image" content="https://mikateknoloji.com/images/slayt/qr-pdks-mobil.jpg" />
         <meta name="twitter:image:alt" content="Mika Teknoloji QR Kod PDKS" />
-        <meta name="twitter:site" content="@mikateknoloji" />
         <meta name="twitter:creator" content="@mikateknoloji" />
         
         {/* Additional SEO Meta Tags */}
@@ -187,10 +186,8 @@ export default function QRPDKSPage() {
         <meta name="application-name" content="Mika Teknoloji QR Kod PDKS" />
         <meta name="msapplication-TileColor" content="#EC4899" />
         
-        {/* Canonical and Hreflang */}
+        {/* Canonical */}
         <link rel="canonical" href="https://mikateknoloji.com/urunler/qr-pdks" />
-        <link rel="alternate" hrefLang="tr" href="https://mikateknoloji.com/urunler/qr-pdks" />
-        <link rel="alternate" hrefLang="x-default" href="https://mikateknoloji.com/urunler/qr-pdks" />
         
         {/* Preconnect for Performance */}
         <link rel="preconnect" href="https://www.google-analytics.com" />

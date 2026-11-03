@@ -109,6 +109,8 @@ export default function EngelliTurnikePage() {
       <Helmet>
         <title>Engelli Turnike Sistemleri - VIP Turnikeler | Mika Teknoloji</title>
         <meta name="description" content="Engelli bireyler için özel tasarlanmış turnike sistemleri. VIP turnikeler, yaprak kapılar ve otomatik geçiş kontrol sistemleri. Tekerlekli sandalye uyumlu." />
+        <meta property="og:title" content="Engelli Turnike Sistemleri - VIP Turnikeler | Mika Teknoloji" />
+        <meta property="og:description" content="Engelli bireyler için özel tasarlanmış turnike sistemleri. VIP turnikeler, yaprak kapılar ve otomatik geçiş kontrol sistemleri. Tekerlekli sandalye uyumlu." />
         <meta name="keywords" content="engelli turnike, vip turnike, yaprak kapı, otomatik turnike, tekerlekli sandalye, engelli erişim, mika teknoloji" />
       </Helmet>
 

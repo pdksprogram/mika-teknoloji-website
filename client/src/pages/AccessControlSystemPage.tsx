@@ -103,8 +103,8 @@ export default function AccessControlSystemPage() {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Geçiş Kontrol Sistemleri - Access Control Panelleri | Mika Teknoloji"
-        description="RFID kartlı geçiş, biyometrik parmak izi, yüz tanıma ve QR kod teknolojileri ile profesyonel access control çözümleri. PDKS entegrasyonu ve güvenli erişim kontrolü."
+        title="Geçiş Kontrol Sistemleri – Access Control Panelleri | Mika"
+        description="RFID kartlı geçiş, parmak izi, yüz tanıma ve QR kod ile geçiş kontrol (access control) çözümleri. PDKS entegrasyonu ve güvenli erişim kontrolü."
         canonical="https://mikateknoloji.com/urunler/gecis-kontrol"
         jsonLd={[productJsonLd, faqJsonLd, kirintiJsonLd(KIRINTI)]}
       />

@@ -72,13 +72,16 @@ export default function MT1350YarimBoyDetailPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>MT 1350 Elektromekanik Yarım Boy Turnike Sistemi | Mika Teknoloji</title>
+        <title>MT 1350 Yarım Boy Turnike – Elektromekanik | Mika</title>
         <meta name="description" content="MT 1350 elektromekanik yarım boy turnike sistemi. 1350mm yükseklik, 35 kişi/dakika kapasitesi. Ofis ve ticaret merkezleri için ideal çözüm." />
         <meta name="keywords" content="MT 1350, yarım boy turnike, elektromekanik turnike, ofis güvenliği, ticaret merkezi turnike, düşük profil turnike" />
         
         <meta property="og:title" content="MT 1350 Elektromekanik Yarım Boy Turnike | Mika Teknoloji" />
         <meta property="og:description" content="Orta seviye güvenlik alanları için MT 1350 elektromekanik yarım boy turnike sistemi." />
         <meta property="og:image" content="https://mikateknoloji.com/yarim-boy-turnike-sistemi-t1350-elektromekanik-turnike.jpg" />
+        <meta property="og:image:width" content="1024" />
+        <meta property="og:image:height" content="1024" />
+        <meta name="twitter:image" content="https://mikateknoloji.com/yarim-boy-turnike-sistemi-t1350-elektromekanik-turnike.jpg" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/mt1350-yarim-boy" />
         
         <link rel="canonical" href="https://mikateknoloji.com/urunler/mt1350-yarim-boy" />

@@ -89,8 +89,10 @@ export default function MTT300HG120DetailPage() {
   return (
     <>
       <Helmet>
-        <title>MT T300 HG120 Ultra Hızlı Turnike - 120 Kişi/Dakika | Mika Teknoloji</title>
+        <title>MT T300 HG120 Hızlı Geçiş Turnikesi | Mika Teknoloji</title>
         <meta name="description" content="MT T300 HG120 ultra hızlı geçiş turnike. 120 kişi/dakika kapasiteli, big data destekli, mega alışveriş merkezleri için yüksek kapasiteli çözüm." />
+        <meta property="og:title" content="MT T300 HG120 Hızlı Geçiş Turnikesi | Mika Teknoloji" />
+        <meta property="og:description" content="MT T300 HG120 ultra hızlı geçiş turnike. 120 kişi/dakika kapasiteli, big data destekli, mega alışveriş merkezleri için yüksek kapasiteli çözüm." />
         <meta name="keywords" content="ultra hızlı turnike, t300 hg120, 120 kişi dakika, mega kapasite, big data, ai destekli, stadyum turnike, mika teknoloji" />
       </Helmet>
 

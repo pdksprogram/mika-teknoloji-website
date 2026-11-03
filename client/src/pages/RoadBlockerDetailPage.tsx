@@ -37,8 +37,10 @@ export default function RoadBlockerDetailPage() {
   return (
     <>
       <Helmet>
-        <title>Road Blocker Sistem - Yol Kesici Güvenlik Bariyeri | Mika Teknoloji</title>
-        <meta name="description" content="Road Blocker yol kesici sistemi ile terör eylemlerine karşı yüksek koruma. Elektronik kontrollü hidrolik sistem, güneş enerjili LED aydınlatma ve yüksek dayanıklılık." />
+        <title>Road Blocker – Yol Kesici Güvenlik Bariyeri | Mika</title>
+        <meta name="description" content="Road blocker yol kesici sistemi ile yüksek koruma: elektronik kontrollü hidrolik sistem, güneş enerjili LED aydınlatma ve yüksek dayanıklılık." />
+        <meta property="og:title" content="Road Blocker – Yol Kesici Güvenlik Bariyeri | Mika" />
+        <meta property="og:description" content="Road blocker yol kesici sistemi ile yüksek koruma: elektronik kontrollü hidrolik sistem, güneş enerjili LED aydınlatma ve yüksek dayanıklılık." />
       </Helmet>
 
       <Kirinti maddeler={[{ ad: "Ana Sayfa", yol: "/" }, { ad: "Ürünler", yol: "/urunler" }, { ad: "Bariyer Sistemleri", yol: "/urunler/bariyer-sistemleri" }, { ad: "Road Blocker Sistem", yol: "/urunler/road-blocker" }]} />

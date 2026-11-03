@@ -89,8 +89,10 @@ export default function MTT350HG60DetailPage() {
   return (
     <>
       <Helmet>
-        <title>MT T350 HG60 Premium Turnike - AI Destekli 60 Kişi/Dk | Mika Teknoloji</title>
+        <title>MT T350 HG60 Hızlı Geçiş Turnikesi | Mika Teknoloji</title>
         <meta name="description" content="MT T350 HG60 premium hızlı geçiş turnike. 60 kişi/dakika, AI destekli, biyometrik entegrasyon, büyük havaalanları için en ileri teknoloji." />
+        <meta property="og:title" content="MT T350 HG60 Hızlı Geçiş Turnikesi | Mika Teknoloji" />
+        <meta property="og:description" content="MT T350 HG60 premium hızlı geçiş turnike. 60 kişi/dakika, AI destekli, biyometrik entegrasyon, büyük havaalanları için en ileri teknoloji." />
         <meta name="keywords" content="premium turnike, t350 hg60, ai turnike, biyometrik, 60 kişi dakika, havaalanı turnike, yüz tanıma, mika teknoloji" />
       </Helmet>
 

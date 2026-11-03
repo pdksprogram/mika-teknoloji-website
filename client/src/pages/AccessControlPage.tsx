@@ -25,11 +25,11 @@ export default function AccessControlPage() {
 
   // SEO başlık/açıklama: <SEO> (Helmet) ile yazılır; ön-render ham HTML'e de girer.
     const title = selectedLanguage === 'tr'
-      ? 'Profesyonel Access Control Sistemleri | Mika Teknoloji - Kurumsal Güvenlik Teknolojileri'
+      ? 'Access Control Sistemleri – Kartlı ve Biyometrik | Mika'
       : 'Professional Access Control Systems | Mika Technology - Corporate Security Technologies';
 
     const description = selectedLanguage === 'tr'
-      ? 'Mika Teknoloji RFID kartlı geçiş, biyometrik parmak izi, yüz tanıma ve QR kodlu mobil erişim sistemleri ile kapsamlı access control çözümleri. PDKS entegrasyonu, turnike sistemleri.'
+      ? 'RFID kartlı geçiş, parmak izi, yüz tanıma ve QR kodlu mobil erişim ile access control çözümleri; PDKS entegrasyonu ve turnike sistemleriyle birlikte.'
       : 'Mika Technology comprehensive access control solutions with RFID card access, biometric fingerprint, face recognition and QR mobile access systems. PDKS integration, turnstile systems.';
 
   // Keywords

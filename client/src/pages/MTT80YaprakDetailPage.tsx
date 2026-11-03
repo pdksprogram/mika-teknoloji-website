@@ -98,8 +98,10 @@ export default function MTT80YaprakDetailPage() {
   return (
     <>
       <Helmet>
-        <title>MT T80 Yaprak Turnike Sistemi - Ekonomik Çözüm | Mika Teknoloji</title>
+        <title>MT T80 Yaprak Turnike Sistemi – Ekonomik Çözüm | Mika</title>
         <meta name="description" content="MT T80 Yaprak Turnike - Market ve ofis girişleri için basit tek yön kontrol. Krom-nikel kaplama, elle açılma, kendiliğinden kapanma sistemi." />
+        <meta property="og:title" content="MT T80 Yaprak Turnike Sistemi – Ekonomik Çözüm | Mika" />
+        <meta property="og:description" content="MT T80 Yaprak Turnike - Market ve ofis girişleri için basit tek yön kontrol. Krom-nikel kaplama, elle açılma, kendiliğinden kapanma sistemi." />
         <meta name="keywords" content="mt t80, yaprak turnike, tek yön kontrol, market turnike, ofis turnike, basit turnike, ekonomik turnike, mika teknoloji" />
       </Helmet>
 

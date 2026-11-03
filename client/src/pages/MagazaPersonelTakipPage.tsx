@@ -135,8 +135,8 @@ export default function MagazaPersonelTakipPage() {
   return (
     <>
       <Helmet>
-        <title>Mağaza Personel Takip Programı | Vardiya Planlama ve Shift Yönetimi Sistemi 2025</title>
-        <meta name="description" content="Mağaza ve perakende için vardiya planlama, shift yönetimi, izin takibi, prim hesaplama ve mobil PDKS özellikleri sunan personel takip programı. Vardiya optimizasyonu ve KPI analitik raporlama ile işletmenizi yönetin." />
+        <title>Mağaza Personel Takip Programı – Vardiya Planlama | Mika</title>
+        <meta name="description" content="Mağaza ve perakende için personel takip programı: vardiya planlama, shift yönetimi, izin takibi, prim hesaplama ve mobil PDKS özellikleri." />
         <meta name="keywords" content="mağaza personel takip, vardiya planlama, shift planlama, vardiya optimizasyonu, personel planlama, izin yönetimi, prim yönetimi, mobil pdks, giriş çıkış takibi, kpi analitik, perakende personel takip" />
         <link rel="canonical" href="https://mikateknoloji.com/urunler/magaza-personel-takip" />
         

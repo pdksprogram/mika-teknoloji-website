@@ -99,7 +99,7 @@ export default function PuantajProgramiPage() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Puantaj Programı | Aylık Puantaj ve Fazla Mesai Hesabı - Mika Teknoloji"
+        title="Puantaj Programı – Aylık Puantaj ve Fazla Mesai | Mika"
         description="Giriş-çıkış kayıtlarından aylık puantaj: normal çalışma, hafta tatili, fazla mesai, izin ve devamsızlık tek tabloda. Ay kilidi ve Excel (.xlsx) çıktısı."
         canonical={kanonikAdres(YOL)}
         jsonLd={[sssJsonLd(SSS), kirintiJsonLd(KIRINTI)]}

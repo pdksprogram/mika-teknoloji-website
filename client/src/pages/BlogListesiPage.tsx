@@ -15,8 +15,8 @@ export default function BlogListesiPage() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Blog | Puantaj, Vardiya ve Giriş-Çıkış Takibi Yazıları - Mika Teknoloji"
-        description="Puantaj hazırlama, vardiya planı ve QR kodla personel giriş-çıkışı üzerine adım adım uygulama yazıları."
+        title="Blog: PDKS, Puantaj ve Vardiya Rehberleri | Mika Teknoloji"
+        description="PDKS sistemleri, puantaj hazırlama, vardiya planı ve QR kodla personel giriş-çıkışı üzerine adım adım uygulama yazıları ve rehberler."
         canonical={kanonikAdres(BLOG_YOLU)}
         jsonLd={[kirintiJsonLd(KIRINTI)]}
       />

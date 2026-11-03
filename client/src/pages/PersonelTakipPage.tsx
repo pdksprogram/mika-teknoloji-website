@@ -134,10 +134,10 @@ export default function PersonelTakipPage() {
     <div className="min-h-screen bg-white">
       <Helmet>
         {/* Primary Meta Tags */}
-        <title>Personel Takip Sistemi | Mika Teknoloji - Bulut Tabanlı PDKS Çözümleri</title>
+        <title>Personel Takip Programı – Bulut Tabanlı PDKS | Mika</title>
         <meta 
           name="description" 
-          content="Bulut tabanlı personel takip sistemi: PDKS, vardiya yönetimi, QR kod ile giriş-çıkış, mobil uygulama ve aylık puantaj." 
+          content="Bulut tabanlı personel takip programı: PDKS, vardiya yönetimi, QR kod ile giriş-çıkış, mobil uygulama ve aylık puantaj tek sistemde." 
         />
         <meta name="keywords" content="personel takip sistemi, bulut tabanlı pdks, vardiya yönetimi yazılımı, insan kaynakları sistemi, çalışan takip programı, pdks sistemi, personel devam kontrol sistemi, mesai takip sistemi, QR kod personel takip, mobil personel takip uygulaması, işçi takip sistemi, personel giriş çıkış sistemi, puantaj sistemi, shift yönetimi, çalışan zaman takibi, bordro hazırlama sistemi, iş gücü yönetimi, hr yazılımı türkiye" />
         <meta name="author" content="Mika Teknoloji" />
@@ -148,8 +148,8 @@ export default function PersonelTakipPage() {
         <meta name="geo.placename" content="Türkiye" />
         
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Personel Takip Sistemi | Mika Teknoloji - Bulut Tabanlı PDKS Çözümleri" />
-        <meta property="og:description" content="Bulut tabanlı personel takip sistemi: PDKS, vardiya yönetimi, QR kod ile giriş-çıkış, mobil uygulama ve aylık puantaj." />
+        <meta property="og:title" content="Personel Takip Programı – Bulut Tabanlı PDKS | Mika" />
+        <meta property="og:description" content="Bulut tabanlı personel takip programı: PDKS, vardiya yönetimi, QR kod ile giriş-çıkış, mobil uygulama ve aylık puantaj tek sistemde." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/personel-takip" />
         <meta property="og:image" content="https://mikateknoloji.com/images/slayt/bulut-pdks-paneli.jpg" />
@@ -166,7 +166,6 @@ export default function PersonelTakipPage() {
         <meta name="twitter:description" content="Bulut tabanlı personel takip sistemi: PDKS, vardiya yönetimi, QR kod ile giriş-çıkış ve mobil uygulama." />
         <meta name="twitter:image" content="https://mikateknoloji.com/images/slayt/bulut-pdks-paneli.jpg" />
         <meta name="twitter:image:alt" content="Mika Teknoloji Personel Takip Sistemi" />
-        <meta name="twitter:site" content="@mikateknoloji" />
         <meta name="twitter:creator" content="@mikateknoloji" />
         
         {/* Additional SEO Meta Tags */}
@@ -175,10 +174,8 @@ export default function PersonelTakipPage() {
         <meta name="application-name" content="Mika Teknoloji Personel Takip Sistemi" />
         <meta name="msapplication-TileColor" content="#EC4899" />
         
-        {/* Canonical and Hreflang */}
+        {/* Canonical */}
         <link rel="canonical" href="https://mikateknoloji.com/urunler/personel-takip" />
-        <link rel="alternate" hrefLang="tr" href="https://mikateknoloji.com/urunler/personel-takip" />
-        <link rel="alternate" hrefLang="x-default" href="https://mikateknoloji.com/urunler/personel-takip" />
         
         {/* Preconnect for Performance */}
         <link rel="preconnect" href="https://www.google-analytics.com" />
@@ -275,7 +272,7 @@ export default function PersonelTakipPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight">
-              Bulut Tabanlı Personel Takip ve İnsan Kaynakları Yönetimi
+              Personel Takip Programı ve Bulut Tabanlı İK Yönetimi
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-600 font-light mb-8">

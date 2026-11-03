@@ -5,10 +5,10 @@ import SEO from "@/seo/SEO";
 
 type Bolum = { baslik: string; metin: string[] };
 
-function YasalSayfa({ baslik, alt, bolumler }: { baslik: string; alt: string; bolumler: Bolum[] }) {
+function YasalSayfa({ baslik, alt, bolumler, seoBaslik, seoAciklama }: { baslik: string; alt: string; bolumler: Bolum[]; seoBaslik: string; seoAciklama: string }) {
   return (
     <div className="min-h-screen bg-slate-50 py-16">
-      <SEO title={`${baslik} | Mika Teknoloji`} description={`${alt}.`} />
+      <SEO title={seoBaslik} description={seoAciklama} />
       <div className="container mx-auto max-w-4xl px-4">
         <div className="rounded-2xl border-t-4 border-primary bg-white p-8 shadow-lg">
           <h1 className="mb-2 text-3xl font-bold text-slate-800">{baslik}</h1>
@@ -35,6 +35,8 @@ export function KvkkAydinlatma() {
     <YasalSayfa
       baslik="Öğrenci Takip — Kişisel Verilerin Korunması Aydınlatma Metni"
       alt="6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında giriş-çıkış bildirimleri ve fotoğraf gönderimi"
+      seoBaslik="KVKK Aydınlatma Metni – Öğrenci Takip | Mika Teknoloji"
+      seoAciklama="6698 sayılı KVKK kapsamında Öğrenci Takip giriş-çıkış bildirimleri ve fotoğraf gönderimi: veri sorumlusu, işlenen veriler, amaç ve haklarınız."
       bolumler={[
         { baslik: "Veri sorumlusu", metin: [
           "Öğrenciye ait kişisel verilerin veri sorumlusu, öğrencinin kayıtlı olduğu okuldur. Mika Teknoloji (ESOFT Öğrenci Takip), okul adına verileri işleyen hizmet sağlayıcıdır (veri işleyen)." ] },
@@ -60,6 +62,8 @@ export function HizmetSartlari() {
     <YasalSayfa
       baslik="Hizmet Şartları"
       alt="ESOFT / Mika Teknoloji yazılım ve bildirim hizmetleri"
+      seoBaslik="Hizmet Şartları: Yazılım ve Bildirim Hizmetleri | Mika"
+      seoAciklama="ESOFT / Mika Teknoloji yazılım ve bildirim hizmetlerinin şartları: hizmet kapsamı, WhatsApp bildirim kontörü, kullanım kuralları ve sorumluluk."
       bolumler={[
         { baslik: "Hizmet", metin: [
           "Mika Teknoloji; personel devam kontrol (PDKS), öğrenci takip, geçiş kontrol yazılımları ile bu yazılımlara bağlı SMS ve WhatsApp bildirim hizmetlerini kurumsal müşterilerine sunar." ] },
@@ -81,6 +85,8 @@ export function VeriSilme() {
     <YasalSayfa
       baslik="Veri Silme Talimatları"
       alt="Kişisel verilerinizin silinmesini nasıl talep edebilirsiniz"
+      seoBaslik="Veri Silme Talimatları – Kişisel Veri Talebi | Mika"
+      seoAciklama="Kişisel verilerinizin silinmesini nasıl talep edebilirsiniz: veli ve öğrenci verileri, doğrudan başvuru yolu ve fotoğrafların silinmesi adımları."
       bolumler={[
         { baslik: "Veli ve öğrenci verileri", metin: [
           "Öğrenci ve veli verileri okul adına işlenir. Silme talebinizi öğrencinin kayıtlı olduğu okul idaresine iletebilirsiniz; okul, paneli üzerinden kaydı ve ilgili bildirim geçmişini siler.",

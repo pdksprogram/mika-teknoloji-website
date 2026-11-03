@@ -36,7 +36,7 @@ export const BLOG_YAZILARI: BlogYazisi[] = [
   {
     yol: "/blog/puantaj-nasil-tutulur",
     baslik: "Puantaj Nasıl Tutulur? Adım Adım Aylık Puantaj",
-    seoBaslik: "Puantaj Nasıl Tutulur? Adım Adım Aylık Puantaj | Mika Teknoloji Blog",
+    seoBaslik: "Puantaj Nasıl Tutulur? Adım Adım Aylık Puantaj | Mika",
     aciklama:
       "Giriş-çıkış kayıtlarından aylık puantaja giden yol: tanımlar, kayıt aktarımı, hareket düzeltme, hesaplama, kontrol, ay kilidi ve Excel çıktısı.",
     ozet: "Tanımlardan ay kilidine kadar, giriş-çıkış kayıtlarından aylık puantajı hazırlamanın sırası.",
@@ -47,9 +47,9 @@ export const BLOG_YAZILARI: BlogYazisi[] = [
   {
     yol: "/blog/vardiya-plani-nasil-hazirlanir",
     baslik: "Vardiya Planı Nasıl Hazırlanır? Pratik Adımlar",
-    seoBaslik: "Vardiya Planı Nasıl Hazırlanır? Pratik Adımlar | Mika Teknoloji Blog",
+    seoBaslik: "Vardiya Planı Nasıl Hazırlanır? Pratik Adımlar | Mika",
     aciklama:
-      "Haftalık vardiya planını hazırlamanın sırası: ihtiyacı çıkarın, vardiya kalıplarını tanımlayın, planı yazın, paylaşın, onaya gönderin ve gerçekleşenle karşılaştırın.",
+      "Haftalık vardiya planının sırası: ihtiyacı çıkarın, kalıpları tanımlayın, planı yazın, paylaşın, onaya gönderin ve gerçekleşenle karşılaştırın.",
     ozet: "Saat saat ihtiyaçtan onaylı plana, haftalık vardiyayı hazırlarken izlenecek adımlar.",
     yayin: "2026-11-03",
     guncelleme: "2026-11-03",
@@ -58,13 +58,24 @@ export const BLOG_YAZILARI: BlogYazisi[] = [
   {
     yol: "/blog/qr-kod-ile-personel-giris-cikis",
     baslik: "QR Kodla Personel Giriş-Çıkış Nasıl Çalışır?",
-    seoBaslik: "QR Kodla Personel Giriş-Çıkış Nasıl Çalışır? | Mika Teknoloji Blog",
+    seoBaslik: "QR Kodla Personel Giriş-Çıkış Nasıl Çalışır? | Mika",
     aciklama:
       "Telefonla QR giriş-çıkışın iki yolu, konum doğrulama, mola kayıtları, arka arkaya okutma ve kayıtların puantaja ulaşması adım adım.",
     ozet: "Kodu okutmak ya da kodu göstermek: telefonla giriş-çıkışın kurulumu ve sahada dikkat edilecekler.",
     yayin: "2026-11-03",
     guncelleme: "2026-11-03",
     yayinGorunen: "3 Kasım 2026",
+  },
+  {
+    yol: "/blog/pdks-sistemleri-nedir-2025-rehberi",
+    baslik: "PDKS Sistemleri Nedir? Kapsamlı Rehber",
+    seoBaslik: "PDKS Sistemleri Nedir? Kapsamlı Rehber | Mika Teknoloji",
+    aciklama:
+      "Personel Devam Kontrol Sistemi (PDKS) nedir? Parmak izi, yüz tanıma ve kartlı PDKS türleri, avantajları, fiyatları ve kurulum adımları rehberi.",
+    ozet: "PDKS nedir, nasıl çalışır: parmak izi, yüz tanıma, kartlı ve mobil PDKS türleri, avantajları ve kurulum adımları.",
+    yayin: "2025-01-15",
+    guncelleme: "2026-11-03",
+    yayinGorunen: "15 Ocak 2025",
   },
 ];
 

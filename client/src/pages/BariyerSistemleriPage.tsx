@@ -238,8 +238,8 @@ export default function BariyerSistemleriPage() {
   return (
     <>
       <Helmet>
-        <title>Bariyer Sistemleri: Mantar Bariyer, Road Blocker, Tuzak Kapanlar | Mika Teknoloji</title>
-        <meta name="description" content="Profesyonel bariyer sistemleri: Mantar bariyer, road blocker, tuzak kapanlar, otopark bariyeri ve hidrolik güvenlik sistemleri. 2 yıl garanti. Keşif için bize ulaşın." />
+        <title>Bariyer Sistemleri: Mantar Bariyer, Road Blocker | Mika</title>
+        <meta name="description" content="Bariyer sistemleri: mantar bariyer, road blocker, tuzak kapanlar, otopark bariyeri ve hidrolik güvenlik sistemleri. 2 yıl garanti; keşif için ulaşın." />
         <meta name="keywords" content="bariyer sistemleri, otopark bariyeri, hidrolik bariyer, mantar bariyer, road blocker, güvenlik bariyeri, PT PLUS bariyer, dinamik bariyer, tuzak sistemleri, bariyer fiyatları, otopark bariyeri kurulumu, otomatik bariyer, kollu bariyer, bariyer montajı, araç giriş kontrol, park bariyeri, bariyer sistemi fiyat, uzaktan kumandalı bariyer, fotoselli bariyer" />
         
         {/* Open Graph Meta Tags */}
@@ -247,7 +247,10 @@ export default function BariyerSistemleriPage() {
         <meta property="og:description" content="Profesyonel bariyer sistemleri: Otopark bariyeri, hidrolik bariyer, road blocker. 2 yıl garanti. Keşif için bize ulaşın." />
         <meta property="og:type" content="product.group" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/bariyer-sistemleri" />
-        <meta property="og:image" content="https://mikateknoloji.com/images/logos/mika-logo.jpg" />
+        <meta property="og:image" content="https://mikateknoloji.com/og-varsayilan.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:image" content="https://mikateknoloji.com/og-varsayilan.jpg" />
         <meta property="og:locale" content="tr_TR" />
         
         {/* Twitter Card Meta Tags */}
@@ -285,7 +288,7 @@ export default function BariyerSistemleriPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h1 className="text-3xl lg:text-5xl font-bold text-white mb-3 leading-tight">
-              Mantar Bariyer, Road Blocker ve Tuzak Kapan Sistemleri
+              Bariyer Sistemleri: Mantar Bariyer, Road Blocker ve Tuzak Kapanlar
             </h1>
             <p className="text-lg text-slate-300 mb-6 max-w-3xl">
               Hidrolik mantar bariyer, road blocker yol kesici ve tuzak kapan sistemleri ile yüksek güvenlik

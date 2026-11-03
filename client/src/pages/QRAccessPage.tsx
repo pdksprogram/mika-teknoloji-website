@@ -113,7 +113,7 @@ export default function QRAccessPage() {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="QR Kod Geçiş Sistemi - Temassız Erişim Kontrolü | Mika Teknoloji"
+        title="QR Kod Geçiş Sistemi – Temassız Erişim Kontrolü | Mika"
         description="QR kod teknolojisi ile temassız geçiş kontrol sistemi. Mobil uygulama entegrasyonu, dinamik kodlar ve PDKS sistemi uyumluluğu."
         canonical="https://mikateknoloji.com/qr-gecis"
         jsonLd={[productJsonLd, faqJsonLd]}

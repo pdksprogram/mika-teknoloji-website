@@ -89,7 +89,7 @@ export default function QRPersonelTakipPage() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="QR Kodlu Personel Takibi | Telefonla Giriş-Çıkış - Mika Teknoloji"
+        title="QR PDKS: QR Kodlu Personel Takibi ve Giriş-Çıkış | Mika"
         description="Personel iş yerindeki QR kodu mobil uygulamayla okutur ya da uygulamadaki kodu okuyucuya gösterir. Konum bilgisi, mola kaydı ve puantaja aktarım."
         canonical={kanonikAdres(YOL)}
         jsonLd={[sssJsonLd(SSS), kirintiJsonLd(KIRINTI)]}
@@ -97,7 +97,7 @@ export default function QRPersonelTakipPage() {
       <Kirinti maddeler={KIRINTI} />
       <KonuGiris
         ust="PDKS · QR Kod"
-        baslik="QR Kodlu Personel Takibi"
+        baslik="QR PDKS: QR Kodlu Personel Takibi"
         giris="Personel giriş-çıkışını cep telefonuyla QR kod okutarak yapar. Kayıtlar Mika PDKS'e düşer, vardiya planına göre değerlendirilir ve puantaja yansır."
       />
       <OzellikIzgarasi

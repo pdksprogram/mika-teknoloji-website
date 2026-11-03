@@ -89,8 +89,10 @@ export default function MTT300HG40DetailPage() {
   return (
     <>
       <Helmet>
-        <title>MT T300 HG40 Yüksek Kapasiteli Turnike - 40 Kişi/Dakika | Mika Teknoloji</title>
+        <title>MT T300 HG40 Hızlı Geçiş Turnikesi | Mika Teknoloji</title>
         <meta name="description" content="MT T300 HG40 ultra yüksek kapasiteli turnike. 40 kişi/dakika, çift yönlü geçiş, stadyum ve alışveriş merkezleri için profesyonel çözüm." />
+        <meta property="og:title" content="MT T300 HG40 Hızlı Geçiş Turnikesi | Mika Teknoloji" />
+        <meta property="og:description" content="MT T300 HG40 ultra yüksek kapasiteli turnike. 40 kişi/dakika, çift yönlü geçiş, stadyum ve alışveriş merkezleri için profesyonel çözüm." />
         <meta name="keywords" content="t300 hg40, yüksek kapasite turnike, 40 kişi dakika, çift yönlü turnike, stadyum turnike, alışveriş merkezi, mika teknoloji" />
       </Helmet>
 

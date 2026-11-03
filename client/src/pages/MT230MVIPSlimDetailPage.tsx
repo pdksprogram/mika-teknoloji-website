@@ -101,6 +101,8 @@ export default function MT230MVIPSlimDetailPage() {
       <Helmet>
         <title>MT 230 MVIP Slim VIP Turnike Sistemi | Mika Teknoloji</title>
         <meta name="description" content="MT 230 MVIP Slim Turnike - Engelli ve VIP geçişler için kompakt çözüm. 304 paslanmaz çelik, 10mm pleksi glass kanat, otomatik açılma sistemi." />
+        <meta property="og:title" content="MT 230 MVIP Slim VIP Turnike Sistemi | Mika Teknoloji" />
+        <meta property="og:description" content="MT 230 MVIP Slim Turnike - Engelli ve VIP geçişler için kompakt çözüm. 304 paslanmaz çelik, 10mm pleksi glass kanat, otomatik açılma sistemi." />
         <meta name="keywords" content="mt 230 mvip slim, vip turnike, engelli turnike, kompakt turnike, slim turnike, otomatik turnike, mika teknoloji" />
       </Helmet>
 

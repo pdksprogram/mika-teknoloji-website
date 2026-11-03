@@ -87,8 +87,10 @@ export default function MTT300HG20DetailPage() {
   return (
     <>
       <Helmet>
-        <title>MT T300 HG20 Hızlı Geçiş Turnike - 20 Kişi/Dakika | Mika Teknoloji</title>
+        <title>MT T300 HG20 Hızlı Geçiş Turnikesi | Mika Teknoloji</title>
         <meta name="description" content="MT T300 HG20 hızlı geçiş turnike sistemi. 20 kişi/dakika kapasiteli, RFID destekli, metro ve havaalanları için profesyonel çözüm." />
+        <meta property="og:title" content="MT T300 HG20 Hızlı Geçiş Turnikesi | Mika Teknoloji" />
+        <meta property="og:description" content="MT T300 HG20 hızlı geçiş turnike sistemi. 20 kişi/dakika kapasiteli, RFID destekli, metro ve havaalanları için profesyonel çözüm." />
         <meta name="keywords" content="t300 hg20, hızlı geçiş turnike, 20 kişi dakika, rfid turnike, metro turnike, havaalanı turnike, mika teknoloji" />
       </Helmet>
 

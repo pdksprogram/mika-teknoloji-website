@@ -94,7 +94,7 @@ export default function ParkingAutomationPage() {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Otopark Otomasyon Sistemi - Plaka Tanıma ve Bariyer | Mika Teknoloji"
+        title="Otopark Otomasyon Sistemi – Plaka Tanıma, Bariyer | Mika"
         description="Plaka tanıma, bariyer kontrol ve ücretlendirme sistemi ile tam otomatik otopark yönetimi. RFID kart desteği ve güvenlik kamerası entegrasyonu."
         canonical="https://mikateknoloji.com/otopark-otomasyon"
         jsonLd={[productJsonLd, faqJsonLd]}

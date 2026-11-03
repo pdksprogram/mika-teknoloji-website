@@ -17,7 +17,7 @@ const KIRINTI: KirintiMaddesi[] = [
 
 export default function BlogArticlePDKS() {
   const articleData = {
-    title: "PDKS Sistemleri Nedir? 2025 Rehberi - Personel Devam Kontrol",
+    title: "PDKS Sistemleri Nedir? Personel Devam Kontrol Rehberi",
     description: "Personel Devam Kontrol Sistemi (PDKS) ile çalışan takibi: modern PDKS çözümlerinin tüm detayları, fiyatları ve kurulum rehberi.",
     author: "Mika Teknoloji",
     publishDate: "15 Ocak 2025",
@@ -50,20 +50,22 @@ export default function BlogArticlePDKS() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>PDKS Sistemleri Nedir? 2025 Kapsamlı Rehberi | Mika Teknoloji</title>
-        <meta name="description" content="Personel Devam Kontrol Sistemi (PDKS) nedir? Parmak izi, yüz tanıma, kartlı PDKS türleri, fiyatları ve kurulum rehberi." />
+        <title>PDKS Sistemleri Nedir? Kapsamlı Rehber | Mika Teknoloji</title>
+        <meta name="description" content="Personel Devam Kontrol Sistemi (PDKS) nedir? Parmak izi, yüz tanıma ve kartlı PDKS türleri, avantajları, fiyatları ve kurulum adımları rehberi." />
         <meta name="keywords" content="PDKS nedir, PDKS sistemleri, personel devam kontrol sistemi, personel takip sistemi, biyometrik PDKS, web PDKS, parmak izi PDKS, yüz tanıma PDKS, kartlı PDKS, PDKS fiyatları" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="PDKS Sistemleri Nedir? Personel Devam Kontrol Rehberi 2025" />
+        <meta property="og:title" content="PDKS Sistemleri Nedir? Kapsamlı Rehber | Mika Teknoloji" />
         <meta property="og:description" content="PDKS sistemleri ile personel takibinde modern çözümler. Biyometrik teknoloji, web tabanlı erişim ve otomatik raporlama özellikleri." />
         <meta property="og:image" content="https://mikateknoloji.com/images/slayt/bulut-pdks-paneli.jpg" />
+        <meta property="og:image:width" content="1400" />
+        <meta property="og:image:height" content="603" />
         <meta property="og:url" content="https://mikateknoloji.com/blog/pdks-sistemleri-nedir-2025-rehberi" />
         <meta property="og:type" content="article" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="PDKS Sistemleri Nedir? 2025 Kapsamlı Rehberi" />
+        <meta name="twitter:title" content="PDKS Sistemleri Nedir? Kapsamlı Rehber | Mika Teknoloji" />
         <meta name="twitter:description" content="Modern personel devam kontrol sistemlerinin tüm detayları: biyometrik, kartlı ve mobil PDKS." />
         <meta name="twitter:image" content="https://mikateknoloji.com/images/slayt/bulut-pdks-paneli.jpg" />
         
@@ -72,7 +74,7 @@ export default function BlogArticlePDKS() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BlogPosting",
-          "headline": "PDKS Sistemleri Nedir? 2025 Rehberi - Personel Devam Kontrol",
+          "headline": "PDKS Sistemleri Nedir? Personel Devam Kontrol Rehberi",
           "description": "Personel Devam Kontrol Sistemi (PDKS) ile çalışan takibinde devrim yaratın. Modern PDKS çözümlerinin tüm detayları.",
           "image": "https://mikateknoloji.com/images/slayt/bulut-pdks-paneli.jpg",
           "author": {
@@ -88,7 +90,7 @@ export default function BlogArticlePDKS() {
             }
           },
           "datePublished": "2025-01-15",
-          "dateModified": "2025-01-15",
+          "dateModified": "2026-11-03",
           "wordCount": "2500",
           "articleSection": "Teknoloji",
           "keywords": ["PDKS", "personel devam kontrol", "biyometrik sistem", "personel takip"]
@@ -116,7 +118,7 @@ export default function BlogArticlePDKS() {
             >
               <p className="text-sm text-slate-300 mb-2">{articleData.category}</p>
               <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
-                PDKS Sistemleri Nedir? 2025 Kapsamlı Rehberi
+                PDKS Sistemleri Nedir? Kapsamlı Rehber
               </h1>
               <p className="text-lg md:text-xl text-white/90 mb-6 leading-relaxed">
                 Personel Devam Kontrol Sistemi ile modern çalışan takibi. Biyometrik teknoloji, 
@@ -378,13 +380,13 @@ export default function BlogArticlePDKS() {
 
                   <section id="pdks-fiyatlari" className="mb-12">
                     <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
-                      PDKS Sistemleri Fiyatları 2025
+                      PDKS Sistemleri Fiyatları
                     </h2>
                     
                     <div className="bg-slate-50 border border-slate-200 rounded-lg p-6 mb-8">
                       <p className="text-gray-700 text-sm">
                         <strong>Not:</strong> PDKS sistem fiyatları, seçilen teknoloji, çalışan sayısı, özel gereksinimler ve 
-                        kurulum karmaşıklığına göre değişiklik gösterir. Aşağıdaki fiyatlar 2025 yılı ortalama piyasa fiyatlarıdır.
+                        kurulum karmaşıklığına göre değişiklik gösterir. Aşağıdaki fiyatlar ortalama piyasa fiyatlarıdır; güncel fiyat için teklif alın.
                       </p>
                     </div>
 

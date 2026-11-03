@@ -78,13 +78,16 @@ export default function T345DetailPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>MT 345 Endüstriyel Bel Tipi Turnike Sistemi | Mika Teknoloji</title>
-        <meta name="description" content="MT 345 endüstriyel bel tipi turnike sistemi. Ağır sanayi koşulları için. Yoğun trafik, yüksek güvenlik, IP65 koruma." />
+        <title>MT 345 Endüstriyel Bel Tipi Turnike | Mika Teknoloji</title>
+        <meta name="description" content="MT 345 endüstriyel bel tipi turnike sistemi. Ağır sanayi koşulları, yoğun trafik ve yüksek güvenlik gerektiren girişler için IP65 koruma." />
         <meta name="keywords" content="MT 345, endüstriyel turnike, ağır hizmet turnike, fabrika turnike, IP65 turnike" />
         
         <meta property="og:title" content="MT 345 Endüstriyel Turnike Sistemi | Mika Teknoloji" />
         <meta property="og:description" content="Endüstriyel dayanıklılık ile MT 345 bel tipi turnike sistemi. Fabrikalar ve yoğun trafik alanları için." />
         <meta property="og:image" content="https://mikateknoloji.com/t-345-elektromekanik-turnike.jpg" />
+        <meta property="og:image:width" content="816" />
+        <meta property="og:image:height" content="812" />
+        <meta name="twitter:image" content="https://mikateknoloji.com/t-345-elektromekanik-turnike.jpg" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/t345-turnike" />
         
         <link rel="canonical" href="https://mikateknoloji.com/urunler/t345-turnike" />

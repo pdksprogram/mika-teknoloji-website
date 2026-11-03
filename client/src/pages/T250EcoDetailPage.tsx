@@ -72,13 +72,16 @@ export default function T250EcoDetailPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>MT 250 ECO Ekonomik Bel Tipi Turnike Sistemi | Mika Teknoloji</title>
+        <title>MT 250 ECO Bel Tipi Turnike – Ekonomik Model | Mika</title>
         <meta name="description" content="MT 250 ECO ekonomik bel tipi turnike sistemi. Düşük bütçeli projeler için maliyet-etkin çözüm. Kolay kurulum, düşük enerji tüketimi." />
         <meta name="keywords" content="MT 250 ECO, ekonomik turnike, bel tipi turnike, düşük bütçe turnike, basit turnike sistemi" />
         
         <meta property="og:title" content="MT 250 ECO Ekonomik Turnike Sistemi | Mika Teknoloji" />
         <meta property="og:description" content="Ekonomik fiyat avantajı ile MT 250 ECO bel tipi turnike sistemi. Küçük işletmeler için ideal çözüm." />
         <meta property="og:image" content="https://mikateknoloji.com/t-250-eco-elektromekanik-turnike.jpg" />
+        <meta property="og:image:width" content="816" />
+        <meta property="og:image:height" content="810" />
+        <meta name="twitter:image" content="https://mikateknoloji.com/t-250-eco-elektromekanik-turnike.jpg" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/t250-eco-turnike" />
         
         <link rel="canonical" href="https://mikateknoloji.com/urunler/t250-eco-turnike" />

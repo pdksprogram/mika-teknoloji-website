@@ -16,8 +16,8 @@ const References: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Referanslar | Mika Teknoloji"
-        description="PDKS, turnike ve kartlı geçiş sistemlerimizi kullanan kurumlar."
+        title="Referanslar: PDKS ve Turnike Kullanan Kurumlar | Mika"
+        description="PDKS, turnike ve kartlı geçiş sistemlerimizi kullanan kurumlar: tekstil, mobilya, otomotiv ve sağlık sektörlerinden Mika Teknoloji referansları."
         jsonLd={kirintiJsonLd(KIRINTI)}
       />
       <Kirinti maddeler={KIRINTI} icSinif="pb-4" />

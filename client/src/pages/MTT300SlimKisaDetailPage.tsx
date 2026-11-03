@@ -88,8 +88,10 @@ export default function MTT300SlimKisaDetailPage() {
   return (
     <>
       <Helmet>
-        <title>MT T300 HG SLIM Kısa Turnike - Kompakt Tasarım | Mika Teknoloji</title>
-        <meta name="description" content="MT T300 HG SLIM kısa turnike sistemi. Kompakt tasarım, dar alanlar için ideal, küçük işletmeler için ekonomik çözüm." />
+        <title>MT T300 HG SLIM Kısa Hızlı Geçiş Turnikesi | Mika</title>
+        <meta name="description" content="MT T300 HG SLIM kısa hızlı geçiş turnikesi. Kompakt tasarım, dar alanlar için ideal; küçük işletmeler için ekonomik hızlı geçiş çözümü." />
+        <meta property="og:title" content="MT T300 HG SLIM Kısa Hızlı Geçiş Turnikesi | Mika" />
+        <meta property="og:description" content="MT T300 HG SLIM kısa hızlı geçiş turnikesi. Kompakt tasarım, dar alanlar için ideal; küçük işletmeler için ekonomik hızlı geçiş çözümü." />
         <meta name="keywords" content="slim turnike, kısa turnike, kompakt turnike, küçük işletme, dar alan turnike, ekonomik turnike, mika teknoloji" />
       </Helmet>
 

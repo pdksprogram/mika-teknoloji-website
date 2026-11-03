@@ -56,7 +56,7 @@ export default function PDKSPage() {
 
   // SEO başlık/açıklama: <SEO> (Helmet) ile yazılır; ön-render ham HTML'e de girer.
     const title = selectedLanguage === 'tr'
-      ? 'Profesyonel PDKS Sistemleri | Mika Teknoloji - Personel Devam Kontrol Çözümleri'
+      ? 'PDKS Programı – Personel Devam Kontrol | Mika'
       : 'Professional PDKS Systems | Mika Technology - Personnel Attendance Control Solutions';
 
     const description = selectedLanguage === 'tr'
@@ -116,7 +116,7 @@ export default function PDKSPage() {
 
   const pdksTranslations = {
     tr: {
-      title: "Profesyonel PDKS Sistemleri",
+      title: "PDKS Programı ve Devam Kontrol Sistemleri",
       subtitle: "Modern İşgücü Yönetimi için Kapsamlı Çözümler",
       brandMessage: "Mika Teknoloji PDKS",
       description: "Mika Teknoloji; fabrika, hastane, okul ve KOBİ'ler için biyometrik personel giriş çıkış takip sistemi, mesai hesaplama, vardiya yönetimi ve bordroya hazır puantaj sunan PDKS yazılımı geliştirir. Bulut tabanlı ve mobil destekli personel devam kontrol sistemi.",

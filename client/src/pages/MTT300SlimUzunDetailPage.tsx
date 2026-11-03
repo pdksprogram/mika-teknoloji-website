@@ -89,8 +89,10 @@ export default function MTT300SlimUzunDetailPage() {
   return (
     <>
       <Helmet>
-        <title>MT T300 HG SLIM Uzun Turnike - Güvenlik Odaklı | Mika Teknoloji</title>
+        <title>MT T300 HG SLIM Uzun Hızlı Geçiş Turnikesi | Mika</title>
         <meta name="description" content="MT T300 HG SLIM uzun turnike sistemi. Güvenlik odaklı tasarım, çoklu sensör, entegre kamera, kurumsal binalar için profesyonel çözüm." />
+        <meta property="og:title" content="MT T300 HG SLIM Uzun Hızlı Geçiş Turnikesi | Mika" />
+        <meta property="og:description" content="MT T300 HG SLIM uzun turnike sistemi. Güvenlik odaklı tasarım, çoklu sensör, entegre kamera, kurumsal binalar için profesyonel çözüm." />
         <meta name="keywords" content="slim uzun turnike, güvenlik turnike, kurumsal turnike, çoklu sensör, hd kamera, profesyonel güvenlik, mika teknoloji" />
       </Helmet>
 

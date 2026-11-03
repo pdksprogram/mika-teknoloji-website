@@ -88,8 +88,10 @@ export default function MTT300HG120ChubbyDetailPage() {
   return (
     <>
       <Helmet>
-        <title>MT T300 HG120 Chubby Ultra - 120 Kişi/Dk Geniş Geçiş | Mika Teknoloji</title>
+        <title>MT T300 HG120 Chubby Hızlı Geçiş Turnikesi | Mika</title>
         <meta name="description" content="MT T300 HG120 Chubby ultra hızlı turnike. 120 kişi/dakika, maksimum geniş geçiş alanı, kongre merkezleri ve endüstriyel tesisler için." />
+        <meta property="og:title" content="MT T300 HG120 Chubby Hızlı Geçiş Turnikesi | Mika" />
+        <meta property="og:description" content="MT T300 HG120 Chubby ultra hızlı turnike. 120 kişi/dakika, maksimum geniş geçiş alanı, kongre merkezleri ve endüstriyel tesisler için." />
         <meta name="keywords" content="ultra chubby, 120 kişi dakika, maksimum geçiş, kongre merkezi, endüstriyel turnike, big data, ai destekli, mika teknoloji" />
       </Helmet>
 

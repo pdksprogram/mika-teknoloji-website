@@ -324,8 +324,8 @@ export default function FazlaMesaiHesaplamaPage() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Fazla Mesai Hesaplama | Haftalık Çalışma Süresi Hesabı - Mika Teknoloji"
-        description="Giriş, çıkış ve mola sürelerini girin; haftalık toplam çalışma, normal çalışma ve sınırı aşan fazla mesai süresini hesaplayın. Saatlik ücretle tutarı görün."
+        title="Fazla Mesai Hesaplama – Haftalık Çalışma Süresi | Mika"
+        description="Giriş, çıkış ve mola sürelerini girin; haftalık toplam çalışma, normal çalışma ve fazla mesai süresini hesaplayın. Saatlik ücretle tutarı görün."
         canonical={kanonikAdres(YOL)}
         jsonLd={[sssJsonLd(SSS), kirintiJsonLd(KIRINTI)]}
       />

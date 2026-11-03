@@ -93,8 +93,8 @@ export default function QRPatrolPage() {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="QR-Patrol Bekçi Kontrol Sistemi - Mobil Devriye Takibi | Mika Teknoloji"
-        description="Güvenlik personeli için QR kod tabanlı mobil devriye takip sistemi. Gerçek zamanlı konum izleme, otomatik raporlama ve acil durum alarm özellikleri ile güvenlik operasyonlarınızı dijitalleştirin."
+        title="QR Bekçi Tur Kontrol Sistemi – Mobil Devriye | Mika"
+        description="Güvenlik personeli için QR kod tabanlı mobil devriye takip sistemi: gerçek zamanlı konum izleme, otomatik raporlama ve acil durum alarmı."
         canonical="https://mikateknoloji.com/qr-bekci"
         jsonLd={[productJsonLd, faqJsonLd]}
       />

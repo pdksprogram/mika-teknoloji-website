@@ -68,13 +68,16 @@ export default function MT2500KKristalDetailPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>MT 2500K Kristal 3 Kollu Premium Boy Tipi Turnike | Mika Teknoloji</title>
+        <title>MT 2500K Kristal Boy Tipi Turnike – 3 Kollu | Mika</title>
         <meta name="description" content="MT 2500K Kristal 3 kollu premium boy tipi turnike sistemi. Şeffaf kristal panelli lüks tasarım. VIP alanlar ve 5 yıldız oteller için." />
         <meta name="keywords" content="MT 2500K Kristal, premium turnike, kristal turnike, lüks turnike, VIP turnike, otel güvenliği, şeffaf turnike" />
         
         <meta property="og:title" content="MT 2500K Kristal Premium Boy Tipi Turnike | Mika Teknoloji" />
         <meta property="og:description" content="Kristal panelli premium boy tipi turnike sistemi. VIP alanlar için lüks güvenlik çözümü." />
         <meta property="og:image" content="https://mikateknoloji.com/t-2500k-single-3-kollu-kristal-boy-turnike.jpg" />
+        <meta property="og:image:width" content="1417" />
+        <meta property="og:image:height" content="1417" />
+        <meta name="twitter:image" content="https://mikateknoloji.com/t-2500k-single-3-kollu-kristal-boy-turnike.jpg" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/mt2500k-kristal" />
         
         <link rel="canonical" href="https://mikateknoloji.com/urunler/mt2500k-kristal" />

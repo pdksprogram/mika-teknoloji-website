@@ -28,8 +28,10 @@ export default function PTGuardDetailPage() {
   return (
     <>
       <Helmet>
-        <title>MT Guard Bariyer Sistemi - Yüksek Güvenlik Çözümü | Mika Teknoloji</title>
-        <meta name="description" content="MT Guard bariyer sistemi ile yüksek güvenlik seviyesi sağlayan profesyonel koruma çözümü. Sağlam yapısı ve dayanıklılığı ile güvenlik önceliği olan alanlarda ideal." />
+        <title>MT Guard Bariyer Sistemi – Yüksek Güvenlik | Mika</title>
+        <meta name="description" content="MT Guard bariyer sistemi: yüksek güvenlik seviyesi sağlayan koruma çözümü. Sağlam ve dayanıklı yapısıyla güvenlik önceliği olan alanlar için." />
+        <meta property="og:title" content="MT Guard Bariyer Sistemi – Yüksek Güvenlik | Mika" />
+        <meta property="og:description" content="MT Guard bariyer sistemi: yüksek güvenlik seviyesi sağlayan koruma çözümü. Sağlam ve dayanıklı yapısıyla güvenlik önceliği olan alanlar için." />
       </Helmet>
 
       <Kirinti maddeler={[{ ad: "Ana Sayfa", yol: "/" }, { ad: "Ürünler", yol: "/urunler" }, { ad: "Bariyer Sistemleri", yol: "/urunler/bariyer-sistemleri" }, { ad: "MT Guard Bariyer Sistemi", yol: "/urunler/pt-guard-bariyer" }]} />

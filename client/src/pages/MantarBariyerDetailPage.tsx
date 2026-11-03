@@ -50,8 +50,10 @@ export default function MantarBariyerDetailPage() {
   return (
     <>
       <Helmet>
-        <title>Hidrolik Mantar Bariyer - Yüksek Güvenlik Bariyeri | Mika Teknoloji</title>
+        <title>Mantar Bariyer – Hidrolik Yüksek Güvenlik Bariyeri | Mika</title>
         <meta name="description" content="Hidrolik mantar bariyer sistemi ile yüksek güvenlik. 304 paslanmaz çelik, 100 bar hidrolik tahrik, IP67 koruma ve araç tahrip özelliği ile maksimum koruma." />
+        <meta property="og:title" content="Mantar Bariyer – Hidrolik Yüksek Güvenlik Bariyeri | Mika" />
+        <meta property="og:description" content="Hidrolik mantar bariyer sistemi ile yüksek güvenlik. 304 paslanmaz çelik, 100 bar hidrolik tahrik, IP67 koruma ve araç tahrip özelliği ile maksimum koruma." />
       </Helmet>
 
       <Kirinti maddeler={[{ ad: "Ana Sayfa", yol: "/" }, { ad: "Ürünler", yol: "/urunler" }, { ad: "Bariyer Sistemleri", yol: "/urunler/bariyer-sistemleri" }, { ad: "Hidrolik Mantar Bariyer", yol: "/urunler/mantar-bariyer" }]} />

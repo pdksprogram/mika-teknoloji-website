@@ -130,13 +130,16 @@ export default function BelTipeTurnikePage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Bel Tipi Turnike Sistemleri - Üç Kollu Turnikeler | Mika Teknoloji</title>
+        <title>Bel Tipi Turnike Sistemleri – Üç Kollu Turnikeler | Mika</title>
         <meta name="description" content="Paslanmaz çelik bel tipi turnike sistemleri. Elektromekanik, jetonlu ve özel tasarım turnike modelleri. Güvenli geçiş kontrolü için profesyonel çözümler." />
         <meta name="keywords" content="bel tipi turnike, üç kollu turnike, tripod turnike, turnike sistemleri, paslanmaz çelik turnike, elektromekanik turnike, jetonlu turnike" />
         
         <meta property="og:title" content="Bel Tipi Turnike Sistemleri | Mika Teknoloji" />
         <meta property="og:description" content="Güvenli geçiş kontrolü için paslanmaz çelik bel tipi turnike sistemleri. 12 farklı model seçeneği ile." />
         <meta property="og:image" content="https://mikateknoloji.com/images/products/tripod-waist-height.jpg" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="853" />
+        <meta name="twitter:image" content="https://mikateknoloji.com/images/products/tripod-waist-height.jpg" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/bel-tipi-turnike" />
         
         <link rel="canonical" href="https://mikateknoloji.com/urunler/bel-tipi-turnike" />

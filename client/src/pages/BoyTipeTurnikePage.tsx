@@ -148,13 +148,16 @@ export default function BoyTipeTurnikePage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Boy Tipi Turnike Sistemleri - Full Height Turnikeler | Mika Teknoloji</title>
-        <meta name="description" content="Boy yüksekliğinde turnike sistemleri. Single, double, kompakt ve kristal modelleri. Havalimanı, metro ve yüksek güvenlik alanları için profesyonel çözümler." />
+        <title>Boy Tipi Turnike Sistemleri – Full Height | Mika Teknoloji</title>
+        <meta name="description" content="Boy yüksekliğinde turnike sistemleri: single, double, kompakt ve kristal modeller. Havalimanı, metro ve yüksek güvenlik alanları için çözümler." />
         <meta name="keywords" content="boy tipi turnike, full height turnike, yüksek güvenlik turnike, havalimanı turnike, metro turnike, MT2500D, MT2500K" />
         
         <meta property="og:title" content="Boy Tipi Turnike Sistemleri | Mika Teknoloji" />
         <meta property="og:description" content="Yüksek güvenlik alanları için boy tipi turnike sistemleri. 14 farklı model seçeneği ile." />
         <meta property="og:image" content="https://mikateknoloji.com/t-2500d-single-3-kollu-paslanmaz-turnike.jpg" />
+        <meta property="og:image:width" content="816" />
+        <meta property="og:image:height" content="814" />
+        <meta name="twitter:image" content="https://mikateknoloji.com/t-2500d-single-3-kollu-paslanmaz-turnike.jpg" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/boy-tipi-turnike" />
         
         <link rel="canonical" href="https://mikateknoloji.com/urunler/boy-tipi-turnike" />

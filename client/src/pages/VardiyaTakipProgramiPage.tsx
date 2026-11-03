@@ -99,7 +99,7 @@ export default function VardiyaTakipProgramiPage() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Vardiya Takip Programı | Vardiya Planlama ve Onay - Mika Teknoloji"
+        title="Vardiya Takip Programı – Planlama ve Onay | Mika Teknoloji"
         description="Haftalık vardiya planı hazırlayın ve onaycıya gönderin. Personel vardiyasını mobil uygulamada görür; giriş-çıkışlar plana göre puantaja yansır."
         canonical={kanonikAdres(YOL)}
         jsonLd={[sssJsonLd(SSS), kirintiJsonLd(KIRINTI)]}

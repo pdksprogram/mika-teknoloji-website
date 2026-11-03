@@ -46,8 +46,10 @@ export default function PTPlusDetailPage() {
   return (
     <>
       <Helmet>
-        <title>MT Plus Bariyer Sistemi - Profesyonel Otopark Bariyeri | Mika Teknoloji</title>
+        <title>MT Plus Bariyer Sistemi – Otopark Bariyeri | Mika</title>
         <meta name="description" content="MT Plus bariyer sistemi 5.25 metre kol uzunluğu, LED aydınlatma ve IP54 koruma derecesi ile otopark ve geçiş kontrolü için ideal profesyonel çözüm." />
+        <meta property="og:title" content="MT Plus Bariyer Sistemi – Otopark Bariyeri | Mika" />
+        <meta property="og:description" content="MT Plus bariyer sistemi 5.25 metre kol uzunluğu, LED aydınlatma ve IP54 koruma derecesi ile otopark ve geçiş kontrolü için ideal profesyonel çözüm." />
       </Helmet>
 
       <Kirinti maddeler={[{ ad: "Ana Sayfa", yol: "/" }, { ad: "Ürünler", yol: "/urunler" }, { ad: "Bariyer Sistemleri", yol: "/urunler/bariyer-sistemleri" }, { ad: "MT Plus Bariyer Sistemi", yol: "/urunler/pt-plus-bariyer" }]} />

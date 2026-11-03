@@ -38,8 +38,10 @@ export default function PTGeniusDetailPage() {
   return (
     <>
       <Helmet>
-        <title>MT Genius Bariyer Sistemi - 3 Saniye Hızlı Açılma | Mika Teknoloji</title>
+        <title>MT Genius Bariyer Sistemi – 3 Saniye Açılma | Mika</title>
         <meta name="description" content="MT Genius bariyer sistemi 3 saniye ultra hızlı açılma, 5.5 metre kol uzunluğu ve geniş sıcaklık aralığı ile yüksek performans sağlar." />
+        <meta property="og:title" content="MT Genius Bariyer Sistemi – 3 Saniye Açılma | Mika" />
+        <meta property="og:description" content="MT Genius bariyer sistemi 3 saniye ultra hızlı açılma, 5.5 metre kol uzunluğu ve geniş sıcaklık aralığı ile yüksek performans sağlar." />
       </Helmet>
 
       <Kirinti maddeler={[{ ad: "Ana Sayfa", yol: "/" }, { ad: "Ürünler", yol: "/urunler" }, { ad: "Bariyer Sistemleri", yol: "/urunler/bariyer-sistemleri" }, { ad: "MT Genius Bariyer Sistemi", yol: "/urunler/pt-genius-bariyer" }]} />

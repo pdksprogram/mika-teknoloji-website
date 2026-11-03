@@ -98,8 +98,10 @@ export default function MTSC324BVIPDetailPage() {
   return (
     <>
       <Helmet>
-        <title>MT SC324B VIP Turnike Sistemi - Engelli Dostu | Mika Teknoloji</title>
+        <title>MT SC324B VIP Turnike – Engelli Dostu Geçiş | Mika</title>
         <meta name="description" content="MT SC324B VIP Turnike - Engelli erişim ve VIP geçişler için özel tasarım. Paslanmaz çelik, motorlu sistem, otomatik açılma. Tekerlekli sandalye uyumlu." />
+        <meta property="og:title" content="MT SC324B VIP Turnike – Engelli Dostu Geçiş | Mika" />
+        <meta property="og:description" content="MT SC324B VIP Turnike - Engelli erişim ve VIP geçişler için özel tasarım. Paslanmaz çelik, motorlu sistem, otomatik açılma. Tekerlekli sandalye uyumlu." />
         <meta name="keywords" content="mt sc324b, vip turnike, engelli turnike, otomatik turnike, paslanmaz çelik, motorlu turnike, mika teknoloji" />
       </Helmet>
 

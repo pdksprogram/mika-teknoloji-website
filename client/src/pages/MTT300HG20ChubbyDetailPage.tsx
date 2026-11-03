@@ -88,8 +88,10 @@ export default function MTT300HG20ChubbyDetailPage() {
   return (
     <>
       <Helmet>
-        <title>MT T300 HG20 Chubby Turnike - Geniş Geçiş Alanı | Mika Teknoloji</title>
+        <title>MT T300 HG20 Chubby Hızlı Geçiş Turnikesi | Mika</title>
         <meta name="description" content="MT T300 HG20 Chubby hızlı geçiş turnike. Geniş geçiş alanı, valiz dostu, 20 kişi/dakika, havaalanı ve tren istasyonları için ideal." />
+        <meta property="og:title" content="MT T300 HG20 Chubby Hızlı Geçiş Turnikesi | Mika" />
+        <meta property="og:description" content="MT T300 HG20 Chubby hızlı geçiş turnike. Geniş geçiş alanı, valiz dostu, 20 kişi/dakika, havaalanı ve tren istasyonları için ideal." />
         <meta name="keywords" content="chubby turnike, geniş geçiş, valiz dostu, havaalanı turnike, t300 hg20, engelli erişim, mika teknoloji" />
       </Helmet>
 

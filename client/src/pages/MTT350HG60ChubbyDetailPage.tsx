@@ -88,8 +88,10 @@ export default function MTT350HG60ChubbyDetailPage() {
   return (
     <>
       <Helmet>
-        <title>MT T350 HG60 Chubby Premium - Lüks Geniş Geçiş | Mika Teknoloji</title>
+        <title>MT T350 HG60 Chubby Hızlı Geçiş Turnikesi | Mika</title>
         <meta name="description" content="MT T350 HG60 Chubby premium turnike. Geniş geçiş alanı, 60 kişi/dakika, lüks havaalanları ve VIP terminaller için özel tasarım." />
+        <meta property="og:title" content="MT T350 HG60 Chubby Hızlı Geçiş Turnikesi | Mika" />
+        <meta property="og:description" content="MT T350 HG60 Chubby premium turnike. Geniş geçiş alanı, 60 kişi/dakika, lüks havaalanları ve VIP terminaller için özel tasarım." />
         <meta name="keywords" content="premium chubby, lüks turnike, geniş geçiş, vip turnike, t350 hg60, havaalanı premium, tekerlekli sandalye, mika teknoloji" />
       </Helmet>
 

@@ -19,8 +19,8 @@ export default function About() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Hakkımızda | Mika Teknoloji"
-        description="PDKS personel devam kontrol yazılımı, kartlı geçiş, turnike ve bariyer sistemleri üreten Mika Teknoloji hakkında."
+        title="Hakkımızda: PDKS ve Geçiş Kontrol Sistemleri | Mika"
+        description="Mika Teknoloji hakkında: PDKS personel devam kontrol yazılımı, kartlı geçiş, turnike ve bariyer sistemleri üreten Şişli, İstanbul merkezli firma."
         jsonLd={kirintiJsonLd(KIRINTI)}
       />
       <Kirinti maddeler={KIRINTI} icSinif="pb-4" />

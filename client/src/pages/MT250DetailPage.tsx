@@ -79,13 +79,16 @@ export default function MT250DetailPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>MT-250 Elektromekanik Bel Tipi Turnike Sistemi | Mika Teknoloji</title>
-        <meta name="description" content="MT-250 üç kollu bel tipi turnike sistemi. 304 paslanmaz çelik, 30 kişi/dakika geçiş kapasitesi, IP54 koruma. Detaylı teknik özellikler ve fiyat bilgisi." />
+        <title>MT-250 Bel Tipi Turnike – Elektromekanik 3 Kollu | Mika</title>
+        <meta name="description" content="MT-250 üç kollu bel tipi turnike sistemi. 304 paslanmaz çelik, 30 kişi/dakika geçiş kapasitesi, IP54 koruma. Detaylı teknik özellikler." />
         <meta name="keywords" content="MT-250, bel tipi turnike, üç kollu turnike, elektromekanik turnike, paslanmaz çelik turnike, güvenlik sistemleri" />
         
         <meta property="og:title" content="MT-250 Elektromekanik Bel Tipi Turnike | Mika Teknoloji" />
         <meta property="og:description" content="304 paslanmaz çelik üç kollu bel tipi turnike sistemi. Yüksek güvenlik ve dayanıklılık." />
         <meta property="og:image" content="https://mikateknoloji.com/images/products/mt250-main.png" />
+        <meta property="og:image:width" content="816" />
+        <meta property="og:image:height" content="810" />
+        <meta name="twitter:image" content="https://mikateknoloji.com/images/products/mt250-main.png" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/mt-250-turnike" />
         
         <link rel="canonical" href="https://mikateknoloji.com/urunler/mt-250-turnike" />

@@ -71,13 +71,16 @@ export default function MT2500DSingle3DetailPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>MT 2500D Single 3 Kollu Boy Tipi Turnike Sistemi | Mika Teknoloji</title>
+        <title>MT 2500D Boy Tipi Turnike – Single 3 Kollu | Mika</title>
         <meta name="description" content="MT 2500D Single 3 kollu boy tipi turnike sistemi. Yüksek güvenlik alanları için tek yönlü geçiş kontrolü. IP65 koruma, 30 kişi/dakika kapasitesi." />
         <meta name="keywords" content="MT 2500D Single, boy tipi turnike, 3 kollu turnike, yüksek güvenlik turnike, stadyum turnike, fabrika güvenliği" />
         
         <meta property="og:title" content="MT 2500D Single 3 Kollu Boy Tipi Turnike | Mika Teknoloji" />
         <meta property="og:description" content="Yüksek güvenlik gerektiren alanlar için MT 2500D Single 3 kollu boy tipi turnike sistemi." />
         <meta property="og:image" content="https://mikateknoloji.com/t-2500d-single-3-kollu-paslanmaz-turnike.jpg" />
+        <meta property="og:image:width" content="816" />
+        <meta property="og:image:height" content="814" />
+        <meta name="twitter:image" content="https://mikateknoloji.com/t-2500d-single-3-kollu-paslanmaz-turnike.jpg" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/mt2500d-single-3-kollu" />
         
         <link rel="canonical" href="https://mikateknoloji.com/urunler/mt2500d-single-3-kollu" />

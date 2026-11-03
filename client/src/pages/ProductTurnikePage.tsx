@@ -95,8 +95,8 @@ export default function ProductTurnikePage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Turnike Sistemleri | Bel ve Boy Turnikeleri | Mika Teknoloji</title>
-        <meta name="description" content="Profesyonel turnike sistemleri ve güvenlik çözümleri. Bel turnikeleri, boy turnikeleri, hızlı geçiş ve engelli turnikeleri. Paslanmaz çelik, parmak izi, kartlı geçiş entegrasyonu. PDKS uyumlu erişim kontrol sistemleri." />
+        <title>Turnike Sistemleri – Bel, Boy ve Hızlı Geçiş | Mika</title>
+        <meta name="description" content="Turnike sistemleri: bel ve boy turnikeleri, hızlı geçiş ve engelli turnikeleri. Paslanmaz çelik; parmak izi ve kartlı geçiş ile PDKS uyumlu." />
         <meta name="keywords" content="turnike sistemleri, bel turnikeleri, boy turnikeleri, güvenlik turnikeleri, geçiş kontrol sistemleri, paslanmaz çelik turnike, parmak izi turnike, kartlı geçiş sistemi, biyometrik turnike, PDKS turnike, erişim kontrol, hızlı geçiş turnikeleri, engelli turnikeleri, hijyen turnikeleri, jetonlu turnikeler" />
         
         {/* Open Graph / Facebook */}
@@ -105,13 +105,15 @@ export default function ProductTurnikePage() {
         <meta property="og:title" content="Turnike Sistemleri | Profesyonel Güvenlik Çözümleri | Mika Teknoloji" />
         <meta property="og:description" content="Turnike sistemleri: bel turnikeleri, boy turnikeleri, hızlı geçiş sistemleri. Paslanmaz çelik kalite, parmak izi ve kart entegrasyonu." />
         <meta property="og:image" content="https://mikateknoloji.com/bel-tipi-device.png" />
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="350" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://mikateknoloji.com/urunler/turnike" />
         <meta property="twitter:title" content="Turnike Sistemleri | Güvenlik ve Erişim Kontrol | Mika Teknoloji" />
         <meta property="twitter:description" content="Modern turnike sistemleri: Bel, boy, hızlı geçiş turnikeleri. Biyometrik entegrasyon, PDKS uyumlu. Profesyonel güvenlik çözümleri." />
-        <meta property="twitter:image" content="https://mikateknoloji.com/bel-tipi-device.png" />
+        <meta name="twitter:image" content="https://mikateknoloji.com/bel-tipi-device.png" />
         
         {/* Additional SEO */}
         <meta name="robots" content="index, follow" />

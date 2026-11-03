@@ -10,13 +10,12 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>PDKS Sistemleri | Mika Teknoloji</title>
+        <title>PDKS, Turnike ve Geçiş Kontrol Sistemleri | Mika Teknoloji</title>
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
         <meta name="description" content="Mika Teknoloji PDKS sistemi: parmak izi, yüz tanıma, QR kod ve kartlı personel devam kontrol. 20.000 kapasite, TCP/IP, Wi-Fi desteği." />
         <meta name="keywords" content="PDKS, personel devam kontrol sistemi, parmak izi takip sistemi, yüz tanıma sistem, pdks programı, PDKS yazılımı, personel takip sistemi, biyometrik güvenlik sistemleri, QR kod PDKS, RFID kart sistemi, mesai hesaplama, vardiya takibi, bordro entegrasyonu, zaman kontrol sistemi, geçiş kontrol sistemi, turnike sistemleri, güvenlik sistemleri" />
         
         {/* Technical SEO following Meyer/ZKTeco approach */}
-        <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
         <link rel="canonical" href="https://mikateknoloji.com/" />
         <meta name="language" content="Turkish" />
         <meta name="geo.region" content="TR" />
@@ -29,13 +28,13 @@ export default function Home() {
         <meta property="og:description" content="Mika Teknoloji PDKS sistemi: parmak izi, yüz tanıma, QR kod. 20.000 kapasite, TCP/IP, Wi-Fi desteği." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mikateknoloji.com/" />
-        <meta property="og:image" content="https://mikateknoloji.com/mika-logo.jpg" />
+        <meta property="og:image" content="https://mikateknoloji.com/og-varsayilan.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta name="twitter:image" content="https://mikateknoloji.com/og-varsayilan.jpg" />
         
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@MikaTeklonogi" />
         <meta name="twitter:title" content="PDKS - Personel Devam Kontrol Sistemi | Mika Teknoloji" />
         <meta name="twitter:description" content="Mika Teknoloji PDKS sistemi: parmak izi, yüz tanıma, QR kod. 20.000 kapasite, TCP/IP, Wi-Fi desteği." />
         
@@ -125,7 +124,7 @@ export default function Home() {
       </Helmet>
 
       {/* Sayfanın tek H1'i: görsel tasarımı değiştirmez, arama motoru ve ekran okuyucu içindir. */}
-      <h1 className="sr-only">PDKS ve Kartlı Geçiş Sistemleri | Mika Teknoloji</h1>
+      <h1 className="sr-only">PDKS, Turnike ve Geçiş Kontrol Sistemleri</h1>
 
       {/* Hero Carousel Section */}
       <section className="relative">

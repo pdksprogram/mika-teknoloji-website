@@ -127,7 +127,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-white">
-      <SEO title="İletişim | Mika Teknoloji" description="PDKS, kartlı geçiş, turnike ve bariyer sistemleri için teklif ve destek: Mika Teknoloji iletişim bilgileri, adres ve telefon." jsonLd={kirintiJsonLd(KIRINTI)} />
+      <SEO title="İletişim: PDKS ve Turnike Teklif, Destek | Mika Teknoloji" description="PDKS, kartlı geçiş, turnike ve bariyer sistemleri için teklif ve destek: Mika Teknoloji iletişim bilgileri, adres ve telefon." jsonLd={kirintiJsonLd(KIRINTI)} />
       <Kirinti maddeler={KIRINTI} icSinif="pb-4" />
       <section className="bg-slate-900 border-b-4 border-primary text-white py-8 md:py-12">
         <div className="container mx-auto px-4">
