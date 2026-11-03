@@ -386,7 +386,8 @@ export default function Header() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="lg:hidden p-2 rounded-md hover:bg-slate-100 transition-colors"
               data-testid="mobile-menu-toggle"
-              aria-label="Toggle menu"
+              aria-label="Menüyü aç/kapat"
+              aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6 text-slate-700" />

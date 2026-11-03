@@ -147,7 +147,7 @@ export default function Contact() {
                 <CardTitle className="text-2xl text-slate-800">Teklif ve Demo Talebi</CardTitle>
               </CardHeader>
               <CardContent>
-                <form ref={formRef} className="space-y-5" data-testid="contact-form" onSubmit={gonder} noValidate>
+                <form ref={formRef} className="space-y-5 [&_input]:scroll-mt-28 [&_select]:scroll-mt-28 [&_textarea]:scroll-mt-28" data-testid="contact-form" onSubmit={gonder} noValidate>
                   <div className="grid md:grid-cols-2 gap-5">
                     <div className="space-y-2">
                       <Label htmlFor="adSoyad">Ad Soyad *</Label>
@@ -291,7 +291,7 @@ export default function Contact() {
                     </p>
                   )}
                   <p className="text-sm text-slate-600">
-                    <Link href="/kvkk" className="underline underline-offset-2 hover:text-slate-900">KVKK Aydınlatma Metni</Link>
+                    <Link href="/kvkk" className="inline-flex items-center min-h-[44px] underline underline-offset-2 hover:text-slate-900">KVKK Aydınlatma Metni</Link>
                   </p>
                 </form>
               </CardContent>
