@@ -3,6 +3,8 @@ import SEO from "@/seo/SEO";
 import { Button } from "@/components/ui/button";
 import { Kirinti, kirintiJsonLd, type KirintiMaddesi } from "@/components/PdksIcerik";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
+import UrunEkIcerik from "@/components/UrunEkIcerik";
+import { EK, BARIYER_TABLOSU, TURNIKE_TABLOSU, OTOPARK_TABLOSU } from "@/lib/urunEkIcerik";
 
 const KIRINTI: KirintiMaddesi[] = [
   { ad: "Ana Sayfa", yol: "/" },
@@ -133,6 +135,11 @@ export default function Products() {
           </ul>
         </div>
 
+      </div>
+
+      <UrunEkIcerik kullanim={EK["/urunler"].kullanim} tablolar={[BARIYER_TABLOSU, TURNIKE_TABLOSU]} sss={EK["/urunler"].sss} aktifYol="/urunler" />
+
+      <div className="container mx-auto px-4 pb-12">
         <div className="mt-16 bg-slate-900 text-white rounded-2xl p-8 text-center">
           <h2 className="text-3xl font-bold mb-4">İhtiyacınıza Uygun Çözümü Birlikte Bulalım</h2>
           <p className="text-slate-300 mb-6 max-w-2xl mx-auto">

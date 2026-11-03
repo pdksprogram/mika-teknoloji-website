@@ -5,6 +5,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { CheckCircle, Settings, Thermometer } from "lucide-react";
+import UrunEkIcerik from "@/components/UrunEkIcerik";
+import { EK, BARIYER_TABLOSU, TURNIKE_TABLOSU, OTOPARK_TABLOSU } from "@/lib/urunEkIcerik";
 
 export default function PTGeniusDetailPage() {
   const fadeInUp = {
@@ -127,6 +129,7 @@ export default function PTGeniusDetailPage() {
           </div>
         </div>
       </section>
+      <UrunEkIcerik kullanim={EK["/urunler/pt-genius-bariyer"].kullanim} tablolar={[BARIYER_TABLOSU]} sss={EK["/urunler/pt-genius-bariyer"].sss} aktifYol="/urunler/pt-genius-bariyer" />
     </>
   );
 }

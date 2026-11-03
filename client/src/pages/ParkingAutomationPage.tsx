@@ -4,6 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Car, ArrowRight, Camera } from "lucide-react";
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
+import UrunEkIcerik from "@/components/UrunEkIcerik";
+import { EK, BARIYER_TABLOSU, TURNIKE_TABLOSU, OTOPARK_TABLOSU } from "@/lib/urunEkIcerik";
 
 const parkingFeatures = [
   {
@@ -243,6 +245,8 @@ export default function ParkingAutomationPage() {
       </section>
 
       {/* CTA Section */}
+      <UrunEkIcerik kullanim={EK["/otopark-otomasyon"].kullanim} tablolar={[OTOPARK_TABLOSU]} aktifYol="/otopark-otomasyon" />
+
       <section className="py-20 bg-slate-900 border-t-4 border-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div

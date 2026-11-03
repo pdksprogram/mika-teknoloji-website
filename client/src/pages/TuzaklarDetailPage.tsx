@@ -5,6 +5,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { AlertTriangle, CheckCircle, Shield, Flame } from "lucide-react";
+import UrunEkIcerik from "@/components/UrunEkIcerik";
+import { EK, BARIYER_TABLOSU, TURNIKE_TABLOSU, OTOPARK_TABLOSU } from "@/lib/urunEkIcerik";
 
 export default function TuzaklarDetailPage() {
   const fadeInUp = {
@@ -137,6 +139,7 @@ export default function TuzaklarDetailPage() {
           </div>
         </div>
       </section>
+      <UrunEkIcerik kullanim={EK["/urunler/tuzaklar-kapanlar"].kullanim} tablolar={[BARIYER_TABLOSU]} sss={EK["/urunler/tuzaklar-kapanlar"].sss} aktifYol="/urunler/tuzaklar-kapanlar" />
     </>
   );
 }

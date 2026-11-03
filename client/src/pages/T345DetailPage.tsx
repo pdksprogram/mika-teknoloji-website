@@ -15,6 +15,8 @@ import { BEL_TURNIKE_IMAGES } from "@/assetsMap";
 import { Link } from "wouter";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
 import { boyut } from "@/lib/gorselBoyut";
+import UrunEkIcerik from "@/components/UrunEkIcerik";
+import { EK, BARIYER_TABLOSU, TURNIKE_TABLOSU, OTOPARK_TABLOSU } from "@/lib/urunEkIcerik";
 
 export default function T345DetailPage() {
   
@@ -238,6 +240,8 @@ export default function T345DetailPage() {
       </div>
 
       {/* Call to Action */}
+      <UrunEkIcerik kullanim={EK["/urunler/t345-turnike"].kullanim} tablolar={[TURNIKE_TABLOSU]} sss={EK["/urunler/t345-turnike"].sss} aktifYol="/urunler/t345-turnike" />
+
       <div className="py-16 bg-slate-900 border-t-4 border-primary text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">

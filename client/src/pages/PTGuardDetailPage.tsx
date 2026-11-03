@@ -5,6 +5,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { CheckCircle, Lock } from "lucide-react";
+import UrunEkIcerik from "@/components/UrunEkIcerik";
+import { EK, BARIYER_TABLOSU, TURNIKE_TABLOSU, OTOPARK_TABLOSU } from "@/lib/urunEkIcerik";
 
 export default function PTGuardDetailPage() {
   const fadeInUp = {
@@ -112,6 +114,7 @@ export default function PTGuardDetailPage() {
           </div>
         </div>
       </section>
+      <UrunEkIcerik kullanim={EK["/urunler/pt-guard-bariyer"].kullanim} tablolar={[BARIYER_TABLOSU]} sss={EK["/urunler/pt-guard-bariyer"].sss} aktifYol="/urunler/pt-guard-bariyer" />
     </>
   );
 }

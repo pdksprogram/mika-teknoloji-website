@@ -5,6 +5,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { CheckCircle, Settings, Shield, Wrench } from "lucide-react";
+import UrunEkIcerik from "@/components/UrunEkIcerik";
+import { EK, BARIYER_TABLOSU, TURNIKE_TABLOSU, OTOPARK_TABLOSU } from "@/lib/urunEkIcerik";
 
 export default function MantarBariyerDetailPage() {
   const fadeInUp = {
@@ -150,6 +152,7 @@ export default function MantarBariyerDetailPage() {
           </div>
         </div>
       </section>
+      <UrunEkIcerik kullanim={EK["/urunler/mantar-bariyer"].kullanim} tablolar={[BARIYER_TABLOSU]} sss={EK["/urunler/mantar-bariyer"].sss} aktifYol="/urunler/mantar-bariyer" />
     </>
   );
 }
