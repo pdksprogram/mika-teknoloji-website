@@ -18,7 +18,10 @@ import Solutions from "@/pages/Solutions";
 import Products from "@/pages/Products";
 import Contact from "@/pages/Contact";
 import References from "@/pages/References";
-import Blog from "@/pages/Blog";
+import BlogListesiPage from "@/pages/BlogListesiPage";
+import BlogPuantajNasilTutulur from "@/pages/BlogPuantajNasilTutulur";
+import BlogVardiyaPlaniNasilHazirlanir from "@/pages/BlogVardiyaPlaniNasilHazirlanir";
+import BlogQrKodIlePersonelGirisCikis from "@/pages/BlogQrKodIlePersonelGirisCikis";
 import BlogArticlePDKS from "@/pages/BlogArticlePDKS";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import { KvkkAydinlatma, HizmetSartlari, VeriSilme } from "@/pages/LegalPages";
@@ -147,7 +150,10 @@ function Router() {
       <Route path="/urunler/road-blocker" component={RoadBlockerDetailPage} />
       
       <Route path="/referanslar" component={References} />
-      <Route path="/blog" component={Blog} />
+      <Route path="/blog" component={BlogListesiPage} />
+      <Route path="/blog/puantaj-nasil-tutulur" component={BlogPuantajNasilTutulur} />
+      <Route path="/blog/vardiya-plani-nasil-hazirlanir" component={BlogVardiyaPlaniNasilHazirlanir} />
+      <Route path="/blog/qr-kod-ile-personel-giris-cikis" component={BlogQrKodIlePersonelGirisCikis} />
       <Route path="/blog/pdks-sistemleri-nedir-2025-rehberi" component={BlogArticlePDKS} />
       <Route path="/iletisim" component={Contact} />
       <Route path="/videolar" component={VideolarPage} />
