@@ -3,16 +3,15 @@ import { Kirinti } from "@/components/PdksIcerik";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";
-import { 
-  Zap, 
+import {
+  Zap,
   Phone,
   Mail,
   MapPin,
-  Download,
   ArrowLeft,
   Building2,
   Star,
-  Gem
+  Gem,
 } from "lucide-react";
 import { BOY_TURNIKE_IMAGES } from "@/assetsMap";
 import { Link } from "wouter";

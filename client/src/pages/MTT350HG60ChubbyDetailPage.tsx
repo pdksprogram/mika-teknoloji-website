@@ -14,7 +14,7 @@ import {
   Activity,
 } from "lucide-react";
 import { HIZLI_GECIS_TURNIKE_IMAGES } from "@/assetsMap";
-import { Link } from "wouter";
+
 import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 export default function MTT350HG60ChubbyDetailPage() {

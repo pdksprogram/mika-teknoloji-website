@@ -2,8 +2,7 @@ import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";
-import { trackEvent } from "@/lib/analytics";
-import { ArrowRight, Check, Phone } from "lucide-react";
+import { Check } from "lucide-react";
 import { Link } from "wouter";
 import qrKodOkumaImage from "@assets/image_1758816518741.png";
 import giriscikisListesiImage from "@assets/IMG_4251_1759436174932.png";
@@ -135,13 +134,6 @@ const BOLUMLER: Bolum[] = [
 ];
 
 export default function QRPDKSPage() {
-  const handleDemoRequest = () => {
-    trackEvent('Demo Request', 'qr_pdks_demo', 'QR PDKS Page - Demo Button');
-  };
-
-  const handleContactRequest = () => {
-    trackEvent('Contact Request', 'qr_pdks_contact', 'QR PDKS Page - Contact Button');
-  };
 
   const fadeInUp = {
     initial: { opacity: 0, y: 50 },
@@ -149,7 +141,6 @@ export default function QRPDKSPage() {
     transition: { duration: 0.6 },
     viewport: { once: true }
   };
-
 
   return (
     <div className="min-h-screen bg-white">

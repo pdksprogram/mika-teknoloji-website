@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import HeroCarousel from "@/components/HeroCarousel";

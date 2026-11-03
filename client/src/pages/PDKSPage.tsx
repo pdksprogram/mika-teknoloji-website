@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/hooks/useLanguage";
-import { CheckCircle, Shield, CreditCard, Eye, Fingerprint, Smartphone, Star, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { CheckCircle, Shield, CreditCard, Eye, Fingerprint, Smartphone, Star } from "lucide-react";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { useEffect } from "react";

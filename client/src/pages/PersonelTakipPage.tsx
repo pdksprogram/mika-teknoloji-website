@@ -2,14 +2,12 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Helmet } from "react-helmet-async";
-import { trackEvent } from "@/lib/analytics";
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  QrCode, 
-  Shield, 
-  Cloud, 
-  Globe, 
+import {
+  CheckCircle,
+  QrCode,
+  Shield,
+  Cloud,
+  Globe,
   HeadphonesIcon,
   Zap,
   Lock,
@@ -26,7 +24,7 @@ import {
   MessageCircle,
   HelpCircle,
   Database,
-  ChevronDown
+  ChevronDown,
 } from "lucide-react";
 import { Link } from "wouter";
 import vardiyaYonetimiImage from "@assets/vardiya-yonetimi-interface.png";
@@ -109,13 +107,6 @@ const SSS_JSON_LD = {
 };
 
 export default function PersonelTakipPage() {
-  const handleDemoRequest = () => {
-    trackEvent('Demo Request', 'personel_takip_demo', 'Personel Takip Page - Demo Button');
-  };
-
-  const handleContactRequest = () => {
-    trackEvent('Contact Request', 'personel_takip_contact', 'Personel Takip Page - Contact Button');
-  };
 
   const fadeInUp = {
     initial: { opacity: 0, y: 50 },

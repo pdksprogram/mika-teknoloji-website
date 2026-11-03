@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, MapPin, Clock, Smartphone, AlertTriangle, BarChart3, CheckCircle, Download } from "lucide-react";
-import { Link } from "wouter";
+
+import { MapPin, Clock, Smartphone, AlertTriangle, BarChart3, CheckCircle } from "lucide-react";
+
 import SEO from "@/seo/SEO";
 import { useEffect } from "react";
 import { trackQRPatrolView, trackProductView } from "@/lib/analytics";
@@ -247,7 +247,6 @@ export default function QRPatrolPage() {
               Basit 3 adımda güvenlik devriye sisteminizi kurun ve kullanmaya başlayın.
             </p>
           </motion.div>
-
 
           <div className="grid lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
             {[

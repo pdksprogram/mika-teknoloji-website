@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Kirinti, DEMO_TELEFON } from "@/components/PdksIcerik";
+import { Kirinti } from "@/components/PdksIcerik";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";

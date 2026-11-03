@@ -4,8 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";
 import {
-  Phone,
-  Download,
   CheckCircle,
   Shield,
   Settings,
@@ -29,7 +27,6 @@ export default function T250EcoDetailPage() {
     { label: "Koruma", value: "IP 44" },
     { label: "Garanti", value: "2 Yıl" }
   ];
-
 
   const applicationAreas = [
     "Küçük ofisler",

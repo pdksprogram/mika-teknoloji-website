@@ -4,8 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";
 import {
-  Phone,
-  Download,
   CheckCircle,
   Shield,
   Coins,
@@ -31,7 +29,6 @@ export default function JetonluT250DetailPage() {
     { label: "Kullanım Alanları", value: "İç Ortam / WC Girişleri" },
     { label: "Koruma", value: "IP 54" }
   ];
-
 
   const applicationAreas = [
     "Ücretli WC girişleri",

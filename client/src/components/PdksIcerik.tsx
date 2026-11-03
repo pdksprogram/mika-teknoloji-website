@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowRight, ChevronDown, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { kanonikAdres } from "@/seo/SEO";
 import { videos, VideoCard } from "@/pages/VideolarPage";
