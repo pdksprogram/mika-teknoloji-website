@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { kanonikAdres } from "@/seo/SEO";
 import { videos, VideoCard } from "@/pages/VideolarPage";
+import { DEMO_TELEFON, DEMO_TELEFON_GORUNEN, DEMO_WHATSAPP } from "@/lib/iletisim";
 
 // PDKS konu sayfalarının (/puantaj-programi, /vardiya-takip-programi, /qr-pdks) ve
 // /pdks-programi ek bölümlerinin ortak parçaları. Görsel dil PersonelTakipPage'den alınır:
@@ -27,9 +28,7 @@ export interface OzellikMaddesi {
   metin: string;
 }
 
-export const DEMO_TELEFON = "+905467122296";
-export const DEMO_TELEFON_GORUNEN = "0546 712 22 96";
-export const DEMO_WHATSAPP = "https://wa.me/905467122296";
+export { DEMO_TELEFON, DEMO_TELEFON_GORUNEN, DEMO_WHATSAPP } from "@/lib/iletisim";
 
 // PDKS konu sayfaları arası iç bağlantılar; her sayfa kendisi dışındakileri gösterir.
 export const PDKS_KONU_SAYFALARI: KirintiMaddesi[] = [

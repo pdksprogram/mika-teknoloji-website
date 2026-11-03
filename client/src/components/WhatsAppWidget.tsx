@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { MessageCircle, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { DEMO_WHATSAPP } from "@/lib/iletisim";
 
 export default function WhatsAppWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,10 +15,8 @@ export default function WhatsAppWidget() {
     return () => clearTimeout(timer);
   }, []);
 
-  const whatsappNumber = "https://wa.me/905467122296";
-
   const handleWhatsAppClick = () => {
-    window.open(whatsappNumber, '_blank');
+    window.open(DEMO_WHATSAPP, "_blank", "noopener,noreferrer");
     setIsOpen(false);
   };
 

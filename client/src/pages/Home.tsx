@@ -5,7 +5,6 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import HeroCarousel from "@/components/HeroCarousel";
-import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 export default function Home() {
 
@@ -315,7 +314,6 @@ export default function Home() {
       </section>
 
       {/* WhatsApp Widget */}
-      <WhatsAppWidget />
     </div>
   );
 }

@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { Kirinti, type KirintiMaddesi } from "@/components/PdksIcerik";
 import { Helmet } from "react-helmet-async";
 import { useState, useRef, type SyntheticEvent } from "react";
-import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 interface VideoItem {
   id: string;
@@ -1260,8 +1259,6 @@ export default function VideolarPage() {
           </div>
         </section>
       </div>
-
-      <WhatsAppWidget />
     </>
   );
 }

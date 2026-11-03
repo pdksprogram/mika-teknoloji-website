@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import SiteFooter from "@/components/SiteFooter";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 import { LanguageProvider } from "@/hooks/useLanguage";
 import { initGA } from "@/lib/analytics";
 import { useAnalytics } from "@/hooks/use-analytics";
@@ -193,6 +194,7 @@ function App(_props: { onRenderli?: boolean }) {
           </main>
           <SiteFooter />
         </div>
+        <WhatsAppWidget />
         <Toaster />
         </TooltipProvider>
       </LanguageProvider>
