@@ -456,8 +456,8 @@ export default function AccessControlSystemPage() {
                 <div className="mb-8">
                   <div className="w-full max-w-sm mx-auto bg-white border border-slate-200 p-8 rounded-2xl h-80 flex items-center justify-center">
                     <img 
-                      src="/professional-access-panel.png" 
-                      alt="Professional Access Control Panel"
+                      src="/images/urun/erisim-kontrol-paneli-kart.jpg" 
+                      alt="Geçiş kontrol paneli kartı"
                       className="max-w-full max-h-full object-contain"
                       width="300"
                       height="300"

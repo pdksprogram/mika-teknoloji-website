@@ -396,8 +396,8 @@ export default function PersonelTakipPage() {
                 <CardContent className="p-8 text-center">
                   <div className="mb-6">
                     <img 
-                      src="/access-control-professional.png" 
-                      alt="Profesyonel access control kart okuyucu sistemi" 
+                      src="/images/urun/erisim-kontrol-paneli-kart.jpg" 
+                      alt="Geçiş kontrol paneli kartı" 
                       className="w-32 h-32 mx-auto object-contain rounded-lg"
                     />
                   </div>

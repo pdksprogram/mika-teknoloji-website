@@ -9,7 +9,7 @@ import SEO from "@/seo/SEO";
 
 // Access Control Panel images  
 const accessControlPanel = "/access-control-panel.png";
-const accessControlProfessional = "/access-control-professional.png";
+const accessControlProfessional = "/images/urun/erisim-kontrol-paneli-kart.jpg";
 const qrMobileAccess = "/qr-mobile-access.png";
 const mikaQRApp = "/mika-qr-app.png";
 
