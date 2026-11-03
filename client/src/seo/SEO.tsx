@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'wouter';
+import { useSeciliDil } from '@/hooks/useLanguage';
 
 const SITE_KOKU = 'https://mikateknoloji.com';
 
@@ -21,10 +22,11 @@ export default function SEO({
   // Kanonik adres sorgu dizesiz, sabit alan adıyla kurulur; ön-render ve tarayıcıda aynı sonucu verir.
   const [location] = useLocation();
   const url = canonical || `${SITE_KOKU}${location}`;
-  
+  const dil = useSeciliDil();
+
   return (
     <Helmet>
-      <html lang="tr" />
+      <html lang={dil} />
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
@@ -58,8 +60,11 @@ export default function SEO({
 // App'te rotalardan ÖNCE çizilir; sayfa kendi canonical'ını verirse Helmet onu kullanır (son yazan kazanır).
 export function VarsayilanKanonik() {
   const [location] = useLocation();
+  // <html lang> her sayfada dil seçimini izler (SEO bileşenini kullanmayan sayfalar dahil).
+  const dil = useSeciliDil();
   return (
     <Helmet>
+      <html lang={dil} />
       <link rel="canonical" href={`${SITE_KOKU}${location}`} />
     </Helmet>
   );

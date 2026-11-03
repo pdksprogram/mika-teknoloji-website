@@ -157,10 +157,11 @@ function Router() {
   );
 }
 
-function App() {
-  // Ön-render (sunucu, window yok) yükleme ekranını atlar ki ham HTML'de sayfa içeriği bulunsun;
-  // tarayıcıda davranış değişmez.
-  const [isLoading, setIsLoading] = useState(typeof window !== "undefined");
+function App({ onRenderli = false }: { onRenderli?: boolean }) {
+  // Ön-render (sunucu) ve ön-render edilmiş sayfayı açan tarayıcı yükleme ekranını ve
+  // açılış solmasını atlar: ilk çizim ön-render HTML'iyle birebir aynı kalır (titreme yok).
+  // Yalnız boş SPA kabuğunda (404, .php) yükleme ekranı gösterilir.
+  const [isLoading, setIsLoading] = useState(typeof window !== "undefined" && !onRenderli);
 
   useEffect(() => {
     // Initialize Google Analytics when app loads
@@ -188,7 +189,7 @@ function App() {
           ) : (
             <motion.div
               key="app"
-              initial={{ opacity: 0 }}
+              initial={onRenderli ? false : { opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
               className="min-h-screen bg-white"

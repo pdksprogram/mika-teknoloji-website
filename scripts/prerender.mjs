@@ -13,15 +13,40 @@ const kok = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const istemciCikti = path.join(kok, "dist", "public");
 const ssrCikti = path.join(kok, "dist", "ssr");
 
-// Rotalar App.tsx'teki <Route path="..."> satırlarından okunur; yeni rota eklenince kendiliğinden girer.
-// Parametreli rotalar ve dosya uzantılı adresler (ör. .php) ön-render edilmez, SPA kabuğuyla kalır.
+// Rotalar App.tsx'teki <Route ...> etiketlerinden okunur; yeni rota eklenince kendiliğinden girer.
+// `path` özniteliği etiketin herhangi bir yerinde olabilir. Parametreli rotalar ve dosya uzantılı
+// adresler (ör. .php) ön-render edilmez, SPA kabuğuyla kalır. Her <Route sayılır; ön-render dışı
+// kalan her etiket nedeniyle raporlanır, açıklanamayan fark derlemeyi düşürmeden uyarır.
 function rotalariOku() {
   const kaynak = fs.readFileSync(path.join(kok, "client", "src", "App.tsx"), "utf8");
+  const toplam = [...kaynak.matchAll(/<Route\b/g)].length;
   const rotalar = new Set();
-  for (const m of kaynak.matchAll(/<Route\s+path="([^"]+)"/g)) {
-    const r = m[1];
-    if (r.includes(":") || r.includes("*") || /\.[a-z0-9]+$/i.test(r)) continue;
+  const say = { yolsuz: 0, atlanan: [], tekrar: [], okunamayan: [] };
+  for (const m of kaynak.matchAll(/<Route\b([^>]*)>/g)) {
+    const oz = m[1];
+    const p = /\bpath\s*=\s*(?:"([^"]+)"|'([^']+)'|\{\s*["'`]([^"'`]+)["'`]\s*\})/.exec(oz);
+    if (!p) {
+      if (/\bpath\b/.test(oz)) say.okunamayan.push(oz.trim().slice(0, 80));
+      else say.yolsuz++; // 404 yedeği
+      continue;
+    }
+    const r = p[1] ?? p[2] ?? p[3];
+    if (r.includes(":") || r.includes("*") || /\.[a-z0-9]+$/i.test(r)) { say.atlanan.push(r); continue; }
+    if (rotalar.has(r)) { say.tekrar.push(r); continue; }
     rotalar.add(r);
+  }
+  const islenen = rotalar.size + say.yolsuz + say.atlanan.length + say.tekrar.length + say.okunamayan.length;
+  const acik = toplam - islenen + say.okunamayan.length;
+  console.log(
+    `[on-render] App.tsx: ${toplam} <Route>, ${rotalar.size} ön-render; fark ${toplam - rotalar.size} ` +
+      `(${say.yolsuz} yolsuz/404, ${say.atlanan.length} atlanan [${say.atlanan.join(", ")}], ` +
+      `${say.tekrar.length} tekrar, ${say.okunamayan.length + (toplam - islenen)} okunamayan).`,
+  );
+  if (acik > 0) {
+    console.warn(
+      `[on-render] UYARI: ${acik} <Route> etiketi okunamadı, ön-render edilmedi. Kontrol edin:\n  ` +
+        (say.okunamayan.join("\n  ") || "(etiket içinde '>' olabilir)"),
+    );
   }
   return [...rotalar];
 }
@@ -56,6 +81,8 @@ async function main() {
       ssr: "src/entry-server.tsx",
       outDir: ssrCikti,
       emptyOutDir: true,
+      // public/ (~1 GB görsel) SSR çıktısına kopyalanmaz; yalnız dist/public'te gerekir.
+      copyPublicDir: false,
       rollupOptions: { output: { format: "esm", entryFileNames: "entry-server.mjs" } },
     },
   });

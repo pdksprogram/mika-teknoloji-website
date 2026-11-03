@@ -11,7 +11,7 @@ export function render(url: string) {
   const html = renderToString(
     <HelmetProvider context={helmetContext}>
       <Router ssrPath={url}>
-        <App />
+        <App onRenderli />
       </Router>
     </HelmetProvider>,
   );

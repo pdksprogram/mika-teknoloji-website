@@ -115,6 +115,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   );
 }
 
+// Sağlayıcı dışında da güvenli: seçili dil, yoksa Türkçe (ön-render Türkçe üretilir).
+export function useSeciliDil(): Language {
+  return useContext(LanguageContext)?.selectedLanguage ?? 'tr';
+}
+
 export function useLanguage() {
   const context = useContext(LanguageContext);
   if (context === undefined) {
