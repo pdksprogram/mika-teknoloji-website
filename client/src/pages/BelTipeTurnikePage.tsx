@@ -260,7 +260,7 @@ export default function BelTipeTurnikePage() {
       </div>
 
       {/* Call to Action */}
-      <div className="py-16 bg-gradient-to-r from-primary to-pink-600 text-white">
+      <div className="py-16 bg-gradient-to-r from-primary to-slate-800 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">
@@ -275,7 +275,7 @@ export default function BelTipeTurnikePage() {
               <div className="text-center">
                 <Phone className="h-8 w-8 mx-auto mb-3" />
                 <div className="font-semibold mb-1">Telefon</div>
-                <div className="text-white/90">0212 XXX XX XX</div>
+                <a href="tel:+905467122296" className="block text-white/90 hover:underline">0546 712 22 96</a>
               </div>
               <div className="text-center">
                 <Mail className="h-8 w-8 mx-auto mb-3" />

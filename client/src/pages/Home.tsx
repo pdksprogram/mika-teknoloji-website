@@ -194,7 +194,7 @@ export default function Home() {
                 >
                   <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 bg-transparent border-0">
                     {video.videoUrl ? (
-                      <div className="relative aspect-video bg-black rounded-2xl overflow-hidden border-4 border-pink-600 group-hover:border-pink-500 transition-all duration-300">
+                      <div className="relative aspect-video bg-black rounded-2xl overflow-hidden border-4 border-primary group-hover:border-primary transition-all duration-300">
                         <video 
                           className="w-full h-full object-cover"
                           controls
@@ -208,7 +208,7 @@ export default function Home() {
                         </div>
                       </div>
                     ) : (
-                      <div className="relative aspect-video bg-gradient-to-br from-slate-800 to-slate-600 rounded-2xl overflow-hidden border-4 border-pink-600 group-hover:border-pink-500 flex items-center justify-center cursor-pointer transition-all duration-300">
+                      <div className="relative aspect-video bg-gradient-to-br from-slate-800 to-slate-600 rounded-2xl overflow-hidden border-4 border-primary group-hover:border-primary flex items-center justify-center cursor-pointer transition-all duration-300">
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300"></div>
                         <div className="relative z-10 bg-white/20 backdrop-blur-sm rounded-full p-4 group-hover:scale-110 transition-transform duration-300">
                           <Play className="w-12 h-12 text-white fill-white" />
@@ -333,37 +333,37 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-slate-800 mb-6 text-center">Sistem Özellikleri</h3>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="text-pink-600 font-bold text-lg mb-2">Kapasite</div>
+                  <div className="text-primary font-bold text-lg mb-2">Kapasite</div>
                   <div className="text-slate-600 text-sm">
                     20.000 kullanıcı, 500.000 kayıt
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-pink-600 font-bold text-lg mb-2">Bağlantı</div>
+                  <div className="text-primary font-bold text-lg mb-2">Bağlantı</div>
                   <div className="text-slate-600 text-sm">
                     TCP/IP, Wi-Fi, USB, RS485 desteği
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-pink-600 font-bold text-lg mb-2">Güvenlik</div>
+                  <div className="text-primary font-bold text-lg mb-2">Güvenlik</div>
                   <div className="text-slate-600 text-sm">
                     SSL şifreleme, KVKK uygun
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-pink-600 font-bold text-lg mb-2">Entegrasyon</div>
+                  <div className="text-primary font-bold text-lg mb-2">Entegrasyon</div>
                   <div className="text-slate-600 text-sm">
                     Bordroya hazır puantaj, Excel (.xlsx) çıktısı
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-pink-600 font-bold text-lg mb-2">Platform</div>
+                  <div className="text-primary font-bold text-lg mb-2">Platform</div>
                   <div className="text-slate-600 text-sm">
                     Web, Mobil, Desktop uygulamaları
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-pink-600 font-bold text-lg mb-2">Destek</div>
+                  <div className="text-primary font-bold text-lg mb-2">Destek</div>
                   <div className="text-slate-600 text-sm">
                     Teknik destek ve bakım
                   </div>

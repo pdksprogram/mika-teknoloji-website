@@ -136,13 +136,13 @@ export default function CardAccessSystemPage() {
               Proximity, MIFARE ve UHF kart desteği ile PDKS entegrasyonu.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="bg-pink-600 px-4 py-2 rounded-full">
+              <div className="bg-primary px-4 py-2 rounded-full">
                 <span className="font-semibold">3 Kart Tipi</span>
               </div>
-              <div className="bg-pink-600 px-4 py-2 rounded-full">
+              <div className="bg-primary px-4 py-2 rounded-full">
                 <span className="font-semibold">Temassız Okuma</span>
               </div>
-              <div className="bg-pink-600 px-4 py-2 rounded-full">
+              <div className="bg-primary px-4 py-2 rounded-full">
                 <span className="font-semibold">PDKS Entegrasyonu</span>
               </div>
             </div>

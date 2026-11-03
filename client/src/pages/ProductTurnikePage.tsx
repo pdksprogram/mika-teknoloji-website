@@ -144,11 +144,6 @@ export default function ProductTurnikePage() {
               "@type": "PriceSpecification",
               "price": "Fiyat İçin İletişime Geçin"
             }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "127"
           }
         })}
         </script>

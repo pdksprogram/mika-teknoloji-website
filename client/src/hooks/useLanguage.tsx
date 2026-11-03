@@ -30,7 +30,7 @@ const translations = {
       services: {
         webpdks: {
           title: "WebPDKS",
-          description: "%100 Web Tabanlı Personel Devam Kontrol Sistemi"
+          description: "Web Tabanlı Personel Devam Kontrol Sistemi"
         },
         qrPatrol: {
           title: "QR-Patrol", 
@@ -43,7 +43,7 @@ const translations = {
       },
       features: [
         "100,000'in üzerinde müşteri portföyü",
-        "%100 Web tabanlı çözümler", 
+        "Web tabanlı çözümler", 
         "Her yerden, her cihazdan erişim",
         "Modern teknoloji çözümleri",
         "Güvenilir PDKS çözümleri",

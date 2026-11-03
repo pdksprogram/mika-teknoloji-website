@@ -290,7 +290,7 @@ export default function Blog() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.3 }}
-          className="mt-16 bg-gradient-to-r from-primary to-pink-600 rounded-2xl p-8 text-center text-white"
+          className="mt-16 bg-gradient-to-r from-primary to-slate-800 rounded-2xl p-8 text-center text-white"
         >
           <h3 className="text-2xl font-bold mb-4">Blog Güncellemelerini Kaçırmayın!</h3>
           <p className="text-lg mb-6 opacity-90">

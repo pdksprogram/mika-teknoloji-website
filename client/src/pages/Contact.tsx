@@ -152,7 +152,7 @@ export default function Contact() {
                       <Input 
                         id="phone" 
                         type="tel" 
-                        placeholder="+90 5XX XXX XX XX" 
+                        placeholder="05__ ___ __ __" 
                         required 
                         data-testid="input-phone"
                       />

@@ -9,7 +9,7 @@ export default function Solutions() {
     {
       icon: Shield,
       title: "WebPDKS",
-      description: "%100 Web Tabanlı Personel Devam Kontrol Sistemi. Her yerden erişim imkanı.",
+      description: "Web Tabanlı Personel Devam Kontrol Sistemi. Her yerden erişim imkanı.",
       features: ["Web tabanlı platform", "Gerçek zamanlı raporlama", "Mobil uyumluluk"]
     },
     {

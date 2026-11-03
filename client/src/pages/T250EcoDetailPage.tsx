@@ -109,7 +109,7 @@ export default function T250EcoDetailPage() {
       </div>
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-primary to-pink-600 text-white py-16">
+      <div className="bg-gradient-to-r from-primary to-slate-800 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -265,7 +265,7 @@ export default function T250EcoDetailPage() {
       </div>
 
       {/* Call to Action */}
-      <div className="py-16 bg-gradient-to-r from-primary to-pink-600 text-white">
+      <div className="py-16 bg-gradient-to-r from-primary to-slate-800 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div

@@ -141,13 +141,13 @@ export default function QRAccessPage() {
               Mobil uygulama entegrasyonu ve dinamik güvenlik kodları.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="bg-pink-600 px-4 py-2 rounded-full">
+              <div className="bg-primary px-4 py-2 rounded-full">
                 <span className="font-semibold">Temassız Geçiş</span>
               </div>
-              <div className="bg-pink-600 px-4 py-2 rounded-full">
+              <div className="bg-primary px-4 py-2 rounded-full">
                 <span className="font-semibold">Mobil Uygulama</span>
               </div>
-              <div className="bg-pink-600 px-4 py-2 rounded-full">
+              <div className="bg-primary px-4 py-2 rounded-full">
                 <span className="font-semibold">Dinamik Kodlar</span>
               </div>
             </div>

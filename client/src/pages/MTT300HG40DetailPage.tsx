@@ -95,7 +95,7 @@ export default function MTT300HG40DetailPage() {
       </Helmet>
 
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-primary via-pink-500 to-orange-400 text-white overflow-hidden">
+      <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-primary text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="container mx-auto px-4 py-16 relative z-10">
           <motion.div 

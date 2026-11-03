@@ -168,13 +168,13 @@ export default function MT250DetailPage() {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="mt-6 bg-gradient-to-r from-primary to-pink-600 text-white p-4 rounded-lg text-center"
+                className="mt-6 bg-gradient-to-r from-primary to-slate-800 text-white p-4 rounded-lg text-center"
               >
                 <div className="flex items-center justify-center gap-3">
                   <Phone className="h-5 w-5" />
                   <div>
                     <div className="font-semibold">Mika Teknoloji Satış Destek</div>
-                    <div className="text-sm opacity-90">0212 XXX XX XX</div>
+                    <div className="text-sm opacity-90">0546 712 22 96</div>
                   </div>
                 </div>
               </motion.div>
@@ -401,16 +401,18 @@ export default function MT250DetailPage() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1.0 }}
-            className="bg-gradient-to-r from-primary to-pink-600 text-white rounded-2xl p-8 text-center"
+            className="bg-gradient-to-r from-primary to-slate-800 text-white rounded-2xl p-8 text-center"
           >
             <h3 className="text-2xl font-bold mb-4">MT-250 Turnike Sistemi İçin Teklif Alın</h3>
             <p className="text-xl text-white/90 mb-6">
               Uzman ekibimizle iletişime geçin ve işletmeniz için en uygun çözümü keşfedin.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
-                <Phone className="mr-2 h-5 w-5" />
-                Hemen Ara: 0212 XXX XX XX
+              <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
+                <a href="tel:+905467122296">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Hemen Ara: 0546 712 22 96
+                </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                 <Link href="/iletisim">

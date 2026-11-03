@@ -77,7 +77,7 @@ export default function MantarBariyerDetailPage() {
 
             <motion.div {...fadeInUp} className="space-y-8">
               <div>
-                <div className="inline-flex items-center px-4 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-pink-500 shadow-lg mb-4">
+                <div className="inline-flex items-center px-4 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-slate-800 shadow-lg mb-4">
                   <Droplet className="w-4 h-4 text-white mr-2" />
                   <span className="text-white font-bold text-sm">Q6 - HİDROLİK</span>
                 </div>
@@ -87,10 +87,10 @@ export default function MantarBariyerDetailPage() {
                 <p className="text-xl text-primary font-semibold mb-6">
                   Yüksek Güvenlik - 100 Bar Hidrolik Sistem
                 </p>
-                <div className="w-20 h-1 bg-gradient-to-r from-violet-600 to-pink-500 rounded-full"></div>
+                <div className="w-20 h-1 bg-gradient-to-r from-violet-600 to-slate-800 rounded-full"></div>
               </div>
 
-              <Card className="border-0 bg-gradient-to-br from-violet-50 to-pink-50">
+              <Card className="border-0 bg-gradient-to-br from-violet-50 to-slate-50">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <Shield className="w-8 h-8 text-violet-600 flex-shrink-0 mt-1" />
@@ -126,7 +126,7 @@ export default function MantarBariyerDetailPage() {
                 <div className="grid md:grid-cols-2 gap-3">
                   {features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-2">
-                      <div className="w-5 h-5 rounded-lg bg-gradient-to-br from-violet-500 to-pink-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-5 h-5 rounded-lg bg-gradient-to-br from-violet-500 to-slate-800 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <CheckCircle className="w-3 h-3 text-white" />
                       </div>
                       <span className="text-sm text-gray-700">{feature}</span>

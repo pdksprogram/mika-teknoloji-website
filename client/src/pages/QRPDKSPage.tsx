@@ -248,7 +248,7 @@ export default function QRPDKSPage() {
         {/* Decorative Elements */}
         <div className="absolute top-0 left-0 w-full h-full">
           <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-48 h-48 bg-pink-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-48 h-48 bg-slate-500/10 rounded-full blur-3xl"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -256,14 +256,14 @@ export default function QRPDKSPage() {
             className="text-center max-w-6xl mx-auto"
             {...fadeInUp}
           >
-            <div className="inline-flex items-center bg-gradient-to-r from-primary/20 to-pink-500/20 backdrop-blur-sm border border-primary/30 px-8 py-4 rounded-full mb-10">
+            <div className="inline-flex items-center bg-gradient-to-r from-primary/20 to-slate-800/20 backdrop-blur-sm border border-primary/30 px-8 py-4 rounded-full mb-10">
               <div className="w-3 h-3 bg-primary rounded-full mr-4 animate-pulse"></div>
               <span className="text-primary font-bold text-sm tracking-widest uppercase">Kurumsal Teknoloji Çözümleri</span>
             </div>
             
             <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
               QR Kod PDKS 
-              <span className="text-transparent bg-gradient-to-r from-primary via-pink-400 to-primary bg-clip-text animate-pulse">
+              <span className="text-transparent bg-gradient-to-r from-primary via-slate-700 to-primary bg-clip-text animate-pulse">
                 Avantajları
               </span>
             </h2>
@@ -276,8 +276,8 @@ export default function QRPDKSPage() {
             
             <div className="flex justify-center items-center space-x-4 mb-8">
               <div className="w-8 h-1 bg-primary rounded-full"></div>
-              <div className="w-16 h-1 bg-gradient-to-r from-primary to-pink-400 rounded-full"></div>
-              <div className="w-8 h-1 bg-pink-400 rounded-full"></div>
+              <div className="w-16 h-1 bg-gradient-to-r from-primary to-slate-800 rounded-full"></div>
+              <div className="w-8 h-1 bg-primary rounded-full"></div>
             </div>
           </motion.div>
         </div>
@@ -300,7 +300,7 @@ export default function QRPDKSPage() {
               <CardContent className="p-0">
                 <div className="flex flex-col lg:flex-row min-h-[400px]">
                   {/* Resim Alanı - Büyük ve Premium */}
-                  <div className="lg:w-2/5 relative bg-gradient-to-br from-primary/10 via-primary/5 to-pink-500/10">
+                  <div className="lg:w-2/5 relative bg-gradient-to-br from-primary/10 via-primary/5 to-slate-800/10">
                     {/* Premium Image Container */}
                     <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
                     <div className="relative h-full flex items-center justify-center p-8">
@@ -327,14 +327,14 @@ export default function QRPDKSPage() {
                       </div>
                     </div>
                     {/* Decorative Corner */}
-                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-pink-400 to-primary"></div>
+                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-slate-700 to-primary"></div>
                   </div>
                   
                   {/* İçerik Alanı - Premium Typography */}
                   <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
                     <div className="space-y-8">
                       {/* Premium Badge */}
-                      <div className="inline-flex items-center bg-gradient-to-r from-primary/20 to-pink-400/20 px-6 py-3 rounded-full border border-primary/30">
+                      <div className="inline-flex items-center bg-gradient-to-r from-primary/20 to-slate-800/20 px-6 py-3 rounded-full border border-primary/30">
                         <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-pulse"></div>
                         <span className="text-primary font-semibold text-sm tracking-wider uppercase">Teknolojik Üstünlük</span>
                       </div>
@@ -344,7 +344,7 @@ export default function QRPDKSPage() {
                         <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
                           QR Kod PDKS + Güvenlik Sistemi
                         </h3>
-                        <div className="w-24 h-1 bg-gradient-to-r from-primary to-pink-400 rounded-full mb-8"></div>
+                        <div className="w-24 h-1 bg-gradient-to-r from-primary to-slate-800 rounded-full mb-8"></div>
                       </div>
                       
                       {/* Premium Description */}
@@ -383,7 +383,7 @@ export default function QRPDKSPage() {
                           <span className="text-slate-600 font-medium">Root/Jailbreak Tespiti</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-slate-500 rounded-full"></div>
                           <span className="text-slate-600 font-medium">VPN/Proxy Kontrolü</span>
                         </div>
                       </div>
@@ -496,7 +496,7 @@ export default function QRPDKSPage() {
                           <span className="text-slate-600 font-medium">Otomatik Düzeltme</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-slate-500 rounded-full"></div>
                           <span className="text-slate-600 font-medium">Anlık Bildirimler</span>
                         </div>
                         <div className="flex items-center space-x-3">
@@ -761,7 +761,7 @@ export default function QRPDKSPage() {
                           <span className="text-slate-600 font-medium">Otomatik Güncelleme</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-slate-500 rounded-full"></div>
                           <span className="text-slate-600 font-medium">Şeffaf Raporlama</span>
                         </div>
                       </div>
@@ -997,7 +997,7 @@ export default function QRPDKSPage() {
                           <span className="text-slate-600 font-medium">Şeffaf Süreç</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-slate-500 rounded-full"></div>
                           <span className="text-slate-600 font-medium">Hızlı Çözüm</span>
                         </div>
                       </div>
@@ -1295,7 +1295,7 @@ export default function QRPDKSPage() {
       </section>
 
       {/* CTA Section */}
-      <section data-testid="cta-section" className="py-20 bg-gradient-to-r from-primary to-pink-600 text-white">
+      <section data-testid="cta-section" className="py-20 bg-gradient-to-r from-primary to-slate-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div 
             className="max-w-3xl mx-auto"
@@ -1304,7 +1304,7 @@ export default function QRPDKSPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               QR Kod PDKS ile Personel Takibini Modernize Edin
             </h2>
-            <p className="text-xl mb-8 text-pink-100">
+            <p className="text-xl mb-8 text-slate-100">
               Ücretsiz demo ile QR kod PDKS sisteminin avantajlarını keşfedin. 
               Kurulum ve kullanım desteği dahil.
             </p>

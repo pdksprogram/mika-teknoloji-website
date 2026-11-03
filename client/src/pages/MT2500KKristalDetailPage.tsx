@@ -107,7 +107,7 @@ export default function MT2500KKristalDetailPage() {
             >
               <div className="bg-gradient-to-br from-white via-blue-50 to-purple-50 rounded-2xl shadow-lg p-8 relative overflow-hidden">
                 <div className="absolute top-4 right-4">
-                  <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+                  <Badge className="bg-gradient-to-r from-purple-500 to-slate-800 text-white">
                     <Star className="h-3 w-3 mr-1" />
                     PREMIUM
                   </Badge>
@@ -128,7 +128,7 @@ export default function MT2500KKristalDetailPage() {
               className="space-y-6"
             >
               <div>
-                <Badge className="bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 mb-3">
+                <Badge className="bg-gradient-to-r from-purple-100 to-slate-100 text-purple-800 mb-3">
                   Premium Kristal Serisi
                 </Badge>
                 <h1 className="text-3xl font-bold text-gray-900 mb-4">
@@ -146,15 +146,15 @@ export default function MT2500KKristalDetailPage() {
                   <div className="font-semibold text-gray-900">Kristal Panel</div>
                   <div className="text-sm text-gray-600">Premium Tasarım</div>
                 </div>
-                <div className="bg-pink-50 p-4 rounded-lg text-center">
-                  <Star className="h-8 w-8 text-pink-600 mx-auto mb-2" />
+                <div className="bg-slate-50 p-4 rounded-lg text-center">
+                  <Star className="h-8 w-8 text-primary mx-auto mb-2" />
                   <div className="font-semibold text-gray-900">VIP Serisi</div>
                   <div className="text-sm text-gray-600">Lüks Mekanlar</div>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 flex-1">
+                <Button size="lg" className="bg-gradient-to-r from-purple-600 to-slate-800 hover:from-purple-700 hover:to-slate-900 flex-1">
                   <Phone className="h-5 w-5 mr-2" />
                   Premium Fiyat Al
                 </Button>
@@ -184,7 +184,7 @@ export default function MT2500KKristalDetailPage() {
                 <div className="space-y-3">
                   {premiumOzellikler.map((ozellik, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-slate-800 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-700">{ozellik}</span>
                     </div>
                   ))}
@@ -192,10 +192,10 @@ export default function MT2500KKristalDetailPage() {
               </CardContent>
             </Card>
 
-            <Card className="border-pink-200">
+            <Card className="border-slate-200">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Star className="h-6 w-6 text-pink-600" />
+                  <Star className="h-6 w-6 text-primary" />
                   Tasarım Avantajları
                 </CardTitle>
               </CardHeader>
@@ -203,7 +203,7 @@ export default function MT2500KKristalDetailPage() {
                 <div className="space-y-3">
                   {tasarimAvantajlari.map((avantaj, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-gradient-to-r from-primary to-purple-500 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-700">{avantaj}</span>
                     </div>
                   ))}
@@ -256,7 +256,7 @@ export default function MT2500KKristalDetailPage() {
               {kullanimAlanlari.map((alan, index) => (
                 <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gradient">
                   <CardContent className="p-6">
-                    <div className="bg-gradient-to-br from-purple-100 to-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="bg-gradient-to-br from-purple-100 to-slate-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                       <alan.icon className="h-8 w-8 text-purple-600" />
                     </div>
                     <h3 className="font-bold text-gray-900 mb-2">{alan.title}</h3>
@@ -272,9 +272,9 @@ export default function MT2500KKristalDetailPage() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 rounded-2xl p-8 text-white text-center relative overflow-hidden"
+            className="bg-gradient-to-r from-purple-600 via-slate-700 to-blue-600 rounded-2xl p-8 text-white text-center relative overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-slate-800/20 backdrop-blur-sm"></div>
             <div className="relative z-10">
               <div className="flex items-center justify-center gap-2 mb-4">
                 <Star className="h-6 w-6" />
@@ -289,7 +289,7 @@ export default function MT2500KKristalDetailPage() {
                 <div className="text-center">
                   <Phone className="h-8 w-8 mx-auto mb-2" />
                   <div className="font-semibold mb-1">Premium Danışman</div>
-                  <div className="text-white/90">0212 XXX XX XX</div>
+                  <a href="tel:+905467122296" className="block text-white/90 hover:underline">0546 712 22 96</a>
                 </div>
                 <div className="text-center">
                   <Mail className="h-8 w-8 mx-auto mb-2" />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, MapPin } from 'lucide-react';
+import { Building2 } from 'lucide-react';
 import SEO from "@/seo/SEO";
 // Removed problematic import
 // Removed problematic import
@@ -13,8 +13,6 @@ const customers = [
     id: 1,
     name: "Lufian",
     logo: "/images/logos/lufian.jpg",
-    employees: 400,
-    locations: 80,
     sector: "Tekstil & Moda",
     solutions: ["WebPDKS", "QR Personel Takip", "Vardiya Yönetimi"]
   },
@@ -22,8 +20,6 @@ const customers = [
     id: 2,
     name: "Adore Mobilya",
     logo: "/images/logos/adore.jpeg",
-    employees: 1200,
-    locations: 65,
     sector: "Mobilya & Dekorasyon",
     solutions: ["Mobil PDKS", "Shift Yönetimi", "Vardiya Planlama"]
   },
@@ -31,8 +27,6 @@ const customers = [
     id: 3,
     name: "Koluman Mercedes",
     logo: "/images/logos/koluman.jpg",
-    employees: 2500,
-    locations: 28,
     sector: "Otomotiv",
     solutions: ["Turnike Sistemleri", "Güvenlik Guard Kontrol", "PDKS"]
   },
@@ -40,8 +34,6 @@ const customers = [
     id: 4,
     name: "Antalya Devlet Hastanesi",
     logo: "/images/logos/hastane-antalya.jpg",
-    employees: 3200,
-    locations: 12,
     sector: "Sağlık",
     solutions: ["X-Ray Güvenlik", "PDKS", "Güvenlik Kontrol"]
   },
@@ -49,8 +41,6 @@ const customers = [
     id: 5,
     name: "Cerrahpaşa Üniversite Hastanesi",
     logo: "/images/logos/istanbul-cerrahpasa.jpg",
-    employees: 7000,
-    locations: 1,
     sector: "Sağlık & Eğitim",
     solutions: ["Yemekhane Sistemi", "Kartlı Ödeme", "Entegre Çözümler"]
   },
@@ -58,8 +48,6 @@ const customers = [
     id: 6,
     name: "Teknosa",
     logo: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=300&fit=crop",
-    employees: 1800,
-    locations: 95,
     sector: "Teknoloji Perakende",
     solutions: ["Turnike Sistemleri", "Güvenlik Kontrol", "PDKS"]
   },
@@ -67,8 +55,6 @@ const customers = [
     id: 7,
     name: "Koton",
     logo: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=400&h=300&fit=crop",
-    employees: 2200,
-    locations: 120,
     sector: "Tekstil & Moda",
     solutions: ["WebPDKS", "Merkezi Yönetim", "Raporlama"]
   },
@@ -76,8 +62,6 @@ const customers = [
     id: 8,
     name: "Bim Market",
     logo: "https://images.unsplash.com/photo-1534723452862-4c874018d66d?w=400&h=300&fit=crop",
-    employees: 4500,
-    locations: 180,
     sector: "Perakende",
     solutions: ["RFID Sistem", "PDKS", "Çoklu Lokasyon"]
   },
@@ -85,8 +69,6 @@ const customers = [
     id: 9,
     name: "Akbank",
     logo: "https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=400&h=300&fit=crop",
-    employees: 3800,
-    locations: 85,
     sector: "Bankacılık",
     solutions: ["X-Ray Güvenlik", "Guard Kontrol", "Güvenlik Yönetimi"]
   },
@@ -94,8 +76,6 @@ const customers = [
     id: 10,
     name: "Turkcell",
     logo: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop",
-    employees: 5200,
-    locations: 110,
     sector: "Telekomünikasyon",
     solutions: ["QR Personel Takip", "Mobil PDKS", "Dijital Çözümler"]
   }
@@ -126,26 +106,10 @@ const References: React.FC = () => {
               <span className="text-primary"> Başarı Hikayeleri</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
-              Bizimle çalışmayı seven, beraber büyüdüğümüz 
+            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+              Bizimle çalışmayı seven, beraber büyüdüğümüz
               <span className="text-white font-semibold"> işletmelerin başarı hikâyelerini</span> sizlerle paylaşıyoruz.
             </p>
-            
-            {/* Professional Stats */}
-            <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">25,000+</div>
-                <div className="text-gray-400 font-medium">Çalışan</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-400 mb-2">800+</div>
-                <div className="text-gray-400 font-medium">Lokasyon</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-400 mb-2">10</div>
-                <div className="text-gray-400 font-medium">Sektör</div>
-              </div>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -205,25 +169,12 @@ const References: React.FC = () => {
 
                   {/* Content Section */}
                   <div className={`space-y-8 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                    {/* Stats Cards */}
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                        <div className="flex items-center justify-between">
-                          <Users className="w-8 h-8 text-primary" />
-                          <div className="text-right">
-                            <div className="text-2xl font-bold text-gray-900">{String(customer.employees).replace(/\B(?=(\d{3})+(?!\d))/g, '.')}</div>
-                            <div className="text-sm text-gray-600">Çalışan</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                        <div className="flex items-center justify-between">
-                          <MapPin className="w-8 h-8 text-blue-600" />
-                          <div className="text-right">
-                            <div className="text-2xl font-bold text-gray-900">{customer.locations}</div>
-                            <div className="text-sm text-gray-600">Lokasyon</div>
-                          </div>
-                        </div>
+                    {/* Sektör */}
+                    <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex items-center gap-4">
+                      <Building2 className="w-8 h-8 text-primary flex-shrink-0" />
+                      <div>
+                        <div className="text-sm text-gray-600">Sektör</div>
+                        <div className="text-xl font-bold text-gray-900">{customer.sector}</div>
                       </div>
                     </div>
 

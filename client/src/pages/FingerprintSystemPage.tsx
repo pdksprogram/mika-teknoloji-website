@@ -380,7 +380,7 @@ export default function FingerprintSystemPage() {
             </div>
 
             {/* Call to Action */}
-            <div className="text-center mt-12 bg-gradient-to-r from-primary to-pink-600 text-white rounded-xl p-8">
+            <div className="text-center mt-12 bg-gradient-to-r from-primary to-slate-800 text-white rounded-xl p-8">
               <h3 className="text-2xl font-bold mb-4">
                 Parmak İzi Okuyucu Sistemi Fiyatları ve Keşif
               </h3>

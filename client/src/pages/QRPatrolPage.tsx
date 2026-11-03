@@ -104,7 +104,7 @@ export default function QRPatrolPage() {
       />
       
       {/* [S1] Hero Section */}
-      <section id="s1" data-section="S1" className="relative min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50 overflow-hidden">
+      <section id="s1" data-section="S1" className="relative min-h-screen bg-gradient-to-br from-purple-50 via-white to-slate-50 overflow-hidden">
         
         <div className="container mx-auto px-4 py-20">
           {/* Main Hero Content */}
@@ -160,7 +160,7 @@ export default function QRPatrolPage() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Güvenlik Devriye Takibi</h3>
                   <p className="text-gray-600">QR kod okutma ile otomatik tur kaydı ve raporlama</p>
                 </div>
-                <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl p-8 text-center">
+                <div className="bg-gradient-to-br from-purple-100 to-slate-100 rounded-2xl p-8 text-center">
                   <img 
                     src={securityPatrolImage}
                     alt="QR-Patrol Güvenlik Devriye Takip Sistemi"
@@ -338,7 +338,7 @@ export default function QRPatrolPage() {
       </section>
 
       {/* [S5] CTA Section */}
-      <section id="s5" data-section="S5" className="relative py-32 bg-gradient-to-br from-purple-600 via-pink-600 to-violet-500">
+      <section id="s5" data-section="S5" className="relative py-32 bg-gradient-to-br from-purple-600 via-slate-700 to-violet-500">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

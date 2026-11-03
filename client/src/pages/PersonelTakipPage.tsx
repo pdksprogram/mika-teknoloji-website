@@ -582,7 +582,7 @@ export default function PersonelTakipPage() {
               viewport={{ once: true }}
             >
               {/* Gradient Background Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-purple-500/20 to-pink-500/20 rounded-[4rem] blur-3xl transform rotate-6 scale-110 -z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-purple-500/20 to-slate-800/20 rounded-[4rem] blur-3xl transform rotate-6 scale-110 -z-10"></div>
               
               {/* Shadow Effect */}
               <div className="relative transform hover:scale-105 transition-all duration-500 hover:rotate-1">
@@ -861,7 +861,7 @@ export default function PersonelTakipPage() {
                 icon: Settings,
                 title: "Esnek Parametreler",
                 desc: "Sektörünüze özel tolerans ayarları ve özelleştirilebilir iş kuralları",
-                gradient: "from-purple-500 to-pink-500"
+                gradient: "from-purple-500 to-slate-800"
               },
               {
                 icon: Database,
@@ -918,7 +918,7 @@ export default function PersonelTakipPage() {
       </section>
 
       {/* CTA Section */}
-      <section data-testid="P8" className="relative py-20 bg-gradient-to-br from-primary to-pink-600 text-white">
+      <section data-testid="P8" className="relative py-20 bg-gradient-to-br from-primary to-slate-800 text-white">
         {/* Segment Code */}
         <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">P8</div>
         <div className="container mx-auto px-4 text-center">

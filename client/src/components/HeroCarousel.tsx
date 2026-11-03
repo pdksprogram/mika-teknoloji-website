@@ -73,7 +73,7 @@ const slides: CarouselSlide[] = [
     icon: Eye,
     image: securityPatrolImage,
     href: "/cozumler/bekci-kontrol",
-    bgGradient: "from-purple-600 via-pink-600 to-violet-500",
+    bgGradient: "from-purple-600 via-slate-700 to-violet-500",
     overlayColor: "bg-purple-900/40"
   },
   {
@@ -90,7 +90,7 @@ const slides: CarouselSlide[] = [
     icon: Scan,
     image: xrayImage,
     href: "/iletisim",
-    bgGradient: "from-orange-600 via-red-600 to-pink-500",
+    bgGradient: "from-orange-600 via-red-600 to-slate-800",
     overlayColor: "bg-red-900/40"
   }
 ];
@@ -141,7 +141,7 @@ export default function HeroCarousel() {
         <div className="absolute top-20 right-10 w-32 h-32 bg-blue-200/30 transform rotate-45 rounded-lg animate-pulse"></div>
         <div className="absolute bottom-20 left-10 w-24 h-24 bg-purple-200/30 transform rotate-12 rounded-full animate-bounce"></div>
         <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-green-200/30 transform -rotate-12 rounded-lg animate-pulse delay-1000"></div>
-        <div className="absolute top-1/3 left-1/4 w-20 h-20 bg-pink-200/30 transform rotate-45 rounded-full animate-bounce delay-500"></div>
+        <div className="absolute top-1/3 left-1/4 w-20 h-20 bg-slate-200/30 transform rotate-45 rounded-full animate-bounce delay-500"></div>
       </div>
 
       {/* Carousel */}

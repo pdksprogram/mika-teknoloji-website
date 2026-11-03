@@ -278,7 +278,7 @@ export default function MT2500DSingle3DetailPage() {
               <div className="text-center">
                 <Phone className="h-8 w-8 mx-auto mb-2" />
                 <div className="font-semibold mb-1">Telefon</div>
-                <div className="text-white/90">0212 XXX XX XX</div>
+                <a href="tel:+905467122296" className="block text-white/90 hover:underline">0546 712 22 96</a>
               </div>
               <div className="text-center">
                 <Mail className="h-8 w-8 mx-auto mb-2" />

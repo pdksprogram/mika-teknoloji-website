@@ -26,11 +26,11 @@ export default function MTSC324BVIPDetailPage() {
     price: "Fiyat İçin Ara",
     mainImage: ENGELLI_TURNIKE_IMAGES.et1,
     category: "Engelli VIP Turnike",
-    description: "Mika Teknoloji MT SC324B VIP Turnike Sistemi, engelli bireyler, VIP geçişler ve özel malzeme geçişleri için özel olarak tasarlanmış premium turnike sistemidir. %100 paslanmaz çelik gövde ile hem iç hem dış mekanlarda güvenle kullanılabilir.",
+    description: "Mika Teknoloji MT SC324B VIP Turnike Sistemi, engelli bireyler, VIP geçişler ve özel malzeme geçişleri için özel olarak tasarlanmış premium turnike sistemidir. Paslanmaz çelik gövde ile hem iç hem dış mekanlarda güvenle kullanılabilir.",
     
     features: [
       "VIP ve Engelli Geçiş İçin Özel Tasarım",
-      "%100 Paslanmaz Çelik Gövde Yapı",
+      "Paslanmaz Çelik Gövde Yapı",
       "Motorlu Otomatik Açılma-Kapanma",
       "Pleksiglass Üzerinde DUR/GEÇ/Engelli İşaretleri", 
       "Ayarlanabilir Otomatik Kapanma Süresi",
@@ -80,7 +80,7 @@ export default function MTSC324BVIPDetailPage() {
     {
       icon: <Shield className="h-8 w-8 text-blue-600" />,
       title: "Premium Güvenlik",
-      description: "%100 paslanmaz çelik ile yüksek dayanıklılık ve güvenlik"
+      description: "Paslanmaz çelik ile yüksek dayanıklılık ve güvenlik"
     },
     {
       icon: <Zap className="h-8 w-8 text-yellow-600" />,
@@ -98,7 +98,7 @@ export default function MTSC324BVIPDetailPage() {
     <>
       <Helmet>
         <title>MT SC324B VIP Turnike Sistemi - Engelli Dostu | Mika Teknoloji</title>
-        <meta name="description" content="MT SC324B VIP Turnike - Engelli erişim ve VIP geçişler için özel tasarım. %100 paslanmaz çelik, motorlu sistem, otomatik açılma. Tekerlekli sandalye uyumlu." />
+        <meta name="description" content="MT SC324B VIP Turnike - Engelli erişim ve VIP geçişler için özel tasarım. Paslanmaz çelik, motorlu sistem, otomatik açılma. Tekerlekli sandalye uyumlu." />
         <meta name="keywords" content="mt sc324b, vip turnike, engelli turnike, otomatik turnike, paslanmaz çelik, motorlu turnike, mika teknoloji" />
       </Helmet>
 
@@ -321,7 +321,7 @@ export default function MTSC324BVIPDetailPage() {
       </div>
 
       {/* Call to Action */}
-      <div className="py-16 bg-gradient-to-r from-primary to-pink-600 text-white">
+      <div className="py-16 bg-gradient-to-r from-primary to-slate-800 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">

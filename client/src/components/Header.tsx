@@ -536,7 +536,7 @@ export default function Header() {
       
       {/* Fullscreen Search Overlay */}
       {isSearchOpen && (
-        <div className="fixed inset-0 z-[9999] bg-gradient-to-br from-primary via-primary to-pink-600 flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-[9999] bg-gradient-to-br from-primary via-primary to-slate-800 flex items-center justify-center p-4">
           {/* Close Button */}
           <button
             onClick={() => {

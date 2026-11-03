@@ -75,7 +75,7 @@ export default function About() {
                   {/* Main Central Hub */}
                   <div className="relative z-20">
                     <motion.div 
-                      className="w-40 h-40 bg-gradient-to-br from-primary/90 to-pink-600/90 rounded-full flex items-center justify-center shadow-2xl"
+                      className="w-40 h-40 bg-gradient-to-br from-primary/90 to-slate-800/90 rounded-full flex items-center justify-center shadow-2xl"
                       animate={{ 
                         rotate: 360,
                         rotateY: [0, 180, 360],
@@ -390,7 +390,7 @@ export default function About() {
                   {/* 3D Background Gradient Orbs */}
                   <div className="absolute inset-0 overflow-hidden" style={{ transformStyle: 'preserve-3d' }}>
                     <motion.div 
-                      className="absolute w-32 h-32 bg-gradient-to-br from-primary/15 to-pink-500/15 rounded-full blur-xl shadow-2xl"
+                      className="absolute w-32 h-32 bg-gradient-to-br from-primary/15 to-slate-800/15 rounded-full blur-xl shadow-2xl"
                       style={{ top: '10%', left: '15%', transformStyle: 'preserve-3d' }}
                       animate={{ 
                         scale: [1, 1.3, 1], 

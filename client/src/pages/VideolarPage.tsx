@@ -694,11 +694,11 @@ const fadeInUp = {
 
 const VIDEO_KART_TEMA = {
   pembe: {
-    kenar: "hover:border-pink-500",
-    oynat: "bg-pink-600/90",
-    rozet: "bg-pink-600",
-    baslik: "group-hover:text-pink-600",
-    indir: "text-pink-600 hover:text-pink-700",
+    kenar: "hover:border-primary",
+    oynat: "bg-primary/90",
+    rozet: "bg-primary",
+    baslik: "group-hover:text-primary",
+    indir: "text-primary hover:text-primary",
   },
   mavi: {
     kenar: "hover:border-primary",

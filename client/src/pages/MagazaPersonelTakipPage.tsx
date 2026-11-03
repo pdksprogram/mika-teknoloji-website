@@ -44,11 +44,6 @@ export default function MagazaPersonelTakipPage() {
       "price": "0",
       "priceCurrency": "TRY"
     },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "250"
-    },
     "description": "Mağaza ve perakende sektörü için özel geliştirilmiş vardiya planlama, shift yönetimi, izin takibi, prim hesaplama ve mobil PDKS özellikleri sunan personel takip programı.",
     "featureList": [
       "Vardiya Planlama ve Shift Yönetimi",
@@ -76,7 +71,7 @@ export default function MagazaPersonelTakipPage() {
       icon: TrendingUp,
       title: "Hiyerarşik Onay Sistemi ve Plan Takibi",
       description: "Mağaza müdürleri haftalık vardiya planlarını oluşturur ve bu planlar bölge müdürleri tarafından onaylanır. Haftalık 45 saat kuralı açıksa (4857 sayılı İş Kanunu m.63: haftada en çok 45 saat) 45 saati aşan süre puantajda fazla mesai olarak ayrılır. Mobil uygulama üzerinden onaylı ve onay bekleyen planların durumu anlık olarak takip edilebilir. Detaylı raporlama özellikleri sayesinde bölge müdürleri tüm süreçleri kontrol altında tutar ve mağaza müdürlerine etkin bir yönetim avantajı sağlar.",
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "from-purple-500 to-slate-800",
       keywords: "plan onay sistemi, bölge müdürü kontrolü, vardiya onaylama, hiyerarşik yönetim",
       imagePlaceholder: "plan-onay-sistemi.jpg"
     },
@@ -165,7 +160,7 @@ export default function MagazaPersonelTakipPage() {
 
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         {/* SEGMENT 1: Hero */}
-        <section className="py-16 bg-gradient-to-br from-primary/5 to-pink-50 relative">
+        <section className="py-16 bg-gradient-to-br from-primary/5 to-slate-50 relative">
           <div className="container mx-auto px-4 text-center">
             <motion.h1 
               className="text-4xl md:text-5xl font-bold text-slate-800 mb-6"
@@ -197,7 +192,7 @@ export default function MagazaPersonelTakipPage() {
               transition={{ duration: 0.6 }}
               className="max-w-6xl mx-auto"
             >
-              <div className="relative aspect-video bg-slate-900 rounded-lg overflow-hidden shadow-2xl border-4 border-pink-600">
+              <div className="relative aspect-video bg-slate-900 rounded-lg overflow-hidden shadow-2xl border-4 border-primary">
                 <video
                   className="w-full h-full"
                   controls
@@ -396,7 +391,7 @@ export default function MagazaPersonelTakipPage() {
         </section>
 
         {/* SEGMENT 6: CTA (Çağrı) */}
-        <section className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white relative">
+        <section className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-slate-800 text-white relative">
           {/* Segment İşareti - Sağ Üst Köşe */}
           
           <div className="container mx-auto px-4 text-center">

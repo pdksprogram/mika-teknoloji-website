@@ -257,11 +257,6 @@ const structuredData = {
   },
   "category": "Güvenlik Sistemleri",
   "keywords": "mantar bariyer, road blocker, tuzak kapanlar, hidrolik bariyer, otopark bariyeri, güvenlik sistemleri",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "156"
-  },
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "TRY",
@@ -506,7 +501,7 @@ export default function BariyerSistemleriPage() {
             {[
               { title: "Otopark ve Garajlar", desc: "AVM, rezidans, ofis ve site otoparkları için otomatik otopark bariyerleri", icon: "🅿️", gradient: "from-blue-500 to-cyan-500" },
               { title: "Sanayi Tesisleri", desc: "Fabrika ve üretim tesislerinde araç giriş-çıkış kontrolü", icon: "🏭", gradient: "from-orange-500 to-red-500" },
-              { title: "Alışveriş Merkezleri", desc: "Çok katlı otopark sistemleri ve vale hizmeti için bariyer çözümleri", icon: "🛒", gradient: "from-purple-500 to-pink-500" },
+              { title: "Alışveriş Merkezleri", desc: "Çok katlı otopark sistemleri ve vale hizmeti için bariyer çözümleri", icon: "🛒", gradient: "from-purple-500 to-slate-800" },
               { title: "Askeri ve Resmi Kurumlar", desc: "Road blocker ve yüksek güvenlikli bariyer sistemleri", icon: "🛡️", gradient: "from-green-500 to-emerald-500" },
               { title: "Havalimanları", desc: "Terminal giriş-çıkış noktaları ve park alanları için hidrolik bariyerler", icon: "✈️", gradient: "from-indigo-500 to-blue-500" },
               { title: "Konut Siteleri", desc: "Rezidans, villa ve site girişleri için uzaktan kumandalı bariyerler", icon: "🏘️", gradient: "from-teal-500 to-cyan-500" },
@@ -707,8 +702,8 @@ export default function BariyerSistemleriPage() {
 
             <motion.div {...fadeInUp}>
               <div className="group relative h-full">
-                <div className="absolute -inset-1 bg-gradient-to-br from-primary to-pink-500 rounded-3xl blur-xl opacity-25 group-hover:opacity-40 transition duration-500"></div>
-                <Card className="relative border-0 p-10 h-full rounded-3xl bg-gradient-to-br from-primary via-primary to-pink-500 text-white group-hover:-translate-y-1 transition-all duration-500 shadow-2xl">
+                <div className="absolute -inset-1 bg-gradient-to-br from-primary to-slate-800 rounded-3xl blur-xl opacity-25 group-hover:opacity-40 transition duration-500"></div>
+                <Card className="relative border-0 p-10 h-full rounded-3xl bg-gradient-to-br from-primary via-primary to-slate-800 text-white group-hover:-translate-y-1 transition-all duration-500 shadow-2xl">
                   <div className="flex items-center mb-8">
                     <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 border border-white/30">
                       <Phone className="w-8 h-8 text-white" />
@@ -767,8 +762,8 @@ export default function BariyerSistemleriPage() {
             </div>
 
             <div className="group relative">
-              <div className="absolute -inset-1 bg-gradient-to-br from-primary to-pink-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition duration-500"></div>
-              <Card className="relative border-0 p-10 text-center bg-gradient-to-br from-primary via-primary to-pink-500 rounded-3xl text-white group-hover:scale-105 transition-all duration-500 shadow-2xl">
+              <div className="absolute -inset-1 bg-gradient-to-br from-primary to-slate-800 rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition duration-500"></div>
+              <Card className="relative border-0 p-10 text-center bg-gradient-to-br from-primary via-primary to-slate-800 rounded-3xl text-white group-hover:scale-105 transition-all duration-500 shadow-2xl">
                 <div className="relative inline-block mb-6">
                   <div className="absolute inset-0 bg-white/20 rounded-3xl blur-2xl"></div>
                   <div className="relative w-24 h-24 bg-white/20 backdrop-blur-md rounded-3xl flex items-center justify-center shadow-2xl border-2 border-white/30 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
@@ -820,7 +815,7 @@ export default function BariyerSistemleriPage() {
               const Icon = benefit.icon;
               const gradients = [
                 "from-blue-500 to-cyan-500",
-                "from-purple-500 to-pink-500", 
+                "from-purple-500 to-slate-800", 
                 "from-orange-500 to-red-500",
                 "from-green-500 to-emerald-500"
               ];
@@ -902,7 +897,7 @@ export default function BariyerSistemleriPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="flex items-center justify-center space-x-3 text-white">
                 <Phone className="w-6 h-6 text-primary" />
-                <span className="text-lg">(0212) 555 00 00</span>
+                <a href="tel:+905467122296" className="text-lg hover:underline">0546 712 22 96</a>
               </div>
               <div className="flex items-center justify-center space-x-3 text-white">
                 <Mail className="w-6 h-6 text-primary" />
@@ -925,12 +920,13 @@ export default function BariyerSistemleriPage() {
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button 
+                asChild
                 size="lg"
                 variant="outline"
                 data-testid="button-cta-phone"
                 className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-12 py-6 text-lg"
               >
-                Hemen Ara
+                <a href="tel:+905467122296">Hemen Ara</a>
               </Button>
             </div>
           </motion.div>

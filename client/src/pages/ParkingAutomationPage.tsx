@@ -122,13 +122,13 @@ export default function ParkingAutomationPage() {
               Bariyer kontrolü, ücretlendirme sistemi ve güvenlik kamerası entegrasyonu.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="bg-pink-600 px-4 py-2 rounded-full">
+              <div className="bg-primary px-4 py-2 rounded-full">
                 <span className="font-semibold">Plaka Tanıma</span>
               </div>
-              <div className="bg-pink-600 px-4 py-2 rounded-full">
+              <div className="bg-primary px-4 py-2 rounded-full">
                 <span className="font-semibold">Otomatik Bariyer</span>
               </div>
-              <div className="bg-pink-600 px-4 py-2 rounded-full">
+              <div className="bg-primary px-4 py-2 rounded-full">
                 <span className="font-semibold">Ücretlendirme</span>
               </div>
             </div>
