@@ -39,6 +39,79 @@ import maasHesaplamaImage from "@assets/maas-hesaplama-interface.png";
 import personelBilgileriImage from "@assets/personel-bilgileri-interface.png";
 import personelTalepleriImage from "@assets/personel-talepleri-interface.png";
 
+// /urunler/personel-takip SSS (FAQPage) şeması. Gövdeye konan <script> ön-render'da &quot; ile kaçıp geçersiz
+// oluyordu; Helmet içinde verilir (SEO bileşeninin jsonLd deseniyle aynı mekanizma).
+const SSS_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "PDKS (Personel Devam Kontrol Sistemi) nedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PDKS, çalışanların işyerine giriş-çıkış saatlerini dijital olarak takip eden bir sistemdir. QR kod, kart okuyucu, parmak izi gibi yöntemlerle personelin mesai saatlerini otomatik olarak kaydetir ve SGK'ya uyumlu raporlar hazırlar."
+      }
+    },
+    {
+      "@type": "Question", 
+      "name": "Personel takip sistemi yasal mı? Hangi şartlarda kullanılabilir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet, KVKK ve İş Kanunu'na uygun olarak kullanılabilir. Çalışanları önceden bilgilendirmek, aydınlatma metni vermek ve sadece mesai takibi amacıyla kullanmak koşuluyla tamamen yasaldır. Mika Teknoloji sistemleri tüm yasal gerekliliklere uygun olarak geliştirilmiştir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vardiya yönetimi nasıl çalışır?", 
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vardiya yönetimi modülü ile farklı mesai saatleri tanımlayabilir, çalışanları vardiyalara atayabilir ve otomatik mesai hesaplamaları yapabilirsiniz. Gece vardiyası, hafta sonu çalışması, fazla mesai hesaplamaları otomatik olarak gerçekleştirilir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mobil uygulama ile hangi işlemler yapılabilir?",
+      "acceptedAnswer": {
+        "@type": "Answer", 
+        "text": "Mobil uygulama ile QR kod okutarak giriş-çıkış yapabilir, mesai saatlerini görüntüleyebilir, izin taleplerinde bulunabilir, bordro bilgilerinizi inceleyebilir ve lokasyon bazlı kontrolleri gerçekleştirebilirsiniz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "SGK uyumlu raporlama nasıl sağlanır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sistemimiz SGK'nın talep ettiği tüm raporları otomatik olarak hazırlar. Aylık çalışma saatleri, fazla mesai hesaplamaları, izin bilgileri ve diğer SGK gereklilikleri tam uyumlu şekilde raporlanır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Çoklu lokasyon desteği var mı?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet, farklı şubelerde, fabrika birimlerinde veya lokasyonlarda çalışan personeli tek sistemden yönetebilirsiniz. Her lokasyon için ayrı ayarlar yapabilir, merkezi raporlama alabilirsiniz."
+      }
+    },
+    {
+      "@type": "Question", 
+      "name": "Teknik destek hizmeti nasıl alınır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7/24 teknik destek hizmeti sunuyoruz. WhatsApp, telefon, e-posta ve online destek sistemi ile anlık yardım alabilirsiniz. Kurulum, eğitim ve sürekli teknik destek hizmetlerimiz mevcuttur."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Veri güvenliği nasıl sağlanır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bulut tabanlı altyapımız SSL 256-bit şifreleme, ISO 27001 sertifikalı veri merkezleri ve KVKK uyumlu güvenlik önlemleri ile korunmaktadır. Verileriniz güvenli bir şekilde saklanır ve işlenir."
+      }
+    }
+  ]
+};
+
 export default function PersonelTakipPage() {
   const handleDemoRequest = () => {
     trackEvent('Demo Request', 'personel_takip_demo', 'Personel Takip Page - Demo Button');
@@ -203,6 +276,9 @@ export default function PersonelTakipPage() {
             ]
           })}
         </script>
+
+        {/* SSS (FAQPage) şeması */}
+        <script type="application/ld+json">{JSON.stringify(SSS_JSON_LD)}</script>
       </Helmet>
       {/* Hero Section */}
       <section data-testid="P1" className="relative py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
@@ -1050,80 +1126,6 @@ export default function PersonelTakipPage() {
             ))}
           </motion.div>
         </div>
-
-        {/* FAQ Schema Markup */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "PDKS (Personel Devam Kontrol Sistemi) nedir?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "PDKS, çalışanların işyerine giriş-çıkış saatlerini dijital olarak takip eden bir sistemdir. QR kod, kart okuyucu, parmak izi gibi yöntemlerle personelin mesai saatlerini otomatik olarak kaydetir ve SGK'ya uyumlu raporlar hazırlar."
-                }
-              },
-              {
-                "@type": "Question", 
-                "name": "Personel takip sistemi yasal mı? Hangi şartlarda kullanılabilir?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Evet, KVKK ve İş Kanunu'na uygun olarak kullanılabilir. Çalışanları önceden bilgilendirmek, aydınlatma metni vermek ve sadece mesai takibi amacıyla kullanmak koşuluyla tamamen yasaldır. Mika Teknoloji sistemleri tüm yasal gerekliliklere uygun olarak geliştirilmiştir."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Vardiya yönetimi nasıl çalışır?", 
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Vardiya yönetimi modülü ile farklı mesai saatleri tanımlayabilir, çalışanları vardiyalara atayabilir ve otomatik mesai hesaplamaları yapabilirsiniz. Gece vardiyası, hafta sonu çalışması, fazla mesai hesaplamaları otomatik olarak gerçekleştirilir."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Mobil uygulama ile hangi işlemler yapılabilir?",
-                "acceptedAnswer": {
-                  "@type": "Answer", 
-                  "text": "Mobil uygulama ile QR kod okutarak giriş-çıkış yapabilir, mesai saatlerini görüntüleyebilir, izin taleplerinde bulunabilir, bordro bilgilerinizi inceleyebilir ve lokasyon bazlı kontrolleri gerçekleştirebilirsiniz."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "SGK uyumlu raporlama nasıl sağlanır?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Sistemimiz SGK'nın talep ettiği tüm raporları otomatik olarak hazırlar. Aylık çalışma saatleri, fazla mesai hesaplamaları, izin bilgileri ve diğer SGK gereklilikleri tam uyumlu şekilde raporlanır."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Çoklu lokasyon desteği var mı?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Evet, farklı şubelerde, fabrika birimlerinde veya lokasyonlarda çalışan personeli tek sistemden yönetebilirsiniz. Her lokasyon için ayrı ayarlar yapabilir, merkezi raporlama alabilirsiniz."
-                }
-              },
-              {
-                "@type": "Question", 
-                "name": "Teknik destek hizmeti nasıl alınır?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "7/24 teknik destek hizmeti sunuyoruz. WhatsApp, telefon, e-posta ve online destek sistemi ile anlık yardım alabilirsiniz. Kurulum, eğitim ve sürekli teknik destek hizmetlerimiz mevcuttur."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Veri güvenliği nasıl sağlanır?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Bulut tabanlı altyapımız SSL 256-bit şifreleme, ISO 27001 sertifikalı veri merkezleri ve KVKK uyumlu güvenlik önlemleri ile korunmaktadır. Verileriniz güvenli bir şekilde saklanır ve işlenir."
-                }
-              }
-            ]
-          })}
-        </script>
       </section>
     </div>
   );
