@@ -401,7 +401,7 @@ export default function AccessControlPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
+              initial={false}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -460,7 +460,7 @@ export default function AccessControlPage() {
 
             {/* Right Side - Professional Demo */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={false}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
@@ -470,7 +470,7 @@ export default function AccessControlPage() {
                 
                 {/* Access Control Panel Section */}
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={false}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.8 }}
                   className="text-center mb-8"
@@ -502,7 +502,7 @@ export default function AccessControlPage() {
 
                 {/* Connection Indicator */}
                 <motion.div
-                  initial={{ scaleY: 0 }}
+                  initial={false}
                   animate={{ scaleY: 1 }}
                   transition={{ duration: 0.8, delay: 1.5 }}
                   className="flex items-center justify-center mb-8"
@@ -518,7 +518,7 @@ export default function AccessControlPage() {
 
                 {/* Mobile App Section */}
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={false}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 2 }}
                   className="text-center"
@@ -537,7 +537,7 @@ export default function AccessControlPage() {
                     
                     {/* Success Badge */}
                     <motion.div
-                      initial={{ scale: 0, opacity: 0 }}
+                      initial={false}
                       animate={{ scale: 1, opacity: 1 }}
                       transition={{ duration: 0.5, delay: 5, type: "spring" }}
                       className="absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm"
@@ -556,7 +556,7 @@ export default function AccessControlPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -571,7 +571,7 @@ export default function AccessControlPage() {
             {t.devices.items.map((device, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -602,7 +602,7 @@ export default function AccessControlPage() {
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -616,7 +616,7 @@ export default function AccessControlPage() {
                 {t.generalFeatures.items.map((feature, index) => (
                   <motion.li
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={false}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
@@ -636,7 +636,7 @@ export default function AccessControlPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -676,7 +676,7 @@ export default function AccessControlPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -689,7 +689,7 @@ export default function AccessControlPage() {
               {t.technologies.items.map((tech, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={false}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -710,7 +710,7 @@ export default function AccessControlPage() {
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -727,7 +727,7 @@ export default function AccessControlPage() {
               {t.usageAreas.areas.map((area, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={false}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.05 }}
                   viewport={{ once: true }}
@@ -746,7 +746,7 @@ export default function AccessControlPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -759,7 +759,7 @@ export default function AccessControlPage() {
               {t.benefits.items.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={false}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -784,7 +784,7 @@ export default function AccessControlPage() {
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -797,7 +797,7 @@ export default function AccessControlPage() {
               {t.process.steps.map((step, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={false}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
@@ -823,7 +823,7 @@ export default function AccessControlPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -868,7 +868,7 @@ export default function AccessControlPage() {
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -887,7 +887,7 @@ export default function AccessControlPage() {
               {t.advantages.items.map((item, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={false}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -910,7 +910,7 @@ export default function AccessControlPage() {
       <section className="py-16 bg-slate-900 border-t-4 border-primary text-white">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

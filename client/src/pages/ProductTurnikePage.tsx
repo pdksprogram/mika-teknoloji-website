@@ -165,14 +165,14 @@ export default function ProductTurnikePage() {
 
       {/* Hero Section */}
       <motion.div 
-        initial={{ opacity: 0, y: -20 }}
+        initial={false}
         animate={{ opacity: 1, y: 0 }}
         className="bg-slate-900 border-b-4 border-primary text-white py-12"
       >
         <div className="container mx-auto px-4">
           <div className="text-center">
             <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="text-4xl lg:text-5xl font-bold mb-4"
@@ -180,7 +180,7 @@ export default function ProductTurnikePage() {
               Turnike Sistemleri | Güvenlik ve Erişim Kontrol
             </motion.h1>
             <motion.p 
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
               className="text-xl text-slate-300 max-w-3xl mx-auto"
@@ -230,7 +230,7 @@ export default function ProductTurnikePage() {
       {/* Products Grid */}
       <div className="container mx-auto px-4 py-12">
         <motion.div 
-          initial={{ opacity: 0 }}
+          initial={false}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -238,7 +238,7 @@ export default function ProductTurnikePage() {
           {filteredProducts.map((product, index) => (
             <motion.div
               key={product.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -5 }}
@@ -304,7 +304,7 @@ export default function ProductTurnikePage() {
         {/* No Results */}
         {filteredProducts.length === 0 && (
           <motion.div 
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ opacity: 1 }}
             className="text-center py-12"
           >
@@ -327,7 +327,7 @@ export default function ProductTurnikePage() {
 
       {/* CTA Section */}
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
+        initial={false}
         animate={{ opacity: 1, y: 0 }}
         className="bg-slate-900 border-t-4 border-primary text-white py-12"
       >
@@ -359,7 +359,7 @@ export default function ProductTurnikePage() {
             
             {/* Turnike Sistemleri Hakkında */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               className="mb-12"
             >
@@ -385,7 +385,7 @@ export default function ProductTurnikePage() {
 
             {/* Turnike Çeşitleri */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="mb-12"
@@ -426,7 +426,7 @@ export default function ProductTurnikePage() {
 
             {/* Özellikler */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
               className="mb-12"
@@ -470,7 +470,7 @@ export default function ProductTurnikePage() {
 
             {/* SSS */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
               className="mb-12"
@@ -506,7 +506,7 @@ export default function ProductTurnikePage() {
 
             {/* Son CTA */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
               className="bg-white rounded-lg p-8 text-center shadow-lg"

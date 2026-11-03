@@ -46,7 +46,7 @@ export default function RoadBlockerDetailPage() {
         <div className="container mx-auto px-4">
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <motion.div {...fadeInUp} className="space-y-6">
+            <motion.div {...fadeInUp} initial={false} className="space-y-6">
               <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                 <img 
                   src="/images/bariyer/road-blocker.jpg"
@@ -63,7 +63,7 @@ export default function RoadBlockerDetailPage() {
               </div>
             </motion.div>
 
-            <motion.div {...fadeInUp} className="space-y-8 lg:sticky lg:top-24">
+            <motion.div {...fadeInUp} initial={false} className="space-y-8 lg:sticky lg:top-24">
               <div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
                   Road Blocker Sistem

@@ -468,7 +468,7 @@ export default function PDKSPage() {
         <div className="container mx-auto px-4 relative">
           <motion.div 
             className="max-w-4xl mx-auto text-center"
-            initial={{ opacity: 0, y: 40 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -512,7 +512,7 @@ export default function PDKSPage() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 40 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -547,7 +547,7 @@ export default function PDKSPage() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 40 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -563,7 +563,7 @@ export default function PDKSPage() {
           <motion.div 
             className="grid gap-12 lg:gap-16"
             variants={staggerContainer}
-            initial="initial"
+            initial={false}
             whileInView="animate"
             viewport={{ once: true }}
           >
@@ -640,7 +640,7 @@ export default function PDKSPage() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 40 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -653,7 +653,7 @@ export default function PDKSPage() {
           <motion.div 
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={staggerContainer}
-            initial="initial"
+            initial={false}
             whileInView="animate"
             viewport={{ once: true }}
           >
@@ -685,7 +685,7 @@ export default function PDKSPage() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 40 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -701,7 +701,7 @@ export default function PDKSPage() {
                 <motion.div 
                   key={index}
                   className="flex items-center space-x-3 p-4 bg-white rounded-lg shadow-sm"
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={false}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -726,7 +726,7 @@ export default function PDKSPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -788,7 +788,7 @@ export default function PDKSPage() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center text-white"
-            initial={{ opacity: 0, y: 40 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}

@@ -278,7 +278,7 @@ export default function PersonelTakipPage() {
         <div className="container mx-auto text-center">
           <motion.div 
             className="max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -333,7 +333,7 @@ export default function PersonelTakipPage() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            {...fadeInUp}
+            {...fadeInUp} initial={false}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
               Güvenli ve Modern Geçiş Çözümleri
@@ -347,7 +347,7 @@ export default function PersonelTakipPage() {
           <motion.div 
             className="grid md:grid-cols-3 gap-8"
             variants={staggerContainer}
-            initial="initial"
+            initial={false}
             whileInView="whileInView"
           >
             {/* QR Kod Okutma */}
@@ -433,7 +433,7 @@ export default function PersonelTakipPage() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            {...fadeInUp}
+            {...fadeInUp} initial={false}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
               Kesintisiz ve Güvenilir Hizmet
@@ -446,7 +446,7 @@ export default function PersonelTakipPage() {
           <motion.div 
             className="grid md:grid-cols-3 lg:grid-cols-6 gap-8"
             variants={staggerContainer}
-            initial="initial"
+            initial={false}
             whileInView="whileInView"
           >
             {[
@@ -474,7 +474,7 @@ export default function PersonelTakipPage() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            {...fadeInUp}
+            {...fadeInUp} initial={false}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
               Mika Teknoloji Mobil Uygulaması
@@ -486,7 +486,7 @@ export default function PersonelTakipPage() {
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Mobil Uygulama Özellikleri */}
-            <motion.div {...fadeInUp}>
+            <motion.div {...fadeInUp} initial={false}>
               <h3 className="text-2xl font-bold text-slate-800 mb-8">Mobil Uygulama Özellikleri</h3>
               <div className="space-y-4">
                 {[
@@ -514,7 +514,7 @@ export default function PersonelTakipPage() {
             {/* Mobil App Mockup */}
             <motion.div 
               className="relative"
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -557,7 +557,7 @@ export default function PersonelTakipPage() {
             {/* Yönetici Mobil Mockup */}
             <motion.div 
               className="relative order-2 lg:order-1"
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -596,7 +596,7 @@ export default function PersonelTakipPage() {
             </motion.div>
 
             {/* Yönetici Özellikleri */}
-            <motion.div className="order-1 lg:order-2" {...fadeInUp}>
+            <motion.div className="order-1 lg:order-2" {...fadeInUp} initial={false}>
               <h3 className="text-2xl font-bold text-slate-800 mb-8">Yönetici Panel Özellikleri</h3>
               <div className="space-y-4">
                 {[
@@ -623,7 +623,7 @@ export default function PersonelTakipPage() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            {...fadeInUp}
+            {...fadeInUp} initial={false}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
               PDKS Teknolojisini Keşfedin
@@ -636,7 +636,7 @@ export default function PersonelTakipPage() {
           <motion.div 
             className="grid lg:grid-cols-2 gap-16"
             variants={staggerContainer}
-            initial="initial"
+            initial={false}
             whileInView="whileInView"
           >
             {[
@@ -743,7 +743,7 @@ export default function PersonelTakipPage() {
           {/* Header */}
           <motion.div 
             className="text-center mb-20"
-            {...fadeInUp}
+            {...fadeInUp} initial={false}
           >
             <div className="inline-flex items-center gap-3 mb-6">
               <Shield className="h-5 w-5 text-primary" />
@@ -762,7 +762,7 @@ export default function PersonelTakipPage() {
           <motion.div 
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
             variants={staggerContainer}
-            initial="initial"
+            initial={false}
             whileInView="whileInView"
           >
             {[
@@ -806,7 +806,7 @@ export default function PersonelTakipPage() {
           {/* Certificates & Compliance */}
           <motion.div 
             className="bg-slate-800 rounded-lg p-8 border border-slate-700"
-            {...fadeInUp}
+            {...fadeInUp} initial={false}
           >
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-white mb-3">Güvenlik ve Uyumluluk</h3>
@@ -833,7 +833,7 @@ export default function PersonelTakipPage() {
         <div className="container mx-auto px-4 text-center">
           <motion.div 
             className="max-w-4xl mx-auto"
-            {...fadeInUp}
+            {...fadeInUp} initial={false}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Demo ile görün
@@ -876,7 +876,7 @@ export default function PersonelTakipPage() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            {...fadeInUp}
+            {...fadeInUp} initial={false}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
               Destek ve iletişim
@@ -889,7 +889,7 @@ export default function PersonelTakipPage() {
           <motion.div 
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={staggerContainer}
-            initial="initial"
+            initial={false}
             whileInView="whileInView"
           >
             {[
@@ -925,7 +925,7 @@ export default function PersonelTakipPage() {
         <div className="container mx-auto max-w-4xl">
           <motion.div 
             className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -940,7 +940,7 @@ export default function PersonelTakipPage() {
 
           <motion.div 
             className="space-y-4"
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}

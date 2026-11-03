@@ -114,14 +114,14 @@ export default function Blog() {
       <SEO title="Blog | PDKS ve Geçiş Kontrol Rehberleri | Mika Teknoloji" description="PDKS, personel takip, kartlı geçiş ve turnike sistemleri üzerine rehber yazılar ve sektör bilgileri." />
       {/* Header Section */}
       <motion.div 
-        initial={{ opacity: 0, y: -20 }}
+        initial={false}
         animate={{ opacity: 1, y: 0 }}
         className="bg-slate-900 text-white py-16"
       >
         <div className="container mx-auto px-4">
           <div className="text-center">
             <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="text-4xl lg:text-5xl font-bold mb-4"
@@ -129,7 +129,7 @@ export default function Blog() {
               Mika Teknoloji Blog
             </motion.h1>
             <motion.p 
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
               className="text-xl text-slate-300 max-w-3xl mx-auto"
@@ -144,7 +144,7 @@ export default function Blog() {
       <div className="container mx-auto px-4 py-12">
         {/* Category Filter */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
           className="flex flex-wrap justify-center gap-3 mb-12"
@@ -162,7 +162,7 @@ export default function Blog() {
 
         {/* Featured Post */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
           className="mb-16"
@@ -217,7 +217,7 @@ export default function Blog() {
           {blogPosts.slice(1).map((post, index) => (
             <motion.div
               key={post.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 + (index * 0.1) }}
             >
@@ -275,7 +275,7 @@ export default function Blog() {
 
         {/* Load More Button */}
         <motion.div 
-          initial={{ opacity: 0 }}
+          initial={false}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
           className="text-center mt-12"
@@ -287,7 +287,7 @@ export default function Blog() {
 
         {/* Newsletter Section */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.3 }}
           className="mt-16 bg-slate-900 border-t-4 border-primary rounded-lg p-8 text-center text-white"

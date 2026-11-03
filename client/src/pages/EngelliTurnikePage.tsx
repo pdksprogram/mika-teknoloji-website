@@ -116,7 +116,7 @@ export default function EngelliTurnikePage() {
         <div className="absolute inset-0 bg-black/20" />
         <div className="container mx-auto px-4 py-20 relative z-10">
           <motion.div 
-            initial={{ y: 30, opacity: 0 }}
+            initial={false}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
@@ -160,7 +160,7 @@ export default function EngelliTurnikePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <motion.div
-              initial={{ y: 20, opacity: 0 }}
+              initial={false}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.1 }}
               className="text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
@@ -171,7 +171,7 @@ export default function EngelliTurnikePage() {
             </motion.div>
 
             <motion.div
-              initial={{ y: 20, opacity: 0 }}
+              initial={false}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
               className="text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
@@ -182,7 +182,7 @@ export default function EngelliTurnikePage() {
             </motion.div>
 
             <motion.div
-              initial={{ y: 20, opacity: 0 }}
+              initial={false}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3 }}
               className="text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
@@ -193,7 +193,7 @@ export default function EngelliTurnikePage() {
             </motion.div>
 
             <motion.div
-              initial={{ y: 20, opacity: 0 }}
+              initial={false}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
               className="text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
@@ -222,7 +222,7 @@ export default function EngelliTurnikePage() {
             {engelliTurnikeModelleri.map((model, index) => (
               <motion.div
                 key={model.id}
-                initial={{ y: 20, opacity: 0 }}
+                initial={false}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: index * 0.1 }}
                 className="group"

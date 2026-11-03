@@ -3,11 +3,9 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { AnimatePresence, motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import SiteFooter from "@/components/SiteFooter";
-import LoadingScreen from "@/components/LoadingScreen";
 import { LanguageProvider } from "@/hooks/useLanguage";
 import { initGA } from "@/lib/analytics";
 import { useAnalytics } from "@/hooks/use-analytics";
@@ -171,52 +169,30 @@ function Router() {
   );
 }
 
-function App({ onRenderli = false }: { onRenderli?: boolean }) {
-  // Ön-render (sunucu) ve ön-render edilmiş sayfayı açan tarayıcı yükleme ekranını ve
-  // açılış solmasını atlar: ilk çizim ön-render HTML'iyle birebir aynı kalır (titreme yok).
-  // Yalnız boş SPA kabuğunda (404, .php) yükleme ekranı gösterilir.
-  const [isLoading, setIsLoading] = useState(typeof window !== "undefined" && !onRenderli);
-
+// onRenderli: main.tsx/entry-server.tsx imzası korunur; yükleme ekranı kalktığı için artık davranışı değiştirmez.
+function App(_props: { onRenderli?: boolean }) {
+  // Yükleme ekranı ve açılış solması yok: ön-render HTML'i ile ilk çizim birebir aynı,
+  // boş SPA kabuğunda (404, .php) da sayfa düzeni doğrudan çizilir.
   useEffect(() => {
-    // Initialize Google Analytics when app loads
     if (!import.meta.env.VITE_GA_MEASUREMENT_ID) {
       console.warn('Missing required Google Analytics key: VITE_GA_MEASUREMENT_ID');
     } else {
       initGA();
     }
-    
-    // Simulate initial app loading
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 100);
-
-    return () => clearTimeout(timer);
   }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
         <TooltipProvider>
-        <AnimatePresence mode="wait">
-          {isLoading ? (
-            <LoadingScreen key="loading" onComplete={() => setIsLoading(false)} />
-          ) : (
-            <motion.div
-              key="app"
-              initial={onRenderli ? false : { opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="min-h-screen bg-white flex flex-col"
-            >
-              <Header />
-              <main className="flex-1">
-                <VarsayilanKanonik />
-                <Router />
-              </main>
-              <SiteFooter />
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <div className="min-h-screen bg-white flex flex-col">
+          <Header />
+          <main className="flex-1">
+            <VarsayilanKanonik />
+            <Router />
+          </main>
+          <SiteFooter />
+        </div>
         <Toaster />
         </TooltipProvider>
       </LanguageProvider>

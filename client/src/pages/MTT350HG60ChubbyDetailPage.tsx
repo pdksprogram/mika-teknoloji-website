@@ -99,7 +99,7 @@ export default function MTT350HG60ChubbyDetailPage() {
         <div className="absolute inset-0 bg-black/20" />
         <div className="container mx-auto px-4 py-16 relative z-10">
           <motion.div 
-            initial={{ y: 30, opacity: 0 }}
+            initial={false}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
@@ -146,7 +146,7 @@ export default function MTT350HG60ChubbyDetailPage() {
               </div>
               
               <motion.div 
-                initial={{ x: 50, opacity: 0 }}
+                initial={false}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.8 }}
                 className="relative"
@@ -174,7 +174,7 @@ export default function MTT350HG60ChubbyDetailPage() {
                 {urunDetay.ozellikler.map((ozellik, index) => (
                   <motion.div
                     key={index}
-                    initial={{ x: -20, opacity: 0 }}
+                    initial={false}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: index * 0.1 }}
                     className="flex items-center gap-3"
@@ -194,7 +194,7 @@ export default function MTT350HG60ChubbyDetailPage() {
                     {Object.entries(urunDetay.teknikOzellikler).map(([key, value], index) => (
                       <motion.div 
                         key={key}
-                        initial={{ x: 20, opacity: 0 }}
+                        initial={false}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ delay: index * 0.05 }}
                         className="flex justify-between items-center border-b border-gray-100 pb-3"
@@ -225,7 +225,7 @@ export default function MTT350HG60ChubbyDetailPage() {
             {urunDetay.kullanımAlanlari.map((alan, index) => (
               <motion.div
                 key={index}
-                initial={{ y: 30, opacity: 0 }}
+                initial={false}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: index * 0.1 }}
                 className="bg-white rounded-lg p-4 text-center shadow-md hover:shadow-lg transition-shadow"
@@ -252,7 +252,7 @@ export default function MTT350HG60ChubbyDetailPage() {
             {urunDetay.aksesuar.map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ scale: 0.9, opacity: 0 }}
+                initial={false}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: index * 0.1 }}
                 className="flex items-center gap-3 bg-gray-50 rounded-lg p-4"

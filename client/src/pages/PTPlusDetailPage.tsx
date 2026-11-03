@@ -55,7 +55,7 @@ export default function PTPlusDetailPage() {
         <div className="container mx-auto px-4">
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <motion.div {...fadeInUp}>
+            <motion.div {...fadeInUp} initial={false}>
               <div className="sticky top-24">
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                   <img 
@@ -67,7 +67,7 @@ export default function PTPlusDetailPage() {
               </div>
             </motion.div>
 
-            <motion.div {...fadeInUp} className="space-y-8">
+            <motion.div {...fadeInUp} initial={false} className="space-y-8">
               <div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
                   MT Plus Bariyer Sistemi

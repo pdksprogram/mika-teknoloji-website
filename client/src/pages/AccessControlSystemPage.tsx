@@ -78,7 +78,7 @@ export default function AccessControlSystemPage() {
           {/* Main Hero Content */}
           <div className="text-center mb-16">
             <motion.div
-              initial={{ opacity: 0, y: -30 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -98,7 +98,7 @@ export default function AccessControlSystemPage() {
             {/* Features Tags */}
             <motion.div 
               className="flex flex-wrap justify-center gap-4 mb-12"
-              initial={{ opacity: 0, y: 30 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
@@ -113,7 +113,7 @@ export default function AccessControlSystemPage() {
             {/* Left - Video Demo */}
             <motion.div 
               className="order-2 lg:order-1"
-              initial={{ opacity: 0, x: -50 }}
+              initial={false}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
@@ -134,7 +134,7 @@ export default function AccessControlSystemPage() {
             {/* Right - Professional Features */}
             <motion.div 
               className="order-1 lg:order-2"
-              initial={{ opacity: 0, x: 50 }}
+              initial={false}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
@@ -187,7 +187,7 @@ export default function AccessControlSystemPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
+              initial={false}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -231,7 +231,7 @@ export default function AccessControlSystemPage() {
             {/* Right Content - Dashboard and Phone */}
             <motion.div
               className="relative"
-              initial={{ opacity: 0, x: 50 }}
+              initial={false}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
@@ -272,7 +272,7 @@ export default function AccessControlSystemPage() {
             {/* Left Content - Advanced Dashboard */}
             <motion.div
               className="relative"
-              initial={{ opacity: 0, x: -50 }}
+              initial={false}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -295,7 +295,7 @@ export default function AccessControlSystemPage() {
 
             {/* Right Content - Features */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={false}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
@@ -364,7 +364,7 @@ export default function AccessControlSystemPage() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-20"
-            initial={{ opacity: 0, y: 40 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -381,7 +381,7 @@ export default function AccessControlSystemPage() {
           <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
             {/* Control Panel */}
             <motion.div
-              initial={{ opacity: 0, y: 40 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -425,7 +425,7 @@ export default function AccessControlSystemPage() {
 
             {/* Control Card */}
             <motion.div
-              initial={{ opacity: 0, y: 40 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -471,7 +471,7 @@ export default function AccessControlSystemPage() {
           {/* Tech Specs */}
           <motion.div 
             className="text-center mt-16"
-            initial={{ opacity: 0, y: 40 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -513,7 +513,7 @@ export default function AccessControlSystemPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left - QR Visitor System */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
+              initial={false}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -530,7 +530,7 @@ export default function AccessControlSystemPage() {
 
             {/* Right - Visitor Tracking Content */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={false}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
@@ -593,7 +593,7 @@ export default function AccessControlSystemPage() {
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -644,7 +644,7 @@ export default function AccessControlSystemPage() {
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <motion.div
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
@@ -656,7 +656,7 @@ export default function AccessControlSystemPage() {
 
               <motion.div
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
@@ -668,7 +668,7 @@ export default function AccessControlSystemPage() {
 
               <motion.div
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}

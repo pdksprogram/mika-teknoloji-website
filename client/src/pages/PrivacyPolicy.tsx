@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
     <SEO title="Mobil Uygulama Gizlilik Sözleşmesi | Mika Teknoloji" description="Mika Teknoloji mobil uygulamaları (Google Play ve App Store) için gizlilik politikası: toplanan veriler, kullanım amacı ve haklarınız." />
     <motion.div 
       className="min-h-screen bg-slate-50 py-16"
-      initial={{ opacity: 0 }}
+      initial={false}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
@@ -17,7 +17,7 @@ export default function PrivacyPolicy() {
         {/* Corporate Header */}
         <motion.div 
           className="bg-white rounded-t-2xl shadow-lg border-b-4 border-primary p-8"
-          initial={{ opacity: 0, y: 30 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
@@ -53,7 +53,7 @@ export default function PrivacyPolicy() {
 
         <motion.div 
           className="bg-white rounded-b-2xl shadow-xl p-8 md:p-12"
-          initial={{ opacity: 0, y: 30 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >

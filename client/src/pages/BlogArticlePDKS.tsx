@@ -92,14 +92,14 @@ export default function BlogArticlePDKS() {
 
       {/* Header Section */}
       <motion.div 
-        initial={{ opacity: 0 }}
+        initial={false}
         animate={{ opacity: 1 }}
         className="bg-slate-900 border-b-4 border-primary text-white py-16"
       >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ y: 20, opacity: 0 }}
+              initial={false}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
               className="text-center mb-8"
@@ -117,7 +117,7 @@ export default function BlogArticlePDKS() {
             </motion.div>
             
             <motion.div 
-              initial={{ y: 20, opacity: 0 }}
+              initial={false}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
               className="flex flex-wrap items-center justify-center gap-6 text-sm"
@@ -152,7 +152,7 @@ export default function BlogArticlePDKS() {
             
             {/* Table of Contents - Sidebar */}
             <motion.div 
-              initial={{ x: -20, opacity: 0 }}
+              initial={false}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.8 }}
               className="lg:col-span-1"
@@ -183,7 +183,7 @@ export default function BlogArticlePDKS() {
 
             {/* Main Content */}
             <motion.div 
-              initial={{ y: 20, opacity: 0 }}
+              initial={false}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 1.0 }}
               className="lg:col-span-3"

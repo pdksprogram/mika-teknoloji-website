@@ -111,7 +111,7 @@ export default function MT230MVIPSlimDetailPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Ürün Görseli */}
             <motion.div
-              initial={{ x: -30, opacity: 0 }}
+              initial={false}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               className="relative"
@@ -127,7 +127,7 @@ export default function MT230MVIPSlimDetailPage() {
 
             {/* Ürün Bilgileri */}
             <motion.div
-              initial={{ x: 30, opacity: 0 }}
+              initial={false}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="space-y-6"
@@ -210,7 +210,7 @@ export default function MT230MVIPSlimDetailPage() {
               {advantages.map((advantage, index) => (
                 <motion.div
                   key={index}
-                  initial={{ y: 20, opacity: 0 }}
+                  initial={false}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
                   className="flex items-start gap-4"

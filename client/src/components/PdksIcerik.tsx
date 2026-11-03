@@ -206,7 +206,7 @@ export function VideoBolumu({ baslik, alt, videoIdleri }: { baslik: string; alt?
         <BolumBasligi baslik={baslik} alt={alt} />
         <motion.div
           className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto"
-          initial="initial"
+          initial={false}
           whileInView="whileInView"
           viewport={{ once: true }}
         >

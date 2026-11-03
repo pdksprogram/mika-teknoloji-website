@@ -1049,7 +1049,7 @@ export default function VideolarPage() {
           <div className="container mx-auto px-4 text-center">
             <motion.div
               className="max-w-md mx-auto mb-6 sm:mb-8"
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25 }}
             >
@@ -1067,7 +1067,7 @@ export default function VideolarPage() {
 
             <motion.div
               className="flex flex-wrap justify-center gap-2 sm:gap-3"
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
@@ -1112,7 +1112,7 @@ export default function VideolarPage() {
                   <motion.div
                     className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 max-w-5xl mx-auto"
                     variants={staggerContainer}
-                    initial="initial"
+                    initial={false}
                     whileInView="whileInView"
                     viewport={{ once: true }}
                   >
@@ -1138,7 +1138,7 @@ export default function VideolarPage() {
           <div className="container mx-auto px-3 sm:px-4">
             <motion.div
               className="max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -1167,7 +1167,7 @@ export default function VideolarPage() {
           <div className="container mx-auto px-3 sm:px-4">
             <motion.div
               className="max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -1204,7 +1204,7 @@ export default function VideolarPage() {
         <section className="py-10 sm:py-16 bg-slate-900 border-t-4 border-primary relative">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}

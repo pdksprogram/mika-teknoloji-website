@@ -130,7 +130,7 @@ export default function HizliGecisPage() {
         <div className="absolute inset-0 bg-black/20" />
         <div className="container mx-auto px-4 py-20 relative z-10">
           <motion.div 
-            initial={{ y: 30, opacity: 0 }}
+            initial={false}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
@@ -151,7 +151,7 @@ export default function HizliGecisPage() {
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-3xl mx-auto mb-8">
               <motion.div 
-                initial={{ y: 20, opacity: 0 }}
+                initial={false}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
                 className="text-center"
@@ -160,7 +160,7 @@ export default function HizliGecisPage() {
                 <p className="text-sm text-white/90">20-120 Kişi/Dk</p>
               </motion.div>
               <motion.div 
-                initial={{ y: 20, opacity: 0 }}
+                initial={false}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3 }}
                 className="text-center"
@@ -169,7 +169,7 @@ export default function HizliGecisPage() {
                 <p className="text-sm text-white/90">Yoğun Trafik</p>
               </motion.div>
               <motion.div 
-                initial={{ y: 20, opacity: 0 }}
+                initial={false}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}
                 className="text-center"
@@ -178,7 +178,7 @@ export default function HizliGecisPage() {
                 <p className="text-sm text-white/90">Çoklu Kullanıcı</p>
               </motion.div>
               <motion.div 
-                initial={{ y: 20, opacity: 0 }}
+                initial={false}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5 }}
                 className="text-center"
@@ -211,7 +211,7 @@ export default function HizliGecisPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <motion.div
-              initial={{ y: 20, opacity: 0 }}
+              initial={false}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
@@ -228,7 +228,7 @@ export default function HizliGecisPage() {
             {hizliGecisTurnikeModelleri.map((model, index) => (
               <motion.div
                 key={model.id}
-                initial={{ y: 50, opacity: 0 }}
+                initial={false}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 className="group"

@@ -88,7 +88,7 @@ export default function MT2500KKristalDetailPage() {
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
             {/* Ürün Görseli */}
             <motion.div
-              initial={{ x: -20, opacity: 0 }}
+              initial={false}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
@@ -103,7 +103,7 @@ export default function MT2500KKristalDetailPage() {
 
             {/* Ürün Bilgileri */}
             <motion.div
-              initial={{ x: 20, opacity: 0 }}
+              initial={false}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
               className="space-y-6"
@@ -150,7 +150,7 @@ export default function MT2500KKristalDetailPage() {
 
           {/* Premium Özellikler */}
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
+            initial={false}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="grid md:grid-cols-2 gap-8 mb-16"
@@ -196,7 +196,7 @@ export default function MT2500KKristalDetailPage() {
 
           {/* Teknik Özellikler */}
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
+            initial={false}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mb-16"
@@ -223,7 +223,7 @@ export default function MT2500KKristalDetailPage() {
 
           {/* Premium Kullanım Alanları */}
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
+            initial={false}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mb-16"
@@ -251,7 +251,7 @@ export default function MT2500KKristalDetailPage() {
 
           {/* Premium İletişim CTA */}
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
+            initial={false}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
             className="bg-slate-900 rounded-2xl p-8 text-white text-center relative overflow-hidden"

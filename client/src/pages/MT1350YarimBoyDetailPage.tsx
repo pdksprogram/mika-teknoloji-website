@@ -92,7 +92,7 @@ export default function MT1350YarimBoyDetailPage() {
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
             {/* Ürün Görseli */}
             <motion.div
-              initial={{ x: -20, opacity: 0 }}
+              initial={false}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
@@ -107,7 +107,7 @@ export default function MT1350YarimBoyDetailPage() {
 
             {/* Ürün Bilgileri */}
             <motion.div
-              initial={{ x: 20, opacity: 0 }}
+              initial={false}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
               className="space-y-6"
@@ -154,7 +154,7 @@ export default function MT1350YarimBoyDetailPage() {
 
           {/* Özellikler */}
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
+            initial={false}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="grid md:grid-cols-2 gap-8 mb-16"
@@ -200,7 +200,7 @@ export default function MT1350YarimBoyDetailPage() {
 
           {/* Teknik Özellikler */}
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
+            initial={false}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mb-16"
@@ -227,7 +227,7 @@ export default function MT1350YarimBoyDetailPage() {
 
           {/* Kullanım Alanları */}
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
+            initial={false}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mb-16"
@@ -253,7 +253,7 @@ export default function MT1350YarimBoyDetailPage() {
 
           {/* Karşılaştırma Tablosu */}
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
+            initial={false}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
             className="mb-16"
@@ -307,7 +307,7 @@ export default function MT1350YarimBoyDetailPage() {
 
           {/* İletişim CTA */}
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
+            initial={false}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             className="bg-slate-900 rounded-2xl p-8 text-white text-center"

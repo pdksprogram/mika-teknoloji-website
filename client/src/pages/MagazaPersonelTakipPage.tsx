@@ -165,7 +165,7 @@ export default function MagazaPersonelTakipPage() {
           <div className="container mx-auto px-4 text-center">
             <motion.h1 
               className="text-4xl md:text-5xl font-bold text-slate-800 mb-6"
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
@@ -173,7 +173,7 @@ export default function MagazaPersonelTakipPage() {
             </motion.h1>
             <motion.p 
               className="text-xl text-slate-600 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
@@ -207,7 +207,7 @@ export default function MagazaPersonelTakipPage() {
             <motion.div 
               className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
               variants={staggerContainer}
-              initial="initial"
+              initial={false}
               whileInView="whileInView"
               viewport={{ once: true }}
             >
@@ -295,7 +295,7 @@ export default function MagazaPersonelTakipPage() {
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-12"
-              {...fadeInUp}
+              {...fadeInUp} initial={false}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
                 Hangi Sektörlerde Kullanılır?
@@ -308,7 +308,7 @@ export default function MagazaPersonelTakipPage() {
             <motion.div 
               className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto"
               variants={staggerContainer}
-              initial="initial"
+              initial={false}
               whileInView="whileInView"
               viewport={{ once: true }}
             >
@@ -344,7 +344,7 @@ export default function MagazaPersonelTakipPage() {
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-12"
-              {...fadeInUp}
+              {...fadeInUp} initial={false}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
                 Sıkça Sorulan Sorular
@@ -357,7 +357,7 @@ export default function MagazaPersonelTakipPage() {
             <motion.div 
               className="max-w-4xl mx-auto space-y-4"
               variants={staggerContainer}
-              initial="initial"
+              initial={false}
               whileInView="whileInView"
               viewport={{ once: true }}
             >
@@ -385,7 +385,7 @@ export default function MagazaPersonelTakipPage() {
           
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}

@@ -362,7 +362,7 @@ export default function QRPDKSPage() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            {...fadeInUp}
+            {...fadeInUp} initial={false}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
               QR Kod PDKS Nasıl Çalışır?
@@ -393,7 +393,7 @@ export default function QRPDKSPage() {
               <motion.div 
                 key={index}
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}

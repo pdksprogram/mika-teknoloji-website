@@ -144,7 +144,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-10"
-            initial={{ opacity: 0, y: 40 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -178,7 +178,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <motion.div
             className="max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 40 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -277,7 +277,7 @@ export default function Home() {
           <motion.h2 
             className="text-3xl md:text-4xl font-bold mb-4" 
             data-testid="cta-title"
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -286,7 +286,7 @@ export default function Home() {
           </motion.h2>
           <motion.p 
             className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
@@ -295,7 +295,7 @@ export default function Home() {
             MT serisi cihazlarımız ile 20.000 kapasite, TCP/IP ve Wi-Fi destekli çözümler.
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}

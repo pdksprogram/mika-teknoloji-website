@@ -97,7 +97,7 @@ export default function MT250DetailPage() {
           
           {/* Back Button */}
           <motion.div
-            initial={{ x: -20, opacity: 0 }}
+            initial={false}
             animate={{ x: 0, opacity: 1 }}
             className="mb-6"
           >
@@ -111,7 +111,7 @@ export default function MT250DetailPage() {
 
           {/* Header Section */}
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
+            initial={false}
             animate={{ y: 0, opacity: 1 }}
             className="text-center mb-12"
           >
@@ -124,7 +124,7 @@ export default function MT250DetailPage() {
             
             {/* Product Image */}
             <motion.div
-              initial={{ x: -20, opacity: 0 }}
+              initial={false}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
@@ -138,7 +138,7 @@ export default function MT250DetailPage() {
               
               {/* Sales Support Banner */}
               <motion.div
-                initial={{ y: 20, opacity: 0 }}
+                initial={false}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}
                 className="mt-6 bg-slate-900 border-t-4 border-primary text-white p-4 rounded-lg text-center"
@@ -155,7 +155,7 @@ export default function MT250DetailPage() {
 
             {/* Product Info */}
             <motion.div
-              initial={{ x: 20, opacity: 0 }}
+              initial={false}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.3 }}
               className="space-y-8"
@@ -223,7 +223,7 @@ export default function MT250DetailPage() {
 
           {/* General Usage */}
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
+            initial={false}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5 }}
             className="mb-16"
@@ -265,7 +265,7 @@ export default function MT250DetailPage() {
 
           {/* Security Features */}
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
+            initial={false}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.6 }}
             className="mb-16"
@@ -288,7 +288,7 @@ export default function MT250DetailPage() {
 
           {/* Technical Specifications */}
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
+            initial={false}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.7 }}
             className="mb-16"
@@ -349,7 +349,7 @@ export default function MT250DetailPage() {
 
           {/* Call to Action */}
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
+            initial={false}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1.0 }}
             className="bg-slate-900 border-t-4 border-primary text-white rounded-lg p-8 text-center"

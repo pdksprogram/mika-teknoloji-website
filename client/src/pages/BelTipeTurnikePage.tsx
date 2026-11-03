@@ -159,7 +159,7 @@ export default function BelTipeTurnikePage() {
             {belTurnikeModelleri.map((model, index) => (
               <motion.div
                 key={model.id}
-                initial={{ y: 20, opacity: 0 }}
+                initial={false}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: index * 0.1 }}
                 className="group"

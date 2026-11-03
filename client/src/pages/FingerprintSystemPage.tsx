@@ -77,7 +77,7 @@ export default function FingerprintSystemPage() {
       {/* Devices Grid */}
       <section className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
@@ -91,7 +91,7 @@ export default function FingerprintSystemPage() {
             {devices.map((device, index) => (
               <motion.div
                 key={device.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
@@ -151,7 +151,7 @@ export default function FingerprintSystemPage() {
           
           {/* Main SEO Content */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="prose prose-lg max-w-none"

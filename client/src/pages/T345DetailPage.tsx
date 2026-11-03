@@ -99,7 +99,7 @@ export default function T345DetailPage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ x: -50, opacity: 0 }}
+              initial={false}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
@@ -131,7 +131,7 @@ export default function T345DetailPage() {
             </motion.div>
             
             <motion.div
-              initial={{ x: 50, opacity: 0 }}
+              initial={false}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
@@ -163,7 +163,7 @@ export default function T345DetailPage() {
             {securityFeatures.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ y: 20, opacity: 0 }}
+                initial={false}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: index * 0.1 }}
                 className="text-center p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-all"
@@ -184,7 +184,7 @@ export default function T345DetailPage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             <motion.div
-              initial={{ x: -30, opacity: 0 }}
+              initial={false}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
@@ -207,7 +207,7 @@ export default function T345DetailPage() {
             </motion.div>
 
             <motion.div
-              initial={{ x: 30, opacity: 0 }}
+              initial={false}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="space-y-8"
@@ -253,7 +253,7 @@ export default function T345DetailPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ y: 30, opacity: 0 }}
+              initial={false}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
