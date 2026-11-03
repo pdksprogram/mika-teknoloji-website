@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Shield, Clock, Settings, CheckCircle2, CheckCircle, ArrowRight, Lock, Gauge, AlertTriangle, Phone, Mail, MapPin, Award, Users, TrendingUp, Wrench } from "lucide-react";
+import { Shield, Clock, Settings, CheckCircle2, CheckCircle, ArrowRight, Lock, Gauge, AlertTriangle, Phone, Mail, MapPin, Award, Users, TrendingUp, Wrench, SquareParking, Factory, ShoppingCart, ShieldCheck, Plane, Home, Hotel, Hospital, Landmark } from "lucide-react";
 import { Link } from "wouter";
 import { trackEvent } from "@/lib/analytics";
 
@@ -311,7 +311,7 @@ export default function BariyerSistemleriPage() {
     <>
       <Helmet>
         <title>Bariyer Sistemleri: Mantar Bariyer, Road Blocker, Tuzak Kapanlar | Mika Teknoloji 2025</title>
-        <meta name="description" content="✅ Profesyonel bariyer sistemleri: Mantar bariyer, road blocker, tuzak kapanlar, otopark bariyeri ve hidrolik güvenlik sistemleri. 2 yıl garanti. Keşif için bize ulaşın." />
+        <meta name="description" content="Profesyonel bariyer sistemleri: Mantar bariyer, road blocker, tuzak kapanlar, otopark bariyeri ve hidrolik güvenlik sistemleri. 2 yıl garanti. Keşif için bize ulaşın." />
         <meta name="keywords" content="bariyer sistemleri, otopark bariyeri, hidrolik bariyer, mantar bariyer, road blocker, güvenlik bariyeri, PT PLUS bariyer, dinamik bariyer, tuzak sistemleri, bariyer fiyatları, otopark bariyeri kurulumu, otomatik bariyer, kollu bariyer, bariyer montajı, araç giriş kontrol, park bariyeri, bariyer sistemi fiyat, uzaktan kumandalı bariyer, fotoselli bariyer" />
         
         {/* Open Graph Meta Tags */}
@@ -402,7 +402,7 @@ export default function BariyerSistemleriPage() {
                 >
                   <Card className="h-full hover:shadow-lg transition-shadow duration-300 relative">
                     {/* Icon Badge */}
-                    <div className="absolute -top-3 -right-3 z-10">
+                    <div className="absolute top-3 right-3 z-10">
                       <div className="relative">
                         <div className={`bg-gradient-to-r ${segment.gradient} text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl`}>
                           <div className="flex items-center gap-2">
@@ -499,28 +499,26 @@ export default function BariyerSistemleriPage() {
             viewport={{ once: true }}
           >
             {[
-              { title: "Otopark ve Garajlar", desc: "AVM, rezidans, ofis ve site otoparkları için otomatik otopark bariyerleri", icon: "🅿️", gradient: "from-slate-900 to-slate-800" },
-              { title: "Sanayi Tesisleri", desc: "Fabrika ve üretim tesislerinde araç giriş-çıkış kontrolü", icon: "🏭", gradient: "from-slate-900 to-slate-800" },
-              { title: "Alışveriş Merkezleri", desc: "Çok katlı otopark sistemleri ve vale hizmeti için bariyer çözümleri", icon: "🛒", gradient: "from-slate-900 to-slate-800" },
-              { title: "Askeri ve Resmi Kurumlar", desc: "Road blocker ve yüksek güvenlikli bariyer sistemleri", icon: "🛡️", gradient: "from-slate-900 to-slate-800" },
-              { title: "Havalimanları", desc: "Terminal giriş-çıkış noktaları ve park alanları için hidrolik bariyerler", icon: "✈️", gradient: "from-slate-900 to-slate-800" },
-              { title: "Konut Siteleri", desc: "Rezidans, villa ve site girişleri için uzaktan kumandalı bariyerler", icon: "🏘️", gradient: "from-slate-900 to-slate-800" },
-              { title: "Oteller ve Tesisler", desc: "Misafir araç park kontrolü ve otopark yönetim sistemleri", icon: "🏨", gradient: "from-slate-900 to-slate-800" },
-              { title: "Hastaneler", desc: "Acil servis ve doktor park alanları için özel bariyer çözümleri", icon: "🏥", gradient: "from-primary to-slate-800" },
-              { title: "Kamu Binaları", desc: "Belediye, valilik ve resmi kurumlar için güvenlik bariyerleri", icon: "🏛️", gradient: "from-slate-500 to-slate-600" }
+              { title: "Otopark ve Garajlar", desc: "AVM, rezidans, ofis ve site otoparkları için otomatik otopark bariyerleri", icon: SquareParking, gradient: "from-slate-900 to-slate-800" },
+              { title: "Sanayi Tesisleri", desc: "Fabrika ve üretim tesislerinde araç giriş-çıkış kontrolü", icon: Factory, gradient: "from-slate-900 to-slate-800" },
+              { title: "Alışveriş Merkezleri", desc: "Çok katlı otopark sistemleri ve vale hizmeti için bariyer çözümleri", icon: ShoppingCart, gradient: "from-slate-900 to-slate-800" },
+              { title: "Askeri ve Resmi Kurumlar", desc: "Road blocker ve yüksek güvenlikli bariyer sistemleri", icon: ShieldCheck, gradient: "from-slate-900 to-slate-800" },
+              { title: "Havalimanları", desc: "Terminal giriş-çıkış noktaları ve park alanları için hidrolik bariyerler", icon: Plane, gradient: "from-slate-900 to-slate-800" },
+              { title: "Konut Siteleri", desc: "Rezidans, villa ve site girişleri için uzaktan kumandalı bariyerler", icon: Home, gradient: "from-slate-900 to-slate-800" },
+              { title: "Oteller ve Tesisler", desc: "Misafir araç park kontrolü ve otopark yönetim sistemleri", icon: Hotel, gradient: "from-slate-900 to-slate-800" },
+              { title: "Hastaneler", desc: "Acil servis ve doktor park alanları için özel bariyer çözümleri", icon: Hospital, gradient: "from-primary to-slate-800" },
+              { title: "Kamu Binaları", desc: "Belediye, valilik ve resmi kurumlar için güvenlik bariyerleri", icon: Landmark, gradient: "from-slate-500 to-slate-600" }
             ].map((area, index) => (
               <motion.div key={index} variants={fadeInUp}>
                 <div className="group relative">
-                  <div className={`absolute -inset-0.5 bg-gradient-to-r ${area.gradient} rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-500`}></div>
-                  <Card className="relative bg-white/95 backdrop-blur-xl border-0 p-8 hover:bg-white transition-all duration-500 h-full rounded-3xl group-hover:scale-105">
-                    <div className={`w-20 h-20 bg-gradient-to-br ${area.gradient} rounded-2xl flex items-center justify-center mb-6 text-4xl shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
-                      {area.icon}
+                  <Card className="relative bg-white border border-slate-200 p-8 h-full rounded-2xl hover:shadow-md transition-shadow">
+                    <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                      <area.icon className="h-7 w-7 text-primary" />
                     </div>
-                    <h3 className="font-bold text-xl mb-3 text-slate-800 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-slate-800 group-hover:to-slate-600 transition-all">
+                    <h3 className="font-bold text-xl mb-3 text-slate-800">
                       {area.title}
                     </h3>
                     <p className="text-slate-600 text-sm leading-relaxed">{area.desc}</p>
-                    <div className={`absolute bottom-0 left-0 h-1.5 bg-gradient-to-r ${area.gradient} w-0 group-hover:w-full transition-all duration-500 rounded-b-3xl`}></div>
                   </Card>
                 </div>
               </motion.div>
@@ -611,10 +609,10 @@ export default function BariyerSistemleriPage() {
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="px-6 py-4 font-semibold text-slate-700">Güvenlik Seviyesi</td>
-                  <td className="px-6 py-4 text-center">⭐⭐⭐⭐</td>
-                  <td className="px-6 py-4 text-center">⭐⭐⭐</td>
-                  <td className="px-6 py-4 text-center">⭐⭐⭐⭐⭐</td>
-                  <td className="px-6 py-4 text-center">⭐⭐⭐⭐⭐</td>
+                  <td className="px-6 py-4 text-center">4/5</td>
+                  <td className="px-6 py-4 text-center">3/5</td>
+                  <td className="px-6 py-4 text-center">5/5</td>
+                  <td className="px-6 py-4 text-center">5/5</td>
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="px-6 py-4 font-semibold text-slate-700">Kullanım Alanı</td>
@@ -639,10 +637,10 @@ export default function BariyerSistemleriPage() {
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="px-6 py-4 font-semibold text-slate-700">Fiyat Aralığı</td>
-                  <td className="px-6 py-4 text-center">💰💰💰</td>
-                  <td className="px-6 py-4 text-center">💰💰</td>
-                  <td className="px-6 py-4 text-center">💰💰💰💰</td>
-                  <td className="px-6 py-4 text-center">💰💰💰💰💰</td>
+                  <td className="px-6 py-4 text-center">Orta</td>
+                  <td className="px-6 py-4 text-center">Düşük</td>
+                  <td className="px-6 py-4 text-center">Yüksek</td>
+                  <td className="px-6 py-4 text-center">Çok yüksek</td>
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
                   <td className="px-6 py-4 font-semibold text-slate-700">Önerilen Kullanım</td>

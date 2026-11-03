@@ -105,7 +105,7 @@ export default function AccessControlPage() {
       subtitle: "Kurumsal Güvenlik Teknolojilerinde İleri Çözümler",
       brandMessage: "Mika Teknoloji Access Control",
       description: "Mika Teknoloji olarak RFID kartlı geçiş, biyometrik parmak izi, yüz tanıma ve QR kodlu mobil erişim sistemleri ile kapsamlı access control çözümleri sunuyoruz. HID, EM, Mifare, Desfire, Iclass kart teknolojileri ve PDKS entegrasyonu ile işletmenizin geçiş güvenliğini yönetmenizi sağlıyoruz.",
-      breadcrumb: "Anasayfa > Geçiş Kontrol Sistemleri > Access Control",
+      breadcrumb: "Ana Sayfa > Geçiş Kontrol Sistemleri > Access Control",
       devices: {
         title: "Mika Teknoloji Access Kontrol Panelleri",
         items: [

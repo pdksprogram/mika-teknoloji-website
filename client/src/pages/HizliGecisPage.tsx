@@ -122,6 +122,19 @@ export default function HizliGecisPage() {
         <meta name="keywords" content="hızlı geçiş turnike, yüksek kapasiteli turnike, havaalanı turnike, metro turnike, chubby turnike, slim turnike, mika teknoloji" />
       </Helmet>
 
+      {/* Breadcrumb */}
+      <div className="bg-gray-50 py-4">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center text-sm text-gray-600">
+            <Link href="/" className="hover:text-primary">Ana Sayfa</Link>
+            <span className="mx-2">/</span>
+            <Link href="/urunler" className="hover:text-primary">Ürünler</Link>
+            <span className="mx-2">/</span>
+            <span className="text-primary font-medium">Hızlı Geçiş Turnike Sistemleri</span>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <div className="relative bg-slate-900 border-b-4 border-primary text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
@@ -200,19 +213,6 @@ export default function HizliGecisPage() {
               </Button>
             </div>
           </motion.div>
-        </div>
-      </div>
-
-      {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center text-sm text-gray-600">
-            <Link href="/" className="hover:text-primary">Ana Sayfa</Link>
-            <span className="mx-2">/</span>
-            <Link href="/urunler" className="hover:text-primary">Ürünler</Link>
-            <span className="mx-2">/</span>
-            <span className="text-primary font-medium">Hızlı Geçiş Turnike Sistemleri</span>
-          </div>
         </div>
       </div>
 

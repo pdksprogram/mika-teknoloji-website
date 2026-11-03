@@ -101,7 +101,7 @@ export default function TurnstileSystemsPage() {
       <section className="bg-gray-50 py-4">
         <div className="container mx-auto px-4">
           <nav className="text-sm text-gray-600">
-            <Link href="/" className="hover:text-blue-600">Anasayfa</Link>
+            <Link href="/" className="hover:text-primary">Ana Sayfa</Link>
             <span className="mx-2">›</span>
             <span>Turnike Sistemleri</span>
           </nav>
@@ -130,7 +130,7 @@ export default function TurnstileSystemsPage() {
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
                         {category.name}
                       </h3>
                       {category.subtitle && (

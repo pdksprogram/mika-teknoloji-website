@@ -150,11 +150,24 @@ export default function ProductTurnikePage() {
         
         <link rel="canonical" href="https://mikateknoloji.com/urunler/turnike" />
       </Helmet>
-      {/* Header Section */}
+      {/* Breadcrumb */}
+      <div className="bg-white border-b">
+        <div className="container mx-auto px-4 py-3">
+          <div className="flex items-center space-x-2 text-sm text-gray-600">
+            <Link href="/" className="hover:text-primary">Ana Sayfa</Link>
+            <ChevronRight className="w-4 h-4" />
+            <Link href="/urunler" className="hover:text-primary">Ürünler</Link>
+            <ChevronRight className="w-4 h-4" />
+            <span className="text-gray-900">Turnike Sistemleri</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Hero Section */}
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-slate-900 text-white py-12"
+        className="bg-slate-900 border-b-4 border-primary text-white py-12"
       >
         <div className="container mx-auto px-4">
           <div className="text-center">
@@ -177,19 +190,6 @@ export default function ProductTurnikePage() {
           </div>
         </div>
       </motion.div>
-
-      {/* Breadcrumb */}
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-blue-600">Ana Sayfa</Link>
-            <ChevronRight className="w-4 h-4" />
-            <Link href="/urunler" className="hover:text-blue-600">Ürünler</Link>
-            <ChevronRight className="w-4 h-4" />
-            <span className="text-gray-900">Turnike Sistemleri</span>
-          </div>
-        </div>
-      </div>
 
       {/* Search and Filter Section */}
       <div className="bg-white py-6 border-b">
@@ -259,7 +259,7 @@ export default function ProductTurnikePage() {
                 </div>
                 
                 <CardHeader>
-                  <CardTitle className="text-xl text-gray-900 group-hover:text-blue-600 transition-colors">
+                  <CardTitle className="text-xl text-gray-900 group-hover:text-primary transition-colors">
                     {product.name}
                   </CardTitle>
                   <p className="text-gray-600 text-sm">

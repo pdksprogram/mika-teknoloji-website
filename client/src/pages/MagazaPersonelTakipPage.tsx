@@ -264,7 +264,7 @@ export default function MagazaPersonelTakipPage() {
                                   <Icon className="h-14 w-14 text-primary" />
                                 </div>
                                 <p className="text-sm font-medium px-4 text-slate-600">
-                                  📸 {feature.imagePlaceholder}
+                                  {feature.imagePlaceholder}
                                 </p>
                               </div>
                             </div>
@@ -286,7 +286,7 @@ export default function MagazaPersonelTakipPage() {
                           </p>
                           <div className="pt-3 border-t border-slate-100">
                             <p className="text-xs text-slate-500 font-medium">
-                              🔍 {feature.keywords}
+                              {feature.keywords}
                             </p>
                           </div>
                         </div>
@@ -324,9 +324,9 @@ export default function MagazaPersonelTakipPage() {
               viewport={{ once: true }}
             >
               {[
-                { title: "🏪 Perakende Mağazalar", items: ["Giyim Mağazaları", "Süpermarketler", "Elektronik Mağazaları", "Ayakkabı Mağazaları"] },
-                { title: "🏬 Zincir Marketler", items: ["AVM Mağazaları", "Franchise İşletmeler", "Zincir Restoranlar", "Fast Food"] },
-                { title: "☕ Hizmet Sektörü", items: ["Otel ve Restoranlar", "Cafe ve Pastaneler", "Kafe Zincirleri", "Güzellik Salonları"] }
+                { title: "Perakende Mağazalar", items: ["Giyim Mağazaları", "Süpermarketler", "Elektronik Mağazaları", "Ayakkabı Mağazaları"] },
+                { title: "Zincir Marketler", items: ["AVM Mağazaları", "Franchise İşletmeler", "Zincir Restoranlar", "Fast Food"] },
+                { title: "Hizmet Sektörü", items: ["Otel ve Restoranlar", "Cafe ve Pastaneler", "Kafe Zincirleri", "Güzellik Salonları"] }
               ].map((sector, index) => (
                 <motion.div key={index} variants={fadeInUp}>
                   <Card className="h-full hover:shadow-md transition-all duration-300 border border-slate-200 bg-white">
@@ -377,7 +377,6 @@ export default function MagazaPersonelTakipPage() {
                   <Card className="overflow-hidden hover:shadow-md transition-all duration-300 border border-slate-200 bg-white">
                     <CardContent className="p-6">
                       <h3 className="text-lg font-bold mb-3 text-slate-900 flex items-start">
-                        <span className="text-primary mr-3 text-xl flex-shrink-0">❓</span>
                         <span>{faq.question}</span>
                       </h3>
                       <p className="text-slate-600 pl-8 leading-relaxed text-[15px]">
@@ -416,7 +415,7 @@ export default function MagazaPersonelTakipPage() {
                   className="bg-white text-primary hover:bg-white/90 font-semibold px-8"
                   data-testid="cta-demo-button"
                 >
-                  <Link href="/iletisim">📞 Ücretsiz Demo Talep Et</Link>
+                  <Link href="/iletisim">Ücretsiz Demo Talep Et</Link>
                 </Button>
                 <Button 
                   asChild
@@ -438,7 +437,7 @@ export default function MagazaPersonelTakipPage() {
                   data-testid="cta-whatsapp-button"
                 >
                   <a href="https://wa.me/905467122296" target="_blank" rel="noopener noreferrer">
-                    💬 WhatsApp Destek
+                    WhatsApp Destek
                   </a>
                 </Button>
               </div>

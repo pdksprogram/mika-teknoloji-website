@@ -211,7 +211,7 @@ export default function BlogArticlePDKS() {
                       personel yönetimi çözümleri sunmaktadır.
                     </p>
                     <div className="bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg mb-8">
-                      <h4 className="font-semibold text-gray-900 mb-2">💡 Önemli Bilgi</h4>
+                      <h4 className="font-semibold text-gray-900 mb-2">Önemli Bilgi</h4>
                       <p className="text-gray-700 text-sm">
                         Modern PDKS sistemleri sadece giriş-çıkış takibi yapmaz. Aynı zamanda vardiya yönetimi, 
                         izin takibi, fazla mesai hesaplamaları, departman bazlı raporlama ve bordro entegrasyonu 
@@ -229,7 +229,7 @@ export default function BlogArticlePDKS() {
 
                     <div id="parmak-izi-pdks" className="mb-10">
                       <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-4">
-                        🔒 Parmak İzi PDKS Sistemleri
+                        Parmak İzi PDKS Sistemleri
                       </h3>
                       <p className="text-gray-700 leading-relaxed mb-4">
                         Biyometrik teknolojinin en yaygın kullanım alanılarından biri olan <strong>parmak izi 
@@ -247,7 +247,7 @@ export default function BlogArticlePDKS() {
 
                     <div id="yuz-tanima-pdks" className="mb-10">
                       <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-4">
-                        👤 Yüz Tanıma PDKS Sistemleri
+                        Yüz Tanıma PDKS Sistemleri
                       </h3>
                       <p className="text-gray-700 leading-relaxed mb-4">
                         COVID-19 pandemisi sonrası popülerliği artan <strong>yüz tanıma PDKS sistemleri</strong>, 
@@ -264,7 +264,7 @@ export default function BlogArticlePDKS() {
 
                     <div id="kartli-pdks" className="mb-10">
                       <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-4">
-                        💳 Kartlı PDKS Sistemleri
+                        Kartlı PDKS Sistemleri
                       </h3>
                       <p className="text-gray-700 leading-relaxed mb-4">
                         Geleneksel ve güvenilir çözüm olan <strong>kartlı PDKS sistemleri</strong>, 
@@ -281,7 +281,7 @@ export default function BlogArticlePDKS() {
 
                     <div id="webpdks" className="mb-10">
                       <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-4">
-                        🌐 Web Tabanlı PDKS (WebPDKS)
+                        Web Tabanlı PDKS (WebPDKS)
                       </h3>
                       <p className="text-gray-700 leading-relaxed mb-4">
                         Bulut teknolojisinin avantajlarını PDKS sistemlerine taşıyan <strong>WebPDKS çözümleri</strong>, 
@@ -440,7 +440,7 @@ export default function BlogArticlePDKS() {
                     <div className="space-y-6">
                       <Card className="border-l-4 border-l-blue-500">
                         <CardContent className="p-6">
-                          <h4 className="font-semibold text-gray-900 mb-3">🏭 Endüstriyel İşletmeler (100+ Çalışan)</h4>
+                          <h4 className="font-semibold text-gray-900 mb-3">Endüstriyel İşletmeler (100+ Çalışan)</h4>
                           <p className="text-gray-700 text-sm mb-3">
                             <strong>Önerilen:</strong> Parmak İzi veya Yüz Tanıma PDKS + Turnike Entegrasyonu
                           </p>
@@ -455,7 +455,7 @@ export default function BlogArticlePDKS() {
 
                       <Card className="border-l-4 border-l-green-500">
                         <CardContent className="p-6">
-                          <h4 className="font-semibold text-gray-900 mb-3">🏢 Ofis ve Hizmet Sektörü (50-100 Çalışan)</h4>
+                          <h4 className="font-semibold text-gray-900 mb-3">Ofis ve Hizmet Sektörü (50-100 Çalışan)</h4>
                           <p className="text-gray-700 text-sm mb-3">
                             <strong>Önerilen:</strong> WebPDKS + Kartlı Sistem veya Yüz Tanıma
                           </p>
@@ -470,7 +470,7 @@ export default function BlogArticlePDKS() {
 
                       <Card className="border-l-4 border-l-purple-500">
                         <CardContent className="p-6">
-                          <h4 className="font-semibold text-gray-900 mb-3">🏪 KOBİ ve Küçük İşletmeler (10-50 Çalışan)</h4>
+                          <h4 className="font-semibold text-gray-900 mb-3">KOBİ ve Küçük İşletmeler (10-50 Çalışan)</h4>
                           <p className="text-gray-700 text-sm mb-3">
                             <strong>Önerilen:</strong> Kartlı PDKS veya WebPDKS Abonelik
                           </p>
@@ -485,7 +485,7 @@ export default function BlogArticlePDKS() {
 
                       <Card className="border-l-4 border-l-red-500">
                         <CardContent className="p-6">
-                          <h4 className="font-semibold text-gray-900 mb-3">🏥 Sağlık ve Güvenlik Önceliği</h4>
+                          <h4 className="font-semibold text-gray-900 mb-3">Sağlık ve Güvenlik Önceliği</h4>
                           <p className="text-gray-700 text-sm mb-3">
                             <strong>Önerilen:</strong> Yüz Tanıma PDKS (Temassız Teknoloji)
                           </p>

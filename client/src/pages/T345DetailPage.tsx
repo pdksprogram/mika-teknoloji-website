@@ -115,7 +115,7 @@ export default function T345DetailPage() {
       </div>
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-gray-800 to-slate-700 text-white py-16">
+      <div className="bg-slate-900 border-b-4 border-primary text-white py-16">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -166,7 +166,7 @@ export default function T345DetailPage() {
                   className="w-full h-auto max-w-md mx-auto rounded-lg shadow-2xl"
                   loading="eager"
                 />
-                <div className="absolute -top-4 -right-4 bg-primary text-white px-4 py-2 rounded-full font-bold">
+                <div className="absolute top-4 right-4 bg-primary text-white px-4 py-2 rounded-full font-bold">
                   PRO
                 </div>
               </div>

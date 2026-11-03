@@ -254,7 +254,7 @@ export function IlgiliSayfalar({ mevcutYol, ekler = [] }: { mevcutYol: string; e
 // WhatsApp, telefon ve İletişim sayfası.
 export function DemoTalebi({ baslik = "Demo Talep Edin" }: { baslik?: string }) {
   return (
-    <section id="demo" className="py-20 bg-gradient-to-r from-primary to-primary/80 scroll-mt-24">
+    <section id="demo" className="py-20 bg-slate-900 border-t-4 border-primary scroll-mt-24">
       <div className="container mx-auto px-4 text-center text-white">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">{baslik}</h2>
         <p className="text-xl mb-10 opacity-90 max-w-2xl mx-auto">

@@ -508,17 +508,14 @@ export default function PDKSPage() {
             </div>
             
             {/* Trust Signals */}
-            <div className="flex items-center justify-center gap-8 mt-8 text-sm text-slate-600">
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 mt-8 text-sm text-slate-600">
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span>Web Tabanlı</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                 <span>Mobil Uygulama</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
                 <span>Kurulum ve Eğitim</span>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Users, Database, Share2, Mail, MessageSquare } from "lucide-react";
+import { ArrowRight, Shield, Users, Database, Share2, Mail, MessageSquare, Lock, Timer, Smartphone, Zap, Printer, DoorOpen, Rocket, Wallet } from "lucide-react";
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
 
@@ -103,13 +103,13 @@ export default function AccessControlSystemPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="bg-white shadow-lg text-blue-700 px-6 py-3 rounded-full text-base font-semibold border border-blue-100">
-                🏢 Yetki Seviyeli Kontrol
+                Yetki Seviyeli Kontrol
               </div>
               <div className="bg-white shadow-lg text-blue-700 px-6 py-3 rounded-full text-base font-semibold border border-blue-100">
-                🚪 Antipassback Sistemi
+                Antipassback Sistemi
               </div>
               <div className="bg-white shadow-lg text-blue-700 px-6 py-3 rounded-full text-base font-semibold border border-blue-100">
-                ⏰ Saat Aralığı Kontrolü
+                Saat Aralığı Kontrolü
               </div>
             </motion.div>
           </div>
@@ -155,7 +155,7 @@ export default function AccessControlSystemPage() {
                 <div className="bg-white rounded-2xl p-6 shadow-xl border border-blue-50">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
-                      <span className="text-2xl">🔐</span>
+                      <Lock className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900">Global Antipassback</h3>
                   </div>
@@ -167,7 +167,7 @@ export default function AccessControlSystemPage() {
                 <div className="bg-white rounded-2xl p-6 shadow-xl border border-blue-50">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
-                      <span className="text-2xl">⏱️</span>
+                      <Timer className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900">Saat Aralığı Kontrolü</h3>
                   </div>
@@ -179,7 +179,7 @@ export default function AccessControlSystemPage() {
                 <div className="bg-white rounded-2xl p-6 shadow-xl border border-blue-50">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
-                      <span className="text-2xl">👥</span>
+                      <Users className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900">Yetki Seviyeli Erişim</h3>
                   </div>
@@ -507,17 +507,17 @@ export default function AccessControlSystemPage() {
               
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center p-6 bg-blue-50 rounded-2xl">
-                  <div className="text-3xl mb-3">📱</div>
+                  <Smartphone className="h-8 w-8 mx-auto text-primary mb-3" />
                   <div className="font-semibold text-gray-900">Bluetooth & NFC</div>
                   <div className="text-sm text-gray-600 mt-2">Çoklu bağlantı seçeneği</div>
                 </div>
                 <div className="text-center p-6 bg-blue-50 rounded-2xl">
-                  <div className="text-3xl mb-3">🔐</div>
+                  <Lock className="h-8 w-8 mx-auto text-primary mb-3" />
                   <div className="font-semibold text-gray-900">QR Kod</div>
                   <div className="text-sm text-gray-600 mt-2">Hızlı ve güvenli geçiş</div>
                 </div>
                 <div className="text-center p-6 bg-blue-50 rounded-2xl">
-                  <div className="text-3xl mb-3">⚡</div>
+                  <Zap className="h-8 w-8 mx-auto text-primary mb-3" />
                   <div className="font-semibold text-gray-900">Dijital Kimlik</div>
                   <div className="text-sm text-gray-600 mt-2">Akıllı telefon entegrasyonu</div>
                 </div>
@@ -571,7 +571,7 @@ export default function AccessControlSystemPage() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                    <div className="text-2xl">🖨️</div>
+                    <Printer className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900">Tek Kullanımlık QR Printer</h4>
@@ -581,7 +581,7 @@ export default function AccessControlSystemPage() {
 
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                    <div className="text-2xl">📱</div>
+                    <Smartphone className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900">SMS ile QR Gönderimi</h4>
@@ -591,7 +591,7 @@ export default function AccessControlSystemPage() {
 
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                    <div className="text-2xl">🚪</div>
+                    <DoorOpen className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900">Turnike Entegrasyonu</h4>
@@ -675,7 +675,7 @@ export default function AccessControlSystemPage() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="text-3xl mb-4">🚀</div>
+                <Rocket className="h-8 w-8 mx-auto text-primary mb-4" />
                 <div className="font-bold text-lg text-white mb-2">Anında Kurulum</div>
                 <div className="text-blue-200 text-sm">15 dakikada kurulum tamamlanır</div>
               </motion.div>
@@ -687,7 +687,7 @@ export default function AccessControlSystemPage() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <div className="text-3xl mb-4">💰</div>
+                <Wallet className="h-8 w-8 mx-auto text-primary mb-4" />
                 <div className="font-bold text-lg text-white mb-2">Düşük Maliyet</div>
                 <div className="text-blue-200 text-sm">BT altyapı yatırımı gerektirmez</div>
               </motion.div>
@@ -699,7 +699,7 @@ export default function AccessControlSystemPage() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <div className="text-3xl mb-4">🔒</div>
+                <Lock className="h-8 w-8 mx-auto text-primary mb-4" />
                 <div className="font-bold text-lg text-white mb-2">KVKK Uyumlu</div>
                 <div className="text-blue-200 text-sm">Tam güvenlik ve gizlilik</div>
               </motion.div>

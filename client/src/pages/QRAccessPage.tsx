@@ -125,7 +125,7 @@ export default function QRAccessPage() {
       />
       
       {/* Hero Section */}
-      <section className="py-20 bg-slate-900 text-white">
+      <section className="py-20 bg-slate-900 border-b-4 border-primary text-white">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center max-w-4xl mx-auto"

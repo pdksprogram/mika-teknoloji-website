@@ -114,7 +114,7 @@ export default function JetonluT250DetailPage() {
       </div>
 
       {/* Hero Section */}
-      <div className="bg-slate-900 text-white py-16">
+      <div className="bg-slate-900 border-b-4 border-primary text-white py-16">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div

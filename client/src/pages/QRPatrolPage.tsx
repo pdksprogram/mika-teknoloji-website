@@ -135,13 +135,13 @@ export default function QRPatrolPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="bg-white shadow-lg text-primary px-6 py-3 rounded-full text-base font-semibold border border-slate-200">
-                📱 Mobil Uygulama
+                Mobil Uygulama
               </div>
               <div className="bg-white shadow-lg text-primary px-6 py-3 rounded-full text-base font-semibold border border-slate-200">
-                📍 Canlı Konum Takibi
+                Canlı Konum Takibi
               </div>
               <div className="bg-white shadow-lg text-primary px-6 py-3 rounded-full text-base font-semibold border border-slate-200">
-                📊 Otomatik Raporlama
+                Otomatik Raporlama
               </div>
             </motion.div>
           </div>

@@ -93,6 +93,21 @@ export default function MTT300HG120ChubbyDetailPage() {
         <meta name="keywords" content="ultra chubby, 120 kişi dakika, maksimum geçiş, kongre merkezi, endüstriyel turnike, big data, ai destekli, mika teknoloji" />
       </Helmet>
 
+      {/* Breadcrumb */}
+      <div className="bg-gray-50 py-4">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center text-sm text-gray-600">
+            <Link href="/" className="hover:text-primary">Ana Sayfa</Link>
+            <span className="mx-2">/</span>
+            <Link href="/urunler" className="hover:text-primary">Ürünler</Link>
+            <span className="mx-2">/</span>
+            <Link href="/urunler/hizli-gecis-turnike" className="hover:text-primary">Hızlı Geçiş Turnikeler</Link>
+            <span className="mx-2">/</span>
+            <span className="text-primary font-medium">MT T300 HG120 Chubby</span>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <div className="relative bg-slate-900 border-b-4 border-primary text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
@@ -164,21 +179,6 @@ export default function MTT300HG120ChubbyDetailPage() {
               </motion.div>
             </div>
           </motion.div>
-        </div>
-      </div>
-
-      {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center text-sm text-gray-600">
-            <Link href="/" className="hover:text-primary">Ana Sayfa</Link>
-            <span className="mx-2">/</span>
-            <Link href="/urunler" className="hover:text-primary">Ürünler</Link>
-            <span className="mx-2">/</span>
-            <Link href="/urunler/hizli-gecis-turnike" className="hover:text-primary">Hızlı Geçiş Turnikeler</Link>
-            <span className="mx-2">/</span>
-            <span className="text-primary font-medium">MT T300 HG120 Chubby</span>
-          </div>
         </div>
       </div>
 
