@@ -30,7 +30,7 @@ export default {
           foreground: "var(--popover-foreground)",
         },
         primary: {
-          DEFAULT: "var(--primary)",
+          DEFAULT: "hsl(var(--primary-hsl) / <alpha-value>)",
           foreground: "var(--primary-foreground)",
         },
         secondary: {
