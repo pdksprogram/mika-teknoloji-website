@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { CTA_DONANIM } from "@/lib/iletisim";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
@@ -172,7 +173,7 @@ export default function ProductTurnikePage() {
               transition={{ delay: 0.2 }}
               className="text-4xl lg:text-5xl font-bold mb-4"
             >
-              Turnike Sistemleri | Güvenlik ve Erişim Kontrol
+              Turnike Sistemleri
             </motion.h1>
             <motion.p 
               initial={false}
@@ -180,8 +181,9 @@ export default function ProductTurnikePage() {
               transition={{ delay: 0.3 }}
               className="text-xl text-slate-300 max-w-3xl mx-auto"
             >
-              Profesyonel turnike sistemleri: Bel turnikeleri, boy turnikeleri, hızlı geçiş sistemleri. Paslanmaz çelik kalite, biyometrik entegrasyon ve PDKS uyumlu güvenlik çözümleri.
+              Bel, boy, engelli ve hızlı geçiş turnikeleri; kartlı ve parmak izli geçişle PDKS uyumlu.
             </motion.p>
+            <CtaDugmeleri tur="donanim" koyu sinif="justify-center mt-8" sayfa="Turnike Sistemleri Page" olayOnek="urunler_turnike" />
           </div>
         </div>
       </motion.div>
@@ -246,11 +248,6 @@ export default function ProductTurnikePage() {
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute top-4 left-4">
-                    <Badge variant="secondary" className="bg-white/90">
-                      {categories.find(cat => cat.value === product.category)?.label}
-                    </Badge>
-                  </div>
                 </div>
                 
                 <CardHeader>
@@ -282,7 +279,7 @@ export default function ProductTurnikePage() {
                       data-testid={`product-detail-${product.id}`}
                     >
                       <Link href={product.href}>
-                        {product.href === "/iletisim" ? "Teklif Alın" : "Detayları Gör"}
+                        {product.href === "/iletisim" ? CTA_DONANIM : "Detayları İncele"}
                         <ChevronRight className="w-4 h-4 ml-1" />
                       </Link>
                     </Button>
@@ -338,7 +335,7 @@ export default function ProductTurnikePage() {
             data-testid="contact-cta"
           >
             <Link href="/iletisim">
-              Uzmanlarımızla İletişime Geçin
+              {CTA_DONANIM}
             </Link>
           </Button>
         </div>
