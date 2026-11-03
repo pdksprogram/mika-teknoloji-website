@@ -38,7 +38,7 @@ const slides: CarouselSlide[] = [
     features: ["RFID ve biyometrik entegrasyon", "Uzaktan izleme ve kontrol", "Kurulum ve teknik destek"],
     image: "/images/slayt/turnike-t345.jpg",
     imageAlt: "T345 elektromekanik bel tipi turnike",
-    href: "/turnike-sistemleri",
+    href: "/urunler/turnike",
     tur: "donanim",
   },
   {

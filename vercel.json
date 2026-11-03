@@ -23,6 +23,31 @@
       "headers": { "Location": "/pdks-programi" }
     },
     {
+      "src": "/turnike-sistemleri/?",
+      "status": 301,
+      "headers": { "Location": "/urunler/turnike" }
+    },
+    {
+      "src": "/cozumler/bekci-kontrol/?",
+      "status": 301,
+      "headers": { "Location": "/qr-bekci" }
+    },
+    {
+      "src": "/urunler/bekci-tur-kontrol/?",
+      "status": 301,
+      "headers": { "Location": "/qr-bekci" }
+    },
+    {
+      "src": "/parmak-izi-takip-sistemi/?",
+      "status": 301,
+      "headers": { "Location": "/urunler/parmak-izi-tanima" }
+    },
+    {
+      "src": "/yuz-tanima-sistem/?",
+      "status": 301,
+      "headers": { "Location": "/urunler/yuz-tanima" }
+    },
+    {
       "handle": "filesystem"
     },
     {

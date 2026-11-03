@@ -11,16 +11,48 @@ export function kanonikAdres(yol: string): string {
   return `${SITE_KOKU}${temiz || '/'}`;
 }
 
-// Aynı içeriği birden çok adresten veren sayfaların TEK asıl adresi. Diğer adresler ya
-// vercel.json'da 301 ile buraya gider (PDKS) ya da canonical ile buraya işaret eder.
-// Site haritası (scripts/prerender.mjs) yalnız canonical'ı kendisi olan adresleri yazar.
-// Parmak izi / yüz tanıma: asıl adres iç linklerin gittiği /urunler/... adresidir; eski
-// /parmak-izi-takip-sistemi ve /yuz-tanima-sistem sayfaları canlı kalır, canonical ile buraya döner.
+// Aynı içeriği birden çok adresten veren sayfaların TEK asıl adresi. Eski adresler
+// vercel.json'da 301 ile buraya gider; rota uygulamada kalır ve canonical ile buraya işaret eder,
+// böylece site haritasına (scripts/prerender.mjs: yalnız canonical'ı kendisi olan adresler) girmez.
+// 301'li eski adresler: /cozumler/pdks, /personel-devam-kontrol-sistemi -> pdks;
+// /parmak-izi-takip-sistemi -> parmakIzi; /yuz-tanima-sistem -> yuzTanima;
+// /turnike-sistemleri -> turnike; /cozumler/bekci-kontrol, /urunler/bekci-tur-kontrol -> bekci.
 export const ASIL_ADRES = {
   pdks: '/pdks-programi',
   parmakIzi: '/urunler/parmak-izi-tanima',
   yuzTanima: '/urunler/yuz-tanima',
+  turnike: '/urunler/turnike',
+  bekci: '/qr-bekci',
 } as const;
+
+// Paylaşım görseli (og:image). Boyut gerçek dosya ölçüsüdür; varsayılan 1200x630 kırpılmış ürün görselidir.
+export interface PaylasimGorseli {
+  src: string;
+  w: number;
+  h: number;
+  alt?: string;
+}
+export const VARSAYILAN_GORSEL: PaylasimGorseli = {
+  src: '/og-varsayilan.jpg',
+  w: 1200,
+  h: 630,
+  alt: 'Mika Teknoloji PDKS, turnike ve geçiş kontrol sistemleri',
+};
+const mutlak = (src: string) => (src.startsWith('http') ? src : `${SITE_KOKU}${src}`);
+
+// og:image + boyut + twitter kartı. Sayfa kendi görselini verirse varsayılanın yerine geçer (Helmet: son yazan kazanır).
+export function PaylasimEtiketleri({ gorsel = VARSAYILAN_GORSEL }: { gorsel?: PaylasimGorseli }) {
+  return (
+    <Helmet>
+      <meta property="og:image" content={mutlak(gorsel.src)} />
+      <meta property="og:image:width" content={String(gorsel.w)} />
+      <meta property="og:image:height" content={String(gorsel.h)} />
+      <meta property="og:image:alt" content={gorsel.alt || VARSAYILAN_GORSEL.alt} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content={mutlak(gorsel.src)} />
+    </Helmet>
+  );
+}
 
 interface SEOProps {
   title?: string;
@@ -28,6 +60,7 @@ interface SEOProps {
   canonical?: string;
   jsonLd?: any;
   noindex?: boolean;
+  gorsel?: PaylasimGorseli;
 }
 
 export default function SEO({
@@ -35,7 +68,8 @@ export default function SEO({
   description = 'PDKS personel devam, kart & QR geçiş, otopark ve bekçi tur çözümleri. Canlı izleme, raporlama ve entegrasyon.',
   canonical,
   jsonLd = null,
-  noindex = false
+  noindex = false,
+  gorsel
 }: SEOProps) {
   // Kanonik adres sorgu dizesiz, sabit alan adıyla kurulur; ön-render ve tarayıcıda aynı sonucu verir.
   const [location] = useLocation();
@@ -43,6 +77,7 @@ export default function SEO({
   const dil = useSeciliDil();
 
   return (
+    <>
     <Helmet>
       <html lang={dil} />
       <title>{title}</title>
@@ -55,8 +90,7 @@ export default function SEO({
       <meta property="og:url" content={url} />
       <meta property="og:type" content="website" />
 
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary" />
+      {/* Twitter (kart türü ve görsel PaylasimEtiketleri'nden) */}
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
 
@@ -72,6 +106,8 @@ export default function SEO({
           : <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       )}
     </Helmet>
+    {gorsel && <PaylasimEtiketleri gorsel={gorsel} />}
+    </>
   );
 }
 // Asıl adres (canonical) ve og:url HER ZAMAN birlikte ve aynı değerle yazılır.
@@ -96,8 +132,12 @@ export function VarsayilanKanonik() {
     <>
       <Helmet>
         <html lang={dil} />
+        <meta property="og:site_name" content="Mika Teknoloji" />
+        <meta property="og:locale" content="tr_TR" />
+        <meta property="og:type" content="website" />
       </Helmet>
       <Kanonik yol={location} />
+      <PaylasimEtiketleri />
     </>
   );
 }

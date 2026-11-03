@@ -528,8 +528,8 @@ export default function PDKSPage() {
               <p className="text-slate-600 text-center">
                 <strong>İlgili Çözümlerimiz:</strong> 
                 <Link href="/access-control" className="text-primary hover:underline ml-2">Access Control Sistemleri</Link> |
-                <Link href="/turnike-sistemleri" className="text-primary hover:underline ml-2">Turnike Sistemleri</Link> |
-                <Link href="/cozumler/bekci-kontrol" className="text-primary hover:underline ml-2">Bekçi Kontrol</Link>
+                <Link href="/urunler/turnike" className="text-primary hover:underline ml-2">Turnike Sistemleri</Link> |
+                <Link href="/qr-bekci" className="text-primary hover:underline ml-2">Bekçi Kontrol</Link>
               </p>
             </div>
           </motion.div>

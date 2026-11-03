@@ -272,7 +272,7 @@ export default function ParkingAutomationPage() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Link href="/turnike-sistemleri">
+              <Link href="/urunler/turnike">
                 <Button 
                   size="lg" 
                   variant="outlineLight"

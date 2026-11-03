@@ -145,7 +145,7 @@ export default function Header() {
       { name: "Access Geçiş Kontrol Sistemleri", href: "/access-control" },
       { name: "Bekçi Tur Kontrol Sistemi", href: "/qr-bekci" },
       { name: "QR Bekçi Sistemi", href: "/qr-bekci" },
-      { name: "Turnike Sistemleri", href: "/turnike-sistemleri" },
+      { name: "Turnike Sistemleri", href: "/urunler/turnike" },
       { name: "Otel Kapı Kilit Sistemleri", href: "/otel-kilit" },
       { name: "Anahtar/Dolap Takip Sistemi", href: "/anahtar-takip" }
     ],
@@ -160,7 +160,7 @@ export default function Header() {
     ],
     "Yazılımlar": [
       { name: "Personel Takip Programı", href: "/urunler/personel-takip" },
-      { name: "Personel Devam Kontrol Sistemi", href: "/personel-devam-kontrol-sistemi" },
+      { name: "Personel Devam Kontrol Sistemi", href: "/pdks-programi" },
       { name: "Puantaj Programı", href: "/puantaj-programi" },
       { name: "Vardiya Takip Programı", href: "/vardiya-takip-programi" },
       { name: "Fazla Mesai Hesaplama", href: "/fazla-mesai-hesaplama" },
@@ -181,7 +181,7 @@ export default function Header() {
       { name: "Mağaza Personel Takip Programı", href: "/urunler/magaza-personel-takip" },
       { name: "OGS & HGS Geçiş Sistemleri", href: "/urunler/ogs-hgs" },
       { name: "AR-GE Takip Sistemi", href: "/urunler/arge-takip" },
-      { name: "Bekçi & Devriye Tur Sistemleri", href: "/urunler/bekci-tur-kontrol" },
+      { name: "Bekçi & Devriye Tur Sistemleri", href: "/qr-bekci" },
       { name: "Yemekhane Takip Sistemi", href: "/urunler/yemekhane" },
       { name: "Üye Takip Sistemi", href: "/urunler/uye-takip" },
       { name: "Kablosuz Alarm Sistemleri", href: "/urunler/kablosuz-alarm" }
@@ -190,7 +190,6 @@ export default function Header() {
 
   const cozumSutunlari = menuSuz(solutionsMenuData);
   const urunSutunlari = menuSuz(productsMenuData);
-  const aktifSutunlar = activeMenuType === 'products' ? urunSutunlari : cozumSutunlari;
 
   const isActiveLink = (href: string) => {
     if (href === "/") {
@@ -243,7 +242,8 @@ export default function Header() {
                   } : undefined}
                 >
                   {item.hasDropdown ? (
-                    <button
+                    <a
+                      href={item.href}
                       onClick={(e) => {
                         if (!item.hasDropdown) return;
                         if (isTouchDevice) {
@@ -255,8 +255,6 @@ export default function Header() {
                             setIsDropdownOpen(false);
                             setActiveMenuType(null);
                           }
-                        } else {
-                          window.location.href = item.href;
                         }
                       }}
                       className={`relative font-medium transition-colors duration-200 hover:text-primary group flex items-center space-x-1 ${
@@ -271,7 +269,7 @@ export default function Header() {
                           isActiveLink(item.href) ? "w-full" : "w-0 group-hover:w-full"
                         }`}
                       />
-                    </button>
+                    </a>
                   ) : (
                     <Link
                       href={item.href}
@@ -290,10 +288,14 @@ export default function Header() {
                   )}
                   
                   {/* Mega Menu Dropdown */}
-                  {item.hasDropdown && isDropdownOpen && activeMenuType && item.menuType === activeMenuType && (
-                    <div className={`absolute top-full left-1/2 -translate-x-1/2 max-w-[calc(100vw-2rem)] ${MEGA_GENISLIK[aktifSutunlar.length] ?? MEGA_GENISLIK[4]} bg-white shadow-2xl border-t-4 border-primary z-50`}>
-                      <div className={`grid ${MEGA_SUTUN[aktifSutunlar.length] ?? MEGA_SUTUN[4]} gap-6 p-8`}>
-                        {aktifSutunlar.map(([category, items]) => (
+                  {/* Bağlantılar ön-render HTML'de hep bulunur (tarayıcı/arama motoru görür); kapalıyken yalnız CSS ile gizlenir */}
+                  {item.hasDropdown && (() => {
+                    const sutunlar = item.menuType === 'products' ? urunSutunlari : cozumSutunlari;
+                    const acik = isDropdownOpen && activeMenuType === item.menuType;
+                    return (
+                    <div className={`absolute top-full left-1/2 -translate-x-1/2 max-w-[calc(100vw-2rem)] ${MEGA_GENISLIK[sutunlar.length] ?? MEGA_GENISLIK[4]} bg-white shadow-2xl border-t-4 border-primary z-50${acik ? '' : ' hidden'}`}>
+                      <div className={`grid ${MEGA_SUTUN[sutunlar.length] ?? MEGA_SUTUN[4]} gap-6 p-8`}>
+                        {sutunlar.map(([category, items]) => (
                           <div key={category} className="space-y-4">
                             <h3 className="font-bold text-gray-900 text-lg border-b-2 border-primary pb-2">
                               {category}
@@ -315,7 +317,8 @@ export default function Header() {
                         ))}
                       </div>
                     </div>
-                  )}
+                    );
+                  })()}
                 </div>
               ))}
               

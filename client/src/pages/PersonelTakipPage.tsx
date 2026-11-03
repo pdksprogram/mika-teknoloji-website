@@ -828,7 +828,7 @@ export default function PersonelTakipPage() {
               Destek ve iletişim
             </h2>
             <p className="text-lg text-slate-600">
-              Personel takip sistemi, <Link href="/qr-bekci" className="text-primary hover:text-primary/80 underline font-medium">QR-Patrol güvenlik sistemi</Link>, <Link href="/turnike-sistemleri" className="text-primary hover:text-primary/80 underline font-medium">turnike sistemleri</Link> ve tüm teknoloji çözümlerimiz için destek ve bilgi sunuyoruz.
+              Personel takip sistemi, <Link href="/qr-bekci" className="text-primary hover:text-primary/80 underline font-medium">QR-Patrol güvenlik sistemi</Link>, <Link href="/urunler/turnike" className="text-primary hover:text-primary/80 underline font-medium">turnike sistemleri</Link> ve tüm teknoloji çözümlerimiz için destek ve bilgi sunuyoruz.
             </p>
           </motion.div>
 

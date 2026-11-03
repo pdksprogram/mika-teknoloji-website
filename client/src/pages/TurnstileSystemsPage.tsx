@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import TurnikeReferanslari from "@/components/TurnikeReferanslari";
-import SEO from "@/seo/SEO";
+import SEO, { kanonikAdres, ASIL_ADRES } from "@/seo/SEO";
 
 // Turnike kategori görselleri - Parmak izi sayfası mantığı
 const belTipiTurnike = "/mt-bel-tipi-turnike.png";
@@ -80,7 +80,7 @@ export default function TurnstileSystemsPage() {
       <SEO 
         title="Turnike Sistemleri - Mika Teknoloji"
         description="Mika Teknoloji turnike sistemleri. Bel tipi, boy tipi, engelli, hızlı geçiş, hijyen ve jetonlu turnike çeşitleri. Güvenlik ve geçiş kontrol çözümleri."
-        canonical="https://mikateknoloji.com/turnike-sistemleri"
+        canonical={kanonikAdres(ASIL_ADRES.turnike)}
         jsonLd={[productJsonLd]}
       />
 

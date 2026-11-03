@@ -34,8 +34,8 @@ const KATEGORILER: { baslik: string; gorsel: string; gorselAlt: string; kalemler
       { ad: "Yüz Tanıma Cihazları", yol: "/urunler/yuz-tanima" },
       { ad: "Parmak İzi Okuyucular", yol: "/urunler/parmak-izi-tanima" },
       { ad: "Kartlı Geçiş Sistemi (RFID)", yol: "/kartli-gecis-sistemi" },
-      { ad: "Bekçi Tur Kontrol Cihazı", yol: "/urunler/bekci-tur-kontrol" },
-      { ad: "Turnike Sistemleri", yol: "/turnike-sistemleri" },
+      { ad: "Bekçi Tur Kontrol Cihazı", yol: "/qr-bekci" },
+      { ad: "Turnike Sistemleri", yol: "/urunler/turnike" },
       { ad: "Bariyer Sistemleri", yol: "/urunler/bariyer-sistemleri" },
     ],
   },
@@ -46,7 +46,6 @@ const KATEGORILER: { baslik: string; gorsel: string; gorselAlt: string; kalemler
     kalemler: [
       { ad: "Personel Takip Programı", yol: "/urunler/personel-takip" },
       { ad: "QR PDKS Uygulaması", yol: "/urunler/qr-pdks" },
-      { ad: "Personel Devam Kontrol Sistemi", yol: "/personel-devam-kontrol-sistemi" },
       { ad: "Web PDKS", yol: "https://pdkspersoneltakip.com/", dis: true },
     ],
   },
