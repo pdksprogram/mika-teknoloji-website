@@ -67,8 +67,8 @@ const OZELLIKLER: OzellikMaddesi[] = [
 
 const ADIMLAR = [
   { baslik: "Plan Hazırlanır", metin: "Plancı haftalık vardiyayı personel bazında hazırlar." },
+  { baslik: "Personel Görür", metin: "Plan girildiği andan itibaren personel vardiyasını Esoft Pdks mobil uygulamasında görür; onay ya da kilit beklenmez." },
   { baslik: "Onaya Gider", metin: "Onaycı planı onaylar, reddeder ya da düzeltme ister; onaylanan plan istenirse kilitlenir." },
-  { baslik: "Personel Görür", metin: "Personel vardiyasını Esoft Pdks mobil uygulamasında görür." },
   { baslik: "Puantaja Yansır", metin: "Giriş-çıkışlar plana göre değerlendirilir, ay sonunda puantaj hesaplanır." },
 ];
 

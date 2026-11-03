@@ -702,10 +702,10 @@ const VIDEO_KART_TEMA = {
   },
   mavi: {
     kenar: "hover:border-primary",
-    oynat: "bg-primary/90",
+    oynat: "bg-primary",
     rozet: "bg-primary",
     baslik: "group-hover:text-primary",
-    indir: "text-primary hover:text-primary/80",
+    indir: "text-primary hover:opacity-80",
   },
 } as const;
 
