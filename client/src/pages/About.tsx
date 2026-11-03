@@ -543,7 +543,7 @@ export default function About() {
               <div className="p-8 text-center bg-gradient-to-br from-slate-50 to-slate-100">
                 <div className="mb-6">
                   <img 
-                    src="/images/about/leadership-2.png" 
+                    src="/images/about/leadership-2-kirpik.jpg" 
                     alt="Şirket Hiyerarşisi" 
                     className="w-48 h-48 rounded-full mx-auto object-cover shadow-lg"
                     data-testid="hierarchy-photo"
@@ -778,21 +778,6 @@ export default function About() {
                 </div>
               </div>
             </Card>
-          </div>
-        </div>
-
-        {/* Team Section */}
-        <div className="text-center mb-20">
-          <h2 className="text-3xl font-bold text-slate-800 mb-12">
-            Uzman Ekibimiz
-          </h2>
-          <div className="max-w-5xl mx-auto">
-            <img 
-              src="/images/about/company-overview.png" 
-              alt="Mika Teknoloji Ekibi" 
-              className="w-full rounded-2xl shadow-2xl"
-              data-testid="team-photo"
-            />
           </div>
         </div>
 

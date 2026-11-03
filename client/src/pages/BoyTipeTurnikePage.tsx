@@ -10,6 +10,7 @@ import {
   MapPin
 } from "lucide-react";
 import { BOY_TURNIKE_IMAGES } from "@/assetsMap";
+import TurnikeReferanslari from "@/components/TurnikeReferanslari";
 import { Link } from "wouter";
 
 export default function BoyTipeTurnikePage() {
@@ -143,15 +144,6 @@ export default function BoyTipeTurnikePage() {
     }
   ];
 
-  const referansResimler = [
-    "/ref-1.png",
-    "/ref-2.png", 
-    "/ref-3.png",
-    "/ref-4.png",
-    "/ref-5.png",
-    "/ref-6.png"
-  ];
-
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -240,38 +232,7 @@ export default function BoyTipeTurnikePage() {
         </div>
       </div>
 
-      {/* Referanslar */}
-      <div className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Boy Tipi Turnike Referanslarımız
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Havalimanları, metro istasyonları ve yüksek güvenlik alanlarında tercih edilen boy tipi turnike sistemlerimiz.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 xs:gap-3 sm:gap-4">
-            {referansResimler.map((resim, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.1 }}
-                className="aspect-square rounded-md xs:rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
-              >
-                <img 
-                  src={resim}
-                  alt={`Boy Tipi Turnike Referans ${index + 1}`}
-                  className="w-full h-full object-cover xs:object-contain sm:object-cover bg-gray-100 hover:scale-105 transition-transform duration-300"
-                  loading="lazy"
-                />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <TurnikeReferanslari />
 
       {/* Call to Action */}
       <div className="py-16 bg-slate-900 text-white">

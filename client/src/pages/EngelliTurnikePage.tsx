@@ -14,6 +14,7 @@ import {
   Clock
 } from "lucide-react";
 import { ENGELLI_TURNIKE_IMAGES } from "@/assetsMap";
+import TurnikeReferanslari from "@/components/TurnikeReferanslari";
 import { Link } from "wouter";
 
 export default function EngelliTurnikePage() {
@@ -100,17 +101,6 @@ export default function EngelliTurnikePage() {
       price: "Fiyat İçin Ara",
       description: "Turnike sistemleri için alan ayırıcı seperatör. Düzenli sıra oluşturma ve alan yönetimi için ideal."
     }
-  ];
-
-  const referansResimler = [
-    "/ref-1.png",
-    "/ref-2.png", 
-    "/ref-3.png",
-    "/ref-4.png",
-    "/ref-5.png",
-    "/ref-6.png",
-    "/ref-7.png",
-    "/ref-8.png"
   ];
 
   return (
@@ -289,38 +279,7 @@ export default function EngelliTurnikePage() {
         </div>
       </div>
 
-      {/* Referanslar */}
-      <div className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Engelli Turnike Referanslarımız
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Kamu binaları, alışveriş merkezleri ve özel kurumlarda engelli dostu geçiş sistemlerimiz.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 xs:gap-3 sm:gap-4">
-            {referansResimler.map((resim, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.1 }}
-                className="aspect-square rounded-md xs:rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
-              >
-                <img 
-                  src={resim}
-                  alt={`Engelli Turnike Referans ${index + 1}`}
-                  className="w-full h-full object-cover xs:object-contain sm:object-cover bg-gray-100 hover:scale-105 transition-transform duration-300"
-                  loading="lazy"
-                />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <TurnikeReferanslari />
 
       {/* Call to Action */}
       <div className="py-16 bg-gradient-to-r from-primary to-slate-800 text-white">

@@ -304,11 +304,11 @@ export default function AccessControlSystemPage() {
                 </div>
                 <div className="p-6 bg-slate-50">
                   <img 
-                    src="/pdks-dashboard-interface.png" 
-                    alt="Mika Teknoloji PDKS Dashboard - Personel Takip ve Güvenlik Kontrol Sistemi"
+                    src="/images/urun/gecis-kontrol-paneli.jpg" 
+                    alt="Mika geçiş kontrol paneli: günlük giriş sayıları ve hata oranları"
                     className="w-full h-auto object-contain rounded-xl shadow-lg"
-                    width="800"
-                    height="600"
+                    width="1400"
+                    height="629"
                   />
                 </div>
               </div>

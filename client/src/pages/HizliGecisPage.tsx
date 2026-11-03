@@ -15,6 +15,7 @@ import {
   Activity
 } from "lucide-react";
 import { HIZLI_GECIS_TURNIKE_IMAGES } from "@/assetsMap";
+import TurnikeReferanslari from "@/components/TurnikeReferanslari";
 import { Link } from "wouter";
 
 export default function HizliGecisPage() {
@@ -101,17 +102,6 @@ export default function HizliGecisPage() {
       price: "Fiyat İçin Ara",
       description: "Uzun kasalı SLIM tasarım. Kurumsal binalar ve güvenlik odaklı alanlar için gelişmiş çözüm."
     }
-  ];
-
-  const referansResimler = [
-    "/ref-1.png",
-    "/ref-2.png", 
-    "/ref-3.png",
-    "/ref-4.png",
-    "/ref-5.png",
-    "/ref-6.png",
-    "/ref-7.png",
-    "/ref-8.png"
   ];
 
   return (
@@ -301,40 +291,7 @@ export default function HizliGecisPage() {
         </div>
       </div>
 
-      {/* Referanslar */}
-      <div className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Hızlı Geçiş Turnike Referanslarımız
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Havaalanları, metro istasyonları ve büyük alışveriş merkezlerinde hızlı geçiş sistemlerimiz.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 xs:gap-3 sm:gap-4">
-            {referansResimler.map((resim, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.1 }}
-                className="group"
-              >
-                <div className="aspect-square overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
-                  <img 
-                    src={resim} 
-                    alt={`Referans ${index + 1}`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    loading="lazy"
-                  />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <TurnikeReferanslari />
 
       {/* CTA Section */}
       <div className="py-16 bg-primary text-white">

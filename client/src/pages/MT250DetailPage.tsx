@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { BEL_TURNIKE_IMAGES } from "@/assetsMap";
 import { Link } from "wouter";
+import TurnikeReferanslari from "@/components/TurnikeReferanslari";
 
 export default function MT250DetailPage() {
   
@@ -73,15 +74,6 @@ export default function MT250DetailPage() {
       title: "LED Yönlendirme",
       description: "Kırmızı çarpı ve yeşil ok ile geçiş yön gösterimi"
     }
-  ];
-
-  const referansResimler = [
-    "/images/blog/pdks-1.png",
-    "/images/blog/pdks-3.png", 
-    "/images/blog/pdks-2.png",
-    "/images/blog/pdks-6.png",
-    "/images/blog/pdks-5.png",
-    "/images/blog/pdks-7.png"
   ];
 
   return (
@@ -371,32 +363,8 @@ export default function MT250DetailPage() {
             </Card>
           </motion.div>
 
-          {/* References */}
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.8 }}
-            className="mb-16"
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Turnike Sistemi Referanslarımız</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {referansResimler.map((resim, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.9 + index * 0.1 }}
-                  className="aspect-square rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
-                >
-                  <img 
-                    src={resim}
-                    alt={`Referans ${index + 1}`}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+          {/* Referanslar */}
+          <TurnikeReferanslari />
 
           {/* Call to Action */}
           <motion.div

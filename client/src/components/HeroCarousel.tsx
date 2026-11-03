@@ -1,104 +1,66 @@
 import { useState, useEffect, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ChevronLeft, ChevronRight, Smartphone, Shield, Eye, Scan } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'wouter';
 
-// Carousel images from public folder
-const qrTrackingImage = '/QR_personnel_tracking_system_26b366a7.png';
-const turnstileImage = '/Modern_turnstile_security_system_b933269f.png';
-const securityPatrolImage = '/Security_guard_patrol_tracking_5c5b9b52.png';
-const xrayImage = '/X-ray_security_scanner_system_9ebbd7d1.png';
-
+// Slaytlarda yalnız gerçek ürün fotoğrafı ve gerçek (KVKK maskeli) program ekranı kullanılır.
 interface CarouselSlide {
   id: number;
   title: string;
   subtitle: string;
   description: string;
   features: string[];
-  icon: any;
   image: string;
+  imageAlt: string;
   href: string;
-  bgGradient: string;
-  overlayColor: string;
 }
 
 const slides: CarouselSlide[] = [
   {
     id: 1,
-    title: "QR PERSONEL TAKİP SİSTEMİ",
-    subtitle: "Cloud & Web Tabanlı PDKS Sistemi",
-    description: "Modern işletmeler için tam otomatik personel devam kontrol çözümü",
-    features: [
-      "WEB TABANLI PERSONEL TAKİP SİSTEMİ",
-      "KURULUM YOK & EVDEN - MOBİL CİHAZLARDAN TAKİP",
-      "KURULUM VE EĞİTİM DESTEĞİ",
-      "AYLIK PUANTAJ VE EXCEL RAPORLARI"
-    ],
-    icon: Smartphone,
-    image: qrTrackingImage,
+    title: "QR Personel Takip Sistemi",
+    subtitle: "Bulut ve web tabanlı PDKS",
+    description: "Personel giriş-çıkışı telefondan QR kod ile; kurulum gerektirmez.",
+    features: ["Web tabanlı personel takibi", "Mobil cihazlardan takip", "Aylık puantaj ve Excel raporları"],
+    image: "/images/slayt/qr-pdks-mobil.jpg",
+    imageAlt: "Mika QR PDKS mobil uygulama ekranı",
     href: "/qr-pdks",
-    bgGradient: "from-slate-900 to-slate-800",
-    overlayColor: "bg-blue-900/40"
   },
   {
     id: 2,
-    title: "TURNİKE SİSTEMLERİ",
-    subtitle: "Akıllı Geçiş Kontrol Teknolojisi",
-    description: "Yüksek güvenlik standartlarında modern turnike çözümleri",
-    features: [
-      "RFID VE BİYOMETRİK ENTEGRASYON",
-      "UZAKTAN İZLEME VE KONTROL",
-      "HIZLI VE GÜVENİLİR GEÇİŞ",
-      "TEKNİK DESTEK HİZMETİ"
-    ],
-    icon: Shield,
-    image: turnstileImage,
+    title: "Turnike Sistemleri",
+    subtitle: "Bel tipi, boy tipi ve hızlı geçiş",
+    description: "Kartlı, QR ve biyometrik okuyucularla çalışan turnike çözümleri.",
+    features: ["RFID ve biyometrik entegrasyon", "Uzaktan izleme ve kontrol", "Kurulum ve teknik destek"],
+    image: "/images/slayt/turnike-t345.jpg",
+    imageAlt: "T345 elektromekanik bel tipi turnike",
     href: "/turnike-sistemleri",
-    bgGradient: "from-slate-900 to-slate-800",
-    overlayColor: "bg-emerald-900/40"
   },
   {
     id: 3,
-    title: "BEKÇİ KONTROL SİSTEMİ",
-    subtitle: "QR-Patrol Mobil Devriye Takibi",
-    description: "Güvenlik personeli için gerçek zamanlı konum ve rota takibi",
-    features: [
-      "CANLI KONUM TAKİBİ",
-      "OTOMATIK RAPOR OLUŞTURMA",
-      "ACİL DURUM ALARM SİSTEMİ",
-      "iOS & ANDROID UYUMLU"
-    ],
-    icon: Eye,
-    image: securityPatrolImage,
-    href: "/cozumler/bekci-kontrol",
-    bgGradient: "from-slate-900 to-slate-800",
-    overlayColor: "bg-primary/40"
+    title: "Yüz Tanıma Cihazları",
+    subtitle: "Temassız PDKS terminalleri",
+    description: "Yüz, parmak izi ve kart ile giriş-çıkış kaydı; veriler doğrudan programa aktarılır.",
+    features: ["Yüz ve parmak izi okuma", "Kart okuyucu desteği", "Bulut PDKS ile anlık aktarım"],
+    image: "/images/slayt/yuz-tanima-cihazi.jpg",
+    imageAlt: "Yüz tanıma ve parmak izi PDKS cihazı",
+    href: "/urunler/yuz-tanima",
   },
   {
     id: 4,
-    title: "X-RAY GÜVENLİK SİSTEMLERİ",
-    subtitle: "İleri Teknoloji Tarama Çözümleri",
-    description: "Profesyonel X-Ray bagaj ve güvenlik tarama sistemleri",
-    features: [
-      "YÜKSEK ÇÖZÜNÜRLÜK GÖRÜNTÜ",
-      "OTOMATİK TEHDİT ALGILAMA",
-      "HIZLI VE ETKİLİ TARAMA",
-      "ULUSLARARASI STANDARTLAR"
-    ],
-    icon: Scan,
-    image: xrayImage,
-    href: "/iletisim",
-    bgGradient: "from-slate-900 to-slate-800",
-    overlayColor: "bg-red-900/40"
-  }
+    title: "Bulut PDKS Programı",
+    subtitle: "Puantaj, izin ve vardiya tek ekranda",
+    description: "Giriş-çıkış kayıtları, izinler ve fazla mesai otomatik hesaplanır.",
+    features: ["Otomatik puantaj", "İzin ve vardiya yönetimi", "Excel raporları"],
+    image: "/images/slayt/bulut-pdks-paneli.jpg",
+    imageAlt: "Mika bulut PDKS programı giriş-çıkış listesi",
+    href: "/pdks-programi",
+  },
 ];
 
 export default function HeroCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
-    loop: true
-  });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const scrollPrev = useCallback(() => {
@@ -122,11 +84,10 @@ export default function HeroCarousel() {
     if (!emblaApi) return;
     onSelect();
     emblaApi.on('select', onSelect);
-    
-    // Auto-scroll
+
     const autoScroll = setInterval(() => {
       emblaApi.scrollNext();
-    }, 5000);
+    }, 6000);
 
     return () => {
       clearInterval(autoScroll);
@@ -135,137 +96,59 @@ export default function HeroCarousel() {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="relative min-h-screen overflow-hidden">
-      {/* Geometric Background Elements */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-20 right-10 w-32 h-32 bg-blue-200/30 transform rotate-45 rounded-lg animate-pulse"></div>
-        <div className="absolute bottom-20 left-10 w-24 h-24 bg-primary/20 transform rotate-12 rounded-full animate-bounce"></div>
-        <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-green-200/30 transform -rotate-12 rounded-lg animate-pulse delay-1000"></div>
-        <div className="absolute top-1/3 left-1/4 w-20 h-20 bg-slate-200/30 transform rotate-45 rounded-full animate-bounce delay-500"></div>
-      </div>
-
-      {/* Carousel */}
-      <div className="overflow-hidden relative z-10" ref={emblaRef}>
+    <section className="relative overflow-hidden bg-slate-900 border-b-4 border-primary">
+      <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {slides.map((slide, index) => (
-            <div key={slide.id} className="flex-[0_0_100%] min-w-0 relative">
-              {/* Background Gradient */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${slide.bgGradient}`}></div>
-              
-              {/* Overlay */}
-              <div className={`absolute inset-0 ${slide.overlayColor} backdrop-blur-sm`}></div>
-              
-              {/* Hexagon Pattern Overlay */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-10 left-1/4 w-20 h-20 border-2 border-white transform rotate-45"></div>
-                <div className="absolute bottom-20 right-1/3 w-16 h-16 border border-white transform rotate-12"></div>
-                <div className="absolute top-1/3 right-10 w-24 h-24 border-2 border-white transform -rotate-12"></div>
-                <div className="absolute bottom-1/3 left-10 w-18 h-18 border border-white transform rotate-45"></div>
-              </div>
+            <div
+              key={slide.id}
+              className="flex-[0_0_100%] min-w-0"
+              aria-roledescription="slayt"
+              aria-hidden={selectedIndex !== index}
+            >
+              <div className="container mx-auto px-4 pt-14 pb-24 lg:py-20 grid lg:grid-cols-2 gap-10 items-center min-h-[560px]">
+                <div>
+                  <span className="text-sm font-semibold tracking-wider uppercase text-primary">
+                    Mika Teknoloji
+                  </span>
+                  <h2 className="mt-3 text-4xl md:text-5xl font-bold text-white leading-tight">
+                    {slide.title}
+                  </h2>
+                  <p className="mt-3 text-xl text-slate-300">{slide.subtitle}</p>
+                  <p className="mt-6 text-lg text-slate-300 leading-relaxed max-w-xl">
+                    {slide.description}
+                  </p>
+                  <ul className="mt-6 space-y-2">
+                    {slide.features.map((feature) => (
+                      <li key={feature} className="flex items-center gap-3 text-slate-200">
+                        <span className="h-1.5 w-1.5 bg-primary shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                    <Button asChild size="lg" data-testid="hero-detail-button">
+                      <Link href={slide.href} tabIndex={selectedIndex === index ? 0 : -1}>
+                        Detayları İncele
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </Button>
+                    <Button asChild size="lg" variant="outlineLight">
+                      <Link href="/iletisim" tabIndex={selectedIndex === index ? 0 : -1}>
+                        Teklif Al
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
 
-              {/* Professional Background Image */}
-              <div className="absolute inset-0 z-10">
-                <img 
-                  src={slide.image} 
-                  alt={slide.title}
-                  className="w-full h-full object-cover"
-                />
-                {/* Professional overlay with gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
-              </div>
-
-              {/* Content Overlay */}
-              <div className="relative z-20 min-h-screen flex items-center">
-                <div className="container mx-auto px-4">
-                  <div className="max-w-4xl">
-                    {/* Corporate Header Section */}
-                    <motion.div 
-                      className="mb-12"
-                      initial={{ opacity: 0, y: -50 }}
-                      animate={{ 
-                        opacity: selectedIndex === index ? 1 : 0, 
-                        y: selectedIndex === index ? 0 : -30 
-                      }}
-                      transition={{ duration: 0.8, delay: 0.2 }}
-                    >
-                      {/* Corporate Badge */}
-                      <div className="inline-flex items-center bg-primary/90 backdrop-blur-sm px-6 py-2 rounded-full mb-6 border border-white/20">
-                        <div className="w-3 h-3 bg-white rounded-full mr-3 animate-pulse"></div>
-                        <span className="text-white font-medium text-sm tracking-wider uppercase">
-                          Mika Teknoloji Çözümleri
-                        </span>
-                      </div>
-                      
-                      {/* Clean Main Title */}
-                      <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
-                        {slide.title}
-                      </h2>
-                      
-                      {/* Clean Subtitle */}
-                      <h3 className="text-xl md:text-2xl text-white/90 font-light mb-6">
-                        {slide.subtitle}
-                      </h3>
-                    </motion.div>
-
-                    {/* Clean Description */}
-                    <motion.div 
-                      className="mb-8"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ 
-                        opacity: selectedIndex === index ? 1 : 0, 
-                        y: selectedIndex === index ? 0 : 20 
-                      }}
-                      transition={{ duration: 0.8, delay: 0.6 }}
-                    >
-                      <p className="text-white/90 text-xl md:text-2xl font-light leading-relaxed max-w-2xl">
-                        {slide.description}
-                      </p>
-                      
-                      {/* Subtle feature highlights */}
-                      <div className="flex flex-wrap gap-3 mt-6">
-                        {slide.features.slice(0, 3).map((feature, idx) => (
-                          <div key={idx} className="bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
-                            <span className="text-white/80 text-sm font-medium">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </motion.div>
-
-                    {/* Clean CTA Section */}
-                    <motion.div
-                      className="flex flex-col sm:flex-row gap-6 items-start"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ 
-                        opacity: selectedIndex === index ? 1 : 0, 
-                        y: selectedIndex === index ? 0 : 20 
-                      }}
-                      transition={{ duration: 0.8, delay: 0.8 }}
-                    >
-                      <Button 
-                        asChild 
-                        size="lg" 
-                        className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-2xl hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-                        data-testid="hero-detail-button"
-                      >
-                        <Link href={slide.href} className="flex items-center">
-                          <span>{slide.href === "/iletisim" ? "Bilgi Alın" : "Detayları İncele"}</span>
-                          <ArrowRight className="ml-3 h-5 w-5" />
-                        </Link>
-                      </Button>
-                      
-                      <Button 
-                        asChild 
-                        variant="outlineLight" 
-                        size="lg" 
-                        className="px-8 py-4 rounded-xl font-semibold text-lg"
-                      >
-                        <Link href="/iletisim" className="flex items-center">
-                          <span>Teklif Al</span>
-                        </Link>
-                      </Button>
-                    </motion.div>
-
+                <div className="hidden lg:flex items-center justify-center">
+                  <div className="bg-white rounded-xl p-6 shadow-2xl max-w-full">
+                    <img
+                      src={slide.image}
+                      alt={slide.imageAlt}
+                      className="block max-h-[400px] w-auto max-w-full object-contain"
+                      loading={index === 0 ? 'eager' : 'lazy'}
+                    />
                   </div>
                 </div>
               </div>
@@ -274,35 +157,36 @@ export default function HeroCarousel() {
         </div>
       </div>
 
-      {/* Navigation Controls */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
-        <div className="flex items-center space-x-4 bg-black/30 backdrop-blur-lg rounded-full px-6 py-3">
-          <button 
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10">
+        <div className="flex items-center gap-4 bg-slate-800 border border-slate-700 rounded-full px-5 py-2">
+          <button
+            type="button"
             onClick={scrollPrev}
-            className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-200"
+            aria-label="Önceki slayt"
+            className="p-1.5 rounded-full hover:bg-slate-700 transition-colors"
             data-testid="carousel-prev"
           >
             <ChevronLeft className="h-5 w-5 text-white" />
           </button>
-          
-          <div className="flex space-x-2">
-            {slides.map((_, index) => (
+          <div className="flex gap-2">
+            {slides.map((slide, index) => (
               <button
-                key={index}
+                type="button"
+                key={slide.id}
                 onClick={() => scrollTo(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                  selectedIndex === index 
-                    ? 'bg-white w-8' 
-                    : 'bg-white/50 hover:bg-white/70'
+                aria-label={`${index + 1}. slayt: ${slide.title}`}
+                className={`h-2 rounded-full transition-all duration-200 ${
+                  selectedIndex === index ? 'bg-white w-8' : 'bg-white/50 hover:bg-white/70 w-2'
                 }`}
                 data-testid={`carousel-dot-${index}`}
               />
             ))}
           </div>
-          
-          <button 
+          <button
+            type="button"
             onClick={scrollNext}
-            className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-200"
+            aria-label="Sonraki slayt"
+            className="p-1.5 rounded-full hover:bg-slate-700 transition-colors"
             data-testid="carousel-next"
           >
             <ChevronRight className="h-5 w-5 text-white" />

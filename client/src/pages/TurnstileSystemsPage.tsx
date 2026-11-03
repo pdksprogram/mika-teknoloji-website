@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
+import TurnikeReferanslari from "@/components/TurnikeReferanslari";
 import SEO from "@/seo/SEO";
 
 // Turnike kategori görselleri - Parmak izi sayfası mantığı
@@ -12,9 +13,6 @@ const hizliGecisTurnike = "/mt-hizli-gecis-turnike.png";
 const hijyenTurnike = "/mt-hijyen-turnike.png";
 const jetonluTurnike = "/mt-jetonlu-turnike.png";
 
-// Referans görselleri (placeholder)
-const referans1 = "/Modern_turnstile_security_system_b933269f.png";
-const referans2 = "/Modern_turnstile_security_system_b933269f.png";
 
 const turnstileCategories = [
   {
@@ -61,16 +59,6 @@ const turnstileCategories = [
   }
 ];
 
-const references = [
-  { id: 1, image: referans1 },
-  { id: 2, image: referans2 },
-  { id: 3, image: referans1 },
-  { id: 4, image: referans2 },
-  { id: 5, image: referans1 },
-  { id: 6, image: referans2 },
-  { id: 7, image: referans1 },
-  { id: 8, image: referans2 }
-];
 
 const productJsonLd = {
   "@context": "https://schema.org",
@@ -151,46 +139,7 @@ export default function TurnstileSystemsPage() {
         </div>
       </section>
 
-      {/* Referanslar */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Turnike Sistemi Referanslarımız
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Farklı sektörlerden kurumlara turnike sistemleri kurulumu gerçekleştirdik.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {references.map((ref, index) => (
-              <motion.div
-                key={ref.id}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
-              >
-                <div className="aspect-square p-4 bg-gray-50">
-                  <img 
-                    src={ref.image} 
-                    alt={`Turnike Sistemi Referansı ${ref.id}`}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TurnikeReferanslari />
 
       {/* Turnike Sistemleri Açıklama */}
       <section className="py-16">

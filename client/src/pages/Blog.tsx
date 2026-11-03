@@ -18,7 +18,7 @@ export default function Blog() {
       category: "PDKS",
       readTime: "8 dk okuma",
       slug: "pdks-sistemleri-nedir-2025-rehberi",
-      image: "/images/blog/pdks-1.png",
+      image: "/images/slayt/bulut-pdks-paneli.jpg",
       keywords: "PDKS sistemleri, personel devam kontrol sistemi, PDKS nedir, personel takip sistemi"
     },
     {
@@ -54,7 +54,7 @@ export default function Blog() {
       category: "Biyometri",
       readTime: "9 dk okuma",
       slug: "parmak-izi-okuyucu-pdks-biyometrik-personel-takip",
-      image: "/images/blog/pdks-4.png",
+      image: "/images/urun/parmak-izi-cihazi.jpg",
       keywords: "parmak izi okuyucu, biyometrik PDKS, personel takip sistemi, parmak izi PDKS"
     },
     {
@@ -66,7 +66,7 @@ export default function Blog() {
       category: "Yapay Zeka",
       readTime: "10 dk okuma",
       slug: "yuz-tanima-sistemleri-3d-teknoloji-temassiz-pdks",
-      image: "/images/blog/pdks-5.png",
+      image: "/images/urun/proper-yuz-tanima.jpg",
       keywords: "yüz tanıma sistemi, temassız PDKS, 3D yüz tanıma, facial recognition"
     },
     {
@@ -90,7 +90,7 @@ export default function Blog() {
       category: "WebPDKS",
       readTime: "6 dk okuma",
       slug: "webpdks-cloud-sistemi-bulut-tabanli-personel-yonetimi",
-      image: "/images/blog/pdks-7.png",
+      image: "/images/slayt/bulut-pdks-paneli.jpg",
       keywords: "WebPDKS, cloud PDKS, web tabanlı personel takip, bulut PDKS"
     },
     {
