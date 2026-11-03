@@ -114,13 +114,6 @@ export default function WhatsAppWidget() {
           )}
         </AnimatePresence>
 
-        {/* Pulse effect */}
-        {!isOpen && (
-          <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-75"></span>
-        )}
-
-        {/* Badge with notification dot */}
-        <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white animate-pulse"></span>
       </motion.button>
 
       {/* Tooltip */}
@@ -129,7 +122,7 @@ export default function WhatsAppWidget() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5 }}
-          className="absolute right-20 top-1/2 -translate-y-1/2 bg-gray-900 text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap shadow-lg"
+          className="hidden sm:block absolute right-20 top-1/2 -translate-y-1/2 bg-gray-900 text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap shadow-lg"
         >
           WhatsApp ile konuşun
           <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full">

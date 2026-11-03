@@ -65,10 +65,26 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
+      // Açık mega menü kaydırmada kapanır.
+      setIsDropdownOpen(false);
+      setActiveMenuType(null);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Mega menü dışına tıklanınca (dokunmatik ekran dahil) kapanır.
+  useEffect(() => {
+    if (!isDropdownOpen) return;
+    const disTiklama = (e: PointerEvent) => {
+      const hedef = e.target as Element | null;
+      if (hedef && hedef.closest("[data-mega-menu]")) return;
+      setIsDropdownOpen(false);
+      setActiveMenuType(null);
+    };
+    document.addEventListener("pointerdown", disTiklama);
+    return () => document.removeEventListener("pointerdown", disTiklama);
+  }, [isDropdownOpen]);
 
   // Close mobile menu when location changes
   useEffect(() => {
@@ -188,18 +204,18 @@ export default function Header() {
       <div className="bg-primary text-white py-2 text-sm">
         <div className="container mx-auto px-4">
           <div className="flex items-center relative">
-            <div className="flex-1 flex justify-center">
+            <div className="flex-1 min-w-0 flex justify-center sm:px-24">
               <a 
                 href="https://wa.me/905467122296" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="font-bold hover:text-white/90 transition-colors"
+                className="block min-w-0 truncate font-bold hover:text-white/90 transition-colors"
                 data-testid="promo-banner"
               >
                 {t.promo}
               </a>
             </div>
-            <div className="absolute right-0 flex items-center space-x-2">
+            <div className="hidden sm:flex absolute right-0 items-center space-x-2">
               <Button 
                 asChild 
                 size="sm"
@@ -243,6 +259,7 @@ export default function Header() {
                 <div
                   key={item.href}
                   className="relative"
+                  data-mega-menu={item.hasDropdown ? "" : undefined}
                   onMouseEnter={!isTouchDevice ? () => {
                     if (item.hasDropdown && item.menuType) {
                       setIsDropdownOpen(true);
@@ -384,7 +401,8 @@ export default function Header() {
               <Button 
                 asChild 
                 size="sm"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4"
+                variant="outline"
+                className="px-4"
                 data-testid="webpdks-button"
               >
                 <a href="https://pdkspersoneltakip.com/" target="_blank" rel="noopener noreferrer">WebPDKS</a>
@@ -471,7 +489,8 @@ export default function Header() {
                 <div className="pt-4 border-t space-y-3">
                   <Button 
                     asChild 
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                    variant="outline"
+                    className="w-full"
                     data-testid="mobile-webpdks-button"
                   >
                     <a href="https://pdkspersoneltakip.com/" target="_blank" rel="noopener noreferrer">WebPDKS</a>

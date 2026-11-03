@@ -1,465 +1,47 @@
-import { Building, Globe, Timer, Smartphone, ArrowRight, Shield, Database, Wifi, Fingerprint, BarChart3, Network, Cpu, Gauge } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { Card } from "@/components/ui/card";
 import SEO from "@/seo/SEO";
-// Removed problematic import
-// Removed problematic import
-// Removed problematic import
-// Removed problematic import
-// Removed problematic import
+import { Kirinti, kirintiJsonLd, type KirintiMaddesi } from "@/components/PdksIcerik";
+
+const KIRINTI: KirintiMaddesi[] = [
+  { ad: "Ana Sayfa", yol: "/" },
+  { ad: "Hakkımızda", yol: "/hakkimizda" },
+];
 
 export default function About() {
   const stats = [
-    { icon: Building, value: "İstanbul", label: "Merkez Ofis" },
-    { icon: Globe, value: "Türkiye", label: "Genelinde Hizmet" },
-    { icon: Database, value: "Web", label: "Tabanlı PDKS" },
-    { icon: Smartphone, value: "Mobil", label: "PDKS Uygulaması" }
+    { value: "İstanbul", label: "Merkez ofis" },
+    { value: "Türkiye geneli", label: "Hizmet alanı" },
+    { value: "Web PDKS", label: "Yazılım" },
+    { value: "Mobil PDKS", label: "Uygulama" }
   ];
 
   return (
-    <div className="min-h-screen py-20">
-      <SEO title="Hakkımızda | Mika Teknoloji" description="PDKS personel devam kontrol yazılımı, kartlı geçiş, turnike ve bariyer sistemleri üreten Mika Teknoloji hakkında." />
-      <h1 className="sr-only">Hakkımızda | Mika Teknoloji</h1>
-      <div className="container mx-auto px-4">
-        {/* Corporate Hero Section - Idenfit Style */}
-        <section className="mb-20">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              {/* Quote Content */}
-              <motion.div
-                initial={{ opacity: 0, x: -40 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <div className="relative">
-                  <div className="text-6xl text-primary/20 font-serif absolute -top-6 -left-4">"</div>
-                  <blockquote className="text-2xl md:text-3xl font-semibold text-slate-700 leading-relaxed mb-8 relative z-10">
-                    <span className="text-primary">Hedefimiz</span>, güvenilir bir teknoloji
-                    markası olarak <span className="text-primary">mobil PDKS</span> ve
-                    kontrol sistemleri alanında <span className="text-primary">yenilikçi</span> çözümler üretmek.
-                  </blockquote>
-                  <div className="flex items-center mb-8">
-                    <div className="w-12 h-1 bg-primary mr-4"></div>
-                    <cite className="text-lg font-medium text-slate-600 not-italic">Mika Teknoloji Ekibi</cite>
-                  </div>
-                </div>
-                
-                <motion.div 
-                  className="mt-8"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                >
-                  <Button 
-                    asChild 
-                    size="lg"
-                    className="bg-primary hover:bg-primary/90 text-white px-8 py-3 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
-                    data-testid="contact-button"
-                  >
-                    <a href="/iletisim">
-                      Hemen Başvur <ArrowRight className="ml-2 h-5 w-5" />
-                    </a>
-                  </Button>
-                </motion.div>
-              </motion.div>
+    <div className="min-h-screen bg-white">
+      <SEO
+        title="Hakkımızda | Mika Teknoloji"
+        description="PDKS personel devam kontrol yazılımı, kartlı geçiş, turnike ve bariyer sistemleri üreten Mika Teknoloji hakkında."
+        jsonLd={kirintiJsonLd(KIRINTI)}
+      />
+      <Kirinti maddeler={KIRINTI} icSinif="pb-4" />
 
-              {/* Advanced Tech Visual */}
-              <motion.div
-                className="relative"
-                initial={{ opacity: 0, x: 40 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
-                <div className="relative flex justify-center items-center min-h-[500px] overflow-hidden" style={{ perspective: '1000px' }}>
-                  
-                  {/* Main Central Hub */}
-                  <div className="relative z-20">
-                    <motion.div 
-                      className="w-40 h-40 bg-gradient-to-br from-primary/90 to-slate-800/90 rounded-full flex items-center justify-center shadow-2xl"
-                      animate={{ 
-                        rotate: 360,
-                        rotateY: [0, 180, 360],
-                        scale: [1, 1.05, 1]
-                      }}
-                      transition={{ 
-                        rotate: { duration: 20, repeat: Infinity, ease: "linear" },
-                        rotateY: { duration: 15, repeat: Infinity, ease: "easeInOut" },
-                        scale: { duration: 8, repeat: Infinity, ease: "easeInOut" }
-                      }}
-                      style={{ transformStyle: 'preserve-3d' }}
-                    >
-                      <motion.div 
-                        className="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-inner"
-                        animate={{
-                          rotateX: [0, 15, -15, 0]
-                        }}
-                        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                        style={{ transformStyle: 'preserve-3d' }}
-                      >
-                        <motion.div
-                          animate={{ rotateZ: [0, 360] }}
-                          transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                        >
-                          <Timer className="h-16 w-16 text-primary" />
-                        </motion.div>
-                      </motion.div>
-                      {/* Orbiting dots */}
-                      <motion.div 
-                        className="absolute w-4 h-4 bg-yellow-400 rounded-full"
-                        animate={{ rotate: -360 }}
-                        transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                        style={{ top: '-8px', left: '50%', transformOrigin: '50% 88px' }}
-                      />
-                      <motion.div 
-                        className="absolute w-3 h-3 bg-blue-400 rounded-full"
-                        animate={{ rotate: -360 }}
-                        transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-                        style={{ bottom: '-6px', right: '20%', transformOrigin: '50% -76px' }}
-                      />
-                    </motion.div>
-                  </div>
-
-                  {/* Tech Ecosystem Elements */}
-                  
-                  {/* Database Cluster */}
-                  <motion.div 
-                    className="absolute top-12 left-8 z-15"
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
-                  >
-                    <div className="relative">
-                      <motion.div 
-                        className="w-20 h-20 bg-blue-500/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-blue-200"
-                        animate={{
-                          rotateY: [0, 15, -15, 0],
-                          rotateX: [0, -10, 10, 0]
-                        }}
-                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                        style={{ transformStyle: 'preserve-3d' }}
-                      >
-                        <motion.div
-                          animate={{ scale: [1, 1.1, 1] }}
-                          transition={{ duration: 2, repeat: Infinity }}
-                        >
-                          <Database className="h-10 w-10 text-blue-600" />
-                        </motion.div>
-                      </motion.div>
-                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                      <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                        <div className="flex space-x-1">
-                          <div className="w-1 h-6 bg-blue-400 rounded-full animate-pulse"></div>
-                          <div className="w-1 h-4 bg-blue-300 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                          <div className="w-1 h-8 bg-blue-500 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-
-                  {/* Security Shield */}
-                  <motion.div 
-                    className="absolute top-8 right-12 z-15"
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.7 }}
-                  >
-                    <div className="relative">
-                      <motion.div 
-                        className="w-24 h-24 bg-red-500/20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-red-200"
-                        animate={{
-                          rotateZ: [12, 25, -5, 12],
-                          rotateY: [0, 20, -20, 0]
-                        }}
-                        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                        style={{ transformStyle: 'preserve-3d' }}
-                      >
-                        <motion.div
-                          animate={{ rotateX: [0, 10, -10, 0] }}
-                          transition={{ duration: 3, repeat: Infinity }}
-                        >
-                          <Shield className="h-12 w-12 text-red-600" />
-                        </motion.div>
-                      </motion.div>
-                      <motion.div 
-                        className="absolute inset-0 border-2 border-red-400 rounded-2xl"
-                        animate={{ scale: [1, 1.1, 1] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      />
-                      <div className="absolute -top-2 right-2 flex space-x-1">
-                        <div className="w-2 h-2 bg-red-400 rounded-full animate-ping"></div>
-                        <div className="w-2 h-2 bg-primary rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
-                      </div>
-                    </div>
-                  </motion.div>
-
-                  {/* Smart Device */}
-                  <motion.div 
-                    className="absolute bottom-12 right-16 z-25"
-                    initial={{ opacity: 0, rotateY: 90 }}
-                    animate={{ opacity: 1, rotateY: 0 }}
-                    transition={{ duration: 0.8, delay: 0.9 }}
-                  >
-                    <div className="relative">
-                      <motion.div 
-                        className="w-24 h-40 bg-slate-900 rounded-xl shadow-2xl p-2 border-2 border-slate-700"
-                        animate={{
-                          rotateY: [0, -15, 15, 0],
-                          rotateX: [0, 5, -5, 0]
-                        }}
-                        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                        style={{ transformStyle: 'preserve-3d' }}
-                      >
-                        {/* Screen */}
-                        <div className="w-full h-full bg-gradient-to-b from-slate-100 to-slate-200 rounded-lg relative overflow-hidden">
-                          {/* Status bar */}
-                          <div className="absolute top-1 left-2 right-2 h-2 bg-primary/30 rounded-full"></div>
-                          
-                          {/* App icons */}
-                          <div className="absolute top-6 left-2 right-2 grid grid-cols-3 gap-2">
-                            <div className="w-3 h-3 bg-blue-500 rounded-sm flex items-center justify-center">
-                              <Smartphone className="w-2 h-2 text-white" />
-                            </div>
-                            <div className="w-3 h-3 bg-green-500 rounded-sm flex items-center justify-center">
-                              <Gauge className="w-2 h-2 text-white" />
-                            </div>
-                            <div className="w-3 h-3 bg-primary rounded-sm flex items-center justify-center">
-                              <BarChart3 className="w-2 h-2 text-white" />
-                            </div>
-                          </div>
-                          
-                          {/* Content lines */}
-                          <div className="absolute bottom-6 left-2 right-2 space-y-1">
-                            <motion.div 
-                              className="h-1 bg-primary/60 rounded-full"
-                              animate={{ width: ['60%', '80%', '60%'] }}
-                              transition={{ duration: 3, repeat: Infinity }}
-                            />
-                            <div className="h-1 bg-slate-400 rounded-full w-3/4"></div>
-                            <div className="h-1 bg-slate-300 rounded-full w-1/2"></div>
-                          </div>
-                          
-                          {/* Fingerprint scanner */}
-                          <div className="absolute bottom-1 right-1 w-4 h-4 bg-primary/20 rounded-full flex items-center justify-center">
-                            <Fingerprint className="w-2 h-2 text-primary" />
-                          </div>
-                        </div>
-                      </motion.div>
-                      
-                      {/* Signal waves */}
-                      <motion.div 
-                        className="absolute -top-4 left-1/2 transform -translate-x-1/2"
-                        animate={{ opacity: [0.3, 1, 0.3] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        <Wifi className="w-6 h-6 text-green-500" />
-                      </motion.div>
-                    </div>
-                  </motion.div>
-
-                  {/* Network Nodes */}
-                  <motion.div 
-                    className="absolute bottom-8 left-12 z-15"
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 1.1 }}
-                  >
-                    <div className="relative">
-                      <motion.div 
-                        className="w-18 h-18 bg-primary/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-slate-200"
-                        animate={{
-                          rotateX: [0, 360],
-                          rotateY: [0, -180]
-                        }}
-                        transition={{ 
-                          rotateX: { duration: 12, repeat: Infinity, ease: "linear" },
-                          rotateY: { duration: 8, repeat: Infinity, ease: "easeInOut" }
-                        }}
-                        style={{ transformStyle: 'preserve-3d' }}
-                      >
-                        <Network className="h-8 w-8 text-primary" />
-                      </motion.div>
-                      {/* Connection lines */}
-                      <svg className="absolute inset-0 w-full h-full" style={{ overflow: 'visible' }}>
-                        <motion.line 
-                          x1="50%" y1="50%" x2="200%" y2="10%"
-                          stroke="rgba(168, 85, 247, 0.4)" 
-                          strokeWidth="2"
-                          strokeDasharray="4,4"
-                          animate={{ strokeDashoffset: [0, 8] }}
-                          transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                        />
-                        <motion.line 
-                          x1="50%" y1="50%" x2="150%" y2="200%"
-                          stroke="rgba(168, 85, 247, 0.4)" 
-                          strokeWidth="2"
-                          strokeDasharray="4,4"
-                          animate={{ strokeDashoffset: [0, 8] }}
-                          transition={{ duration: 2, repeat: Infinity, ease: "linear", delay: 0.5 }}
-                        />
-                      </svg>
-                      {/* Pulse effect */}
-                      <motion.div 
-                        className="absolute inset-0 border-2 border-primary rounded-full"
-                        animate={{ scale: [1, 2], opacity: [1, 0] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      />
-                    </div>
-                  </motion.div>
-
-                  {/* CPU Processing Unit */}
-                  <motion.div 
-                    className="absolute top-20 right-8 z-10"
-                    initial={{ opacity: 0, rotateZ: 45 }}
-                    animate={{ opacity: 1, rotateZ: 0 }}
-                    transition={{ duration: 0.8, delay: 1.3 }}
-                  >
-                    <div className="relative">
-                      <motion.div 
-                        className="w-16 h-16 bg-green-500/20 rounded-lg flex items-center justify-center backdrop-blur-sm border border-green-200"
-                        animate={{
-                          rotateZ: [0, 90, 180, 270, 360],
-                          rotateX: [0, 20, -20, 0]
-                        }}
-                        transition={{ 
-                          rotateZ: { duration: 10, repeat: Infinity, ease: "linear" },
-                          rotateX: { duration: 4, repeat: Infinity, ease: "easeInOut" }
-                        }}
-                        style={{ transformStyle: 'preserve-3d' }}
-                      >
-                        <motion.div
-                          animate={{ scale: [1, 1.2, 1] }}
-                          transition={{ duration: 1.5, repeat: Infinity }}
-                        >
-                          <Cpu className="h-8 w-8 text-green-600" />
-                        </motion.div>
-                      </motion.div>
-                      {/* Processing indicators */}
-                      <div className="absolute -inset-2 grid grid-cols-2 gap-1">
-                        <motion.div 
-                          className="w-1 h-1 bg-green-400 rounded-full"
-                          animate={{ opacity: [1, 0, 1] }}
-                          transition={{ duration: 0.8, repeat: Infinity }}
-                        />
-                        <motion.div 
-                          className="w-1 h-1 bg-green-400 rounded-full"
-                          animate={{ opacity: [1, 0, 1] }}
-                          transition={{ duration: 0.8, repeat: Infinity, delay: 0.2 }}
-                        />
-                        <motion.div 
-                          className="w-1 h-1 bg-green-400 rounded-full"
-                          animate={{ opacity: [1, 0, 1] }}
-                          transition={{ duration: 0.8, repeat: Infinity, delay: 0.4 }}
-                        />
-                        <motion.div 
-                          className="w-1 h-1 bg-green-400 rounded-full"
-                          animate={{ opacity: [1, 0, 1] }}
-                          transition={{ duration: 0.8, repeat: Infinity, delay: 0.6 }}
-                        />
-                      </div>
-                    </div>
-                  </motion.div>
-
-                  {/* 3D Floating Particles */}
-                  {[...Array(12)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      className="absolute w-2 h-2 bg-primary/50 rounded-full shadow-lg"
-                      style={{
-                        left: `${15 + (i * 8) % 70}%`,
-                        top: `${10 + (i * 12) % 80}%`,
-                        transformStyle: 'preserve-3d'
-                      }}
-                      animate={{
-                        y: [-15, 20, -15],
-                        x: [-8, 8, -8],
-                        z: [-50, 50, -50],
-                        rotateX: [0, 360],
-                        rotateY: [0, -360],
-                        scale: [0.5, 1.2, 0.5],
-                        opacity: [0.3, 0.9, 0.3],
-                      }}
-                      transition={{
-                        duration: 4 + i * 0.5,
-                        repeat: Infinity,
-                        delay: i * 0.2,
-                        ease: "easeInOut"
-                      }}
-                    />
-                  ))}
-
-                  {/* 3D Background Gradient Orbs */}
-                  <div className="absolute inset-0 overflow-hidden" style={{ transformStyle: 'preserve-3d' }}>
-                    <motion.div 
-                      className="absolute w-32 h-32 bg-gradient-to-br from-primary/15 to-slate-800/15 rounded-full blur-xl shadow-2xl"
-                      style={{ top: '10%', left: '15%', transformStyle: 'preserve-3d' }}
-                      animate={{ 
-                        scale: [1, 1.3, 1], 
-                        rotate: [0, 180, 360],
-                        rotateX: [0, 45, -45, 0],
-                        rotateY: [0, -90, 90, 0],
-                        z: [-100, 100, -100]
-                      }}
-                      transition={{ 
-                        duration: 12, 
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                      }}
-                    />
-                    <motion.div 
-                      className="absolute w-28 h-28 bg-slate-900 rounded-full blur-xl shadow-xl"
-                      style={{ bottom: '20%', right: '20%', transformStyle: 'preserve-3d' }}
-                      animate={{ 
-                        scale: [1.2, 0.8, 1.2], 
-                        rotate: [360, 180, 0],
-                        rotateX: [0, -60, 60, 0],
-                        rotateZ: [0, 270, -270, 0],
-                        z: [50, -150, 50]
-                      }}
-                      transition={{ 
-                        duration: 15, 
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                      }}
-                    />
-                    <motion.div 
-                      className="absolute w-20 h-20 bg-slate-900 rounded-full blur-lg"
-                      style={{ top: '60%', left: '5%', transformStyle: 'preserve-3d' }}
-                      animate={{ 
-                        scale: [0.8, 1.5, 0.8], 
-                        rotateY: [0, 360],
-                        rotateZ: [0, -180, 0],
-                        z: [-80, 120, -80]
-                      }}
-                      transition={{ 
-                        duration: 18, 
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                      }}
-                    />
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Stats */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {stats.map((stat, index) => (
-            <Card key={index} className="text-center border-0 shadow-lg">
-              <CardHeader>
-                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="h-8 w-8 text-primary" />
-                </div>
-                <CardTitle className="text-3xl font-bold text-slate-800">{stat.value}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-slate-600 font-medium">{stat.label}</CardDescription>
-              </CardContent>
-            </Card>
-          ))}
+      <section className="bg-slate-900 border-b-4 border-primary text-white py-12">
+        <div className="container mx-auto px-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-3">Hakkımızda</h1>
+          <p className="text-slate-300 max-w-2xl">
+            İstanbul merkezli; PDKS yazılımı, geçiş kontrol, turnike ve bariyer sistemleri üreten teknoloji şirketi.
+          </p>
         </div>
+      </section>
+
+      <div className="container mx-auto px-4 py-16">
+        <dl className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-slate-200 border border-slate-200 rounded-lg overflow-hidden mb-20">
+          {stats.map((stat) => (
+            <div key={stat.label} className="bg-white px-6 py-5">
+              <dt className="text-sm text-slate-500">{stat.label}</dt>
+              <dd className="text-xl font-bold text-slate-900">{stat.value}</dd>
+            </div>
+          ))}
+        </dl>
 
         {/* Leadership Section */}
         <div className="mb-20">
@@ -478,7 +60,7 @@ export default function About() {
                     data-testid="leadership-photo"
                   />
                 </div>
-                <div className="p-8 flex flex-col justify-center bg-gradient-to-br from-slate-50 to-slate-100">
+                <div className="p-8 flex flex-col justify-center bg-slate-50">
                   <div className="space-y-4">
                     <div>
                       <h3 className="text-2xl font-bold text-slate-800 mb-2">
@@ -504,19 +86,19 @@ export default function About() {
                           Teknoloji Yetkinlikleri:
                         </h4>
                         <div className="flex flex-wrap gap-2">
-                          <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">
+                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
                             C++
                           </span>
-                          <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
                             Java
                           </span>
-                          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
                             ASP.NET
                           </span>
-                          <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
                             SQL
                           </span>
-                          <span className="px-3 py-1 bg-cyan-100 text-cyan-800 rounded-full text-sm font-medium">
+                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
                             React
                           </span>
                         </div>
@@ -540,7 +122,7 @@ export default function About() {
           
           <div className="max-w-3xl mx-auto">
             <Card className="border-0 shadow-xl overflow-hidden">
-              <div className="p-8 text-center bg-gradient-to-br from-slate-50 to-slate-100">
+              <div className="p-8 text-center bg-slate-50">
                 <div className="mb-6">
                   <img 
                     src="/images/about/leadership-2-kirpik.jpg" 
@@ -633,7 +215,7 @@ export default function About() {
                       <h3 className="text-2xl font-bold text-slate-800 mb-2">
                         Suphi Gezgin
                       </h3>
-                      <p className="text-lg font-semibold text-blue-600 mb-4">
+                      <p className="text-lg font-semibold text-primary mb-4">
                         Mobil Programlama Uzmanı
                       </p>
                     </div>
@@ -653,16 +235,16 @@ export default function About() {
                           Mobil Teknolojileri:
                         </h4>
                         <div className="flex flex-wrap gap-2">
-                          <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
                             Android
                           </span>
-                          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
                             iOS
                           </span>
-                          <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
                             React Native
                           </span>
-                          <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
                             Flutter
                           </span>
                         </div>
@@ -719,7 +301,7 @@ export default function About() {
                       <h3 className="text-2xl font-bold text-slate-800 mb-2">
                         Yasin Atılgan
                       </h3>
-                      <p className="text-lg font-semibold text-green-600 mb-4">
+                      <p className="text-lg font-semibold text-primary mb-4">
                         Satış Müdürü
                       </p>
                     </div>
@@ -739,16 +321,16 @@ export default function About() {
                           Satış Alanları:
                         </h4>
                         <div className="flex flex-wrap gap-2">
-                          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
                             PDKS Sistemleri
                           </span>
-                          <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
                             Erişim Kontrol
                           </span>
-                          <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
                             Guard MX
                           </span>
-                          <span className="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-medium">
+                          <span className="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded text-sm">
                             Turnike Sistemleri
                           </span>
                         </div>
@@ -817,7 +399,7 @@ export default function About() {
                 </p>
               </div>
               
-              <div className="bg-primary/5 p-8 rounded-xl">
+              <div className="bg-slate-50 p-8 rounded-xl">
                 <h3 className="text-2xl font-bold text-slate-800 mb-4">
                   Vizyonumuz
                 </h3>

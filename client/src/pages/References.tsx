@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Kirinti, kirintiJsonLd, type KirintiMaddesi } from "@/components/PdksIcerik";
 
 interface Musteri {
-  // gorselin dogal boyutu: kucuk gorsel buyutulmez
+  // gorselin dogal boyutu (yer ayirma icin); kart 16:9 kirpar
   en: number;
   boy: number;
   id: number;
@@ -146,14 +146,14 @@ const References: React.FC = () => {
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {gorunenMusteriler.map((customer) => (
               <li key={customer.id} className="bg-white border border-slate-200 rounded-lg overflow-hidden flex flex-col">
-                <div className="h-48 bg-slate-100 flex items-center justify-center">
+                <div className="aspect-[16/9] bg-white border-b border-slate-200 overflow-hidden">
                   <img
                     src={customer.logo}
                     alt={`${customer.name} referans görseli`}
                     width={customer.en}
                     height={customer.boy}
                     loading="lazy"
-                    className="w-auto h-auto max-w-full max-h-full object-contain"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="p-5 flex-1">
