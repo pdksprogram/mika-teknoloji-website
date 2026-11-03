@@ -29,8 +29,6 @@ import {
   ChevronDown
 } from "lucide-react";
 import { Link } from "wouter";
-import mobilAppImage from "@assets/mobile-app-interface.png";
-import mobileAdminImage from "@assets/mobile-admin-interface.png";
 import vardiyaYonetimiImage from "@assets/vardiya-yonetimi-interface.png";
 import maasHesaplamaImage from "@assets/maas-hesaplama-interface.png";
 import personelBilgileriImage from "@assets/personel-bilgileri-interface.png";
@@ -284,17 +282,6 @@ export default function PersonelTakipPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.div 
-              className="inline-flex items-center bg-primary/10 px-6 py-2 rounded-full mb-6"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <span className="text-primary font-medium text-sm tracking-wider uppercase">
-                Bulut Tabanlı Teknoloji
-              </span>
-            </motion.div>
-            
             <h1 className="text-4xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight">
               Bulut Tabanlı Personel Takip ve İnsan Kaynakları Yönetimi
             </h1>
@@ -304,23 +291,21 @@ export default function PersonelTakipPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-              <Button 
-                asChild 
-                size="lg" 
-                className="px-8 py-4 text-lg transform hover:scale-105 transition-all duration-300"
+              <Button
+                asChild
+                size="lg"
                 onClick={handleDemoRequest}
               >
                 <Link href="/iletisim">
-                  <span>Ücretsiz Demo Talep Et</span>
+                  <span>Demo Talep Edin</span>
                   <ArrowRight className="ml-3 h-5 w-5" />
                 </Link>
               </Button>
               
               <Button 
                 asChild 
-                variant="outline" 
-                size="lg" 
-                className="px-8 py-4 text-lg"
+                variant="outline"
+                size="lg"
                 onClick={handleContactRequest}
               >
                 <Link href="/iletisim">
@@ -355,7 +340,7 @@ export default function PersonelTakipPage() {
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               İşletmenizin personel giriş ve çıkışlarını güvenilir ve hassas bir şekilde takip etmek mi istiyorsunuz? 
-              Kart okuyucu, QR kod okutma ve sanal cihaz çözümlerimizle tanışın!
+              Kart okuyucu, QR kod okutma ve sanal cihaz çözümlerimizle tanışın.
             </p>
           </motion.div>
 
@@ -376,7 +361,7 @@ export default function PersonelTakipPage() {
                       className="w-32 h-32 mx-auto object-contain rounded-lg"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-800 mb-4">QR KOD OKUTMA</h3>
+                  <h3 className="text-xl font-bold text-slate-800 mb-4">QR Kod Okutma</h3>
                   <p className="text-primary font-semibold mb-4">Modern ve Hızlı Giriş-Çıkış Takibi</p>
                   <p className="text-slate-600 mb-6">
                     QR kod okutma çözümlerimiz, personel devam takibinde modern ve pratik bir yol sunar. 
@@ -401,7 +386,7 @@ export default function PersonelTakipPage() {
                       className="w-32 h-32 mx-auto object-contain rounded-lg"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-800 mb-4">KART OKUYUCU</h3>
+                  <h3 className="text-xl font-bold text-slate-800 mb-4">Kart Okuyucu</h3>
                   <p className="text-primary font-semibold mb-4">Güvenilir Giriş ve Çıkış Kontrolü</p>
                   <p className="text-slate-600 mb-6">
                     Kart okuyucularımız, personel giriş ve çıkışlarının hassas bir şekilde takip edilmesini sağlar. 
@@ -421,12 +406,12 @@ export default function PersonelTakipPage() {
                 <CardContent className="p-8 text-center">
                   <div className="mb-6">
                     <img 
-                      src="/fingerprint-device.png" 
+                      src="/images/urun/parmak-izi-cihazi.jpg" 
                       alt="Parmak izi okuyucu biyometrik sistemi" 
                       className="w-32 h-32 mx-auto object-contain rounded-lg"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-800 mb-4">PARMAK İZİ</h3>
+                  <h3 className="text-xl font-bold text-slate-800 mb-4">Parmak İzi</h3>
                   <p className="text-primary font-semibold mb-4">Biyometrik Güvenli Tanımlama</p>
                   <p className="text-slate-600 mb-6">
                     Parmak izi okuyucu sistemlerimiz, biyometrik doğrulama ile personel tanımlaması yapar. 
@@ -451,10 +436,10 @@ export default function PersonelTakipPage() {
             {...fadeInUp}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              Kesintisiz ve Güvenilir Hizmet!
+              Kesintisiz ve Güvenilir Hizmet
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Yüksek performans, kesintisiz hizmet ve kullanıcı odaklı iyileştirme ile işletmenizi bir adım öteye taşıyoruz!
+              Yüksek performans, kesintisiz hizmet ve kullanıcı odaklı iyileştirme ile işletmenizi bir adım öteye taşıyoruz.
             </p>
           </motion.div>
 
@@ -473,15 +458,11 @@ export default function PersonelTakipPage() {
               { icon: QrCode, title: "Cihazlı veya Cihazsız", desc: "Çoklu cihaz desteği ve QR kod okutma ile esnek kullanım seçenekleri sunuyoruz." }
             ].map((item, index) => (
               <motion.div key={index} variants={staggerItem} className="lg:col-span-2">
-                <Card className="h-full text-center hover:shadow-lg transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
-                      <item.icon className="h-10 w-10 text-primary drop-shadow-sm" />
-                    </div>
-                    <h3 className="font-bold text-slate-800 mb-3">{item.title}</h3>
-                    <p className="text-slate-600 text-sm">{item.desc}</p>
-                  </CardContent>
-                </Card>
+                <div className="h-full border-t border-slate-200 pt-6">
+                  <item.icon className="h-7 w-7 text-primary mb-4" aria-hidden="true" />
+                  <h3 className="font-bold text-slate-800 mb-3">{item.title}</h3>
+                  <p className="text-slate-600 text-sm">{item.desc}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -551,8 +532,11 @@ export default function PersonelTakipPage() {
                       {/* Screen Content */}
                       <div className="relative rounded-[2rem] overflow-hidden">
                         <img 
-                          src={mobilAppImage} 
-                          alt="Mika Teknoloji PDKS mobil uygulama ekranı - iPhone Mockup"
+                          src="/images/urun/mobil-giris-cikis.jpg"
+                          alt="Mika PDKS mobil uygulama giriş-çıkış kayıtları ekranı"
+                          width={780}
+                          height={1584}
+                          loading="lazy"
                           className="w-full h-auto object-cover rounded-[2rem]"
                         />
                         
@@ -591,8 +575,11 @@ export default function PersonelTakipPage() {
                       {/* Screen Content */}
                       <div className="relative rounded-[2rem] overflow-hidden">
                         <img 
-                          src={mobileAdminImage} 
-                          alt="Mika Teknoloji PDKS yönetici mobil uygulama ekranı - Admin Panel"
+                          src="/images/urun/mobil-yonetici-paneli.jpg"
+                          alt="Mika PDKS mobil uygulama yönetici paneli ekranı"
+                          width={780}
+                          height={1584}
+                          loading="lazy"
                           className="w-full h-auto object-cover rounded-[2rem]"
                         />
                         
@@ -639,10 +626,10 @@ export default function PersonelTakipPage() {
             {...fadeInUp}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              PDKS Teknolojisini Keşfedin!
+              PDKS Teknolojisini Keşfedin
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Otomotiv, tekstil, gıda, üretim, perakende, lojistik ve inşaat sektörlerinde kullanılan teknoloji ile çalışma gücünüzün tüm yönlerini yönetin. <Link href="/cozumler" className="text-primary hover:text-primary/80 underline font-medium">Sektörel çözümlerimizi</Link> keşfedin ve operasyonları basitleştirin!
+              Otomotiv, tekstil, gıda, üretim, perakende, lojistik ve inşaat sektörlerinde kullanılan teknoloji ile çalışma gücünüzün tüm yönlerini yönetin. <Link href="/cozumler" className="text-primary hover:text-primary/80 underline font-medium">Sektörel çözümlerimizi</Link> keşfedin ve operasyonları basitleştirin.
             </p>
           </motion.div>
 
@@ -656,8 +643,7 @@ export default function PersonelTakipPage() {
               {
                 icon: Calendar,
                 title: "Vardiya Yönetimi",
-                subtitle: "Vardiya yönetimini kolay, eksiksiz ve profesyonelce yapın!",
-                desc: "Vardiya yönetimini kolay, eksiksiz ve profesyonelce yapın, karışıklığa izin vermeyin!",
+                desc: "Vardiya yönetimini kolay ve eksiksiz yapın, karışıklığa izin vermeyin.",
                 image: vardiyaYonetimiImage,
                 features: [
                   "Toplu Personel Vardiya Planlama",
@@ -674,7 +660,6 @@ export default function PersonelTakipPage() {
               {
                 icon: DollarSign,
                 title: "Maaş Hesaplama",
-                subtitle: "Maaş hesaplamalarının zahmetinden kurtulun!",
                 desc: "Maaş hesaplamalarının zahmetinden ve karışıklığından kurtulun.",
                 image: maasHesaplamaImage,
                 features: [
@@ -686,7 +671,6 @@ export default function PersonelTakipPage() {
               {
                 icon: UserCheck,
                 title: "Personel Bilgileri Yönetimi",
-                subtitle: "Personel bilgilerini tek bir ekranda toplayın!",
                 desc: "Personel bilgilerini tek bir ekranda toplayın, tüm detaylara kolayca erişin.",
                 image: personelBilgileriImage,
                 features: [
@@ -703,7 +687,6 @@ export default function PersonelTakipPage() {
               {
                 icon: MessageSquare,
                 title: "Personel Talepleri Yönetimi",
-                subtitle: "Personel taleplerini kolayca yönetin!",
                 desc: "Personel taleplerini kolayca yönetin, izinler ve avansları kontrol altına alın.",
                 image: personelTalepleriImage,
                 features: [
@@ -723,7 +706,6 @@ export default function PersonelTakipPage() {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-slate-800 mb-2">{item.title}</h3>
-                      <h4 className="text-lg font-semibold text-primary mb-3">{item.subtitle}</h4>
                       <p className="text-slate-600 mb-4">{item.desc}</p>
                     </div>
                   </div>
@@ -854,7 +836,7 @@ export default function PersonelTakipPage() {
             {...fadeInUp}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Şimdi sıra sizde!
+              Demo ile görün
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
               Mika Teknoloji PDKS'nin gücünü bizzat deneyimleyin. Size özel hazırlanmış bir demo ile 
@@ -897,7 +879,7 @@ export default function PersonelTakipPage() {
             {...fadeInUp}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              Her zaman yanınızdayız!
+              Destek ve iletişim
             </h2>
             <p className="text-lg text-slate-600">
               Personel takip sistemi, <Link href="/qr-bekci" className="text-primary hover:text-primary/80 underline font-medium">QR-Patrol güvenlik sistemi</Link>, <Link href="/turnike-sistemleri" className="text-primary hover:text-primary/80 underline font-medium">turnike sistemleri</Link> ve tüm teknoloji çözümlerimiz için destek ve bilgi sunuyoruz.
