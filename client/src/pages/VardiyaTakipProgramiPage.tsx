@@ -40,8 +40,8 @@ const OZELLIKLER: OzellikMaddesi[] = [
   },
   {
     ikon: CheckCircle,
-    baslik: "Onay ve Kilit",
-    metin: "Onaycı planı onaylar, reddeder ya da düzeltme ister. Onaylanan plan kilitlenir.",
+    baslik: "Plan Onayı",
+    metin: "Onaycı planı onaylar, reddeder ya da düzeltme ister. Onaylanan plan istenirse kilitlenir.",
   },
   {
     ikon: Smartphone,
@@ -67,8 +67,8 @@ const OZELLIKLER: OzellikMaddesi[] = [
 
 const ADIMLAR = [
   { baslik: "Plan Hazırlanır", metin: "Plancı haftalık vardiyayı personel bazında hazırlar." },
-  { baslik: "Onaya Gider", metin: "Onaycı planı onaylar, reddeder ya da düzeltme ister." },
-  { baslik: "Kilitlenir", metin: "Onaylanan plan kilitlenir; personel vardiyasını mobil uygulamada görür." },
+  { baslik: "Onaya Gider", metin: "Onaycı planı onaylar, reddeder ya da düzeltme ister; onaylanan plan istenirse kilitlenir." },
+  { baslik: "Personel Görür", metin: "Personel vardiyasını Esoft Pdks mobil uygulamasında görür." },
   { baslik: "Puantaja Yansır", metin: "Giriş-çıkışlar plana göre değerlendirilir, ay sonunda puantaj hesaplanır." },
 ];
 
@@ -79,7 +79,7 @@ const SSS: SssMaddesi[] = [
   },
   {
     soru: "Vardiya planını kim hazırlar, kim onaylar?",
-    cevap: "Plan yetkili kullanıcı tarafından hazırlanır; örneğin mağaza müdürü kendi ekibinin haftalık planını yapar. Onaycı planı onaylar, reddeder ya da düzeltme ister. Onaylanan plan kilitlenir.",
+    cevap: "Plan yetkili kullanıcı tarafından hazırlanır; örneğin mağaza müdürü kendi ekibinin haftalık planını yapar. Onaycı planı onaylar, reddeder ya da düzeltme ister. Onaylanan plan istenirse kilitlenir.",
   },
   {
     soru: "Personel vardiyasını nereden görür?",
@@ -91,7 +91,7 @@ const SSS: SssMaddesi[] = [
   },
   {
     soru: "Vardiya planı puantajı nasıl etkiler?",
-    cevap: "Giriş-çıkış kayıtları vardiya planıyla eşleştirilir. Ay sonunda aylık puantaj bu eşleşmeye göre hesaplanır; haftalık 45 saati aşan süre fazla mesai olarak ayrılır.",
+    cevap: "Giriş-çıkış kayıtları vardiya planıyla eşleştirilir. Ay sonunda aylık puantaj bu eşleşmeye göre hesaplanır. Fazla mesai, çalışma grubunda seçtiğiniz kurala göre ayrılır; haftalık 45 saat kuralı açıksa 45 saati aşan süre fazla mesai sayılır.",
   },
 ];
 
@@ -99,8 +99,8 @@ export default function VardiyaTakipProgramiPage() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Vardiya Takip Programı | Vardiya Planlama, Onay ve Kilit - Mika Teknoloji"
-        description="Haftalık vardiya planı hazırlayın, onaya gönderin, kilitleyin. Personel vardiyasını mobil uygulamada görür; giriş-çıkışlar plana göre puantaja yansır."
+        title="Vardiya Takip Programı | Vardiya Planlama ve Onay - Mika Teknoloji"
+        description="Haftalık vardiya planı hazırlayın ve onaycıya gönderin. Personel vardiyasını mobil uygulamada görür; giriş-çıkışlar plana göre puantaja yansır."
         canonical={kanonikAdres(YOL)}
         jsonLd={[sssJsonLd(SSS), kirintiJsonLd(KIRINTI)]}
       />
@@ -108,7 +108,7 @@ export default function VardiyaTakipProgramiPage() {
       <KonuGiris
         ust="PDKS · Vardiya"
         baslik="Vardiya Takip Programı"
-        giris="Mika PDKS ile vardiya planı hazırlanır, onaylanır ve kilitlenir. Personel vardiyasını mobil uygulamada görür; giriş-çıkışlar plana göre puantaja yansır."
+        giris="Mika PDKS ile vardiya planı hazırlanır ve onaylanır; onaylanan plan istenirse kilitlenir. Personel vardiyasını mobil uygulamada görür; giriş-çıkışlar plana göre puantaja yansır."
       />
       <OzellikIzgarasi
         baslik="Vardiya Yönetiminde Neler Var?"

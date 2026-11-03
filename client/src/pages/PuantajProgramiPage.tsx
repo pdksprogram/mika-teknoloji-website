@@ -30,8 +30,8 @@ const OZELLIKLER: OzellikMaddesi[] = [
   },
   {
     ikon: Clock,
-    baslik: "Haftalık 45 Saat Kuralı",
-    metin: "Normal çalışma haftada 45 saate kadar birikir; bu sınırı aşan süre fazla mesai olarak ayrı sütuna yazılır.",
+    baslik: "Fazla Mesai Kuralı",
+    metin: "Fazla mesai, çalışma grubunda seçtiğiniz kurala göre ayrılır; haftalık 45 saat kuralı açıksa 45 saati aşan süre fazla mesai sayılır ve ayrı sütuna yazılır.",
   },
   {
     ikon: Coffee,
@@ -51,7 +51,7 @@ const OZELLIKLER: OzellikMaddesi[] = [
   {
     ikon: CalendarDays,
     baslik: "Resmi Tatiller ve İzinler",
-    metin: "Resmi tatiller programda önceden planlanır; izin tanımları ve izin talepleri puantaja doğrudan yansır.",
+    metin: "Resmi tatiller programda önceden planlanır; izin tanımları yapılır, onaylanan izin talepleri puantaja yansır.",
   },
   {
     ikon: FileSpreadsheet,
@@ -79,7 +79,7 @@ const SSS: SssMaddesi[] = [
   },
   {
     soru: "Fazla mesai nasıl hesaplanır?",
-    cevap: "Normal çalışma haftada 45 saate kadar birikir. Haftalık 45 saati aşan süre fazla mesai olarak ayrılır ve puantajda kendi sütununda gösterilir.",
+    cevap: "Fazla mesai, çalışma grubunda seçtiğiniz kurala göre ayrılır. Haftalık 45 saat kuralı açıksa 45 saati aşan süre fazla mesai sayılır; fazla mesai puantajda kendi sütununda gösterilir.",
   },
   {
     soru: "Mola süresi çalışma süresinden düşülür mü?",

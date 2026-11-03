@@ -1286,6 +1286,11 @@ export default function QRPDKSPage() {
               </motion.div>
             ))}
           </div>
+          <p className="text-center mt-12">
+            <Link href="/qr-pdks" className="text-primary hover:text-primary/80 font-semibold underline underline-offset-4">
+              QR Kodlu Personel Takibi: giriş-çıkış adımları ve sık sorulan sorular
+            </Link>
+          </p>
         </div>
       </section>
 

@@ -7,7 +7,7 @@ import { Link } from "wouter";
 import { useEffect } from "react";
 import { trackPDKSView, trackProductView } from "@/lib/analytics";
 import SEO, { ASIL_ADRES, kanonikAdres } from "@/seo/SEO";
-import { IlgiliSayfalar, VideoBolumu, DEMO_TELEFON, DEMO_WHATSAPP, kirintiJsonLd, sssJsonLd } from "@/components/PdksIcerik";
+import { IlgiliSayfalar, VideoBolumu, DEMO_TELEFON, DEMO_TELEFON_GORUNEN, DEMO_WHATSAPP, kirintiJsonLd, sssJsonLd } from "@/components/PdksIcerik";
 import type { SssMaddesi } from "@/components/PdksIcerik";
 
 // Doğrulanmış SSS: EPDKS menüleri ve hesap kuralları, Esoft Pdks mobil uygulama ekranları.
@@ -18,11 +18,11 @@ const PDKS_SSS: SssMaddesi[] = [
   },
   {
     soru: "PDKS programında puantaj nasıl hesaplanır?",
-    cevap: "Hesap üç adımda ilerler: cihazlardaki kayıtlar aktarılır, hareketler düzenlenir, aylık puantaj hesaplanır. Normal çalışma haftada 45 saate kadar birikir; aşan süre fazla mesai olarak ayrılır. Kontrol edilen ay kilitlenir.",
+    cevap: "Hesap üç adımda ilerler: cihazlardaki kayıtlar aktarılır, hareketler düzenlenir, aylık puantaj hesaplanır. Fazla mesai, çalışma grubunda seçtiğiniz kurala göre ayrılır; haftalık 45 saat kuralı açıksa 45 saati aşan süre fazla mesai sayılır. Kontrol edilen ay kilitlenir.",
   },
   {
     soru: "Vardiya planlaması yapılabilir mi?",
-    cevap: "Evet. Haftalık vardiya planı hazırlanır, onaycıya gönderilir; onaycı onaylar, reddeder ya da düzeltme ister. Onaylanan plan kilitlenir ve personel vardiyasını mobil uygulamada görür.",
+    cevap: "Evet. Haftalık vardiya planı hazırlanır, onaycıya gönderilir; onaycı onaylar, reddeder ya da düzeltme ister. Onaylanan plan istenirse kilitlenir. Personel vardiyasını mobil uygulamada görür.",
   },
   {
     soru: "Personel cep telefonuyla giriş-çıkış yapabilir mi?",
@@ -863,7 +863,7 @@ export default function PDKSPage() {
                 WhatsApp ile demo isteyin
               </a>
               <a href={`tel:${DEMO_TELEFON}`} className="underline underline-offset-4 hover:opacity-80">
-                0546 712 22 96
+                {DEMO_TELEFON_GORUNEN}
               </a>
             </div>
           </motion.div>

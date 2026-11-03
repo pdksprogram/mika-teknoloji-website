@@ -208,7 +208,7 @@ export function VideoBolumu({ baslik, alt, videoIdleri }: { baslik: string; alt?
           viewport={{ once: true }}
         >
           {secilen.map((v) => (
-            <VideoCard key={v.id} video={v} />
+            <VideoCard key={v.id} video={v} tema="mavi" />
           ))}
         </motion.div>
         <div className="text-center mt-10">

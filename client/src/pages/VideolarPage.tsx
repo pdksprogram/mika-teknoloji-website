@@ -692,7 +692,27 @@ const fadeInUp = {
   whileInView: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
 
-export function VideoCard({ video }: { video: VideoItem }) {
+const VIDEO_KART_TEMA = {
+  pembe: {
+    kenar: "hover:border-pink-500",
+    oynat: "bg-pink-600/90",
+    rozet: "bg-pink-600",
+    baslik: "group-hover:text-pink-600",
+    indir: "text-pink-600 hover:text-pink-700",
+  },
+  mavi: {
+    kenar: "hover:border-primary",
+    oynat: "bg-primary/90",
+    rozet: "bg-primary",
+    baslik: "group-hover:text-primary",
+    indir: "text-primary hover:text-primary/80",
+  },
+} as const;
+
+export type VideoKartTema = keyof typeof VIDEO_KART_TEMA;
+
+export function VideoCard({ video, tema = "pembe" }: { video: VideoItem; tema?: VideoKartTema }) {
+  const t = VIDEO_KART_TEMA[tema];
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -705,7 +725,7 @@ export function VideoCard({ video }: { video: VideoItem }) {
 
   return (
     <motion.div variants={fadeInUp}>
-      <Card className="h-full overflow-hidden border-2 border-slate-200 hover:border-pink-500 transition-all duration-300 group bg-white rounded-xl shadow-sm hover:shadow-lg">
+      <Card className={`h-full overflow-hidden border-2 border-slate-200 ${t.kenar} transition-all duration-300 group bg-white rounded-xl shadow-sm hover:shadow-lg`}>
         <CardContent className="p-0">
           <div className="relative bg-black overflow-hidden rounded-t-xl" style={{ aspectRatio: '16/9' }}>
             <div className="w-full h-full" onClick={!isPlaying ? handlePlay : undefined}>
@@ -723,14 +743,14 @@ export function VideoCard({ video }: { video: VideoItem }) {
               </video>
               {!isPlaying && (
                 <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/20 transition-all duration-300 pointer-events-none">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-pink-600/90 flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
+                  <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full ${t.oynat} flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300`}>
                     <Play className="h-8 w-8 sm:h-10 sm:w-10 text-white ml-1" fill="white" />
                   </div>
                 </div>
               )}
             </div>
             <div className="absolute top-2 left-2 sm:top-3 sm:left-3 flex gap-2 pointer-events-none z-10">
-              <span className="bg-pink-600 text-white text-[10px] sm:text-xs px-2 sm:px-3 py-0.5 sm:py-1 rounded-full font-medium">
+              <span className={`${t.rozet} text-white text-[10px] sm:text-xs px-2 sm:px-3 py-0.5 sm:py-1 rounded-full font-medium`}>
                 {video.subcategory}
               </span>
               <span className={`text-[10px] sm:text-xs px-2 sm:px-3 py-0.5 sm:py-1 rounded-full font-medium ${levelColors[video.level]}`}>
@@ -742,7 +762,7 @@ export function VideoCard({ video }: { video: VideoItem }) {
             </div>
           </div>
           <div className="p-3 sm:p-5">
-            <h3 className="text-sm sm:text-lg font-bold text-slate-800 mb-1 sm:mb-2 group-hover:text-pink-600 transition-colors leading-tight">
+            <h3 className={`text-sm sm:text-lg font-bold text-slate-800 mb-1 sm:mb-2 ${t.baslik} transition-colors leading-tight`}>
               {video.title}
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-2 sm:mb-3 line-clamp-3">
@@ -752,7 +772,7 @@ export function VideoCard({ video }: { video: VideoItem }) {
               <a
                 href={video.src}
                 download
-                className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-pink-600 hover:text-pink-700 font-medium transition-colors"
+                className={`inline-flex items-center gap-1.5 text-xs sm:text-sm ${t.indir} font-medium transition-colors`}
               >
                 <Download className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                 <span className="hidden sm:inline">Videoyu İndir</span>

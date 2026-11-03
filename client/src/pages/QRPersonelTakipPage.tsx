@@ -31,7 +31,7 @@ const OZELLIKLER: OzellikMaddesi[] = [
   {
     ikon: RefreshCw,
     baslik: "Uygulamada QR Üretme",
-    metin: "Uygulamanın QR Üret ekranı sürekli yenilenen bir kod gösterir; iş yerindeki QR okuyucu bu kodu okur.",
+    metin: "Konum doğrulandıktan sonra uygulamanın QR Üret ekranı bir kod gösterir; iş yerindeki QR okuyucu bu kodu okur. Kod 30 saniye geçerlidir.",
   },
   {
     ikon: MapPin,
@@ -72,8 +72,8 @@ const SSS: SssMaddesi[] = [
     cevap: "Mobil uygulamadan atılan kayda konum bilgisi eklenir. KVKK gereği istenirse Konum Gizle ayarıyla konum raporlarda gösterilmez.",
   },
   {
-    soru: "Uygulamadaki QR kod neden sürekli değişiyor?",
-    cevap: "QR Üret ekranındaki kod belirli aralıklarla yenilenir; okuyucuya her seferinde o anki kod gösterilir.",
+    soru: "Uygulamadaki QR kod ne kadar süre geçerli?",
+    cevap: "QR Üret ekranı önce konumu doğrular, ardından kodu gösterir. Kod 30 saniye geçerlidir; süre dolunca kapanır, yenisi Yeni QR Üret düğmesiyle tek dokunuşla üretilir.",
   },
   {
     soru: "Molalar QR ile takip edilebilir mi?",
