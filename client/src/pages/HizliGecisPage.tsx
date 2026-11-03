@@ -148,6 +148,7 @@ export default function HizliGecisPage() {
             <p className="text-xl md:text-2xl mb-8 text-white/90">
               20-120 Kişi/Dakika Kapasiteli Profesyonel Çözümler
             </p>
+            <CtaDugmeleri tur="donanim" koyu sinif="justify-center mb-8" />
             <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
               Havaalanları, metro istasyonları, alışveriş merkezleri için yüksek kapasiteli hızlı geçiş turnike sistemleri. 
               RFID, biyometrik entegrasyon ve akıllı güvenlik özellikleri ile donatılmış.
@@ -191,8 +192,6 @@ export default function HizliGecisPage() {
                 <p className="text-sm text-white/90">Kurumsal Çözüm</p>
               </motion.div>
             </div>
-            
-            <CtaDugmeleri tur="donanim" koyu sinif="justify-center" />
           </motion.div>
         </div>
       </div>

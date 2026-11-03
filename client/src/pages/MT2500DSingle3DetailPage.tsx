@@ -98,6 +98,7 @@ export default function MT2500DSingle3DetailPage() {
               initial={false}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
+              className="order-2 lg:order-1"
             >
               <div className="bg-white rounded-2xl shadow-lg p-8">
                 <img {...boyut(BOY_TURNIKE_IMAGES.bt1)} loading="eager" {...{ fetchpriority: "high" }} 
@@ -113,7 +114,7 @@ export default function MT2500DSingle3DetailPage() {
               initial={false}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
-              className="space-y-6"
+              className="order-1 lg:order-2 space-y-6"
             >
               <div>
                 <h1 className="text-3xl font-bold text-gray-900 mb-4">

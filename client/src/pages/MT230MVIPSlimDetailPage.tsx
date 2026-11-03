@@ -118,7 +118,7 @@ export default function MT230MVIPSlimDetailPage() {
               initial={false}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
-              className="relative"
+              className="relative order-2 lg:order-1"
             >
               <div className="aspect-[4/3] rounded-lg overflow-hidden bg-gray-100 shadow-lg">
                 <img {...boyut(productDetails.mainImage)} loading="eager" {...{ fetchpriority: "high" }} 
@@ -134,7 +134,7 @@ export default function MT230MVIPSlimDetailPage() {
               initial={false}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-6"
+              className="order-1 lg:order-2 space-y-6"
             >
               <div>
                 <h1 className="text-4xl font-bold text-gray-900 mb-2">

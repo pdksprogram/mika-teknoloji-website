@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { ArrowRight, RotateCcw } from "lucide-react";
 import SEO, { kanonikAdres } from "@/seo/SEO";
 import { Button } from "@/components/ui/button";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -308,6 +309,7 @@ function HesaplamaAraci() {
                 <dd className="font-semibold text-slate-800 tabular-nums">{tutar === null ? "—" : tutarMetni(tutar)}</dd>
               </div>
             </dl>
+            <CtaDugmeleri tur="yazilim" sinif="mt-6" sayfa="Fazla Mesai Hesaplama Page" olayOnek="fazla_mesai_hesaplama" />
 
             <p className="mt-6 text-sm text-slate-500">
               Bu araç bilgi amaçlıdır ve tek bir haftayı hesaplar; denkleştirme, hafta tatili ve resmi tatil çalışması hesaba katılmaz.

@@ -122,18 +122,18 @@ export default function QRPatrolPage() {
                 QR kod teknolojisi ile gerçek zamanlı konum izleme, otomatik raporlama ve acil durum alarm sistemi. 
                 Güvenlik operasyonlarınızı tamamen dijitalleştirin.
               </p>
-              <CtaDugmeleri tur="yazilim" sinif="justify-center mb-10" sayfa="QR-Patrol Page" olayOnek="qr_patrol_hero" />
             </motion.div>
 
             {/* Features Tags */}
-            <motion.div 
-              className="flex flex-wrap justify-center gap-4 mb-12"
+            <motion.div
+              className="flex flex-wrap justify-center gap-4 mb-8"
               initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <p className="text-base text-slate-600">Mobil Uygulama · Canlı Konum Takibi · Otomatik Raporlama</p>
             </motion.div>
+            <CtaDugmeleri tur="yazilim" sinif="justify-center mb-12" sayfa="QR-Patrol Page" olayOnek="qr_patrol_hero" />
           </div>
 
           {/* Content Grid */}
