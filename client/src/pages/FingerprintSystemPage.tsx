@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { DEMO_WHATSAPP } from "@/lib/iletisim";
 import { CheckCircle, Shield } from "lucide-react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
@@ -367,7 +368,7 @@ export default function FingerprintSystemPage() {
                   className="px-8"
                   data-testid="fingerprint-whatsapp-button"
                 >
-                  <a href="https://wa.me/905467122296" target="_blank" rel="noopener noreferrer">
+                  <a href={DEMO_WHATSAPP} target="_blank" rel="noopener noreferrer">
                     WhatsApp Teknik Destek
                   </a>
                 </Button>

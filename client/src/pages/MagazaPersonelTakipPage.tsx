@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
+import { DEMO_WHATSAPP } from "@/lib/iletisim";
 import { Button } from "@/components/ui/button";
 import { 
   Calendar, TrendingUp, Smartphone, 
@@ -421,7 +422,7 @@ export default function MagazaPersonelTakipPage() {
                   className="px-8"
                   data-testid="cta-whatsapp-button"
                 >
-                  <a href="https://wa.me/905467122296" target="_blank" rel="noopener noreferrer">
+                  <a href={DEMO_WHATSAPP} target="_blank" rel="noopener noreferrer">
                     WhatsApp Destek
                   </a>
                 </Button>

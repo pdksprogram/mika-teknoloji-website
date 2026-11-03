@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { DEMO_WHATSAPP } from "@/lib/iletisim";
 import { CheckCircle, Shield } from "lucide-react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
@@ -53,7 +54,7 @@ export default function FaceRecognitionSystemPage() {
     <div className="min-h-screen bg-gray-50 py-8">
       <Helmet>
         <title>Yüz Tanıma Sistemi ve Temassız PDKS Cihazları | Mika</title>
-        <meta name="description" content="Yüz tanıma sistemi ve temassız PDKS cihazları: MTFD15, MTFP15, MTFDP50, MTFDP200 modelleri. 20.000 kapasite, Wi-Fi ve TCP/IP. Ücretsiz demo." />
+        <meta name="description" content="Yüz tanıma sistemi ve temassız PDKS cihazları: MTFD15, MTFP15, MTFDP50, MTFDP200 modelleri. 20.000 kapasite, Wi-Fi ve TCP/IP. Demo ve teklif." />
         <meta name="keywords" content="yüz tanıma sistem, yüz tanıma PDKS, temassız personel takip, facial recognition, MTFD15, MTFP15, MTFDP50, MTFDP200, biyometrik güvenlik sistemi" />
         
         <meta property="og:title" content="Yüz Tanıma Sistem | Mika Teknoloji" />
@@ -345,7 +346,7 @@ export default function FaceRecognitionSystemPage() {
                   className="px-8"
                   data-testid="cta-whatsapp-button"
                 >
-                  <a href="https://wa.me/905467122296" target="_blank" rel="noopener noreferrer">
+                  <a href={DEMO_WHATSAPP} target="_blank" rel="noopener noreferrer">
                     WhatsApp Destek
                   </a>
                 </Button>
