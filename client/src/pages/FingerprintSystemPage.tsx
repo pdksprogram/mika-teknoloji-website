@@ -49,7 +49,7 @@ export default function FingerprintSystemPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-gray-50 py-4 md:py-8">
       <Helmet>
         <title>Parmak İzi Takip Sistemi ve PDKS Cihazları | Mika Teknoloji</title>
         <meta name="description" content="Parmak izi takip sistemi ve PDKS cihazları: MT1100, MTP50, MTFDP200, MT4051 modelleri. 20.000 kapasite, Wi-Fi ve TCP/IP bağlantı. Teklif alın." />
@@ -77,9 +77,9 @@ export default function FingerprintSystemPage() {
           initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-6 md:mb-12"
         >
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-0 md:mb-4">
             Parmak İzi Okuyucu Cihazları
           </h1>
         </motion.div>
@@ -119,7 +119,7 @@ export default function FingerprintSystemPage() {
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{device.name}</h3>
                     <p className="text-primary font-semibold mb-4">{device.description}</p>
                     
-                    <ul className="space-y-2 mb-6">
+                    <ul className="space-y-2 mb-4 md:mb-6">
                       {device.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />

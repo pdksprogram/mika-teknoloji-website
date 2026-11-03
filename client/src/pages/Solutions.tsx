@@ -1,6 +1,7 @@
 import { Shield, Clock, Users, Key, Eye, CreditCard } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
 
@@ -56,6 +57,7 @@ export default function Solutions() {
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             İşletmenizin ihtiyaçlarına özel geliştirilmiş kontrol sistemleri ve yazılım çözümleri
           </p>
+          <CtaDugmeleri tur="yazilim" sinif="justify-center mt-8" sayfa="Çözümler Page" olayOnek="cozumler" />
         </div>
 
         {/* Solutions Grid */}

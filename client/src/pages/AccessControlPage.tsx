@@ -413,6 +413,8 @@ export default function AccessControlPage() {
               <p className="text-lg text-slate-600 leading-relaxed mb-6">
                 {t.description}
               </p>
+
+              <CtaDugmeleri tur="donanim" sinif="mb-8" />
               
               <div className="space-y-6 mb-8">
                 <p className="text-lg text-slate-600 leading-relaxed">
@@ -430,9 +432,7 @@ export default function AccessControlPage() {
                     Geçiş kontrol sistemi; <strong>kimlerin, ne zaman, hangi kapıdan geçiş yapabileceğini</strong> belirleyen elektronik cihazlar ve yazılımlar bütünüdür. Bireylerin veya araçların belirli bir alana giriş ve çıkış yetkisini sınırlandırmak, izlemek ve yönetmek amacıyla kullanılır.
                   </p>
                 </div>
-              </div>"
-
-              <CtaDugmeleri tur="donanim" />
+              </div>
             </motion.div>
 
             {/* Right Side - Professional Demo */}

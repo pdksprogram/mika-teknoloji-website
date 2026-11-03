@@ -122,6 +122,7 @@ export default function QRPatrolPage() {
                 QR kod teknolojisi ile gerçek zamanlı konum izleme, otomatik raporlama ve acil durum alarm sistemi. 
                 Güvenlik operasyonlarınızı tamamen dijitalleştirin.
               </p>
+              <CtaDugmeleri tur="yazilim" sinif="justify-center mb-10" sayfa="QR-Patrol Page" olayOnek="qr_patrol_hero" />
             </motion.div>
 
             {/* Features Tags */}

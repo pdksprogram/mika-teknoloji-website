@@ -8,6 +8,7 @@ import {
   BarChart3, FileText, Database,
   Phone, Mail, MapPin, CheckCircle2
 } from "lucide-react";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 import { Link } from "wouter";
 import { DEMO_TELEFON, DEMO_TELEFON_GORUNEN } from "@/components/PdksIcerik";
 import vardiyaPlanlama from "@assets/IMG_4278_1759780466857.png";
@@ -176,6 +177,7 @@ export default function MagazaPersonelTakipPage() {
             >
               Vardiya planlama, shift yönetimi, izin takibi ve mobil PDKS özellikleri ile mağaza personelinizi etkili şekilde yönetin
             </motion.p>
+            <CtaDugmeleri tur="yazilim" sinif="justify-center mt-8" sayfa="Mağaza Personel Takip Page" olayOnek="magaza_personel_takip" />
           </div>
         </section>
 

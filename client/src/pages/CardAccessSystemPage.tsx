@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, CreditCard, ArrowRight } from "lucide-react";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
 
@@ -127,6 +128,7 @@ export default function CardAccessSystemPage() {
               Proximity, MIFARE ve UHF kart desteği ile PDKS entegrasyonu.
             </p>
             <p className="text-base text-white/80 mb-8">3 Kart Tipi · Temassız Okuma · PDKS Entegrasyonu</p>
+            <CtaDugmeleri tur="donanim" koyu sinif="justify-center" sayfa="Kartlı Geçiş Page" olayOnek="kartli_gecis" />
           </motion.div>
         </div>
       </section>

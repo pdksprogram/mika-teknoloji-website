@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, QrCode, ArrowRight, Smartphone } from "lucide-react";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
 
@@ -136,6 +137,7 @@ export default function QRAccessPage() {
               Mobil uygulama entegrasyonu ve dinamik güvenlik kodları.
             </p>
             <p className="text-base text-white/80 mb-8">Temassız Geçiş · Mobil Uygulama · Dinamik Kodlar</p>
+            <CtaDugmeleri tur="yazilim" koyu sinif="justify-center" sayfa="QR Geçiş Page" olayOnek="qr_gecis" />
           </motion.div>
         </div>
       </section>
