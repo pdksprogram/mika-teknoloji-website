@@ -16,7 +16,7 @@ import { Link } from "wouter";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
 import { boyut } from "@/lib/gorselBoyut";
 import UrunEkIcerik from "@/components/UrunEkIcerik";
-import { EK, BARIYER_TABLOSU, TURNIKE_TABLOSU, OTOPARK_TABLOSU } from "@/lib/urunEkIcerik";
+import { EK, TURNIKE_TABLOSU } from "@/lib/urunEkIcerik";
 
 export default function T345DetailPage() {
   

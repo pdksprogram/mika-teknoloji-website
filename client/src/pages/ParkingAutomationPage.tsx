@@ -5,7 +5,7 @@ import { CheckCircle, Car, ArrowRight, Camera } from "lucide-react";
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
 import UrunEkIcerik from "@/components/UrunEkIcerik";
-import { EK, BARIYER_TABLOSU, TURNIKE_TABLOSU, OTOPARK_TABLOSU } from "@/lib/urunEkIcerik";
+import { EK, OTOPARK_TABLOSU } from "@/lib/urunEkIcerik";
 
 const parkingFeatures = [
   {

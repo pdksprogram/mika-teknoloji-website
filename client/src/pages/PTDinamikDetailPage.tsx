@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 import { CheckCircle, Settings, Clock } from "lucide-react";
 
 export default function PTDinamikDetailPage() {
@@ -43,8 +44,8 @@ export default function PTDinamikDetailPage() {
       <section className="pt-6 pb-20 bg-slate-50">
         <div className="container mx-auto px-4">
 
-          <div className="max-w-3xl">
-            <motion.div {...fadeInUp} initial={false} className="space-y-8">
+          <div>
+            <motion.div {...fadeInUp} initial={false} className="space-y-8 lg:grid lg:grid-cols-[minmax(0,1fr)_24rem] lg:gap-x-12 lg:items-start">
               <div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
                   MT Dinamik Bariyer Sistemi
@@ -53,13 +54,14 @@ export default function PTDinamikDetailPage() {
                   Yüksek Hızlı Geçiş Kontrolü
                 </p>
                 <div className="w-20 h-1 bg-primary rounded-full"></div>
+                <CtaDugmeleri tur="donanim" sinif="mt-6" sayfa="PT Dinamik Bariyer Page" olayOnek="pt_dinamik_bariyer" />
               </div>
 
               <p className="text-lg text-gray-700 leading-relaxed">
                 Hızlı açılma süresi ve dinamik yapısı ile yoğun trafiğe sahip alanlarda ideal çözüm sunar. Modern tasarımı ve güvenilir performansı ile otopark ve geçiş noktalarında mükemmel performans sağlar.
               </p>
 
-              <Card className="border-0 shadow-lg">
+              <Card className="lg:col-start-2 lg:row-start-1 lg:row-[span_12_/_span_12] lg:!mt-0 lg:sticky lg:top-28 border-0 shadow-lg">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-2 mb-6">
                     <Settings className="w-5 h-5 text-primary" />

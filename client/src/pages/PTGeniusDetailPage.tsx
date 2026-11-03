@@ -4,9 +4,10 @@ import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 import { CheckCircle, Settings, Thermometer } from "lucide-react";
 import UrunEkIcerik from "@/components/UrunEkIcerik";
-import { EK, BARIYER_TABLOSU, TURNIKE_TABLOSU, OTOPARK_TABLOSU } from "@/lib/urunEkIcerik";
+import { EK, BARIYER_TABLOSU } from "@/lib/urunEkIcerik";
 
 export default function PTGeniusDetailPage() {
   const fadeInUp = {
@@ -50,8 +51,8 @@ export default function PTGeniusDetailPage() {
       <section className="pt-6 pb-20 bg-slate-50">
         <div className="container mx-auto px-4">
 
-          <div className="max-w-3xl">
-            <motion.div {...fadeInUp} initial={false} className="space-y-8">
+          <div>
+            <motion.div {...fadeInUp} initial={false} className="space-y-8 lg:grid lg:grid-cols-[minmax(0,1fr)_24rem] lg:gap-x-12 lg:items-start">
               <div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
                   MT Genius Bariyer Sistemi
@@ -59,13 +60,14 @@ export default function PTGeniusDetailPage() {
                 <p className="text-xl text-slate-600 mb-6">
                   3 Saniye Hızlı Geçiş - Yandan Kollu Teknoloji
                 </p>
+                <CtaDugmeleri tur="donanim" sinif="mt-6" sayfa="PT Genius Bariyer Page" olayOnek="pt_genius_bariyer" />
               </div>
 
               <p className="text-lg text-gray-700 leading-relaxed">
                 Ultra hızlı 3 saniye açılma süresi ve 5.5 metre kol uzunluğu ile yoğun trafikte verimli çalışır. Geniş sıcaklık aralığı sayesinde her iklim koşulunda güvenilir performans sunar.
               </p>
 
-              <Card className="border-0 shadow-lg">
+              <Card className="lg:col-start-2 lg:row-start-1 lg:row-[span_12_/_span_12] lg:!mt-0 lg:sticky lg:top-28 border-0 shadow-lg">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-2 mb-6">
                     <Settings className="w-5 h-5 text-primary" />

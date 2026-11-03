@@ -4,9 +4,10 @@ import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 import { AlertTriangle, CheckCircle, Shield, Flame } from "lucide-react";
 import UrunEkIcerik from "@/components/UrunEkIcerik";
-import { EK, BARIYER_TABLOSU, TURNIKE_TABLOSU, OTOPARK_TABLOSU } from "@/lib/urunEkIcerik";
+import { EK, BARIYER_TABLOSU } from "@/lib/urunEkIcerik";
 
 export default function TuzaklarDetailPage() {
   const fadeInUp = {
@@ -47,7 +48,7 @@ export default function TuzaklarDetailPage() {
       <section className="pt-6 pb-20 bg-slate-50">
         <div className="container mx-auto px-4">
 
-          <div className="max-w-3xl">
+          <div>
             <motion.div {...fadeInUp} initial={false} className="space-y-8">
               <div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
@@ -57,9 +58,10 @@ export default function TuzaklarDetailPage() {
                   Güvenlik Engelleme ve Kontrol Sistemleri
                 </p>
                 <div className="w-20 h-1 bg-primary rounded-full"></div>
+                <CtaDugmeleri tur="donanim" sinif="mt-6" sayfa="Tuzaklar Kapanlar Page" olayOnek="tuzaklar_kapanlar" />
               </div>
 
-              <div className="space-y-6">
+              <div className="grid lg:grid-cols-2 gap-6">
                 <Card className="border-0 shadow-lg">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4 mb-4">
@@ -108,7 +110,7 @@ export default function TuzaklarDetailPage() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-0 bg-slate-50">
+                <Card className="border-0 bg-slate-50 lg:col-span-2">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <Flame className="w-6 h-6 text-primary flex-shrink-0 mt-1" />

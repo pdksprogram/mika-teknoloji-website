@@ -6,12 +6,16 @@ import type { Karsilastirma, Sss } from "@/lib/urunEkIcerik";
 // Ürün sayfalarının alt bölümü: kullanım alanları, karşılaştırma tablosu ve sık sorulan sorular.
 // SSS hem ekranda hem FAQPage şemasında aynı diziden üretilir.
 // aktifYol verilirse tablodaki o satır vurgulanır ve bağlantı olmaz.
+// Geniş ekranda başlık solda, içerik sağda; blok kapsayıcı genişliğinde ve üstteki içerikle hizalı.
+const BLOK = "lg:grid lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-x-12";
+const BASLIK = "text-2xl font-bold text-slate-900 mb-5 lg:mb-0 lg:leading-tight";
+
 export default function UrunEkIcerik({
   kullanim,
   tablolar = [],
   sss = [],
   aktifYol,
-  genislik = "max-w-3xl",
+  genislik = "",
   zemin = "bg-white",
 }: {
   kullanim?: string[];
@@ -41,11 +45,11 @@ export default function UrunEkIcerik({
         </Helmet>
       )}
       <div className="container mx-auto px-4">
-        <div className={`${genislik} space-y-12`}>
+        <div className={`${genislik} space-y-12`.trim()}>
           {kullanim && kullanim.length > 0 && (
-            <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-5">Kullanım Alanları</h2>
-              <ul className="grid md:grid-cols-2 gap-3">
+            <div className={BLOK}>
+              <h2 className={BASLIK}>Kullanım Alanları</h2>
+              <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-3">
                 {kullanim.map((k) => (
                   <li key={k} className="flex items-start gap-2 text-sm text-slate-700">
                     <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
@@ -57,8 +61,8 @@ export default function UrunEkIcerik({
           )}
 
           {tablolar.map((t) => (
-            <div key={t.baslik}>
-              <h2 className="text-2xl font-bold text-slate-900 mb-5">{t.baslik}</h2>
+            <div key={t.baslik} className={BLOK}>
+              <h2 className={BASLIK}>{t.baslik}</h2>
               <div className="overflow-x-auto border border-slate-200 rounded-lg">
                 <table className="w-full text-sm text-left">
                   <thead className="bg-slate-50 text-slate-600">
@@ -99,8 +103,8 @@ export default function UrunEkIcerik({
           ))}
 
           {sss.length > 0 && (
-            <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-3">Sıkça Sorulan Sorular</h2>
+            <div className={BLOK}>
+              <h2 className={BASLIK}>Sıkça Sorulan Sorular</h2>
               <div className="divide-y divide-slate-200 border-y border-slate-200">
                 {sss.map((s) => (
                   <div key={s.soru} className="py-5">

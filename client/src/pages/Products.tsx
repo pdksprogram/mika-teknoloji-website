@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Kirinti, kirintiJsonLd, type KirintiMaddesi } from "@/components/PdksIcerik";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
 import UrunEkIcerik from "@/components/UrunEkIcerik";
-import { EK, BARIYER_TABLOSU, TURNIKE_TABLOSU, OTOPARK_TABLOSU } from "@/lib/urunEkIcerik";
+import { EK, BARIYER_TABLOSU, TURNIKE_TABLOSU } from "@/lib/urunEkIcerik";
 
 const KIRINTI: KirintiMaddesi[] = [
   { ad: "Ana Sayfa", yol: "/" },
