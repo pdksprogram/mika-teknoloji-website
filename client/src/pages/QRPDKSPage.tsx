@@ -228,10 +228,10 @@ export default function QRPDKSPage() {
                 <video 
                   src={qrPdksDemoVideo}
                   autoPlay
-                  muted={false}
+                  muted
                   loop
                   playsInline
-                  controls
+                  disablePictureInPicture
                   className="w-full h-full object-contain"
                   data-testid="qr-pdks-demo-video"
                 >

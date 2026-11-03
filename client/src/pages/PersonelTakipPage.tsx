@@ -338,9 +338,11 @@ export default function PersonelTakipPage() {
             <div className="relative bg-white rounded-2xl shadow-2xl p-2 max-w-4xl mx-auto">
               <video 
                 className="w-full aspect-video rounded-xl object-cover"
-                controls
                 autoPlay
                 loop
+                muted
+                playsInline
+                disablePictureInPicture
                 preload="metadata"
                 poster="/images/personel-takip-video-poster.jpg"
                 aria-label="Mika Teknoloji personel takip sistemi demo videosu"

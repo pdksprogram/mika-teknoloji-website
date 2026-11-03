@@ -131,13 +131,11 @@ export default function AccessControlSystemPage() {
                 <video
                   autoPlay
                   loop
-                  muted={false}
-                  controls={true}
+                  muted
                   playsInline
+                  disablePictureInPicture
                   preload="auto"
                   className="w-full h-auto rounded-2xl object-cover shadow-lg"
-                  onError={(e) => console.log('Video yükleme hatası:', e)}
-                  onLoad={() => console.log('Video yüklendi')}
                 >
                   <source src="/access-hero-video.mp4" type="video/mp4" />
                   <p className="text-center text-gray-600 p-4">Video yüklenemiyor...</p>

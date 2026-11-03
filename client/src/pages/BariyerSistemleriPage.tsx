@@ -365,8 +365,9 @@ export default function BariyerSistemleriPage() {
                   className="w-full h-full object-cover"
                   autoPlay
                   loop
-                  controls
+                  muted
                   playsInline
+                  disablePictureInPicture
                   poster="/test-frame.jpg"
                 >
                   <source src="/bariyer-sistemleri.mp4" type="video/mp4" />
