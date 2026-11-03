@@ -152,19 +152,6 @@ export default function AccessControlPage() {
         description2: "Mika Kartlı geçiş sistemi üstün performanslı kart okuyucu, Mika PDKS ve personel geçiş takip sistemi yazılımları ile entegre olarak çalışmaktadır. Aynı zamanda piyasada bilinen tüm insan kaynakları ile entegre olabilmektedir.",
         image: "/rfid-turnstile-system.png"
       },
-      references: {
-        title: "Referanslar",
-        logos: [
-          { name: "Starbucks", logo: "/logo-placeholder.png" },
-          { name: "Koç Holding", logo: "/logo-placeholder.png" },
-          { name: "Türk Hava Yolları", logo: "/logo-placeholder.png" },
-          { name: "Teknosa", logo: "/logo-placeholder.png" },
-          { name: "Yıldız Holding", logo: "/logo-placeholder.png" },
-          { name: "TAV Holding", logo: "/logo-placeholder.png" },
-          { name: "Watsons", logo: "/logo-placeholder.png" },
-          { name: "Yataş", logo: "/logo-placeholder.png" }
-        ]
-      },
       technologies: {
         title: "Geçiş Kontrol Teknolojileri Nelerdir?",
         items: [
@@ -306,19 +293,6 @@ export default function AccessControlPage() {
         description: "Personnel card IDs are transferred to software with timestamps when personnel swipe their cards through card readers placed at work entry-exit points, doors, turnstiles or passage points. These card IDs with timestamps are transferred to PDKS \"personnel attendance control system\" and GKS \"access control system\" software.",
         description2: "Mika Card access system works integrated with high-performance card readers, Mika PDKS and personnel access tracking system software. It can also be integrated with all known human resources in the market.",
         image: "/rfid-turnstile-system.png"
-      },
-      references: {
-        title: "References",
-        logos: [
-          { name: "Starbucks", logo: "/logo-placeholder.png" },
-          { name: "Koç Holding", logo: "/logo-placeholder.png" },
-          { name: "Turkish Airlines", logo: "/logo-placeholder.png" },
-          { name: "Teknosa", logo: "/logo-placeholder.png" },
-          { name: "Yıldız Holding", logo: "/logo-placeholder.png" },
-          { name: "TAV Holding", logo: "/logo-placeholder.png" },
-          { name: "Watsons", logo: "/logo-placeholder.png" },
-          { name: "Yataş", logo: "/logo-placeholder.png" }
-        ]
       },
       technologies: {
         title: "What Are Access Control Technologies?",
@@ -719,42 +693,6 @@ export default function AccessControlPage() {
                   className="w-full h-auto rounded-lg shadow-lg"
                 />
               </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* References */}
-      <section className="py-16 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-8">
-              {t.references.title}
-            </h2>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-              {t.references.logos.map((ref, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <div className="h-16 flex items-center justify-center">
-                    <div className="text-xs text-slate-500 font-medium text-center">
-                      {ref.name}
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
             </div>
           </motion.div>
         </div>

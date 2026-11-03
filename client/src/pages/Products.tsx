@@ -1,189 +1,138 @@
 import { Link } from "wouter";
 import SEO from "@/seo/SEO";
-import { rotaTanimli } from "@/lib/rotalar";
+import { Button } from "@/components/ui/button";
+import { Kirinti, kirintiJsonLd, type KirintiMaddesi } from "@/components/PdksIcerik";
+
+const KIRINTI: KirintiMaddesi[] = [
+  { ad: "Ana Sayfa", yol: "/" },
+  { ad: "Ürünler", yol: "/urunler" },
+];
+
+type Kalem = { ad: string; yol: string; dis?: boolean };
+
+// Yalnız sitede tanımlı adresler (lib/rotalar.ts); dış bağlantı ayrıca işaretlenir.
+const KATEGORILER: { baslik: string; kalemler: Kalem[] }[] = [
+  {
+    baslik: "Çözümler",
+    kalemler: [
+      { ad: "PDKS (Personel Devam Kontrol)", yol: "/pdks-programi" },
+      { ad: "Geçiş Kontrol Sistemleri", yol: "/access-control" },
+      { ad: "Bekçi Tur Kontrol Sistemi", yol: "/qr-bekci" },
+      { ad: "QR Kod Geçiş Sistemi", yol: "/qr-gecis" },
+      { ad: "Otopark Otomasyonu", yol: "/otopark-otomasyon" },
+      { ad: "Mağaza Personel Takibi", yol: "/urunler/magaza-personel-takip" },
+    ],
+  },
+  {
+    baslik: "Donanımlar",
+    kalemler: [
+      { ad: "Yüz Tanıma Cihazları", yol: "/urunler/yuz-tanima" },
+      { ad: "Parmak İzi Okuyucular", yol: "/urunler/parmak-izi-tanima" },
+      { ad: "Kartlı Geçiş Sistemi (RFID)", yol: "/kartli-gecis-sistemi" },
+      { ad: "Bekçi Tur Kontrol Cihazı", yol: "/urunler/bekci-tur-kontrol" },
+      { ad: "Turnike Sistemleri", yol: "/turnike-sistemleri" },
+      { ad: "Bariyer Sistemleri", yol: "/urunler/bariyer-sistemleri" },
+    ],
+  },
+  {
+    baslik: "Yazılımlar",
+    kalemler: [
+      { ad: "Personel Takip Programı", yol: "/urunler/personel-takip" },
+      { ad: "QR PDKS Uygulaması", yol: "/urunler/qr-pdks" },
+      { ad: "Personel Devam Kontrol Sistemi", yol: "/personel-devam-kontrol-sistemi" },
+      { ad: "Web PDKS", yol: "https://pdkspersoneltakip.com/", dis: true },
+    ],
+  },
+  {
+    baslik: "Tüm Programlar",
+    kalemler: [
+      { ad: "Puantaj Programı", yol: "/puantaj-programi" },
+      { ad: "Vardiya Takip Programı", yol: "/vardiya-takip-programi" },
+      { ad: "Fazla Mesai Hesaplama", yol: "/fazla-mesai-hesaplama" },
+      { ad: "QR ile Personel Giriş-Çıkış", yol: "/qr-pdks" },
+    ],
+  },
+];
+
+const POPULER: Kalem[] = [
+  { ad: "Kartlı PDKS", yol: "/kartli-gecis-sistemi" },
+  { ad: "Personel Takip Programı", yol: "/urunler/personel-takip" },
+  { ad: "Bel Tipi Turnike", yol: "/urunler/bel-tipi-turnike" },
+  { ad: "Boy Tipi Turnike", yol: "/urunler/boy-tipi-turnike" },
+  { ad: "Hızlı Geçiş Turnike", yol: "/urunler/hizli-gecis-turnike" },
+  { ad: "Engelli Turnikesi", yol: "/urunler/engelli-turnike" },
+  { ad: "Geçiş Kontrol Paneli", yol: "/urunler/gecis-kontrol" },
+  { ad: "PDKS Programı", yol: "/pdks-programi" },
+];
+
+const BAGLANTI = "text-slate-700 hover:text-primary transition-colors text-sm leading-relaxed block py-1";
 
 export default function Products() {
-  const productCategories = [
-    {
-      title: "Çözümler",
-      items: [
-        { name: "PDKS (Personel Devam Kontrol)", href: "/pdks-programi" },
-        { name: "Access Geçiş Kontrol Sistemleri", href: "/access-control" },
-        { name: "Bekçi Tur Kontrol Sistemi", href: "/qr-bekci" },
-        { name: "Otel Kapı Kilit Sistemleri", href: "/urunler/otel-kilit" },
-        { name: "Anahtar/Dolap Takip Sistemi", href: "/urunler/anahtar" }
-      ]
-    },
-    {
-      title: "Donanımlar",
-      items: [
-        { name: "1. Biyometrik Yüz Tanıma Sistemi", href: "/urunler/yuz-tanima" },
-        { name: "2. Parmak İzi Okuyucu", href: "/urunler/parmak-izi-tanima" },
-        { name: "3. Kartlı Geçiş Sistemi (RFID)", href: "/kartli-gecis-sistemi" },
-        { name: "4. Şifreli Geçiş/Takip Sistemi", href: "/urunler/sifreli" },
-        { name: "5. Şifreli Passcode Sistemleri", href: "/urunler/passcode" },
-        { name: "6. Bekçi Tur Kontrol Sistemi", href: "/urunler/bekci-tur-kontrol" },
-        { name: "7. Turnike Sistemleri", href: "/turnike-sistemleri" },
-        { name: "8. Bariyer Sistemleri", href: "/urunler/bariyer-sistemleri" },
-        { name: "9. HiSGate/Kasa Daruma Sistemi", href: "/urunler/hisgate" },
-        { name: "10. X-Ray Cihazları", href: "/urunler/xray" }
-      ]
-    },
-    {
-      title: "Yazılımlar",
-      items: [
-        { name: "Web PDKS", href: "https://pdkspersoneltakip.com/" },
-        { name: "Access Kontrol Programı", href: "/access-control" },
-        { name: "StartUp Puantaj Yazılımı", href: "/yazilim/startup" },
-        { name: "Öğretmen Takip Yazılımı", href: "/yazilim/ogretmen" },
-        { name: "Yemekhane Takip Sistemi", href: "/yazilim/yemekhane" },
-        { name: "Öğrenci Takip Sistemi", href: "/yazilim/ogrenci" },
-        { name: "Üye Takip Programı", href: "/yazilim/uye-takip" },
-        { name: "Turnike Takip Sistemi", href: "/yazilim/turnike" }
-      ]
-    },
-    {
-      title: "Tüm Programlar",
-      items: []
-    }
-  ];
-
-  const heroImages = [
-    {
-      title: "Satış",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=300&fit=crop&crop=center",
-      description: "Satış ekibimizle iletişime geçin"
-    },
-    {
-      title: "Satış Sonrası Destek", 
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=300&fit=crop&crop=center",
-      description: "Teknik destek ve bakım hizmetimiz"
-    }
-  ];
-
-  const clientLogos = [
-    { name: "TAV", logo: "https://via.placeholder.com/120x60/f8f9fa/666?text=TAV" },
-    { name: "Çalık Holding", logo: "https://via.placeholder.com/120x60/f8f9fa/666?text=ÇALIK" },
-    { name: "Akfel", logo: "https://via.placeholder.com/120x60/f8f9fa/666?text=AKFEL" },
-    { name: "Bantaş", logo: "https://via.placeholder.com/120x60/f8f9fa/666?text=BANTAŞ" },
-    { name: "Soyak", logo: "https://via.placeholder.com/120x60/f8f9fa/666?text=SOYAK" },
-    { name: "Necmettin Erbakan Üniversitesi", logo: "https://via.placeholder.com/120x60/f8f9fa/666?text=NEÜ" }
-  ];
-
   return (
     <div className="min-h-screen bg-gray-50">
-      <SEO title="Ürünler | Turnike, Bariyer, PDKS Cihazları | Mika Teknoloji" description="Turnike, bariyer, yüz tanıma ve parmak izi PDKS cihazları, kartlı ve QR geçiş ürünleri: Mika Teknoloji ürün kataloğu." />
-      <h1 className="sr-only">Ürünler | Turnike, Bariyer ve PDKS Cihazları</h1>
-      {/* Hero Section with Images */}
+      <SEO
+        title="Ürünler | Turnike, Bariyer, PDKS Cihazları | Mika Teknoloji"
+        description="Turnike, bariyer, yüz tanıma ve parmak izi PDKS cihazları, kartlı ve QR geçiş ürünleri: Mika Teknoloji ürün kataloğu."
+        jsonLd={kirintiJsonLd(KIRINTI)}
+      />
       <div className="bg-white">
-        <div className="container mx-auto px-4 py-8">
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            {heroImages.map((item, index) => (
-              <div key={index} className="relative group">
-                <div className="aspect-[2/1] bg-gradient-to-br from-slate-600 to-slate-800 rounded-lg overflow-hidden">
-                  <img 
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover opacity-80"
-                  />
-                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                    <div className="text-center text-white">
-                      <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-                      <p className="text-sm opacity-90">{item.description}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <Kirinti maddeler={KIRINTI} icSinif="pb-4" />
       </div>
 
-      {/* Product Categories */}
+      <section className="bg-slate-900 border-b-4 border-primary text-white py-12">
+        <div className="container mx-auto px-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-3">Ürünler</h1>
+          <p className="text-slate-300 max-w-2xl">
+            PDKS yazılımı, geçiş kontrol cihazları, turnike ve bariyer sistemleri.
+          </p>
+        </div>
+      </section>
+
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {productCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="bg-white">
-              <h2 className="text-lg font-bold text-slate-800 mb-4 p-4 bg-slate-100 border-b">
-                {category.title}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {KATEGORILER.map((k) => (
+            <div key={k.baslik} className="bg-white border border-slate-200 rounded-lg">
+              <h2 className="text-lg font-bold text-slate-800 p-4 bg-slate-100 border-b border-slate-200 rounded-t-lg">
+                {k.baslik}
               </h2>
-              <div className="p-4">
-                {category.items.length > 0 ? (
-                  <ul className="space-y-3">
-                    {category.items.map((item, itemIndex) => (
-                      <li key={itemIndex}>
-                        {rotaTanimli(item.href) ? (
-                          <Link
-                            href={item.href}
-                            className="text-slate-700 hover:text-primary transition-colors text-sm leading-relaxed block py-1"
-                            data-testid={`product-link-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
-                          >
-                            {item.name}
-                          </Link>
-                        ) : (
-                          <span className="text-slate-700 text-sm leading-relaxed block py-1">
-                            {item.name}
-                          </span>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className="text-slate-500 text-sm italic">Yakında...</p>
-                )}
-              </div>
+              <ul className="p-4 space-y-2">
+                {k.kalemler.map((m) => (
+                  <li key={m.yol}>
+                    {m.dis ? (
+                      <a href={m.yol} target="_blank" rel="noopener noreferrer" className={BAGLANTI}>{m.ad}</a>
+                    ) : (
+                      <Link href={m.yol} className={BAGLANTI}>{m.ad}</Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
 
-        {/* Keywords Section */}
-        <div className="mt-12 bg-white p-6 rounded-lg shadow-sm">
-          <p className="text-sm text-slate-600 leading-relaxed">
-            Popüler Ürünler: Kartlı Pdks, Personel Takip Programı, Kapı Kilit Sistemleri, Şifreli Kapı Kilit, Bel Tag Turnike, Geçiş Kontrolü Paneli, Büy Turnike, İnci Geçiş Turnike, Makinesi Turnike, Elektronik Kart Makinalrında, pdks programı
-          </p>
-        </div>
-
-        {/* Client Logos */}
-        <div className="mt-16">
-          <h2 className="text-2xl font-bold text-center text-slate-800 mb-8">
-            Müşterilerimiz
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center">
-            {clientLogos.map((client, index) => (
-              <div key={index} className="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center">
-                <img 
-                  src={client.logo}
-                  alt={client.name}
-                  className="max-h-12 max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
-                />
-              </div>
+        <div className="mt-12 bg-white p-6 rounded-lg border border-slate-200">
+          <h2 className="text-sm font-semibold text-slate-800 mb-3">Popüler Ürünler</h2>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2">
+            {POPULER.map((m) => (
+              <li key={m.yol}>
+                <Link href={m.yol} className="text-sm text-slate-600 hover:text-primary transition-colors">{m.ad}</Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
 
-        {/* CTA Section */}
-        <div className="mt-16 bg-slate-800 text-white rounded-2xl p-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            İhtiyacınıza Uygun Çözümü Birlikte Bulalım
-          </h2>
+        <div className="mt-16 bg-slate-900 text-white rounded-2xl p-8 text-center">
+          <h2 className="text-3xl font-bold mb-4">İhtiyacınıza Uygun Çözümü Birlikte Bulalım</h2>
           <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
             Uzman ekibimizle size uygun ürünü seçmenizde yardımcı oluyoruz.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/iletisim"
-              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-medium transition-colors"
-              data-testid="products-contact-button"
-            >
-              İletişime Geçin
-            </Link>
-            <Link 
-              href="/iletisim"
-              className="inline-flex items-center justify-center border border-white/20 hover:bg-white/10 text-white px-8 py-3 rounded-lg font-medium transition-colors"
-              data-testid="products-catalog-button"
-            >
-              Katalog İsteyin
-            </Link>
+            <Button asChild size="lg" data-testid="products-contact-button">
+              <Link href="/iletisim">İletişime Geçin</Link>
+            </Button>
+            <Button asChild size="lg" variant="outlineLight" data-testid="products-catalog-button">
+              <Link href="/iletisim">Katalog İsteyin</Link>
+            </Button>
           </div>
         </div>
       </div>
