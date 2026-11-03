@@ -20,6 +20,7 @@ import {
 import { BOY_TURNIKE_IMAGES } from "@/assetsMap";
 import { Link } from "wouter";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
+import { boyut } from "@/lib/gorselBoyut";
 
 export default function MT1350YarimBoyDetailPage() {
   
@@ -100,7 +101,7 @@ export default function MT1350YarimBoyDetailPage() {
               transition={{ duration: 0.6 }}
             >
               <div className="bg-white rounded-2xl shadow-lg p-8">
-                <img 
+                <img {...boyut(BOY_TURNIKE_IMAGES.bt13)} loading="eager" {...{ fetchpriority: "high" }} 
                   src={BOY_TURNIKE_IMAGES.bt13}
                   alt="MT 1350 Elektromekanik Yarım Boy Turnike"
                   className="w-full h-auto rounded-xl shadow-md"

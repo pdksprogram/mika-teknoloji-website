@@ -32,6 +32,7 @@ import maasHesaplamaImage from "@assets/maas-hesaplama-interface.png";
 import personelBilgileriImage from "@assets/personel-bilgileri-interface.png";
 import personelTalepleriImage from "@assets/personel-talepleri-interface.png";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
+import { boyut } from "@/lib/gorselBoyut";
 
 // /urunler/personel-takip SSS (FAQPage) şeması. Gövdeye konan <script> ön-render'da &quot; ile kaçıp geçersiz
 // oluyordu; Helmet içinde verilir (SEO bileşeninin jsonLd deseniyle aynı mekanizma).
@@ -322,7 +323,7 @@ export default function PersonelTakipPage() {
               <Card className="h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <CardContent className="p-8 text-center">
                   <div className="mb-6">
-                    <img 
+                    <img width={873} height={957} loading="lazy" 
                       src="/qr-hand-mockup.png" 
                       alt="QR kod mobil okutma sistemi" 
                       className="w-32 h-32 mx-auto object-contain rounded-lg"
@@ -347,7 +348,7 @@ export default function PersonelTakipPage() {
               <Card className="h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <CardContent className="p-8 text-center">
                   <div className="mb-6">
-                    <img 
+                    <img width={252} height={252} loading="lazy" 
                       src="/images/urun/erisim-kontrol-paneli-kart.jpg" 
                       alt="Geçiş kontrol paneli kartı" 
                       className="w-32 h-32 mx-auto object-contain rounded-lg"
@@ -372,7 +373,7 @@ export default function PersonelTakipPage() {
               <Card className="h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <CardContent className="p-8 text-center">
                   <div className="mb-6">
-                    <img 
+                    <img width={734} height={532} loading="lazy" 
                       src="/images/urun/parmak-izi-cihazi.jpg" 
                       alt="Parmak izi okuyucu biyometrik sistemi" 
                       className="w-32 h-32 mx-auto object-contain rounded-lg"
@@ -680,7 +681,7 @@ export default function PersonelTakipPage() {
                   {/* Image for Vardiya Yönetimi */}
                   {item.image && (
                     <div className="mb-6">
-                      <img 
+                      <img {...boyut(item.image)} loading="lazy" 
                         src={item.image} 
                         alt={`${item.title} - PDKS sistem ekranı`}
                         className="w-full h-auto rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-300"

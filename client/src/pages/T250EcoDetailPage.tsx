@@ -13,6 +13,7 @@ import {
 import { BEL_TURNIKE_IMAGES } from "@/assetsMap";
 import { Link } from "wouter";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
+import { boyut } from "@/lib/gorselBoyut";
 
 export default function T250EcoDetailPage() {
   
@@ -119,7 +120,7 @@ export default function T250EcoDetailPage() {
               className="relative"
             >
               <div className="rounded-lg border border-slate-200 bg-white p-6">
-                <img 
+                <img {...boyut(BEL_TURNIKE_IMAGES.bt2)} {...{ fetchpriority: "high" }}
                   src={BEL_TURNIKE_IMAGES.bt2}
                   alt="MT 250 ECO Ekonomik Bel Tipi Turnike"
                   className="w-full h-auto max-w-md mx-auto"

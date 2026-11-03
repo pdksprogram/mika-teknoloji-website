@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
         >
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center space-x-4">
-              <img 
+              <img width={234} height={216} loading="lazy" 
                 src="/images/logos/mika-logo.jpg" 
                 alt="Mika Teknoloji Logo" 
                 className="w-16 h-16 rounded-lg object-contain"
@@ -168,7 +168,7 @@ export default function PrivacyPolicy() {
             <div className="mt-12 bg-slate-50 p-8 rounded-lg border border-slate-200">
               <div className="flex flex-col md:flex-row items-center justify-between">
                 <div className="flex items-center space-x-4 mb-4 md:mb-0">
-                  <img 
+                  <img width={234} height={216} loading="lazy" 
                     src="/images/logos/mika-logo.jpg" 
                     alt="Mika Teknoloji" 
                     className="w-12 h-12 rounded-lg object-contain"

@@ -19,6 +19,7 @@ import {
 import { useLanguage } from "@/hooks/useLanguage";
 import { menuSuz } from "@/lib/rotalar";
 import { CTA_ARA, CTA_DONANIM, DEMO_TELEFON } from "@/lib/iletisim";
+import { boyut } from "@/lib/gorselBoyut";
 const mikaLogo = "/mika-logo.jpg"; // Real Mika logo
 const MEGA_SUTUN: Record<number, string> = { 1: "grid-cols-1", 2: "grid-cols-2", 3: "grid-cols-3", 4: "grid-cols-4" };
 const MEGA_GENISLIK: Record<number, string> = { 1: "w-80", 2: "w-[36rem]", 3: "w-[52rem]", 4: "w-[64rem]" };
@@ -212,7 +213,7 @@ export default function Header() {
             <Link href="/" className="flex items-center space-x-3" data-testid="logo-link">
               <div className="flex items-center">
                 <div className="w-16 h-16 rounded-lg overflow-hidden">
-                  <img src={mikaLogo} alt="Mika Teknoloji Logo" className="w-full h-full object-contain" />
+                  <img {...boyut(mikaLogo)} src={mikaLogo} alt="Mika Teknoloji Logo" className="w-full h-full object-contain" />
                 </div>
                 <div className="ml-3">
                   <div className="font-bold text-xl text-slate-800">{t.companyName}</div>

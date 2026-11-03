@@ -17,6 +17,7 @@ import {
 import { HIZLI_GECIS_TURNIKE_IMAGES } from "@/assetsMap";
 
 import CtaDugmeleri from "@/components/CtaDugmeleri";
+import { boyut } from "@/lib/gorselBoyut";
 
 export default function MTT300SlimUzunDetailPage() {
   const urunDetay = {
@@ -143,7 +144,7 @@ export default function MTT300SlimUzunDetailPage() {
                 className="relative"
               >
                 <div className="aspect-square overflow-hidden rounded-2xl shadow-2xl bg-white/10 p-6">
-                  <img 
+                  <img {...boyut(urunDetay.image)} loading="eager" {...{ fetchpriority: "high" }} 
                     src={urunDetay.image} 
                     alt={urunDetay.title}
                     className="w-full h-full object-contain bg-white rounded-xl"

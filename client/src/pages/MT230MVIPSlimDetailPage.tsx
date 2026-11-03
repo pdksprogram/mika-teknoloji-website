@@ -18,6 +18,7 @@ import {
 import { ENGELLI_TURNIKE_IMAGES } from "@/assetsMap";
 import { Link } from "wouter";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
+import { boyut } from "@/lib/gorselBoyut";
 
 export default function MT230MVIPSlimDetailPage() {
   const productDetails = {
@@ -120,7 +121,7 @@ export default function MT230MVIPSlimDetailPage() {
               className="relative"
             >
               <div className="aspect-[4/3] rounded-lg overflow-hidden bg-gray-100 shadow-lg">
-                <img 
+                <img {...boyut(productDetails.mainImage)} loading="eager" {...{ fetchpriority: "high" }} 
                   src={productDetails.mainImage}
                   alt={productDetails.title}
                   className="w-full h-full object-contain"

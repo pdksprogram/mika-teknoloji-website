@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { trackAccessControlView, trackProductView } from "@/lib/analytics";
 import SEO from "@/seo/SEO";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
+import { boyut } from "@/lib/gorselBoyut";
 
 // Access Control Panel images  
 const accessControlPanel = "/access-control-panel.png";
@@ -146,7 +147,7 @@ export default function AccessControlPage() {
         title: "Kartlı Geçiş Sistemi Programı",
         description: "İşe giriş çıkış noktalarına, tespit edilen kapı, turnike yada geçiş noktası gibi alanlara yerleştirilen kart okuyucu personelin kartını okutmasıyla birlikte personel kart ID'ler zaman damgalı şekilde yazılıma aktarılmaktadır. Bu zaman damgaları ile gelen kart ID'leri PDKS 'personel devam kontrol sistemi' ve GKS 'geçiş kontrol sistemi' yazılımlarına aktarılır.",
         description2: "Mika Kartlı geçiş sistemi üstün performanslı kart okuyucu, Mika PDKS ve personel geçiş takip sistemi yazılımları ile entegre olarak çalışmaktadır. Aynı zamanda piyasada bilinen tüm insan kaynakları ile entegre olabilmektedir.",
-        image: "/rfid-turnstile-system.png"
+        image: "/rfid-turnstile-system.webp"
       },
       technologies: {
         title: "Geçiş Kontrol Teknolojileri Nelerdir?",
@@ -288,7 +289,7 @@ export default function AccessControlPage() {
         title: "Card Access System Program",
         description: "Personnel card IDs are transferred to software with timestamps when personnel swipe their cards through card readers placed at work entry-exit points, doors, turnstiles or passage points. These card IDs with timestamps are transferred to PDKS \"personnel attendance control system\" and GKS \"access control system\" software.",
         description2: "Mika Card access system works integrated with high-performance card readers, Mika PDKS and personnel access tracking system software. It can also be integrated with all known human resources in the market.",
-        image: "/rfid-turnstile-system.png"
+        image: "/rfid-turnstile-system.webp"
       },
       technologies: {
         title: "What Are Access Control Technologies?",
@@ -502,7 +503,7 @@ export default function AccessControlPage() {
                   <div className="relative inline-block">
                     {/* Real Mika QR App Photo */}
                     <div className="relative">
-                      <img 
+                      <img {...boyut(mikaQRApp)} loading="lazy" 
                         src={mikaQRApp} 
                         alt="Mika QR Mobile App"
                         className="w-48 h-auto mx-auto rounded-2xl shadow-xl"
@@ -555,7 +556,7 @@ export default function AccessControlPage() {
               >
                 <Link href={device.href}>
                   <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-4 group">
-                    <img 
+                    <img {...boyut(device.image)} loading="lazy" 
                       src={device.image} 
                       alt={device.title}
                       className="w-full h-40 object-contain mb-4 group-hover:scale-105 transition-transform duration-300"
@@ -637,7 +638,7 @@ export default function AccessControlPage() {
               </div>
               
               <div>
-                <img 
+                <img {...boyut(t.systemProgram.image)} loading="lazy" 
                   src={t.systemProgram.image} 
                   alt="Kartlı Geçiş Sistemi"
                   className="w-full h-auto rounded-lg shadow-lg"

@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'wouter';
 import { CTA_DONANIM, CTA_YAZILIM } from '@/lib/iletisim';
+import { boyut } from "@/lib/gorselBoyut";
 
 // Slaytlarda yalnız gerçek ürün fotoğrafı ve gerçek (KVKK maskeli) program ekranı kullanılır.
 interface CarouselSlide {
@@ -150,7 +151,7 @@ export default function HeroCarousel() {
                 {/* Mobilde görsel metnin üstünde, oran korunur */}
                 <div className="order-first lg:order-none flex items-center justify-center">
                   <div className="bg-white rounded-xl p-3 lg:p-6 shadow-2xl max-w-full">
-                    <img
+                    <img {...boyut(slide.image)}
                       src={slide.image}
                       alt={slide.imageAlt}
                       className="block max-h-[180px] lg:max-h-[400px] w-auto max-w-full object-contain"

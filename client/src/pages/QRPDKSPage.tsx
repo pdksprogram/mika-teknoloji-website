@@ -11,6 +11,7 @@ import avansTalepImage from "@assets/IMG_4253_1759436694818.png";
 import yillikIzinBilgileriImage from "@assets/IMG_4254_1759437242409.png";
 import sikayetOlusturImage from "@assets/IMG_4256_1759438160354.png";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
+import { boyut } from "@/lib/gorselBoyut";
 
 type Bolum = { id: string; ust: string; baslik: string; gorseller: { src: string; alt: string }[]; metin: ReactNode; maddeler: string[] };
 
@@ -308,7 +309,7 @@ export default function QRPDKSPage() {
               {b.gorseller.length > 0 && (
               <div className="lg:w-2/5 flex justify-center gap-4">
                 {b.gorseller.map((g) => (
-                  <img
+                  <img {...boyut(g.src)}
                     key={g.alt}
                     src={g.src}
                     alt={g.alt}

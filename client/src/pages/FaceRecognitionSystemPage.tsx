@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import { trackFaceRecognitionView, trackProductView } from "@/lib/analytics";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
 import { Kirinti } from "@/components/PdksIcerik";
+import { boyut } from "@/lib/gorselBoyut";
 
 const devices = [
   {
@@ -22,7 +23,7 @@ const devices = [
     id: 2,
     name: "MTFP15",
     description: "Yüz Tanıma ve Parmak İzi Terminal",
-    image: "/mtfp15-device.png",
+    image: "/mtfp15-device.webp",
     features: ["Yüz Kayıt Kapasitesi : 1000", "Parmak İzi Kayıt Kapasitesi : 1000", "Log Kapasitesi : 100.000", "Ekran Boyutu : 2,4 inç TFT LCD", "Röle : Var", "Haberleşme : TCP/IP, USB"]
   },
   {
@@ -36,7 +37,7 @@ const devices = [
     id: 4,
     name: "MTFDP200",
     description: "Yüz Tanıma ve Parmak İzi Terminal",
-    image: "/mtfdp200-yuz-device.png",
+    image: "/mtfdp200-yuz-device.webp",
     features: ["Yüz Kayıt Kapasitesi : 20000", "Parmak İzi Kayıt Kapasitesi : 20000", "Log Kapasitesi : 500.000", "Röle : Var", "Haberleşme : TCP/IP, USB"]
   }
 ];
@@ -100,7 +101,7 @@ export default function FaceRecognitionSystemPage() {
                   <CardContent className="p-6 flex flex-col flex-1">
                     <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden border border-gray-200">
                       {device.image && device.image !== "/placeholder-device.jpg" ? (
-                        <img 
+                        <img {...boyut(device.image)} loading="lazy" 
                           src={device.image} 
                           alt={device.name}
                           className={`w-full h-full object-contain ${device.id === 1 ? 'scale-150' : device.id === 4 ? 'scale-125' : ''}`}

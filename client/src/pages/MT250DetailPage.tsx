@@ -18,6 +18,7 @@ import { BEL_TURNIKE_IMAGES } from "@/assetsMap";
 import { Link } from "wouter";
 import TurnikeReferanslari from "@/components/TurnikeReferanslari";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
+import { boyut } from "@/lib/gorselBoyut";
 
 export default function MT250DetailPage() {
   
@@ -133,7 +134,7 @@ export default function MT250DetailPage() {
               transition={{ delay: 0.2 }}
             >
               <Card className="overflow-hidden">
-                <img 
+                <img {...boyut(BEL_TURNIKE_IMAGES.bt1)} loading="eager" {...{ fetchpriority: "high" }} 
                   src={BEL_TURNIKE_IMAGES.bt1}
                   alt="MT-250 Elektromekanik Bel Tipi Turnike"
                   className="w-full h-96 object-cover"

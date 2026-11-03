@@ -11,7 +11,7 @@ export const IMAGES = {
 
 // Bel Tipi Turnike Modelleri (turnike ürün görselleri)
 export const BEL_TURNIKE_IMAGES = {
-  bt1: `/t-250-elektromekanik-turnike.jpg`, // T 250
+  bt1: `/t-250-elektromekanik-turnike.webp`, // T 250
   bt2: `/t-250-eco-elektromekanik-turnike.jpg`, // T 250 ECO
   bt3: `/t-250-a2-elektromekanik-turnike.jpg`, // T 250 A2
   bt4: `/t-250-eco-a2-elektromekanik-turnike.jpg`, // T 250 A2 ECO
@@ -21,8 +21,8 @@ export const BEL_TURNIKE_IMAGES = {
   bt8: `/t-250-s-elektromekanik-turnike.jpg`, // T 250 S
   bt9: `/t-450-elektromekanik-turnike.jpg`, // T 450
   bt10: `/t-281-elektromekanik-turnike.jpg`, // T 281
-  bt11: `/jetonlu-turnike-sistemi-t250.jpg`, // T 250 Jetonlu
-  bt12: `/jetonlu-turnike-sistemi-t345.jpg`, // T 345 Jetonlu
+  bt11: `/jetonlu-turnike-sistemi-t250.webp`, // T 250 Jetonlu
+  bt12: `/jetonlu-turnike-sistemi-t345.webp`, // T 345 Jetonlu
 } as const;
 
 // Boy Tipi Turnike Modelleri (turnike ürün görselleri)
@@ -53,7 +53,7 @@ export const ENGELLI_TURNIKE_IMAGES = {
   et6: `/699-t80-yaprak-turnike.jpg`, // MT T80 Yaprak Turnike
   et7: `/t80-manyetik-kilitli-yaprak-turnike.jpg`, // MT T80 Manyetik Kilitli Yaprak Turnike
   et8: `/700-tmt4-kelebek-turnike.jpg`, // MT TMT4 Kelebek Turnike
-  et9: `/turnike-seperator.jpg`, // MT Turnike Seperatör
+  et9: `/turnike-seperator.webp`, // MT Turnike Seperatör
 } as const;
 
 // Hızlı Geçiş Turnike Modelleri (turnike ürün görselleri)

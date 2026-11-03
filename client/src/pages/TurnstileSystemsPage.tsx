@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import TurnikeReferanslari from "@/components/TurnikeReferanslari";
 import SEO, { kanonikAdres, ASIL_ADRES } from "@/seo/SEO";
+import { boyut } from "@/lib/gorselBoyut";
 
 // Turnike kategori görselleri - Parmak izi sayfası mantığı
 const belTipiTurnike = "/mt-bel-tipi-turnike.png";
@@ -106,7 +107,7 @@ export default function TurnstileSystemsPage() {
                 <Link href={category.link}>
                   <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 overflow-hidden">
                     <div className="aspect-square p-8 bg-slate-50">
-                      <img 
+                      <img {...boyut(category.image)} loading="lazy" 
                         src={category.image} 
                         alt={category.name}
                         className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"

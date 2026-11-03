@@ -6,9 +6,10 @@ import SEO from "@/seo/SEO";
 import { useEffect } from "react";
 import { trackQRPatrolView, trackProductView } from "@/lib/analytics";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
+import { boyut } from "@/lib/gorselBoyut";
 
 // Images
-const securityPatrolImage = "/security-guard-patrol-tracking.png";
+const securityPatrolImage = "/security-guard-patrol-tracking.webp";
 
 const features = [
   {
@@ -149,7 +150,7 @@ export default function QRPatrolPage() {
                   <p className="text-gray-600">QR kod okutma ile otomatik tur kaydı ve raporlama</p>
                 </div>
                 <div className="bg-slate-50 rounded-2xl p-8 text-center">
-                  <img 
+                  <img {...boyut(securityPatrolImage)} loading="eager" {...{ fetchpriority: "high" }} 
                     src={securityPatrolImage}
                     alt="QR-Patrol Güvenlik Devriye Takip Sistemi"
                     className="w-full h-auto rounded-xl object-cover shadow-lg mb-4"

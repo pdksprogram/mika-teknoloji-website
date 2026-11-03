@@ -114,7 +114,7 @@ export default function About() {
             <Card className="border-0 shadow-xl overflow-hidden">
               <div className="p-8 bg-slate-50">
                 <div className="mb-6">
-                  <img 
+                  <img width={374} height={374} loading="lazy" 
                     src="/images/about/leadership-2-kirpik.jpg" 
                     alt="Şirket Hiyerarşisi" 
                     className="w-48 h-48 rounded-full mx-auto object-cover shadow-lg"
@@ -192,7 +192,7 @@ export default function About() {
             <Card className="border-0 shadow-xl overflow-hidden">
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="aspect-square md:aspect-auto">
-                  <img 
+                  <img width={415} height={415} loading="lazy" 
                     src="/images/about/leadership-3.png" 
                     alt="Suphi Gezgin - Mobil Yazılım Uzmanı" 
                     className="w-full h-full object-cover"
@@ -265,8 +265,8 @@ export default function About() {
             <Card className="border-0 shadow-xl overflow-hidden">
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="aspect-square md:aspect-auto">
-                  <img 
-                    src="/images/about/leadership-4.png" 
+                  <img width={1015} height={1296} loading="lazy" 
+                    src="/images/about/leadership-4.webp" 
                     alt="Yasin Atılgan - Satış Müdürü" 
                     className="w-full h-full object-cover"
                     data-testid="yasin-photo"

@@ -15,6 +15,7 @@ import {
 import { BEL_TURNIKE_IMAGES } from "@/assetsMap";
 import { Link } from "wouter";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
+import { boyut } from "@/lib/gorselBoyut";
 
 export default function JetonluT250DetailPage() {
   
@@ -124,7 +125,7 @@ export default function JetonluT250DetailPage() {
               className="relative"
             >
               <div className="rounded-lg border border-slate-200 bg-white p-6">
-                <img 
+                <img {...boyut(BEL_TURNIKE_IMAGES.bt11)} {...{ fetchpriority: "high" }}
                   src={BEL_TURNIKE_IMAGES.bt11}
                   alt="MT 250 Jetonlu Turnike Sistemi"
                   className="w-full h-auto max-w-md mx-auto"

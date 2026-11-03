@@ -18,6 +18,7 @@ import { HIZLI_GECIS_TURNIKE_IMAGES } from "@/assetsMap";
 import TurnikeReferanslari from "@/components/TurnikeReferanslari";
 import { Link } from "wouter";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
+import { boyut } from "@/lib/gorselBoyut";
 
 export default function HizliGecisPage() {
   
@@ -225,7 +226,7 @@ export default function HizliGecisPage() {
               >
                 <Card className="h-full hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden">
                   <div className="relative overflow-hidden aspect-[3/2] xs:aspect-[4/3] sm:aspect-[3/2]">
-                    <img 
+                    <img {...boyut(model.image)} 
                       src={model.image} 
                       alt={model.title}
                       className="w-full h-full object-cover xs:object-contain sm:object-cover bg-gray-50 group-hover:scale-105 transition-transform duration-300"

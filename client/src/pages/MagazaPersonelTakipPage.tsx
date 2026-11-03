@@ -15,6 +15,7 @@ import vardiyaBildirim from "@assets/IMG_4280_1759781022450.png";
 import izinAvans from "@assets/IMG_4281_1759781338557.png";
 import belgeYonetimi from "@assets/IMG_4283_1759781625259.png";
 import toplulukPlus from "@assets/IMG_4285_1759782715899.jpeg";
+import { boyut } from "@/lib/gorselBoyut";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -233,7 +234,7 @@ export default function MagazaPersonelTakipPage() {
                                   </div>
                                   
                                   {/* Ekran İçeriği */}
-                                  <img 
+                                  <img {...boyut(index === 0 ? vardiyaPlanlama : index === 1 ? vardiyaOnay : index === 2 ? vardiyaBildirim : index === 3 ? izinAvans : index === 4 ? belgeYonetimi : toplulukPlus)} loading="lazy" 
                                     src={index === 0 ? vardiyaPlanlama : index === 1 ? vardiyaOnay : index === 2 ? vardiyaBildirim : index === 3 ? izinAvans : index === 4 ? belgeYonetimi : toplulukPlus} 
                                     alt={feature.title} 
                                     className="w-full h-full object-cover"

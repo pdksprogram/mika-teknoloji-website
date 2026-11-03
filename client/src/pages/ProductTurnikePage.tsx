@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
+import { boyut } from "@/lib/gorselBoyut";
 
 export default function ProductTurnikePage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -240,7 +241,7 @@ export default function ProductTurnikePage() {
             >
               <Card className="h-full hover:shadow-xl transition-shadow duration-300">
                 <div className="aspect-[4/3] relative overflow-hidden rounded-t-lg">
-                  <img 
+                  <img {...boyut(product.image)} loading="lazy" 
                     src={product.image} 
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"

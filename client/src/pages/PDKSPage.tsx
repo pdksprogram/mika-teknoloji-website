@@ -10,6 +10,7 @@ import SEO, { ASIL_ADRES, kanonikAdres } from "@/seo/SEO";
 import { IlgiliSayfalar, VideoBolumu, DEMO_TELEFON, DEMO_TELEFON_GORUNEN, DEMO_WHATSAPP, kirintiJsonLd, sssJsonLd } from "@/components/PdksIcerik";
 import type { SssMaddesi } from "@/components/PdksIcerik";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
+import { boyut } from "@/lib/gorselBoyut";
 
 // Doğrulanmış SSS: EPDKS menüleri ve hesap kuralları, Esoft Pdks mobil uygulama ekranları.
 const PDKS_SSS: SssMaddesi[] = [
@@ -42,7 +43,7 @@ const PDKS_SSS: SssMaddesi[] = [
 // Real device images
 const facialRecognitionDevice = "/images/urun/proper-yuz-tanima.jpg";
 const qrPdksDevice1 = "/qr-hand-mockup.png";
-const qrPdksDevice2 = "/rfid-turnstile-system.png";
+const qrPdksDevice2 = "/rfid-turnstile-system.webp";
 const fingerprintDevice = "/fingerprint-device.png";
 
 export default function PDKSPage() {
@@ -568,7 +569,7 @@ export default function PDKSPage() {
                   <div className="relative group">
                     <div className="relative bg-white p-8 rounded-lg border border-slate-200">
                       <div className={`${system.id === 'qr' ? 'aspect-[3/4] max-w-xs' : system.id === 'rfid' ? 'aspect-[4/3] max-w-lg' : 'aspect-square max-w-md'} mx-auto overflow-hidden rounded-lg`}>
-                        <img 
+                        <img {...boyut(system.image)} loading="lazy" 
                           src={system.image} 
                           alt={system.data.title}
                           className={`w-full h-full ${system.id === 'qr' || system.id === 'rfid' ? 'object-contain' : 'object-cover'} transform group-hover:scale-105 transition-transform duration-300`}

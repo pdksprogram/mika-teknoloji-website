@@ -16,6 +16,7 @@ import {
 import { BOY_TURNIKE_IMAGES } from "@/assetsMap";
 import { Link } from "wouter";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
+import { boyut } from "@/lib/gorselBoyut";
 
 export default function MT2500KKristalDetailPage() {
   
@@ -96,7 +97,7 @@ export default function MT2500KKristalDetailPage() {
               transition={{ duration: 0.6 }}
             >
               <div className="bg-slate-50 rounded-2xl shadow-lg p-8 relative overflow-hidden">
-                <img 
+                <img {...boyut(BOY_TURNIKE_IMAGES.bt11)} loading="eager" {...{ fetchpriority: "high" }} 
                   src={BOY_TURNIKE_IMAGES.bt11}
                   alt="MT 2500K Kristal 3 Kollu Premium Boy Tipi Turnike"
                   className="w-full h-auto rounded-xl shadow-md"

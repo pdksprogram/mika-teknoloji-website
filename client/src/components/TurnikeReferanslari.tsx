@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { REFERANSLAR } from "@/lib/referanslar";
+import { boyut } from "@/lib/gorselBoyut";
 
 // Turnike sayfalarının ortak referans bölümü: veri Referanslar sayfasıyla aynı tek listeden gelir
 // (lib/referanslar.ts). Yapay zekâ ile üretilmiş görsel kullanılmaz.
@@ -21,7 +22,7 @@ export default function TurnikeReferanslari() {
           {TURNIKE_REFERANSLARI.map((r) => (
             <li key={r.ad} className="bg-white border border-slate-200 rounded-lg overflow-hidden">
               <div className="aspect-video bg-slate-100">
-                <img src={r.foto ?? r.gorsel} alt={r.alt} loading="lazy" className="w-full h-full object-cover" />
+                <img {...boyut(r.foto ?? r.gorsel)} src={r.foto ?? r.gorsel} alt={r.alt} loading="lazy" className="w-full h-full object-cover" />
               </div>
               <div className="p-4">
                 <h3 className="font-bold text-slate-900">{r.ad}</h3>
