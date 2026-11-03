@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
+import { Kirinti } from "@/components/PdksIcerik";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";
-import { 
-  ChevronRight, 
-  Phone, 
+import {
+  Phone,
   Download,
   CheckCircle,
   Shield,
@@ -13,7 +12,7 @@ import {
   Zap,
   Settings,
   Clock,
-  ArrowLeft
+  ArrowLeft,
 } from "lucide-react";
 import { BEL_TURNIKE_IMAGES } from "@/assetsMap";
 import { Link } from "wouter";
@@ -91,22 +90,7 @@ export default function MT250DetailPage() {
         <link rel="canonical" href="https://mikateknoloji.com/urunler/mt-250-turnike" />
       </Helmet>
 
-      {/* Breadcrumb */}
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 py-4">
-          <nav className="flex items-center space-x-2 text-sm">
-            <Link href="/urunler/turnike" className="text-gray-600 hover:text-primary">
-              Turnike Sistemleri
-            </Link>
-            <ChevronRight className="h-4 w-4 text-gray-400" />
-            <Link href="/urunler/bel-tipi-turnike" className="text-gray-600 hover:text-primary">
-              Bel Tipi Turnikeler
-            </Link>
-            <ChevronRight className="h-4 w-4 text-gray-400" />
-            <span className="text-gray-900 font-semibold">MT-250</span>
-          </nav>
-        </div>
-      </div>
+      <Kirinti maddeler={[{ ad: "Ana Sayfa", yol: "/" }, { ad: "Ürünler", yol: "/urunler" }, { ad: "Turnike Sistemleri", yol: "/urunler/turnike" }, { ad: "Bel Tipi Turnikeler", yol: "/urunler/bel-tipi-turnike" }, { ad: "MT-250", yol: "/urunler/mt-250-turnike" }]} />
 
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-6xl mx-auto">
@@ -131,9 +115,6 @@ export default function MT250DetailPage() {
             animate={{ y: 0, opacity: 1 }}
             className="text-center mb-12"
           >
-            <Badge className="bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-100 mb-4 px-4 py-2">
-              Elektromekanik Model
-            </Badge>
             <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               MT-250 Elektromekanik 3 Kollu Bel Tipi Turnike Sistemi
             </h1>

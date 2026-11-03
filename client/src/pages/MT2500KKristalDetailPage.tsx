@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
+import { Kirinti } from "@/components/PdksIcerik";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";
 import { 
@@ -80,20 +80,7 @@ export default function MT2500KKristalDetailPage() {
         <link rel="canonical" href="https://mikateknoloji.com/urunler/mt2500k-kristal" />
       </Helmet>
 
-      {/* Breadcrumb */}
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-primary">Ana Sayfa</Link>
-            <span>/</span>
-            <Link href="/urunler" className="hover:text-primary">Ürünler</Link>
-            <span>/</span>
-            <Link href="/urunler/boy-tipi-turnike" className="hover:text-primary">Boy Tipi Turnikeler</Link>
-            <span>/</span>
-            <span className="text-gray-900 font-medium">MT 2500K Kristal</span>
-          </div>
-        </div>
-      </div>
+      <Kirinti maddeler={[{ ad: "Ana Sayfa", yol: "/" }, { ad: "Ürünler", yol: "/urunler" }, { ad: "Boy Tipi Turnikeler", yol: "/urunler/boy-tipi-turnike" }, { ad: "MT 2500K Kristal", yol: "/urunler/mt2500k-kristal" }]} />
 
       {/* Ürün Detayı */}
       <div className="py-12">
@@ -106,12 +93,6 @@ export default function MT2500KKristalDetailPage() {
               transition={{ duration: 0.6 }}
             >
               <div className="bg-slate-50 rounded-2xl shadow-lg p-8 relative overflow-hidden">
-                <div className="absolute top-4 right-4">
-                  <Badge className="bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-100">
-                    <Star className="h-3 w-3 mr-1" />
-                    PREMIUM
-                  </Badge>
-                </div>
                 <img 
                   src={BOY_TURNIKE_IMAGES.bt11}
                   alt="MT 2500K Kristal 3 Kollu Premium Boy Tipi Turnike"
@@ -128,9 +109,6 @@ export default function MT2500KKristalDetailPage() {
               className="space-y-6"
             >
               <div>
-                <Badge className="bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-100 mb-3">
-                  Premium Kristal Serisi
-                </Badge>
                 <h1 className="text-3xl font-bold text-gray-900 mb-4">
                   MT 2500K Kristal 3 Kollu Premium Boy Tipi Turnike
                 </h1>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
+import { Kirinti, DEMO_TELEFON } from "@/components/PdksIcerik";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";
 import { 
@@ -102,20 +102,7 @@ export default function MTSC324BVIPDetailPage() {
         <meta name="keywords" content="mt sc324b, vip turnike, engelli turnike, otomatik turnike, paslanmaz çelik, motorlu turnike, mika teknoloji" />
       </Helmet>
 
-      {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4">
-        <div className="container mx-auto px-4">
-          <nav className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-primary">Ana Sayfa</Link>
-            <span>/</span>
-            <Link href="/urunler" className="hover:text-primary">Ürünler</Link>
-            <span>/</span>
-            <Link href="/urunler/engelli-turnike" className="hover:text-primary">Engelli Turnikeler</Link>
-            <span>/</span>
-            <span className="text-primary font-medium">MT SC324B VIP Turnike</span>
-          </nav>
-        </div>
-      </div>
+      <Kirinti maddeler={[{ ad: "Ana Sayfa", yol: "/" }, { ad: "Ürünler", yol: "/urunler" }, { ad: "Engelli Turnikeler", yol: "/urunler/engelli-turnike" }, { ad: "MT SC324B VIP Turnike", yol: "/urunler/mt-sc324b-vip-turnike" }]} />
 
       {/* Ürün Detay Hero */}
       <div className="py-16 bg-white">
@@ -134,9 +121,6 @@ export default function MTSC324BVIPDetailPage() {
                   alt={productDetails.title}
                   className="w-full h-full object-contain"
                 />
-                <Badge className="bg-white text-slate-800 border border-slate-200 hover:bg-white absolute top-4 left-4 text-sm px-3 py-1">
-                  {productDetails.category}
-                </Badge>
               </div>
             </motion.div>
 
@@ -151,7 +135,7 @@ export default function MTSC324BVIPDetailPage() {
                 <h1 className="text-4xl font-bold text-gray-900 mb-2">
                   {productDetails.model}
                 </h1>
-                <h2 className="text-2xl text-primary mb-4">
+                <h2 className="text-xl font-normal text-slate-600 mb-4">
                   {productDetails.title}
                 </h2>
                 <p className="text-lg text-gray-600 mb-6">
@@ -162,15 +146,15 @@ export default function MTSC324BVIPDetailPage() {
                 </p>
               </div>
 
-              <div className="flex items-center gap-4 py-4">
-                <div className="text-3xl font-bold text-primary">
-                  {productDetails.price}
-                </div>
-                <Button asChild size="lg">
-                  <Link href="/iletisim">
+              <div className="flex flex-wrap items-center gap-3 py-4">
+                <Button asChild>
+                  <a href={`tel:${DEMO_TELEFON}`}>
                     <Phone className="mr-2 h-4 w-4" />
-                    Fiyat Teklifi Al
-                  </Link>
+                    Fiyat İçin Ara
+                  </a>
+                </Button>
+                <Button asChild variant="outline">
+                  <Link href="/iletisim">Teklif Alın</Link>
                 </Button>
               </div>
 

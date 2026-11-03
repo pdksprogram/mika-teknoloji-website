@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
+import { Kirinti } from "@/components/PdksIcerik";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { ShieldAlert, CheckCircle, ArrowLeft, Lock, Sun } from "lucide-react";
+import { CheckCircle, Lock, Sun } from "lucide-react";
 
 export default function RoadBlockerDetailPage() {
   const fadeInUp = {
@@ -40,14 +41,9 @@ export default function RoadBlockerDetailPage() {
         <meta name="description" content="Road Blocker yol kesici sistemi ile terör eylemlerine karşı yüksek koruma. Elektronik kontrollü hidrolik sistem, güneş enerjili LED aydınlatma ve yüksek dayanıklılık." />
       </Helmet>
 
-      <section className="pt-32 pb-20 bg-slate-50">
+      <Kirinti maddeler={[{ ad: "Ana Sayfa", yol: "/" }, { ad: "Ürünler", yol: "/urunler" }, { ad: "Bariyer Sistemleri", yol: "/urunler/bariyer-sistemleri" }, { ad: "Road Blocker Sistem", yol: "/urunler/road-blocker" }]} />
+      <section className="pt-6 pb-20 bg-slate-50">
         <div className="container mx-auto px-4">
-          <Link href="/urunler/bariyer-sistemleri">
-            <Button variant="ghost" className="mb-8 group">
-              <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-              Bariyer Sistemlerine Dön
-            </Button>
-          </Link>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <motion.div {...fadeInUp} className="space-y-6">
@@ -69,14 +65,10 @@ export default function RoadBlockerDetailPage() {
 
             <motion.div {...fadeInUp} className="space-y-8 lg:sticky lg:top-24">
               <div>
-                <div className="inline-flex items-center px-4 py-2 rounded-xl bg-slate-900 shadow-lg mb-4">
-                  <ShieldAlert className="w-4 h-4 text-white mr-2" />
-                  <span className="text-white font-bold text-sm">Q7 - ROAD BLOCKER</span>
-                </div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
                   Road Blocker Sistem
                 </h1>
-                <p className="text-xl text-primary font-semibold mb-6">
+                <p className="text-xl text-slate-600 mb-6">
                   Yol Kesici Güvenlik Sistemi - Yüksek Koruma
                 </p>
                 <div className="w-20 h-1 bg-primary rounded-full"></div>

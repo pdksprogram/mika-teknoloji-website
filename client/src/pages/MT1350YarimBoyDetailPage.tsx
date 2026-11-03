@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
+import { Kirinti } from "@/components/PdksIcerik";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";
 import { 
@@ -84,20 +84,7 @@ export default function MT1350YarimBoyDetailPage() {
         <link rel="canonical" href="https://mikateknoloji.com/urunler/mt1350-yarim-boy" />
       </Helmet>
 
-      {/* Breadcrumb */}
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-primary">Ana Sayfa</Link>
-            <span>/</span>
-            <Link href="/urunler" className="hover:text-primary">Ürünler</Link>
-            <span>/</span>
-            <Link href="/urunler/boy-tipi-turnike" className="hover:text-primary">Boy Tipi Turnikeler</Link>
-            <span>/</span>
-            <span className="text-gray-900 font-medium">MT 1350 Yarım Boy</span>
-          </div>
-        </div>
-      </div>
+      <Kirinti maddeler={[{ ad: "Ana Sayfa", yol: "/" }, { ad: "Ürünler", yol: "/urunler" }, { ad: "Boy Tipi Turnikeler", yol: "/urunler/boy-tipi-turnike" }, { ad: "MT 1350 Yarım Boy", yol: "/urunler/mt1350-yarim-boy" }]} />
 
       {/* Ürün Detayı */}
       <div className="py-12">
@@ -110,11 +97,6 @@ export default function MT1350YarimBoyDetailPage() {
               transition={{ duration: 0.6 }}
             >
               <div className="bg-white rounded-2xl shadow-lg p-8">
-                <div className="absolute top-4 right-4">
-                  <Badge className="bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-100">
-                    Yarım Boy
-                  </Badge>
-                </div>
                 <img 
                   src={BOY_TURNIKE_IMAGES.bt13}
                   alt="MT 1350 Elektromekanik Yarım Boy Turnike"
@@ -131,7 +113,6 @@ export default function MT1350YarimBoyDetailPage() {
               className="space-y-6"
             >
               <div>
-                <Badge className="bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-100 mb-3">Yarım Boy Serisi</Badge>
                 <h1 className="text-3xl font-bold text-gray-900 mb-4">
                   MT 1350 Elektromekanik Yarım Boy Turnike Sistemi
                 </h1>

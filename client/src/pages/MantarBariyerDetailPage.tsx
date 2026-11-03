@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
+import { Kirinti } from "@/components/PdksIcerik";
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { Droplet, CheckCircle, ArrowLeft, Settings, Shield, Wrench } from "lucide-react";
+import { CheckCircle, Settings, Shield, Wrench } from "lucide-react";
 
 export default function MantarBariyerDetailPage() {
   const fadeInUp = {
@@ -53,14 +54,9 @@ export default function MantarBariyerDetailPage() {
         <meta name="description" content="Hidrolik mantar bariyer sistemi ile yüksek güvenlik. 304 paslanmaz çelik, 100 bar hidrolik tahrik, IP67 koruma ve araç tahrip özelliği ile maksimum koruma." />
       </Helmet>
 
-      <section className="pt-32 pb-20 bg-slate-50">
+      <Kirinti maddeler={[{ ad: "Ana Sayfa", yol: "/" }, { ad: "Ürünler", yol: "/urunler" }, { ad: "Bariyer Sistemleri", yol: "/urunler/bariyer-sistemleri" }, { ad: "Hidrolik Mantar Bariyer", yol: "/urunler/mantar-bariyer" }]} />
+      <section className="pt-6 pb-20 bg-slate-50">
         <div className="container mx-auto px-4">
-          <Link href="/urunler/bariyer-sistemleri">
-            <Button variant="ghost" className="mb-8 group">
-              <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-              Bariyer Sistemlerine Dön
-            </Button>
-          </Link>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <motion.div {...fadeInUp}>
@@ -77,14 +73,10 @@ export default function MantarBariyerDetailPage() {
 
             <motion.div {...fadeInUp} className="space-y-8">
               <div>
-                <div className="inline-flex items-center px-4 py-2 rounded-xl bg-slate-900 shadow-lg mb-4">
-                  <Droplet className="w-4 h-4 text-white mr-2" />
-                  <span className="text-white font-bold text-sm">Q6 - HİDROLİK</span>
-                </div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
                   Hidrolik Mantar Bariyer
                 </h1>
-                <p className="text-xl text-primary font-semibold mb-6">
+                <p className="text-xl text-slate-600 mb-6">
                   Yüksek Güvenlik - 100 Bar Hidrolik Sistem
                 </p>
                 <div className="w-20 h-1 bg-primary rounded-full"></div>

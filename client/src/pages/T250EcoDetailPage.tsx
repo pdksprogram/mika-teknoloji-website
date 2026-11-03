@@ -1,17 +1,16 @@
 import { motion } from "framer-motion";
+import { Kirinti } from "@/components/PdksIcerik";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";
-import { 
-  ChevronRight, 
-  Phone, 
+import {
+  Phone,
   Download,
   CheckCircle,
   Shield,
   Settings,
   ArrowLeft,
-  DollarSign
+  DollarSign,
 } from "lucide-react";
 import { BEL_TURNIKE_IMAGES } from "@/assetsMap";
 import { Link } from "wouter";
@@ -87,26 +86,7 @@ export default function T250EcoDetailPage() {
         <link rel="canonical" href="https://mikateknoloji.com/urunler/t250-eco-turnike" />
       </Helmet>
 
-      {/* Breadcrumb */}
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 py-4">
-          <nav className="flex items-center space-x-2 text-sm">
-            <Link href="/" className="text-gray-500 hover:text-primary transition-colors">
-              Ana Sayfa
-            </Link>
-            <ChevronRight className="h-4 w-4 text-gray-400" />
-            <Link href="/urunler" className="text-gray-500 hover:text-primary transition-colors">
-              Ürünler  
-            </Link>
-            <ChevronRight className="h-4 w-4 text-gray-400" />
-            <Link href="/urunler/bel-tipi-turnike" className="text-gray-500 hover:text-primary transition-colors">
-              Bel Tipi Turnikeler
-            </Link>
-            <ChevronRight className="h-4 w-4 text-gray-400" />
-            <span className="text-gray-900 font-medium">MT 250 ECO</span>
-          </nav>
-        </div>
-      </div>
+      <Kirinti maddeler={[{ ad: "Ana Sayfa", yol: "/" }, { ad: "Ürünler", yol: "/urunler" }, { ad: "Bel Tipi Turnikeler", yol: "/urunler/bel-tipi-turnike" }, { ad: "MT 250 ECO", yol: "/urunler/t250-eco-turnike" }]} />
 
       {/* Hero Section */}
       <div className="bg-white border-b border-slate-200 py-12">
@@ -117,9 +97,6 @@ export default function T250EcoDetailPage() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
-              <Badge className="bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-100 mb-4">
-                Ekonomik Çözüm
-              </Badge>
               <h1 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
                 MT 250 ECO
                 <span className="block text-xl font-normal text-slate-600 mt-2">

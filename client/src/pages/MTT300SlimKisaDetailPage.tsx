@@ -1,18 +1,17 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Kirinti } from "@/components/PdksIcerik";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { 
-  CheckCircle, 
+import {
+  CheckCircle,
   Phone,
   Mail,
   MapPin,
-  ArrowLeft,
   Clock,
   Minimize,
   Settings,
-  Activity
+  Activity,
 } from "lucide-react";
 import { HIZLI_GECIS_TURNIKE_IMAGES } from "@/assetsMap";
 import { Link } from "wouter";
@@ -93,20 +92,7 @@ export default function MTT300SlimKisaDetailPage() {
         <meta name="keywords" content="slim turnike, kısa turnike, kompakt turnike, küçük işletme, dar alan turnike, ekonomik turnike, mika teknoloji" />
       </Helmet>
 
-      {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center text-sm text-gray-600">
-            <Link href="/" className="hover:text-primary">Ana Sayfa</Link>
-            <span className="mx-2">/</span>
-            <Link href="/urunler" className="hover:text-primary">Ürünler</Link>
-            <span className="mx-2">/</span>
-            <Link href="/urunler/hizli-gecis-turnike" className="hover:text-primary">Hızlı Geçiş Turnikeler</Link>
-            <span className="mx-2">/</span>
-            <span className="text-primary font-medium">MT T300 HG SLIM</span>
-          </div>
-        </div>
-      </div>
+      <Kirinti maddeler={[{ ad: "Ana Sayfa", yol: "/" }, { ad: "Ürünler", yol: "/urunler" }, { ad: "Hızlı Geçiş Turnikeler", yol: "/urunler/hizli-gecis-turnike" }, { ad: "MT T300 HG SLIM", yol: "/urunler/hizli-gecis-t300-slim-kisa-detay" }]} />
 
       {/* Hero Section */}
       <div className="relative bg-slate-900 border-b-4 border-primary text-white overflow-hidden">
@@ -118,17 +104,13 @@ export default function MTT300SlimKisaDetailPage() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
-            <Link href="/urunler/hizli-gecis-turnike" className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors">
-              <ArrowLeft className="mr-2 h-5 w-5" />
-              Hızlı Geçiş Turnikeler
-            </Link>
             
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <Minimize className="h-10 w-10 text-white" />
                   <div>
-                    <Badge className="bg-white/10 text-white border border-white/20 hover:bg-white/10 mb-2">{urunDetay.model}</Badge>
+                    <p className="text-sm font-medium text-white/70 mb-1">{urunDetay.model}</p>
                     <h1 className="text-3xl md:text-4xl font-bold">{urunDetay.title}</h1>
                   </div>
                 </div>

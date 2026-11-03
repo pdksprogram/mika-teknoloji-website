@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowRight, ChevronDown, ChevronRight, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, ChevronDown, MessageCircle, Phone } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -79,7 +79,7 @@ export function Kirinti({ maddeler, icSinif = "" }: { maddeler: KirintiMaddesi[]
               ) : (
                 <Link href={m.yol} className="hover:text-primary transition-colors">{m.ad}</Link>
               )}
-              {!son && <ChevronRight className="h-4 w-4" />}
+              {!son && <span aria-hidden="true" className="px-1 text-slate-300">/</span>}
             </li>
           );
         })}

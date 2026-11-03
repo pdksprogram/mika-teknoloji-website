@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
+import { Kirinti } from "@/components/PdksIcerik";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";
 import { 
@@ -83,20 +83,7 @@ export default function MT2500DSingle3DetailPage() {
         <link rel="canonical" href="https://mikateknoloji.com/urunler/mt2500d-single-3-kollu" />
       </Helmet>
 
-      {/* Breadcrumb */}
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-primary">Ana Sayfa</Link>
-            <span>/</span>
-            <Link href="/urunler" className="hover:text-primary">Ürünler</Link>
-            <span>/</span>
-            <Link href="/urunler/boy-tipi-turnike" className="hover:text-primary">Boy Tipi Turnikeler</Link>
-            <span>/</span>
-            <span className="text-gray-900 font-medium">MT 2500D Single 3 Kollu</span>
-          </div>
-        </div>
-      </div>
+      <Kirinti maddeler={[{ ad: "Ana Sayfa", yol: "/" }, { ad: "Ürünler", yol: "/urunler" }, { ad: "Boy Tipi Turnikeler", yol: "/urunler/boy-tipi-turnike" }, { ad: "MT 2500D Single 3 Kollu", yol: "/urunler/mt2500d-single-3-kollu" }]} />
 
       {/* Ürün Detayı */}
       <div className="py-12">
@@ -125,7 +112,6 @@ export default function MT2500DSingle3DetailPage() {
               className="space-y-6"
             >
               <div>
-                <Badge className="bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-100 mb-3">Boy Tipi Turnike</Badge>
                 <h1 className="text-3xl font-bold text-gray-900 mb-4">
                   MT 2500D Single 3 Kollu Boy Tipi Turnike Sistemi
                 </h1>
