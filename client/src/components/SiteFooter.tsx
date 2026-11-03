@@ -41,7 +41,7 @@ export default function SiteFooter() {
           <span className="mx-2 text-slate-300">·</span>
           Perpa Ticaret Merkezi A Blok 4-5. Kat No:0158, Şişli / İstanbul
           <span className="mx-2 text-slate-300">·</span>
-          <a href={`tel:${DEMO_TELEFON}`} className="hover:text-slate-900">{DEMO_TELEFON_GORUNEN}</a>
+          <a href={`tel:${DEMO_TELEFON}`} className="inline-flex items-center min-h-[44px] hover:text-slate-900">{DEMO_TELEFON_GORUNEN}</a>
           <span className="mx-2 text-slate-300">·</span>
           <a href="mailto:info@mikateknoloji.com" className="hover:text-slate-900">info@mikateknoloji.com</a>
         </div>

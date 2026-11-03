@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Link } from "wouter";
 import SEO from "@/seo/SEO";
 import { Kirinti, kirintiJsonLd, type KirintiMaddesi } from "@/components/PdksIcerik";
 import { CTA_ARA, DEMO_TELEFON, DEMO_TELEFON_GORUNEN, DEMO_WHATSAPP, whatsappMesajAdresi } from "@/lib/iletisim";
@@ -289,6 +290,9 @@ export default function Contact() {
                       Mesajınız WhatsApp'ta hazır; Gönder'e basmanız yeterli.
                     </p>
                   )}
+                  <p className="text-sm text-slate-600">
+                    <Link href="/kvkk" className="underline underline-offset-2 hover:text-slate-900">KVKK Aydınlatma Metni</Link>
+                  </p>
                 </form>
               </CardContent>
             </Card>
