@@ -156,7 +156,7 @@ export default function Home() {
               Kurduğumuz PDKS ve güvenlik çözümlerinden örnekler
             </p>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
               {[
                 { 
                   title: "Turnike Montajımız", 
@@ -172,16 +172,6 @@ export default function Home() {
                   title: "Bariyer Sistemi Montajı", 
                   description: "Profesyonel ekibimiz tarafından gerçekleştirilen bariyer sistemi kurulum ve montaj çalışması",
                   videoUrl: "/bariyer-montaj.mp4"
-                },
-                { 
-                  title: "Hastane PDKS Çözümü", 
-                  description: "Sağlık Sektöründe Nöbet ve Mesai Takibi",
-                  videoUrl: null
-                },
-                { 
-                  title: "Kamu QR-Patrol", 
-                  description: "Kamu Binası Güvenlik Devriye ve Kontrol Sistemi",
-                  videoUrl: null
                 }
               ].map((video, index) => (
                 <motion.div
@@ -192,33 +182,14 @@ export default function Home() {
                   viewport={{ once: true }}
                   className="group"
                 >
-                  <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 bg-transparent border-0">
-                    {video.videoUrl ? (
-                      <div className="relative aspect-video bg-black rounded-2xl overflow-hidden border-4 border-primary group-hover:border-primary transition-all duration-300">
-                        <video 
-                          className="w-full h-full object-cover"
-                          controls
-                          preload="metadata"
-                        >
-                          <source src={video.videoUrl} type="video/mp4" />
-                          Tarayıcınız video etiketini desteklemiyor.
-                        </video>
-                        <div className="absolute bottom-3 right-3 bg-black/80 text-white text-xs px-2 py-1 rounded">
-                          2min 5s
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="relative aspect-video bg-gradient-to-br from-slate-800 to-slate-600 rounded-2xl overflow-hidden border-4 border-primary group-hover:border-primary flex items-center justify-center cursor-pointer transition-all duration-300">
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300"></div>
-                        <div className="relative z-10 bg-white/20 backdrop-blur-sm rounded-full p-4 group-hover:scale-110 transition-transform duration-300">
-                          <Play className="w-12 h-12 text-white fill-white" />
-                        </div>
-                        <div className="absolute bottom-3 right-3 bg-black/80 text-white text-xs px-2 py-1 rounded">
-                          Yakında
-                        </div>
-                      </div>
-                    )}
-                    <CardContent className="p-4 bg-white rounded-b-lg">
+                  <Card className="overflow-hidden border border-slate-200">
+                    <div className="aspect-video bg-black">
+                      <video className="w-full h-full object-cover" controls preload="metadata">
+                        <source src={video.videoUrl} type="video/mp4" />
+                        Tarayıcınız video etiketini desteklemiyor.
+                      </video>
+                    </div>
+                    <CardContent className="p-4">
                       <h3 className="font-semibold text-slate-800 mb-1">{video.title}</h3>
                       <p className="text-sm text-slate-600">{video.description}</p>
                     </CardContent>
@@ -319,17 +290,12 @@ export default function Home() {
                     RFID kart sistemi, turnike sistemleri entegrasyonu, geçiş kontrol sistemleri, 
                     güvenlik sistemleri bağlantısı ve access control panel desteği.
                   </p>
-                  <p>
-                    <strong>Sektör çözümleri:</strong> Hastane PDKS, okul personel takip sistemi, 
-                    fabrika vardiya takibi, otel personel yönetimi, AVM güvenlik sistemleri, 
-                    banka şube kontrol sistemleri ve kamu kurumu personel takip uygulamaları.
-                  </p>
                 </div>
               </div>
             </div>
             
             {/* Technical Specifications */}
-            <div className="bg-slate-50 rounded-lg p-8 mb-12">
+            <div className="bg-slate-50 rounded-lg p-8 mb-8">
               <h3 className="text-2xl font-bold text-slate-800 mb-6 text-center">Sistem Özellikleri</h3>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
@@ -370,6 +336,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <p className="text-sm text-slate-500 text-center">Sektör çözümleri: Hastane PDKS, okul personel takip sistemi, fabrika vardiya takibi, otel personel yönetimi, AVM güvenlik sistemleri, banka şube kontrol sistemleri ve kamu kurumu personel takip uygulamaları.</p>
           </motion.div>
         </div>
       </section>
@@ -406,7 +373,7 @@ export default function Home() {
             <Button 
               asChild 
               size="lg" 
-              className="px-8 transform hover:scale-105 transition-transform duration-200"
+              className="px-8"
               data-testid="cta-detail-button"
             >
               <Link href="/iletisim">
