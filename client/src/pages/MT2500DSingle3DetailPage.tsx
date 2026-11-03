@@ -136,13 +136,13 @@ export default function MT2500DSingle3DetailPage() {
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-blue-50 p-4 rounded-lg text-center">
-                  <Users className="h-8 w-8 text-blue-600 mx-auto mb-2" />
+                <div className="bg-slate-50 p-4 rounded-lg text-center">
+                  <Users className="h-8 w-8 text-primary mx-auto mb-2" />
                   <div className="font-semibold text-gray-900">30 Kişi/Dakika</div>
                   <div className="text-sm text-gray-600">Geçiş Kapasitesi</div>
                 </div>
-                <div className="bg-green-50 p-4 rounded-lg text-center">
-                  <Shield className="h-8 w-8 text-green-600 mx-auto mb-2" />
+                <div className="bg-slate-50 p-4 rounded-lg text-center">
+                  <Shield className="h-8 w-8 text-primary mx-auto mb-2" />
                   <div className="font-semibold text-gray-900">IP 65</div>
                   <div className="text-sm text-gray-600">Koruma Standardı</div>
                 </div>
@@ -175,7 +175,7 @@ export default function MT2500DSingle3DetailPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <CheckCircle className="h-6 w-6 text-green-600" />
+                  <CheckCircle className="h-6 w-6 text-primary" />
                   Sistem Özellikleri
                 </CardTitle>
               </CardHeader>
@@ -194,7 +194,7 @@ export default function MT2500DSingle3DetailPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Shield className="h-6 w-6 text-blue-600" />
+                  <Shield className="h-6 w-6 text-primary" />
                   Güvenlik Önlemleri
                 </CardTitle>
               </CardHeader>
@@ -202,7 +202,7 @@ export default function MT2500DSingle3DetailPage() {
                 <div className="space-y-3">
                   {guvenlikOnlemleri.map((onlem, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-700">{onlem}</span>
                     </div>
                   ))}
@@ -221,7 +221,7 @@ export default function MT2500DSingle3DetailPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Zap className="h-6 w-6 text-yellow-600" />
+                  <Zap className="h-6 w-6 text-primary" />
                   Teknik Özellikler
                 </CardTitle>
               </CardHeader>

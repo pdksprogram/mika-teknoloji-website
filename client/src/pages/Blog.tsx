@@ -132,7 +132,7 @@ export default function Blog() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-xl text-blue-100 max-w-3xl mx-auto"
+              className="text-xl text-slate-300 max-w-3xl mx-auto"
             >
               Teknoloji haberleri, ürün güncellemeleri ve sektör içgörüleri. PDKS, güvenlik sistemleri ve dijital dönüşüm hakkında uzman görüşleri.
             </motion.p>

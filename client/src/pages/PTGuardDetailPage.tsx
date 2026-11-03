@@ -111,7 +111,7 @@ export default function PTGuardDetailPage() {
                   <ul className="space-y-2">
                     {["Askeri Tesisler", "Kritik Altyapılar", "Özel Güvenlik Bölgeleri", "Endüstriyel Tesisler"].map((area, idx) => (
                       <li key={idx} className="flex items-center text-gray-700">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
                         {area}
                       </li>
                     ))}

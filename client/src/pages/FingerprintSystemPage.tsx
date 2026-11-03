@@ -149,7 +149,7 @@ export default function FingerprintSystemPage() {
                     <ul className="space-y-2 mb-6">
                       {device.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
@@ -205,23 +205,23 @@ export default function FingerprintSystemPage() {
                 </h3>
                 <ul className="space-y-3 text-gray-600">
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
                     <span><strong>Benzersiz biyometrik kimlik:</strong> Her kişinin parmak izi eşsizdir, taklit edilemez</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
                     <span><strong>Hızlı tanıma süresi:</strong> 1 saniyeden daha hızlı doğrulama işlemi</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
                     <span><strong>Çoklu güvenlik katmanı:</strong> Parmak izi + kart + şifre kombine koruması</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
                     <span><strong>Kapı entegrasyonu:</strong> Otomatik kapı açma ve zil çaldırma özellikleri</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
                     <span><strong>Çevrimiçi/çevrimdışı çalışma:</strong> Network bağlantısı kesilse de kayıt alabilme</span>
                   </li>
                 </ul>

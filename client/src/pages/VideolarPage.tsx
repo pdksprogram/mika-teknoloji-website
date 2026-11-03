@@ -641,8 +641,8 @@ const subcategoryIcons: Record<string, typeof BookOpen> = {
 };
 
 const levelColors: Record<string, string> = {
-  "Başlangıç": "bg-green-100 text-green-700",
-  "Orta": "bg-blue-100 text-blue-700",
+  "Başlangıç": "bg-slate-100 text-slate-700",
+  "Orta": "bg-slate-100 text-slate-700",
   "İleri": "bg-primary/10 text-primary",
 };
 

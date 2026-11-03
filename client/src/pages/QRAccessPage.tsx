@@ -194,7 +194,7 @@ export default function QRAccessPage() {
                     <ul className="space-y-3">
                       {feature.features.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-center space-x-3">
-                          <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                           <span className="text-slate-700">{item}</span>
                         </li>
                       ))}

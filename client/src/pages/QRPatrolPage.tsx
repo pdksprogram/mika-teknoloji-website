@@ -228,7 +228,7 @@ export default function QRPatrolPage() {
                 className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center mb-4">
-                  <CheckCircle className="h-6 w-6 text-green-600 mr-3 flex-shrink-0" />
+                  <CheckCircle className="h-6 w-6 text-primary mr-3 flex-shrink-0" />
                   <p className="text-lg font-semibold text-gray-900">{benefit}</p>
                 </div>
               </motion.div>

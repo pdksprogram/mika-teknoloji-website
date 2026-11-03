@@ -89,7 +89,7 @@ export default function RoadBlockerDetailPage() {
               <Card className="border-0 bg-slate-50">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <Lock className="w-8 h-8 text-cyan-600 flex-shrink-0 mt-1" />
+                    <Lock className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="text-xl font-bold text-slate-900 mb-3">Üstün Koruma</h3>
                       <p className="text-gray-700 leading-relaxed">
@@ -117,7 +117,7 @@ export default function RoadBlockerDetailPage() {
               <Card className="border-0 shadow-lg">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-2 mb-4">
-                    <Sun className="w-5 h-5 text-yellow-500" />
+                    <Sun className="w-5 h-5 text-primary" />
                     <h4 className="font-bold text-slate-900">Güneş Enerjili LED Aydınlatma</h4>
                   </div>
                   <p className="text-gray-600 mb-4">
@@ -132,7 +132,7 @@ export default function RoadBlockerDetailPage() {
                   <div className="grid md:grid-cols-2 gap-3">
                     {applications.map((area, idx) => (
                       <div key={idx} className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
                         <span className="text-sm text-gray-700">{area}</span>
                       </div>
                     ))}

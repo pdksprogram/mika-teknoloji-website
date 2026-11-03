@@ -187,7 +187,7 @@ export default function BelTipeTurnikePage() {
                     <div className="space-y-1 xs:space-y-2 mb-3 xs:mb-6">
                       {model.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                           <span className="text-gray-700 text-xs xs:text-xs">{feature}</span>
                         </div>
                       ))}

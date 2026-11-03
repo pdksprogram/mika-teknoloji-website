@@ -79,7 +79,7 @@ export default function TuzaklarDetailPage() {
                 <Card className="border-0 shadow-lg">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4 mb-4">
-                      <Shield className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+                      <Shield className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                       <div>
                         <h3 className="text-xl font-bold text-slate-900 mb-3">Tuzaklar</h3>
                         <p className="text-gray-700 leading-relaxed mb-4">
@@ -103,7 +103,7 @@ export default function TuzaklarDetailPage() {
                 <Card className="border-0 shadow-lg">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4 mb-4">
-                      <AlertTriangle className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                      <AlertTriangle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                       <div>
                         <h3 className="text-xl font-bold text-slate-900 mb-3">Kapanlar</h3>
                         <p className="text-gray-700 leading-relaxed mb-4">
@@ -127,7 +127,7 @@ export default function TuzaklarDetailPage() {
                 <Card className="border-0 bg-slate-50">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <Flame className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+                      <Flame className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                       <div>
                         <h4 className="font-bold text-slate-900 mb-2">Yangın Güvenlik Entegrasyonu</h4>
                         <p className="text-gray-600">

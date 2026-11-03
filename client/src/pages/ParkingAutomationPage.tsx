@@ -117,7 +117,7 @@ export default function ParkingAutomationPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Otopark Otomasyon Sistemi
             </h1>
-            <p className="text-xl text-green-200 mb-8">
+            <p className="text-xl text-slate-300 mb-8">
               Plaka tanıma teknolojisi ile tam otomatik otopark yönetimi. 
               Bariyer kontrolü, ücretlendirme sistemi ve güvenlik kamerası entegrasyonu.
             </p>
@@ -165,8 +165,8 @@ export default function ParkingAutomationPage() {
               >
                 <Card className="h-full hover:shadow-lg transition-shadow duration-300">
                   <CardHeader>
-                    <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                      <feature.icon className="h-8 w-8 text-green-600" />
+                    <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                      <feature.icon className="h-8 w-8 text-primary" />
                     </div>
                     <CardTitle className="text-xl text-slate-800">{feature.title}</CardTitle>
                     <p className="text-slate-600">{feature.description}</p>
@@ -175,7 +175,7 @@ export default function ParkingAutomationPage() {
                     <ul className="space-y-3">
                       {feature.features.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-center space-x-3">
-                          <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                           <span className="text-slate-700">{item}</span>
                         </li>
                       ))}
@@ -213,7 +213,7 @@ export default function ParkingAutomationPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Car className="h-5 w-5 text-green-600 flex-shrink-0" />
+                <Car className="h-5 w-5 text-primary flex-shrink-0" />
                 <span className="text-slate-700">{benefit}</span>
               </motion.div>
             ))}
@@ -258,7 +258,7 @@ export default function ParkingAutomationPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-green-600 text-white">
+      <section className="py-20 bg-slate-900 border-t-4 border-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -269,7 +269,7 @@ export default function ParkingAutomationPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Otopark Otomasyon Sistemi İçin Teklif Alın
             </h2>
-            <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
               Plaka tanıma ile otopark yönetimi için keşif ve teklif almak üzere bize ulaşın
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

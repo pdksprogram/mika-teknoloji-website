@@ -210,7 +210,7 @@ export default function BlogArticlePDKS() {
                       Gelişen teknolojiler sayesinde artık sadece zaman takibi değil, kapsamlı 
                       personel yönetimi çözümleri sunmaktadır.
                     </p>
-                    <div className="bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg mb-8">
+                    <div className="bg-slate-50 border-l-4 border-primary p-6 rounded-r-lg mb-8">
                       <h4 className="font-semibold text-gray-900 mb-2">Önemli Bilgi</h4>
                       <p className="text-gray-700 text-sm">
                         Modern PDKS sistemleri sadece giriş-çıkış takibi yapmaz. Aynı zamanda vardiya yönetimi, 
@@ -379,7 +379,7 @@ export default function BlogArticlePDKS() {
                       PDKS Sistemleri Fiyatları 2025
                     </h2>
                     
-                    <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">
+                    <div className="bg-slate-50 border border-slate-200 rounded-lg p-6 mb-8">
                       <p className="text-gray-700 text-sm">
                         <strong>Not:</strong> PDKS sistem fiyatları, seçilen teknoloji, çalışan sayısı, özel gereksinimler ve 
                         kurulum karmaşıklığına göre değişiklik gösterir. Aşağıdaki fiyatlar 2025 yılı ortalama piyasa fiyatlarıdır.
@@ -438,7 +438,7 @@ export default function BlogArticlePDKS() {
                     </h2>
                     
                     <div className="space-y-6">
-                      <Card className="border-l-4 border-l-blue-500">
+                      <Card className="border-l-4 border-l-primary">
                         <CardContent className="p-6">
                           <h4 className="font-semibold text-gray-900 mb-3">Endüstriyel İşletmeler (100+ Çalışan)</h4>
                           <p className="text-gray-700 text-sm mb-3">
@@ -453,7 +453,7 @@ export default function BlogArticlePDKS() {
                         </CardContent>
                       </Card>
 
-                      <Card className="border-l-4 border-l-green-500">
+                      <Card className="border-l-4 border-l-primary">
                         <CardContent className="p-6">
                           <h4 className="font-semibold text-gray-900 mb-3">Ofis ve Hizmet Sektörü (50-100 Çalışan)</h4>
                           <p className="text-gray-700 text-sm mb-3">
@@ -468,7 +468,7 @@ export default function BlogArticlePDKS() {
                         </CardContent>
                       </Card>
 
-                      <Card className="border-l-4 border-l-purple-500">
+                      <Card className="border-l-4 border-l-primary">
                         <CardContent className="p-6">
                           <h4 className="font-semibold text-gray-900 mb-3">KOBİ ve Küçük İşletmeler (10-50 Çalışan)</h4>
                           <p className="text-gray-700 text-sm mb-3">
@@ -483,7 +483,7 @@ export default function BlogArticlePDKS() {
                         </CardContent>
                       </Card>
 
-                      <Card className="border-l-4 border-l-red-500">
+                      <Card className="border-l-4 border-l-primary">
                         <CardContent className="p-6">
                           <h4 className="font-semibold text-gray-900 mb-3">Sağlık ve Güvenlik Önceliği</h4>
                           <p className="text-gray-700 text-sm mb-3">

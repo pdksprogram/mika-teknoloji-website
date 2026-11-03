@@ -197,7 +197,7 @@ export default function MTT300HG20ChubbyDetailPage() {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-center gap-3"
                   >
-                    <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0" />
+                    <CheckCircle className="h-6 w-6 text-primary flex-shrink-0" />
                     <span className="text-gray-700">{ozellik}</span>
                   </motion.div>
                 ))}

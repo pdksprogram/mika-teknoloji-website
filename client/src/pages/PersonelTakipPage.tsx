@@ -742,7 +742,7 @@ export default function PersonelTakipPage() {
                   <ul className="space-y-2">
                     {item.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm text-slate-600">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}

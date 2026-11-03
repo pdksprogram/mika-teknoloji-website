@@ -624,7 +624,7 @@ export default function PDKSPage() {
                       <div className="grid sm:grid-cols-2 gap-2">
                         {system.data.features.slice(0, 6).map((feature: string, idx: number) => (
                           <div key={idx} className="flex items-center space-x-2">
-                            <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                            <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                             <span className="text-sm text-slate-700">{feature}</span>
                           </div>
                         ))}
@@ -636,7 +636,7 @@ export default function PDKSPage() {
                       <div className="space-y-2">
                         {system.data.benefits.map((benefit: string, idx: number) => (
                           <div key={idx} className="flex items-center space-x-2">
-                            <Star className="h-4 w-4 text-amber-500 flex-shrink-0" />
+                            <Star className="h-4 w-4 text-primary flex-shrink-0" />
                             <span className="text-sm text-slate-700">{benefit}</span>
                           </div>
                         ))}
@@ -721,7 +721,7 @@ export default function PDKSPage() {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                   <span className="text-slate-700">{feature}</span>
                 </motion.div>
               ))}

@@ -113,7 +113,7 @@ export default function PTDinamikDetailPage() {
               <Card className="border-0 bg-slate-50">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <Clock className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                    <Clock className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-bold text-slate-900 mb-2">Hızlı Kurulum</h4>
                       <p className="text-gray-600">

@@ -488,12 +488,8 @@ export default function AccessControlPage() {
                         {/* Clean Interface */}
                         <div className="p-3">
                           <div className="flex justify-between items-center mb-2">
-                            <div className="text-green-400 text-xs font-mono">MIKA</div>
-                            <motion.div
-                              animate={{ opacity: [0.5, 1, 0.5] }}
-                              transition={{ duration: 2, repeat: Infinity }}
-                              className="w-2 h-2 bg-green-400 rounded-full"
-                            ></motion.div>
+                            <div className="text-primary text-xs font-mono">MIKA</div>
+                            <div className="w-2 h-2 bg-primary rounded-full"></div>
                           </div>
                           <div className="space-y-1">
                             <div className="h-1 bg-slate-600 rounded w-3/4"></div>
@@ -501,11 +497,7 @@ export default function AccessControlPage() {
                           </div>
                           {/* Card Reader Slot */}
                           <div className="mt-3 h-3 bg-slate-900 rounded-sm mx-auto w-16 relative">
-                            <motion.div
-                              animate={{ x: [-20, 0, -20] }}
-                              transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-                              className="absolute inset-y-0 right-0 w-12 bg-slate-900 rounded-sm"
-                            ></motion.div>
+
                           </div>
                         </div>
                       </div>
@@ -546,18 +538,6 @@ export default function AccessControlPage() {
                         className="w-48 h-auto mx-auto rounded-2xl shadow-xl"
                       />
                       
-                      {/* QR Scan Animation Overlay */}
-                      <motion.div
-                        animate={{ opacity: [0, 0.8, 0] }}
-                        transition={{ duration: 2, repeat: Infinity, delay: 2.5 }}
-                        className="absolute inset-0 flex items-center justify-center"
-                      >
-                        <motion.div
-                          animate={{ scale: [1, 1.1, 1] }}
-                          transition={{ duration: 2, repeat: Infinity, delay: 2.5 }}
-                          className="w-24 h-24 border-4 border-primary rounded-lg bg-primary/10"
-                        ></motion.div>
-                      </motion.div>
                     </div>
                     <p className="text-sm text-slate-600 mt-3 font-medium">Mika Mobile App</p>
                     
@@ -566,7 +546,7 @@ export default function AccessControlPage() {
                       initial={{ scale: 0, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
                       transition={{ duration: 0.5, delay: 5, type: "spring" }}
-                      className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm"
+                      className="absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm"
                     >
                       ✓
                     </motion.div>
@@ -791,8 +771,8 @@ export default function AccessControlPage() {
                   viewport={{ once: true }}
                   className="flex items-start space-x-4"
                 >
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>

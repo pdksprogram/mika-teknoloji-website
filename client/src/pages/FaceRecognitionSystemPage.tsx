@@ -149,7 +149,7 @@ export default function FaceRecognitionSystemPage() {
                     <ul className="space-y-2 mb-6">
                       {device.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
@@ -206,23 +206,23 @@ export default function FaceRecognitionSystemPage() {
                 </h3>
                 <ul className="space-y-3 text-gray-600">
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
                     <span><strong>Temassız güvenlik:</strong> Hijyenik ve hızlı geçiş kontrolü (0.1-0.2 saniye)</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
                     <span><strong>Kart kaybı riski yok:</strong> Personel kartı taşıma zorunluluğu ortadan kalkar</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
                     <span><strong>Proxy geçiş önleme:</strong> Başkası adına geçiş yapılması engellenebilir</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
                     <span><strong>Geniş çalışma koşulları:</strong> -20°C ile +50°C arası sıcaklık aralığında çalışma</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
                     <span><strong>Çoklu entegrasyon:</strong> Turnike, bariyer ve kapı kilit sistemleri ile uyumlu</span>
                   </li>
                 </ul>

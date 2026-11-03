@@ -119,7 +119,7 @@ export default function PTGeniusDetailPage() {
               <Card className="border border-slate-200 bg-slate-50">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <Thermometer className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                    <Thermometer className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-bold text-slate-900 mb-2">Geniş Sıcaklık Aralığı</h4>
                       <p className="text-gray-600">

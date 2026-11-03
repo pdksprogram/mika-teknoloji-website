@@ -72,13 +72,13 @@ export default function PrivacyPolicy() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-blue-50 p-4 rounded-lg text-center">
-              <Shield className="h-8 w-8 text-blue-600 mx-auto mb-2" />
+            <div className="bg-slate-50 p-4 rounded-lg text-center">
+              <Shield className="h-8 w-8 text-primary mx-auto mb-2" />
               <h3 className="font-semibold text-slate-800 mb-1">Güvenlik</h3>
               <p className="text-sm text-slate-600">Şifreli veri saklama</p>
             </div>
-            <div className="bg-green-50 p-4 rounded-lg text-center">
-              <Lock className="h-8 w-8 text-green-600 mx-auto mb-2" />
+            <div className="bg-slate-50 p-4 rounded-lg text-center">
+              <Lock className="h-8 w-8 text-primary mx-auto mb-2" />
               <h3 className="font-semibold text-slate-800 mb-1">Gizlilik</h3>
               <p className="text-sm text-slate-600">Kişisel veri korunması</p>
             </div>

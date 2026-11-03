@@ -195,7 +195,7 @@ export default function MT250DetailPage() {
                   <div className="grid grid-cols-2 gap-2">
                     {applicationAreas.map((area, index) => (
                       <div key={index} className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                         <span className="text-sm text-gray-700">{area}</span>
                       </div>
                     ))}
@@ -218,19 +218,19 @@ export default function MT250DetailPage() {
                     </p>
                     <ul className="space-y-2 text-sm text-gray-700">
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                         Tüm kollar ve gövde 304 paslanmaz çelik
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                         Göbek kısmı paslanmaya karşı alüminyum malzeme
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                         Opsiyon olarak 316 paslanmaz çelik üretim
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                         Özel hassas döküm teknolojisi ile kritik parçalar
                       </li>
                     </ul>
@@ -269,7 +269,7 @@ export default function MT250DetailPage() {
                     </ul>
                   </div>
                   <div className="space-y-4">
-                    <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <div className="bg-slate-50 border border-slate-200 rounded-lg p-4">
                       <h4 className="font-semibold text-gray-900 mb-2">Performans</h4>
                       <p className="text-sm text-gray-700">
                         Turnikeden <strong>1 dakikada 30'dan fazla geçiş</strong> yapılabilir.
@@ -343,13 +343,13 @@ export default function MT250DetailPage() {
                     <div className="space-y-3">
                       {optionalAccessories.map((accessory, index) => (
                         <div key={index} className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                           <span className="text-sm text-gray-700">{accessory}</span>
                         </div>
                       ))}
                     </div>
                     
-                    <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                    <div className="mt-6 p-4 bg-slate-50 border border-slate-200 rounded-lg">
                       <Button asChild className="w-full">
                         <Link href="/iletisim">
                           <Download className="h-4 w-4 mr-2" />

@@ -144,7 +144,7 @@ export default function MantarBariyerDetailPage() {
                   <ul className="space-y-2">
                     {accessories.map((item, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-700">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
                         {item}
                       </li>
                     ))}

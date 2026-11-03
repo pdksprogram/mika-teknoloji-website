@@ -127,7 +127,7 @@ export default function CardAccessSystemPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Kartlı Geçiş Sistemi
             </h1>
-            <p className="text-xl text-blue-200 mb-8">
+            <p className="text-xl text-slate-300 mb-8">
               RFID kart teknolojisi ile güvenli ve hızlı geçiş kontrol sistemi. 
               Proximity, MIFARE ve UHF kart desteği ile PDKS entegrasyonu.
             </p>
@@ -182,7 +182,7 @@ export default function CardAccessSystemPage() {
                     <ul className="space-y-2">
                       {card.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center space-x-2">
-                          <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                           <span className="text-sm text-slate-700">{feature}</span>
                         </li>
                       ))}
@@ -220,7 +220,7 @@ export default function CardAccessSystemPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <CreditCard className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                <CreditCard className="h-5 w-5 text-primary flex-shrink-0" />
                 <span className="text-slate-700">{benefit}</span>
               </motion.div>
             ))}
@@ -265,7 +265,7 @@ export default function CardAccessSystemPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-slate-900 border-t-4 border-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -276,7 +276,7 @@ export default function CardAccessSystemPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Kartlı Geçiş Sistemi İçin Teklif Alın
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
               RFID kartlı geçiş kontrolü için keşif ve teklif almak üzere bize ulaşın
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

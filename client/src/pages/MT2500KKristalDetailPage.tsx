@@ -223,10 +223,10 @@ export default function MT2500KKristalDetailPage() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mb-16"
           >
-            <Card className="border-blue-200">
+            <Card className="border-slate-200">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Zap className="h-6 w-6 text-blue-600" />
+                  <Zap className="h-6 w-6 text-primary" />
                   Teknik Özellikler
                 </CardTitle>
               </CardHeader>

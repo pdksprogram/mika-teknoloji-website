@@ -241,7 +241,7 @@ export default function HizliGecisPage() {
                       className="w-full h-full object-cover xs:object-contain sm:object-cover bg-gray-50 group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />
-                    <Badge className="absolute top-3 left-3 bg-green-600 text-white">
+                    <Badge className="absolute top-3 left-3 bg-white text-slate-800 border border-slate-200 hover:bg-white">
                       {model.model}
                     </Badge>
                   </div>
@@ -256,7 +256,7 @@ export default function HizliGecisPage() {
                     <div className="space-y-1 xs:space-y-2 mb-3 xs:mb-6">
                       {model.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                           <span className="text-gray-700 text-xs xs:text-xs">{feature}</span>
                         </div>
                       ))}

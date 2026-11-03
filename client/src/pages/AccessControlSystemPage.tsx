@@ -83,7 +83,7 @@ export default function AccessControlSystemPage() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-                <span className="text-blue-600">MikaPass</span><br />
+                <span className="text-primary">MikaPass</span><br />
                 <span className="text-gray-800">Akıllı Erişim Kontrol Sistemi</span>
               </h1>
               <p className="text-2xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed">
@@ -102,13 +102,13 @@ export default function AccessControlSystemPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="bg-white shadow-lg text-blue-700 px-6 py-3 rounded-full text-base font-semibold border border-blue-100">
+              <div className="bg-white shadow-lg text-slate-800 px-6 py-3 rounded-full text-base font-semibold border border-slate-200">
                 Yetki Seviyeli Kontrol
               </div>
-              <div className="bg-white shadow-lg text-blue-700 px-6 py-3 rounded-full text-base font-semibold border border-blue-100">
+              <div className="bg-white shadow-lg text-slate-800 px-6 py-3 rounded-full text-base font-semibold border border-slate-200">
                 Antipassback Sistemi
               </div>
-              <div className="bg-white shadow-lg text-blue-700 px-6 py-3 rounded-full text-base font-semibold border border-blue-100">
+              <div className="bg-white shadow-lg text-slate-800 px-6 py-3 rounded-full text-base font-semibold border border-slate-200">
                 Saat Aralığı Kontrolü
               </div>
             </motion.div>
@@ -152,9 +152,9 @@ export default function AccessControlSystemPage() {
             >
               <div className="space-y-8">
                 {/* Feature Cards */}
-                <div className="bg-white rounded-2xl p-6 shadow-xl border border-blue-50">
+                <div className="bg-white rounded-2xl p-6 shadow-xl border border-slate-200">
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4">
                       <Lock className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900">Global Antipassback</h3>
@@ -164,9 +164,9 @@ export default function AccessControlSystemPage() {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-2xl p-6 shadow-xl border border-blue-50">
+                <div className="bg-white rounded-2xl p-6 shadow-xl border border-slate-200">
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4">
                       <Timer className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900">Saat Aralığı Kontrolü</h3>
@@ -176,9 +176,9 @@ export default function AccessControlSystemPage() {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-2xl p-6 shadow-xl border border-blue-50">
+                <div className="bg-white rounded-2xl p-6 shadow-xl border border-slate-200">
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4">
                       <Users className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900">Yetki Seviyeli Erişim</h3>
@@ -205,7 +205,7 @@ export default function AccessControlSystemPage() {
             >
               <div className="mb-8">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                  <span className="text-blue-600">Bulut Tabanlı</span><br />
+                  <span className="text-primary">Bulut Tabanlı</span><br />
                   Geçiş Kontrol Sistemi
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -213,7 +213,7 @@ export default function AccessControlSystemPage() {
                   sakinlerinizi ve tüm varlıklarınızı Mika bulut yazılımları ile 
                   koruyabilirsiniz.
                 </p>
-                <div className="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8">
+                <div className="bg-slate-50 border-l-4 border-primary p-6 mb-8">
                   <p className="text-gray-700 font-medium">
                     Tüm yaşam alanlarınızı BT altyapı maliyetine gereksinim duymadan 
                     güvenle yönetebilirsiniz.
@@ -224,15 +224,15 @@ export default function AccessControlSystemPage() {
               {/* Features Grid */}
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl mx-auto mb-4 flex items-center justify-center">
-                    <Shield className="h-6 w-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                    <Shield className="h-6 w-6 text-primary" />
                   </div>
                   <h4 className="font-bold text-gray-900 mb-2">Güvenli Erişim</h4>
                   <p className="text-sm text-gray-600">SSL şifreleme ile güvenli bağlantı</p>
                 </div>
                 <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl mx-auto mb-4 flex items-center justify-center">
-                    <Users className="h-6 w-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                    <Users className="h-6 w-6 text-primary" />
                   </div>
                   <h4 className="font-bold text-gray-900 mb-2">Merkezi Yönetim</h4>
                   <p className="text-sm text-gray-600">Tüm lokasyonları tek arayüzden kontrol</p>
@@ -258,18 +258,9 @@ export default function AccessControlSystemPage() {
                     height="600"
                   />
                 </div>
-                {/* Card Access System - Floating with Animation */}
+                {/* Card Access System */}
                 <motion.div 
                   className="absolute -bottom-8 -right-8 w-64 h-auto"
-                  animate={{ 
-                    y: [0, -10, 0],
-                    rotateY: [0, 5, 0]
-                  }}
-                  transition={{ 
-                    duration: 3.5, 
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
                 >
                   <img 
                     src={cardAccessSystem} 
@@ -323,7 +314,7 @@ export default function AccessControlSystemPage() {
               <div className="mb-8">
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                   Kurumsal Düzeyde<br />
-                  <span className="text-blue-600">İleri Özellikler</span>
+                  <span className="text-primary">İleri Özellikler</span>
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                   Mika Teknoloji'nin bulut tabanlı geçiş kontrol sistemi, kurumsal 
@@ -333,8 +324,8 @@ export default function AccessControlSystemPage() {
 
               {/* Features Grid */}
               <div className="grid grid-cols-1 gap-6">
-                <div className="flex items-start p-6 bg-blue-50 rounded-xl">
-                  <div className="w-12 h-12 bg-blue-600 rounded-xl mr-4 flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start p-6 bg-slate-50 rounded-xl">
+                  <div className="w-12 h-12 bg-primary rounded-xl mr-4 flex items-center justify-center flex-shrink-0">
                     <Database className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -343,8 +334,8 @@ export default function AccessControlSystemPage() {
                   </div>
                 </div>
                 
-                <div className="flex items-start p-6 bg-blue-50 rounded-xl">
-                  <div className="w-12 h-12 bg-blue-600 rounded-xl mr-4 flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start p-6 bg-slate-50 rounded-xl">
+                  <div className="w-12 h-12 bg-primary rounded-xl mr-4 flex items-center justify-center flex-shrink-0">
                     <Share2 className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -353,8 +344,8 @@ export default function AccessControlSystemPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start p-6 bg-blue-50 rounded-xl">
-                  <div className="w-12 h-12 bg-blue-600 rounded-xl mr-4 flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start p-6 bg-slate-50 rounded-xl">
+                  <div className="w-12 h-12 bg-primary rounded-xl mr-4 flex items-center justify-center flex-shrink-0">
                     <Mail className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -363,8 +354,8 @@ export default function AccessControlSystemPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start p-6 bg-blue-50 rounded-xl">
-                  <div className="w-12 h-12 bg-blue-600 rounded-xl mr-4 flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start p-6 bg-slate-50 rounded-xl">
+                  <div className="w-12 h-12 bg-primary rounded-xl mr-4 flex items-center justify-center flex-shrink-0">
                     <MessageSquare className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -431,13 +422,13 @@ export default function AccessControlSystemPage() {
                   </p>
                   
                   <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="bg-blue-50 p-3 rounded-xl">
-                      <div className="font-semibold text-blue-900">Metal Kasa</div>
-                      <div className="text-blue-700">Güvenli Yapı</div>
+                    <div className="bg-slate-50 p-3 rounded-xl">
+                      <div className="font-semibold text-slate-900">Metal Kasa</div>
+                      <div className="text-slate-800">Güvenli Yapı</div>
                     </div>
-                    <div className="bg-blue-50 p-3 rounded-xl">
-                      <div className="font-semibold text-blue-900">Kilit Sistemi</div>
-                      <div className="text-blue-700">Anahtarlı Güvenlik</div>
+                    <div className="bg-slate-50 p-3 rounded-xl">
+                      <div className="font-semibold text-slate-900">Kilit Sistemi</div>
+                      <div className="text-slate-800">Anahtarlı Güvenlik</div>
                     </div>
                   </div>
                 </div>
@@ -475,13 +466,13 @@ export default function AccessControlSystemPage() {
                   </p>
                   
                   <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="bg-blue-50 p-3 rounded-xl">
-                      <div className="font-semibold text-blue-900">LCD Ekran</div>
-                      <div className="text-blue-700">Anlık Bilgi</div>
+                    <div className="bg-slate-50 p-3 rounded-xl">
+                      <div className="font-semibold text-slate-900">LCD Ekran</div>
+                      <div className="text-slate-800">Anlık Bilgi</div>
                     </div>
-                    <div className="bg-blue-50 p-3 rounded-xl">
-                      <div className="font-semibold text-blue-900">Modüler</div>
-                      <div className="text-blue-700">Genişletilebilir</div>
+                    <div className="bg-slate-50 p-3 rounded-xl">
+                      <div className="font-semibold text-slate-900">Modüler</div>
+                      <div className="text-slate-800">Genişletilebilir</div>
                     </div>
                   </div>
                 </div>
@@ -506,17 +497,17 @@ export default function AccessControlSystemPage() {
               </p>
               
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="text-center p-6 bg-blue-50 rounded-2xl">
+                <div className="text-center p-6 bg-slate-50 rounded-2xl">
                   <Smartphone className="h-8 w-8 mx-auto text-primary mb-3" />
                   <div className="font-semibold text-gray-900">Bluetooth & NFC</div>
                   <div className="text-sm text-gray-600 mt-2">Çoklu bağlantı seçeneği</div>
                 </div>
-                <div className="text-center p-6 bg-blue-50 rounded-2xl">
+                <div className="text-center p-6 bg-slate-50 rounded-2xl">
                   <Lock className="h-8 w-8 mx-auto text-primary mb-3" />
                   <div className="font-semibold text-gray-900">QR Kod</div>
                   <div className="text-sm text-gray-600 mt-2">Hızlı ve güvenli geçiş</div>
                 </div>
-                <div className="text-center p-6 bg-blue-50 rounded-2xl">
+                <div className="text-center p-6 bg-slate-50 rounded-2xl">
                   <Zap className="h-8 w-8 mx-auto text-primary mb-3" />
                   <div className="font-semibold text-gray-900">Dijital Kimlik</div>
                   <div className="text-sm text-gray-600 mt-2">Akıllı telefon entegrasyonu</div>
@@ -558,7 +549,7 @@ export default function AccessControlSystemPage() {
               <div className="mb-8">
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                   Ziyaretçi Takip<br />
-                  <span className="text-blue-600">QR Sistemi</span>
+                  <span className="text-primary">QR Sistemi</span>
                 </h2>
                 <p className="text-xl text-gray-600 leading-relaxed mb-6">
                   Tek kullanımlık printer veya SMS ile gönderilen QR kodlar ile 
@@ -570,7 +561,7 @@ export default function AccessControlSystemPage() {
               {/* Features */}
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
                     <Printer className="h-6 w-6 text-primary" />
                   </div>
                   <div>
@@ -580,7 +571,7 @@ export default function AccessControlSystemPage() {
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
                     <Smartphone className="h-6 w-6 text-primary" />
                   </div>
                   <div>
@@ -590,7 +581,7 @@ export default function AccessControlSystemPage() {
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
                     <DoorOpen className="h-6 w-6 text-primary" />
                   </div>
                   <div>
@@ -610,12 +601,7 @@ export default function AccessControlSystemPage() {
       {/* S6 content will be re-added properly after design approval */}
 
       {/* CTA Section - Armongate Style */}
-      <section className="py-32 bg-slate-900 text-white relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full translate-x-1/2 translate-y-1/2"></div>
-        </div>
+      <section className="py-32 bg-slate-900 border-t-4 border-primary text-white relative overflow-hidden">
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
@@ -626,9 +612,9 @@ export default function AccessControlSystemPage() {
           >
             <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
               Hızlı ve Basit<br />
-              <span className="text-blue-200">Geçiş Kontrolü</span>
+              <span className="text-slate-300">Geçiş Kontrolü</span>
             </h2>
-            <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
               MikaPass ile akıllı telefonunuzu dijital anahtarınız haline getirin. 
               Temassız, güvenli ve hızlı geçiş deneyimi.
             </p>
@@ -677,7 +663,7 @@ export default function AccessControlSystemPage() {
               >
                 <Rocket className="h-8 w-8 mx-auto text-primary mb-4" />
                 <div className="font-bold text-lg text-white mb-2">Anında Kurulum</div>
-                <div className="text-blue-200 text-sm">15 dakikada kurulum tamamlanır</div>
+                <div className="text-slate-300 text-sm">15 dakikada kurulum tamamlanır</div>
               </motion.div>
 
               <motion.div
@@ -689,7 +675,7 @@ export default function AccessControlSystemPage() {
               >
                 <Wallet className="h-8 w-8 mx-auto text-primary mb-4" />
                 <div className="font-bold text-lg text-white mb-2">Düşük Maliyet</div>
-                <div className="text-blue-200 text-sm">BT altyapı yatırımı gerektirmez</div>
+                <div className="text-slate-300 text-sm">BT altyapı yatırımı gerektirmez</div>
               </motion.div>
 
               <motion.div
@@ -701,7 +687,7 @@ export default function AccessControlSystemPage() {
               >
                 <Lock className="h-8 w-8 mx-auto text-primary mb-4" />
                 <div className="font-bold text-lg text-white mb-2">KVKK Uyumlu</div>
-                <div className="text-blue-200 text-sm">Tam güvenlik ve gizlilik</div>
+                <div className="text-slate-300 text-sm">Tam güvenlik ve gizlilik</div>
               </motion.div>
             </div>
           </motion.div>

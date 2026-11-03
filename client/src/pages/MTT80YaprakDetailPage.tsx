@@ -73,17 +73,17 @@ export default function MTT80YaprakDetailPage() {
 
   const advantages = [
     {
-      icon: <Accessibility className="h-8 w-8 text-green-600" />,
+      icon: <Accessibility className="h-8 w-8 text-primary" />,
       title: "Engelli Dostu Çözüm", 
       description: "Geniş geçiş alanı ile engelli bireyler için uygun tasarım"
     },
     {
-      icon: <Zap className="h-8 w-8 text-yellow-600" />,
+      icon: <Zap className="h-8 w-8 text-primary" />,
       title: "Basit Çalışma Prensibi",
       description: "Elle açılma ve kendiliğinden kapanma - elektrik gerektirmez"
     },
     {
-      icon: <Shield className="h-8 w-8 text-blue-600" />,
+      icon: <Shield className="h-8 w-8 text-primary" />,
       title: "Dayanıklı Yapı",
       description: "Krom-nikel kaplama ile uzun ömürlü ve paslanmaz yapı"
     },
@@ -204,7 +204,7 @@ export default function MTT80YaprakDetailPage() {
             <Card className="p-6">
               <CardHeader className="px-0 pt-0">
                 <CardTitle className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <CheckCircle className="h-5 w-5 text-primary" />
                   Temel Özellikler
                 </CardTitle>
               </CardHeader>
@@ -212,7 +212,7 @@ export default function MTT80YaprakDetailPage() {
                 <div className="space-y-3">
                   {productDetails.features.map((feature, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>
                     </div>
                   ))}
@@ -281,7 +281,7 @@ export default function MTT80YaprakDetailPage() {
             <Card className="p-8">
               <CardHeader className="px-0 pt-0">
                 <CardTitle className="flex items-center gap-2">
-                  <Users className="h-5 w-5 text-blue-600" />
+                  <Users className="h-5 w-5 text-primary" />
                   Kullanım Alanları
                 </CardTitle>
               </CardHeader>
@@ -289,7 +289,7 @@ export default function MTT80YaprakDetailPage() {
                 <div className="grid grid-cols-1 gap-3">
                   {productDetails.applications.map((application, index) => (
                     <div key={index} className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
                       <span className="text-gray-700">{application}</span>
                     </div>
                   ))}

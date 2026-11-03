@@ -142,13 +142,13 @@ export default function MT1350YarimBoyDetailPage() {
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-green-50 p-4 rounded-lg text-center">
-                  <Users className="h-8 w-8 text-green-600 mx-auto mb-2" />
+                <div className="bg-slate-50 p-4 rounded-lg text-center">
+                  <Users className="h-8 w-8 text-primary mx-auto mb-2" />
                   <div className="font-semibold text-gray-900">35 Kişi/Dakika</div>
                   <div className="text-sm text-gray-600">Hızlı Geçiş</div>
                 </div>
-                <div className="bg-blue-50 p-4 rounded-lg text-center">
-                  <Clock className="h-8 w-8 text-blue-600 mx-auto mb-2" />
+                <div className="bg-slate-50 p-4 rounded-lg text-center">
+                  <Clock className="h-8 w-8 text-primary mx-auto mb-2" />
                   <div className="font-semibold text-gray-900">1350mm</div>
                   <div className="text-sm text-gray-600">Yarım Boy Yükseklik</div>
                 </div>
@@ -181,7 +181,7 @@ export default function MT1350YarimBoyDetailPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <CheckCircle className="h-6 w-6 text-green-600" />
+                  <CheckCircle className="h-6 w-6 text-primary" />
                   Sistem Özellikleri
                 </CardTitle>
               </CardHeader>
@@ -200,7 +200,7 @@ export default function MT1350YarimBoyDetailPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Shield className="h-6 w-6 text-blue-600" />
+                  <Shield className="h-6 w-6 text-primary" />
                   Ekonomik Avantajlar
                 </CardTitle>
               </CardHeader>
@@ -208,7 +208,7 @@ export default function MT1350YarimBoyDetailPage() {
                 <div className="space-y-3">
                   {avantajlar.map((avantaj, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-700">{avantaj}</span>
                     </div>
                   ))}
@@ -227,7 +227,7 @@ export default function MT1350YarimBoyDetailPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Zap className="h-6 w-6 text-yellow-600" />
+                  <Zap className="h-6 w-6 text-primary" />
                   Teknik Özellikler
                 </CardTitle>
               </CardHeader>
@@ -287,8 +287,8 @@ export default function MT1350YarimBoyDetailPage() {
                     <thead>
                       <tr className="border-b-2 border-gray-200">
                         <th className="text-left py-3 px-4 font-semibold">Özellik</th>
-                        <th className="text-center py-3 px-4 font-semibold text-green-700">MT 1350 Yarım Boy</th>
-                        <th className="text-center py-3 px-4 font-semibold text-blue-700">MT 2500D Tam Boy</th>
+                        <th className="text-center py-3 px-4 font-semibold text-slate-800">MT 1350 Yarım Boy</th>
+                        <th className="text-center py-3 px-4 font-semibold text-slate-800">MT 2500D Tam Boy</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -299,17 +299,17 @@ export default function MT1350YarimBoyDetailPage() {
                       </tr>
                       <tr className="border-b border-gray-100">
                         <td className="py-3 px-4">Geçiş Hızı</td>
-                        <td className="py-3 px-4 text-center text-green-600 font-semibold">35 kişi/dk</td>
+                        <td className="py-3 px-4 text-center text-primary font-semibold">35 kişi/dk</td>
                         <td className="py-3 px-4 text-center">30 kişi/dk</td>
                       </tr>
                       <tr className="border-b border-gray-100">
                         <td className="py-3 px-4">Güvenlik Seviyesi</td>
                         <td className="py-3 px-4 text-center">Orta Seviye</td>
-                        <td className="py-3 px-4 text-center text-blue-600 font-semibold">Yüksek Seviye</td>
+                        <td className="py-3 px-4 text-center text-primary font-semibold">Yüksek Seviye</td>
                       </tr>
                       <tr className="border-b border-gray-100">
                         <td className="py-3 px-4">Maliyet</td>
-                        <td className="py-3 px-4 text-center text-green-600 font-semibold">Ekonomik</td>
+                        <td className="py-3 px-4 text-center text-primary font-semibold">Ekonomik</td>
                         <td className="py-3 px-4 text-center">Yüksek</td>
                       </tr>
                       <tr>

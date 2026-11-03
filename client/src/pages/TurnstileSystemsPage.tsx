@@ -126,7 +126,7 @@ export default function TurnstileSystemsPage() {
                           {category.subtitle}
                         </p>
                       )}
-                      <div className="text-blue-600 font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center">
+                      <div className="text-primary font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center">
                         Detayları Görüntüle
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </div>
@@ -189,7 +189,7 @@ export default function TurnstileSystemsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-600">
+      <section className="py-16 bg-slate-900 border-t-4 border-primary">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -200,7 +200,7 @@ export default function TurnstileSystemsPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Turnike Sistemi İhtiyacınız Var mı?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
               Size en uygun turnike çözümünü belirlemek için uzmanlarımızla iletişime geçin.
             </p>
             <Button 

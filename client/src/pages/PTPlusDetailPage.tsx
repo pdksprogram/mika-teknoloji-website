@@ -108,16 +108,16 @@ export default function PTPlusDetailPage() {
               </Card>
 
               <div className="grid md:grid-cols-2 gap-6">
-                <Card className="border-0 bg-green-50">
+                <Card className="border-0 bg-slate-50">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-2 mb-4">
-                      <Package className="w-5 h-5 text-green-600" />
+                      <Package className="w-5 h-5 text-primary" />
                       <h4 className="font-bold text-slate-900">Standart Aksesuarlar</h4>
                     </div>
                     <ul className="space-y-2">
                       {standardAccessories.map((item, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-700">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
                           {item}
                         </li>
                       ))}
@@ -125,16 +125,16 @@ export default function PTPlusDetailPage() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-0 bg-blue-50">
+                <Card className="border-0 bg-slate-50">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-2 mb-4">
-                      <Package className="w-5 h-5 text-blue-600" />
+                      <Package className="w-5 h-5 text-primary" />
                       <h4 className="font-bold text-slate-900">Opsiyonel Aksesuarlar</h4>
                     </div>
                     <ul className="space-y-2">
                       {optionalAccessories.map((item, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-700">
-                          <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
                           {item}
                         </li>
                       ))}
