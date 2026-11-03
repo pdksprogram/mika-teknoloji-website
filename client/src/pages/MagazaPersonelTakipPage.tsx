@@ -182,31 +182,20 @@ export default function MagazaPersonelTakipPage() {
           </div>
         </section>
 
-        {/* SEGMENT 2: Video */}
-        <section className="py-16 bg-white relative">
-          
+        {/* SEGMENT 2: Referans mağaza */}
+        <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="max-w-6xl mx-auto"
-            >
-              <div className="relative aspect-video bg-slate-900 rounded-lg overflow-hidden shadow-2xl border-4 border-primary">
-                <video
-                  className="w-full h-full"
-                  controls
-                  preload="auto"
-                  playsInline
-                  style={{ objectFit: 'contain' }}
-                  data-testid="magaza-video"
-                >
-                  <source src="/magaza-video.mp4" type="video/mp4" />
-                  <p className="text-white p-4">Tarayıcınız video oynatmayı desteklemiyor.</p>
-                </video>
-              </div>
-            </motion.div>
+            <figure className="max-w-4xl mx-auto">
+              <img
+                src="/images/referans/lufian-magaza.jpg"
+                alt="Lufian mağaza binası"
+                width={960}
+                height={720}
+                loading="lazy"
+                className="w-full h-auto rounded-lg border border-slate-200"
+              />
+              <figcaption className="mt-3 text-sm text-slate-500">Referansımız Lufian mağazası</figcaption>
+            </figure>
           </div>
         </section>
 

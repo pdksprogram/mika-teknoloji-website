@@ -139,68 +139,6 @@ export default function Home() {
         <HeroCarousel />
       </section>
 
-      {/* Project Videos Section */}
-      <section className="relative py-20 bg-white">
-        <div className="container mx-auto px-4">
-          {/* Tamamlanmış Proje Referanslarımız */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4 text-center">
-              Tamamlanmış Proje Montajları
-            </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-12 text-center">
-              Kurduğumuz PDKS ve güvenlik çözümlerinden örnekler
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                { 
-                  title: "Turnike Montajımız", 
-                  description: "Profesyonel ekibimiz tarafından gerçekleştirilen turnike kurulum ve montaj çalışması",
-                  videoUrl: "/turnike-montaj.mp4"
-                },
-                { 
-                  title: "Yüz Tanıma Montajı", 
-                  description: "Profesyonel ekibimiz tarafından gerçekleştirilen yüz tanıma cihazı kurulum ve montaj çalışması",
-                  videoUrl: "/yuz-tanima-montaj.mp4"
-                },
-                { 
-                  title: "Bariyer Sistemi Montajı", 
-                  description: "Profesyonel ekibimiz tarafından gerçekleştirilen bariyer sistemi kurulum ve montaj çalışması",
-                  videoUrl: "/bariyer-montaj.mp4"
-                }
-              ].map((video, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group"
-                >
-                  <Card className="overflow-hidden border border-slate-200">
-                    <div className="aspect-video bg-black">
-                      <video className="w-full h-full object-cover" controls preload="metadata">
-                        <source src={video.videoUrl} type="video/mp4" />
-                        Tarayıcınız video etiketini desteklemiyor.
-                      </video>
-                    </div>
-                    <CardContent className="p-4">
-                      <h3 className="font-semibold text-slate-800 mb-1">{video.title}</h3>
-                      <p className="text-sm text-slate-600">{video.description}</p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Reference Section - Following Meyer's approach */}
       <section className="relative py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -219,27 +157,19 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Advantages Section like Meyer */}
-          <motion.div 
-            className="grid md:grid-cols-3 gap-8"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-lg transition-shadow duration-200">
-              <h3 className="font-bold text-lg mb-4 text-slate-800">Kurulum ve Montaj</h3>
-              <p className="text-slate-600">Turnike, yüz tanıma ve bariyer için kurulum ve devreye alma desteği sağlanır</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-lg transition-shadow duration-200">
-              <h3 className="font-bold text-lg mb-4 text-slate-800">Ücretsiz Danışmanlık</h3>
-              <p className="text-slate-600">PDKS, parmak izi ve yüz tanıma konusunda profesyonel destek</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-lg transition-shadow duration-200">
-              <h3 className="font-bold text-lg mb-4 text-slate-800">Müşteri Desteği</h3>
-              <p className="text-slate-600">Teknik destek ve sistem bakım hizmetleri</p>
-            </div>
-          </motion.div>
+          {/* Hizmetler: tek sade şerit */}
+          <dl className="grid md:grid-cols-3 gap-px bg-slate-200 border border-slate-200 rounded-lg overflow-hidden max-w-5xl mx-auto">
+            {[
+              { baslik: "Kurulum ve Montaj", metin: "Turnike, yüz tanıma ve bariyer için kurulum ve devreye alma desteği" },
+              { baslik: "Danışmanlık", metin: "PDKS, parmak izi ve yüz tanıma konusunda proje danışmanlığı" },
+              { baslik: "Müşteri Desteği", metin: "Teknik destek ve sistem bakım hizmetleri" },
+            ].map((h) => (
+              <div key={h.baslik} className="bg-white px-6 py-5">
+                <dt className="font-semibold text-slate-900 mb-1">{h.baslik}</dt>
+                <dd className="text-sm text-slate-600">{h.metin}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 

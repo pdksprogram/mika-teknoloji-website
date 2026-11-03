@@ -20,7 +20,7 @@ interface VideoItem {
   level: "Başlangıç" | "Orta" | "İleri";
 }
 
-export const videos: VideoItem[] = [
+const tumVideolar: VideoItem[] = [
   {
     id: "pdks-genel-anlatim",
     title: "PDKS Nedir? Personel Devam Kontrol Sistemi Genel Anlatım",
@@ -617,7 +617,19 @@ export const videos: VideoItem[] = [
   },
 ];
 
-const categories = ["Tümü", "Demo", "Montaj", "Tanıtım"];
+// Yapay zekâ ile üretilmiş tanıtım/montaj videoları sitede gösterilmez (dosyalar yerinde durur).
+const YZ_VIDEOLARI = new Set([
+  "/turnike-montaj.mp4",
+  "/yuz-tanima-montaj.mp4",
+  "/bariyer-montaj.mp4",
+  "/bariyer-sistemleri.mp4",
+  "/access-control-video.mp4",
+  "/magaza-video.mp4",
+]);
+
+export const videos: VideoItem[] = tumVideolar.filter((v) => !YZ_VIDEOLARI.has(v.src));
+
+const categories = ["Tümü", ...Array.from(new Set(videos.map((v) => v.category)))];
 
 const subcategoryIcons: Record<string, typeof BookOpen> = {
   "Başlangıç Rehberi": BookOpen,
@@ -835,7 +847,7 @@ export default function VideolarPage() {
     return matchesCategory && matchesSearch;
   });
 
-  const subcategories = [...new Set(filteredVideos.map(v => v.subcategory))];
+  const subcategories = Array.from(new Set(filteredVideos.map(v => v.subcategory)));
 
   const videoStructuredData = videos.map((video, index) => ({
     "@type": "VideoObject",
@@ -871,7 +883,7 @@ export default function VideolarPage() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "PDKS Eğitim Videoları - Personel Devam Kontrol Sistemi Video Rehber",
-    "description": "PDKS (Personel Devam Kontrol Sistemi) eğitim videoları: giriş-çıkış takibi, vardiya planlama, izin yönetimi, puantaj oluşturma, turnike ve bariyer montaj rehberleri. 30+ video ile PDKS sisteminizi kolayca öğrenin.",
+    "description": "PDKS (Personel Devam Kontrol Sistemi) eğitim videoları: giriş-çıkış takibi, vardiya planlama, izin yönetimi, puantaj oluşturma. 30+ video ile PDKS sisteminizi kolayca öğrenin.",
     "url": "https://mikateknoloji.com/videolar",
     "inLanguage": "tr",
     "publisher": {
@@ -990,8 +1002,8 @@ export default function VideolarPage() {
     <>
       <Helmet>
         <title>PDKS Eğitim Videoları | Personel Devam Kontrol Sistemi Rehber | Mika Teknoloji</title>
-        <meta name="description" content="PDKS (Personel Devam Kontrol Sistemi) eğitim videoları. Giriş-çıkış takibi, vardiya planlama, izin yönetimi, puantaj, turnike ve bariyer montaj rehberleri. 30+ ücretsiz video ile PDKS kullanmayı öğrenin." />
-        <meta name="keywords" content="PDKS eğitim videoları, personel devam kontrol sistemi, PDKS nasıl kullanılır, QR PDKS, vardiya planlama videosu, turnike montaj, bariyer kurulum, izin yönetimi, puantaj oluşturma, mesai takibi, personel takip sistemi, WebPDKS eğitim, mobil PDKS, shift planlama, PDKS kurulum rehberi 2025" />
+        <meta name="description" content="PDKS (Personel Devam Kontrol Sistemi) eğitim videoları. Giriş-çıkış takibi, vardiya planlama, izin yönetimi ve puantaj. 30+ ücretsiz video ile PDKS kullanmayı öğrenin." />
+        <meta name="keywords" content="PDKS eğitim videoları, personel devam kontrol sistemi, PDKS nasıl kullanılır, QR PDKS, vardiya planlama videosu, izin yönetimi, puantaj oluşturma, mesai takibi, personel takip sistemi, WebPDKS eğitim, mobil PDKS, shift planlama, PDKS kurulum rehberi 2025" />
         <meta name="robots" content="index,follow,max-video-preview:-1,max-image-preview:large,max-snippet:-1" />
         <link rel="canonical" href="https://mikateknoloji.com/videolar" />
         <meta name="author" content="Mika Teknoloji Kontrol Sistemleri" />
@@ -1059,7 +1071,7 @@ export default function VideolarPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              {categories.map((cat) => (
+              {categories.length > 2 && categories.map((cat) => (
                 <Button
                   key={cat}
                   variant={activeCategory === cat ? "default" : "outline"}
@@ -1242,7 +1254,7 @@ export default function VideolarPage() {
                 Eğitim videolarımız başlangıç, orta ve ileri seviye olarak sınıflandırılmıştır. Sisteme yeni başlayanlar "Başlangıç Rehberi" kategorisindeki videolarla başlayabilir. <strong>Vardiya planlama</strong>, <strong>puantaj oluşturma</strong>, <strong>izin yönetimi</strong> ve <strong>avans talebi</strong> gibi konularda detaylı eğitim içerikleri sunuyoruz.
               </p>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Ayrıca <strong>turnike sistemi montajı</strong>, <strong>yüz tanıma cihazı kurulumu</strong> ve <strong>bariyer sistemi montajı</strong> gibi donanım kurulum rehberleri de video galerimimizde yer almaktadır. Tüm montaj işlemleri profesyonel ekibimiz tarafından ücretsiz olarak yapılmaktadır.
+                <strong>Turnike</strong>, <strong>yüz tanıma cihazı</strong> ve <strong>bariyer</strong> kurulumları ekibimiz tarafından yerinde yapılır.
               </p>
             </div>
           </div>

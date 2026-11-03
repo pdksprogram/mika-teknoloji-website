@@ -102,15 +102,9 @@ export default function AccessControlSystemPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="bg-white shadow-lg text-slate-800 px-6 py-3 rounded-full text-base font-semibold border border-slate-200">
-                Yetki Seviyeli Kontrol
-              </div>
-              <div className="bg-white shadow-lg text-slate-800 px-6 py-3 rounded-full text-base font-semibold border border-slate-200">
-                Antipassback Sistemi
-              </div>
-              <div className="bg-white shadow-lg text-slate-800 px-6 py-3 rounded-full text-base font-semibold border border-slate-200">
-                Saat Aralığı Kontrolü
-              </div>
+              <p className="text-base font-semibold text-slate-700">
+                Yetki Seviyeli Kontrol · Antipassback Sistemi · Saat Aralığı Kontrolü
+              </p>
             </motion.div>
           </div>
 
@@ -123,24 +117,18 @@ export default function AccessControlSystemPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <div className="bg-white rounded-3xl p-8 shadow-2xl">
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Canlı Demo</h3>
-                  <p className="text-gray-600">MikaPass sisteminin gerçek zamanlı çalışmasını izleyin</p>
-                </div>
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  disablePictureInPicture
-                  preload="auto"
-                  className="w-full h-auto rounded-2xl object-cover shadow-lg"
-                >
-                  <source src="/access-hero-video.mp4" type="video/mp4" />
-                  <p className="text-center text-gray-600 p-4">Video yüklenemiyor...</p>
-                </video>
-              </div>
+              <figure className="bg-white rounded-lg border border-slate-200 overflow-hidden">
+                <img
+                  src="/images/urun/gecis-kontrol-paneli.jpg"
+                  alt="Geçiş kontrol yazılımı yönetim paneli ekranı"
+                  className="w-full h-auto"
+                  width={1400}
+                  height={629}
+                />
+                <figcaption className="px-4 py-3 text-sm text-slate-600 border-t border-slate-200">
+                  Geçiş kontrol yönetim paneli
+                </figcaption>
+              </figure>
             </motion.div>
 
             {/* Right - Professional Features */}
