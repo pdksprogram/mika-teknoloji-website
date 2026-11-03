@@ -91,7 +91,7 @@ export function Kirinti({ maddeler, icSinif = "" }: { maddeler: KirintiMaddesi[]
 // sikisik: araç sayfaları için kısa giriş; araç ilk ekranda görünsün diye düğmeler gösterilmez.
 export function KonuGiris({ ust, baslik, giris, sikisik = false }: { ust: string; baslik: string; giris: string; sikisik?: boolean }) {
   return (
-    <section className={`relative ${sikisik ? "pt-4 pb-6" : "pt-12 pb-20"} px-4 bg-gradient-to-br from-slate-50 to-blue-50`}>
+    <section className={`relative ${sikisik ? "pt-4 pb-6" : "pt-12 pb-20"} px-4 bg-slate-50`}>
       <div className="container mx-auto text-center max-w-4xl">
         <div className={`inline-flex items-center bg-primary/10 px-6 py-2 rounded-full ${sikisik ? "mb-3" : "mb-6"}`}>
           <span className="text-primary font-medium text-sm tracking-wider uppercase">{ust}</span>
@@ -267,13 +267,13 @@ export function DemoTalebi({ baslik = "Demo Talep Edin" }: { baslik?: string }) 
               WhatsApp ile Yazın
             </a>
           </Button>
-          <Button asChild size="lg" variant="outline" className="border-white text-white bg-transparent hover:bg-white hover:text-primary px-8 py-4 text-lg">
+          <Button asChild size="lg" variant="outlineLight" className="px-8 py-4 text-lg">
             <a href={`tel:${DEMO_TELEFON}`}>
               <Phone className="mr-2 h-5 w-5" />
               {DEMO_TELEFON_GORUNEN}
             </a>
           </Button>
-          <Button asChild size="lg" variant="outline" className="border-white text-white bg-transparent hover:bg-white hover:text-primary px-8 py-4 text-lg">
+          <Button asChild size="lg" variant="outlineLight" className="px-8 py-4 text-lg">
             <Link href="/iletisim">İletişim Sayfası</Link>
           </Button>
         </div>

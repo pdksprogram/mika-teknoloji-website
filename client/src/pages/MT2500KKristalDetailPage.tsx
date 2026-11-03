@@ -105,9 +105,9 @@ export default function MT2500KKristalDetailPage() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="bg-gradient-to-br from-white via-blue-50 to-purple-50 rounded-2xl shadow-lg p-8 relative overflow-hidden">
+              <div className="bg-slate-50 rounded-2xl shadow-lg p-8 relative overflow-hidden">
                 <div className="absolute top-4 right-4">
-                  <Badge className="bg-gradient-to-r from-purple-500 to-slate-800 text-white">
+                  <Badge className="bg-slate-900 text-white">
                     <Star className="h-3 w-3 mr-1" />
                     PREMIUM
                   </Badge>
@@ -128,7 +128,7 @@ export default function MT2500KKristalDetailPage() {
               className="space-y-6"
             >
               <div>
-                <Badge className="bg-gradient-to-r from-purple-100 to-slate-100 text-purple-800 mb-3">
+                <Badge className="bg-slate-50 text-primary mb-3">
                   Premium Kristal Serisi
                 </Badge>
                 <h1 className="text-3xl font-bold text-gray-900 mb-4">
@@ -141,8 +141,8 @@ export default function MT2500KKristalDetailPage() {
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-purple-50 p-4 rounded-lg text-center">
-                  <Gem className="h-8 w-8 text-purple-600 mx-auto mb-2" />
+                <div className="bg-slate-50 p-4 rounded-lg text-center">
+                  <Gem className="h-8 w-8 text-primary mx-auto mb-2" />
                   <div className="font-semibold text-gray-900">Kristal Panel</div>
                   <div className="text-sm text-gray-600">Premium Tasarım</div>
                 </div>
@@ -154,13 +154,13 @@ export default function MT2500KKristalDetailPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-gradient-to-r from-purple-600 to-slate-800 hover:from-purple-700 hover:to-slate-900 flex-1">
+                <Button asChild size="lg" className="bg-slate-900 flex-1">
                   <Link href="/iletisim">
                     <Phone className="h-5 w-5 mr-2" />
                     Premium Fiyat Al
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="flex-1 border-purple-300 text-purple-700 hover:bg-purple-50">
+                <Button asChild size="lg" variant="outline" className="flex-1 border-primary text-primary hover:bg-slate-50">
                   <Link href="/iletisim">
                     <Download className="h-5 w-5 mr-2" />
                     Katalog İste
@@ -177,10 +177,10 @@ export default function MT2500KKristalDetailPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="grid md:grid-cols-2 gap-8 mb-16"
           >
-            <Card className="border-purple-200">
+            <Card className="border-slate-200">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Gem className="h-6 w-6 text-purple-600" />
+                  <Gem className="h-6 w-6 text-primary" />
                   Premium Özellikler
                 </CardTitle>
               </CardHeader>
@@ -188,7 +188,7 @@ export default function MT2500KKristalDetailPage() {
                 <div className="space-y-3">
                   {premiumOzellikler.map((ozellik, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-slate-800 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-700">{ozellik}</span>
                     </div>
                   ))}
@@ -207,7 +207,7 @@ export default function MT2500KKristalDetailPage() {
                 <div className="space-y-3">
                   {tasarimAvantajlari.map((avantaj, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-gradient-to-r from-primary to-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-700">{avantaj}</span>
                     </div>
                   ))}
@@ -260,8 +260,8 @@ export default function MT2500KKristalDetailPage() {
               {kullanimAlanlari.map((alan, index) => (
                 <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gradient">
                   <CardContent className="p-6">
-                    <div className="bg-gradient-to-br from-purple-100 to-slate-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <alan.icon className="h-8 w-8 text-purple-600" />
+                    <div className="bg-slate-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <alan.icon className="h-8 w-8 text-primary" />
                     </div>
                     <h3 className="font-bold text-gray-900 mb-2">{alan.title}</h3>
                     <p className="text-gray-600 text-sm">{alan.description}</p>
@@ -276,9 +276,9 @@ export default function MT2500KKristalDetailPage() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="bg-gradient-to-r from-purple-600 via-slate-700 to-blue-600 rounded-2xl p-8 text-white text-center relative overflow-hidden"
+            className="bg-slate-900 rounded-2xl p-8 text-white text-center relative overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-slate-800/20 backdrop-blur-sm"></div>
+            <div className="absolute inset-0 bg-slate-50 backdrop-blur-sm"></div>
             <div className="relative z-10">
               <div className="flex items-center justify-center gap-2 mb-4">
                 <Star className="h-6 w-6" />
@@ -308,12 +308,12 @@ export default function MT2500KKristalDetailPage() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-white text-purple-600 hover:bg-gray-100">
+                <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
                   <Link href="/iletisim">
                     Premium Keşif Talep Et
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button asChild size="lg" variant="outlineLight">
                   <Link href="/iletisim">
                     VIP Teklif Al
                   </Link>
@@ -324,7 +324,7 @@ export default function MT2500KKristalDetailPage() {
 
           {/* Geri Dön */}
           <div className="mt-8 text-center">
-            <Button asChild variant="outline" className="border-purple-300 text-purple-700 hover:bg-purple-50">
+            <Button asChild variant="outline" className="border-primary text-primary hover:bg-slate-50">
               <Link href="/urunler/boy-tipi-turnike">
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Boy Tipi Turnike Modelleri

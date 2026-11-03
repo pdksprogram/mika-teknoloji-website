@@ -93,7 +93,7 @@ export default function MTT300HG20DetailPage() {
       </Helmet>
 
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-primary text-white overflow-hidden">
+      <div className="relative bg-slate-900 border-b-4 border-primary text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="container mx-auto px-4 py-16 relative z-10">
           <motion.div 
@@ -138,7 +138,7 @@ export default function MTT300HG20DetailPage() {
                       Hemen Ara
                     </a>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                  <Button asChild size="lg" variant="outlineLight">
                     <Link href="/iletisim">
                       <Mail className="mr-2 h-5 w-5" />
                       Teklif Al
@@ -300,7 +300,7 @@ export default function MTT300HG20DetailPage() {
                   0546 712 22 96
                 </a>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+              <Button asChild size="lg" variant="outlineLight">
                 <a href="mailto:info@mikateknoloji.com">
                   <Mail className="mr-2 h-5 w-5" />
                   info@mikateknoloji.com

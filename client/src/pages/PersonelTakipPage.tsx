@@ -277,9 +277,7 @@ export default function PersonelTakipPage() {
         <script type="application/ld+json">{JSON.stringify(SSS_JSON_LD)}</script>
       </Helmet>
       {/* Hero Section */}
-      <section data-testid="P1" className="relative py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Segment Code */}
-        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">P1</div>
+      <section data-testid="P1" className="relative py-20 px-4 bg-slate-50">
         <div className="container mx-auto text-center">
           <motion.div 
             className="max-w-4xl mx-auto"
@@ -293,7 +291,6 @@ export default function PersonelTakipPage() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="w-3 h-3 bg-primary rounded-full mr-3 animate-pulse"></div>
               <span className="text-primary font-medium text-sm tracking-wider uppercase">
                 Bulut Tabanlı Teknoloji
               </span>
@@ -347,7 +344,7 @@ export default function PersonelTakipPage() {
                 aria-label="Mika Teknoloji personel takip sistemi demo videosu"
               >
                 <source src={videoDemo} type="video/mp4" />
-                <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center">
+                <div className="aspect-video bg-slate-50 rounded-xl flex items-center justify-center">
                   <div className="text-center">
                     <Video className="h-16 w-16 text-slate-400 mx-auto mb-4" />
                     <p className="text-slate-600 font-medium">Tarayıcınız video oynatmayı desteklemiyor</p>
@@ -361,8 +358,6 @@ export default function PersonelTakipPage() {
 
       {/* Client Logos */}
       <section data-testid="P2" className="relative py-16 bg-white">
-        {/* Segment Code */}
-        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">P2</div>
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-12"
@@ -382,8 +377,6 @@ export default function PersonelTakipPage() {
 
       {/* Geçiş Çözümleri */}
       <section data-testid="P3" className="relative py-20 bg-slate-50">
-        {/* Segment Code */}
-        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">P3</div>
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -484,8 +477,6 @@ export default function PersonelTakipPage() {
 
       {/* Avantajlar */}
       <section data-testid="P4" className="relative py-20 bg-white">
-        {/* Segment Code */}
-        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">P4</div>
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -530,9 +521,7 @@ export default function PersonelTakipPage() {
       </section>
 
       {/* Mobil Uygulama */}
-      <section data-testid="P5" className="relative py-20 bg-slate-50">
-        {/* Segment Code */}
-        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">P5</div>
+      <section data-testid="P5" className="relative py-20 bg-slate-50 overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -552,19 +541,18 @@ export default function PersonelTakipPage() {
               <h3 className="text-2xl font-bold text-slate-800 mb-8">Mobil Uygulama Özellikleri</h3>
               <div className="space-y-4">
                 {[
-                  { emoji: "✏️", title: "Düzeltme Giriş Çıkışlar", desc: "Personelin giriş/çıkış saatlerinde hata veya eksik olduğunda düzeltme yapılır. Örneğin kart basmayı unutan çalışan için manuel giriş ekleme." },
-                  { emoji: "🕒", title: "Shift Plan Kart", desc: "Personelin vardiya/çalışma kartlarını gösterir. Hangi tarihte hangi vardiyada olduklarını görürler." },
-                  { emoji: "✅", title: "Shift Plan Onay", desc: "Hazırlanan vardiya planlarının yöneticiler tarafından onaylandığı ekran. Onaylanmadan vardiya planı kesinleşmez." },
-                  { emoji: "💸", title: "Avans", desc: "Personelin maaş avans taleplerini oluşturduğu ve takip ettiği bölüm. Yöneticiler de buradan onay/ret verebilir." },
-                  { emoji: "🧳", title: "İzin", desc: "Günlük ya da belirli tarihler için izin talep etme alanı. İzinler yönetici onayına düşer." },
-                  { emoji: "📅", title: "Vardiya", desc: "Detaylı vardiya planlaması ve çalışanların vardiyalarını listeleme alanı. Özellikle üretim veya vardiyalı sistemlerde yoğun kullanılır." },
-                  { emoji: "🌴", title: "Yıllık İzin", desc: "Yıllık ücretli izinlerin takibi ve talep süreci. Kalan izin günleri, kullanılan izinler burada görünür." },
-                  { emoji: "📝", title: "Şikayet ve Öneri", desc: "Personelin kuruma yönelik öneri ve şikayetlerini ilettiği bölüm. Yöneticiler geri bildirimleri buradan takip eder." },
-                  { emoji: "📋", title: "Anket Portal", desc: "Kurum içi memnuniyet veya değerlendirme anketlerinin yayınlandığı alan. Çalışanlar anketleri doldurur, sonuçlar yönetime raporlanır." },
-                  { emoji: "📑", title: "Bordro Portal", desc: "Çalışanların maaş bordrolarını görüntüleyebildiği bölüm. Genellikle PDF olarak indirilebilen bordrolar bulunur." }
+                  { title: "Düzeltme Giriş Çıkışlar", desc: "Personelin giriş/çıkış saatlerinde hata veya eksik olduğunda düzeltme yapılır. Örneğin kart basmayı unutan çalışan için manuel giriş ekleme." },
+                  { title: "Shift Plan Kart", desc: "Personelin vardiya/çalışma kartlarını gösterir. Hangi tarihte hangi vardiyada olduklarını görürler." },
+                  { title: "Shift Plan Onay", desc: "Hazırlanan vardiya planlarının yöneticiler tarafından onaylandığı ekran. Onaylanmadan vardiya planı kesinleşmez." },
+                  { title: "Avans", desc: "Personelin maaş avans taleplerini oluşturduğu ve takip ettiği bölüm. Yöneticiler de buradan onay/ret verebilir." },
+                  { title: "İzin", desc: "Günlük ya da belirli tarihler için izin talep etme alanı. İzinler yönetici onayına düşer." },
+                  { title: "Vardiya", desc: "Detaylı vardiya planlaması ve çalışanların vardiyalarını listeleme alanı. Özellikle üretim veya vardiyalı sistemlerde yoğun kullanılır." },
+                  { title: "Yıllık İzin", desc: "Yıllık ücretli izinlerin takibi ve talep süreci. Kalan izin günleri, kullanılan izinler burada görünür." },
+                  { title: "Şikayet ve Öneri", desc: "Personelin kuruma yönelik öneri ve şikayetlerini ilettiği bölüm. Yöneticiler geri bildirimleri buradan takip eder." },
+                  { title: "Anket Portal", desc: "Kurum içi memnuniyet veya değerlendirme anketlerinin yayınlandığı alan. Çalışanlar anketleri doldurur, sonuçlar yönetime raporlanır." },
+                  { title: "Bordro Portal", desc: "Çalışanların maaş bordrolarını görüntüleyebildiği bölüm. Genellikle PDF olarak indirilebilen bordrolar bulunur." }
                 ].map((item, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <div className="text-xl flex-shrink-0 mt-1">{item.emoji}</div>
                     <div>
                       <h4 className="font-semibold text-slate-800 mb-1">{item.title}</h4>
                       <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
@@ -577,16 +565,13 @@ export default function PersonelTakipPage() {
             {/* Mobil App Mockup */}
             <motion.div 
               className="relative"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              {/* Gradient Background Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-purple-500/20 to-slate-800/20 rounded-[4rem] blur-3xl transform rotate-6 scale-110 -z-10"></div>
               
-              {/* Shadow Effect */}
-              <div className="relative transform hover:scale-105 transition-all duration-500 hover:rotate-1">
+              <div className="relative">
                 <div className="max-w-sm mx-auto">
                   {/* Phone Frame */}
                   <div className="relative bg-gradient-to-b from-slate-800 to-slate-900 rounded-[3rem] p-3 shadow-2xl border-2 border-slate-700/50">
@@ -614,9 +599,6 @@ export default function PersonelTakipPage() {
                 </div>
               </div>
               
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/30 rounded-full blur-sm animate-pulse"></div>
-              <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-purple-500/20 rounded-full blur-md animate-bounce" style={{animationDelay: '1s'}}></div>
             </motion.div>
           </div>
 
@@ -624,16 +606,13 @@ export default function PersonelTakipPage() {
             {/* Yönetici Mobil Mockup */}
             <motion.div 
               className="relative order-2 lg:order-1"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              {/* Gradient Background Effect */}
-              <div className="absolute inset-0 bg-gradient-to-l from-blue-500/20 via-cyan-500/20 to-teal-500/20 rounded-[4rem] blur-3xl transform -rotate-6 scale-110 -z-10"></div>
               
-              {/* Shadow Effect */}
-              <div className="relative transform hover:scale-105 transition-all duration-500 hover:-rotate-1">
+              <div className="relative">
                 <div className="max-w-sm mx-auto">
                   {/* Phone Frame */}
                   <div className="relative bg-gradient-to-b from-slate-800 to-slate-900 rounded-[3rem] p-3 shadow-2xl border-2 border-slate-700/50">
@@ -661,9 +640,6 @@ export default function PersonelTakipPage() {
                 </div>
               </div>
               
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -left-4 w-6 h-6 bg-blue-500/30 rounded-full blur-sm animate-pulse" style={{animationDelay: '0.5s'}}></div>
-              <div className="absolute -bottom-6 -right-6 w-10 h-10 bg-teal-500/20 rounded-full blur-md animate-bounce" style={{animationDelay: '1.5s'}}></div>
             </motion.div>
 
             {/* Yönetici Özellikleri */}
@@ -671,13 +647,12 @@ export default function PersonelTakipPage() {
               <h3 className="text-2xl font-bold text-slate-800 mb-8">Yönetici Panel Özellikleri</h3>
               <div className="space-y-4">
                 {[
-                  { emoji: "📅", title: "Tarih Seçim Alanı", desc: "Başlangıç Tarihi / Bitiş Tarihi: Raporların hangi tarih aralığında gösterileceğini seçersin. Örn. 01.09.2025 – 30.09.2025 arası tüm giriş-çıkış, izin, devamsızlık verileri gelir." },
-                  { emoji: "👥", title: "Personel Bilgileri Kartı", desc: "Aktif Çalışan: O an sisteme göre iş başında olan çalışan sayısı. İzinli / Raporlu: O gün izinli ya da raporlu görünen çalışan sayısı. Devamsız: O gün işe gelmeyen çalışan sayısı. Toplam: Sisteme kayıtlı toplam çalışan sayısı." },
-                  { emoji: "⏳", title: "Bekleyen İşlemler", desc: "Bekleyen İzin: Onay bekleyen izin talepleri. Bekleyen Saatlik İzin: Saatlik (kısa süreli) izinler için onay bekleyen talepler. Bekleyen Avans: Çalışanların talep ettiği ve onay sürecinde olan maaş avansları." },
-                  { emoji: "📊", title: "Personel Durum Bilgileri", desc: "Geç Gelen: O gün belirlenen mesai saatinden sonra giriş yapan çalışan sayısı. Erken Çıkan: Çalışma saatinden önce çıkış yapan çalışan sayısı. İçerdekiler: O anda işyerinde, sistemde içeride görünüp aktif çalışan kişi sayısı. Dışardakiler: O anda işyeri dışında olan, çıkış yapmış veya hiç giriş yapmamış kişi sayısı." }
+                  { title: "Tarih Seçim Alanı", desc: "Başlangıç Tarihi / Bitiş Tarihi: Raporların hangi tarih aralığında gösterileceğini seçersin. Örn. 01.09.2025 – 30.09.2025 arası tüm giriş-çıkış, izin, devamsızlık verileri gelir." },
+                  { title: "Personel Bilgileri Kartı", desc: "Aktif Çalışan: O an sisteme göre iş başında olan çalışan sayısı. İzinli / Raporlu: O gün izinli ya da raporlu görünen çalışan sayısı. Devamsız: O gün işe gelmeyen çalışan sayısı. Toplam: Sisteme kayıtlı toplam çalışan sayısı." },
+                  { title: "Bekleyen İşlemler", desc: "Bekleyen İzin: Onay bekleyen izin talepleri. Bekleyen Saatlik İzin: Saatlik (kısa süreli) izinler için onay bekleyen talepler. Bekleyen Avans: Çalışanların talep ettiği ve onay sürecinde olan maaş avansları." },
+                  { title: "Personel Durum Bilgileri", desc: "Geç Gelen: O gün belirlenen mesai saatinden sonra giriş yapan çalışan sayısı. Erken Çıkan: Çalışma saatinden önce çıkış yapan çalışan sayısı. İçerdekiler: O anda işyerinde, sistemde içeride görünüp aktif çalışan kişi sayısı. Dışardakiler: O anda işyeri dışında olan, çıkış yapmış veya hiç giriş yapmamış kişi sayısı." }
                 ].map((item, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <div className="text-xl flex-shrink-0 mt-1">{item.emoji}</div>
                     <div>
                       <h4 className="font-semibold text-slate-800 mb-1">{item.title}</h4>
                       <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
@@ -692,8 +667,6 @@ export default function PersonelTakipPage() {
 
       {/* PDKS Teknolojileri */}
       <section data-testid="P6" className="relative py-20 bg-white">
-        {/* Segment Code */}
-        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">P6</div>
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -817,8 +790,6 @@ export default function PersonelTakipPage() {
 
       {/* Kurumsal Güvenlik ve Güvenilirlik */}
       <section data-testid="P7" className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
-        {/* Segment Code */}
-        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">P7</div>
         
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -856,25 +827,25 @@ export default function PersonelTakipPage() {
                 icon: MapPin,
                 title: "GPS Konum Doğrulama",
                 desc: "Mobil kayda konum eklenir; sahte konum (Fake GPS) tespit edilirse kayıt alınmaz",
-                gradient: "from-blue-500 to-cyan-500"
+                gradient: "from-slate-900 to-slate-800"
               },
               {
                 icon: Settings,
                 title: "Esnek Parametreler",
                 desc: "Sektörünüze özel tolerans ayarları ve özelleştirilebilir iş kuralları",
-                gradient: "from-purple-500 to-slate-800"
+                gradient: "from-slate-900 to-slate-800"
               },
               {
                 icon: Database,
                 title: "Kurumsal Veri Güvenliği",
                 desc: "SSL şifreleme ve yetkiye göre erişim",
-                gradient: "from-green-500 to-emerald-500"
+                gradient: "from-slate-900 to-slate-800"
               },
               {
                 icon: Lock,
                 title: "Yasal Uyumluluk",
                 desc: "K.V.K.K.'ya uygun veri işleme; konum bilgisi raporlarda gizlenebilir",
-                gradient: "from-orange-500 to-red-500"
+                gradient: "from-slate-900 to-slate-800"
               }
             ].map((item, index) => (
               <motion.div key={index} variants={staggerItem}>
@@ -920,8 +891,6 @@ export default function PersonelTakipPage() {
 
       {/* CTA Section */}
       <section data-testid="P8" className="relative py-20 bg-gradient-to-br from-primary to-slate-800 text-white">
-        {/* Segment Code */}
-        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">P8</div>
         <div className="container mx-auto px-4 text-center">
           <motion.div 
             className="max-w-4xl mx-auto"
@@ -949,9 +918,9 @@ export default function PersonelTakipPage() {
               
               <Button 
                 asChild 
-                variant="outline" 
+                variant="outlineLight" 
                 size="lg" 
-                className="border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg backdrop-blur-sm"
+                className="px-8 py-4 rounded-xl font-semibold text-lg"
                 onClick={handleContactRequest}
               >
                 <Link href="/iletisim">
@@ -965,8 +934,6 @@ export default function PersonelTakipPage() {
 
       {/* Destek Bölümü */}
       <section data-testid="P9" className="relative py-20 bg-white">
-        {/* Segment Code */}
-        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">P9</div>
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -1016,8 +983,6 @@ export default function PersonelTakipPage() {
 
       {/* FAQ Section */}
       <section data-testid="P10" className="relative py-20 px-4 bg-slate-50">
-        {/* Segment Code */}
-        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">P10</div>
         <div className="container mx-auto max-w-4xl">
           <motion.div 
             className="text-center mb-12"

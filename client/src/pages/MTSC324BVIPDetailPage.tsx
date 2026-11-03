@@ -88,7 +88,7 @@ export default function MTSC324BVIPDetailPage() {
       description: "Motorlu sistem ile otomatik açılma-kapanma ve ayarlanabilir süre"
     },
     {
-      icon: <Settings className="h-8 w-8 text-purple-600" />,
+      icon: <Settings className="h-8 w-8 text-primary" />,
       title: "Akıllı Özellikler",
       description: "LED indikatörler, sensörler ve uzaktan kumanda desteği"
     }
@@ -301,7 +301,7 @@ export default function MTSC324BVIPDetailPage() {
             <Card className="p-8">
               <CardHeader className="px-0 pt-0">
                 <CardTitle className="flex items-center gap-2">
-                  <Settings className="h-5 w-5 text-purple-600" />
+                  <Settings className="h-5 w-5 text-primary" />
                   Opsiyonel Aksesuarlar
                 </CardTitle>
               </CardHeader>
@@ -309,7 +309,7 @@ export default function MTSC324BVIPDetailPage() {
                 <div className="grid grid-cols-1 gap-3">
                   {productDetails.accessories.map((accessory, index) => (
                     <div key={index} className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-purple-600 rounded-full flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
                       <span className="text-gray-700">{accessory}</span>
                     </div>
                   ))}
@@ -335,7 +335,7 @@ export default function MTSC324BVIPDetailPage() {
               <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
                 <Link href="/iletisim">Keşif Talep Edin</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
+              <Button asChild variant="outlineLight" size="lg">
                 <a href="tel:+905467122296">
                   <Phone className="mr-2 h-4 w-4" />
                   Hemen Ara

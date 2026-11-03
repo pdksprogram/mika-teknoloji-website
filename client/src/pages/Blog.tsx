@@ -116,7 +116,7 @@ export default function Blog() {
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-16"
+        className="bg-slate-900 text-white py-16"
       >
         <div className="container mx-auto px-4">
           <div className="text-center">
@@ -170,7 +170,7 @@ export default function Blog() {
           <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <div className="md:flex">
               <div className="md:w-1/2">
-                <div className="h-64 md:h-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                <div className="h-64 md:h-full bg-slate-900 flex items-center justify-center">
                   <div className="text-white text-6xl font-bold">MT</div>
                 </div>
               </div>

@@ -64,7 +64,7 @@ export default function MagazaPersonelTakipPage() {
       icon: Calendar,
       title: "Vardiya Planlama ve Shift Yönetimi",
       description: "Mağaza ihtiyaçlarına göre otomatik vardiya planlama, shift yönetimi ve personel rotasyon sistemi. Sabah, öğle, akşam vardiyalarını kolayca planlayın ve çakışmaları önleyin.",
-      gradient: "from-blue-500 to-cyan-500",
+      gradient: "from-slate-900 to-slate-800",
       keywords: "vardiya planlama, shift planlama, personel rotasyon",
       imagePlaceholder: "vardiya-planlama.jpg"
     },
@@ -72,7 +72,7 @@ export default function MagazaPersonelTakipPage() {
       icon: TrendingUp,
       title: "Hiyerarşik Onay Sistemi ve Plan Takibi",
       description: "Mağaza müdürleri haftalık vardiya planlarını oluşturur ve bu planlar bölge müdürleri tarafından onaylanır. Haftalık 45 saat kuralı açıksa (4857 sayılı İş Kanunu m.63: haftada en çok 45 saat) 45 saati aşan süre puantajda fazla mesai olarak ayrılır. Mobil uygulama üzerinden onaylı ve onay bekleyen planların durumu anlık olarak takip edilebilir. Detaylı raporlama özellikleri sayesinde bölge müdürleri tüm süreçleri kontrol altında tutar ve mağaza müdürlerine etkin bir yönetim avantajı sağlar.",
-      gradient: "from-purple-500 to-slate-800",
+      gradient: "from-slate-900 to-slate-800",
       keywords: "plan onay sistemi, bölge müdürü kontrolü, vardiya onaylama, hiyerarşik yönetim",
       imagePlaceholder: "plan-onay-sistemi.jpg"
     },
@@ -80,7 +80,7 @@ export default function MagazaPersonelTakipPage() {
       icon: FileText,
       title: "Personel Vardiya Bildirimleri ve Mobil Takip",
       description: "Mağaza müdürü tarafından oluşturulan ve bölge müdürü tarafından onaylanan vardiya planları sistematik olarak personele iletilir. Çalışanlar hafta boyunca hangi vardiyaya geleceğini, çalışma saatlerini ve shift detaylarını mobil uygulama üzerinden anlık olarak görüntüler. Push bildirim sistemi sayesinde personel, vardiya değişikliklerinden ve çalışma programından anında haberdar olur. Bu çift yönlü sistem hem hiyerarşik onay yapısını güçlendirir hem de personellerin planlama sürecine aktif katılımını sağlar.",
-      gradient: "from-green-500 to-emerald-500",
+      gradient: "from-slate-900 to-slate-800",
       keywords: "vardiya bildirimleri, push notification, mobil personel takip, shift uyarıları",
       imagePlaceholder: "vardiya-bildirim.jpg"
     },
@@ -88,7 +88,7 @@ export default function MagazaPersonelTakipPage() {
       icon: Smartphone,
       title: "İzin ve Avans Talep Yönetim Sistemi",
       description: "Mağaza personeli, izin talepleri ve avans ücret taleplerini mobil uygulama üzerinden kolayca başlatır. Talepler önce mağaza müdürüne iletilir ve onaylanır. Ardından merkez İnsan Kaynakları departmanına düşer ve nihai onay alınır. Onay sürecinin her aşamasında personele push bildirim gönderilir. İzin veya avans talebinin onaylandığı, reddedildiği ve ret nedenleri anında çalışana iletilir. Bu çok katmanlı onay süreci hem hiyerarşik yapıyı güçlendirir hem de şeffaf bir talep yönetimi sağlar.",
-      gradient: "from-orange-500 to-red-500",
+      gradient: "from-slate-900 to-slate-800",
       keywords: "izin talebi, avans talebi, çok katmanlı onay, İK yönetimi, talep bildirimleri",
       imagePlaceholder: "izin-avans-yonetimi.jpg"
     },
@@ -96,7 +96,7 @@ export default function MagazaPersonelTakipPage() {
       icon: BarChart3,
       title: "Dijital Belge ve Evrak Yönetim Sistemi",
       description: "Personeller raporlu izin, sağlık raporu, sertifika, diploma ve diğer resmi evraklarını mobil uygulama üzerinden kolayca yükleyebilir ve merkez sisteme iletebilir. Tüm belgeler dijital ortamda güvenli şekilde saklanır ve gerektiğinde yöneticiler tarafından anında erişilebilir. Bu dijital belge yönetim sistemi, kağıt kullanımını ortadan kaldırır, evrak kaybını önler ve kurumsal bir dokümantasyon yapısı oluşturur. İnsan Kaynakları ve yöneticiler tüm personel belgelerini merkezi sistemden takip edebilir, arşivleme ve raporlama süreçlerini otomatikleştirebilir.",
-      gradient: "from-indigo-500 to-purple-500",
+      gradient: "from-slate-900 to-slate-800",
       keywords: "dijital belge yönetimi, evrak sistemi, raporlu izin belgesi, QR kod sistemi, dijital arşiv",
       imagePlaceholder: "belge-yonetimi.jpg"
     },
@@ -104,7 +104,7 @@ export default function MagazaPersonelTakipPage() {
       icon: Database,
       title: "Topluluk+ Kurumsal Sosyal Medya Platformu",
       description: "Mika Teknoloji tarafından geliştirilen Topluluk+, kurum içi çalışanlar için özel tasarlanmış Twitter tarzı bir sosyal medya platformudur. Personeller mobil uygulama üzerinden anlık fotoğraf ve video paylaşımları yapabilir. Tüm paylaşımlar moderatör onayından geçerek yayınlanır ve kurum içinde güvenli bir iletişim ortamı sağlanır. Çalışanlar birbirlerinin paylaşımlarını beğenebilir, yorum yapabilir ve etkileşimde bulunabilir. Platform, oyunlaşma sistemi ile rozetler, başarı ödülleri ve prim mekanizması içerir. Performansa dayalı ödüller, aktif katılım ve pozitif davranışlar üzerinden hesaplanır. Topluluk+, çalışan bağlılığını artırır, kurum kültürünü güçlendirir ve şirket içi iletişimi dijitalleştirir.",
-      gradient: "from-teal-500 to-cyan-500",
+      gradient: "from-slate-900 to-slate-800",
       keywords: "kurumsal sosyal medya, topluluk+, oyunlaşma, personel rozetleri, prim sistemi, moderasyon",
       imagePlaceholder: "topluluk-plus.jpg"
     }
@@ -392,7 +392,7 @@ export default function MagazaPersonelTakipPage() {
         </section>
 
         {/* SEGMENT 6: CTA (Çağrı) */}
-        <section className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-slate-800 text-white relative">
+        <section className="py-16 bg-slate-900 text-white relative">
           {/* Segment İşareti - Sağ Üst Köşe */}
           
           <div className="container mx-auto px-4 text-center">
@@ -413,7 +413,7 @@ export default function MagazaPersonelTakipPage() {
                 <Button 
                   asChild
                   size="lg" 
-                  className="bg-white text-purple-600 hover:bg-white/90 font-semibold px-8"
+                  className="bg-white text-primary hover:bg-white/90 font-semibold px-8"
                   data-testid="cta-demo-button"
                 >
                   <Link href="/iletisim">📞 Ücretsiz Demo Talep Et</Link>
@@ -421,8 +421,8 @@ export default function MagazaPersonelTakipPage() {
                 <Button 
                   asChild
                   size="lg" 
-                  variant="outline" 
-                  className="border-2 border-white text-white hover:bg-white/10 font-semibold px-8"
+                  variant="outlineLight" 
+                  className="font-semibold px-8"
                   data-testid="cta-phone-button"
                 >
                   <a href={`tel:${DEMO_TELEFON}`}>
@@ -433,8 +433,8 @@ export default function MagazaPersonelTakipPage() {
                 <Button 
                   asChild
                   size="lg" 
-                  variant="outline" 
-                  className="border-2 border-white text-white hover:bg-white/10 font-semibold px-8"
+                  variant="outlineLight" 
+                  className="font-semibold px-8"
                   data-testid="cta-whatsapp-button"
                 >
                   <a href="https://wa.me/905467122296" target="_blank" rel="noopener noreferrer">

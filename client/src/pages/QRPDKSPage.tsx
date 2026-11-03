@@ -163,7 +163,7 @@ export default function QRPDKSPage() {
       </Helmet>
 
       {/* Hero Section with Video Header */}
-      <section data-testid="hero-section" className="relative py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
+      <section data-testid="hero-section" className="relative py-20 px-4 bg-slate-50">
         <div className="container mx-auto text-center">
           <motion.div 
             className="max-w-4xl mx-auto"
@@ -284,8 +284,6 @@ export default function QRPDKSPage() {
 
       {/* Q1 - QR Kod Okutma */}
       <section data-testid="Q1" className="relative py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50">
-        {/* Segment Code */}
-        <div className="absolute top-6 left-6 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full text-lg font-bold z-20 shadow-xl">Q1</div>
         
         {/* Decorative Background */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-primary/5 to-transparent rounded-full blur-3xl"></div>
@@ -370,7 +368,7 @@ export default function QRPDKSPage() {
                           <span className="text-slate-600 font-medium">Konum Doğrulama</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-primary rounded-full"></div>
                           <span className="text-slate-600 font-medium">Mükerrer ID Önleme</span>
                         </div>
                         <div className="flex items-center space-x-3">
@@ -378,7 +376,7 @@ export default function QRPDKSPage() {
                           <span className="text-slate-600 font-medium">Jeofencing</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-primary rounded-full"></div>
                           <span className="text-slate-600 font-medium">Root/Jailbreak Tespiti</span>
                         </div>
                         <div className="flex items-center space-x-3">
@@ -397,11 +395,9 @@ export default function QRPDKSPage() {
 
       {/* Q2 - Mobil Uygulama */}
       <section data-testid="Q2" className="relative py-20 bg-gradient-to-br from-slate-100 via-white to-slate-100">
-        {/* Segment Code */}
-        <div className="absolute top-6 left-6 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full text-lg font-bold z-20 shadow-xl">Q2</div>
         
         {/* Decorative Background */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-500/5 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <motion.div 
@@ -412,7 +408,7 @@ export default function QRPDKSPage() {
               <CardContent className="p-0">
                 <div className="flex flex-col lg:flex-row-reverse min-h-[400px]">
                   {/* Resim Alanı - Büyük ve Premium */}
-                  <div className="lg:w-2/5 relative bg-gradient-to-br from-blue-500/10 via-blue-400/5 to-purple-500/10">
+                  <div className="lg:w-2/5 relative bg-slate-50">
                     {/* Premium Image Container */}
                     <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
                     <div className="relative h-full flex items-center justify-center p-8">
@@ -439,14 +435,14 @@ export default function QRPDKSPage() {
                       </div>
                     </div>
                     {/* Decorative Corner */}
-                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 via-purple-400 to-blue-600"></div>
+                    <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
                   </div>
                   
                   {/* İçerik Alanı - Premium Typography */}
                   <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
                     <div className="space-y-8">
                       {/* Premium Badge */}
-                      <div className="inline-flex items-center bg-gradient-to-r from-blue-500/20 to-purple-500/20 px-6 py-3 rounded-full border border-blue-500/30">
+                      <div className="inline-flex items-center bg-slate-50 px-6 py-3 rounded-full border border-blue-500/30">
                         <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
                         <span className="text-blue-600 font-semibold text-sm tracking-wider uppercase">Akıllı Onay Sistemi</span>
                       </div>
@@ -456,7 +452,7 @@ export default function QRPDKSPage() {
                         <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
                           Bulut Tabanlı Otomatik Düzeltme ve Onay Akışı
                         </h3>
-                        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-8"></div>
+                        <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
                       </div>
                       
                       {/* Premium Description */}
@@ -487,11 +483,11 @@ export default function QRPDKSPage() {
                           <span className="text-slate-600 font-medium">Amir Onay Sistemi</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-primary rounded-full"></div>
                           <span className="text-slate-600 font-medium">İK Kontrol Paneli</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-primary rounded-full"></div>
                           <span className="text-slate-600 font-medium">Otomatik Düzeltme</span>
                         </div>
                         <div className="flex items-center space-x-3">
@@ -513,12 +509,10 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Q3 - Temassız Sistem */}
-      <section data-testid="Q3" className="relative py-20 bg-gradient-to-br from-green-50 via-white to-emerald-50">
-        {/* Segment Code */}
-        <div className="absolute top-6 left-6 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full text-lg font-bold z-20 shadow-xl">Q3</div>
+      <section data-testid="Q3" className="relative py-20 bg-slate-50">
         
         {/* Decorative Background */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-emerald-500/5 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <motion.div 
@@ -529,7 +523,7 @@ export default function QRPDKSPage() {
               <CardContent className="p-0">
                 <div className="flex flex-col lg:flex-row min-h-[400px]">
                   {/* Resim Alanı - İki iPhone Yan Yana */}
-                  <div className="lg:w-2/5 relative bg-gradient-to-br from-emerald-500/10 via-green-400/5 to-teal-500/10">
+                  <div className="lg:w-2/5 relative bg-slate-50">
                     {/* Premium Image Container */}
                     <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
                     <div className="relative h-full flex items-center justify-center p-6">
@@ -580,14 +574,14 @@ export default function QRPDKSPage() {
                       </div>
                     </div>
                     {/* Decorative Corner */}
-                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-500 via-green-400 to-teal-500"></div>
+                    <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
                   </div>
                   
                   {/* İçerik Alanı - Premium Typography */}
                   <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
                     <div className="space-y-8">
                       {/* Premium Badge */}
-                      <div className="inline-flex items-center bg-gradient-to-r from-emerald-500/20 to-teal-500/20 px-6 py-3 rounded-full border border-emerald-500/30">
+                      <div className="inline-flex items-center bg-slate-50 px-6 py-3 rounded-full border border-emerald-500/30">
                         <div className="w-2 h-2 bg-emerald-500 rounded-full mr-3 animate-pulse"></div>
                         <span className="text-emerald-600 font-semibold text-sm tracking-wider uppercase">Hiyerarşik Onay Sistemi</span>
                       </div>
@@ -597,7 +591,7 @@ export default function QRPDKSPage() {
                         <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
                           İzin ve Avans Talep Yönetimi
                         </h3>
-                        <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mb-8"></div>
+                        <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
                       </div>
                       
                       {/* Premium Description */}
@@ -642,7 +636,7 @@ export default function QRPDKSPage() {
                           <span className="text-slate-600 font-medium">Şeffaf Süreç</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-primary rounded-full"></div>
                           <span className="text-slate-600 font-medium">Mobil Erişim</span>
                         </div>
                       </div>
@@ -656,12 +650,10 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Q4 - Bulut Tabanlı Altyapı */}
-      <section data-testid="Q4" className="relative py-20 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-        {/* Segment Code */}
-        <div className="absolute top-6 left-6 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full text-lg font-bold z-20 shadow-xl">Q4</div>
+      <section data-testid="Q4" className="relative py-20 bg-slate-50">
         
         {/* Decorative Background */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-indigo-500/5 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <motion.div 
@@ -672,7 +664,7 @@ export default function QRPDKSPage() {
               <CardContent className="p-0">
                 <div className="flex flex-col lg:flex-row-reverse min-h-[400px]">
                   {/* Resim Alanı - iPhone Mockup */}
-                  <div className="lg:w-2/5 relative bg-gradient-to-br from-indigo-500/10 via-blue-400/5 to-cyan-500/10">
+                  <div className="lg:w-2/5 relative bg-slate-50">
                     {/* Premium Image Container */}
                     <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
                     <div className="relative h-full flex items-center justify-center p-8">
@@ -699,16 +691,16 @@ export default function QRPDKSPage() {
                       </div>
                     </div>
                     {/* Decorative Corner */}
-                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-indigo-500 via-blue-400 to-cyan-500"></div>
+                    <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
                   </div>
                   
                   {/* İçerik Alanı - Premium Typography */}
                   <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
                     <div className="space-y-8">
                       {/* Premium Badge */}
-                      <div className="inline-flex items-center bg-gradient-to-r from-indigo-500/20 to-cyan-500/20 px-6 py-3 rounded-full border border-indigo-500/30">
-                        <div className="w-2 h-2 bg-indigo-500 rounded-full mr-3 animate-pulse"></div>
-                        <span className="text-indigo-600 font-semibold text-sm tracking-wider uppercase">Mobil İzin Takibi</span>
+                      <div className="inline-flex items-center bg-slate-50 px-6 py-3 rounded-full border border-primary/30">
+                        <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-pulse"></div>
+                        <span className="text-primary font-semibold text-sm tracking-wider uppercase">Mobil İzin Takibi</span>
                       </div>
                       
                       {/* Premium Title */}
@@ -716,7 +708,7 @@ export default function QRPDKSPage() {
                         <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
                           Yıllık İzin Yönetim Sistemi
                         </h3>
-                        <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full mb-8"></div>
+                        <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
                       </div>
                       
                       {/* Premium Description */}
@@ -728,7 +720,7 @@ export default function QRPDKSPage() {
                         <p className="text-lg text-slate-600 leading-relaxed">
                           <strong className="text-slate-800 font-semibold">İnsan kaynakları yönetiminin etkinliğini</strong> artırarak, 
                           işletmedeki yıllık izin durumlarını personeller hak edişlerine ve işe giriş tarihlerine göre 
-                          <span className="text-indigo-600 font-medium"> sistematik şekilde</span> cep telefonlarından görebilmektedirler.
+                          <span className="text-primary font-medium"> sistematik şekilde</span> cep telefonlarından görebilmektedirler.
                         </p>
                         <p className="text-lg text-slate-600 leading-relaxed">
                           Kalan izin günleri, kullanılan izinler, hak ediş bilgileri ve izin geçmişi mobil uygulamada 
@@ -744,7 +736,7 @@ export default function QRPDKSPage() {
                           <span className="text-slate-600 font-medium">Anlık İzin Takibi</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-primary rounded-full"></div>
                           <span className="text-slate-600 font-medium">Hak Ediş Hesaplama</span>
                         </div>
                         <div className="flex items-center space-x-3">
@@ -756,7 +748,7 @@ export default function QRPDKSPage() {
                           <span className="text-slate-600 font-medium">Mobil Erişim</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-primary rounded-full"></div>
                           <span className="text-slate-600 font-medium">Otomatik Güncelleme</span>
                         </div>
                         <div className="flex items-center space-x-3">
@@ -774,12 +766,10 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Q5 - Kolay Kurulum */}
-      <section data-testid="Q5" className="relative py-20 bg-gradient-to-br from-orange-50 via-white to-amber-50">
-        {/* Segment Code */}
-        <div className="absolute top-6 left-6 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full text-lg font-bold z-20 shadow-xl">Q5</div>
+      <section data-testid="Q5" className="relative py-20 bg-slate-50">
         
         {/* Decorative Background */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-amber-500/5 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <motion.div 
@@ -790,7 +780,7 @@ export default function QRPDKSPage() {
               <CardContent className="p-0">
                 <div className="flex flex-col lg:flex-row min-h-[400px]">
                   {/* Resim Alanı - iPhone Mockup */}
-                  <div className="lg:w-2/5 relative bg-gradient-to-br from-amber-500/10 via-orange-400/5 to-yellow-500/10">
+                  <div className="lg:w-2/5 relative bg-slate-50">
                     {/* Premium Image Container */}
                     <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
                     <div className="relative h-full flex items-center justify-center p-8">
@@ -817,14 +807,14 @@ export default function QRPDKSPage() {
                       </div>
                     </div>
                     {/* Decorative Corner */}
-                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-amber-500 via-orange-400 to-yellow-500"></div>
+                    <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
                   </div>
                   
                   {/* İçerik Alanı - Premium Typography */}
                   <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
                     <div className="space-y-8">
                       {/* Premium Badge */}
-                      <div className="inline-flex items-center bg-gradient-to-r from-amber-500/20 to-yellow-500/20 px-6 py-3 rounded-full border border-amber-500/30">
+                      <div className="inline-flex items-center bg-slate-50 px-6 py-3 rounded-full border border-amber-500/30">
                         <div className="w-2 h-2 bg-amber-500 rounded-full mr-3 animate-pulse"></div>
                         <span className="text-amber-600 font-semibold text-sm tracking-wider uppercase">Akıllı Vardiya</span>
                       </div>
@@ -834,7 +824,7 @@ export default function QRPDKSPage() {
                         <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
                           Mobil Shift Planlama Sistemi
                         </h3>
-                        <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-full mb-8"></div>
+                        <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
                       </div>
                       
                       {/* Premium Description */}
@@ -866,7 +856,7 @@ export default function QRPDKSPage() {
                           <span className="text-slate-600 font-medium">Vardiya Takibi</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-primary rounded-full"></div>
                           <span className="text-slate-600 font-medium">Anlık Güncelleme</span>
                         </div>
                         <div className="flex items-center space-x-3">
@@ -878,7 +868,7 @@ export default function QRPDKSPage() {
                           <span className="text-slate-600 font-medium">Hastane PDKS</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-primary rounded-full"></div>
                           <span className="text-slate-600 font-medium">Mağaza PDKS</span>
                         </div>
                       </div>
@@ -892,12 +882,10 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Q6 - Mobil Şikayet ve Talep */}
-      <section data-testid="Q6" className="relative py-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
-        {/* Segment Code */}
-        <div className="absolute top-6 left-6 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full text-lg font-bold z-20 shadow-xl">Q6</div>
+      <section data-testid="Q6" className="relative py-20 bg-slate-50">
         
         {/* Decorative Background */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-violet-500/5 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <motion.div 
@@ -908,7 +896,7 @@ export default function QRPDKSPage() {
               <CardContent className="p-0">
                 <div className="flex flex-col lg:flex-row-reverse min-h-[400px]">
                   {/* Resim Alanı - iPhone Mockup */}
-                  <div className="lg:w-2/5 relative bg-gradient-to-br from-violet-500/10 via-purple-400/5 to-indigo-500/10">
+                  <div className="lg:w-2/5 relative bg-slate-50">
                     {/* Premium Image Container */}
                     <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
                     <div className="relative h-full flex items-center justify-center p-8">
@@ -935,16 +923,16 @@ export default function QRPDKSPage() {
                       </div>
                     </div>
                     {/* Decorative Corner */}
-                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-violet-500 via-purple-400 to-indigo-500"></div>
+                    <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
                   </div>
                   
                   {/* İçerik Alanı - Premium Typography */}
                   <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
                     <div className="space-y-8">
                       {/* Premium Badge */}
-                      <div className="inline-flex items-center bg-gradient-to-r from-violet-500/20 to-indigo-500/20 px-6 py-3 rounded-full border border-violet-500/30">
-                        <div className="w-2 h-2 bg-violet-500 rounded-full mr-3 animate-pulse"></div>
-                        <span className="text-violet-600 font-semibold text-sm tracking-wider uppercase">İletişim Platformu</span>
+                      <div className="inline-flex items-center bg-slate-50 px-6 py-3 rounded-full border border-primary/30">
+                        <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-pulse"></div>
+                        <span className="text-primary font-semibold text-sm tracking-wider uppercase">İletişim Platformu</span>
                       </div>
                       
                       {/* Premium Title */}
@@ -952,7 +940,7 @@ export default function QRPDKSPage() {
                         <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
                           Mobil Şikayet ve Talep Yönetimi
                         </h3>
-                        <div className="w-24 h-1 bg-gradient-to-r from-violet-500 to-indigo-500 rounded-full mb-8"></div>
+                        <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
                       </div>
                       
                       {/* Premium Description */}
@@ -967,8 +955,8 @@ export default function QRPDKSPage() {
                           insan kaynakları departmanına ve ilgili müdürlüklere mobil aplikasyon üzerinden iletmektedir.
                         </p>
                         <p className="text-lg text-slate-600 leading-relaxed">
-                          Bu özellik hem <span className="text-violet-600 font-medium">erişilebilirlik</span> hem de 
-                          <span className="text-violet-600 font-medium"> personel memnuniyeti</span> yönünden firmaya önemli bir üstünlük sağlamaktadır. 
+                          Bu özellik hem <span className="text-primary font-medium">erişilebilirlik</span> hem de 
+                          <span className="text-primary font-medium"> personel memnuniyeti</span> yönünden firmaya önemli bir üstünlük sağlamaktadır. 
                           Şeffaf iletişim kanalları sayesinde çalışan bağlılığı artar ve sorunlar hızla çözüme kavuşturulur.
                         </p>
                       </div>
@@ -980,15 +968,15 @@ export default function QRPDKSPage() {
                           <span className="text-slate-600 font-medium">Fotoğraf Ekleme</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-violet-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-primary rounded-full"></div>
                           <span className="text-slate-600 font-medium">İK İletişimi</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-primary rounded-full"></div>
                           <span className="text-slate-600 font-medium">Kategori Kodları</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-primary rounded-full"></div>
                           <span className="text-slate-600 font-medium">Anlık Bildirim</span>
                         </div>
                         <div className="flex items-center space-x-3">
@@ -1010,12 +998,10 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Q7 - Anket ve Geri Bildirim Sistemi */}
-      <section data-testid="Q7" className="relative py-20 bg-gradient-to-br from-teal-50 via-white to-cyan-50">
-        {/* Segment Code */}
-        <div className="absolute top-6 left-6 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full text-lg font-bold z-20 shadow-xl">Q7</div>
+      <section data-testid="Q7" className="relative py-20 bg-slate-50">
         
         {/* Decorative Background */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-cyan-500/5 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <motion.div 
@@ -1026,7 +1012,7 @@ export default function QRPDKSPage() {
               <CardContent className="p-0">
                 <div className="flex flex-col lg:flex-row min-h-[400px]">
                   {/* Resim Alanı - iPhone Mockup */}
-                  <div className="lg:w-2/5 relative bg-gradient-to-br from-teal-500/10 via-cyan-400/5 to-blue-500/10">
+                  <div className="lg:w-2/5 relative bg-slate-50">
                     {/* Premium Image Container */}
                     <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
                     <div className="relative h-full flex items-center justify-center p-8">
@@ -1053,14 +1039,14 @@ export default function QRPDKSPage() {
                       </div>
                     </div>
                     {/* Decorative Corner */}
-                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-teal-500 via-cyan-400 to-blue-500"></div>
+                    <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
                   </div>
                   
                   {/* İçerik Alanı - Premium Typography */}
                   <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
                     <div className="space-y-8">
                       {/* Premium Badge */}
-                      <div className="inline-flex items-center bg-gradient-to-r from-teal-500/20 to-cyan-500/20 px-6 py-3 rounded-full border border-teal-500/30">
+                      <div className="inline-flex items-center bg-slate-50 px-6 py-3 rounded-full border border-teal-500/30">
                         <div className="w-2 h-2 bg-teal-500 rounded-full mr-3 animate-pulse"></div>
                         <span className="text-teal-600 font-semibold text-sm tracking-wider uppercase">Geri Bildirim</span>
                       </div>
@@ -1070,7 +1056,7 @@ export default function QRPDKSPage() {
                         <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
                           Mobil Anket ve Geri Bildirim Platformu
                         </h3>
-                        <div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full mb-8"></div>
+                        <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
                       </div>
                       
                       {/* Premium Description */}
@@ -1115,12 +1101,10 @@ export default function QRPDKSPage() {
       </section>
 
       {/* Q8 - Elektronik Bordro Onay Sistemi */}
-      <section data-testid="Q8" className="relative py-20 bg-gradient-to-br from-emerald-50 via-white to-green-50">
-        {/* Segment Code */}
-        <div className="absolute top-6 left-6 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full text-lg font-bold z-20 shadow-xl">Q8</div>
+      <section data-testid="Q8" className="relative py-20 bg-slate-50">
         
         {/* Decorative Background */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-green-500/5 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-slate-50 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <motion.div 
@@ -1131,7 +1115,7 @@ export default function QRPDKSPage() {
               <CardContent className="p-0">
                 <div className="flex flex-col lg:flex-row-reverse min-h-[400px]">
                   {/* Resim Alanı - iPhone Mockup */}
-                  <div className="lg:w-2/5 relative bg-gradient-to-br from-emerald-500/10 via-green-400/5 to-teal-500/10">
+                  <div className="lg:w-2/5 relative bg-slate-50">
                     {/* Premium Image Container */}
                     <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent"></div>
                     <div className="relative h-full flex items-center justify-center p-8">
@@ -1158,14 +1142,14 @@ export default function QRPDKSPage() {
                       </div>
                     </div>
                     {/* Decorative Corner */}
-                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-500 via-green-400 to-teal-500"></div>
+                    <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
                   </div>
                   
                   {/* İçerik Alanı - Premium Typography */}
                   <div className="lg:w-3/5 p-12 lg:p-16 flex flex-col justify-center">
                     <div className="space-y-8">
                       {/* Premium Badge */}
-                      <div className="inline-flex items-center bg-gradient-to-r from-emerald-500/20 to-green-500/20 px-6 py-3 rounded-full border border-emerald-500/30">
+                      <div className="inline-flex items-center bg-slate-50 px-6 py-3 rounded-full border border-emerald-500/30">
                         <div className="w-2 h-2 bg-emerald-500 rounded-full mr-3 animate-pulse"></div>
                         <span className="text-emerald-600 font-semibold text-sm tracking-wider uppercase">Elektronik İmza</span>
                       </div>
@@ -1175,7 +1159,7 @@ export default function QRPDKSPage() {
                         <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
                           Dijital Bordro Onay ve Elektronik İmza Sistemi
                         </h3>
-                        <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full mb-8"></div>
+                        <div className="w-24 h-1 bg-primary rounded-full mb-8"></div>
                       </div>
                       
                       {/* Premium Description */}
@@ -1321,9 +1305,9 @@ export default function QRPDKSPage() {
               </Button>
               <Button 
                 asChild 
-                variant="outline" 
+                variant="outlineLight" 
                 size="lg" 
-                className="border-white text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg"
+                className="px-8 py-4 rounded-xl font-semibold text-lg"
                 data-testid="button-cta-products"
               >
                 <Link href="/urunler">

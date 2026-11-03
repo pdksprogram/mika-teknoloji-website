@@ -518,7 +518,7 @@ export default function PDKSPage() {
                 <span>Mobil Uygulama</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
                 <span>Kurulum ve Eğitim</span>
               </div>
             </div>
@@ -536,7 +536,7 @@ export default function PDKSPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 border-l-4 border-primary">
+            <div className="bg-slate-50 rounded-xl p-8 border-l-4 border-primary">
               <div className="flex items-center mb-6">
                 <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-4" aria-hidden="true">
                   <span className="text-white text-lg font-bold">?</span>
@@ -834,8 +834,8 @@ export default function PDKSPage() {
               </Button>
               <Button asChild 
                 size="lg" 
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg"
+                variant="outlineLight"
+                className="px-8 py-4 text-lg"
                 data-testid="pdks-cta-contact"
               >
                 <Link href="/iletisim">{pdks.cta.buttons.contact}</Link>

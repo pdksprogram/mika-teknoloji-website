@@ -154,7 +154,7 @@ export default function ProductTurnikePage() {
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-12"
+        className="bg-slate-900 text-white py-12"
       >
         <div className="container mx-auto px-4">
           <div className="text-center">

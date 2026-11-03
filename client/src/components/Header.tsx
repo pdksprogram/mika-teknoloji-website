@@ -598,7 +598,7 @@ export default function Header() {
             
             {/* No Results */}
             {searchQuery && searchResults.length === 0 && (
-              <div className="bg-white rounded-xl shadow-lg p-10 max-w-2xl mx-auto border-l-4 border-orange-400">
+              <div className="bg-white rounded-xl shadow-lg p-10 max-w-2xl mx-auto border-l-4 border-primary">
                 <p className="text-slate-800 text-xl font-semibold mb-3">
                   Aramanızla eşleşen sonuç bulunamadı.
                 </p>

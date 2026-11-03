@@ -82,8 +82,8 @@ export default function PrivacyPolicy() {
               <h3 className="font-semibold text-slate-800 mb-1">Gizlilik</h3>
               <p className="text-sm text-slate-600">Kişisel veri korunması</p>
             </div>
-            <div className="bg-purple-50 p-4 rounded-lg text-center">
-              <FileText className="h-8 w-8 text-purple-600 mx-auto mb-2" />
+            <div className="bg-slate-50 p-4 rounded-lg text-center">
+              <FileText className="h-8 w-8 text-primary mx-auto mb-2" />
               <h3 className="font-semibold text-slate-800 mb-1">Şeffaflık</h3>
               <p className="text-sm text-slate-600">Açık politika belgesi</p>
             </div>

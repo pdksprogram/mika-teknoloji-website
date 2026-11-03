@@ -274,7 +274,7 @@ export default function BoyTipeTurnikePage() {
       </div>
 
       {/* Call to Action */}
-      <div className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+      <div className="py-16 bg-slate-900 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">
@@ -309,7 +309,7 @@ export default function BoyTipeTurnikePage() {
                   Keşif Talep Edin
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button asChild size="lg" variant="outlineLight">
                 <Link href="/iletisim">
                   Boy Tipi Teklif Al
                 </Link>

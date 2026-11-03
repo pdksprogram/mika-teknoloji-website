@@ -30,8 +30,8 @@ const segments = [
     subtitle: "Orta Seviye Güvenlik Çözümü",
     description: "Orta seviye güvenlik ihtiyaçları için ideal olan MT PLUS bariyer sistemi, kolay montaj ve güvenilir performans sunar. 5,25 metre ledli kol uzunluğu ile geniş geçiş alanlarında kullanım için tasarlanmıştır.",
     image: "https://betaper.com.tr/bariyer-sistemleri/ptplus-bariyersistemi.jpg",
-    gradient: "from-green-600 via-green-500 to-emerald-500",
-    bgGradient: "from-green-50 via-white to-emerald-50",
+    gradient: "from-slate-900 to-slate-800",
+    bgGradient: "from-slate-50 to-white",
     icon: CheckCircle2,
     detailUrl: "/urunler/pt-plus-bariyer",
     features: [
@@ -84,8 +84,8 @@ const segments = [
     subtitle: "Yüksek Güvenlik ve Dayanıklılık",
     description: "Yüksek güvenlik gerektiren noktalarda kullanılmak üzere tasarlanan MT Guard bariyer sistemi, üstün dayanıklılık ve güvenilirlik sunar. Yüksek darbe emilimi özellikli yapısı ile kritik güvenlik noktalarında tercih edilir.",
     image: "https://betaper.com.tr/bariyer-sistemleri/pt-guard-bariyerler.jpg",
-    gradient: "from-indigo-600 via-indigo-500 to-purple-500",
-    bgGradient: "from-indigo-50 via-white to-purple-50",
+    gradient: "from-slate-900 to-slate-800",
+    bgGradient: "from-slate-50 to-white",
     icon: Shield,
     detailUrl: "/urunler/pt-guard-bariyer",
     features: [
@@ -108,8 +108,8 @@ const segments = [
     subtitle: "Yeraltı Güvenlik Sistemleri",
     description: "Yeraltına gömülen hidrolik tuzak sistemleri, görünmeyen ancak son derece etkili güvenlik çözümleri sunar. Acil durumlarda otomatik aktive olan bu sistemler, yetkisiz araç girişlerini engellemek için tasarlanmıştır.",
     image: "https://betaper.com.tr/bariyer-sistemleri/tuzaklar-kapanlar.jpg",
-    gradient: "from-amber-600 via-amber-500 to-yellow-500",
-    bgGradient: "from-amber-50 via-white to-yellow-50",
+    gradient: "from-slate-900 to-slate-800",
+    bgGradient: "from-slate-50 to-white",
     icon: AlertTriangle,
     detailUrl: "/urunler/tuzaklar-kapanlar",
     features: [
@@ -133,8 +133,8 @@ const segments = [
     subtitle: "Hidrolik Yükselen Bariyer Sistemi",
     description: "Yüksek güvenlik ihtiyacı duyulan noktalarda araç trafiğini engelleyecek şekilde tasarlanmış, 304 paslanmaz çelik yapılı hidrolik bariyer sistemi. PLC kontrol sistemi ve 100 bar hidrolik güç ile maksimum performans sağlar.",
     image: "https://betaper.com.tr/bariyer-sistemleri/mantar-bariyerler.jpg",
-    gradient: "from-violet-600 via-violet-500 to-purple-500",
-    bgGradient: "from-violet-50 via-white to-purple-50",
+    gradient: "from-slate-900 to-slate-800",
+    bgGradient: "from-slate-50 to-white",
     icon: Lock,
     detailUrl: "/urunler/mantar-bariyer",
     features: [
@@ -164,8 +164,8 @@ const segments = [
     subtitle: "Terör Önleme ve Yüksek Güvenlik",
     description: "Terör eylemlerine karşı tasarlanan, elektronik kontrollü hidrolik yol kesici sistem. Yüksek dayanıklılık ve güvenilirlik özelliği ile kritik noktalarda kullanılır. 4 adet güneş enerjili LED ile gece görünürlüğü sağlanmıştır.",
     image: "https://betaper.com.tr/bariyer-sistemleri/roadblocker.jpg",
-    gradient: "from-cyan-600 via-cyan-500 to-blue-500",
-    bgGradient: "from-cyan-50 via-white to-blue-50",
+    gradient: "from-slate-900 to-slate-800",
+    bgGradient: "from-slate-50 to-white",
     icon: Gauge,
     detailUrl: "/urunler/road-blocker",
     features: [
@@ -499,13 +499,13 @@ export default function BariyerSistemleriPage() {
             viewport={{ once: true }}
           >
             {[
-              { title: "Otopark ve Garajlar", desc: "AVM, rezidans, ofis ve site otoparkları için otomatik otopark bariyerleri", icon: "🅿️", gradient: "from-blue-500 to-cyan-500" },
-              { title: "Sanayi Tesisleri", desc: "Fabrika ve üretim tesislerinde araç giriş-çıkış kontrolü", icon: "🏭", gradient: "from-orange-500 to-red-500" },
-              { title: "Alışveriş Merkezleri", desc: "Çok katlı otopark sistemleri ve vale hizmeti için bariyer çözümleri", icon: "🛒", gradient: "from-purple-500 to-slate-800" },
-              { title: "Askeri ve Resmi Kurumlar", desc: "Road blocker ve yüksek güvenlikli bariyer sistemleri", icon: "🛡️", gradient: "from-green-500 to-emerald-500" },
-              { title: "Havalimanları", desc: "Terminal giriş-çıkış noktaları ve park alanları için hidrolik bariyerler", icon: "✈️", gradient: "from-indigo-500 to-blue-500" },
-              { title: "Konut Siteleri", desc: "Rezidans, villa ve site girişleri için uzaktan kumandalı bariyerler", icon: "🏘️", gradient: "from-teal-500 to-cyan-500" },
-              { title: "Oteller ve Tesisler", desc: "Misafir araç park kontrolü ve otopark yönetim sistemleri", icon: "🏨", gradient: "from-amber-500 to-yellow-500" },
+              { title: "Otopark ve Garajlar", desc: "AVM, rezidans, ofis ve site otoparkları için otomatik otopark bariyerleri", icon: "🅿️", gradient: "from-slate-900 to-slate-800" },
+              { title: "Sanayi Tesisleri", desc: "Fabrika ve üretim tesislerinde araç giriş-çıkış kontrolü", icon: "🏭", gradient: "from-slate-900 to-slate-800" },
+              { title: "Alışveriş Merkezleri", desc: "Çok katlı otopark sistemleri ve vale hizmeti için bariyer çözümleri", icon: "🛒", gradient: "from-slate-900 to-slate-800" },
+              { title: "Askeri ve Resmi Kurumlar", desc: "Road blocker ve yüksek güvenlikli bariyer sistemleri", icon: "🛡️", gradient: "from-slate-900 to-slate-800" },
+              { title: "Havalimanları", desc: "Terminal giriş-çıkış noktaları ve park alanları için hidrolik bariyerler", icon: "✈️", gradient: "from-slate-900 to-slate-800" },
+              { title: "Konut Siteleri", desc: "Rezidans, villa ve site girişleri için uzaktan kumandalı bariyerler", icon: "🏘️", gradient: "from-slate-900 to-slate-800" },
+              { title: "Oteller ve Tesisler", desc: "Misafir araç park kontrolü ve otopark yönetim sistemleri", icon: "🏨", gradient: "from-slate-900 to-slate-800" },
               { title: "Hastaneler", desc: "Acil servis ve doktor park alanları için özel bariyer çözümleri", icon: "🏥", gradient: "from-primary to-slate-800" },
               { title: "Kamu Binaları", desc: "Belediye, valilik ve resmi kurumlar için güvenlik bariyerleri", icon: "🏛️", gradient: "from-slate-500 to-slate-600" }
             ].map((area, index) => (
@@ -671,10 +671,10 @@ export default function BariyerSistemleriPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <motion.div {...fadeInUp}>
               <div className="group relative h-full">
-                <div className="absolute -inset-1 bg-gradient-to-br from-green-400 to-emerald-500 rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition duration-500"></div>
+                <div className="absolute -inset-1 bg-slate-900 rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition duration-500"></div>
                 <Card className="relative border-2 border-green-100 hover:border-green-200 p-10 h-full rounded-3xl bg-white group-hover:-translate-y-1 transition-all duration-500">
                   <div className="flex items-center mb-8">
-                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                    <div className="w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                       <Wrench className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold text-slate-800 ml-4">Periyodik Bakım Hizmetleri</h3>
@@ -689,7 +689,7 @@ export default function BariyerSistemleriPage() {
                       "Detaylı bakım raporu sunumu"
                     ].map((item, index) => (
                       <li key={index} className="flex items-start space-x-3 group/item">
-                        <div className="w-6 h-6 bg-gradient-to-br from-green-100 to-green-200 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform">
+                        <div className="w-6 h-6 bg-slate-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform">
                           <CheckCircle2 className="w-4 h-4 text-green-600" />
                         </div>
                         <span className="text-slate-700 group-hover/item:text-slate-900 transition-colors">{item}</span>
@@ -747,17 +747,17 @@ export default function BariyerSistemleriPage() {
 
           <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto" {...fadeInUp}>
             <div className="group relative">
-              <div className="absolute -inset-1 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-3xl blur-xl opacity-25 group-hover:opacity-50 transition duration-500"></div>
+              <div className="absolute -inset-1 bg-slate-900 rounded-3xl blur-xl opacity-25 group-hover:opacity-50 transition duration-500"></div>
               <Card className="relative border-0 p-10 text-center bg-white rounded-3xl group-hover:-translate-y-2 transition-all duration-500 shadow-xl">
                 <div className="relative inline-block mb-6">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-3xl blur-2xl opacity-40"></div>
-                  <div className="relative w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-3xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                  <div className="absolute inset-0 bg-slate-900 rounded-3xl blur-2xl opacity-40"></div>
+                  <div className="relative w-24 h-24 bg-slate-900 rounded-3xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                     <span className="text-white text-4xl font-bold">2</span>
                   </div>
                 </div>
                 <h3 className="text-3xl font-bold text-slate-800 mb-3">Yıl Garanti</h3>
                 <p className="text-slate-600">Üretici garantisi kapsamında tüm parça ve işçilik</p>
-                <div className="absolute bottom-0 left-0 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 w-0 group-hover:w-full transition-all duration-500 rounded-b-3xl"></div>
+                <div className="absolute bottom-0 left-0 h-2 bg-primary w-0 group-hover:w-full transition-all duration-500 rounded-b-3xl"></div>
               </Card>
             </div>
 
@@ -776,17 +776,17 @@ export default function BariyerSistemleriPage() {
             </div>
 
             <div className="group relative">
-              <div className="absolute -inset-1 bg-gradient-to-br from-green-400 to-emerald-500 rounded-3xl blur-xl opacity-25 group-hover:opacity-50 transition duration-500"></div>
+              <div className="absolute -inset-1 bg-slate-900 rounded-3xl blur-xl opacity-25 group-hover:opacity-50 transition duration-500"></div>
               <Card className="relative border-0 p-10 text-center bg-white rounded-3xl group-hover:-translate-y-2 transition-all duration-500 shadow-xl">
                 <div className="relative inline-block mb-6">
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl blur-2xl opacity-40"></div>
-                  <div className="relative w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                  <div className="absolute inset-0 bg-slate-900 rounded-3xl blur-2xl opacity-40"></div>
+                  <div className="relative w-24 h-24 bg-slate-900 rounded-3xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                     <span className="text-white text-4xl font-bold">24</span>
                   </div>
                 </div>
                 <h3 className="text-3xl font-bold text-slate-800 mb-3">Saat İçinde</h3>
                 <p className="text-slate-600">Arıza bildirimlerinde maksimum müdahale süresi</p>
-                <div className="absolute bottom-0 left-0 h-2 bg-gradient-to-r from-green-500 to-emerald-500 w-0 group-hover:w-full transition-all duration-500 rounded-b-3xl"></div>
+                <div className="absolute bottom-0 left-0 h-2 bg-primary w-0 group-hover:w-full transition-all duration-500 rounded-b-3xl"></div>
               </Card>
             </div>
           </motion.div>
@@ -814,10 +814,10 @@ export default function BariyerSistemleriPage() {
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               const gradients = [
-                "from-blue-500 to-cyan-500",
-                "from-purple-500 to-slate-800", 
-                "from-orange-500 to-red-500",
-                "from-green-500 to-emerald-500"
+                "from-slate-900 to-slate-800",
+                "from-slate-900 to-slate-800", 
+                "from-slate-900 to-slate-800",
+                "from-slate-900 to-slate-800"
               ];
               const gradient = gradients[index % gradients.length];
               
@@ -922,9 +922,9 @@ export default function BariyerSistemleriPage() {
               <Button 
                 asChild
                 size="lg"
-                variant="outline"
+                variant="outlineLight"
                 data-testid="button-cta-phone"
-                className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-12 py-6 text-lg"
+                className="px-12 py-6 text-lg"
               >
                 <a href="tel:+905467122296">Hemen Ara</a>
               </Button>

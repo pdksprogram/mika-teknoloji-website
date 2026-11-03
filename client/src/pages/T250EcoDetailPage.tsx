@@ -138,7 +138,7 @@ export default function T250EcoDetailPage() {
                     Fiyat Teklifi Al
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button asChild size="lg" variant="outlineLight">
                   <Link href="/iletisim">
                     <Download className="h-5 w-5 mr-2" />
                     Teknik Doküman
@@ -290,7 +290,7 @@ export default function T250EcoDetailPage() {
                     Ücretsiz Fiyat Teklifi
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button asChild size="lg" variant="outlineLight">
                   <Link href="/urunler/bel-tipi-turnike">
                     <ArrowLeft className="h-5 w-5 mr-2" />
                     Diğer Modeller

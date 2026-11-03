@@ -120,7 +120,7 @@ export default function CardAccessSystemPage() {
       />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-900 to-blue-700 text-white">
+      <section className="py-20 bg-slate-900 text-white">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center max-w-4xl mx-auto"
@@ -304,8 +304,7 @@ export default function CardAccessSystemPage() {
               <Link href="/qr-gecis">
                 <Button 
                   size="lg" 
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-blue-600"
+                  variant="outlineLight"
                 >
                   QR Kod Geçiş Sistemi
                 </Button>

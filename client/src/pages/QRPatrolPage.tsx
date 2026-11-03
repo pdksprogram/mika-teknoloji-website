@@ -104,7 +104,7 @@ export default function QRPatrolPage() {
       />
       
       {/* [S1] Hero Section */}
-      <section id="s1" data-section="S1" className="relative min-h-screen bg-gradient-to-br from-purple-50 via-white to-slate-50 overflow-hidden">
+      <section id="s1" data-section="S1" className="relative min-h-screen bg-slate-50 overflow-hidden">
         
         <div className="container mx-auto px-4 py-20">
           {/* Main Hero Content */}
@@ -115,7 +115,7 @@ export default function QRPatrolPage() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-                <span className="text-purple-600">QR-Patrol</span><br />
+                <span className="text-primary">QR-Patrol</span><br />
                 <span className="text-gray-800">Bekçi Kontrol Sistemi</span>
               </h1>
               <p className="text-2xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed">
@@ -134,13 +134,13 @@ export default function QRPatrolPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="bg-white shadow-lg text-purple-700 px-6 py-3 rounded-full text-base font-semibold border border-purple-100">
+              <div className="bg-white shadow-lg text-primary px-6 py-3 rounded-full text-base font-semibold border border-slate-200">
                 📱 Mobil Uygulama
               </div>
-              <div className="bg-white shadow-lg text-purple-700 px-6 py-3 rounded-full text-base font-semibold border border-purple-100">
+              <div className="bg-white shadow-lg text-primary px-6 py-3 rounded-full text-base font-semibold border border-slate-200">
                 📍 Canlı Konum Takibi
               </div>
-              <div className="bg-white shadow-lg text-purple-700 px-6 py-3 rounded-full text-base font-semibold border border-purple-100">
+              <div className="bg-white shadow-lg text-primary px-6 py-3 rounded-full text-base font-semibold border border-slate-200">
                 📊 Otomatik Raporlama
               </div>
             </motion.div>
@@ -160,7 +160,7 @@ export default function QRPatrolPage() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Güvenlik Devriye Takibi</h3>
                   <p className="text-gray-600">QR kod okutma ile otomatik tur kaydı ve raporlama</p>
                 </div>
-                <div className="bg-gradient-to-br from-purple-100 to-slate-100 rounded-2xl p-8 text-center">
+                <div className="bg-slate-50 rounded-2xl p-8 text-center">
                   <img 
                     src={securityPatrolImage}
                     alt="QR-Patrol Güvenlik Devriye Takip Sistemi"
@@ -180,10 +180,10 @@ export default function QRPatrolPage() {
             >
               <div className="space-y-8">
                 {features.map((feature, index) => (
-                  <div key={index} className="bg-white rounded-2xl p-6 shadow-xl border border-purple-50">
+                  <div key={index} className="bg-white rounded-2xl p-6 shadow-xl border border-slate-200">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mr-4">
-                        <feature.icon className="h-6 w-6 text-purple-600" />
+                      <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4">
+                        <feature.icon className="h-6 w-6 text-primary" />
                       </div>
                       <h3 className="text-xl font-bold text-gray-900">{feature.title}</h3>
                     </div>
@@ -286,10 +286,10 @@ export default function QRPatrolPage() {
                 className="text-center"
               >
                 <div className="relative mb-8">
-                  <div className="w-20 h-20 bg-purple-100 rounded-full mx-auto flex items-center justify-center mb-4">
-                    <step.icon className="h-10 w-10 text-purple-600" />
+                  <div className="w-20 h-20 bg-primary/10 rounded-full mx-auto flex items-center justify-center mb-4">
+                    <step.icon className="h-10 w-10 text-primary" />
                   </div>
-                  <div className="absolute -top-2 -right-2 bg-purple-600 text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center">
+                  <div className="absolute -top-2 -right-2 bg-primary text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center">
                     {step.step}
                   </div>
                 </div>
@@ -338,7 +338,7 @@ export default function QRPatrolPage() {
       </section>
 
       {/* [S5] CTA Section */}
-      <section id="s5" data-section="S5" className="relative py-32 bg-gradient-to-br from-purple-600 via-slate-700 to-violet-500">
+      <section id="s5" data-section="S5" className="relative py-32 bg-slate-900">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -349,7 +349,7 @@ export default function QRPatrolPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Güvenlik Operasyonlarınızı Dijitalleştirin
             </h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-slate-200 mb-8 max-w-3xl mx-auto leading-relaxed">
               QR-Patrol sistemi ile güvenlik personelini daha etkili yönetin. 
               Ücretsiz demo talep edin ve farkı hemen görün.
             </p>
@@ -357,16 +357,16 @@ export default function QRPatrolPage() {
               <Button 
                 asChild
                 size="lg" 
-                className="bg-white text-purple-600 hover:bg-purple-50 font-semibold px-8 py-4 text-lg"
+                className="bg-white text-primary hover:bg-slate-50 font-semibold px-8 py-4 text-lg"
               >
                 <Link href="/iletisim">
                   Ücretsiz Demo İsteyin <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button asChild 
-                variant="outline" 
+                variant="outlineLight" 
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-purple-600 font-semibold px-8 py-4 text-lg"
+                className="font-semibold px-8 py-4 text-lg"
               >
                 <Link href="/iletisim">
                   <Download className="mr-2 h-5 w-5" />

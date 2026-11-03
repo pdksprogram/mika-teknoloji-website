@@ -62,7 +62,7 @@ export default function PTDinamikDetailPage() {
 
             <motion.div {...fadeInUp} className="space-y-8">
               <div>
-                <div className="inline-flex items-center px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 shadow-lg mb-4">
+                <div className="inline-flex items-center px-4 py-2 rounded-xl bg-slate-900 shadow-lg mb-4">
                   <Zap className="w-4 h-4 text-white mr-2" />
                   <span className="text-white font-bold text-sm">Q1 - YENİ NESIL</span>
                 </div>
@@ -72,7 +72,7 @@ export default function PTDinamikDetailPage() {
                 <p className="text-xl text-primary font-semibold mb-6">
                   Yüksek Hızlı Geçiş Kontrolü
                 </p>
-                <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full"></div>
+                <div className="w-20 h-1 bg-primary rounded-full"></div>
               </div>
 
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -101,7 +101,7 @@ export default function PTDinamikDetailPage() {
                 <div className="grid md:grid-cols-2 gap-4">
                   {features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-5 h-5 rounded-lg bg-slate-900 flex items-center justify-center flex-shrink-0 mt-1">
                         <CheckCircle className="w-3 h-3 text-white" />
                       </div>
                       <span className="text-gray-700">{feature}</span>
@@ -110,7 +110,7 @@ export default function PTDinamikDetailPage() {
                 </div>
               </div>
 
-              <Card className="border-0 bg-gradient-to-br from-blue-50 to-cyan-50">
+              <Card className="border-0 bg-slate-50">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <Clock className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />

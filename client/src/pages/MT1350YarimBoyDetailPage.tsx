@@ -329,7 +329,7 @@ export default function MT1350YarimBoyDetailPage() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white text-center"
+            className="bg-slate-900 rounded-2xl p-8 text-white text-center"
           >
             <h2 className="text-2xl font-bold mb-4">
               MT 1350 Yarım Boy Turnike ile Ekonomik Güvenlik Çözümü
@@ -362,7 +362,7 @@ export default function MT1350YarimBoyDetailPage() {
                   Ekonomik Keşif Al
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button asChild size="lg" variant="outlineLight">
                 <Link href="/iletisim">
                   Hızlı Teklif İste
                 </Link>

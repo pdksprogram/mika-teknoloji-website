@@ -188,7 +188,7 @@ export default function About() {
                       />
                       <div className="absolute -top-2 right-2 flex space-x-1">
                         <div className="w-2 h-2 bg-red-400 rounded-full animate-ping"></div>
-                        <div className="w-2 h-2 bg-orange-400 rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                        <div className="w-2 h-2 bg-primary rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
                       </div>
                     </div>
                   </motion.div>
@@ -223,7 +223,7 @@ export default function About() {
                             <div className="w-3 h-3 bg-green-500 rounded-sm flex items-center justify-center">
                               <Gauge className="w-2 h-2 text-white" />
                             </div>
-                            <div className="w-3 h-3 bg-purple-500 rounded-sm flex items-center justify-center">
+                            <div className="w-3 h-3 bg-primary rounded-sm flex items-center justify-center">
                               <BarChart3 className="w-2 h-2 text-white" />
                             </div>
                           </div>
@@ -266,7 +266,7 @@ export default function About() {
                   >
                     <div className="relative">
                       <motion.div 
-                        className="w-18 h-18 bg-purple-500/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-purple-200"
+                        className="w-18 h-18 bg-primary/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-slate-200"
                         animate={{
                           rotateX: [0, 360],
                           rotateY: [0, -180]
@@ -277,7 +277,7 @@ export default function About() {
                         }}
                         style={{ transformStyle: 'preserve-3d' }}
                       >
-                        <Network className="h-8 w-8 text-purple-600" />
+                        <Network className="h-8 w-8 text-primary" />
                       </motion.div>
                       {/* Connection lines */}
                       <svg className="absolute inset-0 w-full h-full" style={{ overflow: 'visible' }}>
@@ -300,7 +300,7 @@ export default function About() {
                       </svg>
                       {/* Pulse effect */}
                       <motion.div 
-                        className="absolute inset-0 border-2 border-purple-400 rounded-full"
+                        className="absolute inset-0 border-2 border-primary rounded-full"
                         animate={{ scale: [1, 2], opacity: [1, 0] }}
                         transition={{ duration: 2, repeat: Infinity }}
                       />
@@ -407,7 +407,7 @@ export default function About() {
                       }}
                     />
                     <motion.div 
-                      className="absolute w-28 h-28 bg-gradient-to-br from-blue-500/12 to-purple-500/12 rounded-full blur-xl shadow-xl"
+                      className="absolute w-28 h-28 bg-slate-900 rounded-full blur-xl shadow-xl"
                       style={{ bottom: '20%', right: '20%', transformStyle: 'preserve-3d' }}
                       animate={{ 
                         scale: [1.2, 0.8, 1.2], 
@@ -423,7 +423,7 @@ export default function About() {
                       }}
                     />
                     <motion.div 
-                      className="absolute w-20 h-20 bg-gradient-to-br from-green-500/8 to-cyan-500/8 rounded-full blur-lg"
+                      className="absolute w-20 h-20 bg-slate-900 rounded-full blur-lg"
                       style={{ top: '60%', left: '5%', transformStyle: 'preserve-3d' }}
                       animate={{ 
                         scale: [0.8, 1.5, 0.8], 
@@ -507,7 +507,7 @@ export default function About() {
                           <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">
                             C++
                           </span>
-                          <span className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">
+                          <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
                             Java
                           </span>
                           <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
@@ -627,7 +627,7 @@ export default function About() {
                     data-testid="suphi-photo"
                   />
                 </div>
-                <div className="p-8 flex flex-col justify-center bg-gradient-to-br from-blue-50 to-blue-100">
+                <div className="p-8 flex flex-col justify-center bg-slate-50">
                   <div className="space-y-4">
                     <div>
                       <h3 className="text-2xl font-bold text-slate-800 mb-2">
@@ -659,10 +659,10 @@ export default function About() {
                           <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
                             iOS
                           </span>
-                          <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
+                          <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
                             React Native
                           </span>
-                          <span className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">
+                          <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
                             Flutter
                           </span>
                         </div>
@@ -713,7 +713,7 @@ export default function About() {
                     data-testid="yasin-photo"
                   />
                 </div>
-                <div className="p-8 flex flex-col justify-center bg-gradient-to-br from-green-50 to-green-100">
+                <div className="p-8 flex flex-col justify-center bg-slate-50">
                   <div className="space-y-4">
                     <div>
                       <h3 className="text-2xl font-bold text-slate-800 mb-2">
@@ -742,10 +742,10 @@ export default function About() {
                           <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
                             PDKS Sistemleri
                           </span>
-                          <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
+                          <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
                             Erişim Kontrol
                           </span>
-                          <span className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">
+                          <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
                             Guard MX
                           </span>
                           <span className="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-medium">

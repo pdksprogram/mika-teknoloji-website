@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { useState, useRef } from "react";
+import { useState, useRef, type SyntheticEvent } from "react";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 interface VideoItem {
@@ -642,7 +642,7 @@ const subcategoryIcons: Record<string, typeof BookOpen> = {
 const levelColors: Record<string, string> = {
   "Başlangıç": "bg-green-100 text-green-700",
   "Orta": "bg-blue-100 text-blue-700",
-  "İleri": "bg-purple-100 text-purple-700",
+  "İleri": "bg-primary/10 text-primary",
 };
 
 const faqItems = [
@@ -711,6 +711,9 @@ const VIDEO_KART_TEMA = {
 
 export type VideoKartTema = keyof typeof VIDEO_KART_TEMA;
 
+// Ayni anda tek video: biri oynayinca oynayan digeri durur.
+let aktifVideo: HTMLVideoElement | null = null;
+
 export function VideoCard({ video, tema = "mavi" }: { video: VideoItem; tema?: VideoKartTema }) {
   const t = VIDEO_KART_TEMA[tema];
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -719,6 +722,13 @@ export function VideoCard({ video, tema = "mavi" }: { video: VideoItem; tema?: V
   const handlePlay = () => {
     setBaslatildi(true);
     videoRef.current?.play();
+  };
+
+  const oynamaBasladi = (e: SyntheticEvent<HTMLVideoElement>) => {
+    const el = e.currentTarget;
+    if (aktifVideo && aktifVideo !== el && !aktifVideo.paused) aktifVideo.pause();
+    aktifVideo = el;
+    setBaslatildi(true);
   };
 
   return (
@@ -732,9 +742,9 @@ export function VideoCard({ video, tema = "mavi" }: { video: VideoItem; tema?: V
                 className="w-full h-full object-contain"
                 preload="metadata"
                 playsInline
-                controls
+                controls={baslatildi}
                 controlsList="nodownload"
-                onPlay={() => setBaslatildi(true)}
+                onPlay={oynamaBasladi}
               >
                 <source src={video.src} type="video/mp4" />
               </video>
@@ -1080,7 +1090,7 @@ export default function VideolarPage() {
                     : "border-primary text-primary hover:bg-slate-50 text-xs sm:text-sm"
                   }
                 >
-                  {cat} {cat !== "Tümü" && `(${videos.filter(v => v.category === cat).length})`}
+                  {cat} ({cat === "Tümü" ? videos.length : videos.filter(v => v.category === cat).length})
                 </Button>
               ))}
             </motion.div>
@@ -1229,8 +1239,8 @@ export default function VideolarPage() {
                 <Button
                   asChild
                   size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/10 font-semibold text-sm sm:text-base"
+                  variant="outlineLight"
+                  className="font-semibold text-sm sm:text-base"
                 >
                   <Link href="/iletisim">
                     İletişim Formu <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />

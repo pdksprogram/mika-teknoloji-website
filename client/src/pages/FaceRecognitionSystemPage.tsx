@@ -100,7 +100,7 @@ export default function FaceRecognitionSystemPage() {
                   {(device.id === 2 || device.id === 3) && (
                     <div className="absolute -top-3 -right-3 z-10">
                       <div className="relative">
-                        <div className="bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl transform rotate-12 animate-bounce">
+                        <div className="bg-slate-900 text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl transform rotate-12 animate-bounce">
                           <div className="flex items-center gap-1">
                             <span className="animate-pulse">✨</span>
                             <span>YENİ</span>
@@ -117,7 +117,7 @@ export default function FaceRecognitionSystemPage() {
                   {(device.id === 1 || device.id === 2 || device.id === 3 || device.id === 4) && (
                     <div className="absolute -bottom-3 -left-3 z-10">
                       <div className="relative">
-                        <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-2 rounded-full text-xs font-bold shadow-xl transform -rotate-12 animate-pulse">
+                        <div className="bg-slate-900 text-white px-3 py-2 rounded-full text-xs font-bold shadow-xl transform -rotate-12 animate-pulse">
                           <div className="flex items-center gap-1">
                             <span>📶</span>
                             <span>Wi-Fi</span>
@@ -371,8 +371,8 @@ export default function FaceRecognitionSystemPage() {
                 <Button 
                   asChild 
                   size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-primary font-semibold px-8"
+                  variant="outlineLight"
+                  className="font-semibold px-8"
                   data-testid="cta-whatsapp-button"
                 >
                   <a href="https://wa.me/905467122296" target="_blank" rel="noopener noreferrer">

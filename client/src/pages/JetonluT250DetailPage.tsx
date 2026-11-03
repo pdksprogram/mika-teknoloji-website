@@ -114,7 +114,7 @@ export default function JetonluT250DetailPage() {
       </div>
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white py-16">
+      <div className="bg-slate-900 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -137,13 +137,13 @@ export default function JetonluT250DetailPage() {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg" className="bg-white text-orange-500 hover:bg-gray-100">
+                <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
                   <Link href="/iletisim">
                     <Phone className="h-5 w-5 mr-2" />
                     Jetonlu Sistem Teklifi
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button asChild size="lg" variant="outlineLight">
                   <Link href="/iletisim">
                     <Download className="h-5 w-5 mr-2" />
                     Ödeme Sistemi Kataloğu
@@ -274,7 +274,7 @@ export default function JetonluT250DetailPage() {
       </div>
 
       {/* Call to Action */}
-      <div className="py-16 bg-gradient-to-r from-yellow-500 to-orange-500 text-white">
+      <div className="py-16 bg-slate-900 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -290,12 +290,12 @@ export default function JetonluT250DetailPage() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-white text-orange-500 hover:bg-gray-100">
+                <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
                   <Link href="/iletisim">
                     Jetonlu Sistem Teklifi Al
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button asChild size="lg" variant="outlineLight">
                   <Link href="/urunler/bel-tipi-turnike">
                     <ArrowLeft className="h-5 w-5 mr-2" />
                     Diğer Modeller

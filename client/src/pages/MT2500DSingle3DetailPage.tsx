@@ -269,7 +269,7 @@ export default function MT2500DSingle3DetailPage() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="bg-gradient-to-r from-primary to-blue-600 rounded-2xl p-8 text-white text-center"
+            className="bg-slate-900 rounded-2xl p-8 text-white text-center"
           >
             <h2 className="text-2xl font-bold mb-4">
               MT 2500D Single 3 Kollu Turnike Sistemi Hakkında Detaylı Bilgi Alın
@@ -302,7 +302,7 @@ export default function MT2500DSingle3DetailPage() {
                   Keşif Talep Edin
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button asChild size="lg" variant="outlineLight">
                 <Link href="/iletisim">
                   Detaylı Teklif Al
                 </Link>

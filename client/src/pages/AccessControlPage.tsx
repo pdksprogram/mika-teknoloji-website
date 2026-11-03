@@ -454,7 +454,7 @@ export default function AccessControlPage() {
                   Access kontrol panelleri ile kapsamlı güvenlik sistemleri kurabilirsiniz. Mika PDKS yazılımı, tüm ERP ve İK yazılımları ile entegre çalışmaktadır.
                 </p>
                 
-                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 border-l-4 border-primary">
+                <div className="bg-slate-50 rounded-xl p-8 border-l-4 border-primary">
                   <h3 className="text-xl font-bold text-slate-800 mb-4 flex items-center">
                     <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-3">
                       <span className="text-white text-sm font-bold">?</span>
@@ -530,7 +530,7 @@ export default function AccessControlPage() {
                             <motion.div
                               animate={{ x: [-20, 0, -20] }}
                               transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-                              className="absolute inset-y-0 right-0 w-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-sm"
+                              className="absolute inset-y-0 right-0 w-12 bg-slate-900 rounded-sm"
                             ></motion.div>
                           </div>
                         </div>

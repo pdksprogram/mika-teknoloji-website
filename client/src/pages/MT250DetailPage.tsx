@@ -416,7 +416,7 @@ export default function MT250DetailPage() {
                   Hemen Ara: 0546 712 22 96
                 </a>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button asChild size="lg" variant="outlineLight">
                 <Link href="/iletisim">
                   Teklif Formu
                 </Link>

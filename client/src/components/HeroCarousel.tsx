@@ -39,7 +39,7 @@ const slides: CarouselSlide[] = [
     icon: Smartphone,
     image: qrTrackingImage,
     href: "/qr-pdks",
-    bgGradient: "from-blue-600 via-purple-600 to-cyan-500",
+    bgGradient: "from-slate-900 to-slate-800",
     overlayColor: "bg-blue-900/40"
   },
   {
@@ -56,7 +56,7 @@ const slides: CarouselSlide[] = [
     icon: Shield,
     image: turnstileImage,
     href: "/turnike-sistemleri",
-    bgGradient: "from-emerald-600 via-teal-600 to-green-500",
+    bgGradient: "from-slate-900 to-slate-800",
     overlayColor: "bg-emerald-900/40"
   },
   {
@@ -73,8 +73,8 @@ const slides: CarouselSlide[] = [
     icon: Eye,
     image: securityPatrolImage,
     href: "/cozumler/bekci-kontrol",
-    bgGradient: "from-purple-600 via-slate-700 to-violet-500",
-    overlayColor: "bg-purple-900/40"
+    bgGradient: "from-slate-900 to-slate-800",
+    overlayColor: "bg-primary/40"
   },
   {
     id: 4,
@@ -90,7 +90,7 @@ const slides: CarouselSlide[] = [
     icon: Scan,
     image: xrayImage,
     href: "/iletisim",
-    bgGradient: "from-orange-600 via-red-600 to-slate-800",
+    bgGradient: "from-slate-900 to-slate-800",
     overlayColor: "bg-red-900/40"
   }
 ];
@@ -139,7 +139,7 @@ export default function HeroCarousel() {
       {/* Geometric Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-20 right-10 w-32 h-32 bg-blue-200/30 transform rotate-45 rounded-lg animate-pulse"></div>
-        <div className="absolute bottom-20 left-10 w-24 h-24 bg-purple-200/30 transform rotate-12 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-20 left-10 w-24 h-24 bg-primary/20 transform rotate-12 rounded-full animate-bounce"></div>
         <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-green-200/30 transform -rotate-12 rounded-lg animate-pulse delay-1000"></div>
         <div className="absolute top-1/3 left-1/4 w-20 h-20 bg-slate-200/30 transform rotate-45 rounded-full animate-bounce delay-500"></div>
       </div>
@@ -256,9 +256,9 @@ export default function HeroCarousel() {
                       
                       <Button 
                         asChild 
-                        variant="outline" 
+                        variant="outlineLight" 
                         size="lg" 
-                        className="border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg backdrop-blur-sm"
+                        className="px-8 py-4 rounded-xl font-semibold text-lg"
                       >
                         <Link href="/iletisim" className="flex items-center">
                           <span>Teklif Al</span>

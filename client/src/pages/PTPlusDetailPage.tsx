@@ -73,7 +73,7 @@ export default function PTPlusDetailPage() {
 
             <motion.div {...fadeInUp} className="space-y-8">
               <div>
-                <div className="inline-flex items-center px-4 py-2 rounded-xl bg-gradient-to-r from-green-600 to-emerald-500 shadow-lg mb-4">
+                <div className="inline-flex items-center px-4 py-2 rounded-xl bg-slate-900 shadow-lg mb-4">
                   <Shield className="w-4 h-4 text-white mr-2" />
                   <span className="text-white font-bold text-sm">Q2 - PROFESYONEL</span>
                 </div>
@@ -83,7 +83,7 @@ export default function PTPlusDetailPage() {
                 <p className="text-xl text-primary font-semibold mb-6">
                   Güvenilir Performans, Uzun Ömür
                 </p>
-                <div className="w-20 h-1 bg-gradient-to-r from-green-600 to-emerald-500 rounded-full"></div>
+                <div className="w-20 h-1 bg-primary rounded-full"></div>
               </div>
 
               <p className="text-lg text-gray-700 leading-relaxed">

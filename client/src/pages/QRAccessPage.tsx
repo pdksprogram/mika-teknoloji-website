@@ -125,7 +125,7 @@ export default function QRAccessPage() {
       />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-900 to-purple-700 text-white">
+      <section className="py-20 bg-slate-900 text-white">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center max-w-4xl mx-auto"
@@ -136,7 +136,7 @@ export default function QRAccessPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               QR Kod Geçiş Sistemi
             </h1>
-            <p className="text-xl text-purple-200 mb-8">
+            <p className="text-xl text-slate-200 mb-8">
               QR kod teknolojisi ile temassız, hijyenik ve güvenli geçiş kontrol sistemi. 
               Mobil uygulama entegrasyonu ve dinamik güvenlik kodları.
             </p>
@@ -184,8 +184,8 @@ export default function QRAccessPage() {
               >
                 <Card className="h-full hover:shadow-lg transition-shadow duration-300">
                   <CardHeader>
-                    <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                      <feature.icon className="h-8 w-8 text-purple-600" />
+                    <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                      <feature.icon className="h-8 w-8 text-primary" />
                     </div>
                     <CardTitle className="text-xl text-slate-800">{feature.title}</CardTitle>
                     <p className="text-slate-600">{feature.description}</p>
@@ -268,7 +268,7 @@ export default function QRAccessPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <QrCode className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                <QrCode className="h-5 w-5 text-primary flex-shrink-0" />
                 <span className="text-slate-700">{benefit}</span>
               </motion.div>
             ))}
@@ -313,7 +313,7 @@ export default function QRAccessPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-purple-600 text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -324,7 +324,7 @@ export default function QRAccessPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               QR Kod Geçiş Sistemi İçin Demo Alın
             </h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-200 mb-8 max-w-2xl mx-auto">
               Temassız QR kod teknolojisi ile güvenli geçiş kontrolü için ücretsiz demo ve teklif hizmeti
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -332,7 +332,7 @@ export default function QRAccessPage() {
                 <Button 
                   size="lg" 
                   variant="secondary"
-                  className="bg-white text-purple-600 hover:bg-purple-50"
+                  className="bg-white text-primary hover:bg-slate-50"
                 >
                   Ücretsiz Demo Al
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -341,8 +341,7 @@ export default function QRAccessPage() {
               <Link href="/urunler/parmak-izi-tanima">
                 <Button 
                   size="lg" 
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-purple-600"
+                  variant="outlineLight"
                 >
                   Parmak İzi Sistemi
                 </Button>

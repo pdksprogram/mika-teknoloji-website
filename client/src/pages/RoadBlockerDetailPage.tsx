@@ -69,7 +69,7 @@ export default function RoadBlockerDetailPage() {
 
             <motion.div {...fadeInUp} className="space-y-8 lg:sticky lg:top-24">
               <div>
-                <div className="inline-flex items-center px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-600 to-teal-500 shadow-lg mb-4">
+                <div className="inline-flex items-center px-4 py-2 rounded-xl bg-slate-900 shadow-lg mb-4">
                   <ShieldAlert className="w-4 h-4 text-white mr-2" />
                   <span className="text-white font-bold text-sm">Q7 - ROAD BLOCKER</span>
                 </div>
@@ -79,14 +79,14 @@ export default function RoadBlockerDetailPage() {
                 <p className="text-xl text-primary font-semibold mb-6">
                   Yol Kesici Güvenlik Sistemi - Yüksek Koruma
                 </p>
-                <div className="w-20 h-1 bg-gradient-to-r from-cyan-600 to-teal-500 rounded-full"></div>
+                <div className="w-20 h-1 bg-primary rounded-full"></div>
               </div>
 
               <p className="text-lg text-gray-700 leading-relaxed">
                 Road Blocker, yol kesici olarak da bilinen, yolu araç geçişlerine kapatan ve kontrolünü sağlayan elektronik kontrollü hidrolik sistemdir.
               </p>
 
-              <Card className="border-0 bg-gradient-to-br from-cyan-50 to-teal-50">
+              <Card className="border-0 bg-slate-50">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <Lock className="w-8 h-8 text-cyan-600 flex-shrink-0 mt-1" />
@@ -105,7 +105,7 @@ export default function RoadBlockerDetailPage() {
                 <div className="grid md:grid-cols-2 gap-4">
                   {features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-lg bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-5 h-5 rounded-lg bg-slate-900 flex items-center justify-center flex-shrink-0 mt-1">
                         <CheckCircle className="w-3 h-3 text-white" />
                       </div>
                       <span className="text-gray-700">{feature}</span>

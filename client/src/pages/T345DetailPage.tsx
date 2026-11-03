@@ -123,7 +123,7 @@ export default function T345DetailPage() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
-              <Badge className="bg-orange-500/20 text-orange-300 border-orange-400/30 mb-4">
+              <Badge className="bg-primary/20 text-slate-200 border-primary/30 mb-4">
                 Endüstriyel Sınıf
               </Badge>
               <h1 className="text-4xl font-bold mb-6">
@@ -138,13 +138,13 @@ export default function T345DetailPage() {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-600">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary">
                   <Link href="/iletisim">
                     <Phone className="h-5 w-5 mr-2" />
                     Endüstriyel Teklif Al
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button asChild size="lg" variant="outlineLight">
                   <Link href="/iletisim">
                     <Download className="h-5 w-5 mr-2" />
                     Teknik Katalog
@@ -166,7 +166,7 @@ export default function T345DetailPage() {
                   className="w-full h-auto max-w-md mx-auto rounded-lg shadow-2xl"
                   loading="eager"
                 />
-                <div className="absolute -top-4 -right-4 bg-orange-500 text-white px-4 py-2 rounded-full font-bold">
+                <div className="absolute -top-4 -right-4 bg-primary text-white px-4 py-2 rounded-full font-bold">
                   PRO
                 </div>
               </div>
@@ -194,8 +194,8 @@ export default function T345DetailPage() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-all"
               >
-                <div className="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="h-8 w-8 text-orange-500" />
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
@@ -217,7 +217,7 @@ export default function T345DetailPage() {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Settings className="h-6 w-6 text-orange-500" />
+                    <Settings className="h-6 w-6 text-primary" />
                     Teknik Özellikler
                   </CardTitle>
                 </CardHeader>
@@ -262,7 +262,7 @@ export default function T345DetailPage() {
                   <div className="grid grid-cols-1 gap-3">
                     {applicationAreas.map((area, index) => (
                       <div key={index} className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
                         <span className="text-gray-700 text-sm">{area}</span>
                       </div>
                     ))}
@@ -291,12 +291,12 @@ export default function T345DetailPage() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-600">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary">
                   <Link href="/iletisim">
                     Endüstriyel Keşif Talep Et
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button asChild size="lg" variant="outlineLight">
                   <Link href="/urunler/bel-tipi-turnike">
                     <ArrowLeft className="h-5 w-5 mr-2" />
                     Diğer Modeller

@@ -135,9 +135,8 @@ export default function BlogArticlePDKS() {
                 {articleData.readTime}
               </div>
               <Button 
-                variant="outline" 
-                size="sm" 
-                className="border-white/30 text-white hover:bg-white/10"
+                variant="outlineLight" 
+                size="sm"
               >
                 <Share2 className="h-4 w-4 mr-2" />
                 Paylaş
@@ -516,7 +515,7 @@ export default function BlogArticlePDKS() {
                         Keşif Talep Edin
                       </Link>
                     </Button>
-                    <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                    <Button asChild size="lg" variant="outlineLight">
                       <Link href="/urunler">
                         Tüm PDKS Ürünleri
                         <ChevronRight className="ml-2 h-4 w-4" />

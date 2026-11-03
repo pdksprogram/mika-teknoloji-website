@@ -106,7 +106,7 @@ export default function ParkingAutomationPage() {
       />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-green-900 to-green-700 text-white">
+      <section className="py-20 bg-slate-900 text-white">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center max-w-4xl mx-auto"
@@ -286,8 +286,7 @@ export default function ParkingAutomationPage() {
               <Link href="/turnike-sistemleri">
                 <Button 
                   size="lg" 
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-green-600"
+                  variant="outlineLight"
                 >
                   Turnike Sistemleri
                 </Button>

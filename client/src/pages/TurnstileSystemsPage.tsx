@@ -122,7 +122,7 @@ export default function TurnstileSystemsPage() {
               >
                 <Link href={category.link}>
                   <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 overflow-hidden">
-                    <div className="aspect-square p-8 bg-gradient-to-br from-blue-50 to-white">
+                    <div className="aspect-square p-8 bg-slate-50">
                       <img 
                         src={category.image} 
                         alt={category.name}

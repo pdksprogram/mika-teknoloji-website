@@ -72,7 +72,7 @@ export default function AccessControlSystemPage() {
       />
       
       {/* [S1] Hero Section - Corporate Style */}
-      <section id="s1" data-section="S1" className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
+      <section id="s1" data-section="S1" className="relative min-h-screen bg-slate-50 overflow-hidden">
         
         <div className="container mx-auto px-4 py-20">
           {/* Main Hero Content */}
@@ -298,11 +298,11 @@ export default function AccessControlSystemPage() {
               transition={{ duration: 0.8 }}
             >
               <div className="w-full max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
-                <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-white">
+                <div className="text-center p-6 bg-slate-50">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Mika Teknoloji PDKS Dashboard</h3>
                   <p className="text-gray-600 text-sm">Personel takip ve güvenlik kontrol sistemleri canlı raporlama paneli</p>
                 </div>
-                <div className="p-6 bg-gradient-to-br from-blue-50 to-white">
+                <div className="p-6 bg-slate-50">
                   <img 
                     src="/pdks-dashboard-interface.png" 
                     alt="Mika Teknoloji PDKS Dashboard - Personel Takip ve Güvenlik Kontrol Sistemi"
@@ -610,7 +610,7 @@ export default function AccessControlSystemPage() {
       {/* S6 content will be re-added properly after design approval */}
 
       {/* CTA Section - Armongate Style */}
-      <section className="py-32 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden">
+      <section className="py-32 bg-slate-900 text-white relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
@@ -656,8 +656,8 @@ export default function AccessControlSystemPage() {
               >
                 <Button asChild 
                   size="lg" 
-                  variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-12 py-6 text-xl font-bold rounded-2xl"
+                  variant="outlineLight"
+                  className="px-12 py-6 text-xl font-bold rounded-2xl"
                 >
                   <Link href="/iletisim">
                     Daha Fazla Bilgi
