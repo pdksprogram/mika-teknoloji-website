@@ -11,9 +11,11 @@ const KIRINTI: KirintiMaddesi[] = [
 type Kalem = { ad: string; yol: string; dis?: boolean };
 
 // Yalnız sitede tanımlı adresler (lib/rotalar.ts); dış bağlantı ayrıca işaretlenir.
-const KATEGORILER: { baslik: string; kalemler: Kalem[] }[] = [
+const KATEGORILER: { baslik: string; gorsel: string; gorselAlt: string; kalemler: Kalem[] }[] = [
   {
     baslik: "Çözümler",
+    gorsel: "/images/slayt/turnike-t345.jpg",
+    gorselAlt: "Turnike ile geçiş kontrol",
     kalemler: [
       { ad: "PDKS (Personel Devam Kontrol)", yol: "/pdks-programi" },
       { ad: "Geçiş Kontrol Sistemleri", yol: "/access-control" },
@@ -25,6 +27,8 @@ const KATEGORILER: { baslik: string; kalemler: Kalem[] }[] = [
   },
   {
     baslik: "Donanımlar",
+    gorsel: "/images/urun/proper-yuz-tanima.jpg",
+    gorselAlt: "Yüz tanıma PDKS cihazı",
     kalemler: [
       { ad: "Yüz Tanıma Cihazları", yol: "/urunler/yuz-tanima" },
       { ad: "Parmak İzi Okuyucular", yol: "/urunler/parmak-izi-tanima" },
@@ -36,6 +40,8 @@ const KATEGORILER: { baslik: string; kalemler: Kalem[] }[] = [
   },
   {
     baslik: "Yazılımlar",
+    gorsel: "/images/slayt/qr-pdks-mobil.jpg",
+    gorselAlt: "QR PDKS mobil uygulaması",
     kalemler: [
       { ad: "Personel Takip Programı", yol: "/urunler/personel-takip" },
       { ad: "QR PDKS Uygulaması", yol: "/urunler/qr-pdks" },
@@ -45,6 +51,8 @@ const KATEGORILER: { baslik: string; kalemler: Kalem[] }[] = [
   },
   {
     baslik: "Tüm Programlar",
+    gorsel: "/images/slayt/bulut-pdks-paneli.jpg",
+    gorselAlt: "Bulut PDKS paneli",
     kalemler: [
       { ad: "Puantaj Programı", yol: "/puantaj-programi" },
       { ad: "Vardiya Takip Programı", yol: "/vardiya-takip-programi" },
@@ -95,6 +103,9 @@ export default function Products() {
               <h2 className="text-lg font-bold text-slate-800 p-4 bg-slate-100 border-b border-slate-200 rounded-t-lg">
                 {k.baslik}
               </h2>
+              <div className="h-32 bg-white border-b border-slate-200 flex items-center justify-center p-3">
+                <img src={k.gorsel} alt={k.gorselAlt} className="max-h-full max-w-full object-contain" loading="lazy" width="200" height="104" />
+              </div>
               <ul className="p-4 space-y-2">
                 {k.kalemler.map((m) => (
                   <li key={m.yol}>
