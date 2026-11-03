@@ -279,7 +279,7 @@ export default function PersonelTakipPage() {
               Vardiya, mesai ve izin takibi tek bulut panelde.
             </p>
             
-            <CtaDugmeleri tur="yazilim" sinif="justify-center mb-12" />
+            <CtaDugmeleri tur="yazilim" sinif="justify-center mb-12" sayfa="Personel Takip Page" olayOnek="personel_takip" />
 
             {/* Ürün görseli: gerçek bulut PDKS paneli (kişisel veriler maskeli) */}
             <div className="bg-white rounded-lg border border-slate-200 shadow-xl p-2 max-w-4xl mx-auto">
@@ -809,7 +809,7 @@ export default function PersonelTakipPage() {
               Mika Teknoloji PDKS'nin gücünü bizzat deneyimleyin. Size özel hazırlanmış bir demo ile 
               sistemimizin nasıl çalıştığını görün ve işletmenize nasıl değer katabileceğinizi keşfedin.
             </p>
-            <CtaDugmeleri tur="yazilim" koyu sinif="justify-center" />
+            <CtaDugmeleri tur="yazilim" koyu sinif="justify-center" sayfa="Personel Takip Page" olayOnek="personel_takip" />
           </motion.div>
         </div>
       </section>

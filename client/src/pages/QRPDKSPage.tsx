@@ -275,7 +275,7 @@ export default function QRPDKSPage() {
             <p className="text-xl text-slate-600 mb-8">
               Personel, akıllı telefonuyla QR kod okutarak giriş-çıkış yapar; konum doğrulanır, kayıt anında panele düşer.
             </p>
-            <CtaDugmeleri tur="yazilim" />
+            <CtaDugmeleri tur="yazilim" sayfa="QR PDKS Page" olayOnek="qr_pdks" />
           </div>
           <div className="flex justify-center gap-3 sm:gap-4">
             {GIRIS_EKRANLARI.map((e, i) => (
