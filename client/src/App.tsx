@@ -206,10 +206,10 @@ function App({ onRenderli = false }: { onRenderli?: boolean }) {
               initial={onRenderli ? false : { opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="min-h-screen bg-white"
+              className="min-h-screen bg-white flex flex-col"
             >
               <Header />
-              <main>
+              <main className="flex-1">
                 <VarsayilanKanonik />
                 <Router />
               </main>

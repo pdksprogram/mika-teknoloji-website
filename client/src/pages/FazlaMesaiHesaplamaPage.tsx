@@ -131,9 +131,7 @@ function HesaplamaAraci() {
   return (
     <section className="pt-6 pb-16 bg-white" aria-labelledby="hesaplama-baslik">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-4">
-          <h2 id="hesaplama-baslik" className="text-2xl md:text-3xl font-bold text-slate-800">Haftalık Fazla Mesai Hesabı</h2>
-        </div>
+        <h2 id="hesaplama-baslik" className="sr-only">Haftalık Fazla Mesai Hesabı</h2>
         <Card className="max-w-5xl mx-auto border-0 shadow-lg">
           <CardContent className="p-4 md:p-6">
             <div className="mb-4">
@@ -297,7 +295,7 @@ function HesaplamaAraci() {
               </div>
               <div className="flex justify-between py-3">
                 <dt className="text-slate-800 font-semibold">Fazla mesai</dt>
-                <dd className="font-bold text-primary tabular-nums">
+                <dd className={`font-bold tabular-nums ${!sinirHatali && sonuc.fazlaDk > 0 ? "text-primary" : "text-slate-800"}`}>
                   {sinirHatali ? "—" : (
                     <>
                       {sureMetni(sonuc.fazlaDk)} <span className="text-slate-500 font-normal">({ondalikSaat(sonuc.fazlaDk)} saat)</span>

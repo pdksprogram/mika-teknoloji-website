@@ -167,13 +167,13 @@ export default function QRPDKSPage() {
         <div className="container mx-auto text-center">
           <motion.div 
             className="max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <motion.div 
               className="inline-flex items-center bg-primary/10 px-6 py-2 rounded-full mb-6"
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={false}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >

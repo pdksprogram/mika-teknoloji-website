@@ -112,7 +112,7 @@ export default function Header() {
   };
 
   const navigationItems = [
-    { href: "/", label: t.nav.products, hasDropdown: true, menuType: 'products' },
+    { href: "/urunler", label: t.nav.products, hasDropdown: true, menuType: 'products' },
     { href: "/hakkimizda", label: t.nav.about },
     { href: "/cozumler", label: t.nav.solutions, hasDropdown: true, menuType: 'solutions' },
     { href: "/referanslar", label: t.nav.references },
@@ -124,10 +124,7 @@ export default function Header() {
   const solutionsMenuData = {
     "Çözümler": [
       { name: "PDKS (Personel Devam Kontrol)", href: "/pdks-programi" },
-      { name: "Puantaj Programı", href: "/puantaj-programi" },
-      { name: "Vardiya Takip Programı", href: "/vardiya-takip-programi" },
       { name: "QR Kodlu Personel Takibi", href: "/qr-pdks" },
-      { name: "Fazla Mesai Hesaplama", href: "/fazla-mesai-hesaplama" },
       { name: "Access Geçiş Kontrol Sistemleri", href: "/access-control" },
       { name: "Bekçi Tur Kontrol Sistemi", href: "/qr-bekci" },
       { name: "QR Bekçi Sistemi", href: "/qr-bekci" },
@@ -145,19 +142,12 @@ export default function Header() {
       { name: "Bariyer Sistemleri", href: "/urunler/bariyer-sistemleri" }
     ],
     "Yazılımlar": [
-      { name: "Web PDKS", href: "https://pdkspersoneltakip.com/" },
-      { name: "Access Kontrol Programı", href: "/access-control" },
-      { name: "Startup Puanlama Yazılımı", href: "/startup-puanlama" },
-      { name: "Ogar Puanlama Yazılımı", href: "/ogar-puanlama" },
-      { name: "Yemekhane Takip Sistemi", href: "/yemekhane" },
-      { name: "Turnike Takip Programı", href: "/turnike-program" },
-      { name: "Üye Takip Programı", href: "/uye-takip" }
-    ],
-    "Tüm Programlar": [
-      { name: "HRCapakus Tanıma Sistemi", href: "/hrcapakus" },
-      { name: "X-Ray Cihazları", href: "/xray" },
-      { name: "Öğretmen Takip Sistemi", href: "/ogretmen-takip" },
-      { name: "Turnike Takip Sistemi", href: "/turnike-takip" }
+      { name: "Personel Takip Programı", href: "/urunler/personel-takip" },
+      { name: "Personel Devam Kontrol Sistemi", href: "/personel-devam-kontrol-sistemi" },
+      { name: "Puantaj Programı", href: "/puantaj-programi" },
+      { name: "Vardiya Takip Programı", href: "/vardiya-takip-programi" },
+      { name: "Fazla Mesai Hesaplama", href: "/fazla-mesai-hesaplama" },
+      { name: "QR PDKS Uygulaması", href: "/urunler/qr-pdks" }
     ]
   };
 
@@ -337,14 +327,6 @@ export default function Header() {
                             </ul>
                           </div>
                         ))}
-                      </div>
-                      <div className="bg-gray-50 px-8 py-4 border-t">
-                        <p className="text-sm text-gray-600">
-                          {activeMenuType === 'products' 
-                            ? "Popüler Ürünler: Parmak İzi Tanıma, Yüz Tanıma, PDKS Sistemleri, Turnike, Bariyer, Mağaza Personel Takip, QR Kodlu Sistem"
-                            : "Popüler Çözümler: PDKS, Access Control, Bekçi Kontrol, Turnike Sistemleri, QR Devriye Takip"
-                          }
-                        </p>
                       </div>
                     </div>
                   )}

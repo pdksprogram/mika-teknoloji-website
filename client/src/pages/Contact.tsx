@@ -71,7 +71,13 @@ export default function Contact() {
                   <CardContent className="pt-0">
                     {info.details.map((detail, detailIndex) => (
                       <CardDescription key={detailIndex} className="text-slate-600">
-                        {detail}
+                        {info.title === "Telefon" ? (
+                          <a href={`tel:+9${detail.replace(/s/g, "")}`} className="hover:text-primary transition-colors">{detail}</a>
+                        ) : detail.includes("@") ? (
+                          <a href={`mailto:${detail}`} className="hover:text-primary transition-colors">{detail}</a>
+                        ) : (
+                          detail
+                        )}
                       </CardDescription>
                     ))}
                   </CardContent>
