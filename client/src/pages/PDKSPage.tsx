@@ -7,6 +7,36 @@ import { Link } from "wouter";
 import { useEffect } from "react";
 import { trackPDKSView, trackProductView } from "@/lib/analytics";
 import SEO, { ASIL_ADRES, kanonikAdres } from "@/seo/SEO";
+import { IlgiliSayfalar, VideoBolumu, DEMO_TELEFON, DEMO_WHATSAPP, kirintiJsonLd, sssJsonLd } from "@/components/PdksIcerik";
+import type { SssMaddesi } from "@/components/PdksIcerik";
+
+// Doğrulanmış SSS: EPDKS menüleri ve hesap kuralları, Esoft Pdks mobil uygulama ekranları.
+const PDKS_SSS: SssMaddesi[] = [
+  {
+    soru: "PDKS nedir?",
+    cevap: "PDKS (Personel Devam Kontrol Sistemi), personelin iş yerine giriş-çıkış saatlerini kart, parmak izi, yüz tanıma ya da QR kod ile kaydeder. Bu kayıtlardan vardiya, fazla mesai, izin ve aylık puantaj hesaplanır.",
+  },
+  {
+    soru: "PDKS programında puantaj nasıl hesaplanır?",
+    cevap: "Hesap üç adımda ilerler: cihazlardaki kayıtlar aktarılır, hareketler düzenlenir, aylık puantaj hesaplanır. Normal çalışma haftada 45 saate kadar birikir; aşan süre fazla mesai olarak ayrılır. Kontrol edilen ay kilitlenir.",
+  },
+  {
+    soru: "Vardiya planlaması yapılabilir mi?",
+    cevap: "Evet. Haftalık vardiya planı hazırlanır, onaycıya gönderilir; onaycı onaylar, reddeder ya da düzeltme ister. Onaylanan plan kilitlenir ve personel vardiyasını mobil uygulamada görür.",
+  },
+  {
+    soru: "Personel cep telefonuyla giriş-çıkış yapabilir mi?",
+    cevap: "Evet. Personel iş yerindeki QR kodu Esoft Pdks mobil uygulamasıyla okutur ya da uygulamadaki QR kodu iş yerindeki okuyucuya gösterir. Mobil kayda konum bilgisi eklenir; KVKK gereği konum raporlarda gizlenebilir.",
+  },
+  {
+    soru: "Personel izin ve fazla mesai talebini nereden gönderir?",
+    cevap: "Personel izin ve fazla mesai taleplerini mobil uygulamadan gönderir. Talepler yönetim panelindeki İzin Talepleri ve Mesai Talepleri ekranlarında onaylanır.",
+  },
+  {
+    soru: "Raporlar Excel'e alınabilir mi?",
+    cevap: "Evet. Puantaj ve raporlar Excel (.xlsx) dosyası olarak indirilir.",
+  },
+];
 
 // Real device images
 const facialRecognitionDevice = "/facial-device.png";
@@ -78,18 +108,8 @@ export default function PDKSPage() {
             "availability": "https://schema.org/InStock",
             "priceValidUntil": "2025-12-31"
           }
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [{
-            "@type": "Question",
-            "name": "PDKS Nedir?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Personel Devam Kontrol Sistemi (PDKS), çalışanların iş yerindeki giriş-çıkış saatlerini, mesai sürelerini ve vardiya bilgilerini otomatik olarak kaydeden dijital sistemlerdir."
-            }
-          }]
         }
+        // SSS (FAQPage) şeması ön-render'a girsin diye <SEO jsonLd> ile veriliyor (PDKS_SSS).
       ]
     });
     document.head.appendChild(script);
@@ -447,7 +467,18 @@ export default function PDKSPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
-      <SEO title={title} description={description} canonical={kanonikAdres(ASIL_ADRES.pdks)} />
+      <SEO
+        title={title}
+        description={description}
+        canonical={kanonikAdres(ASIL_ADRES.pdks)}
+        jsonLd={[
+          sssJsonLd(PDKS_SSS),
+          kirintiJsonLd([
+            { ad: "Ana Sayfa", yol: "/" },
+            { ad: "PDKS Programı", yol: ASIL_ADRES.pdks },
+          ]),
+        ]}
+      />
       
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -721,6 +752,13 @@ export default function PDKSPage() {
         </div>
       </section>
 
+      <VideoBolumu
+        baslik="PDKS Eğitim Videoları"
+        videoIdleri={["pdks-genel-anlatim", "vardiya-planlama-pdks"]}
+      />
+
+      <IlgiliSayfalar mevcutYol={ASIL_ADRES.pdks} />
+
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -735,6 +773,13 @@ export default function PDKSPage() {
             </h2>
             
             <div className="max-w-4xl mx-auto space-y-6">
+              {PDKS_SSS.map((m) => (
+                <div key={m.soru} className="bg-slate-50 rounded-xl p-6 border-l-4 border-primary">
+                  <h3 className="text-lg font-semibold text-slate-800 mb-3">{m.soru}</h3>
+                  <p className="text-slate-600">{m.cevap}</p>
+                </div>
+              ))}
+
               <div className="bg-slate-50 rounded-xl p-6 border-l-4 border-primary">
                 <h3 className="text-lg font-semibold text-slate-800 mb-3">
                   Hangi PDKS sistemi işletmem için en uygun?
@@ -776,7 +821,7 @@ export default function PDKSPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary/80">
+      <section id="demo" className="py-20 bg-gradient-to-r from-primary to-primary/80 scroll-mt-24">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center text-white"
@@ -812,6 +857,14 @@ export default function PDKSPage() {
               >
                 <Link href="/iletisim">{pdks.cta.buttons.contact}</Link>
               </Button>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8 text-lg">
+              <a href={DEMO_WHATSAPP} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:opacity-80">
+                WhatsApp ile demo isteyin
+              </a>
+              <a href={`tel:${DEMO_TELEFON}`} className="underline underline-offset-4 hover:opacity-80">
+                0546 712 22 96
+              </a>
             </div>
           </motion.div>
         </div>

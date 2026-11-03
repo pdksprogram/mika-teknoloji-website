@@ -67,6 +67,9 @@ import MantarBariyerDetailPage from "@/pages/MantarBariyerDetailPage";
 import RoadBlockerDetailPage from "@/pages/RoadBlockerDetailPage";
 import MagazaPersonelTakipPage from "@/pages/MagazaPersonelTakipPage";
 import VideolarPage from "@/pages/VideolarPage";
+import PuantajProgramiPage from "@/pages/PuantajProgramiPage";
+import VardiyaTakipProgramiPage from "@/pages/VardiyaTakipProgramiPage";
+import QRPersonelTakipPage from "@/pages/QRPersonelTakipPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -151,6 +154,9 @@ function Router() {
       <Route path="/kvkk" component={KvkkAydinlatma} />
       <Route path="/hizmet-sartlari" component={HizmetSartlari} />
       <Route path="/veri-silme" component={VeriSilme} />
+      <Route path="/puantaj-programi" component={PuantajProgramiPage} />
+      <Route path="/vardiya-takip-programi" component={VardiyaTakipProgramiPage} />
+      <Route path="/qr-pdks" component={QRPersonelTakipPage} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>

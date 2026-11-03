@@ -19,7 +19,7 @@ interface VideoItem {
   level: "Başlangıç" | "Orta" | "İleri";
 }
 
-const videos: VideoItem[] = [
+export const videos: VideoItem[] = [
   {
     id: "pdks-genel-anlatim",
     title: "PDKS Nedir? Personel Devam Kontrol Sistemi Genel Anlatım",
@@ -692,7 +692,7 @@ const fadeInUp = {
   whileInView: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
 
-function VideoCard({ video }: { video: VideoItem }) {
+export function VideoCard({ video }: { video: VideoItem }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 

@@ -121,6 +121,9 @@ export default function Header() {
   const solutionsMenuData = {
     "Çözümler": [
       { name: "PDKS (Personel Devam Kontrol)", href: "/pdks-programi" },
+      { name: "Puantaj Programı", href: "/puantaj-programi" },
+      { name: "Vardiya Takip Programı", href: "/vardiya-takip-programi" },
+      { name: "QR Kodlu Personel Takibi", href: "/qr-pdks" },
       { name: "Access Geçiş Kontrol Sistemleri", href: "/access-control" },
       { name: "Bekçi Tur Kontrol Sistemi", href: "/bekci-tur" },
       { name: "QR Bekçi Sistemi", href: "/qr-bekci" },
