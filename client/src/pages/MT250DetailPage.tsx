@@ -350,7 +350,7 @@ export default function MT250DetailPage() {
                     </div>
                     
                     <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                      <Button asChild className="w-full bg-primary hover:bg-primary/90">
+                      <Button asChild className="w-full">
                         <Link href="/iletisim">
                           <Download className="h-4 w-4 mr-2" />
                           Ürün Broşürü İste
@@ -378,7 +378,7 @@ export default function MT250DetailPage() {
               Uzman ekibimizle iletişime geçin ve işletmeniz için en uygun çözümü keşfedin.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
+              <Button asChild size="lg">
                 <a href="tel:+905467122296">
                   <Phone className="mr-2 h-5 w-5" />
                   Hemen Ara: 0546 712 22 96

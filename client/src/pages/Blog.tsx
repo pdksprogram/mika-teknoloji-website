@@ -153,7 +153,7 @@ export default function Blog() {
             <Button
               key={category}
               variant={category === "Tümü" ? "default" : "outline"}
-              className="rounded-full px-6 py-2 hover:bg-primary hover:text-white transition-colors"
+              className="px-6 py-2 transition-colors"
             >
               {category}
             </Button>
@@ -200,7 +200,7 @@ export default function Blog() {
                       {blogPosts[0].author}
                     </div>
                   </div>
-                  <Button asChild className="bg-primary hover:bg-primary/90">
+                  <Button asChild>
                     <Link href="/blog/pdks-sistemleri-nedir-2025-rehberi">
                       Devamını Oku
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -262,7 +262,7 @@ export default function Blog() {
                   <Button 
                     variant="outline" 
                     size="sm" 
-                    className="mt-4 w-full group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-colors"
+                    className="mt-4 w-full transition-colors"
                   >
                     Okumaya Devam Et
                     <ArrowRight className="ml-2 h-3 w-3" />
@@ -280,7 +280,7 @@ export default function Blog() {
           transition={{ delay: 1.2 }}
           className="text-center mt-12"
         >
-          <Button size="lg" className="px-8 py-3 bg-primary hover:bg-primary/90">
+          <Button size="lg" className="px-8 py-3">
             Daha Fazla Makale Yükle
           </Button>
         </motion.div>
@@ -302,7 +302,7 @@ export default function Blog() {
               placeholder="E-posta adresinizi girin"
               className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
             />
-            <Button className="bg-white text-primary hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold">
+            <Button className="px-6 py-3">
               Abone Ol
             </Button>
           </div>

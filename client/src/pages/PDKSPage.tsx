@@ -492,7 +492,7 @@ export default function PDKSPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild 
                 size="lg" 
-                className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white font-bold px-8 py-4 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                className="px-8 py-4 transform hover:scale-105 transition-all duration-300"
                 data-testid="pdks-demo-button"
               >
                 <Link href="/iletisim">DEMO VE KEŞİF TALEP EDİN</Link>
@@ -500,7 +500,7 @@ export default function PDKSPage() {
               <Button asChild 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300"
+                className="px-8 py-4 transition-all duration-300"
                 data-testid="pdks-contact-button"
               >
                 <Link href="/iletisim">FİYAT TEKLİFİ AL</Link>
@@ -820,8 +820,8 @@ export default function PDKSPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild 
                 size="lg" 
-                variant="secondary"
-                className="bg-white text-primary hover:bg-gray-100 px-8 py-4 text-lg"
+                variant="default"
+                className="px-8 py-4 text-lg"
                 data-testid="pdks-cta-demo"
               >
                 <Link href="/iletisim" className="flex items-center">

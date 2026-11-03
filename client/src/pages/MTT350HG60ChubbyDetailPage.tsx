@@ -148,7 +148,7 @@ export default function MTT350HG60ChubbyDetailPage() {
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+                  <Button asChild size="lg" variant="default">
                     <a href="tel:+905467122296">
                       <Phone className="mr-2 h-5 w-5" />
                       Hemen Ara
@@ -295,7 +295,7 @@ export default function MTT350HG60ChubbyDetailPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+              <Button asChild size="lg" variant="default">
                 <a href="tel:+905467122296">
                   <Phone className="mr-2 h-5 w-5" />
                   0546 712 22 96

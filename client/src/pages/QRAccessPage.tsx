@@ -331,8 +331,7 @@ export default function QRAccessPage() {
               <Link href="/iletisim">
                 <Button 
                   size="lg" 
-                  variant="secondary"
-                  className="bg-white text-primary hover:bg-slate-50"
+                  variant="default"
                 >
                   Ücretsiz Demo Al
                   <ArrowRight className="ml-2 h-5 w-5" />

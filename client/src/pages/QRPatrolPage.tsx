@@ -357,7 +357,7 @@ export default function QRPatrolPage() {
               <Button 
                 asChild
                 size="lg" 
-                className="bg-white text-primary hover:bg-slate-50 font-semibold px-8 py-4 text-lg"
+                className="px-8 py-4 text-lg"
               >
                 <Link href="/iletisim">
                   Ücretsiz Demo İsteyin <ArrowRight className="ml-2 h-5 w-5" />
@@ -366,7 +366,7 @@ export default function QRPatrolPage() {
               <Button asChild 
                 variant="outlineLight" 
                 size="lg"
-                className="font-semibold px-8 py-4 text-lg"
+                className="px-8 py-4 text-lg"
               >
                 <Link href="/iletisim">
                   <Download className="mr-2 h-5 w-5" />

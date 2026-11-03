@@ -276,8 +276,7 @@ export default function ParkingAutomationPage() {
               <Link href="/iletisim">
                 <Button 
                   size="lg" 
-                  variant="secondary"
-                  className="bg-white text-green-600 hover:bg-green-50"
+                  variant="default"
                 >
                   Ücretsiz Teklif Al
                   <ArrowRight className="ml-2 h-5 w-5" />

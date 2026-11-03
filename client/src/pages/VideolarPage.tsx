@@ -1085,10 +1085,7 @@ export default function VideolarPage() {
                   variant={activeCategory === cat ? "default" : "outline"}
                   onClick={() => setActiveCategory(cat)}
                   size="sm"
-                  className={activeCategory === cat
-                    ? "bg-primary hover:opacity-90 text-white text-xs sm:text-sm"
-                    : "border-primary text-primary hover:bg-slate-50 text-xs sm:text-sm"
-                  }
+                  className="text-xs sm:text-sm"
                 >
                   {cat} ({cat === "Tümü" ? videos.length : videos.filter(v => v.category === cat).length})
                 </Button>
@@ -1230,7 +1227,7 @@ export default function VideolarPage() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-white text-primary hover:bg-white/90 font-semibold text-sm sm:text-base"
+                  className="text-sm sm:text-base"
                 >
                   <a href="https://wa.me/905467122296" target="_blank" rel="noopener noreferrer">
                     WhatsApp ile İletişim
@@ -1240,7 +1237,7 @@ export default function VideolarPage() {
                   asChild
                   size="lg"
                   variant="outlineLight"
-                  className="font-semibold text-sm sm:text-base"
+                  className="text-sm sm:text-base"
                 >
                   <Link href="/iletisim">
                     İletişim Formu <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />

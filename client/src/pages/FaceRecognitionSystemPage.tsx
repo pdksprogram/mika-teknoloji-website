@@ -358,7 +358,7 @@ export default function FaceRecognitionSystemPage() {
                 <Button 
                   asChild 
                   size="lg"
-                  className="bg-white text-primary hover:bg-gray-100 font-semibold px-8"
+                  className="px-8"
                   data-testid="cta-contact-button"
                 >
                   <Link href="/iletisim">Hemen Teklif Al</Link>
@@ -367,7 +367,7 @@ export default function FaceRecognitionSystemPage() {
                   asChild 
                   size="lg"
                   variant="outlineLight"
-                  className="font-semibold px-8"
+                  className="px-8"
                   data-testid="cta-whatsapp-button"
                 >
                   <a href="https://wa.me/905467122296" target="_blank" rel="noopener noreferrer">

@@ -283,8 +283,7 @@ export default function CardAccessSystemPage() {
               <Link href="/iletisim">
                 <Button 
                   size="lg" 
-                  variant="secondary"
-                  className="bg-white text-blue-600 hover:bg-blue-50"
+                  variant="default"
                 >
                   Ücretsiz Teklif Al
                   <ArrowRight className="ml-2 h-5 w-5" />

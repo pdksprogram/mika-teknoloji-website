@@ -445,7 +445,7 @@ export default function AccessControlPage() {
                 <Button 
                   asChild
                   size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-white px-8 py-3"
+                  className="px-8 py-3"
                 >
                   <Link href="/iletisim">
                     Keşif Talep Edin
@@ -455,7 +455,7 @@ export default function AccessControlPage() {
                 <Button asChild 
                   variant="outline" 
                   size="lg"
-                  className="border-primary text-primary hover:bg-primary/5 px-8 py-3"
+                  className="px-8 py-3"
                 >
                   <Link href="/iletisim">
                     Teknik Bilgi Alın
@@ -949,7 +949,7 @@ export default function AccessControlPage() {
             <Button 
               asChild
               size="lg" 
-              className="bg-white text-primary hover:bg-white/90 px-8 py-3 font-semibold"
+              className="px-8 py-3"
             >
               <Link href="/iletisim">
                 {t.contact.button}

@@ -642,7 +642,7 @@ export default function AccessControlSystemPage() {
                 <Link href="/iletisim">
                   <Button 
                     size="lg" 
-                    className="bg-white text-blue-600 hover:bg-blue-50 px-12 py-6 text-xl font-bold rounded-2xl shadow-2xl border-0"
+                    className="px-12 py-6 text-xl"
                   >
                     Ücretsiz Demo
                     <ArrowRight className="ml-3 h-6 w-6" />
@@ -657,7 +657,7 @@ export default function AccessControlSystemPage() {
                 <Button asChild 
                   size="lg" 
                   variant="outlineLight"
-                  className="px-12 py-6 text-xl font-bold rounded-2xl"
+                  className="px-12 py-6 text-xl"
                 >
                   <Link href="/iletisim">
                     Daha Fazla Bilgi

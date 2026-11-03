@@ -155,7 +155,7 @@ export default function MT1350YarimBoyDetailPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 flex-1">
+                <Button asChild size="lg" className="flex-1">
                   <Link href="/iletisim">
                     <Phone className="h-5 w-5 mr-2" />
                     Ekonomik Fiyat Al
@@ -357,7 +357,7 @@ export default function MT1350YarimBoyDetailPage() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-green-600 hover:bg-gray-100">
+              <Button asChild size="lg">
                 <Link href="/iletisim">
                   Ekonomik Keşif Al
                 </Link>

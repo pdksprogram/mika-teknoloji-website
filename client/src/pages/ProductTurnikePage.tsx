@@ -183,7 +183,7 @@ export default function ProductTurnikePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-xl text-blue-100 max-w-3xl mx-auto"
+              className="text-xl text-slate-300 max-w-3xl mx-auto"
             >
               Profesyonel turnike sistemleri: Bel turnikeleri, boy turnikeleri, hızlı geçiş sistemleri. Paslanmaz çelik kalite, biyometrik entegrasyon ve PDKS uyumlu güvenlik çözümleri.
             </motion.p>
@@ -280,13 +280,13 @@ export default function ProductTurnikePage() {
                   </div>
                   
                   <div className="flex items-center justify-between pt-4 border-t">
-                    <div className="text-blue-600 font-semibold">
+                    <div className="text-slate-900 font-semibold">
                       {product.price}
                     </div>
                     <Button 
                       asChild
                       size="sm"
-                      className="group-hover:bg-blue-700 transition-colors"
+                      className="transition-colors"
                       data-testid={`product-detail-${product.id}`}
                     >
                       <Link href={product.href}>
@@ -329,21 +329,20 @@ export default function ProductTurnikePage() {
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-blue-600 text-white py-12"
+        className="bg-slate-900 border-t-4 border-primary text-white py-12"
       >
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Size Uygun Turnike Sistemini Bulalım
           </h2>
-          <p className="text-blue-100 text-lg mb-6 max-w-2xl mx-auto">
+          <p className="text-slate-300 text-lg mb-6 max-w-2xl mx-auto">
             Uzman ekibimiz size en uygun turnike çözümünü bulmak için hazır. 
             Keşif ve teknik destek için bize ulaşın.
           </p>
           <Button 
             asChild
             size="lg"
-            variant="secondary"
-            className="text-blue-600 hover:text-blue-700"
+            variant="default"
             data-testid="contact-cta"
           >
             <Link href="/iletisim">
@@ -520,7 +519,7 @@ export default function ProductTurnikePage() {
                 Keşif için bize ulaşın.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
+                <Button asChild size="lg">
                   <Link href="/iletisim">Keşif Talep Edin</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">

@@ -406,7 +406,7 @@ export default function Home() {
             <Button 
               asChild 
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-white px-8 transform hover:scale-105 transition-transform duration-200"
+              className="px-8 transform hover:scale-105 transition-transform duration-200"
               data-testid="cta-detail-button"
             >
               <Link href="/iletisim">

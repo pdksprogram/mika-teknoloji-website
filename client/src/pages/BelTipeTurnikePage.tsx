@@ -197,7 +197,7 @@ export default function BelTipeTurnikePage() {
                       <div className="text-primary font-bold">
                         {model.price}
                       </div>
-                      <Button asChild size="sm" className="bg-primary hover:bg-primary/90">
+                      <Button asChild size="sm">
                         <Link href={
                           model.id === "t250" ? "/urunler/mt-250-turnike" :
                           model.id === "t250-eco" ? "/urunler/t250-eco-turnike" :
@@ -250,7 +250,7 @@ export default function BelTipeTurnikePage() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
+              <Button asChild size="lg">
                 <Link href="/iletisim">
                   Keşif Talep Edin
                 </Link>

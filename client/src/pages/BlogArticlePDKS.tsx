@@ -510,7 +510,7 @@ export default function BlogArticlePDKS() {
                     Keşif ve detaylı teklif için bize ulaşın.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
+                    <Button asChild size="lg">
                       <Link href="/iletisim">
                         Keşif Talep Edin
                       </Link>

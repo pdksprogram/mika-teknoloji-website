@@ -83,7 +83,7 @@ export default function Solutions() {
                 <Button 
                   asChild 
                   variant="outline" 
-                  className="w-full group-hover:bg-primary group-hover:text-white transition-colors"
+                  className="w-full transition-colors"
                   data-testid={`solution-detail-${solution.title.toLowerCase()}`}
                 >
                   <Link href="/iletisim">Detaylı Bilgi Al</Link>
@@ -105,7 +105,7 @@ export default function Solutions() {
           <Button 
             asChild 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-white px-8"
+            className="px-8"
             data-testid="custom-solution-button"
           >
             <Link href="/iletisim">Ücretsiz Danışmanlık</Link>

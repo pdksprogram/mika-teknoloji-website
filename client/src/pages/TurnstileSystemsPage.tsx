@@ -206,7 +206,7 @@ export default function TurnstileSystemsPage() {
             <Button 
               asChild
               size="lg" 
-              className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-4"
+              className="px-8 py-4"
             >
               <Link href="/iletisim">
                 İletişime Geçin <ArrowRight className="ml-2 h-5 w-5" />

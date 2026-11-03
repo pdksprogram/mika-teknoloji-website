@@ -498,7 +498,7 @@ export default function Header() {
                   
                   {/* Mobile Search Button */}
                   <Button 
-                    className="w-full bg-primary hover:bg-primary/90 text-white"
+                    className="w-full"
                     onClick={() => {
                       setIsSearchOpen(true);
                       setIsMenuOpen(false);

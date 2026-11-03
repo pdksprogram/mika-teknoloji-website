@@ -412,7 +412,7 @@ export default function MagazaPersonelTakipPage() {
                 <Button 
                   asChild
                   size="lg" 
-                  className="bg-white text-primary hover:bg-white/90 font-semibold px-8"
+                  className="px-8"
                   data-testid="cta-demo-button"
                 >
                   <Link href="/iletisim">Ücretsiz Demo Talep Et</Link>
@@ -421,7 +421,7 @@ export default function MagazaPersonelTakipPage() {
                   asChild
                   size="lg" 
                   variant="outlineLight" 
-                  className="font-semibold px-8"
+                  className="px-8"
                   data-testid="cta-phone-button"
                 >
                   <a href={`tel:${DEMO_TELEFON}`}>
@@ -433,7 +433,7 @@ export default function MagazaPersonelTakipPage() {
                   asChild
                   size="lg" 
                   variant="outlineLight" 
-                  className="font-semibold px-8"
+                  className="px-8"
                   data-testid="cta-whatsapp-button"
                 >
                   <a href="https://wa.me/905467122296" target="_blank" rel="noopener noreferrer">

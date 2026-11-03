@@ -166,7 +166,7 @@ export default function MTT80YaprakDetailPage() {
                 <div className="text-3xl font-bold text-primary">
                   {productDetails.price}
                 </div>
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+                <Button asChild size="lg">
                   <Link href="/iletisim">
                     <Phone className="mr-2 h-4 w-4" />
                     Fiyat Teklifi Al
@@ -332,7 +332,7 @@ export default function MTT80YaprakDetailPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
+              <Button asChild size="lg">
                 <Link href="/iletisim">Keşif Talep Edin</Link>
               </Button>
               <Button asChild variant="outlineLight" size="lg">

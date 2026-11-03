@@ -189,7 +189,7 @@ export default function HizliGecisPage() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+              <Button asChild size="lg" variant="default">
                 <a href="tel:+905467122296">
                   <Phone className="mr-2 h-5 w-5" />
                   Hemen Ara: 0546 712 22 96
@@ -266,7 +266,7 @@ export default function HizliGecisPage() {
                       <div className="text-primary font-bold">
                         {model.price}
                       </div>
-                      <Button asChild size="sm" className="bg-primary hover:bg-primary/90">
+                      <Button asChild size="sm">
                         <Link href={
                           model.id === "mt-t300-hg20" ? "/urunler/hizli-gecis-t300-hg20-detay" :
                           model.id === "mt-t300-hg20-chubby" ? "/urunler/hizli-gecis-t300-hg20-chubby-detay" :
@@ -305,7 +305,7 @@ export default function HizliGecisPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+              <Button asChild size="lg" variant="default">
                 <a href="tel:+905467122296">
                   <Phone className="mr-2 h-5 w-5" />
                   0546 712 22 96

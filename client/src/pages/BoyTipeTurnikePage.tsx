@@ -213,7 +213,7 @@ export default function BoyTipeTurnikePage() {
                       <div className="text-primary font-bold">
                         {model.price}
                       </div>
-                      <Button asChild size="sm" className="bg-primary hover:bg-primary/90">
+                      <Button asChild size="sm">
                         <Link href={
                           model.id === "mt2500d-single-3" ? "/urunler/mt2500d-single-3-kollu" :
                           model.id === "mt2500k-kristal-3" ? "/urunler/mt2500k-kristal" :
@@ -265,7 +265,7 @@ export default function BoyTipeTurnikePage() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+              <Button asChild size="lg">
                 <Link href="/iletisim">
                   Keşif Talep Edin
                 </Link>

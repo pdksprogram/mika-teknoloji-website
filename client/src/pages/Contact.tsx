@@ -89,7 +89,7 @@ export default function Contact() {
             <div className="mt-8 space-y-4">
               <Button 
                 asChild 
-                className="w-full bg-green-600 hover:bg-green-700 text-white"
+                className="w-full"
                 data-testid="whatsapp-button"
               >
                 <a href="https://wa.me/905467122296" target="_blank" rel="noopener noreferrer">
@@ -198,7 +198,7 @@ export default function Contact() {
                   <Button 
                     type="submit" 
                     size="lg" 
-                    className="w-full bg-primary hover:bg-primary/90 text-white"
+                    className="w-full"
                     data-testid="submit-button"
                   >
                     Gönder
