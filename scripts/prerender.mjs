@@ -53,7 +53,7 @@ function rotalariOku() {
 
 function hedefDosya(rota) {
   if (rota === "/") return path.join(istemciCikti, "index.html");
-  return path.join(istemciCikti, ...rota.replace(/^\/+|\/+$/g, "").split("/"), "index.html");
+  return path.join(istemciCikti, ...rota.replace(/^\/+|\/+$/g, () => "").split("/"), "index.html");
 }
 
 async function main() {
@@ -99,15 +99,17 @@ async function main() {
         : "";
       let sayfa = sablon;
       if (helmet && helmet.title.toString().includes("</title>")) {
-        sayfa = sayfa.replace(/<title>[\s\S]*?<\/title>\s*/i, "");
+        sayfa = sayfa.replace(/<title>[\s\S]*?<\/title>\s*/i, () => "");
       }
       if (helmet && /name="description"/.test(helmet.meta.toString())) {
-        sayfa = sayfa.replace(/<meta\s+name="description"[^>]*>\s*/i, "");
+        sayfa = sayfa.replace(/<meta\s+name="description"[^>]*>\s*/i, () => "");
       }
       sayfa = sayfa
-        .replace("</head>", `    ${bas}\n  </head>`)
+        // Değiştirme metni FONKSİYONLA verilir: düz metinde `$$`, `$&`, `$'` özel kalıptır ve
+        // JSON-LD içindeki "priceRange":"$$" gibi değerleri bozar.
+        .replace("</head>", () => `    ${bas}\n  </head>`)
         // data-rota: istemci (main.tsx) yalnız adres bu rotaysa hydrate eder, değilse yeniden çizer.
-        .replace(BOS_KOK, `<div id="root" data-rota="${rota}">${html}</div>`);
+        .replace(BOS_KOK, () => `<div id="root" data-rota="${rota}">${html}</div>`);
       const hedef = hedefDosya(rota);
       fs.mkdirSync(path.dirname(hedef), { recursive: true });
       fs.writeFileSync(hedef, sayfa);

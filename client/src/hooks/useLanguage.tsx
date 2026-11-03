@@ -112,7 +112,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   // Save to localStorage when language changes
   useEffect(() => {
-    localStorage.setItem('language', selectedLanguage);
+    // Depolama kapalıysa (gizli pencere, engelli site verisi) SecurityError fırlar; sessizce geçilir.
+    try {
+      localStorage.setItem('language', selectedLanguage);
+    } catch {
+      /* dil yalnız bu oturumda geçerli kalır */
+    }
   }, [selectedLanguage]);
 
   return (

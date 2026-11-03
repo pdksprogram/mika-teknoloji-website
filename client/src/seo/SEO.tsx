@@ -4,6 +4,13 @@ import { useSeciliDil } from '@/hooks/useLanguage';
 
 const SITE_KOKU = 'https://mikateknoloji.com';
 
+// Kanonik adres: sondaki eğik çizgi atılır (kök "/" hariç). Ön-render rotayı eğik çizgisiz yazar;
+// statik sunucu /hakkimizda -> /hakkimizda/ yönlendirse de tarayıcı aynı adresi üretir.
+export function kanonikAdres(yol: string): string {
+  const temiz = yol.replace(/\/+$/, () => '');
+  return `${SITE_KOKU}${temiz || '/'}`;
+}
+
 interface SEOProps {
   title?: string;
   description?: string;
@@ -21,7 +28,7 @@ export default function SEO({
 }: SEOProps) {
   // Kanonik adres sorgu dizesiz, sabit alan adıyla kurulur; ön-render ve tarayıcıda aynı sonucu verir.
   const [location] = useLocation();
-  const url = canonical || `${SITE_KOKU}${location}`;
+  const url = canonical || kanonikAdres(location);
   const dil = useSeciliDil();
 
   return (
@@ -65,7 +72,7 @@ export function VarsayilanKanonik() {
   return (
     <Helmet>
       <html lang={dil} />
-      <link rel="canonical" href={`${SITE_KOKU}${location}`} />
+      <link rel="canonical" href={kanonikAdres(location)} />
     </Helmet>
   );
 }
