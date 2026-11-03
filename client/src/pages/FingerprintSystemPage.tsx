@@ -367,7 +367,7 @@ export default function FingerprintSystemPage() {
                   <h4 className="font-semibold text-gray-800 mb-2">Kaç kişilik kapasiteye kadar ölçeklenebilir?</h4>
                   <p className="text-gray-600 mb-4">
                     MTFDP200 modelimiz 20.000 parmak izi kapasitesine sahiptir. Çoklu cihaz 
-                    bağlantısı ile sınırsız kullanıcı sayısına ulaşabilirsiniz.
+                    bağlantısı ile kapasite artırılabilir.
                   </p>
 
                   <h4 className="font-semibold text-gray-800 mb-2">Elektrik kesilmesinde ne olur?</h4>

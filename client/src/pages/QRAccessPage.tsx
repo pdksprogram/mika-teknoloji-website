@@ -83,7 +83,7 @@ const faqs = [
   },
   {
     question: "QR kod kopyalanabilir mi?",
-    answer: "QR kodlar dinamik şifreleme ile korunur ve belirli süre aralıklarında yenilenir, bu nedenle kopyalanması imkansızdır."
+    answer: "QR kodlar dinamik şifreleme ile korunur ve belirli süre aralıklarında yenilenir; bu, kopyalanmış kodla geçişi zorlaştırır."
   }
 ];
 

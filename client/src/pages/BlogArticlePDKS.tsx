@@ -10,8 +10,8 @@ import { Helmet } from "react-helmet-async";
 export default function BlogArticlePDKS() {
   const articleData = {
     title: "PDKS Sistemleri Nedir? 2025 Rehberi - Personel Devam Kontrol",
-    description: "Personel Devam Kontrol Sistemi (PDKS) ile çalışan takibinde devrim yaratın. 50.000+ kurumun tercih ettiği modern PDKS çözümlerinin tüm detayları, fiyatları ve kurulum rehberi.",
-    author: "PDKS Uzmanı - Mika Teknoloji",
+    description: "Personel Devam Kontrol Sistemi (PDKS) ile çalışan takibi: modern PDKS çözümlerinin tüm detayları, fiyatları ve kurulum rehberi.",
+    author: "Mika Teknoloji",
     publishDate: "15 Ocak 2025",
     readTime: "8 dk okuma",
     category: "PDKS",
@@ -36,21 +36,14 @@ export default function BlogArticlePDKS() {
     { icon: TrendingUp, title: "Verimlilik Artışı", description: "Otomatik devam kontrolü ile %40'a kadar zaman tasarrufu" },
     { icon: Users, title: "Adil Çalışma", description: "Objektif ölçümlerle çalışanlar arası adalet sağlama" },
     { icon: Building, title: "Maliyet Kontrolü", description: "Manuel süreçlerin elimine edilmesi ve operasyonel tasarruf" },
-    { icon: CheckCircle, title: "Güvenilirlik", description: "Biyometrik teknoloji ile %99.9 doğruluk oranı" }
-  ];
-
-  const pdksStats = [
-    { number: "50,000+", label: "Kurum Kullanıyor", description: "Türkiye genelinde" },
-    { number: "4M+", label: "Çalışan", description: "Aktif sistem kullanıcısı" },
-    { number: "20+", label: "Yıl Deneyim", description: "Sektörde öncülük" },
-    { number: "%99.9", label: "Doğruluk", description: "Biyometrik tanıma" }
+    { icon: CheckCircle, title: "Güvenilirlik", description: "Biyometrik doğrulama ile kişiye bağlı kayıt" }
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>PDKS Sistemleri Nedir? 2025 Kapsamlı Rehberi | Mika Teknoloji</title>
-        <meta name="description" content="Personel Devam Kontrol Sistemi (PDKS) nedir? Parmak izi, yüz tanıma, kartlı PDKS türleri, fiyatları ve kurulum rehberi. 50.000+ kurumun tercih ettiği çözümler." />
+        <meta name="description" content="Personel Devam Kontrol Sistemi (PDKS) nedir? Parmak izi, yüz tanıma, kartlı PDKS türleri, fiyatları ve kurulum rehberi." />
         <meta name="keywords" content="PDKS nedir, PDKS sistemleri, personel devam kontrol sistemi, personel takip sistemi, biyometrik PDKS, web PDKS, parmak izi PDKS, yüz tanıma PDKS, kartlı PDKS, PDKS fiyatları" />
         
         {/* Open Graph */}
@@ -63,7 +56,7 @@ export default function BlogArticlePDKS() {
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="PDKS Sistemleri Nedir? 2025 Kapsamlı Rehberi" />
-        <meta name="twitter:description" content="Modern personel devam kontrol sistemlerinin tüm detayları. Biyometrik teknoloji ile %99.9 doğruluk." />
+        <meta name="twitter:description" content="Modern personel devam kontrol sistemlerinin tüm detayları: biyometrik, kartlı ve mobil PDKS." />
         <meta name="twitter:image" content="https://mikateknoloji.com/images/blog/pdks-1.png" />
         
         {/* Schema.org Structured Data */}
@@ -75,8 +68,8 @@ export default function BlogArticlePDKS() {
           "description": "Personel Devam Kontrol Sistemi (PDKS) ile çalışan takibinde devrim yaratın. Modern PDKS çözümlerinin tüm detayları.",
           "image": "https://mikateknoloji.com/images/blog/pdks-1.png",
           "author": {
-            "@type": "Person",
-            "name": "PDKS Uzmanı - Mika Teknoloji"
+            "@type": "Organization",
+            "name": "Mika Teknoloji"
           },
           "publisher": {
             "@type": "Organization",
@@ -154,32 +147,6 @@ export default function BlogArticlePDKS() {
         </div>
       </motion.div>
 
-      {/* Statistics Section */}
-      <motion.div 
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.6 }}
-        className="bg-white py-16 border-b"
-      >
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {pdksStats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-lg font-semibold text-gray-900 mb-1">
-                  {stat.label}
-                </div>
-                <div className="text-gray-600 text-sm">
-                  {stat.description}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-4 gap-12">
@@ -235,13 +202,13 @@ export default function BlogArticlePDKS() {
                       <strong>Personel Devam Kontrol Sistemi (PDKS)</strong>, işletmelerde çalışanların giriş-çıkış 
                       saatlerinin otomatik olarak takip edildiği, devamsızlık ve mesai sürelerinin kayıt altına 
                       alındığı elektronik sistemlerdir. Modern PDKS çözümleri, geleneksel kağıt tabanlı devam 
-                      kontrol yöntemlerinin yerine geçerek, %100 doğruluk ve güvenilirlikle çalışan takibi sağlar.
+                      kontrol yöntemlerinin yerine geçerek çalışan takibini otomatik hale getirir.
                     </p>
                     <p className="text-gray-700 leading-relaxed mb-6">
-                      Günümüzde <strong>50.000'den fazla kurum</strong> ve <strong>4 milyon çalışan</strong> 
-                      tarafından aktif olarak kullanılan PDKS sistemleri, işletmelerin insan kaynakları 
-                      yönetiminde vazgeçilmez bir araç haline gelmiştir. 20+ yıllık sektörel deneyim ile 
-                      sürekli gelişen teknolojiler sayesinde, artık sadece zaman takibi değil, kapsamlı 
+                      Günümüzde pek çok kurum 
+                      tarafından kullanılan PDKS sistemleri, işletmelerin insan kaynakları 
+                      yönetiminde vazgeçilmez bir araç haline gelmiştir. 
+                      Gelişen teknolojiler sayesinde artık sadece zaman takibi değil, kapsamlı 
                       personel yönetimi çözümleri sunmaktadır.
                     </p>
                     <div className="bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg mb-8">
@@ -268,7 +235,7 @@ export default function BlogArticlePDKS() {
                       <p className="text-gray-700 leading-relaxed mb-4">
                         Biyometrik teknolojinin en yaygın kullanım alanılarından biri olan <strong>parmak izi 
                         PDKS sistemleri</strong>, her bireyin benzersiz parmak izi desenini kullanarak 
-                        %99.9 doğrulukla personel tanıma işlemi gerçekleştirir. Modern cihazlar şu özellikleri sunar:
+                        personel tanıma işlemi gerçekleştirir. Modern cihazlar şu özellikleri sunar:
                       </p>
                       <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
                         <li><strong>WiFi Bağlantı:</strong> Kablosuz network üzerinden merkezi veri aktarımı</li>
@@ -550,7 +517,7 @@ export default function BlogArticlePDKS() {
                 <div className="bg-gradient-to-r from-primary to-pink-600 rounded-2xl p-8 text-white text-center mt-12">
                   <h3 className="text-2xl font-bold mb-4">PDKS Sisteminde Uzman Desteği Alın</h3>
                   <p className="text-lg mb-6 opacity-90">
-                    20+ yıllık deneyimimiz ile işletmeniz için en uygun PDKS çözümünü belirleyelim. 
+                    İşletmeniz için uygun PDKS çözümünü birlikte belirleyelim. 
                     Ücretsiz keşif ve detaylı teklif için hemen iletişime geçin.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -12,7 +12,7 @@ export default function Blog() {
     {
       id: 1,
       title: "PDKS Sistemleri Nedir? 2025 Rehberi - Personel Devam Kontrol",
-      excerpt: "Personel Devam Kontrol Sistemi (PDKS) ile çalışan takibinde devrim yaratın. 50.000+ kurumun tercih ettiği modern PDKS çözümlerinin tüm detayları, fiyatları ve kurulum rehberi.",
+      excerpt: "Personel Devam Kontrol Sistemi (PDKS) ile çalışan takibi: modern PDKS çözümlerinin tüm detayları, fiyatları ve kurulum rehberi.",
       date: "15 Ocak 2025",
       author: "PDKS Uzmanı - Mika Teknoloji",
       category: "PDKS",
@@ -48,7 +48,7 @@ export default function Blog() {
     {
       id: 4,
       title: "Parmak İzi Okuyucu PDKS: Biyometrik Personel Takip Sistemi 2025",
-      excerpt: "Parmak izi okuyucu ile güvenli PDKS sistemi kurun. Biyometrik teknoloji ile %100 güvenilir personel devam kontrolü, entegrasyon seçenekleri ve performans analizi.",
+      excerpt: "Parmak izi okuyucu ile güvenli PDKS sistemi kurun. Biyometrik teknoloji ile personel devam kontrolü, entegrasyon seçenekleri ve performans analizi.",
       date: "8 Ocak 2025",
       author: "Biyometri Uzmanı",
       category: "Biyometri",

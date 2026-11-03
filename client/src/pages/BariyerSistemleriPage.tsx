@@ -215,7 +215,7 @@ const faqs = [
   },
   {
     question: "Bariyer sistemleri hangi garanti kapsamındadır?",
-    answer: "Tüm bariyer sistemlerimiz 2 yıl üretici garantisi ile sunulmaktadır. Ayrıca periyodik bakım hizmetleri ve 7/24 teknik destek sağlıyoruz."
+    answer: "Tüm bariyer sistemlerimiz 2 yıl üretici garantisi ile sunulmaktadır. Ayrıca periyodik bakım ve teknik destek hizmeti sağlıyoruz."
   },
   {
     question: "Road Blocker sistemi nedir ve nerede kullanılır?",
@@ -226,18 +226,18 @@ const faqs = [
 const benefits = [
   {
     icon: Award,
-    title: "ISO 9001 Belgeli",
-    description: "Uluslararası kalite standartlarına uygun üretim"
+    title: "2 Yıl Garanti",
+    description: "Tüm bariyer sistemlerinde üretici garantisi"
   },
   {
     icon: Users,
     title: "Uzman Ekip",
-    description: "15+ yıl tecrübeli kurulum ve bakım kadrosu"
+    description: "Kurulum ve bakımı kendi ekibimiz yapar"
   },
   {
     icon: TrendingUp,
     title: "Yüksek Performans",
-    description: "7/24 kesintisiz çalışma garantisi"
+    description: "Hidrolik ve elektromekanik bariyer seçenekleri"
   },
   {
     icon: Wrench,
@@ -250,7 +250,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Bariyer Sistemleri - Mantar Bariyer, Road Blocker, Tuzak Kapanlar",
-  "description": "Profesyonel güvenlik çözümleri: Hidrolik mantar bariyer, road blocker yol kesici sistemler, tuzak kapanlar, otopark bariyerleri. ISO 9001 belgeli, yüksek güvenlik standartlarında araç giriş kontrol sistemleri.",
+  "description": "Profesyonel güvenlik çözümleri: Hidrolik mantar bariyer, road blocker yol kesici sistemler, tuzak kapanlar, otopark bariyerleri ve araç giriş kontrol sistemleri.",
   "brand": {
     "@type": "Brand",
     "name": "Mika Teknoloji"
@@ -317,12 +317,12 @@ export default function BariyerSistemleriPage() {
     <>
       <Helmet>
         <title>Bariyer Sistemleri: Mantar Bariyer, Road Blocker, Tuzak Kapanlar | Mika Teknoloji 2025</title>
-        <meta name="description" content="✅ Profesyonel bariyer sistemleri: Mantar bariyer, road blocker, tuzak kapanlar, otopark bariyeri ve hidrolik güvenlik sistemleri. ISO 9001 belgeli, 2 yıl garanti, ücretsiz keşif. En iyi bariyer fiyatları!" />
+        <meta name="description" content="✅ Profesyonel bariyer sistemleri: Mantar bariyer, road blocker, tuzak kapanlar, otopark bariyeri ve hidrolik güvenlik sistemleri. 2 yıl garanti, ücretsiz keşif." />
         <meta name="keywords" content="bariyer sistemleri, otopark bariyeri, hidrolik bariyer, mantar bariyer, road blocker, güvenlik bariyeri, PT PLUS bariyer, dinamik bariyer, tuzak sistemleri, bariyer fiyatları, otopark bariyeri kurulumu, otomatik bariyer, kollu bariyer, bariyer montajı, araç giriş kontrol, park bariyeri, bariyer sistemi fiyat, uzaktan kumandalı bariyer, fotoselli bariyer" />
         
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Mantar Bariyer, Road Blocker ve Tuzak Kapanlar | Mika Teknoloji Bariyer Sistemleri" />
-        <meta property="og:description" content="Profesyonel bariyer sistemleri: Otopark bariyeri, hidrolik bariyer, road blocker. ISO 9001 belgeli, 2 yıl garanti, ücretsiz keşif!" />
+        <meta property="og:description" content="Profesyonel bariyer sistemleri: Otopark bariyeri, hidrolik bariyer, road blocker. 2 yıl garanti, ücretsiz keşif." />
         <meta property="og:type" content="product.group" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/bariyer-sistemleri" />
         <meta property="og:image" content="https://mikateknoloji.com/assets/bariyer-sistemleri-og.jpg" />
@@ -331,7 +331,7 @@ export default function BariyerSistemleriPage() {
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Bariyer Sistemleri - Otopark Bariyeri & Hidrolik Bariyer" />
-        <meta name="twitter:description" content="ISO 9001 belgeli bariyer sistemleri. Otopark bariyeri, hidrolik bariyer, road blocker çözümleri. Ücretsiz keşif!" />
+        <meta name="twitter:description" content="Bariyer sistemleri: otopark bariyeri, hidrolik bariyer, road blocker çözümleri. Ücretsiz keşif!" />
         
         {/* Additional SEO Meta Tags */}
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -713,7 +713,7 @@ export default function BariyerSistemleriPage() {
                     <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 border border-white/30">
                       <Phone className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold ml-4">7/24 Teknik Destek</h3>
+                    <h3 className="text-2xl font-bold ml-4">Teknik Destek</h3>
                   </div>
                   <ul className="space-y-4">
                     {[
@@ -775,8 +775,8 @@ export default function BariyerSistemleriPage() {
                     <span className="text-5xl font-bold">∞</span>
                   </div>
                 </div>
-                <h3 className="text-3xl font-bold mb-3">Ömür Boyu Destek</h3>
-                <p className="text-white/95">Sınırsız telefon danışmanlığı ve teknik destek</p>
+                <h3 className="text-3xl font-bold mb-3">Satış Sonrası Destek</h3>
+                <p className="text-white/95">Telefon danışmanlığı ve teknik destek</p>
               </Card>
             </div>
 
@@ -805,7 +805,7 @@ export default function BariyerSistemleriPage() {
               Neden Mika Teknoloji?
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              15 yılı aşkın tecrübemiz ve müşteri memnuniyeti odaklı hizmet anlayışımızla yanınızdayız
+              Keşiften bakıma kadar müşteri odaklı hizmet anlayışımızla yanınızdayız
             </p>
           </motion.div>
 

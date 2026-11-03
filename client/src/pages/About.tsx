@@ -11,15 +11,15 @@ import SEO from "@/seo/SEO";
 
 export default function About() {
   const stats = [
-    { icon: Users, value: "10,000+", label: "Kurumsal Müşteri" },
-    { icon: Building, value: "15+", label: "Yıllık Tecrübe" },
+    { icon: Building, value: "İstanbul", label: "Merkez Ofis" },
     { icon: Globe, value: "Türkiye", label: "Genelinde Hizmet" },
-    { icon: Award, value: "#1", label: "Sektör Lideri" }
+    { icon: Database, value: "Web", label: "Tabanlı PDKS" },
+    { icon: Smartphone, value: "Mobil", label: "PDKS Uygulaması" }
   ];
 
   return (
     <div className="min-h-screen py-20">
-      <SEO title="Hakkımızda | Mika Teknoloji" description="30 yılı aşkın deneyimle PDKS personel devam kontrol yazılımı, kartlı geçiş, turnike ve bariyer sistemleri üreten Mika Teknoloji hakkında." />
+      <SEO title="Hakkımızda | Mika Teknoloji" description="PDKS personel devam kontrol yazılımı, kartlı geçiş, turnike ve bariyer sistemleri üreten Mika Teknoloji hakkında." />
       <div className="container mx-auto px-4">
         {/* Corporate Hero Section - Idenfit Style */}
         <section className="mb-20">
@@ -34,10 +34,9 @@ export default function About() {
                 <div className="relative">
                   <div className="text-6xl text-primary/20 font-serif absolute -top-6 -left-4">"</div>
                   <blockquote className="text-2xl md:text-3xl font-semibold text-slate-700 leading-relaxed mb-8 relative z-10">
-                    <span className="text-primary">Hedefimiz</span>, Türkiye'nin en güvenilir teknoloji 
-                    markalarından biri olup, <span className="text-primary">mobil PDKS</span> ve 
-                    kontrol sistemleri sektöründe <span className="text-primary">inovatif, yenilikçi</span> ve 
-                    lider kimliğimizle yeni başarılara imza atmak.
+                    <span className="text-primary">Hedefimiz</span>, güvenilir bir teknoloji
+                    markası olarak <span className="text-primary">mobil PDKS</span> ve
+                    kontrol sistemleri alanında <span className="text-primary">yenilikçi</span> çözümler üretmek.
                   </blockquote>
                   <div className="flex items-center mb-8">
                     <div className="w-12 h-1 bg-primary mr-4"></div>
@@ -804,15 +803,14 @@ export default function About() {
           
           <div className="space-y-8 text-lg text-slate-600 leading-relaxed">
             <p>
-              Mika Teknoloji Kontrol Sistemleri, 2008 yılında İstanbul'da kurulan ve PDKS (Personel Devam Kontrol Sistemi) 
-              alanında uzmanlaşmış bir teknoloji şirketidir. Kuruluşumuzdan bu yana, kurumsal müşterilerimizin insan kaynakları 
+              Mika Teknoloji Kontrol Sistemleri, İstanbul merkezli ve PDKS (Personel Devam Kontrol Sistemi)
+              alanında uzmanlaşmış bir teknoloji şirketidir. Kurumsal müşterilerimizin insan kaynakları
               yönetim süreçlerini dijitalleştirmek ve operasyonel verimliliği artırmak amacıyla kapsamlı çözümler sunmaktayız.
             </p>
-            
+
             <p>
-              Türkiye genelinde 10.000'den fazla kurumsal müşteri portföyü ile iş gücü yönetimi ve erişim kontrol sistemleri 
-              alanında güvenilir teknoloji ortağı konumundayız. Perpa Ticaret Merkezi A Blok'taki modern merkez ofisimizden 
-              ülke çapındaki tüm müşterilerimize kesintisiz hizmet sağlamaktayız.
+              İş gücü yönetimi ve erişim kontrol sistemleri alanında Perpa Ticaret Merkezi A Blok'taki merkez ofisimizden
+              Türkiye genelindeki müşterilerimize hizmet veriyoruz.
             </p>
             
             <p>
@@ -838,8 +836,8 @@ export default function About() {
                   Vizyonumuz
                 </h3>
                 <p className="text-slate-600">
-                  İnsan kaynakları ve iş gücü yönetimi teknolojileri alanında Türkiye'nin lider yazılım şirketi olmak 
-                  ve uluslararası pazarlarda tanınan güvenilir bir marka haline gelmek.
+                  İnsan kaynakları ve iş gücü yönetimi teknolojileri alanında güvenilir bir yazılım markası olmak
+                  ve uluslararası pazarlarda tanınmak.
                 </p>
               </div>
             </div>

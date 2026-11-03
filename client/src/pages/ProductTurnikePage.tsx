@@ -102,7 +102,7 @@ export default function ProductTurnikePage() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/turnike" />
         <meta property="og:title" content="Turnike Sistemleri | Profesyonel Güvenlik Çözümleri | Mika Teknoloji" />
-        <meta property="og:description" content="Türkiye'nin öncü turnike sistemleri üreticisi. Bel turnikeleri, boy turnikeleri, hızlı geçiş sistemleri. Paslanmaz çelik kalite, parmak izi ve kart entegrasyonu." />
+        <meta property="og:description" content="Turnike sistemleri: bel turnikeleri, boy turnikeleri, hızlı geçiş sistemleri. Paslanmaz çelik kalite, parmak izi ve kart entegrasyonu." />
         <meta property="og:image" content="https://mikateknoloji.com/bel-tipi-device.png" />
         
         {/* Twitter */}
@@ -495,7 +495,7 @@ export default function ProductTurnikePage() {
                   <h4 className="font-semibold text-gray-800 mb-2">İstanbul turnike sistemi kurulumu nasıl yapılır?</h4>
                   <p className="text-gray-700">
                     <strong>İstanbul turnike sistemi</strong> kurulumu için önce keşif yapılır, alan analizi gerçekleştirilir. 
-                    Profesyonel montaj ekibimiz tüm İstanbul genelinde hizmet verir ve sistem entegrasyonunu tamamlar.
+                    Montajı kendi ekibimiz yapar ve sistem entegrasyonunu tamamlar.
                   </p>
                 </div>
                 

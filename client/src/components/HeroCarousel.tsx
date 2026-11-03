@@ -33,8 +33,8 @@ const slides: CarouselSlide[] = [
     features: [
       "WEB TABANLI PERSONEL TAKİP SİSTEMİ",
       "KURULUM YOK & EVDEN - MOBİL CİHAZLARDAN TAKİP",
-      "SORUNSUZ DESTEK GARANTİSİ",
-      "%100 MÜŞTERİ MEMNUNİYETİ"
+      "KURULUM VE EĞİTİM DESTEĞİ",
+      "AYLIK PUANTAJ VE EXCEL RAPORLARI"
     ],
     icon: Smartphone,
     image: qrTrackingImage,
@@ -51,7 +51,7 @@ const slides: CarouselSlide[] = [
       "RFID VE BİYOMETRİK ENTEGRASYON",
       "UZAKTAN İZLEME VE KONTROL",
       "HIZLI VE GÜVENİLİR GEÇİŞ",
-      "7/24 TEKNİK DESTEK HİZMETİ"
+      "TEKNİK DESTEK HİZMETİ"
     ],
     icon: Shield,
     image: turnstileImage,

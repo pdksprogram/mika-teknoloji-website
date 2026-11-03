@@ -268,7 +268,7 @@ export default function BelTipeTurnikePage() {
             </h2>
             <p className="text-xl text-white/90 mb-8">
               Ücretsiz keşif ve detaylı teklif için uzman ekibimizle iletişime geçin. 
-              20+ yıllık deneyimimizle size en uygun çözümü sunuyoruz.
+              İhtiyacınıza uygun çözümü birlikte belirleyelim.
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-8">

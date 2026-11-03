@@ -197,10 +197,6 @@ export default function PrivacyPolicy() {
                     <FileText className="h-4 w-4 mr-1" />
                     GDPR Uyumlu
                   </span>
-                  <span className="flex items-center">
-                    <Lock className="h-4 w-4 mr-1" />
-                    ISO 27001 Standartları
-                  </span>
                 </div>
                 <p className="text-center text-xs text-slate-500 mt-4">
                   Bu gizlilik politikası uluslararası veri koruma standartlarına uygun olarak hazırlanmıştır.

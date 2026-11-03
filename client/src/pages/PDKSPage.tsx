@@ -59,8 +59,8 @@ export default function PDKSPage() {
       : 'Professional PDKS Systems | Mika Technology - Personnel Attendance Control Solutions';
 
     const description = selectedLanguage === 'tr'
-      ? 'Türkiye\'nin lider PDKS sistemi sağlayıcısı. Yüz tanıma, parmak izi, QR kod ve RFID kartlı personel devam kontrol sistemleri. 30+ yıl deneyim, 100.000+ kullanıcı.'
-      : 'Turkey\'s leading PDKS system provider. Facial recognition, fingerprint, QR code and RFID card personnel attendance control systems. 30+ years experience, 100,000+ users.';
+      ? 'Mika Teknoloji PDKS: yüz tanıma, parmak izi, QR kod ve RFID kartlı personel devam kontrol sistemleri; web tabanlı puantaj ve vardiya yönetimi.'
+      : 'Mika Technology PDKS: facial recognition, fingerprint, QR code and RFID card personnel attendance control systems; web-based timesheet and shift management.';
 
   // Keywords
   useEffect(() => {
@@ -90,8 +90,7 @@ export default function PDKSPage() {
           "@type": "Organization",
           "name": "Mika Teknoloji",
           "url": "https://mikateknoloji.com",
-          "description": "Türkiye'nin lider PDKS sistemi sağlayıcısı - 30+ yıl deneyim",
-          "foundingDate": "1990",
+          "description": "PDKS, kartlı geçiş ve turnike sistemleri",
           "address": {
             "@type": "PostalAddress",
             "addressCountry": "TR"
@@ -123,9 +122,9 @@ export default function PDKSPage() {
     tr: {
       title: "Profesyonel PDKS Sistemleri",
       subtitle: "Modern İşgücü Yönetimi için Kapsamlı Çözümler",
-      brandMessage: "Mika Teknoloji - Türkiye'nin PDKS Uzmanı",
-      description: "Mika Teknoloji, Türkiye'de 30+ yıllık deneyimle 100.000+ kullanıcıya hizmet veren lider PDKS sistemi sağlayıcısıdır. Fabrika, hastane, okul ve SME'ler için biyometrik personel giriş çıkış takip sistemi, mesai hesaplama, vardiya yönetimi ve bordro entegrasyonlu PDKS yazılımı çözümleri. KVKK uyumlu, bulut tabanlı ve mobil destekli personel devam kontrol sistemleri ile işgücü verimliliğinizi %40'a kadar artırın.",
-      seoDescription: "Türkiye'nin önde gelen PDKS sistemleri ve personel devam kontrol çözümleri. Yüz tanıma, parmak izi, QR kod ve RFID kart teknolojileri ile modern işgücü yönetimi.",
+      brandMessage: "Mika Teknoloji PDKS",
+      description: "Mika Teknoloji; fabrika, hastane, okul ve KOBİ'ler için biyometrik personel giriş çıkış takip sistemi, mesai hesaplama, vardiya yönetimi ve bordroya hazır puantaj sunan PDKS yazılımı geliştirir. Bulut tabanlı ve mobil destekli personel devam kontrol sistemi.",
+      seoDescription: "PDKS sistemleri ve personel devam kontrol çözümleri. Yüz tanıma, parmak izi, QR kod ve RFID kart teknolojileri ile işgücü yönetimi.",
       whatIsPdks: {
         title: "PDKS Nedir?",
         content: "Personel Devam Kontrol Sistemi (PDKS), çalışanların iş yerindeki giriş-çıkış saatlerini, mesai sürelerini ve vardiya bilgilerini otomatik olarak kaydeden dijital sistemlerdir. Modern PDKS çözümleri, sadece basit puantaj kayıtları tutmakla kalmaz, aynı zamanda bordro entegrasyonu, raporlama, analiz ve insan kaynakları yönetimi için kapsamlı veriler sunar."
@@ -136,7 +135,7 @@ export default function PDKSPage() {
           description: "Temassız ve hijyenik yüz tanıma teknolojisi ile güvenli personel takibi",
           features: [
             "Temassız giriş-çıkış kontrolü",
-            "Yüksek doğruluk oranı (%99.9)",
+            "Yüksek doğruluk oranı",
             "Hızlı tanıma süresi (< 1 saniye)",
             "Maske takılı tanıma özelliği",
             "Çoklu yüz kayıt desteği",
@@ -220,16 +219,8 @@ export default function PDKSPage() {
         title: "Neden Mika Teknoloji PDKS?",
         reasons: [
           {
-            title: "30+ Yıllık Deneyim",
-            description: "Sektörde 30 yılı aşkın deneyimimizle güvenilir çözümler sunuyoruz"
-          },
-          {
-            title: "100.000+ Kullanıcı",
-            description: "Türkiye genelinde 100.000'den fazla kullanıcının tercihi"
-          },
-          {
-            title: "7/24 Teknik Destek",
-            description: "Kesintisiz teknik destek ve bakım hizmetlerimiz"
+            title: "Teknik Destek",
+            description: "Kurulum, eğitim ve bakım hizmetleri"
           },
           {
             title: "Özelleştirilebilir Çözümler",
@@ -237,7 +228,7 @@ export default function PDKSPage() {
           },
           {
             title: "Güvenli Altyapı",
-            description: "ISO sertifikalı güvenlik standartları ve veri koruması"
+            description: "Veri koruması ve otomatik yedekleme"
           },
           {
             title: "Kolay Entegrasyon",
@@ -272,9 +263,9 @@ export default function PDKSPage() {
     en: {
       title: "Professional PDKS Systems",
       subtitle: "Comprehensive Solutions for Modern Workforce Management",
-      brandMessage: "Mika Technology - Turkey's PDKS Expert",
+      brandMessage: "Mika Technology PDKS",
       description: "As Mika Technology, we offer the latest technology products to meet your business personnel tracking needs. With our PDKS systems, you can perform employee entry-exit control, shift tracking and shift management on a digital platform.",
-      seoDescription: "Turkey's leading PDKS systems and personnel attendance control solutions. Modern workforce management with facial recognition, fingerprint, QR code and RFID card technologies.",
+      seoDescription: "PDKS systems and personnel attendance control solutions. Workforce management with facial recognition, fingerprint, QR code and RFID card technologies.",
       whatIsPdks: {
         title: "What is PDKS?",
         content: "Personnel Attendance Control System (PDKS) is a digital system that automatically records employees' entry-exit times, working hours and shift information at the workplace. Modern PDKS solutions not only keep simple time tracking records, but also provide comprehensive data for payroll integration, reporting, analysis and human resources management."
@@ -285,7 +276,7 @@ export default function PDKSPage() {
           description: "Secure personnel tracking with contactless and hygienic facial recognition technology",
           features: [
             "Contactless entry-exit control",
-            "High accuracy rate (99.9%)",
+            "High accuracy rate",
             "Fast recognition time (< 1 second)",
             "Mask recognition feature",
             "Multiple face record support",
@@ -369,16 +360,8 @@ export default function PDKSPage() {
         title: "Why Choose Mika Technology PDKS?",
         reasons: [
           {
-            title: "30+ Years Experience",
-            description: "We provide reliable solutions with over 30 years of experience in the industry"
-          },
-          {
-            title: "100,000+ Users",
-            description: "The choice of more than 100,000 users throughout Turkey"
-          },
-          {
-            title: "24/7 Technical Support",
-            description: "Our uninterrupted technical support and maintenance services"
+            title: "Technical Support",
+            description: "Installation, training and maintenance services"
           },
           {
             title: "Customizable Solutions",
@@ -386,7 +369,7 @@ export default function PDKSPage() {
           },
           {
             title: "Secure Infrastructure",
-            description: "ISO certified security standards and data protection"
+            description: "Data protection and automatic backup"
           },
           {
             title: "Easy Integration",
@@ -528,15 +511,15 @@ export default function PDKSPage() {
             <div className="flex items-center justify-center gap-8 mt-8 text-sm text-slate-600">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span>30+ Yıl Deneyim</span>
+                <span>Web Tabanlı</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <span>100.000+ Kullanıcı</span>
+                <span>Mobil Uygulama</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                <span>7/24 Destek</span>
+                <span>Kurulum ve Eğitim</span>
               </div>
             </div>
           </motion.div>
@@ -794,7 +777,7 @@ export default function PDKSPage() {
                   PDKS sistemi mevcut bordro yazılımımla entegre olur mu?
                 </h3>
                 <p className="text-slate-600">
-                  Evet, Mika PDKS tüm popüler ERP ve İK yazılımları ile API entegrasyonu yapabilir. Logo, SAP, Mikro gibi sistemlerle tam uyumlu çalışır.
+                  Puantaj sonuçları Excel olarak alınır ve bordro programınıza aktarılabilir. Aktarım biçimini kullandığınız bordro programına göre birlikte belirleriz.
                 </p>
               </div>
               
@@ -803,7 +786,7 @@ export default function PDKSPage() {
                   Kurulum süreci ne kadar sürer?
                 </h3>
                 <p className="text-slate-600">
-                  Sistem büyüklüğüne göre 1-5 iş günü arasında kurulum tamamlanır. Ücretsiz eğitim ve 30 günlük adaptasyon desteği dahildir.
+                  Kurulum süresi cihaz sayısına ve sistem büyüklüğüne göre değişir; kurulumda kullanım eğitimi verilir.
                 </p>
               </div>
               
@@ -812,7 +795,7 @@ export default function PDKSPage() {
                   KVKK uyumluluğu nasıl sağlanıyor?
                 </h3>
                 <p className="text-slate-600">
-                  Tüm biyometrik veriler şifrelenmiş formatta saklanır, veri minimizasyonu ilkesi uygulanır ve kullanıcı rıza yönetimi otomatik olarak yapılır.
+                  Mobil kayıtlara eklenen konum bilgisi KVKK gereği raporlarda gizlenebilir.
                 </p>
               </div>
             </div>

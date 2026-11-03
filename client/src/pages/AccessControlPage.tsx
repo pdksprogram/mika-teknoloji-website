@@ -103,7 +103,7 @@ export default function AccessControlPage() {
     tr: {
       title: "Profesyonel Access Control Sistemleri",
       subtitle: "Kurumsal Güvenlik Teknolojilerinde İleri Çözümler",
-      brandMessage: "Mika Teknoloji - Türkiye'nin Güvenilir Teknoloji Ortağı",
+      brandMessage: "Mika Teknoloji Access Control",
       description: "Mika Teknoloji olarak RFID kartlı geçiş, biyometrik parmak izi, yüz tanıma ve QR kodlu mobil erişim sistemleri ile kapsamlı access control çözümleri sunuyoruz. HID, EM, Mifare, Desfire, Iclass kart teknolojileri ve PDKS entegrasyonu ile işletmenizin güvenliğini maksimum seviyeye çıkarıyoruz.",
       breadcrumb: "Anasayfa > Geçiş Kontrol Sistemleri > Access Control",
       devices: {
@@ -230,23 +230,23 @@ export default function AccessControlPage() {
       },
       advantages: {
         title: "Neden Mika Access Control Sistemleri?",
-        description: "Türkiye'nin önde gelen access control uzmanı olarak sektördeki deneyimimiz ve teknoloji liderliğimizle öne çıkıyoruz.",
+        description: "Keşiften kuruluma ve bakıma kadar access control projelerini kendi ekibimizle yürütüyoruz.",
         items: [
           {
-            title: "500+ Başarılı Proje",
-            description: "Türkiye'nin önde gelen şirketlerinde başarılı access control uygulamaları."
+            title: "Keşif ve Proje",
+            description: "Kurulum öncesi alan keşfi yapılır, geçiş noktaları birlikte belirlenir."
           },
           {
-            title: "50.000+ Aktif Kullanıcı",
-            description: "Günlük güvenli geçiş sağlanan personel sayısı ile kanıtlanmış güvenilirlik."
+            title: "Kurulum ve Montaj",
+            description: "Turnike ve kartlı geçiş montajını kendi ekibimiz yapar."
           },
           {
-            title: "7/24 Teknik Destek",
-            description: "Kesintisiz hizmet için sürekli teknik destek ve bakım hizmeti."
+            title: "Teknik Destek",
+            description: "Kurulum sonrası teknik destek ve bakım hizmeti."
           },
           {
-            title: "%99.9 Sistem Güvenilirliği",
-            description: "Yüksek performans ve kararlı çalışma garantisi ile iş sürekliği."
+            title: "Kullanım Eğitimi",
+            description: "Kurulumda yöneticilere kullanım eğitimi verilir."
           }
         ]
       },
@@ -385,23 +385,23 @@ export default function AccessControlPage() {
       },
       advantages: {
         title: "Why Mika Access Control Systems?",
-        description: "As Turkey's leading access control expert, we stand out with our industry experience and technology leadership.",
+        description: "We run access control projects with our own team, from site survey to installation and maintenance.",
         items: [
           {
-            title: "500+ Successful Projects",
-            description: "Successful access control implementations in Turkey's leading companies."
+            title: "Site Survey and Planning",
+            description: "A site survey is done before installation and access points are planned together."
           },
           {
-            title: "50,000+ Active Users",
-            description: "Proven reliability with the number of personnel provided with daily secure access."
+            title: "Installation",
+            description: "Turnstile and card access installation is done by our own team."
           },
           {
-            title: "7/24 Technical Support",
-            description: "Continuous technical support and maintenance service for uninterrupted service."
+            title: "Technical Support",
+            description: "Technical support and maintenance after installation."
           },
           {
-            title: "99.9% System Reliability",
-            description: "Business continuity with high performance and stable operation guarantee."
+            title: "User Training",
+            description: "Administrators are trained during installation."
           }
         ]
       },
@@ -942,7 +942,7 @@ export default function AccessControlPage() {
                   Garanti süresi ve teknik destek nasıl?
                 </h3>
                 <p className="text-slate-600">
-                  2 yıl tam garanti, 7/24 teknik destek ve ücretsiz kurulum hizmetimiz bulunmaktadır. Profesyonel ekibimiz kurulum sonrası eğitim de vermektedir.
+                  2 yıl garanti ve teknik destek hizmetimiz bulunmaktadır. Profesyonel ekibimiz kurulum sonrası eğitim de vermektedir.
                 </p>
               </div>
             </div>

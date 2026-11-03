@@ -50,7 +50,7 @@ const SSS_JSON_LD = {
       "name": "PDKS (Personel Devam Kontrol Sistemi) nedir?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "PDKS, çalışanların işyerine giriş-çıkış saatlerini dijital olarak takip eden bir sistemdir. QR kod, kart okuyucu, parmak izi gibi yöntemlerle personelin mesai saatlerini otomatik olarak kaydetir ve SGK'ya uyumlu raporlar hazırlar."
+        "text": "PDKS, çalışanların işyerine giriş-çıkış saatlerini dijital olarak takip eden bir sistemdir. QR kod, kart okuyucu, parmak izi gibi yöntemlerle personelin mesai saatlerini otomatik olarak kaydeder ve aylık puantajı hazırlar."
       }
     },
     {
@@ -58,7 +58,7 @@ const SSS_JSON_LD = {
       "name": "Personel takip sistemi yasal mı? Hangi şartlarda kullanılabilir?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Evet, KVKK ve İş Kanunu'na uygun olarak kullanılabilir. Çalışanları önceden bilgilendirmek, aydınlatma metni vermek ve sadece mesai takibi amacıyla kullanmak koşuluyla tamamen yasaldır. Mika Teknoloji sistemleri tüm yasal gerekliliklere uygun olarak geliştirilmiştir."
+        "text": "Evet, KVKK ve İş Kanunu'na uygun olarak kullanılabilir. Çalışanları önceden bilgilendirmek, aydınlatma metni vermek ve sadece mesai takibi amacıyla kullanmak koşuluyla kullanılabilir."
       }
     },
     {
@@ -79,10 +79,10 @@ const SSS_JSON_LD = {
     },
     {
       "@type": "Question",
-      "name": "SGK uyumlu raporlama nasıl sağlanır?",
+      "name": "Puantaj raporunda neler yer alır?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sistemimiz SGK'nın talep ettiği tüm raporları otomatik olarak hazırlar. Aylık çalışma saatleri, fazla mesai hesaplamaları, izin bilgileri ve diğer SGK gereklilikleri tam uyumlu şekilde raporlanır."
+        "text": "Aylık puantajda çalışma saatleri, fazla mesai ve izin bilgileri gösterilir. Puantaj Excel (.xlsx) dosyası olarak indirilir."
       }
     },
     {
@@ -98,7 +98,7 @@ const SSS_JSON_LD = {
       "name": "Teknik destek hizmeti nasıl alınır?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "7/24 teknik destek hizmeti sunuyoruz. WhatsApp, telefon, e-posta ve online destek sistemi ile anlık yardım alabilirsiniz. Kurulum, eğitim ve sürekli teknik destek hizmetlerimiz mevcuttur."
+        "text": "WhatsApp, telefon ve e-posta ile destek alabilirsiniz. Kurulum, eğitim ve teknik destek hizmetlerimiz mevcuttur."
       }
     },
     {
@@ -106,7 +106,7 @@ const SSS_JSON_LD = {
       "name": "Veri güvenliği nasıl sağlanır?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Bulut tabanlı altyapımız SSL 256-bit şifreleme, ISO 27001 sertifikalı veri merkezleri ve KVKK uyumlu güvenlik önlemleri ile korunmaktadır. Verileriniz güvenli bir şekilde saklanır ve işlenir."
+        "text": "Bağlantılar SSL ile şifrelenir. Mobil kayıtlara eklenen konum bilgisi KVKK gereği raporlarda gizlenebilir."
       }
     }
   ]
@@ -150,9 +150,9 @@ export default function PersonelTakipPage() {
         <title>Personel Takip Sistemi | Mika Teknoloji - Bulut Tabanlı PDKS Çözümleri</title>
         <meta 
           name="description" 
-          content="Türkiye'nin en güvenilir bulut tabanlı personel takip sistemi. PDKS, vardiya yönetimi, QR kod takip, mobil uygulama ile 7/24 destek. SGK uyumlu, yasal mevzuata tam uygun. 20+ yıl deneyim, 500K+ kullanıcı." 
+          content="Bulut tabanlı personel takip sistemi: PDKS, vardiya yönetimi, QR kod ile giriş-çıkış, mobil uygulama ve aylık puantaj." 
         />
-        <meta name="keywords" content="personel takip sistemi, bulut tabanlı pdks, vardiya yönetimi yazılımı, insan kaynakları sistemi, çalışan takip programı, pdks sistemi, personel devam kontrol sistemi, mesai takip sistemi, QR kod personel takip, mobil personel takip uygulaması, işçi takip sistemi, personel giriş çıkış sistemi, puantaj sistemi, shift yönetimi, çalışan zaman takibi, bordro hazırlama sistemi, iş gücü yönetimi, hr yazılımı türkiye, sgk uyumlu pdks" />
+        <meta name="keywords" content="personel takip sistemi, bulut tabanlı pdks, vardiya yönetimi yazılımı, insan kaynakları sistemi, çalışan takip programı, pdks sistemi, personel devam kontrol sistemi, mesai takip sistemi, QR kod personel takip, mobil personel takip uygulaması, işçi takip sistemi, personel giriş çıkış sistemi, puantaj sistemi, shift yönetimi, çalışan zaman takibi, bordro hazırlama sistemi, iş gücü yönetimi, hr yazılımı türkiye" />
         <meta name="author" content="Mika Teknoloji" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="language" content="tr" />
@@ -162,7 +162,7 @@ export default function PersonelTakipPage() {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Personel Takip Sistemi | Mika Teknoloji - Bulut Tabanlı PDKS Çözümleri" />
-        <meta property="og:description" content="Türkiye'nin en güvenilir bulut tabanlı personel takip sistemi. PDKS, vardiya yönetimi, QR kod takip, mobil uygulama ile 7/24 destek. SGK uyumlu, yasal mevzuata tam uygun." />
+        <meta property="og:description" content="Bulut tabanlı personel takip sistemi: PDKS, vardiya yönetimi, QR kod ile giriş-çıkış, mobil uygulama ve aylık puantaj." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/personel-takip" />
         <meta property="og:image" content="https://mikateknoloji.com/images/personel-takip-og.jpg" />
@@ -176,7 +176,7 @@ export default function PersonelTakipPage() {
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Personel Takip Sistemi | Mika Teknoloji - Bulut Tabanlı PDKS" />
-        <meta name="twitter:description" content="Türkiye'nin en güvenilir bulut tabanlı personel takip sistemi. PDKS, vardiya yönetimi, QR kod takip, mobil uygulama ile 7/24 destek." />
+        <meta name="twitter:description" content="Bulut tabanlı personel takip sistemi: PDKS, vardiya yönetimi, QR kod ile giriş-çıkış ve mobil uygulama." />
         <meta name="twitter:image" content="https://mikateknoloji.com/images/personel-takip-twitter.jpg" />
         <meta name="twitter:image:alt" content="Mika Teknoloji Personel Takip Sistemi" />
         <meta name="twitter:site" content="@mikateknoloji" />
@@ -216,7 +216,7 @@ export default function PersonelTakipPage() {
                   "width": 300,
                   "height": 100
                 },
-                "description": "Türkiye'nin önde gelen PDKS ve güvenlik teknolojileri şirketi. Personel takip sistemleri, access control, QR-Patrol çözümleri.",
+                "description": "PDKS ve güvenlik teknolojileri şirketi. Personel takip sistemleri, access control, QR-Patrol çözümleri.",
                 "address": {
                   "@type": "PostalAddress",
                   "addressCountry": "TR",
@@ -243,8 +243,7 @@ export default function PersonelTakipPage() {
                   "QR kod ile giriş-çıkış",
                   "Mobil uygulama",
                   "Vardiya yönetimi",
-                  "SGK uyumlu raporlama",
-                  "7/24 teknik destek",
+                  "Aylık puantaj ve Excel raporları",
                   "Çoklu lokasyon desteği",
                   "Gerçek zamanlı takip"
                 ],
@@ -308,7 +307,7 @@ export default function PersonelTakipPage() {
             </h1>
             
             <h2 className="text-xl md:text-2xl text-slate-600 font-light mb-8">
-              İstanbul, İzmir, Ankara, Bursa ve tüm Türkiye'deki fabrikalar, üretim tesisleri, ofisler ve perakende mağazaları için <Link href="/urunler" className="text-primary hover:text-primary/80 font-medium underline">bulut tabanlı personel takip çözümleri</Link>. SGK uyumlu PDKS sistemi ile vardiya yönetimi, mesai takibi ve insan kaynakları süreçlerinizi dijitalleştirin.
+              İstanbul, İzmir, Ankara, Bursa ve tüm Türkiye'deki fabrikalar, üretim tesisleri, ofisler ve perakende mağazaları için <Link href="/urunler" className="text-primary hover:text-primary/80 font-medium underline">bulut tabanlı personel takip çözümleri</Link>. PDKS sistemi ile vardiya yönetimi, mesai takibi ve insan kaynakları süreçlerinizi dijitalleştirin.
             </h2>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
@@ -370,7 +369,7 @@ export default function PersonelTakipPage() {
             className="text-center mb-12"
             {...fadeInUp}
           >
-            <p className="text-slate-500 font-medium mb-8">500+ başarılı referansımızdan bazıları</p>
+            <p className="text-slate-500 font-medium mb-8">Referanslarımızdan bazıları</p>
             <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
               {[1,2,3,4,5,6].map((i) => (
                 <div key={i} className="w-24 h-12 bg-slate-200 rounded flex items-center justify-center">
@@ -470,9 +469,9 @@ export default function PersonelTakipPage() {
                   <h3 className="text-xl font-bold text-slate-800 mb-4">PARMAK İZİ</h3>
                   <p className="text-primary font-semibold mb-4">Biyometrik Güvenli Tanımlama</p>
                   <p className="text-slate-600 mb-6">
-                    Parmak izi okuyucu sistemlerimiz, en yüksek güvenlik seviyesinde personel tanımlaması yapar. 
+                    Parmak izi okuyucu sistemlerimiz, biyometrik doğrulama ile personel tanımlaması yapar. 
                     Biyometrik teknoloji ile kartlı sistemlere göre çok daha güvenli ve pratik bir 
-                    giriş-çıkış kontrolü sağlar. Sahtecilik imkansızdır.
+                    giriş-çıkış kontrolü sağlar.
                   </p>
                   <Button asChild variant="outline" className="w-full">
                     <Link href="/cozumler/parmak-izi">Detayları İncele</Link>
@@ -705,7 +704,7 @@ export default function PersonelTakipPage() {
               PDKS Teknolojisini Keşfedin!
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Otomotiv, tekstil, gıda, üretim, perakende, lojistik ve inşaat sektörlerinde binlerce şirketin tercih ettiği teknoloji ile çalışma gücünüzün tüm yönlerini yönetin. <Link href="/cozumler" className="text-primary hover:text-primary/80 underline font-medium">Sektörel çözümlerimizi</Link> keşfedin ve operasyonları basitleştirin!
+              Otomotiv, tekstil, gıda, üretim, perakende, lojistik ve inşaat sektörlerinde kullanılan teknoloji ile çalışma gücünüzün tüm yönlerini yönetin. <Link href="/cozumler" className="text-primary hover:text-primary/80 underline font-medium">Sektörel çözümlerimizi</Link> keşfedin ve operasyonları basitleştirin!
             </p>
           </motion.div>
 
@@ -839,40 +838,11 @@ export default function PersonelTakipPage() {
             </div>
             
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-primary to-white bg-clip-text text-transparent">
-              Sektörün En Güvenilir PDKS Sistemi
+              Güvenilir PDKS Altyapısı
             </h2>
             <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-              İstanbul'dan Antalya'ya, İzmir'den Trabzon'a kadar Türkiye'nin 81 ilinde başarıyla çalışan sistemimiz, 20+ yıllık deneyimimiz ve 99.9% uptime garantisi ile işletmenizin güvenini kazanıyor. Fortune 500 şirketlerinden KOBİ'lere kadar binlerce kurumun <Link href="/referanslar" className="text-primary hover:text-white underline">güvenilir tercihi</Link>.
+              İstanbul merkezli ekibimizle Türkiye genelindeki işletmelere hizmet veriyoruz. Çalıştığımız kurumları <Link href="/referanslar" className="text-primary hover:text-white underline">referanslar</Link> sayfasında görebilirsiniz.
             </p>
-          </motion.div>
-
-          {/* Premium Stats */}
-          <motion.div 
-            className="grid md:grid-cols-4 gap-8 mb-20"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="whileInView"
-          >
-            {[
-              { number: "99.9%", label: "Uptime Garantisi", icon: Zap },
-              { number: "500K+", label: "Aktif Kullanıcı", icon: Users },
-              { number: "20+", label: "Yıllık Deneyim", icon: Award },
-              { number: "24/7", label: "Teknik Destek", icon: HeadphonesIcon }
-            ].map((stat, index) => (
-              <motion.div key={index} variants={staggerItem}>
-                <div className="text-center group">
-                  <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all duration-300 border border-primary/20">
-                    <stat.icon className="h-10 w-10 text-primary" />
-                  </div>
-                  <div className="text-4xl font-bold text-white mb-2 group-hover:text-primary transition-colors duration-300">
-                    {stat.number}
-                  </div>
-                  <div className="text-slate-400 font-medium">
-                    {stat.label}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
           </motion.div>
 
           {/* Premium Features */}
@@ -886,7 +856,7 @@ export default function PersonelTakipPage() {
               {
                 icon: MapPin,
                 title: "GPS Konum Doğrulama",
-                desc: "Yapay zeka destekli sahte konum tespiti ve güvenli alan kontrolü",
+                desc: "Mobil giriş-çıkış kaydına konum bilgisi eklenir",
                 gradient: "from-blue-500 to-cyan-500"
               },
               {
@@ -898,13 +868,13 @@ export default function PersonelTakipPage() {
               {
                 icon: Database,
                 title: "Kurumsal Veri Güvenliği",
-                desc: "256-bit SSL şifreleme, yedekleme ve felaket kurtarma sistemi",
+                desc: "SSL şifreleme ve yedekleme",
                 gradient: "from-green-500 to-emerald-500"
               },
               {
                 icon: Lock,
                 title: "Yasal Uyumluluk",
-                desc: "SGK, K.V.K.K., ISO 27001 ve tüm yasal mevzuatlara tam uyum",
+                desc: "K.V.K.K.'ya uygun veri işleme; konum bilgisi raporlarda gizlenebilir",
                 gradient: "from-orange-500 to-red-500"
               }
             ].map((item, index) => (
@@ -930,18 +900,14 @@ export default function PersonelTakipPage() {
             {...fadeInUp}
           >
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-3">Sertifikalar ve Uyumluluk</h3>
-              <p className="text-slate-400">Uluslararası standartlarda güvenlik ve kalite</p>
+              <h3 className="text-2xl font-bold text-white mb-3">Güvenlik ve Uyumluluk</h3>
+              <p className="text-slate-400">Veri koruma ve şifreleme</p>
             </div>
             
             <div className="flex flex-wrap justify-center items-center gap-8">
               {[
-                { name: "ISO 27001", desc: "Bilgi Güvenliği", color: "blue" },
                 { name: "K.V.K.K.", desc: "Kişisel Verilerin Korunması", color: "green" },
-                { name: "SGK Uyumlu", desc: "Sosyal Güvenlik Kurumu", color: "red" },
-                { name: "SSL 256-bit", desc: "Şifreleme Güvenliği", color: "purple" },
-                { name: "GDPR Ready", desc: "Avrupa Veri Koruma", color: "orange" },
-                { name: "Türkiye İMZA", desc: "Elektronik İmza Desteği", color: "cyan" }
+                { name: "SSL", desc: "Şifreleme Güvenliği", color: "purple" }
               ].map((cert, index) => (
                 <div key={index} className={`bg-${cert.color}-500/10 border border-${cert.color}-500/30 rounded-xl px-4 py-3 text-center hover:bg-${cert.color}-500/20 transition-all duration-300 hover:scale-105`}>
                   <div className={`text-${cert.color}-400 font-bold text-sm mb-1`}>{cert.name}</div>
@@ -1011,7 +977,7 @@ export default function PersonelTakipPage() {
               Her zaman yanınızdayız!
             </h2>
             <p className="text-lg text-slate-600">
-              Personel takip sistemi, <Link href="/urunler/qr-patrol" className="text-primary hover:text-primary/80 underline font-medium">QR-Patrol güvenlik sistemi</Link>, <Link href="/urunler/turnike-sistemleri" className="text-primary hover:text-primary/80 underline font-medium">turnike sistemleri</Link> ve tüm teknoloji çözümlerimiz için 7/24 sınırsız destek ve bilgi desteği sunuyoruz!
+              Personel takip sistemi, <Link href="/urunler/qr-patrol" className="text-primary hover:text-primary/80 underline font-medium">QR-Patrol güvenlik sistemi</Link>, <Link href="/urunler/turnike-sistemleri" className="text-primary hover:text-primary/80 underline font-medium">turnike sistemleri</Link> ve tüm teknoloji çözümlerimiz için destek ve bilgi sunuyoruz.
             </p>
           </motion.div>
 
@@ -1022,7 +988,7 @@ export default function PersonelTakipPage() {
             whileInView="whileInView"
           >
             {[
-              { icon: BookOpen, title: "Dokümantasyon", desc: "Kapsamlı kılavuzlarımız ve teknik belgelerimizle, ürünlerimizi en iyi şekilde kullanmanıza yardımcı oluyoruz.", link: "/blog" },
+              { icon: BookOpen, title: "Dokümantasyon", desc: "Kapsamlı kılavuzlarımız ve teknik belgelerimizle, ürünlerimizi verimli kullanmanıza yardımcı oluyoruz.", link: "/blog" },
               { icon: Video, title: "Eğitim Videoları", desc: "Görsel öğrenmeyi tercih edenler için adım adım eğitim videoları sunuyoruz. Karmaşık konuları basitleştiriyoruz.", link: "/blog" },
               { icon: FileText, title: "Blog", desc: "Güncel trendler, ipuçları ve sektör haberleri için blogumuzu takip edin. Bilginizi sürekli güncel tutun.", link: "/blog" },
               { icon: HelpCircle, title: "S.S.S.", desc: "En sık sorulan sorulara hızlı ve net cevaplar. Zamandan tasarruf edin, çözümlere anında ulaşın.", link: "/blog" },
@@ -1079,11 +1045,11 @@ export default function PersonelTakipPage() {
             {[
               {
                 question: "PDKS (Personel Devam Kontrol Sistemi) nedir?",
-                answer: "PDKS, çalışanların işyerine giriş-çıkış saatlerini dijital olarak takip eden bir sistemdir. QR kod, kart okuyucu, parmak izi gibi yöntemlerle personelin mesai saatlerini otomatik olarak kaydetir ve SGK'ya uyumlu raporlar hazırlar."
+                answer: "PDKS, çalışanların işyerine giriş-çıkış saatlerini dijital olarak takip eden bir sistemdir. QR kod, kart okuyucu, parmak izi gibi yöntemlerle personelin mesai saatlerini otomatik olarak kaydeder ve aylık puantajı hazırlar."
               },
               {
                 question: "Personel takip sistemi yasal mı? Hangi şartlarda kullanılabilir?",
-                answer: "Evet, KVKK ve İş Kanunu'na uygun olarak kullanılabilir. Çalışanları önceden bilgilendirmek, aydınlatma metni vermek ve sadece mesai takibi amacıyla kullanmak koşuluyla tamamen yasaldır. Mika Teknoloji sistemleri tüm yasal gerekliliklere uygun olarak geliştirilmiştir."
+                answer: "Evet, KVKK ve İş Kanunu'na uygun olarak kullanılabilir. Çalışanları önceden bilgilendirmek, aydınlatma metni vermek ve sadece mesai takibi amacıyla kullanmak koşuluyla kullanılabilir."
               },
               {
                 question: "Vardiya yönetimi nasıl çalışır?",
@@ -1094,8 +1060,8 @@ export default function PersonelTakipPage() {
                 answer: "Mobil uygulama ile QR kod okutarak giriş-çıkış yapabilir, mesai saatlerini görüntüleyebilir, izin taleplerinde bulunabilir, bordro bilgilerinizi inceleyebilir ve lokasyon bazlı kontrolleri gerçekleştirebilirsiniz."
               },
               {
-                question: "SGK uyumlu raporlama nasıl sağlanır?",
-                answer: "Sistemimiz SGK'nın talep ettiği tüm raporları otomatik olarak hazırlar. Aylık çalışma saatleri, fazla mesai hesaplamaları, izin bilgileri ve diğer SGK gereklilikleri tam uyumlu şekilde raporlanır."
+                question: "Puantaj raporunda neler yer alır?",
+                answer: "Aylık puantajda çalışma saatleri, fazla mesai ve izin bilgileri gösterilir. Puantaj Excel (.xlsx) dosyası olarak indirilir."
               },
               {
                 question: "Çoklu lokasyon desteği var mı?",
@@ -1103,11 +1069,11 @@ export default function PersonelTakipPage() {
               },
               {
                 question: "Teknik destek hizmeti nasıl alınır?",
-                answer: "7/24 teknik destek hizmeti sunuyoruz. WhatsApp, telefon, e-posta ve online destek sistemi ile anlık yardım alabilirsiniz. Kurulum, eğitim ve sürekli teknik destek hizmetlerimiz mevcuttur."
+                answer: "WhatsApp, telefon ve e-posta ile destek alabilirsiniz. Kurulum, eğitim ve teknik destek hizmetlerimiz mevcuttur."
               },
               {
                 question: "Veri güvenliği nasıl sağlanır?",
-                answer: "Bulut tabanlı altyapımız SSL 256-bit şifreleme, ISO 27001 sertifikalı veri merkezleri ve KVKK uyumlu güvenlik önlemleri ile korunmaktadır. Verileriniz güvenli bir şekilde saklanır ve işlenir."
+                answer: "Bağlantılar SSL ile şifrelenir. Mobil kayıtlara eklenen konum bilgisi KVKK gereği raporlarda gizlenebilir."
               }
             ].map((faq, index) => (
               <Card key={index} className="overflow-hidden">

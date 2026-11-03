@@ -282,7 +282,7 @@ export default function BoyTipeTurnikePage() {
             </h2>
             <p className="text-xl text-white/90 mb-8">
               Yüksek güvenlik alanları için uzman keşif ve detaylı teklif hizmeti. 
-              20+ yıllık deneyimimizle en güvenli çözümü sunuyoruz.
+              İhtiyacınıza uygun çözümü birlikte belirleyelim.
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-8">

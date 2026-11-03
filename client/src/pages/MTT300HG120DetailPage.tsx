@@ -82,7 +82,7 @@ export default function MTT300HG120DetailPage() {
       "Çoklu güvenlik kamera sistemi",
       "Premium ses ve görüntü sistemi",
       "Otomatik bakım sistemi",
-      "7/24 teknik destek paketi"
+      "Teknik destek paketi"
     ]
   };
 
@@ -304,7 +304,7 @@ export default function MTT300HG120DetailPage() {
             
             <div className="mt-8 flex items-center justify-center text-white/80">
               <MapPin className="mr-2 h-5 w-5" />
-              <span>İstanbul geneli ücretsiz keşif ve montaj hizmeti</span>
+              <span>Keşif ve montaj hizmeti</span>
             </div>
           </div>
         </div>

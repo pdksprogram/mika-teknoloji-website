@@ -81,7 +81,7 @@ export default function MTT350HG60ChubbyDetailPage() {
       "Premium bakım paketi",
       "Concierge yazılımı",
       "Lüks finish seçenekleri",
-      "7/24 VIP teknik destek"
+      "Teknik destek"
     ]
   };
 
@@ -303,7 +303,7 @@ export default function MTT350HG60ChubbyDetailPage() {
             
             <div className="mt-8 flex items-center justify-center text-white/80">
               <MapPin className="mr-2 h-5 w-5" />
-              <span>İstanbul geneli ücretsiz keşif ve montaj hizmeti</span>
+              <span>Keşif ve montaj hizmeti</span>
             </div>
           </div>
         </div>

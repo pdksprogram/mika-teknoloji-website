@@ -164,7 +164,7 @@ export default function TurnstileSystemsPage() {
               Turnike Sistemi Referanslarımız
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Türkiye'nin önde gelen kurumlarına turnike sistemleri kurulumu gerçekleştirdik.
+              Farklı sektörlerden kurumlara turnike sistemleri kurulumu gerçekleştirdik.
             </p>
           </motion.div>
 

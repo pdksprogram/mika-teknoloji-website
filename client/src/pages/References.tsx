@@ -52,7 +52,7 @@ const customers = [
     employees: 3200,
     locations: 12,
     sector: "Sağlık",
-    testimonial: "Antalya Şehir Hastanesi olarak güvenlik ve erişim kontrol sistemlerimizde en ileri teknolojileri kullanıyoruz. Mika Teknoloji ve çözüm ortağımız Sentez Bilgisayar Güvenlik Sistemleri ile birlikte kartlı şifreli geçiş sistemi ve barkod sistemi entegrasyonunu başarıyla hayata geçirdik. Bu entegre güvenlik çözümü sayesinde 3200 personelimizin ve ziyaretçilerimizin hastane içindeki hareketlerini güvenli ve kontrollü bir şekilde yönetiyoruz. Sistem hem güvenlik hem de operasyonel verimlilik açısından beklentilerimizi fazlasıyla karşıladı.",
+    testimonial: "Mika Teknoloji ve çözüm ortağımız Sentez Bilgisayar Güvenlik Sistemleri ile birlikte kartlı şifreli geçiş sistemi ve barkod sistemi entegrasyonunu başarıyla hayata geçirdik. Bu entegre güvenlik çözümü sayesinde 3200 personelimizin ve ziyaretçilerimizin hastane içindeki hareketlerini güvenli ve kontrollü bir şekilde yönetiyoruz. Sistem hem güvenlik hem de operasyonel verimlilik açısından beklentilerimizi fazlasıyla karşıladı.",
     person: "Dr. Fatma Yılmaz",
     position: "Başhekim Yardımcısı",
     solutions: ["X-Ray Güvenlik", "PDKS", "Güvenlik Kontrol"]
@@ -198,7 +198,7 @@ const References: React.FC = () => {
               Başarı Hikayeleri
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Her sektörden önde gelen firmalar, teknoloji ihtiyaçlarında Mika Teknoloji'yi tercih ediyor.
+              Farklı sektörlerden çalıştığımız firmalar.
             </p>
           </motion.div>
 
@@ -354,12 +354,12 @@ const References: React.FC = () => {
             {/* Corporate Trust Indicators */}
             <div className="grid md:grid-cols-3 gap-8 max-w-2xl mx-auto">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">7/24</div>
-                <div className="text-gray-400 text-sm">Teknik Destek</div>
+                <div className="text-2xl font-bold text-primary mb-1">Teknik</div>
+                <div className="text-gray-400 text-sm">Destek</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-green-400 mb-1">100%</div>
-                <div className="text-gray-400 text-sm">Ücretsiz Kurulum</div>
+                <div className="text-2xl font-bold text-green-400 mb-1">Kurulum</div>
+                <div className="text-gray-400 text-sm">ve Eğitim</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-blue-400 mb-1">2 Yıl</div>

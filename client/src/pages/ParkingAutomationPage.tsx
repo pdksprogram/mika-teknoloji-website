@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     question: "Plaka tanıma doğruluk oranı nedir?",
-    answer: "Modern plaka tanıma sistemlerimiz %99.5 üzerinde doğruluk oranına sahiptir. Farklı hava koşullarında ve gece-gündüz çalışabilir."
+    answer: "Plaka tanıma sistemlerimiz farklı hava koşullarında ve gece-gündüz çalışabilir."
   },
   {
     question: "Abone kartı sistemi nasıl çalışır?",
@@ -64,7 +64,7 @@ const faqs = [
   },
   {
     question: "Sistem kaç araç kapasitesini destekler?",
-    answer: "Sistem sınırsız araç kapasitesini destekler. Otopark kapasitesi takibi ile doluluk durumu anlık olarak izlenebilir."
+    answer: "Araç kaydı otopark büyüklüğüne göre yapılandırılır. Otopark kapasitesi takibi ile doluluk durumu anlık olarak izlenebilir."
   }
 ];
 

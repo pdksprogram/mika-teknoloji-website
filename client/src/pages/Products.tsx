@@ -56,7 +56,7 @@ export default function Products() {
     {
       title: "Satış Sonrası Destek", 
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=300&fit=crop&crop=center",
-      description: "7/24 teknik destek hizmetimiz"
+      description: "Teknik destek ve bakım hizmetimiz"
     }
   ];
 
@@ -159,7 +159,7 @@ export default function Products() {
             İhtiyacınıza Uygun Çözümü Birlikte Bulalım
           </h2>
           <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-            30 yıllık deneyimimiz ve uzman ekibimizle size en uygun ürünü seçmenizde yardımcı oluyoruz.
+            Uzman ekibimizle size uygun ürünü seçmenizde yardımcı oluyoruz.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

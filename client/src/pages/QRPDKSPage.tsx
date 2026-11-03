@@ -44,7 +44,7 @@ export default function QRPDKSPage() {
         <title>QR Kod PDKS | Mika Teknoloji - Mobil Personel Takip Sistemi</title>
         <meta 
           name="description" 
-          content="QR kod tabanlı personel devam kontrol sistemi (PDKS). Mobil uygulama ile QR kod okutma, personel giriş çıkış takibi, vardiya yönetimi. SGK uyumlu, bulut tabanlı QR PDKS çözümü." 
+          content="QR kod tabanlı personel devam kontrol sistemi (PDKS). Mobil uygulama ile QR kod okutma, personel giriş çıkış takibi, vardiya yönetimi. Bulut tabanlı QR PDKS çözümü." 
         />
         <meta name="keywords" content="qr kod pdks, qr personel takip, mobil pdks, qr kod personel giriş çıkış, qr tabanlı personel takip sistemi, mobil personel kontrol sistemi, qr kod okuyucu pdks, akıllı telefon pdks, mobil vardiya takip, contactless pdks, temassız personel takip, qr code personnel tracking" />
         <meta name="author" content="Mika Teknoloji" />
@@ -56,7 +56,7 @@ export default function QRPDKSPage() {
         
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="QR Kod PDKS | Mika Teknoloji - Mobil Personel Takip Sistemi" />
-        <meta property="og:description" content="QR kod tabanlı personel devam kontrol sistemi (PDKS). Mobil uygulama ile QR kod okutma, personel giriş çıkış takibi, vardiya yönetimi. SGK uyumlu, bulut tabanlı QR PDKS çözümü." />
+        <meta property="og:description" content="QR kod tabanlı personel devam kontrol sistemi (PDKS). Mobil uygulama ile QR kod okutma, personel giriş çıkış takibi, vardiya yönetimi. Bulut tabanlı QR PDKS çözümü." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/qr-pdks" />
         <meta property="og:image" content="https://mikateknoloji.com/images/qr-pdks-og.jpg" />
@@ -102,7 +102,7 @@ export default function QRPDKSPage() {
               "name": "Mika Teknoloji Kontrol Sistemleri",
               "url": "https://mikateknoloji.com",
               "logo": "https://mikateknoloji.com/images/mikateknoloji-logo.png",
-              "description": "Türkiye'de 20+ yıldır personel takip sistemleri, PDKS, güvenlik çözümleri ve turnike sistemleri üretiminde lider teknoloji şirketi.",
+              "description": "Personel takip sistemleri, PDKS, güvenlik çözümleri ve turnike sistemleri alanında çalışan teknoloji şirketi.",
               "address": {
                 "@type": "PostalAddress",
                 "addressCountry": "TR",
@@ -117,7 +117,7 @@ export default function QRPDKSPage() {
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
               "name": "QR Kod PDKS - Mobil Personel Takip Sistemi",
-              "description": "QR kod tabanlı personel devam kontrol sistemi. Mobil uygulama ile QR kod okutma, personel giriş çıkış takibi, vardiya yönetimi ve SGK uyumlu bulut tabanlı çözüm.",
+              "description": "QR kod tabanlı personel devam kontrol sistemi. Mobil uygulama ile QR kod okutma, personel giriş çıkış takibi, vardiya yönetimi ve bulut tabanlı çözüm.",
               "url": "https://mikateknoloji.com/urunler/qr-pdks",
               "applicationCategory": "BusinessApplication",
               "operatingSystem": "Web, iOS, Android",
@@ -128,7 +128,7 @@ export default function QRPDKSPage() {
                 "QR kod okutma ile giriş çıkış",
                 "Mobil uygulama desteği",
                 "Bulut tabanlı altyapı",
-                "SGK uyumlu raporlama",
+                "Aylık puantaj ve Excel raporları",
                 "Vardiya yönetimi",
                 "Gerçek zamanlı takip",
                 "Temassız personel kontrolü",
@@ -269,7 +269,7 @@ export default function QRPDKSPage() {
             </h2>
             
             <p className="text-xl md:text-2xl text-slate-300 max-w-5xl mx-auto leading-relaxed mb-12">
-              Fortune 500 şirketlerinin tercih ettiği kurumsal düzeyde mobil teknoloji ile 
+              Mobil teknoloji ile 
               personel takibini kolaylaştıran QR kod PDKS sistemi, işletmenize dijital dönüşüm, 
               operasyonel verimlilik ve güvenlik katıyor.
             </p>
@@ -350,13 +350,13 @@ export default function QRPDKSPage() {
                       {/* Premium Description */}
                       <div className="space-y-6">
                         <p className="text-xl text-slate-700 leading-relaxed font-light">
-                          <strong className="text-slate-800 font-semibold">Fake GPS engelleme ve konum doğrulama</strong> ile 
-                          sahte konumu, kopya kimlikleri ve riskli cihazları anında tespit edin.
+                          <strong className="text-slate-800 font-semibold">Konum doğrulama</strong> ile 
+                          giriş-çıkışın tanımlı alanda yapıldığını kontrol edin.
                         </p>
                         <p className="text-lg text-slate-600 leading-relaxed">
-                          Çok katmanlı güvenlik sistemiyle mükerrer ID önleme, gerçek zamanlı konum doğrulama ve 
-                          jeofencing kombinasyonu. Evden sahte QR okutmayı engelleyen 
-                          <span className="text-primary font-medium"> %100 güvenli PDKS</span> çözümü.
+                          Mükerrer kayıt önleme, konum doğrulama ve 
+                          jeofencing birlikte çalışır; 
+                          <span className="text-primary font-medium"> konum kontrollü PDKS</span> çözümü.
                         </p>
                       </div>
                       
@@ -364,7 +364,7 @@ export default function QRPDKSPage() {
                       <div className="grid grid-cols-2 gap-6 pt-6">
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                          <span className="text-slate-600 font-medium">Fake GPS Engelleme</span>
+                          <span className="text-slate-600 font-medium">Jeofencing</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
@@ -892,7 +892,7 @@ export default function QRPDKSPage() {
         </div>
       </section>
 
-      {/* Q6 - SGK Uyumlu Raporlama */}
+      {/* Q6 - Mobil Şikayet ve Talep */}
       <section data-testid="Q6" className="relative py-20 bg-gradient-to-br from-purple-50 via-white to-violet-50">
         {/* Segment Code */}
         <div className="absolute top-6 left-6 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-full text-lg font-bold z-20 shadow-xl">Q6</div>
@@ -1263,7 +1263,7 @@ export default function QRPDKSPage() {
               {
                 step: "3",
                 title: "Takip ve Raporlama",
-                description: "Gerçek zamanlı personel hareketlerini izleyin, SGK uyumlu raporlar alın"
+                description: "Gerçek zamanlı personel hareketlerini izleyin, aylık puantaj raporlarını alın"
               }
             ].map((step, index) => (
               <motion.div 
