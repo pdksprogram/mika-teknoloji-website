@@ -297,12 +297,11 @@ export default function BariyerSistemleriPage() {
               <Button asChild size="lg" data-testid="button-hero-contact">
                 <Link href="/iletisim" onClick={teklifTiklandi}>
                   {CTA_DONANIM}
-                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outlineLight">
                 <a href={`tel:${DEMO_TELEFON}`}>
-                  <Phone className="w-4 h-4 mr-2" />
+                  <Phone className="w-4 h-4" />
                   {CTA_ARA}
                 </a>
               </Button>
@@ -358,9 +357,9 @@ export default function BariyerSistemleriPage() {
                       </div>
 
                       {/* Detay Butonu */}
-                      <Button asChild variant="default">
+                      <Button asChild variant="outline">
                         <Link href={segment.detailUrl}>
-                          Detaylı Bilgi
+                          Detayları İncele
                           <ArrowRight className="w-4 h-4 ml-2" />
                         </Link>
                       </Button>
@@ -564,7 +563,6 @@ export default function BariyerSistemleriPage() {
               <Button asChild size="lg" data-testid="button-cta-contact">
                 <Link href="/iletisim" onClick={teklifTiklandi}>
                   {CTA_DONANIM}
-                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </Button>
               <Button
@@ -573,7 +571,10 @@ export default function BariyerSistemleriPage() {
                 variant="outlineLight"
                 data-testid="button-cta-phone"
               >
-                <a href={`tel:${DEMO_TELEFON}`}>{CTA_ARA}</a>
+                <a href={`tel:${DEMO_TELEFON}`}>
+                  <Phone className="w-4 h-4" />
+                  {CTA_ARA}
+                </a>
               </Button>
             </div>
           </div>
