@@ -5,6 +5,7 @@ import { Link } from "wouter";
 import TurnikeReferanslari from "@/components/TurnikeReferanslari";
 import SEO, { kanonikAdres, ASIL_ADRES } from "@/seo/SEO";
 import { boyut } from "@/lib/gorselBoyut";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 // Turnike kategori görselleri - Parmak izi sayfası mantığı
 const belTipiTurnike = "/mt-bel-tipi-turnike.png";
@@ -19,7 +20,7 @@ const turnstileCategories = [
   {
     id: 1,
     name: "Bel Tipi Turnikeler",
-    subtitle: "( Üç Kollu Turnikeler )",
+    subtitle: "Üç kollu turnikeler",
     image: belTipiTurnike,
     link: "/urunler/bel-tipi-turnike"
   },
@@ -33,7 +34,7 @@ const turnstileCategories = [
   {
     id: 3,
     name: "Engelli Turnikeleri",
-    subtitle: "( VIP Turnikeler )",
+    subtitle: "VIP turnikeler",
     image: engelliTurnike,
     link: "/urunler/engelli-turnike"
   },
@@ -80,7 +81,6 @@ export default function TurnstileSystemsPage() {
         jsonLd={[productJsonLd]}
       />
 
-      <h1 className="sr-only">Turnike Sistemleri | Mika Teknoloji</h1>
       {/* Breadcrumb */}
       <section className="bg-gray-50 py-4">
         <div className="container mx-auto px-4">
@@ -93,8 +93,12 @@ export default function TurnstileSystemsPage() {
       </section>
       
       {/* Turnike Kategorileri */}
-      <section className="py-16">
+      <section className="pt-10 pb-16">
         <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto mb-10 text-center">
+            <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Turnike Sistemleri</h1>
+            <CtaDugmeleri tur="donanim" sinif="justify-center" sayfa="Turnike Sistemleri Page" olayOnek="turnike_sistemleri" />
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {turnstileCategories.map((category, index) => (
               <motion.div
@@ -123,7 +127,7 @@ export default function TurnstileSystemsPage() {
                         </p>
                       )}
                       <div className="text-primary font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center">
-                        Detayları Görüntüle
+                        Detayları İncele
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </div>
                     </div>

@@ -123,6 +123,7 @@ export default function MT250DetailPage() {
             <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               MT-250 Elektromekanik 3 Kollu Bel Tipi Turnike Sistemi
             </h1>
+            <CtaDugmeleri tur="donanim" sinif="justify-center mt-6" sayfa="MT-250 Turnike Page" olayOnek="mt_250_turnike" />
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12 mb-16">

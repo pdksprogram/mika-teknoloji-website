@@ -6,6 +6,7 @@ import { Link } from "wouter";
 import SEO from "@/seo/SEO";
 import UrunEkIcerik from "@/components/UrunEkIcerik";
 import { EK, OTOPARK_TABLOSU } from "@/lib/urunEkIcerik";
+import CtaDugmeleri from "@/components/CtaDugmeleri";
 
 const parkingFeatures = [
   {
@@ -119,6 +120,7 @@ export default function ParkingAutomationPage() {
               Bariyer kontrolü, ücretlendirme sistemi ve güvenlik kamerası entegrasyonu.
             </p>
             <p className="text-base text-white/80 mb-8">Plaka Tanıma · Otomatik Bariyer · Ücretlendirme</p>
+            <CtaDugmeleri tur="donanim" koyu sinif="justify-center" sayfa="Otopark Otomasyon Page" olayOnek="otopark_otomasyon" />
           </motion.div>
         </div>
       </section>
