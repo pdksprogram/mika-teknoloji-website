@@ -1,56 +1,130 @@
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useRef, useState, type FormEvent } from "react";
+import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import SEO from "@/seo/SEO";
 import { Kirinti, kirintiJsonLd, type KirintiMaddesi } from "@/components/PdksIcerik";
+import { CTA_ARA, DEMO_TELEFON, DEMO_TELEFON_GORUNEN, DEMO_WHATSAPP, whatsappMesajAdresi } from "@/lib/iletisim";
 
 const KIRINTI: KirintiMaddesi[] = [
   { ad: "Ana Sayfa", yol: "/" },
   { ad: "İletişim", yol: "/iletisim" },
 ];
 
+const URUNLER = [
+  "PDKS Programı",
+  "QR Kodlu Personel Takibi",
+  "Yüz Tanıma / Parmak İzi Cihazı",
+  "Turnike",
+  "Bariyer",
+  "Kartlı Geçiş Kontrol",
+  "Diğer",
+];
+
+type Alan = "adSoyad" | "telefon" | "eposta" | "urun" | "mesaj";
+type Hatalar = Partial<Record<Alan, string>>;
+
+// Yalnız rakam, en fazla 11 hane; 0 ile başlıyorsa 0XXX XXX XX XX, değilse XXX XXX XX XX.
+function telefonBicimle(deger: string) {
+  const r = deger.replace(/\D/g, "").slice(0, 11);
+  const parca = r.startsWith("0") ? [4, 3, 2, 2] : [3, 3, 2, 2];
+  const sonuc: string[] = [];
+  let i = 0;
+  for (const n of parca) {
+    if (i >= r.length) break;
+    sonuc.push(r.slice(i, i + n));
+    i += n;
+  }
+  return sonuc.join(" ");
+}
+
+function telefonGecerli(deger: string) {
+  const r = deger.replace(/\D/g, "");
+  return r.startsWith("0") ? r.length === 11 : r.length === 10;
+}
+
+const EPOSTA_DESENI = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+const BILGI = [
+  { ikon: MapPin, baslik: "Adres", satirlar: ["Perpa Ticaret Merkezi A Blok 4-5. Kat No:0158", "34384 Şişli / İstanbul"] },
+  { ikon: Mail, baslik: "E-posta", satirlar: ["info@mikateknoloji.com", "satis@mikateknoloji.com"] },
+  { ikon: Clock, baslik: "Çalışma Saatleri", satirlar: ["Pazartesi - Cuma: 09:00 - 18:00"] },
+];
+
 export default function Contact() {
-  const contactInfo = [
-    {
-      icon: MapPin,
-      title: "Adres",
-      details: [
-        "Perpa Ticaret Merkezi A Blok 4-5.Kat No:0158",
-        "34384 Şişli/İstanbul"
-      ]
-    },
-    {
-      icon: Phone,
-      title: "Telefon",
-      details: [
-        "0546 712 22 96"
-      ]
-    },
-    {
-      icon: Mail,
-      title: "E-posta",
-      details: [
-        "info@mikateknoloji.com",
-        "satis@mikateknoloji.com"
-      ]
-    },
-    {
-      icon: Clock,
-      title: "Çalışma Saatleri",
-      details: [
-        "Pazartesi - Cuma: 09:00 - 18:00"
-      ]
+  const formRef = useRef<HTMLFormElement>(null);
+  const [telefon, setTelefon] = useState("");
+  const [hatalar, setHatalar] = useState<Hatalar>({});
+  const [gonderildi, setGonderildi] = useState(false);
+
+  function dogrula(v: Record<Alan, string>): Hatalar {
+    const h: Hatalar = {};
+    if (v.adSoyad.trim().length < 2) h.adSoyad = "Ad soyad yazın.";
+    if (!telefonGecerli(v.telefon)) h.telefon = "Telefonu 0 5xx xxx xx xx biçiminde yazın.";
+    if (v.eposta.trim() && !EPOSTA_DESENI.test(v.eposta.trim())) h.eposta = "Geçerli bir e-posta yazın.";
+    if (!v.urun) h.urun = "İlgilendiğiniz ürünü seçin.";
+    if (v.mesaj.trim().length < 5) h.mesaj = "Kısa bir mesaj yazın.";
+    return h;
+  }
+
+  function gonder(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const al = (ad: string) => String(fd.get(ad) ?? "");
+    const v: Record<Alan, string> = {
+      adSoyad: al("adSoyad"),
+      telefon: al("telefon"),
+      eposta: al("eposta"),
+      urun: al("urun"),
+      mesaj: al("mesaj"),
+    };
+    const firma = al("firma").trim();
+    const h = dogrula(v);
+    setHatalar(h);
+    const ilkHata = (Object.keys(h) as Alan[])[0];
+    if (ilkHata) {
+      setGonderildi(false);
+      formRef.current?.querySelector<HTMLElement>(`[name="${ilkHata}"]`)?.focus();
+      return;
     }
-  ];
+    const satirlar = [
+      "Merhaba, web sitenizden yazıyorum.",
+      `Ad Soyad: ${v.adSoyad.trim()}`,
+      firma ? `Firma: ${firma}` : "",
+      `Telefon: ${v.telefon.trim()}`,
+      v.eposta.trim() ? `E-posta: ${v.eposta.trim()}` : "",
+      `İlgilenilen ürün: ${v.urun}`,
+      `Mesaj: ${v.mesaj.trim()}`,
+    ].filter(Boolean);
+    window.open(whatsappMesajAdresi(satirlar.join("\n")), "_blank", "noopener,noreferrer");
+    setGonderildi(true);
+  }
+
+  // Alan düzeltildikçe o alanın hatası kalkar.
+  function temizle(ad: Alan) {
+    if (hatalar[ad]) setHatalar((h) => ({ ...h, [ad]: undefined }));
+  }
+
+  const hataSinifi = (ad: Alan) => (hatalar[ad] ? "border-destructive" : "");
+  const HataMetni = ({ ad }: { ad: Alan }) =>
+    hatalar[ad] ? (
+      <p id={`${ad}-hata`} className="text-sm text-destructive">
+        {hatalar[ad]}
+      </p>
+    ) : null;
+  const aria = (ad: Alan) => ({
+    "aria-invalid": hatalar[ad] ? true : undefined,
+    "aria-describedby": hatalar[ad] ? `${ad}-hata` : undefined,
+  });
 
   return (
     <div className="min-h-screen bg-white">
       <SEO title="İletişim | Mika Teknoloji" description="PDKS, kartlı geçiş, turnike ve bariyer sistemleri için teklif ve destek: Mika Teknoloji iletişim bilgileri, adres ve telefon." jsonLd={kirintiJsonLd(KIRINTI)} />
       <Kirinti maddeler={KIRINTI} icSinif="pb-4" />
-      <section className="bg-slate-900 border-b-4 border-primary text-white py-12">
+      <section className="bg-slate-900 border-b-4 border-primary text-white py-8 md:py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-4xl font-bold mb-3" data-testid="contact-title">İletişim</h1>
           <p className="text-slate-300 max-w-2xl">
@@ -58,173 +132,197 @@ export default function Contact() {
           </p>
         </div>
       </section>
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid lg:grid-cols-3 gap-12">
-          {/* Contact Information */}
-          <div className="lg:col-span-1">
-            <div className="space-y-6">
-              {contactInfo.map((info, index) => (
-                <Card key={index}>
-                  <CardHeader className="pb-3">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <info.icon className="h-5 w-5 text-primary" />
-                      </div>
-                      <CardTitle className="text-lg text-slate-800">{info.title}</CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    {info.details.map((detail, detailIndex) => (
-                      <CardDescription key={detailIndex} className="text-slate-600">
-                        {info.title === "Telefon" ? (
-                          <a href={`tel:+9${detail.replace(/s/g, "")}`} className="hover:text-primary transition-colors">{detail}</a>
-                        ) : detail.includes("@") ? (
-                          <a href={`mailto:${detail}`} className="hover:text-primary transition-colors">{detail}</a>
-                        ) : (
-                          detail
-                        )}
-                      </CardDescription>
-                    ))}
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            {/* Quick Actions */}
-            <div className="mt-8 space-y-4">
-              <Button 
-                asChild 
-                className="w-full"
-                data-testid="whatsapp-button"
-              >
-                <a href="https://wa.me/905467122296" target="_blank" rel="noopener noreferrer">
-                  WhatsApp ile İletişim
-                </a>
-              </Button>
-              <Button 
-                asChild 
-                variant="outline" 
-                className="w-full"
-                data-testid="phone-call-button"
-              >
-                <a href="tel:+905467122296">
-                  <Phone className="mr-2 h-4 w-4" />
-                  Hemen Ara
-                </a>
-              </Button>
-            </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="lg:col-span-2">
+      <div className="container mx-auto px-4 py-8 md:py-12">
+        <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
+          {/* Form: mobilde önce gelir, masaüstünde sağda */}
+          <div className="lg:col-span-2 lg:order-2">
             <Card>
-              <CardHeader>
-                <CardTitle className="text-2xl text-slate-800">Teklif İste</CardTitle>
-                <CardDescription>
-                  Formu doldurun, uzmanlarımız en kısa sürede size ulaşsın
-                </CardDescription>
+              <CardHeader className="pb-4">
+                <CardTitle className="text-2xl text-slate-800">Teklif ve Demo Talebi</CardTitle>
               </CardHeader>
               <CardContent>
-                <form className="space-y-6" data-testid="contact-form">
-                  <div className="grid md:grid-cols-2 gap-6">
+                <form ref={formRef} className="space-y-5" data-testid="contact-form" onSubmit={gonder} noValidate>
+                  <div className="grid md:grid-cols-2 gap-5">
                     <div className="space-y-2">
-                      <Label htmlFor="firstName">Ad *</Label>
-                      <Input 
-                        id="firstName" 
-                        placeholder="Adınız" 
-                        required 
-                        data-testid="input-first-name"
+                      <Label htmlFor="adSoyad">Ad Soyad *</Label>
+                      <Input
+                        id="adSoyad"
+                        name="adSoyad"
+                        autoComplete="name"
+                        placeholder="Adınız ve soyadınız"
+                        required
+                        className={hataSinifi("adSoyad")}
+                        onChange={() => temizle("adSoyad")}
+                        {...aria("adSoyad")}
+                        data-testid="input-ad-soyad"
                       />
+                      <HataMetni ad="adSoyad" />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="lastName">Soyad *</Label>
-                      <Input 
-                        id="lastName" 
-                        placeholder="Soyadınız" 
-                        required 
-                        data-testid="input-last-name"
+                      <Label htmlFor="firma">Firma</Label>
+                      <Input
+                        id="firma"
+                        name="firma"
+                        autoComplete="organization"
+                        placeholder="Firma adı"
+                        data-testid="input-firma"
                       />
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid md:grid-cols-2 gap-5">
                     <div className="space-y-2">
-                      <Label htmlFor="email">E-posta *</Label>
-                      <Input 
-                        id="email" 
-                        type="email" 
-                        placeholder="ornek@email.com" 
-                        required 
-                        data-testid="input-email"
+                      <Label htmlFor="telefon">Telefon *</Label>
+                      <Input
+                        id="telefon"
+                        name="telefon"
+                        type="tel"
+                        inputMode="numeric"
+                        autoComplete="tel"
+                        placeholder="0 5xx xxx xx xx"
+                        maxLength={14}
+                        required
+                        value={telefon}
+                        onChange={(e) => {
+                          setTelefon(telefonBicimle(e.target.value));
+                          temizle("telefon");
+                        }}
+                        className={hataSinifi("telefon")}
+                        {...aria("telefon")}
+                        data-testid="input-telefon"
                       />
+                      <HataMetni ad="telefon" />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Telefon *</Label>
-                      <Input 
-                        id="phone" 
-                        type="tel" 
-                        placeholder="05__ ___ __ __" 
-                        required 
-                        data-testid="input-phone"
+                      <Label htmlFor="eposta">E-posta</Label>
+                      <Input
+                        id="eposta"
+                        name="eposta"
+                        type="email"
+                        autoComplete="email"
+                        placeholder="ornek@firma.com"
+                        className={hataSinifi("eposta")}
+                        onChange={() => temizle("eposta")}
+                        {...aria("eposta")}
+                        data-testid="input-eposta"
                       />
+                      <HataMetni ad="eposta" />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="company">Şirket</Label>
-                    <Input 
-                      id="company" 
-                      placeholder="Şirket adınız" 
-                      data-testid="input-company"
-                    />
+                    <Label htmlFor="urun">İlgilenilen Ürün *</Label>
+                    <select
+                      id="urun"
+                      name="urun"
+                      required
+                      defaultValue=""
+                      onChange={() => temizle("urun")}
+                      className={`flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base md:text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${hataSinifi("urun")}`}
+                      {...aria("urun")}
+                      data-testid="select-urun"
+                    >
+                      <option value="" disabled>Seçin</option>
+                      {URUNLER.map((u) => (
+                        <option key={u} value={u}>{u}</option>
+                      ))}
+                    </select>
+                    <HataMetni ad="urun" />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="subject">Konu *</Label>
-                    <Input 
-                      id="subject" 
-                      placeholder="İhtiyacınızı özetleyin" 
-                      required 
-                      data-testid="input-subject"
+                    <Label htmlFor="mesaj">Mesaj *</Label>
+                    <Textarea
+                      id="mesaj"
+                      name="mesaj"
+                      placeholder="Personel sayısı, şube ya da kapı sayısı gibi ihtiyacınızı yazın"
+                      rows={4}
+                      required
+                      className={hataSinifi("mesaj")}
+                      onChange={() => temizle("mesaj")}
+                      {...aria("mesaj")}
+                      data-testid="textarea-mesaj"
                     />
+                    <HataMetni ad="mesaj" />
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Mesaj *</Label>
-                    <Textarea 
-                      id="message" 
-                      placeholder="Detaylı açıklama yazın..." 
-                      rows={5} 
-                      required 
-                      data-testid="textarea-message"
-                    />
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button type="submit" size="lg" className="sm:flex-1" data-testid="submit-button">
+                      <MessageCircle className="h-4 w-4" />
+                      WhatsApp ile Gönder
+                    </Button>
+                    <Button asChild size="lg" variant="outline" className="sm:flex-1" data-testid="phone-call-button">
+                      <a href={`tel:${DEMO_TELEFON}`}>
+                        <Phone className="h-4 w-4" />
+                        {CTA_ARA}
+                      </a>
+                    </Button>
                   </div>
-
-                  <Button 
-                    type="submit" 
-                    size="lg" 
-                    className="w-full"
-                    data-testid="submit-button"
-                  >
-                    Gönder
-                  </Button>
+                  {gonderildi && (
+                    <p role="status" className="text-sm text-slate-700" data-testid="form-onay">
+                      Mesajınız WhatsApp'ta hazır; Gönder'e basmanız yeterli.
+                    </p>
+                  )}
                 </form>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* İletişim bilgileri: tek kart, sıkı satırlar */}
+          <div className="lg:col-span-1 lg:order-1">
+            <Card>
+              <CardContent className="p-0 divide-y divide-slate-200">
+                <div className="flex items-start gap-3 px-5 py-4">
+                  <Phone className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                  <div>
+                    <div className="text-sm font-semibold text-slate-800">Telefon</div>
+                    <a
+                      href={`tel:${DEMO_TELEFON}`}
+                      className="inline-flex items-center min-h-11 text-slate-700 hover:text-primary transition-colors"
+                      data-testid="contact-phone-link"
+                    >
+                      {DEMO_TELEFON_GORUNEN}
+                    </a>
+                  </div>
+                </div>
+                {BILGI.map((b) => (
+                  <div key={b.baslik} className="flex items-start gap-3 px-5 py-4">
+                    <b.ikon className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                    <div className="min-w-0">
+                      <div className="text-sm font-semibold text-slate-800">{b.baslik}</div>
+                      {b.satirlar.map((s) => (
+                        <div key={s} className="text-sm text-slate-600 break-words">
+                          {s.includes("@") ? (
+                            <a href={`mailto:${s}`} className="hover:text-primary transition-colors">{s}</a>
+                          ) : (
+                            s
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+                <div className="px-5 py-4">
+                  <Button asChild variant="outline" className="w-full" data-testid="whatsapp-button">
+                    <a href={DEMO_WHATSAPP} target="_blank" rel="noopener noreferrer">
+                      <MessageCircle className="h-4 w-4" />
+                      WhatsApp ile Yazın
+                    </a>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </div>
         </div>
 
-        {/* Location */}
-        <div className="mt-16">
+        {/* Konum */}
+        <div className="mt-12 md:mt-16">
           <Card>
             <CardHeader>
               <CardTitle className="text-2xl text-slate-800 flex items-center">
                 <MapPin className="mr-3 h-6 w-6 text-primary" />
                 Konum
               </CardTitle>
-              <CardDescription>
-                Perpa Ticaret Merkezi A Blok 4-5. Kat'ta merkez ofisimiz
-              </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="aspect-video bg-slate-200 rounded-lg overflow-hidden">
@@ -241,16 +339,8 @@ export default function Contact() {
                 ></iframe>
               </div>
               <div className="mt-4 flex justify-center">
-                <Button 
-                  asChild 
-                  variant="outline"
-                  data-testid="map-button"
-                >
-                  <a 
-                    href="https://www.google.com/maps/place/41.015137,28.979530" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
+                <Button asChild variant="outline" data-testid="map-button">
+                  <a href="https://www.google.com/maps/place/41.015137,28.979530" target="_blank" rel="noopener noreferrer">
                     Haritada Göster
                   </a>
                 </Button>
