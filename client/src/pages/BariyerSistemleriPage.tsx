@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
-import { Shield, Clock, Settings, CheckCircle2, CheckCircle, ArrowRight, Lock, Gauge, AlertTriangle, Phone, Wrench, SquareParking, Factory, ShoppingCart, ShieldCheck, Plane, Home, Hotel, Hospital, Landmark } from "lucide-react";
+import { Shield, Clock, Settings, CheckCircle2, CheckCircle, ArrowRight, Lock, Gauge, AlertTriangle } from "lucide-react";
 import { Link } from "wouter";
 import { trackEvent } from "@/lib/analytics";
 
@@ -417,30 +417,10 @@ export default function BariyerSistemleriPage() {
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">
               Bariyer Sistemleri Uygulama Alanları
             </h2>
-            <p className="text-lg text-slate-600 mb-8">
-              Profesyonel bariyer çözümlerimiz, farklı sektör ve alanlarda güvenli geçiş kontrolü sağlar
+            <p className="text-lg text-slate-600 leading-relaxed">
+              Otopark ve garajlar, sanayi tesisleri, alışveriş merkezleri, askeri ve resmi kurumlar, havalimanları,
+              konut siteleri, oteller, hastaneler ve kamu binaları.
             </p>
-            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-5">
-              {[
-                { title: "Otopark ve Garajlar", desc: "AVM, rezidans, ofis ve site otoparkları için otomatik otopark bariyerleri", icon: SquareParking },
-                { title: "Sanayi Tesisleri", desc: "Fabrika ve üretim tesislerinde araç giriş-çıkış kontrolü", icon: Factory },
-                { title: "Alışveriş Merkezleri", desc: "Çok katlı otopark sistemleri ve vale hizmeti için bariyer çözümleri", icon: ShoppingCart },
-                { title: "Askeri ve Resmi Kurumlar", desc: "Road blocker ve yüksek güvenlikli bariyer sistemleri", icon: ShieldCheck },
-                { title: "Havalimanları", desc: "Terminal giriş-çıkış noktaları ve park alanları için hidrolik bariyerler", icon: Plane },
-                { title: "Konut Siteleri", desc: "Rezidans, villa ve site girişleri için uzaktan kumandalı bariyerler", icon: Home },
-                { title: "Oteller ve Tesisler", desc: "Misafir araç park kontrolü ve otopark yönetim sistemleri", icon: Hotel },
-                { title: "Hastaneler", desc: "Acil servis ve doktor park alanları için özel bariyer çözümleri", icon: Hospital },
-                { title: "Kamu Binaları", desc: "Belediye, valilik ve resmi kurumlar için güvenlik bariyerleri", icon: Landmark }
-              ].map((area, index) => (
-                <li key={index} className="flex gap-3">
-                  <area.icon className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h3 className="font-semibold text-slate-900">{area.title}</h3>
-                    <p className="text-slate-600 text-sm leading-relaxed">{area.desc}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </section>
@@ -485,7 +465,7 @@ export default function BariyerSistemleriPage() {
               Bariyer Sistemleri Karşılaştırma Tablosu
             </h2>
             <p className="text-lg text-slate-600 mb-8">
-              İhtiyacınıza en uygun bariyer sistemini seçmenize yardımcı olacak detaylı karşılaştırma
+              Açılma süresi, kol uzunluğu ve tahrik sistemine göre modeller
             </p>
             <div className="overflow-x-auto border border-slate-200 rounded-lg bg-white">
               <table className="w-full min-w-[640px] text-sm">
@@ -507,13 +487,6 @@ export default function BariyerSistemleriPage() {
                     <td className="px-4 py-3 text-center">4-6 sn</td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-3 font-semibold text-slate-700">Kullanım Alanı</td>
-                    <td className="px-4 py-3 text-center">Yoğun Trafik</td>
-                    <td className="px-4 py-3 text-center">Standart</td>
-                    <td className="px-4 py-3 text-center">Yüksek Güvenlik</td>
-                    <td className="px-4 py-3 text-center">Kritik Noktalar</td>
-                  </tr>
-                  <tr>
                     <td className="px-4 py-3 font-semibold text-slate-700">Kol Uzunluğu</td>
                     <td className="px-4 py-3 text-center">Değişken</td>
                     <td className="px-4 py-3 text-center">5,25 m</td>
@@ -526,13 +499,6 @@ export default function BariyerSistemleriPage() {
                     <td className="px-4 py-3 text-center">Elektrikli</td>
                     <td className="px-4 py-3 text-center">Hidrolik</td>
                     <td className="px-4 py-3 text-center">Hidrolik</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-3 font-semibold text-slate-700">Fiyat Aralığı</td>
-                    <td className="px-4 py-3 text-center">Orta</td>
-                    <td className="px-4 py-3 text-center">Düşük</td>
-                    <td className="px-4 py-3 text-center">Yüksek</td>
-                    <td className="px-4 py-3 text-center">Çok yüksek</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-3 font-semibold text-slate-700">Önerilen Kullanım</td>
@@ -559,7 +525,7 @@ export default function BariyerSistemleriPage() {
               Bariyer sistemlerinizin uzun ömürlü ve kesintisiz çalışması için profesyonel destek
             </p>
 
-            <dl className="grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-200 border border-slate-200 rounded-lg overflow-hidden mb-10">
+            <dl className="grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-200 border border-slate-200 rounded-lg overflow-hidden mb-6">
               {[
                 { deger: "2 Yıl", baslik: "Garanti", metin: "Üretici garantisi kapsamında tüm parça ve işçilik" },
                 { deger: "Satış Sonrası", baslik: "Destek", metin: "Telefon danışmanlığı ve teknik destek" },
@@ -573,50 +539,10 @@ export default function BariyerSistemleriPage() {
               ))}
             </dl>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                  <Wrench className="w-5 h-5 text-primary" />
-                  Periyodik Bakım Hizmetleri
-                </h3>
-                <ul className="space-y-2">
-                  {[
-                    "3 aylık rutin kontrol ve bakım",
-                    "Motor ve mekanik sistem kontrolü",
-                    "Elektronik kart ve sensör testleri",
-                    "Yağlama ve temizlik işlemleri",
-                    "Güvenlik sistemleri kalibrasyonu",
-                    "Detaylı bakım raporu sunumu"
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                  <Phone className="w-5 h-5 text-primary" />
-                  Teknik Destek
-                </h3>
-                <ul className="space-y-2">
-                  {[
-                    "Acil arıza müdahale hizmeti",
-                    "Telefon ve online teknik destek",
-                    "Yedek parça temin garantisi",
-                    "Yerinde tamir ve onarım",
-                    "Uzaktan sistem kontrolü",
-                    "Kullanıcı eğitim programları"
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            <p className="text-slate-700 leading-relaxed">
+              Periyodik bakımda motor, mekanik aksam, elektronik kart ve sensörler kontrol edilir; arızada yerinde müdahale,
+              yedek parça temini ve kullanıcı eğitimi verilir.
+            </p>
           </div>
         </div>
       </section>
