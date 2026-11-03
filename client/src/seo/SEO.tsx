@@ -14,10 +14,12 @@ export function kanonikAdres(yol: string): string {
 // Aynı içeriği birden çok adresten veren sayfaların TEK asıl adresi. Diğer adresler ya
 // vercel.json'da 301 ile buraya gider (PDKS) ya da canonical ile buraya işaret eder.
 // Site haritası (scripts/prerender.mjs) yalnız canonical'ı kendisi olan adresleri yazar.
+// Parmak izi / yüz tanıma: asıl adres iç linklerin gittiği /urunler/... adresidir; eski
+// /parmak-izi-takip-sistemi ve /yuz-tanima-sistem sayfaları canlı kalır, canonical ile buraya döner.
 export const ASIL_ADRES = {
   pdks: '/pdks-programi',
-  parmakIzi: '/parmak-izi-takip-sistemi',
-  yuzTanima: '/yuz-tanima-sistem',
+  parmakIzi: '/urunler/parmak-izi-tanima',
+  yuzTanima: '/urunler/yuz-tanima',
 } as const;
 
 interface SEOProps {

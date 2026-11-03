@@ -71,7 +71,7 @@ export default function FaceRecognitionSystemPage() {
           })}
         </script>
       </Helmet>
-      {/* canonical + og:url ortak SEO bileşeninden; iki adres de (/urunler/yuz-tanima) asıl adresi gösterir */}
+      {/* canonical + og:url ortak SEO bileşeninden; iki adres de (/yuz-tanima-sistem dahil) asıl adresi /urunler/yuz-tanima gösterir */}
       <Kanonik yol={ASIL_ADRES.yuzTanima} />
 
       {/* Devices Grid */}

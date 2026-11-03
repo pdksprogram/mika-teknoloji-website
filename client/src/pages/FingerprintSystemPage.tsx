@@ -71,7 +71,7 @@ export default function FingerprintSystemPage() {
           })}
         </script>
       </Helmet>
-      {/* canonical + og:url ortak SEO bileşeninden; iki adres de (/urunler/parmak-izi-tanima) asıl adresi gösterir */}
+      {/* canonical + og:url ortak SEO bileşeninden; iki adres de (/parmak-izi-takip-sistemi dahil) asıl adresi /urunler/parmak-izi-tanima gösterir */}
       <Kanonik yol={ASIL_ADRES.parmakIzi} />
 
       {/* Devices Grid */}

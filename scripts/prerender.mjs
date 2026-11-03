@@ -37,6 +37,8 @@ function rotalariOku() {
     if (r.includes(":") || r.includes("*") || /\.[a-z0-9]+$/i.test(r)) { say.atlanan.push(r); continue; }
     if (rotalar.has(r)) { say.tekrar.push(r); continue; }
     rotalar.add(r);
+    // Yalnız `component={X}` biçimi okunur. Children biçimindeki (<Route path=..>{...}</Route>)
+    // rotanın bileşeni bilinmez; haritada o rotanın <lastmod> satırı yazılmaz (güvenli geri dönüş).
     const b = /\bcomponent\s*=\s*\{\s*([A-Za-z_$][\w$]*)\s*\}/.exec(oz);
     if (b) rotaBileseni.set(r, b[1]);
   }
@@ -83,23 +85,27 @@ function git(args) {
   }).trim();
 }
 
-// lastmod = sayfa kaynak dosyasının GERÇEK son değişiklik tarihi: commit'lenmemiş değişiklik varsa
-// bugün, yoksa dosyanın son commit tarihi. Git yoksa ya da sığ klonsa (tarih güvenilmez) derleme günü.
+// lastmod = sayfa kaynak dosyasının GERÇEK son commit tarihi; bilinmiyorsa null döner ve o adresin
+// <lastmod> satırı HİÇ yazılmaz (uydurma tarih yok). Geçmiş güvenilmez sayılır: git yok, depo değil,
+// sığ klon (`rev-parse --is-shallow-repository` != "false"; ör. Vercel --depth klonu). Aynı güven
+// kuralıyla: commit'lenmemiş (kirli/izlenmeyen) dosyanın gerçek değişiklik günü bilinmez -> yazılmaz.
+// SITE_HARITASI_GIT_GUVENILMEZ=1 güvenilmez geçmişi zorlar (yalnız doğrulama için).
 function sonDegisiklikTarihi() {
-  const bugun = new Date().toISOString().slice(0, 10);
-  let gitVar = false;
+  let guvenilir = false;
   try {
-    gitVar = git(["rev-parse", "--is-shallow-repository"]) === "false";
+    guvenilir = git(["rev-parse", "--is-shallow-repository"]) === "false";
   } catch {}
-  if (!gitVar) console.warn("[site-haritası] UYARI: tam git geçmişi yok; lastmod derleme günü yazılır.");
+  if (process.env.SITE_HARITASI_GIT_GUVENILMEZ === "1") guvenilir = false;
+  if (!guvenilir) console.warn("[site-haritası] UYARI: tam git geçmişi yok (sığ klon/git yok); lastmod yazılmaz.");
   const onbellek = new Map();
   return (dosya) => {
-    if (!dosya || !gitVar) return bugun;
+    if (!dosya || !guvenilir) return null;
     if (onbellek.has(dosya)) return onbellek.get(dosya);
-    let t = bugun;
+    let t = null;
     try {
-      if (!git(["status", "--porcelain", "--", dosya])) t = git(["log", "-1", "--format=%cs", "--", dosya]) || bugun;
+      if (!git(["status", "--porcelain", "--", dosya])) t = git(["log", "-1", "--format=%cs", "--", dosya]) || null;
     } catch {}
+    if (t !== null && !/^\d{4}-\d{2}-\d{2}$/.test(t)) t = null;
     onbellek.set(dosya, t);
     return t;
   };
@@ -119,8 +125,10 @@ function siteHaritasiYaz(kayitlar, kanonikAdres) {
   if (sorun.length) throw new Error("Canonical'ı site haritasında olmayan adres:\n  " + sorun.join("\n  "));
   const satirlar = girenler.map((k) => {
     const lastmod = tarih(dosyasi.get(rotaBileseni.get(k.rota)));
-    return `  <url>\n    <loc>${k.kanonik}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`;
+    const lm = lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : "";
+    return `  <url>\n    <loc>${k.kanonik}</loc>${lm}\n  </url>`;
   });
+  const lastmodSayisi = satirlar.filter((s) => s.includes("<lastmod>")).length;
   const xml =
     `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<!-- Derlemede scripts/prerender.mjs üretir; elle düzenlemeyin. -->\n` +
@@ -139,7 +147,7 @@ function siteHaritasiYaz(kayitlar, kanonikAdres) {
 
   const disarida = kayitlar.length - girenler.length;
   console.log(
-    `[site-haritası] ${girenler.length} adres yazıldı; ${disarida} adres dışarıda ` +
+    `[site-haritası] ${girenler.length} adres yazıldı (${lastmodSayisi} lastmod); ${disarida} adres dışarıda ` +
       `(canonical başka adres ya da noindex). robots.txt Sitemap: ${SITE_HARITASI_ADRESI}`,
   );
 }
