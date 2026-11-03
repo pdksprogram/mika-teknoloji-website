@@ -108,7 +108,7 @@ export default function VardiyaTakipProgramiPage() {
       <KonuGiris
         ust="PDKS · Vardiya"
         baslik="Vardiya Takip Programı"
-        giris="Mika PDKS ile vardiya planı hazırlanır ve onaylanır; onaylanan plan istenirse kilitlenir. Personel vardiyasını mobil uygulamada görür; giriş-çıkışlar plana göre puantaja yansır."
+        giris="Mika PDKS ile vardiya planı hazırlanır; personel vardiyasını mobil uygulamada hemen görür. Plan onaya gider, istenirse kilitlenir; giriş-çıkışlar plana göre puantaja yansır."
       />
       <OzellikIzgarasi
         baslik="Vardiya Yönetiminde Neler Var?"
