@@ -158,6 +158,7 @@ export default function BelTipeTurnikePage() {
             <p className="text-gray-600 max-w-2xl mx-auto">
               İhtiyacınıza uygun bel tipi turnike modelini seçin. Her biri farklı özellik ve kullanım alanları için tasarlandı.
             </p>
+            <CtaDugmeleri tur="donanim" sinif="justify-center mt-6" sayfa="Bel Tipi Turnike Page" olayOnek="bel_tipi_turnike" />
           </div>
 
           <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 xs:gap-4 sm:gap-6">

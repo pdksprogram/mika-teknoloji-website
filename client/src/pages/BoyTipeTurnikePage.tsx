@@ -174,6 +174,7 @@ export default function BoyTipeTurnikePage() {
             <p className="text-gray-600 max-w-2xl mx-auto">
               Yüksek güvenlik gerektiren alanlar için boy yüksekliğinde turnike sistemleri. Havalimanları, metro istasyonları ve özel güvenlik alanları için ideal çözümler.
             </p>
+            <CtaDugmeleri tur="donanim" sinif="justify-center mt-6" sayfa="Boy Tipi Turnike Page" olayOnek="boy_tipi_turnike" />
           </div>
 
           <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 xs:gap-4 sm:gap-6">
