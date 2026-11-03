@@ -5,6 +5,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import SEO from "@/seo/SEO";
+import { Kirinti, kirintiJsonLd, type KirintiMaddesi } from "@/components/PdksIcerik";
+
+const KIRINTI: KirintiMaddesi[] = [
+  { ad: "Ana Sayfa", yol: "/" },
+  { ad: "İletişim", yol: "/iletisim" },
+];
 
 export default function Contact() {
   const contactInfo = [
@@ -41,19 +47,18 @@ export default function Contact() {
   ];
 
   return (
-    <div className="min-h-screen py-20">
-      <SEO title="İletişim | Mika Teknoloji" description="PDKS, kartlı geçiş, turnike ve bariyer sistemleri için teklif ve destek: Mika Teknoloji iletişim bilgileri, adres ve telefon." />
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6" data-testid="contact-title">
-            İletişim
-          </h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Uzman ekibimizle iletişime geçin, size en uygun çözümü birlikte bulalım
+    <div className="min-h-screen bg-white">
+      <SEO title="İletişim | Mika Teknoloji" description="PDKS, kartlı geçiş, turnike ve bariyer sistemleri için teklif ve destek: Mika Teknoloji iletişim bilgileri, adres ve telefon." jsonLd={kirintiJsonLd(KIRINTI)} />
+      <Kirinti maddeler={KIRINTI} icSinif="pb-4" />
+      <section className="bg-slate-900 border-b-4 border-primary text-white py-12">
+        <div className="container mx-auto px-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-3" data-testid="contact-title">İletişim</h1>
+          <p className="text-slate-300 max-w-2xl">
+            Teklif, keşif ve destek için bize ulaşın.
           </p>
         </div>
-
+      </section>
+      <div className="container mx-auto px-4 py-12">
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Contact Information */}
           <div className="lg:col-span-1">

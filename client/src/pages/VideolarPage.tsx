@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
+import { Kirinti, type KirintiMaddesi } from "@/components/PdksIcerik";
 import { Helmet } from "react-helmet-async";
 import { useState, useRef, type SyntheticEvent } from "react";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
@@ -814,6 +815,11 @@ function FAQItem({ item, isOpen, onToggle }: { item: typeof faqItems[0]; isOpen:
   );
 }
 
+const KIRINTI: KirintiMaddesi[] = [
+  { ad: "Ana Sayfa", yol: "/" },
+  { ad: "Videolar", yol: "/videolar" },
+];
+
 export default function VideolarPage() {
   const [activeCategory, setActiveCategory] = useState("Tümü");
   const [searchQuery, setSearchQuery] = useState("");
@@ -1017,44 +1023,18 @@ export default function VideolarPage() {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-        <section className="py-10 sm:py-16 bg-gradient-to-br from-slate-100 via-white to-slate-50 border-b border-slate-200 relative">
+      <div className="min-h-screen bg-white">
+        <Kirinti maddeler={KIRINTI} icSinif="pb-4" />
+        <section className="bg-slate-900 border-b-4 border-primary text-white py-12">
+          <div className="container mx-auto px-4">
+            <h1 className="text-3xl md:text-4xl font-bold mb-3">PDKS Eğitim Videoları</h1>
+            <p className="text-slate-300 max-w-2xl">
+              {videos.length} video: kullanım rehberleri, kurulum videoları ve canlı demolar.
+            </p>
+          </div>
+        </section>
+        <section className="py-8 bg-slate-50 border-b border-slate-200">
           <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex items-center justify-center mb-4 sm:mb-6"
-            >
-              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-primary flex items-center justify-center">
-                <Film className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
-              </div>
-            </motion.div>
-            <motion.h1
-              className="text-2xl sm:text-4xl md:text-5xl font-bold text-slate-800 mb-3 sm:mb-4 leading-tight"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              PDKS Eğitim Videoları
-            </motion.h1>
-            <motion.p
-              className="text-base sm:text-xl text-slate-600 max-w-3xl mx-auto mb-3"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-            >
-              Personel Devam Kontrol Sistemi (PDKS) kullanım rehberleri, kurulum videoları ve canlı demolar
-            </motion.p>
-            <motion.p
-              className="text-sm text-slate-500 max-w-2xl mx-auto mb-6 sm:mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              {videos.length} eğitim videosu ile PDKS sisteminizi kolayca öğrenin. Başlangıçtan ileri seviyeye tüm konular.
-            </motion.p>
-
             <motion.div
               className="max-w-md mx-auto mb-6 sm:mb-8"
               initial={{ opacity: 0, y: 20 }}
@@ -1209,7 +1189,7 @@ export default function VideolarPage() {
           </div>
         </section>
 
-        <section className="py-10 sm:py-16 bg-primary relative">
+        <section className="py-10 sm:py-16 bg-slate-900 border-t-4 border-primary relative">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -1220,7 +1200,7 @@ export default function VideolarPage() {
               <h2 className="text-xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">
                 PDKS Sistemi Hakkında Bilgi Alın
               </h2>
-              <p className="text-white/80 text-sm sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">
+              <p className="text-slate-300 text-sm sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">
                 Ücretsiz demo talebi oluşturun veya WhatsApp üzerinden anında bilgi alın. Profesyonel ekibimiz kurulum desteği sağlar.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
