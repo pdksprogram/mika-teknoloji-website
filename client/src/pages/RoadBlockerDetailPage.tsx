@@ -53,14 +53,14 @@ export default function RoadBlockerDetailPage() {
             <motion.div {...fadeInUp} className="space-y-6">
               <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                 <img 
-                  src="https://betaper.com.tr/bariyer-sistemleri/roadblocker.jpg"
+                  src="/images/bariyer/road-blocker.jpg"
                   alt="Road Blocker Sistem"
                   className="w-full h-auto object-contain rounded-2xl"
                 />
               </div>
               <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                 <img 
-                  src="https://betaper.com.tr/bariyer-sistemleri/roadblocker_teknik.jpg"
+                  src="/images/bariyer/roadblocker-teknik.jpg"
                   alt="Road Blocker Teknik Detay"
                   className="w-full h-auto object-contain rounded-2xl"
                 />

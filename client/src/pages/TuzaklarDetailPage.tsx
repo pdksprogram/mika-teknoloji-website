@@ -52,7 +52,7 @@ export default function TuzaklarDetailPage() {
               <div className="sticky top-24">
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                   <img 
-                    src="https://betaper.com.tr/bariyer-sistemleri/tuzaklar-kapanlar.jpg"
+                    src="/images/bariyer/tuzak-kapan.jpg"
                     alt="Tuzaklar ve Kapanlar"
                     className="w-full h-auto object-contain rounded-2xl"
                   />

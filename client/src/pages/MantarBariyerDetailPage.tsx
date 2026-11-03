@@ -67,7 +67,7 @@ export default function MantarBariyerDetailPage() {
               <div className="sticky top-24">
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                   <img 
-                    src="https://betaper.com.tr/bariyer-sistemleri/mantar-bariyerler.jpg"
+                    src="/images/bariyer/mantar-bariyer.jpg"
                     alt="Hidrolik Mantar Bariyer"
                     className="w-full h-auto object-contain rounded-2xl"
                   />

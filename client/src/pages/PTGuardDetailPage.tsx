@@ -44,14 +44,14 @@ export default function PTGuardDetailPage() {
             <motion.div {...fadeInUp} className="space-y-6">
               <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                 <img 
-                  src="https://betaper.com.tr/bariyer-sistemleri/pt-guard-bariyerler.jpg"
+                  src="/images/bariyer/pt-guard-bariyer.jpg"
                   alt="MT Guard Bariyer Sistemi"
                   className="w-full h-auto object-contain rounded-2xl"
                 />
               </div>
               <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                 <img 
-                  src="https://betaper.com.tr/bariyer-sistemleri/guard.jpg"
+                  src="/images/bariyer/pt-guard-detay.jpg"
                   alt="MT Guard Bariyer Detay"
                   className="w-full h-auto object-contain rounded-2xl"
                 />

@@ -63,7 +63,7 @@ export default function PTPlusDetailPage() {
               <div className="sticky top-24">
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                   <img 
-                    src="https://betaper.com.tr/bariyer-sistemleri/ptplus-bariyersistemi.jpg"
+                    src="/images/bariyer/pt-plus-bariyer.jpg"
                     alt="MT Plus Bariyer Sistemi"
                     className="w-full h-auto object-contain rounded-2xl"
                   />

@@ -29,7 +29,7 @@ const segments = [
     title: "MT PLUS Bariyer Sistemi",
     subtitle: "Orta Seviye Güvenlik Çözümü",
     description: "Orta seviye güvenlik ihtiyaçları için ideal olan MT PLUS bariyer sistemi, kolay montaj ve güvenilir performans sunar. 5,25 metre ledli kol uzunluğu ile geniş geçiş alanlarında kullanım için tasarlanmıştır.",
-    image: "https://betaper.com.tr/bariyer-sistemleri/ptplus-bariyersistemi.jpg",
+    image: "/images/bariyer/pt-plus-bariyer.jpg",
     gradient: "from-slate-900 to-slate-800",
     bgGradient: "from-slate-50 to-white",
     icon: CheckCircle2,
@@ -58,7 +58,7 @@ const segments = [
     title: "MT Genius Bariyer Sistemi",
     subtitle: "Akıllı Kontrol ve Yönetim",
     description: "İleri teknoloji ile donatılmış MT Genius bariyer sistemi, akıllı kontrol özellikleri ve entegrasyon kabiliyeti ile öne çıkar. Gelişmiş sensör teknolojisi ve otomatik ayar özellikleri ile kusursuz performans sunar.",
-    image: "https://betaper.com.tr/bariyer-sistemleri/ptgenius-bariyersistemi.jpg",
+    image: "/images/bariyer/pt-genius-bariyer.jpg",
     gradient: "from-primary via-primary to-slate-800",
     bgGradient: "from-slate-50 via-white to-slate-100",
     icon: Settings,
@@ -83,7 +83,7 @@ const segments = [
     title: "MT Guard Bariyer Sistemi",
     subtitle: "Yüksek Güvenlik ve Dayanıklılık",
     description: "Yüksek güvenlik gerektiren noktalarda kullanılmak üzere tasarlanan MT Guard bariyer sistemi, üstün dayanıklılık ve güvenilirlik sunar. Yüksek darbe emilimi özellikli yapısı ile kritik güvenlik noktalarında tercih edilir.",
-    image: "https://betaper.com.tr/bariyer-sistemleri/pt-guard-bariyerler.jpg",
+    image: "/images/bariyer/pt-guard-bariyer.jpg",
     gradient: "from-slate-900 to-slate-800",
     bgGradient: "from-slate-50 to-white",
     icon: Shield,
@@ -107,7 +107,7 @@ const segments = [
     title: "Tuzaklar & Kapanlar",
     subtitle: "Yeraltı Güvenlik Sistemleri",
     description: "Yeraltına gömülen hidrolik tuzak sistemleri, görünmeyen ancak son derece etkili güvenlik çözümleri sunar. Acil durumlarda otomatik aktive olan bu sistemler, yetkisiz araç girişlerini engellemek için tasarlanmıştır.",
-    image: "https://betaper.com.tr/bariyer-sistemleri/tuzaklar-kapanlar.jpg",
+    image: "/images/bariyer/tuzak-kapan.jpg",
     gradient: "from-slate-900 to-slate-800",
     bgGradient: "from-slate-50 to-white",
     icon: AlertTriangle,
@@ -132,7 +132,7 @@ const segments = [
     title: "MT Mantar Bariyer (Hidrolik)",
     subtitle: "Hidrolik Yükselen Bariyer Sistemi",
     description: "Yüksek güvenlik ihtiyacı duyulan noktalarda araç trafiğini engelleyecek şekilde tasarlanmış, 304 paslanmaz çelik yapılı hidrolik bariyer sistemi. PLC kontrol sistemi ve 100 bar hidrolik güç ile maksimum performans sağlar.",
-    image: "https://betaper.com.tr/bariyer-sistemleri/mantar-bariyerler.jpg",
+    image: "/images/bariyer/mantar-bariyer.jpg",
     gradient: "from-slate-900 to-slate-800",
     bgGradient: "from-slate-50 to-white",
     icon: Lock,
@@ -163,7 +163,7 @@ const segments = [
     title: "Road Blocker Sistemler",
     subtitle: "Terör Önleme ve Yüksek Güvenlik",
     description: "Terör eylemlerine karşı tasarlanan, elektronik kontrollü hidrolik yol kesici sistem. Yüksek dayanıklılık ve güvenilirlik özelliği ile kritik noktalarda kullanılır. 4 adet güneş enerjili LED ile gece görünürlüğü sağlanmıştır.",
-    image: "https://betaper.com.tr/bariyer-sistemleri/roadblocker.jpg",
+    image: "/images/bariyer/road-blocker.jpg",
     gradient: "from-slate-900 to-slate-800",
     bgGradient: "from-slate-50 to-white",
     icon: Gauge,
@@ -358,7 +358,7 @@ export default function BariyerSistemleriPage() {
             className="max-w-4xl mx-auto"
             {...fadeInUp}
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-white/60 bg-white/50 backdrop-blur-sm p-3">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-white p-2">
               <div className="aspect-video rounded-xl overflow-hidden">
                 <video
                   className="w-full h-full object-cover"
@@ -392,7 +392,6 @@ export default function BariyerSistemleriPage() {
           <div className="space-y-16 max-w-7xl mx-auto">
             {segments.map((segment, index) => {
               const isEven = index % 2 === 0;
-              const Icon = segment.icon;
               
               return (
                 <motion.div 
@@ -401,18 +400,6 @@ export default function BariyerSistemleriPage() {
                   className="relative"
                 >
                   <Card className="h-full hover:shadow-lg transition-shadow duration-300 relative">
-                    {/* Icon Badge */}
-                    <div className="absolute top-3 right-3 z-10">
-                      <div className="relative">
-                        <div className={`bg-gradient-to-r ${segment.gradient} text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl`}>
-                          <div className="flex items-center gap-2">
-                            <Icon className="w-4 h-4" />
-                            <span>{segment.id}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
                     <CardContent className="p-6">
                       <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8`}>
                         {/* Görsel */}
@@ -431,7 +418,7 @@ export default function BariyerSistemleriPage() {
                         {/* İçerik */}
                         <div className="lg:w-1/2">
                           <h3 className="text-2xl font-bold text-gray-900 mb-2">{segment.title}</h3>
-                          <p className={`font-semibold mb-4 bg-gradient-to-r ${segment.gradient} bg-clip-text text-transparent`}>
+                          <p className="font-semibold mb-4 text-primary">
                             {segment.subtitle}
                           </p>
                           <p className="text-gray-600 mb-6 leading-relaxed">{segment.description}</p>
@@ -456,7 +443,7 @@ export default function BariyerSistemleriPage() {
                           <ul className="space-y-2 mb-6">
                             {segment.features.map((feature, idx) => (
                               <li key={idx} className="flex items-center text-sm text-gray-600">
-                                <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                                <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
                                 {feature}
                               </li>
                             ))}
@@ -480,7 +467,7 @@ export default function BariyerSistemleriPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <motion.div className="text-center mb-16" {...fadeInUp}>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -499,15 +486,15 @@ export default function BariyerSistemleriPage() {
             viewport={{ once: true }}
           >
             {[
-              { title: "Otopark ve Garajlar", desc: "AVM, rezidans, ofis ve site otoparkları için otomatik otopark bariyerleri", icon: SquareParking, gradient: "from-slate-900 to-slate-800" },
-              { title: "Sanayi Tesisleri", desc: "Fabrika ve üretim tesislerinde araç giriş-çıkış kontrolü", icon: Factory, gradient: "from-slate-900 to-slate-800" },
-              { title: "Alışveriş Merkezleri", desc: "Çok katlı otopark sistemleri ve vale hizmeti için bariyer çözümleri", icon: ShoppingCart, gradient: "from-slate-900 to-slate-800" },
-              { title: "Askeri ve Resmi Kurumlar", desc: "Road blocker ve yüksek güvenlikli bariyer sistemleri", icon: ShieldCheck, gradient: "from-slate-900 to-slate-800" },
-              { title: "Havalimanları", desc: "Terminal giriş-çıkış noktaları ve park alanları için hidrolik bariyerler", icon: Plane, gradient: "from-slate-900 to-slate-800" },
-              { title: "Konut Siteleri", desc: "Rezidans, villa ve site girişleri için uzaktan kumandalı bariyerler", icon: Home, gradient: "from-slate-900 to-slate-800" },
-              { title: "Oteller ve Tesisler", desc: "Misafir araç park kontrolü ve otopark yönetim sistemleri", icon: Hotel, gradient: "from-slate-900 to-slate-800" },
-              { title: "Hastaneler", desc: "Acil servis ve doktor park alanları için özel bariyer çözümleri", icon: Hospital, gradient: "from-primary to-slate-800" },
-              { title: "Kamu Binaları", desc: "Belediye, valilik ve resmi kurumlar için güvenlik bariyerleri", icon: Landmark, gradient: "from-slate-500 to-slate-600" }
+              { title: "Otopark ve Garajlar", desc: "AVM, rezidans, ofis ve site otoparkları için otomatik otopark bariyerleri", icon: SquareParking },
+              { title: "Sanayi Tesisleri", desc: "Fabrika ve üretim tesislerinde araç giriş-çıkış kontrolü", icon: Factory },
+              { title: "Alışveriş Merkezleri", desc: "Çok katlı otopark sistemleri ve vale hizmeti için bariyer çözümleri", icon: ShoppingCart },
+              { title: "Askeri ve Resmi Kurumlar", desc: "Road blocker ve yüksek güvenlikli bariyer sistemleri", icon: ShieldCheck },
+              { title: "Havalimanları", desc: "Terminal giriş-çıkış noktaları ve park alanları için hidrolik bariyerler", icon: Plane },
+              { title: "Konut Siteleri", desc: "Rezidans, villa ve site girişleri için uzaktan kumandalı bariyerler", icon: Home },
+              { title: "Oteller ve Tesisler", desc: "Misafir araç park kontrolü ve otopark yönetim sistemleri", icon: Hotel },
+              { title: "Hastaneler", desc: "Acil servis ve doktor park alanları için özel bariyer çözümleri", icon: Hospital },
+              { title: "Kamu Binaları", desc: "Belediye, valilik ve resmi kurumlar için güvenlik bariyerleri", icon: Landmark }
             ].map((area, index) => (
               <motion.div key={index} variants={fadeInUp}>
                 <div className="group relative">
@@ -546,31 +533,23 @@ export default function BariyerSistemleriPage() {
             viewport={{ once: true }}
           >
             {[
-              { step: "1", title: "Keşif ve Analiz", desc: "Yerinde keşif, ihtiyaç analizi ve ölçüm", time: "1 Gün", color: "blue" },
-              { step: "2", title: "Proje ve Teklif", desc: "Detaylı proje planı ve uygun fiyat teklifi hazırlama", time: "1-2 Gün", color: "purple" },
-              { step: "3", title: "Kurulum", desc: "Profesyonel montaj ekibi ile güvenli kurulum", time: "2-4 Saat", color: "green" },
-              { step: "4", title: "Test ve Eğitim", desc: "Sistem testleri ve kullanıcı eğitimi", time: "1 Saat", color: "orange" }
+              { step: "1", title: "Keşif ve Analiz", desc: "Yerinde keşif, ihtiyaç analizi ve ölçüm", time: "1 Gün" },
+              { step: "2", title: "Proje ve Teklif", desc: "Detaylı proje planı ve uygun fiyat teklifi hazırlama", time: "1-2 Gün" },
+              { step: "3", title: "Kurulum", desc: "Profesyonel montaj ekibi ile güvenli kurulum", time: "2-4 Saat" },
+              { step: "4", title: "Test ve Eğitim", desc: "Sistem testleri ve kullanıcı eğitimi", time: "1 Saat" }
             ].map((item, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <div className="group relative h-full">
-                  <div className={`absolute -inset-1 bg-gradient-to-br from-${item.color}-400 to-${item.color}-600 rounded-3xl blur-lg opacity-20 group-hover:opacity-40 transition duration-500`}></div>
-                  <Card className="relative bg-gradient-to-br from-white to-slate-50 border-2 border-slate-200/50 p-8 hover:border-primary/30 transition-all duration-500 h-full rounded-3xl group-hover:-translate-y-2">
-                    <div className="text-center relative">
-                      <div className={`relative inline-block mb-6`}>
-                        <div className={`absolute inset-0 bg-gradient-to-br from-${item.color}-500 to-${item.color}-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity`}></div>
-                        <div className={`relative w-20 h-20 bg-gradient-to-br from-${item.color}-500 to-${item.color}-600 rounded-2xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300`}>
-                          <span className="text-white text-3xl font-bold">{item.step}</span>
-                        </div>
-                      </div>
-                      <h3 className="font-bold text-xl mb-3 text-slate-800">{item.title}</h3>
-                      <p className="text-slate-600 text-sm mb-4 leading-relaxed">{item.desc}</p>
-                      <div className={`inline-flex items-center gap-2 bg-gradient-to-r from-${item.color}-50 to-${item.color}-100 text-${item.color}-700 px-4 py-2 rounded-full text-sm font-semibold border border-${item.color}-200`}>
-                        <Clock className="w-4 h-4" />
-                        {item.time}
-                      </div>
-                    </div>
-                  </Card>
-                </div>
+                <Card className="bg-white border border-slate-200 p-8 h-full rounded-xl text-center">
+                  <div className="w-14 h-14 bg-slate-900 rounded-lg flex items-center justify-center mx-auto mb-6">
+                    <span className="text-white text-2xl font-bold">{item.step}</span>
+                  </div>
+                  <h3 className="font-bold text-xl mb-3 text-slate-800">{item.title}</h3>
+                  <p className="text-slate-600 text-sm mb-4 leading-relaxed">{item.desc}</p>
+                  <div className="inline-flex items-center gap-2 text-slate-700 text-sm font-semibold">
+                    <Clock className="w-4 h-4 text-primary" />
+                    {item.time}
+                  </div>
+                </Card>
               </motion.div>
             ))}
           </motion.div>
@@ -589,8 +568,8 @@ export default function BariyerSistemleriPage() {
           </motion.div>
 
           <motion.div className="max-w-6xl mx-auto overflow-x-auto" {...fadeInUp}>
-            <table className="w-full bg-white shadow-2xl rounded-2xl overflow-hidden">
-              <thead className="bg-gradient-to-r from-slate-800 to-slate-700">
+            <table className="w-full bg-white border border-slate-200 rounded-xl overflow-hidden">
+              <thead className="bg-slate-900">
                 <tr>
                   <th className="px-6 py-4 text-left text-white font-bold">Özellik</th>
                   <th className="px-6 py-4 text-center text-white font-bold">PT Dinamik</th>
@@ -668,65 +647,55 @@ export default function BariyerSistemleriPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <motion.div {...fadeInUp}>
-              <div className="group relative h-full">
-                <div className="absolute -inset-1 bg-slate-900 rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition duration-500"></div>
-                <Card className="relative border-2 border-green-100 hover:border-green-200 p-10 h-full rounded-3xl bg-white group-hover:-translate-y-1 transition-all duration-500">
-                  <div className="flex items-center mb-8">
-                    <div className="w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                      <Wrench className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-slate-800 ml-4">Periyodik Bakım Hizmetleri</h3>
+              <Card className="border border-slate-200 p-8 h-full rounded-xl bg-white">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-slate-900 rounded-lg flex items-center justify-center">
+                    <Wrench className="w-6 h-6 text-white" />
                   </div>
-                  <ul className="space-y-4">
-                    {[
-                      "3 aylık rutin kontrol ve bakım",
-                      "Motor ve mekanik sistem kontrolü",
-                      "Elektronik kart ve sensör testleri",
-                      "Yağlama ve temizlik işlemleri",
-                      "Güvenlik sistemleri kalibrasyonu",
-                      "Detaylı bakım raporu sunumu"
-                    ].map((item, index) => (
-                      <li key={index} className="flex items-start space-x-3 group/item">
-                        <div className="w-6 h-6 bg-slate-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform">
-                          <CheckCircle2 className="w-4 h-4 text-green-600" />
-                        </div>
-                        <span className="text-slate-700 group-hover/item:text-slate-900 transition-colors">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </Card>
-              </div>
+                  <h3 className="text-2xl font-bold text-slate-800 ml-4">Periyodik Bakım Hizmetleri</h3>
+                </div>
+                <ul className="space-y-3">
+                  {[
+                    "3 aylık rutin kontrol ve bakım",
+                    "Motor ve mekanik sistem kontrolü",
+                    "Elektronik kart ve sensör testleri",
+                    "Yağlama ve temizlik işlemleri",
+                    "Güvenlik sistemleri kalibrasyonu",
+                    "Detaylı bakım raporu sunumu"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
             </motion.div>
 
             <motion.div {...fadeInUp}>
-              <div className="group relative h-full">
-                <div className="absolute -inset-1 bg-gradient-to-br from-primary to-slate-800 rounded-3xl blur-xl opacity-25 group-hover:opacity-40 transition duration-500"></div>
-                <Card className="relative border-0 p-10 h-full rounded-3xl bg-gradient-to-br from-primary via-primary to-slate-800 text-white group-hover:-translate-y-1 transition-all duration-500 shadow-2xl">
-                  <div className="flex items-center mb-8">
-                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 border border-white/30">
-                      <Phone className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold ml-4">Teknik Destek</h3>
+              <Card className="border border-slate-200 p-8 h-full rounded-xl bg-white">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-slate-900 rounded-lg flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-white" />
                   </div>
-                  <ul className="space-y-4">
-                    {[
-                      "Acil arıza müdahale hizmeti",
-                      "Telefon ve online teknik destek",
-                      "Yedek parça temin garantisi",
-                      "Yerinde tamir ve onarım",
-                      "Uzaktan sistem kontrolü",
-                      "Kullanıcı eğitim programları"
-                    ].map((item, index) => (
-                      <li key={index} className="flex items-start space-x-3 group/item">
-                        <div className="w-6 h-6 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 border border-white/30 group-hover/item:scale-110 transition-transform">
-                          <CheckCircle2 className="w-4 h-4 text-white" />
-                        </div>
-                        <span className="text-white/95 group-hover/item:text-white transition-colors">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </Card>
-              </div>
+                  <h3 className="text-2xl font-bold text-slate-800 ml-4">Teknik Destek</h3>
+                </div>
+                <ul className="space-y-3">
+                  {[
+                    "Acil arıza müdahale hizmeti",
+                    "Telefon ve online teknik destek",
+                    "Yedek parça temin garantisi",
+                    "Yerinde tamir ve onarım",
+                    "Uzaktan sistem kontrolü",
+                    "Kullanıcı eğitim programları"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
             </motion.div>
           </div>
         </div>
@@ -743,51 +712,19 @@ export default function BariyerSistemleriPage() {
             </p>
           </motion.div>
 
-          <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto" {...fadeInUp}>
-            <div className="group relative">
-              <div className="absolute -inset-1 bg-slate-900 rounded-3xl blur-xl opacity-25 group-hover:opacity-50 transition duration-500"></div>
-              <Card className="relative border-0 p-10 text-center bg-white rounded-3xl group-hover:-translate-y-2 transition-all duration-500 shadow-xl">
-                <div className="relative inline-block mb-6">
-                  <div className="absolute inset-0 bg-slate-900 rounded-3xl blur-2xl opacity-40"></div>
-                  <div className="relative w-24 h-24 bg-slate-900 rounded-3xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                    <span className="text-white text-4xl font-bold">2</span>
-                  </div>
-                </div>
-                <h3 className="text-3xl font-bold text-slate-800 mb-3">Yıl Garanti</h3>
-                <p className="text-slate-600">Üretici garantisi kapsamında tüm parça ve işçilik</p>
-                <div className="absolute bottom-0 left-0 h-2 bg-primary w-0 group-hover:w-full transition-all duration-500 rounded-b-3xl"></div>
-              </Card>
-            </div>
-
-            <div className="group relative">
-              <div className="absolute -inset-1 bg-gradient-to-br from-primary to-slate-800 rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition duration-500"></div>
-              <Card className="relative border-0 p-10 text-center bg-gradient-to-br from-primary via-primary to-slate-800 rounded-3xl text-white group-hover:scale-105 transition-all duration-500 shadow-2xl">
-                <div className="relative inline-block mb-6">
-                  <div className="absolute inset-0 bg-white/20 rounded-3xl blur-2xl"></div>
-                  <div className="relative w-24 h-24 bg-white/20 backdrop-blur-md rounded-3xl flex items-center justify-center shadow-2xl border-2 border-white/30 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                    <span className="text-5xl font-bold">∞</span>
-                  </div>
-                </div>
-                <h3 className="text-3xl font-bold mb-3">Satış Sonrası Destek</h3>
-                <p className="text-white/95">Telefon danışmanlığı ve teknik destek</p>
-              </Card>
-            </div>
-
-            <div className="group relative">
-              <div className="absolute -inset-1 bg-slate-900 rounded-3xl blur-xl opacity-25 group-hover:opacity-50 transition duration-500"></div>
-              <Card className="relative border-0 p-10 text-center bg-white rounded-3xl group-hover:-translate-y-2 transition-all duration-500 shadow-xl">
-                <div className="relative inline-block mb-6">
-                  <div className="absolute inset-0 bg-slate-900 rounded-3xl blur-2xl opacity-40"></div>
-                  <div className="relative w-24 h-24 bg-slate-900 rounded-3xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                    <span className="text-white text-4xl font-bold">24</span>
-                  </div>
-                </div>
-                <h3 className="text-3xl font-bold text-slate-800 mb-3">Saat İçinde</h3>
-                <p className="text-slate-600">Arıza bildirimlerinde maksimum müdahale süresi</p>
-                <div className="absolute bottom-0 left-0 h-2 bg-primary w-0 group-hover:w-full transition-all duration-500 rounded-b-3xl"></div>
-              </Card>
-            </div>
-          </motion.div>
+          <motion.dl className="grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-200 border border-slate-200 rounded-xl overflow-hidden max-w-5xl mx-auto" {...fadeInUp}>
+            {[
+              { deger: "2 Yıl", baslik: "Garanti", metin: "Üretici garantisi kapsamında tüm parça ve işçilik" },
+              { deger: "Satış Sonrası", baslik: "Destek", metin: "Telefon danışmanlığı ve teknik destek" },
+              { deger: "24 Saat", baslik: "Müdahale", metin: "Arıza bildirimlerinde maksimum müdahale süresi" },
+            ].map((g) => (
+              <div key={g.baslik} className="bg-white p-8 text-center">
+                <dt className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-2">{g.baslik}</dt>
+                <dd className="text-3xl font-bold text-slate-900 mb-2">{g.deger}</dd>
+                <dd className="text-slate-600">{g.metin}</dd>
+              </div>
+            ))}
+          </motion.dl>
         </div>
       </section>
 
@@ -811,29 +748,15 @@ export default function BariyerSistemleriPage() {
           >
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
-              const gradients = [
-                "from-slate-900 to-slate-800",
-                "from-slate-900 to-slate-800", 
-                "from-slate-900 to-slate-800",
-                "from-slate-900 to-slate-800"
-              ];
-              const gradient = gradients[index % gradients.length];
-              
               return (
                 <motion.div key={index} variants={fadeInUp}>
-                  <div className="group relative h-full">
-                    <div className={`absolute -inset-0.5 bg-gradient-to-r ${gradient} rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500`}></div>
-                    <Card className="relative bg-white border-0 p-8 hover:bg-slate-50 transition-all duration-500 h-full rounded-3xl group-hover:-translate-y-1">
-                      <div className="text-center">
-                        <div className={`w-20 h-20 bg-gradient-to-br ${gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
-                          <Icon className="w-10 h-10 text-white" />
-                        </div>
-                        <h3 className="font-bold text-xl mb-3 text-slate-800">{benefit.title}</h3>
-                        <p className="text-slate-600 text-sm leading-relaxed">{benefit.description}</p>
-                      </div>
-                      <div className={`absolute bottom-0 left-0 h-1.5 bg-gradient-to-r ${gradient} w-0 group-hover:w-full transition-all duration-500 rounded-b-3xl`}></div>
-                    </Card>
-                  </div>
+                  <Card className="bg-white border border-slate-200 p-8 h-full rounded-xl text-center">
+                    <div className="w-14 h-14 bg-slate-900 rounded-lg flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="font-bold text-xl mb-3 text-slate-800">{benefit.title}</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">{benefit.description}</p>
+                  </Card>
                 </motion.div>
               );
             })}
@@ -880,8 +803,7 @@ export default function BariyerSistemleriPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-white/5"></div>
+      <section className="py-20 bg-slate-900 relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div className="max-w-4xl mx-auto text-center" {...fadeInUp}>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -912,7 +834,7 @@ export default function BariyerSistemleriPage() {
                 size="lg"
                 data-testid="button-cta-contact"
                 onClick={handleContactClick}
-                className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-lg group"
+                className="px-12 py-6 text-lg group"
               >
                 İletişime Geçin
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
