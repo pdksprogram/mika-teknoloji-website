@@ -191,11 +191,11 @@ const segments = [
 const faqs = [
   {
     question: "Mantar bariyer, road blocker ve tuzak kapanlar arasındaki fark nedir?",
-    answer: "Mantar bariyer hidrolik sistemle yükselen silindirik bariyer, road blocker araç trafiğini tamamen engelleyen yüksek güvenlikli yol kesici sistem, tuzak kapanlar ise yeraltına gömülen acil durum güvenlik sistemleridir. Her biri farklı güvenlik seviyesi ve kullanım alanı için tasarlanmıştır."
+    answer: "Mantar bariyer hidrolik sistemle yükselen silindirik bariyer, road blocker araç geçişini tamamen kesen, yüksek güvenlikli yol kesici sistem, tuzak kapanlar ise yeraltına gömülen acil durum güvenlik sistemleridir. Her biri farklı güvenlik seviyesi ve kullanım alanı için tasarlanmıştır."
   },
   {
     question: "Otopark bariyeri fiyatları ne kadardır?",
-    answer: "Bariyer fiyatları model, özellikler ve kurulum gereksinimlerine göre değişiklik gösterir. Detaylı fiyat teklifi için bizimle iletişime geçebilirsiniz. Ücretsiz keşif ve montaj danışmanlığı sunuyoruz."
+    answer: "Bariyer fiyatları model, özellikler ve kurulum gereksinimlerine göre değişiklik gösterir. Detaylı fiyat teklifi ve keşif için bize ulaşın."
   },
   {
     question: "Road blocker sistemler nerede kullanılır?",
