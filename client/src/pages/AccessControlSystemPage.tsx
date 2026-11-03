@@ -194,7 +194,7 @@ export default function AccessControlSystemPage() {
       </section>
 
       {/* [S2] Cloud Based Access Control Section */}
-      <section id="s2" data-section="S2" className="relative py-32 bg-gray-50">
+      <section id="s2" data-section="S2" className="relative py-32 bg-gray-50 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
