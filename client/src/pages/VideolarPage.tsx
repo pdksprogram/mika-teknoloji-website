@@ -1002,7 +1002,7 @@ export default function VideolarPage() {
     <>
       <Helmet>
         <title>PDKS Eğitim Videoları | Personel Devam Kontrol Sistemi Rehber | Mika Teknoloji</title>
-        <meta name="description" content="PDKS (Personel Devam Kontrol Sistemi) eğitim videoları. Giriş-çıkış takibi, vardiya planlama, izin yönetimi ve puantaj. 30+ ücretsiz video ile PDKS kullanmayı öğrenin." />
+        <meta name="description" content="PDKS (Personel Devam Kontrol Sistemi) eğitim videoları. Giriş-çıkış takibi, vardiya planlama, izin yönetimi ve puantaj. 30+ eğitim videosu ile PDKS kullanmayı öğrenin." />
         <meta name="keywords" content="PDKS eğitim videoları, personel devam kontrol sistemi, PDKS nasıl kullanılır, QR PDKS, vardiya planlama videosu, izin yönetimi, puantaj oluşturma, mesai takibi, personel takip sistemi, WebPDKS eğitim, mobil PDKS, shift planlama, PDKS kurulum rehberi 2025" />
         <meta name="robots" content="index,follow,max-video-preview:-1,max-image-preview:large,max-snippet:-1" />
         <link rel="canonical" href="https://mikateknoloji.com/videolar" />
@@ -1010,7 +1010,7 @@ export default function VideolarPage() {
         <meta name="language" content="tr" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="PDKS Eğitim Videoları - 30+ Ücretsiz Video Rehber | Mika Teknoloji" />
+        <meta property="og:title" content="PDKS Eğitim Videoları - 30+ Eğitim Videosu Rehberi | Mika Teknoloji" />
         <meta property="og:description" content="Personel Devam Kontrol Sistemi (PDKS) eğitim videoları. Giriş-çıkış takibi, vardiya planlama, izin yönetimi ve daha fazlası." />
         <meta property="og:url" content="https://mikateknoloji.com/videolar" />
         <meta property="og:site_name" content="Mika Teknoloji" />
@@ -1213,7 +1213,7 @@ export default function VideolarPage() {
                 PDKS Sistemi Hakkında Bilgi Alın
               </h2>
               <p className="text-slate-300 text-sm sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">
-                Ücretsiz demo talebi oluşturun veya WhatsApp üzerinden anında bilgi alın. Profesyonel ekibimiz kurulum desteği sağlar.
+                Demo ve keşif talebi oluşturun veya WhatsApp üzerinden bilgi alın. Profesyonel ekibimiz kurulum desteği sağlar.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
                 <Button
