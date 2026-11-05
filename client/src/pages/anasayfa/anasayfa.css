@@ -1,5 +1,5 @@
 /* Tuğçe tur 4-10 tasarımı. Yalnız .mh altında geçerli; diğer sayfalara dokunmaz. */
-.mh{--hero:#1A1248;--ust:rgba(32,22,88,.94);--panel:#102A56;--panel-acik:#EEF2F7;--altin:#F5A800;
+.mh{--hero:#1A1248;--ust:#201658;--panel:#102A56;--panel-acik:#EEF2F7;--altin:#F5A800;
   --metin:#0A1324;--metin2:#526176;--kenar:#DCE3EC;--dugme:#0E2147;--gri:#F7F8FA;--yesil:#14804A;--kirmizi:#C2331F;
   --gen:1240px;--pay:50px;--ara:96px;--kol:32px;--h1:75px;--h2:40px;--h3:24px;
   --tel-g:270px;--tel-y:600px;--panel-g:868px;}
@@ -16,7 +16,7 @@
 .mh{--pay:20px}
 }
 .mh *{box-sizing:border-box}
-html:has(.mh){scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html:has(.mh){scroll-behavior:auto;scroll-padding-top:104px;-webkit-text-size-adjust:100%}
 .mh{margin:0;background:#fff;color:var(--metin);font:400 18px/30px Inter,system-ui,sans-serif;overflow-x:clip}
 @media (max-width:820px){
 .mh{font-size:16px;line-height:26px}
@@ -264,3 +264,9 @@ html.menu-kilit,html.menu-kilit body{overflow:hidden}
 @media (max-width:820px){.mh .ust .dil{display:none}.mh .alt-yasal a{display:inline-flex;min-height:44px;min-width:44px;align-items:center}}
 /* JavaScript yoksa içerik görünür kalsın: gizleme yalnız uygulama hazırken */
 .mh:not(.hz) .rv-b,.mh:not(.hz) .rv-u{opacity:1;transform:none}
+/* Tur 11: sabit üst şerit; yükseklik kaydırmada değişmez */
+.mh .ust{position:fixed;top:0;left:0;right:0;bottom:auto;z-index:50;box-shadow:0 2px 10px rgba(10,8,40,.25)}
+@media (max-width:820px){html:has(.mh){scroll-padding-top:80px}}
+/* EN alt bölüm üç sütun: Türkçe hedefli sütunlar yok */
+.mh .alt-izgara.alt-en{grid-template-columns:1.4fr repeat(3,1fr)}
+@media (max-width:1100px){.mh .alt-izgara.alt-en{grid-template-columns:repeat(2,minmax(0,1fr))}}

@@ -79,7 +79,7 @@ export function Kirinti({ maddeler, icSinif = "" }: { maddeler: KirintiMaddesi[]
               ) : (
                 <Link href={m.yol} className="hover:text-primary transition-colors">{m.ad}</Link>
               )}
-              {!son && <span aria-hidden="true" className="px-1 text-slate-300">/</span>}
+              {!son && <span aria-hidden="true" className="px-1 text-slate-500">/</span>}
             </li>
           );
         })}

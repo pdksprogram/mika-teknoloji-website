@@ -418,7 +418,7 @@ export default function BariyerSistemleriPage() {
               ].map((item, index) => (
                 <li key={index} className="bg-white p-5">
                   <div className="flex items-baseline justify-between mb-2">
-                    <span className="text-sm font-semibold text-slate-400">{item.step}</span>
+                    <span className="text-sm font-semibold text-slate-500">{item.step}</span>
                     <span className="inline-flex items-center gap-1.5 text-slate-700 text-sm font-semibold">
                       <Clock className="w-4 h-4 text-primary" />
                       {item.time}
@@ -554,9 +554,9 @@ export default function BariyerSistemleriPage() {
             </p>
             <p className="text-slate-300 mb-8">
               <a href={`tel:${DEMO_TELEFON}`} className="text-white font-semibold hover:underline">{DEMO_TELEFON_GORUNEN}</a>
-              <span className="mx-2 text-slate-500">·</span>
+              <span className="mx-2 text-slate-400">·</span>
               <a href="mailto:info@mikateknoloji.com" className="hover:underline">info@mikateknoloji.com</a>
-              <span className="mx-2 text-slate-500">·</span>
+              <span className="mx-2 text-slate-400">·</span>
               İstanbul
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

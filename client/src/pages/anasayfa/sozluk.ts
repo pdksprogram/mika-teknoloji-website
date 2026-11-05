@@ -8,6 +8,7 @@ export interface Sozluk {
   not_: string; not_sos: string; alt_liste: string; alt_tel: string; neden: string; nedenler: string[][]; alt_adminim: string;
   dag: string; dag_sol: string; dag_sag: string; dag_x: string[]; dag_t: string[]; bloklar: Blok[]; mobil: string; mobil_p: string;
   teller: string[][]; sos_h: string; sos_p: string; sos: string[][]; sektor: string; sektorler: string[][]; son_h: string; son_p: string;
+  son_cta: string;
   alt: [string, string[][]][]; dil_ad: string; dil_kisa: string; dil_yol: string; dil_kod: string;
   seo: { baslik: string; aciklama: string; yerel: string; diger: string; kurum: string; yazilim: string; site: string };
 }
@@ -180,6 +181,7 @@ export const SOZLUK: Record<Dil, Sozluk> = {
     ],
     "son_h": "Kendi yapınızda görelim",
     "son_p": "Personel sayınızı ve kapılarınızı konuşalım, keşif ve teklifi birlikte çıkaralım.",
+    "son_cta": "Teklif ve Demo Talep Edin",
     "alt": [
       [
         "Ürünler",
@@ -439,111 +441,11 @@ export const SOZLUK: Record<Dil, Sozluk> = {
     ],
     "son_h": "Let's look at your setup",
     "son_p": "Tell us your headcount and doors, and we will prepare a site survey and a quote together.",
+    "son_cta": "Email Us",
     "alt": [
-      [
-        "Products",
-        [
-          [
-            "Attendance Software",
-            "/pdks-programi"
-          ],
-          [
-            "Employee Tracking",
-            "/urunler/personel-takip"
-          ],
-          [
-            "QR Attendance",
-            "/qr-pdks"
-          ],
-          [
-            "Timesheets",
-            "/puantaj-programi"
-          ],
-          [
-            "Shift Planning",
-            "/vardiya-takip-programi"
-          ],
-          [
-            "Overtime",
-            "/fazla-mesai-hesaplama"
-          ]
-        ]
-      ],
-      [
-        "Hardware",
-        [
-          [
-            "Turnstiles",
-            "/urunler/turnike"
-          ],
-          [
-            "Barriers",
-            "/urunler/bariyer-sistemleri"
-          ],
-          [
-            "Face Recognition",
-            "/urunler/yuz-tanima"
-          ],
-          [
-            "Fingerprint",
-            "/urunler/parmak-izi-tanima"
-          ],
-          [
-            "Access Control",
-            "/urunler/gecis-kontrol"
-          ],
-          [
-            "Guard Tour",
-            "/qr-bekci"
-          ]
-        ]
-      ],
-      [
-        "Company",
-        [
-          [
-            "About",
-            "/hakkimizda"
-          ],
-          [
-            "References",
-            "/referanslar"
-          ],
-          [
-            "Blog",
-            "/blog"
-          ],
-          [
-            "Videos",
-            "/videolar"
-          ],
-          [
-            "Contact",
-            "/iletisim"
-          ]
-        ]
-      ],
-      [
-        "Legal",
-        [
-          [
-            "Data Protection",
-            "/kvkk"
-          ],
-          [
-            "Privacy",
-            "/mobil-gizlilik-sozlesmesi.php"
-          ],
-          [
-            "Terms",
-            "/hizmet-sartlari"
-          ],
-          [
-            "Data Deletion",
-            "/veri-silme"
-          ]
-        ]
-      ]
+      ["Product", [["Products", "#urun"], ["Solutions", "#akis"], ["Industries", "#sektor"], ["Mobile", "#mobil"]]],
+      ["Contact", [["Request a Quote", "#demo"], ["Phone", "@tel"], ["info@mikateknoloji.com", "mailto:info@mikateknoloji.com"], ["WhatsApp", "@wa"]]],
+      ["Legal (in Turkish)", [["Data Protection", "/kvkk"], ["Privacy", "/mobil-gizlilik-sozlesmesi.php"], ["Terms", "/hizmet-sartlari"], ["Data Deletion", "/veri-silme"]]]
     ],
     "seo": {
       "baslik": "Time and Attendance Software | Mika Teknoloji",

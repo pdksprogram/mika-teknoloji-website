@@ -246,11 +246,11 @@ export default function FaceRecognitionSystemPage() {
                 <table className="w-full border-collapse border border-gray-300 bg-white rounded-lg">
                   <thead>
                     <tr className="bg-primary text-white">
-                      <th className="border border-gray-300 px-4 py-3 text-left">Model</th>
-                      <th className="border border-gray-300 px-4 py-3 text-center">Yüz Kapasitesi</th>
-                      <th className="border border-gray-300 px-4 py-3 text-center">Parmak İzi</th>
-                      <th className="border border-gray-300 px-4 py-3 text-center">Log Kapasitesi</th>
-                      <th className="border border-gray-300 px-4 py-3 text-center">Özel Özellik</th>
+                      <th className="border border-gray-300 px-4 py-3 text-white text-left">Model</th>
+                      <th className="border border-gray-300 px-4 py-3 text-white text-center">Yüz Kapasitesi</th>
+                      <th className="border border-gray-300 px-4 py-3 text-white text-center">Parmak İzi</th>
+                      <th className="border border-gray-300 px-4 py-3 text-white text-center">Log Kapasitesi</th>
+                      <th className="border border-gray-300 px-4 py-3 text-white text-center">Özel Özellik</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -324,7 +324,7 @@ export default function FaceRecognitionSystemPage() {
 
             {/* Call to Action */}
             <div className="text-center mt-12 bg-slate-900 border-t-4 border-primary text-white rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-4">
+              <h3 className="text-2xl font-bold mb-4 text-white">
                 Yüz Tanıma Sistemi Fiyatları ve Teklif Almak İçin
               </h3>
               <p className="text-lg mb-6 opacity-90">

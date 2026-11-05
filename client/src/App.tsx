@@ -6,7 +6,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import SiteFooter from "@/components/SiteFooter";
-import WhatsAppWidget from "@/components/WhatsAppWidget";
 import { LanguageProvider } from "@/hooks/useLanguage";
 import { initGA } from "@/lib/analytics";
 import { useAnalytics } from "@/hooks/use-analytics";
@@ -171,17 +170,6 @@ function Router() {
   );
 }
 
-// Videolar sayfası kendi WhatsApp düğmesini taşır (o sayfaya dokunulmaz); orada genel düğme çift görünmesin.
-function SiteWhatsApp() {
-  const [konum] = useLocation();
-  const yol = konum.replace(/\/+$/, "");
-  if (yol === "/videolar") return null;
-  // Ana sayfa WhatsApp bağlantısını son bölümde taşır; yüzen düğme ürün görsellerinin üstüne binmesin.
-  if (yol === "" || yol === "/tr") return null;
-  // İletişim sayfası formun yanında kendi WhatsApp düğmesini taşır; mobilde yüzen düğme formu örtmesin.
-  return <WhatsAppWidget mobildeGizle={yol === "/iletisim"} />;
-}
-
 // Geri/ileri tuşunda konumu tarayıcı geri yükler; yönlendirici dinleyicisinden önce işaretlenir.
 // Adres tutulur: #bölüm tıklaması da popstate atar, sonraki bağlantı geri tuşu sanılmasın.
 let geriAdres: string | null = null;
@@ -232,7 +220,6 @@ function App(_props: { onRenderli?: boolean }) {
       <LanguageProvider>
         <TooltipProvider>
         <SiteKabugu />
-        <SiteWhatsApp />
         <Toaster />
         </TooltipProvider>
       </LanguageProvider>

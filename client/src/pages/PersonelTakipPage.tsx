@@ -715,14 +715,14 @@ export default function PersonelTakipPage() {
           >
             <div className="inline-flex items-center gap-3 mb-6">
               <Shield className="h-5 w-5 text-primary" />
-              <span className="text-primary font-semibold">Kurumsal Güvenilirlik</span>
+              <span className="text-[#F5A800] font-semibold">Kurumsal Güvenilirlik</span>
             </div>
             
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
               Güvenilir PDKS Altyapısı
             </h2>
             <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-              İstanbul merkezli ekibimizle Türkiye genelindeki işletmelere hizmet veriyoruz. Çalıştığımız kurumları <Link href="/referanslar" className="text-primary hover:text-white underline">referanslar</Link> sayfasında görebilirsiniz.
+              İstanbul merkezli ekibimizle Türkiye genelindeki işletmelere hizmet veriyoruz. Çalıştığımız kurumları <Link href="/referanslar" className="text-[#F5A800] hover:text-white underline">referanslar</Link> sayfasında görebilirsiniz.
             </p>
           </motion.div>
 
@@ -788,7 +788,7 @@ export default function PersonelTakipPage() {
               ].map((cert, index) => (
                 <div key={index} className={"border border-slate-700 rounded-md px-4 py-3 text-center"}>
                   <div className={"text-slate-200 font-bold text-sm mb-1"}>{cert.name}</div>
-                  <div className="text-slate-500 text-xs">{cert.desc}</div>
+                  <div className="text-slate-300 text-xs">{cert.desc}</div>
                 </div>
               ))}
             </div>

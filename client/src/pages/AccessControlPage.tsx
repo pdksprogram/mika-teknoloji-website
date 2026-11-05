@@ -459,7 +459,7 @@ export default function AccessControlPage() {
                         {/* Clean Interface */}
                         <div className="p-3">
                           <div className="flex justify-between items-center mb-2">
-                            <div className="text-primary text-xs font-mono">MIKA</div>
+                            <div className="text-[#F5A800] text-xs font-mono">MIKA</div>
                             <div className="w-2 h-2 bg-primary rounded-full"></div>
                           </div>
                           <div className="space-y-1">

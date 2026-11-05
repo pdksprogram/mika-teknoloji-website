@@ -102,7 +102,7 @@ export function kayitliDiliOku(): Language {
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [selectedLanguage, setSelectedLanguage] = useState<Language>(kayitliDiliOku);
+  const [selectedLanguage, setSelectedLanguage] = useState<Language>('tr');
 
   const t = translations[selectedLanguage];
 

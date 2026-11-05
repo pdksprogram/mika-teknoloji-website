@@ -655,7 +655,7 @@ const subcategoryIcons: Record<string, typeof BookOpen> = {
 const levelColors: Record<string, string> = {
   "Başlangıç": "bg-slate-100 text-slate-700",
   "Orta": "bg-slate-100 text-slate-700",
-  "İleri": "bg-primary/10 text-primary",
+  "İleri": "bg-slate-100 text-slate-700",
 };
 
 const faqItems = [
@@ -1107,7 +1107,7 @@ export default function VideolarPage() {
                       <IconComponent className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                     </div>
                     <h2 className="text-lg sm:text-2xl font-bold text-slate-800">{subcategory}</h2>
-                    <span className="text-xs sm:text-sm text-slate-400 ml-1">({subcatVideos.length} video)</span>
+                    <span className="text-xs sm:text-sm text-slate-500 ml-1">({subcatVideos.length} video)</span>
                   </div>
                   <motion.div
                     className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 max-w-5xl mx-auto"
@@ -1128,7 +1128,7 @@ export default function VideolarPage() {
               <div className="text-center py-12 sm:py-16 text-slate-500">
                 <Video className="h-12 w-12 sm:h-16 sm:w-16 mx-auto mb-4 opacity-30" />
                 <p className="text-base sm:text-lg mb-2">Aramanızla eşleşen video bulunamadı.</p>
-                <p className="text-sm text-slate-400">Farklı anahtar kelimeler deneyin veya kategori filtresini değiştirin.</p>
+                <p className="text-sm text-slate-500">Farklı anahtar kelimeler deneyin veya kategori filtresini değiştirin.</p>
               </div>
             )}
           </div>

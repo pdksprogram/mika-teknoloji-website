@@ -1,14 +1,9 @@
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link, useLocation } from "wouter";
 import { Menu, X, Search, ChevronDown, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import {
   Accordion,
   AccordionContent,
@@ -19,8 +14,10 @@ import {
 import { useLanguage } from "@/hooks/useLanguage";
 import { menuSuz } from "@/lib/rotalar";
 import { CTA_ARA, CTA_DONANIM, DEMO_TELEFON } from "@/lib/iletisim";
-import { boyut } from "@/lib/gorselBoyut";
-const mikaLogo = "/mika-logo.jpg"; // Real Mika logo
+import MikaMarka from "@/components/MikaMarka";
+
+const BAR_BAG = "relative font-medium text-white/90 transition-colors duration-200 hover:text-white group";
+const BAR_CIZGI = "absolute -bottom-1 left-0 h-0.5 bg-[#F5A800] transition-all duration-200";
 const MEGA_SUTUN: Record<number, string> = { 1: "grid-cols-1", 2: "grid-cols-2", 3: "grid-cols-3", 4: "grid-cols-4" };
 const MEGA_GENISLIK: Record<number, string> = { 1: "w-80", 2: "w-[36rem]", 3: "w-[52rem]", 4: "w-[64rem]" };
 
@@ -34,7 +31,7 @@ export default function Header() {
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [location] = useLocation();
   // const isMobile = useIsMobile(); // Not used currently
-  const { selectedLanguage, setSelectedLanguage, t } = useLanguage();
+  const { t } = useLanguage();
   
   // Touch device detection for mobile dropdown behavior
   const [isTouchDevice, setIsTouchDevice] = useState(false);
@@ -43,11 +40,6 @@ export default function Header() {
       setIsTouchDevice(window.matchMedia('(hover: none)').matches);
     }
   }, []);
-
-  const languages = [
-    { code: "tr", name: "Türkçe" },
-    { code: "en", name: "English" }
-  ];
 
   // Site içi arama verileri
   const searchableContent = [
@@ -94,12 +86,6 @@ export default function Header() {
     setIsDropdownOpen(false);
     setActiveMenuType(null);
   }, [location]);
-
-  // Handle language change
-  const handleLanguageChange = (langCode: string) => {
-    setSelectedLanguage(langCode as 'tr' | 'en');
-    console.log("Language changed to:", langCode);
-  };
 
   // Site içi arama fonksiyonu
   const handleSearch = (query: string) => {
@@ -202,28 +188,23 @@ export default function Header() {
   return (
     <>
       {/* Main Header */}
-      <header 
-        className={`sticky top-0 z-50 bg-white transition-all duration-300 ${
-          isScrolled ? "shadow-lg" : "shadow-sm"
+      <Helmet>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" />
+      </Helmet>
+      <header
+        className={`sticky top-0 z-50 border-b-2 border-[#F5A800] bg-[#201658] text-white ${
+          isScrolled ? "shadow-[0_2px_10px_rgba(10,8,40,.25)]" : ""
         }`}
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16 lg:h-20">
+          <div className="flex items-center justify-between gap-4 h-[62px] lg:h-[86px]">
             {/* Logo */}
-            <Link href={selectedLanguage === "en" ? "/" : "/tr"} className="flex items-center space-x-3" data-testid="logo-link">
-              <div className="flex items-center">
-                <div className="w-16 h-16 rounded-lg overflow-hidden">
-                  <img {...boyut(mikaLogo)} src={mikaLogo} alt="Mika Teknoloji Logo" className="w-full h-full object-contain" />
-                </div>
-                <div className="ml-3">
-                  <div className="font-bold text-xl text-slate-800">{t.companyName}</div>
-                  <div className="text-xs text-slate-500 hidden sm:block">{t.companySubtitle}</div>
-                </div>
-              </div>
-            </Link>
+            <MikaMarka />
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden lg:flex items-center space-x-5 xl:space-x-8">
               {navigationItems.map((item) => (
                 <div
                   key={item.href}
@@ -258,15 +239,13 @@ export default function Header() {
                           }
                         }
                       }}
-                      className={`relative font-medium transition-colors duration-200 hover:text-primary group flex items-center space-x-1 ${
-                        isActiveLink(item.href) ? "text-primary" : "text-slate-700"
-                      }`}
+                      className={`${BAR_BAG} flex items-center space-x-1 ${isActiveLink(item.href) ? "text-white" : ""}`}
                       data-testid={`nav-link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
                     >
                       <span>{item.label}</span>
                       <ChevronDown className={`h-4 w-4 transition-transform ${isDropdownOpen && activeMenuType === item.menuType ? 'rotate-180' : ''}`} />
                       <span 
-                        className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-200 ${
+                        className={`${BAR_CIZGI} ${
                           isActiveLink(item.href) ? "w-full" : "w-0 group-hover:w-full"
                         }`}
                       />
@@ -274,14 +253,12 @@ export default function Header() {
                   ) : (
                     <Link
                       href={item.href}
-                      className={`relative font-medium transition-colors duration-200 hover:text-primary group ${
-                        isActiveLink(item.href) ? "text-primary" : "text-slate-700"
-                      }`}
+                      className={`${BAR_BAG} ${isActiveLink(item.href) ? "text-white" : ""}`}
                       data-testid={`nav-link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
                     >
                       {item.label}
                       <span 
-                        className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-200 ${
+                        className={`${BAR_CIZGI} ${
                           isActiveLink(item.href) ? "w-full" : "w-0 group-hover:w-full"
                         }`}
                       />
@@ -294,11 +271,11 @@ export default function Header() {
                     const sutunlar = item.menuType === 'products' ? urunSutunlari : cozumSutunlari;
                     const acik = isDropdownOpen && activeMenuType === item.menuType;
                     return (
-                    <div className={`absolute top-full left-1/2 -translate-x-1/2 max-w-[calc(100vw-2rem)] ${MEGA_GENISLIK[sutunlar.length] ?? MEGA_GENISLIK[4]} bg-white shadow-2xl border-t-4 border-primary z-50${acik ? '' : ' hidden'}`}>
+                    <div className={`absolute top-full left-1/2 -translate-x-1/2 max-w-[calc(100vw-2rem)] ${MEGA_GENISLIK[sutunlar.length] ?? MEGA_GENISLIK[4]} bg-white text-slate-800 shadow-2xl border-t-2 border-[#F5A800] z-50${acik ? '' : ' hidden'}`}>
                       <div className={`grid ${MEGA_SUTUN[sutunlar.length] ?? MEGA_SUTUN[4]} gap-6 p-8`}>
                         {sutunlar.map(([category, items]) => (
                           <div key={category} className="space-y-4">
-                            <h3 className="font-bold text-gray-900 text-lg border-b-2 border-primary pb-2">
+                            <h3 className="font-bold text-gray-900 text-base border-b border-slate-200 pb-2">
                               {category}
                             </h3>
                             <ul className="space-y-2">
@@ -324,42 +301,23 @@ export default function Header() {
               ))}
               
               {/* Language & Search Section - İLETİŞİM | EN | Search */}
-              <div className="flex items-center space-x-1 text-sm font-medium">
-                <span className="text-slate-400">|</span>
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button 
-                      variant="ghost" 
-                      size="sm" 
-                      className="text-slate-700 hover:text-primary px-2 py-1 h-auto text-sm font-medium"
-                      data-testid="main-language-selector"
-                    >
-                      {selectedLanguage.toUpperCase()}
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="min-w-32">
-                    {languages.map((language) => (
-                      <DropdownMenuItem
-                        key={language.code}
-                        onClick={() => handleLanguageChange(language.code)}
-                        className="flex items-center space-x-2 cursor-pointer text-sm"
-                        data-testid={`main-lang-option-${language.code}`}
-                      >
-                        <span>{language.name}</span>
-                        {selectedLanguage === language.code && (
-                          <span className="ml-auto text-primary">✓</span>
-                        )}
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
-                <span className="text-slate-400">|</span>
-                
+              <div className="flex items-center gap-1 text-sm font-medium">
+                <Link
+                  href="/"
+                  hrefLang="en"
+                  lang="en"
+                  aria-label="English"
+                  className="inline-flex h-11 items-center px-2 text-white/90 hover:text-white"
+                  data-testid="main-language-link"
+                >
+                  EN
+                </Link>
                 {/* Site İçi Arama */}
                 <Button 
                   variant="ghost" 
                   size="sm"
-                  className="bg-primary hover:bg-primary/90 text-white px-2 py-1 h-auto"
+                  className="h-11 w-11 p-0 text-white hover:bg-white/10 hover:text-white"
+                  aria-label="Site içinde ara"
                   onClick={() => setIsSearchOpen(true)}
                   data-testid="search-button"
                 >
@@ -370,29 +328,32 @@ export default function Header() {
 
             {/* Special Buttons */}
             <div className="hidden lg:flex items-center space-x-3">
-              <Button 
-                asChild 
-                size="sm"
-                variant="outline"
-                className="px-4"
+              <a
+                href="https://pdkspersoneltakip.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-11 items-center px-2 text-sm font-medium text-white/90 hover:text-white"
                 data-testid="webpdks-button"
               >
-                <a href="https://pdkspersoneltakip.com/" target="_blank" rel="noopener noreferrer">WebPDKS</a>
+                Giriş
+              </a>
+              <Button asChild className="h-11 px-4 font-bold" data-testid="header-cta-button">
+                <Link href="/iletisim">Teklif Alın</Link>
               </Button>
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 rounded-md hover:bg-slate-100 transition-colors"
+              className="lg:hidden flex h-11 w-11 items-center justify-center rounded-md hover:bg-white/10 transition-colors"
               data-testid="mobile-menu-toggle"
               aria-label="Menüyü aç/kapat"
               aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? (
-                <X className="h-6 w-6 text-slate-700" />
+                <X className="h-6 w-6 text-white" />
               ) : (
-                <Menu className="h-6 w-6 text-slate-700" />
+                <Menu className="h-6 w-6 text-white" />
               )}
             </button>
           </div>
@@ -400,7 +361,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-white border-t shadow-lg">
+          <div className="lg:hidden bg-white text-slate-800 shadow-lg max-h-[calc(100dvh-64px)] overflow-y-auto">
             <div className="container mx-auto px-4 py-4">
               <nav className="space-y-2">
                 {navigationItems.map((item) => (
@@ -429,7 +390,7 @@ export default function Header() {
                                     <Link
                                       key={product.href}
                                       href={product.href}
-                                      className="block text-slate-600 hover:text-primary transition-colors text-sm py-1.5 px-2 rounded hover:bg-primary/5"
+                                      className="flex min-h-[44px] items-center text-slate-600 hover:text-primary transition-colors text-sm px-2 rounded hover:bg-primary/5"
                                       data-testid={`mobile-submenu-${product.name.toLowerCase().replace(/\s+/g, '-')}`}
                                       onClick={() => setIsMenuOpen(false)}
                                     >
@@ -476,16 +437,16 @@ export default function Header() {
                   <Button
                     asChild
                     variant="outline"
-                    className="w-full"
+                    className="h-11 w-full"
                     data-testid="mobile-webpdks-button"
                   >
-                    <a href="https://pdkspersoneltakip.com/" target="_blank" rel="noopener noreferrer">WebPDKS</a>
+                    <a href="https://pdkspersoneltakip.com/" target="_blank" rel="noopener noreferrer">Giriş</a>
                   </Button>
                   
                   {/* Site içi arama: telefonla karışmasın diye ikincil düğme */}
                   <Button
                     variant="outline"
-                    className="w-full"
+                    className="h-11 w-full"
                     onClick={() => {
                       setIsSearchOpen(true);
                       setIsMenuOpen(false);
@@ -495,25 +456,11 @@ export default function Header() {
                     <Search className="h-4 w-4" />
                     Site içinde ara
                   </Button>
+
+                  <Button asChild variant="outline" className="h-11 w-full" data-testid="mobile-lang-en">
+                    <Link href="/" hrefLang="en" lang="en" onClick={() => setIsMenuOpen(false)}>English</Link>
+                  </Button>
                   
-                  {/* Mobile Language Selector */}
-                  <div className="pt-2">
-                    <div className="text-sm font-medium text-slate-600 mb-2">Dil</div>
-                    <div className="flex space-x-2">
-                      {languages.map((language) => (
-                        <Button
-                          key={language.code}
-                          variant={selectedLanguage === language.code ? "default" : "outline"}
-                          size="sm"
-                          onClick={() => handleLanguageChange(language.code)}
-                          className="flex-1 flex items-center justify-center space-x-2"
-                          data-testid={`mobile-lang-${language.code}`}
-                        >
-                            <span>{language.name}</span>
-                        </Button>
-                      ))}
-                    </div>
-                  </div>
                 </div>
               </nav>
             </div>

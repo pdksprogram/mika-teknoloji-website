@@ -484,7 +484,10 @@ function AnaSayfa({ d }: { d: Dil }) {
         <div className="gen rv-b">
           <h2>{T.son_h}</h2>
           <p>{T.son_p}</p>
-          <Link href="/iletisim" className="btn birincil">{T.cta}</Link>
+          {/* EN sayfada form yok: iç sayfalar henüz Türkçe, ziyaretçi Türkçeye düşmesin */}
+          {d === "tr"
+            ? <Link href="/iletisim" className="btn birincil">{T.cta}</Link>
+            : <a href="mailto:info@mikateknoloji.com?subject=Quote%20request" className="btn birincil">{T.son_cta}</a>}
           <a className="tel-no" href={TEL} onClick={iz("phone_home", "Son")}>{DEMO_TELEFON_GORUNEN}</a>
           <a
             className="tel-no"
@@ -500,12 +503,17 @@ function AnaSayfa({ d }: { d: Dil }) {
 
       <footer className="alt">
         <div className="gen">
-          <div className="alt-izgara">
+          <div className={`alt-izgara alt-${d}`}>
             <div><Marka ana={ana} /></div>
             {T.alt.map(([a, l]) => (
               <div key={a}>
                 <strong>{a}</strong>
-                {l.map(([x, u]) => <Link key={u} href={u}>{x}</Link>)}
+                {l.map(([x, u]) => {
+                  if (u.startsWith("/")) return <Link key={u} href={u} hrefLang={d === "en" ? "tr" : undefined}>{x}</Link>;
+                  if (u === "@tel") return <a key={u} href={TEL}>{DEMO_TELEFON_GORUNEN}</a>;
+                  if (u === "@wa") return <a key={u} href={whatsappMesajAdresi("Hello, I am writing from your website.")} target="_blank" rel="noopener noreferrer">{x}</a>;
+                  return <a key={u} href={u}>{x}</a>;
+                })}
               </div>
             ))}
           </div>
