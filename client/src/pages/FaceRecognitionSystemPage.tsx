@@ -135,7 +135,6 @@ export default function FaceRecognitionSystemPage() {
                     
                     <Button asChild 
                       className="w-full"
-                      variant="outline"
                       data-testid={`device-info-${device.name.toLowerCase().replace(/\s+/g, '-')}`}
                     >
                       <Link href="/iletisim">Teklif Alın</Link>

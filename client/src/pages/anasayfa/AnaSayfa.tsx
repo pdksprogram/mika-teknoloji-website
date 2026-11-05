@@ -509,7 +509,7 @@ function AnaSayfa({ d }: { d: Dil }) {
               <div key={a}>
                 <strong>{a}</strong>
                 {l.map(([x, u]) => {
-                  if (u.startsWith("/")) return <Link key={u} href={u} hrefLang={d === "en" ? "tr" : undefined}>{x}</Link>;
+                  if (u.startsWith("/")) return <Link key={u} href={u}>{x}</Link>;
                   if (u === "@tel") return <a key={u} href={TEL}>{DEMO_TELEFON_GORUNEN}</a>;
                   if (u === "@wa") return <a key={u} href={whatsappMesajAdresi("Hello, I am writing from your website.")} target="_blank" rel="noopener noreferrer">{x}</a>;
                   return <a key={u} href={u}>{x}</a>;

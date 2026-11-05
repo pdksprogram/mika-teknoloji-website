@@ -91,10 +91,11 @@ export default function FingerprintSystemPage() {
                 initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="h-full"
               >
-                <Card className="h-full hover:shadow-lg transition-shadow duration-300 relative">
+                <Card className="h-full flex flex-col hover:shadow-lg transition-shadow duration-300 relative">
                   
-                  <CardContent className="p-6">
+                  <CardContent className="p-6 flex flex-col flex-1">
                     <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden border border-gray-200">
                       {device.image && device.image !== "/placeholder-device.jpg" ? (
                         <img {...boyut(device.image)} loading="lazy" 
@@ -119,7 +120,7 @@ export default function FingerprintSystemPage() {
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{device.name}</h3>
                     <p className="text-primary font-semibold mb-4">{device.description}</p>
                     
-                    <ul className="space-y-2 mb-4 md:mb-6">
+                    <ul className="space-y-2 mb-6 flex-1">
                       {device.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
@@ -130,7 +131,6 @@ export default function FingerprintSystemPage() {
                     
                     <Button asChild 
                       className="w-full"
-                      variant="outline"
                       data-testid={`device-info-${device.name.toLowerCase().replace(/\s+/g, '-')}`}
                     >
                       <Link href="/iletisim">Teklif Alın</Link>

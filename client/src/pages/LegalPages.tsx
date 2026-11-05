@@ -2,13 +2,15 @@
 // kvkk_foto_onay şablonundaki aydınlatma bağlantısı + PayTR canlı mod. Dil PrivacyPolicy.tsx ile aynı.
 // Metinler taslaktır; hukuki son kontrol Deniz/avukat onayındadır.
 import SEO from "@/seo/SEO";
+import { DilEslesmesi } from "@/pages/LegalPagesEn";
 
 type Bolum = { baslik: string; metin: string[] };
 
-function YasalSayfa({ baslik, alt, bolumler, seoBaslik, seoAciklama }: { baslik: string; alt: string; bolumler: Bolum[]; seoBaslik: string; seoAciklama: string }) {
+function YasalSayfa({ baslik, alt, bolumler, seoBaslik, seoAciklama, trYol, enYol }: { baslik: string; alt: string; bolumler: Bolum[]; seoBaslik: string; seoAciklama: string; trYol: string; enYol: string }) {
   return (
     <div className="min-h-screen bg-slate-50 py-16">
       <SEO title={seoBaslik} description={seoAciklama} />
+      <DilEslesmesi trYol={trYol} enYol={enYol} />
       <div className="container mx-auto max-w-4xl px-4">
         <div className="rounded-2xl border-t-4 border-primary bg-white p-8 shadow-lg">
           <h1 className="mb-2 text-3xl font-bold text-slate-800">{baslik}</h1>
@@ -33,6 +35,8 @@ function YasalSayfa({ baslik, alt, bolumler, seoBaslik, seoAciklama }: { baslik:
 export function KvkkAydinlatma() {
   return (
     <YasalSayfa
+      trYol="/kvkk"
+      enYol="/en/student-data-notice"
       baslik="Öğrenci Takip — Kişisel Verilerin Korunması Aydınlatma Metni"
       alt="6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında giriş-çıkış bildirimleri ve fotoğraf gönderimi"
       seoBaslik="KVKK Aydınlatma Metni – Öğrenci Takip | Mika Teknoloji"
@@ -60,6 +64,8 @@ export function KvkkAydinlatma() {
 export function HizmetSartlari() {
   return (
     <YasalSayfa
+      trYol="/hizmet-sartlari"
+      enYol="/en/terms"
       baslik="Hizmet Şartları"
       alt="ESOFT / Mika Teknoloji yazılım ve bildirim hizmetleri"
       seoBaslik="Hizmet Şartları: Yazılım ve Bildirim Hizmetleri | Mika"
@@ -83,6 +89,8 @@ export function HizmetSartlari() {
 export function VeriSilme() {
   return (
     <YasalSayfa
+      trYol="/veri-silme"
+      enYol="/en/data-deletion"
       baslik="Veri Silme Talimatları"
       alt="Kişisel verilerinizin silinmesini nasıl talep edebilirsiniz"
       seoBaslik="Veri Silme Talimatları – Kişisel Veri Talebi | Mika"

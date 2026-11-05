@@ -10,6 +10,7 @@ import { LanguageProvider } from "@/hooks/useLanguage";
 import { initGA } from "@/lib/analytics";
 import { useAnalytics } from "@/hooks/use-analytics";
 import { VarsayilanKanonik } from "@/seo/SEO";
+import { DataDeletionEn, EN_YASAL_ROTALAR, PrivacyEn, StudentDataNotice, TermsEn } from "@/pages/LegalPagesEn";
 import About from "@/pages/About";
 import Solutions from "@/pages/Solutions";
 import Products from "@/pages/Products";
@@ -160,6 +161,10 @@ function Router() {
       <Route path="/kvkk" component={KvkkAydinlatma} />
       <Route path="/hizmet-sartlari" component={HizmetSartlari} />
       <Route path="/veri-silme" component={VeriSilme} />
+      <Route path="/en/student-data-notice" component={StudentDataNotice} />
+      <Route path="/en/privacy" component={PrivacyEn} />
+      <Route path="/en/terms" component={TermsEn} />
+      <Route path="/en/data-deletion" component={DataDeletionEn} />
       <Route path="/puantaj-programi" component={PuantajProgramiPage} />
       <Route path="/vardiya-takip-programi" component={VardiyaTakipProgramiPage} />
       <Route path="/qr-pdks" component={QRPersonelTakipPage} />
@@ -177,11 +182,11 @@ if (typeof window !== "undefined") {
   window.addEventListener("popstate", () => { geriAdres = window.location.pathname; }, true);
 }
 
-// Ana sayfa (/ ve /tr) kendi başlığını ve alt bölümünü çizer; ortak kabuk diğer sayfalarda aynen sürer.
+// Ana sayfa (/ ve /tr) ve İngilizce yasal sayfalar kendi başlığını ve alt bölümünü çizer; ortak kabuk diğer sayfalarda aynen sürer.
 function SiteKabugu() {
   const [konum] = useLocation();
   const yol = konum.replace(/\/+$/, "");
-  const anaSayfa = yol === "" || yol === "/tr";
+  const anaSayfa = yol === "" || yol === "/tr" || EN_YASAL_ROTALAR.includes(yol);
   // Bağlantıyla açılan sayfa en üstten başlar; ilk yükleme, geri/ileri ve #bölüm adresi tarayıcıda kalır.
   const ilkKonum = useRef(konum);
   useEffect(() => {

@@ -221,9 +221,9 @@ export default function HizliGecisPage() {
                 initial={false}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="group"
+                className="group h-full"
               >
-                <Card className="h-full hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden">
+                <Card className="h-full flex flex-col hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden">
                   <div className="relative overflow-hidden aspect-[3/2] xs:aspect-[4/3] sm:aspect-[3/2]">
                     <img {...boyut(model.image)} 
                       src={model.image} 
@@ -235,7 +235,7 @@ export default function HizliGecisPage() {
                       {model.model}
                     </Badge>
                   </div>
-                  <CardContent className="p-3 xs:p-4 sm:p-6">
+                  <CardContent className="flex flex-1 flex-col p-3 xs:p-4 sm:p-6">
                     <h3 className="font-bold text-gray-900 mb-1 xs:mb-2 text-sm xs:text-base group-hover:text-primary transition-colors">
                       {model.title}
                     </h3>
@@ -252,7 +252,7 @@ export default function HizliGecisPage() {
                       ))}
                     </div>
                     
-                    <div className="flex items-center justify-end">
+                    <div className="mt-auto flex items-center justify-end">
                       <Button asChild size="sm">
                         <Link href={
                           model.id === "mt-t300-hg20" ? "/urunler/hizli-gecis-t300-hg20-detay" :

@@ -7,6 +7,7 @@ import { Link } from "wouter";
 import { useEffect } from "react";
 import { trackPDKSView, trackProductView } from "@/lib/analytics";
 import SEO, { ASIL_ADRES, kanonikAdres } from "@/seo/SEO";
+import { Button } from "@/components/ui/button";
 import { IlgiliSayfalar, VideoBolumu, DEMO_TELEFON, DEMO_TELEFON_GORUNEN, DEMO_WHATSAPP, kirintiJsonLd, sssJsonLd } from "@/components/PdksIcerik";
 import type { SssMaddesi } from "@/components/PdksIcerik";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
@@ -791,11 +792,11 @@ export default function PDKSPage() {
             </p>
             
             <CtaDugmeleri tur="yazilim" koyu sinif="justify-center" />
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8 text-lg">
-              <a href={DEMO_WHATSAPP} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:opacity-80">
-                WhatsApp ile demo isteyin
-              </a>
-              <a href={`tel:${DEMO_TELEFON}`} className="underline underline-offset-4 hover:opacity-80">
+            <div className="flex flex-wrap items-center gap-6 justify-center mt-6 text-lg">
+              <Button asChild size="lg" variant="outlineLight">
+                <a href={DEMO_WHATSAPP} target="_blank" rel="noopener noreferrer">WhatsApp ile demo isteyin</a>
+              </Button>
+              <a href={`tel:${DEMO_TELEFON}`} className="inline-flex min-h-[44px] items-center font-bold no-underline hover:text-[#F5A800]">
                 {DEMO_TELEFON_GORUNEN}
               </a>
             </div>

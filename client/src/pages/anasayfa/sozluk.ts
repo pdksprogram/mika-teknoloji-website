@@ -445,7 +445,7 @@ export const SOZLUK: Record<Dil, Sozluk> = {
     "alt": [
       ["Product", [["Products", "#urun"], ["Solutions", "#akis"], ["Industries", "#sektor"], ["Mobile", "#mobil"]]],
       ["Contact", [["Request a Quote", "#demo"], ["Phone", "@tel"], ["info@mikateknoloji.com", "mailto:info@mikateknoloji.com"], ["WhatsApp", "@wa"]]],
-      ["Legal (in Turkish)", [["Data Protection", "/kvkk"], ["Privacy", "/mobil-gizlilik-sozlesmesi.php"], ["Terms", "/hizmet-sartlari"], ["Data Deletion", "/veri-silme"]]]
+      ["Legal", [["Data Protection", "/en/student-data-notice"], ["Privacy", "/en/privacy"], ["Terms", "/en/terms"], ["Data Deletion", "/en/data-deletion"]]]
     ],
     "seo": {
       "baslik": "Time and Attendance Software | Mika Teknoloji",

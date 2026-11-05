@@ -320,8 +320,8 @@ export default function PersonelTakipPage() {
           >
             {/* QR Kod Okutma */}
             <motion.div variants={staggerItem}>
-              <Card className="h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                <CardContent className="p-8 text-center">
+              <Card className="h-full flex flex-col hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <CardContent className="flex flex-1 flex-col p-8 text-center">
                   <div className="mb-6">
                     <img width={873} height={957} loading="lazy" 
                       src="/qr-hand-mockup.png" 
@@ -336,7 +336,7 @@ export default function PersonelTakipPage() {
                     Mobil cihazlar üzerinden çalışanların giriş ve çıkışlarını hızlıca kaydedebilirsiniz. 
                     Özellikle büyük ve hareketli işyerleri için idealdir.
                   </p>
-                  <Button asChild variant="outline" className="w-full">
+                  <Button asChild variant="outline" className="mt-auto w-full">
                     <Link href="/qr-bekci">Detayları İncele</Link>
                   </Button>
                 </CardContent>
@@ -345,8 +345,8 @@ export default function PersonelTakipPage() {
 
             {/* Kart Okuyucu */}
             <motion.div variants={staggerItem}>
-              <Card className="h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                <CardContent className="p-8 text-center">
+              <Card className="h-full flex flex-col hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <CardContent className="flex flex-1 flex-col p-8 text-center">
                   <div className="mb-6">
                     <img width={252} height={252} loading="lazy" 
                       src="/images/urun/erisim-kontrol-paneli-kart.jpg" 
@@ -361,7 +361,7 @@ export default function PersonelTakipPage() {
                     Çalışanlarınızın kartlarını kolayca okutarak, çalışma saatlerini doğru bir şekilde kaydedebilir 
                     ve analiz edebilirsiniz.
                   </p>
-                  <Button asChild variant="outline" className="w-full">
+                  <Button asChild variant="outline" className="mt-auto w-full">
                     <Link href="/access-control">Detayları İncele</Link>
                   </Button>
                 </CardContent>
@@ -370,8 +370,8 @@ export default function PersonelTakipPage() {
 
             {/* Parmak İzi */}
             <motion.div variants={staggerItem}>
-              <Card className="h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                <CardContent className="p-8 text-center">
+              <Card className="h-full flex flex-col hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <CardContent className="flex flex-1 flex-col p-8 text-center">
                   <div className="mb-6">
                     <img width={734} height={532} loading="lazy" 
                       src="/images/urun/parmak-izi-cihazi.jpg" 
@@ -386,7 +386,7 @@ export default function PersonelTakipPage() {
                     Biyometrik teknoloji ile kartlı sistemlere göre çok daha güvenli ve pratik bir 
                     giriş-çıkış kontrolü sağlar.
                   </p>
-                  <Button asChild variant="outline" className="w-full">
+                  <Button asChild variant="outline" className="mt-auto w-full">
                     <Link href="/urunler/parmak-izi-tanima">Detayları İncele</Link>
                   </Button>
                 </CardContent>
