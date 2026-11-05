@@ -3,6 +3,7 @@
 // Menü verisinde karşılığı olmayan adres tutulabilir, ama menüde gösterilmez (menuSuz).
 export const TANIMLI_ROTALAR: readonly string[] = [
   "/",
+  "/tr",
   "/hakkimizda",
   "/cozumler",
   "/urunler",

@@ -85,7 +85,7 @@ export default function TurnstileSystemsPage() {
       <section className="bg-gray-50 py-4">
         <div className="container mx-auto px-4">
           <nav className="text-sm text-gray-600">
-            <Link href="/" className="hover:text-primary">Ana Sayfa</Link>
+            <Link href="/tr" className="hover:text-primary">Ana Sayfa</Link>
             <span className="mx-2">›</span>
             <span>Turnike Sistemleri</span>
           </nav>

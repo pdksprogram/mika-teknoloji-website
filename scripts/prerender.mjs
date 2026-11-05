@@ -225,6 +225,9 @@ async function main() {
       if (helmet && /name="description"/.test(helmet.meta.toString())) {
         sayfa = sayfa.replace(/<meta\s+name="description"[^>]*>\s*/i, () => "");
       }
+      // Sayfanın kendi dili (Helmet <html lang>) durağan HTML'e de yazılır: / İngilizce, /tr Türkçe.
+      const dilEslesme = helmet ? /lang="([^"]+)"/.exec(helmet.htmlAttributes.toString()) : null;
+      if (dilEslesme) sayfa = sayfa.replace(/<html\b[^>]*>/i, () => `<html lang="${dilEslesme[1]}">`);
       sayfa = sayfa
         // Değiştirme metni FONKSİYONLA verilir: düz metinde `$$`, `$&`, `$'` özel kalıptır ve
         // JSON-LD içindeki "priceRange":"$$" gibi değerleri bozar.

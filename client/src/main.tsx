@@ -29,7 +29,9 @@ const uygulama = (
 // Ön-render Türkçe üretilir. Kayıtlı dil Türkçe değilse ilk çizim farklı olacağından hydrate
 // edilmez; içerik doğrudan seçili dille yeniden çizilir (yükleyicisiz).
 // Boş ya da sözlükte olmayan kayıtlı dil Türkçe sayılır (kayitliDiliOku).
-if (onRenderli && kayitliDiliOku() === "tr") {
+// Ana sayfanın dili kayıtlı dilden değil adresten gelir (/ İngilizce, /tr Türkçe): her zaman hydrate edilir.
+const anaSayfa = ["/", "/tr"].includes(rotaNormalize(window.location.pathname));
+if (onRenderli && (anaSayfa || kayitliDiliOku() === "tr")) {
   hydrateRoot(kok, uygulama);
 } else {
   createRoot(kok).render(uygulama);

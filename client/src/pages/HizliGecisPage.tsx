@@ -120,7 +120,7 @@ export default function HizliGecisPage() {
       <div className="bg-gray-50 py-4">
         <div className="container mx-auto px-4">
           <div className="flex items-center text-sm text-gray-600">
-            <Link href="/" className="hover:text-primary">Ana Sayfa</Link>
+            <Link href="/tr" className="hover:text-primary">Ana Sayfa</Link>
             <span className="mx-2">/</span>
             <Link href="/urunler" className="hover:text-primary">Ürünler</Link>
             <span className="mx-2">/</span>

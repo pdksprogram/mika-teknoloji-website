@@ -41,7 +41,6 @@ const translations = {
         }
       },
       features: [
-        "100,000'in üzerinde müşteri portföyü",
         "Web tabanlı çözümler", 
         "Her yerden, her cihazdan erişim",
         "Modern teknoloji çözümleri",
@@ -80,7 +79,6 @@ const translations = {
         }
       },
       features: [
-        "Over 100,000 customer portfolio",
         "100% Web-based solutions",
         "Access from anywhere, any device", 
         "Modern technology solutions",

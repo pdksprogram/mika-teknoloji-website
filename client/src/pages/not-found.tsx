@@ -16,7 +16,7 @@ export default function NotFound() {
         <p className="text-lg text-slate-600 mb-10">Aradığınız sayfa taşınmış ya da kaldırılmış olabilir.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild size="lg">
-            <Link href="/">Ana Sayfa</Link>
+            <Link href="/tr">Ana Sayfa</Link>
           </Button>
           <Button asChild size="lg" variant="outline">
             <Link href="/pdks-programi">PDKS Programı</Link>

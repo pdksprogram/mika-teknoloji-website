@@ -3,7 +3,7 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import SiteFooter from "@/components/SiteFooter";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
@@ -11,7 +11,6 @@ import { LanguageProvider } from "@/hooks/useLanguage";
 import { initGA } from "@/lib/analytics";
 import { useAnalytics } from "@/hooks/use-analytics";
 import { VarsayilanKanonik } from "@/seo/SEO";
-import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Solutions from "@/pages/Solutions";
 import Products from "@/pages/Products";
@@ -74,6 +73,7 @@ import VardiyaTakipProgramiPage from "@/pages/VardiyaTakipProgramiPage";
 import QRPersonelTakipPage from "@/pages/QRPersonelTakipPage";
 import FazlaMesaiHesaplamaPage from "@/pages/FazlaMesaiHesaplamaPage";
 import NotFound from "@/pages/not-found";
+import { AnaSayfaEn, AnaSayfaTr } from "@/pages/anasayfa/AnaSayfa";
 
 function Router() {
   // Track page views when routes change  
@@ -81,7 +81,8 @@ function Router() {
   
   return (
     <Switch>
-      <Route path="/" component={Home} />
+      <Route path="/" component={AnaSayfaEn} />
+      <Route path="/tr" component={AnaSayfaTr} />
       <Route path="/hakkimizda" component={About} />
       <Route path="/cozumler" component={Solutions} />
       <Route path="/urunler" component={Products} />
@@ -175,8 +176,43 @@ function SiteWhatsApp() {
   const [konum] = useLocation();
   const yol = konum.replace(/\/+$/, "");
   if (yol === "/videolar") return null;
+  // Ana sayfa WhatsApp bağlantısını son bölümde taşır; yüzen düğme ürün görsellerinin üstüne binmesin.
+  if (yol === "" || yol === "/tr") return null;
   // İletişim sayfası formun yanında kendi WhatsApp düğmesini taşır; mobilde yüzen düğme formu örtmesin.
   return <WhatsAppWidget mobildeGizle={yol === "/iletisim"} />;
+}
+
+// Geri/ileri tuşunda konumu tarayıcı geri yükler; yönlendirici dinleyicisinden önce işaretlenir.
+// Adres tutulur: #bölüm tıklaması da popstate atar, sonraki bağlantı geri tuşu sanılmasın.
+let geriAdres: string | null = null;
+if (typeof window !== "undefined") {
+  window.addEventListener("popstate", () => { geriAdres = window.location.pathname; }, true);
+}
+
+// Ana sayfa (/ ve /tr) kendi başlığını ve alt bölümünü çizer; ortak kabuk diğer sayfalarda aynen sürer.
+function SiteKabugu() {
+  const [konum] = useLocation();
+  const yol = konum.replace(/\/+$/, "");
+  const anaSayfa = yol === "" || yol === "/tr";
+  // Bağlantıyla açılan sayfa en üstten başlar; ilk yükleme, geri/ileri ve #bölüm adresi tarayıcıda kalır.
+  const ilkKonum = useRef(konum);
+  useEffect(() => {
+    if (ilkKonum.current === konum) return;
+    ilkKonum.current = konum;
+    const geri = geriAdres === window.location.pathname;
+    geriAdres = null;
+    if (!geri && !window.location.hash) window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [konum]);
+  return (
+    <div className="min-h-screen bg-white flex flex-col">
+      {!anaSayfa && <Header />}
+      <main className="flex-1">
+        <VarsayilanKanonik />
+        <Router />
+      </main>
+      {!anaSayfa && <SiteFooter />}
+    </div>
+  );
 }
 
 // onRenderli: main.tsx/entry-server.tsx imzası korunur; yükleme ekranı kalktığı için artık davranışı değiştirmez.
@@ -195,14 +231,7 @@ function App(_props: { onRenderli?: boolean }) {
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
         <TooltipProvider>
-        <div className="min-h-screen bg-white flex flex-col">
-          <Header />
-          <main className="flex-1">
-            <VarsayilanKanonik />
-            <Router />
-          </main>
-          <SiteFooter />
-        </div>
+        <SiteKabugu />
         <SiteWhatsApp />
         <Toaster />
         </TooltipProvider>

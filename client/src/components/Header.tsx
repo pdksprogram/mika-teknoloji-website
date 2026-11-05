@@ -210,7 +210,7 @@ export default function Header() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3" data-testid="logo-link">
+            <Link href={selectedLanguage === "en" ? "/" : "/tr"} className="flex items-center space-x-3" data-testid="logo-link">
               <div className="flex items-center">
                 <div className="w-16 h-16 rounded-lg overflow-hidden">
                   <img {...boyut(mikaLogo)} src={mikaLogo} alt="Mika Teknoloji Logo" className="w-full h-full object-contain" />
