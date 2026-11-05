@@ -43,8 +43,8 @@ const KATEGORILER: { baslik: string; gorsel: string; gorselAlt: string; kalemler
   },
   {
     baslik: "Yazılımlar",
-    gorsel: "/images/slayt/qr-pdks-mobil.jpg",
-    gorselAlt: "QR PDKS mobil uygulaması",
+    gorsel: "/anasayfa/tr/patron2_ust.webp",
+    gorselAlt: "Mika PDKS mobil yönetici ekranı",
     kalemler: [
       { ad: "Personel Takip Programı", yol: "/urunler/personel-takip" },
       { ad: "QR PDKS Uygulaması", yol: "/urunler/qr-pdks" },
@@ -53,8 +53,8 @@ const KATEGORILER: { baslik: string; gorsel: string; gorselAlt: string; kalemler
   },
   {
     baslik: "Tüm Programlar",
-    gorsel: "/images/slayt/bulut-pdks-paneli.jpg",
-    gorselAlt: "Bulut PDKS paneli",
+    gorsel: "/anasayfa/tr/liste.webp",
+    gorselAlt: "Mika bulut PDKS giriş-çıkış ekranı",
     kalemler: [
       { ad: "Puantaj Programı", yol: "/puantaj-programi" },
       { ad: "Vardiya Takip Programı", yol: "/vardiya-takip-programi" },

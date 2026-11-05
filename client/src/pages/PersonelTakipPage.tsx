@@ -153,9 +153,9 @@ export default function PersonelTakipPage() {
         <meta property="og:description" content="Bulut tabanlı personel takip programı: PDKS, vardiya yönetimi, QR kod ile giriş-çıkış, mobil uygulama ve aylık puantaj tek sistemde." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/personel-takip" />
-        <meta property="og:image" content="https://mikateknoloji.com/images/slayt/bulut-pdks-paneli.jpg" />
-        <meta property="og:image:width" content="1400" />
-        <meta property="og:image:height" content="603" />
+        <meta property="og:image" content="https://mikateknoloji.com/og-mika.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Mika Teknoloji Personel Takip Sistemi - Bulut Tabanlı PDKS" />
         <meta property="og:site_name" content="Mika Teknoloji" />
         <meta property="og:locale" content="tr_TR" />
@@ -165,7 +165,7 @@ export default function PersonelTakipPage() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Personel Takip Sistemi | Mika Teknoloji - Bulut Tabanlı PDKS" />
         <meta name="twitter:description" content="Bulut tabanlı personel takip sistemi: PDKS, vardiya yönetimi, QR kod ile giriş-çıkış ve mobil uygulama." />
-        <meta name="twitter:image" content="https://mikateknoloji.com/images/slayt/bulut-pdks-paneli.jpg" />
+        <meta name="twitter:image" content="https://mikateknoloji.com/og-mika.jpg" />
         <meta name="twitter:image:alt" content="Mika Teknoloji Personel Takip Sistemi" />
         <meta name="twitter:creator" content="@mikateknoloji" />
         
@@ -231,7 +231,7 @@ export default function PersonelTakipPage() {
                   "Çoklu lokasyon desteği",
                   "Gerçek zamanlı takip"
                 ],
-                "screenshot": "https://mikateknoloji.com/images/slayt/bulut-pdks-paneli.jpg"
+                "screenshot": "https://mikateknoloji.com/anasayfa/tr/liste.webp"
               },
               {
                 "@type": "BreadcrumbList",
@@ -282,15 +282,18 @@ export default function PersonelTakipPage() {
             
             <CtaDugmeleri tur="yazilim" sinif="justify-center mb-12" sayfa="Personel Takip Page" olayOnek="personel_takip" />
 
-            {/* Ürün görseli: gerçek bulut PDKS paneli (kişisel veriler maskeli) */}
+            {/* Ürün görseli: gerçek program ekranı, örnek verilerle */}
             <div className="bg-white rounded-lg border border-slate-200 shadow-xl p-2 max-w-4xl mx-auto">
-              <img
-                src="/images/slayt/bulut-pdks-paneli.jpg"
-                alt="Mika bulut PDKS paneli giriş-çıkış kayıtları ekranı"
-                width={1400}
-                height={603}
-                className="w-full h-auto rounded"
-              />
+              <picture>
+                <source media="(max-width:860px)" srcSet="/anasayfa/tr/m_liste.webp" width={739} height={421} />
+                <img
+                  src="/anasayfa/tr/liste.webp"
+                  alt="Mika bulut PDKS paneli giriş-çıkış kayıtları ekranı"
+                  width={1800}
+                  height={515}
+                  className="w-full h-auto rounded"
+                />
+              </picture>
             </div>
           </motion.div>
         </div>
@@ -323,10 +326,10 @@ export default function PersonelTakipPage() {
               <Card className="h-full flex flex-col hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <CardContent className="flex flex-1 flex-col p-8 text-center">
                   <div className="mb-6">
-                    <img width={873} height={957} loading="lazy" 
-                      src="/qr-hand-mockup.png" 
-                      alt="QR kod mobil okutma sistemi" 
-                      className="w-32 h-32 mx-auto object-contain rounded-lg"
+                    <img width={900} height={2000} loading="lazy" 
+                      src="/anasayfa/tr/gc.webp" 
+                      alt="Mika mobil giriş-çıkış ekranı" 
+                      className="w-32 h-32 mx-auto object-cover object-top rounded-lg border border-slate-200"
                     />
                   </div>
                   <h3 className="text-xl font-bold text-slate-800 mb-4">QR Kod Okutma</h3>
@@ -500,10 +503,10 @@ export default function PersonelTakipPage() {
                       {/* Screen Content */}
                       <div className="relative rounded-[2rem] overflow-hidden">
                         <img 
-                          src="/images/urun/mobil-giris-cikis.jpg"
+                          src="/anasayfa/tr/gc.webp"
                           alt="Mika PDKS mobil uygulama giriş-çıkış kayıtları ekranı"
-                          width={780}
-                          height={1584}
+                          width={900}
+                          height={2000}
                           loading="lazy"
                           className="w-full h-auto object-cover rounded-[2rem]"
                         />
@@ -543,10 +546,10 @@ export default function PersonelTakipPage() {
                       {/* Screen Content */}
                       <div className="relative rounded-[2rem] overflow-hidden">
                         <img 
-                          src="/images/urun/mobil-yonetici-paneli.jpg"
+                          src="/anasayfa/tr/patron2.webp"
                           alt="Mika PDKS mobil uygulama yönetici paneli ekranı"
-                          width={780}
-                          height={1584}
+                          width={900}
+                          height={2000}
                           loading="lazy"
                           className="w-full h-auto object-cover rounded-[2rem]"
                         />

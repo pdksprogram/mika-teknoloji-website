@@ -116,15 +116,18 @@ export default function AccessControlSystemPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
             <figure className="order-2 lg:order-1 rounded-lg border border-slate-200 overflow-hidden bg-white">
-              <img
-                src="/images/slayt/bulut-pdks-paneli.jpg"
-                alt="MikaPass geçiş kayıtları ekranı: kapı, panel, tarih ve geçiş durumu"
-                className="w-full h-auto"
-                width={1400}
-                height={603}
-              />
+              <picture>
+                <source media="(max-width:860px)" srcSet="/anasayfa/tr/m_liste.webp" width={739} height={421} />
+                <img
+                  src="/anasayfa/tr/liste.webp"
+                  alt="Mika giriş-çıkış kayıtları ekranı: tarih, giriş, çıkış ve durum bilgisi"
+                  className="w-full h-auto"
+                  width={1800}
+                  height={515}
+                />
+              </picture>
               <figcaption className="px-4 py-3 text-sm text-slate-600 border-t border-slate-200">
-                Geçiş kayıtları ekranı (kişisel veriler maskelenmiştir)
+                Giriş-çıkış kayıtları ekranı (örnek veriler)
               </figcaption>
             </figure>
 
@@ -216,15 +219,7 @@ export default function AccessControlSystemPage() {
       {/* Ziyaretçi QR */}
       <section className="py-12 md:py-16 bg-gray-50 border-t border-slate-200">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <img
-              src="/qr-visitor-system.png"
-              alt="Ziyaretçi QR kod oluşturma ekranı"
-              className="w-full max-w-sm mx-auto h-auto rounded-lg border border-slate-200 bg-white"
-              width={685}
-              height={819}
-              loading="lazy"
-            />
+          <div className="max-w-3xl">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Ziyaretçi Takip QR Sistemi</h2>
               <p className="text-gray-600 leading-relaxed mb-6">

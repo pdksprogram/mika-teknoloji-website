@@ -43,7 +43,7 @@ const PDKS_SSS: SssMaddesi[] = [
 
 // Real device images
 const facialRecognitionDevice = "/images/urun/proper-yuz-tanima.jpg";
-const qrPdksDevice1 = "/qr-hand-mockup.png";
+const qrPdksDevice1 = "/anasayfa/tr/gc.webp";
 const qrPdksDevice2 = "/rfid-turnstile-system.webp";
 const fingerprintDevice = "/fingerprint-device.png";
 

@@ -24,7 +24,7 @@ export default function BlogArticlePDKS() {
     readTime: "8 dk okuma",
     category: "PDKS",
     keywords: "PDKS sistemleri, personel devam kontrol sistemi, PDKS nedir, personel takip sistemi, biyometrik PDKS, web PDKS",
-    image: "/images/slayt/bulut-pdks-paneli.jpg"
+    image: "/anasayfa/tr/liste.webp"
   };
 
   const tableOfContents = [
@@ -57,9 +57,9 @@ export default function BlogArticlePDKS() {
         {/* Open Graph */}
         <meta property="og:title" content="PDKS Sistemleri Nedir? Kapsamlı Rehber | Mika Teknoloji" />
         <meta property="og:description" content="PDKS sistemleri ile personel takibinde modern çözümler. Biyometrik teknoloji, web tabanlı erişim ve otomatik raporlama özellikleri." />
-        <meta property="og:image" content="https://mikateknoloji.com/images/slayt/bulut-pdks-paneli.jpg" />
-        <meta property="og:image:width" content="1400" />
-        <meta property="og:image:height" content="603" />
+        <meta property="og:image" content="https://mikateknoloji.com/og-mika.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:url" content="https://mikateknoloji.com/blog/pdks-sistemleri-nedir-2025-rehberi" />
         <meta property="og:type" content="article" />
         
@@ -67,7 +67,7 @@ export default function BlogArticlePDKS() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="PDKS Sistemleri Nedir? Kapsamlı Rehber | Mika Teknoloji" />
         <meta name="twitter:description" content="Modern personel devam kontrol sistemlerinin tüm detayları: biyometrik, kartlı ve mobil PDKS." />
-        <meta name="twitter:image" content="https://mikateknoloji.com/images/slayt/bulut-pdks-paneli.jpg" />
+        <meta name="twitter:image" content="https://mikateknoloji.com/og-mika.jpg" />
         
         {/* Schema.org Structured Data */}
         <script type="application/ld+json">
@@ -76,7 +76,7 @@ export default function BlogArticlePDKS() {
           "@type": "BlogPosting",
           "headline": "PDKS Sistemleri Nedir? Personel Devam Kontrol Rehberi",
           "description": "Personel Devam Kontrol Sistemi (PDKS) ile çalışan takibinde devrim yaratın. Modern PDKS çözümlerinin tüm detayları.",
-          "image": "https://mikateknoloji.com/images/slayt/bulut-pdks-paneli.jpg",
+          "image": "https://mikateknoloji.com/og-mika.jpg",
           "author": {
             "@type": "Organization",
             "name": "Mika Teknoloji"

@@ -12,8 +12,8 @@ import { boyut } from "@/lib/gorselBoyut";
 // Access Control Panel images  
 const accessControlPanel = "/access-control-panel.png";
 const accessControlProfessional = "/images/urun/erisim-kontrol-paneli-kart.jpg";
-const qrMobileAccess = "/qr-mobile-access.png";
-const mikaQRApp = "/mika-qr-app.png";
+const qrMobileAccess = "/anasayfa/tr/gc.webp";
+const mikaQRApp = "/anasayfa/tr/gc.webp";
 
 export default function AccessControlPage() {
   const { selectedLanguage } = useLanguage();
@@ -501,7 +501,7 @@ export default function AccessControlPage() {
                   className="text-center"
                 >
                   <div className="relative inline-block">
-                    {/* Real Mika QR App Photo */}
+                    {/* Gerçek mobil uygulama ekranı, örnek verilerle */}
                     <div className="relative">
                       <img {...boyut(mikaQRApp)} loading="lazy" 
                         src={mikaQRApp} 

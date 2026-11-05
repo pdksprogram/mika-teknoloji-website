@@ -33,7 +33,7 @@ export interface PaylasimGorseli {
   alt?: string;
 }
 export const VARSAYILAN_GORSEL: PaylasimGorseli = {
-  src: '/og-varsayilan.jpg',
+  src: '/og-mika.jpg',
   w: 1200,
   h: 630,
   alt: 'Mika Teknoloji PDKS, turnike ve geçiş kontrol sistemleri',

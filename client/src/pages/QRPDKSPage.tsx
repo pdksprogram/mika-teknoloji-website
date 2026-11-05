@@ -165,9 +165,9 @@ export default function QRPDKSPage() {
         <meta property="og:description" content="QR kod tabanlı personel devam kontrol uygulaması: mobil uygulamayla QR okutma, giriş-çıkış takibi ve vardiya yönetimi. Bulut tabanlı QR PDKS." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mikateknoloji.com/urunler/qr-pdks" />
-        <meta property="og:image" content="https://mikateknoloji.com/images/slayt/qr-pdks-mobil.jpg" />
-        <meta property="og:image:width" content="873" />
-        <meta property="og:image:height" content="957" />
+        <meta property="og:image" content="https://mikateknoloji.com/og-mika.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Mika Teknoloji QR Kod PDKS - Mobil Personel Takip Sistemi" />
         <meta property="og:site_name" content="Mika Teknoloji" />
         <meta property="og:locale" content="tr_TR" />
@@ -177,7 +177,7 @@ export default function QRPDKSPage() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="QR Kod ile Personel Giriş Çıkış Uygulaması | Mika" />
         <meta name="twitter:description" content="QR kod tabanlı personel devam kontrol sistemi (PDKS). Mobil uygulama ile QR kod okutma, personel giriş çıkış takibi, vardiya yönetimi." />
-        <meta name="twitter:image" content="https://mikateknoloji.com/images/slayt/qr-pdks-mobil.jpg" />
+        <meta name="twitter:image" content="https://mikateknoloji.com/og-mika.jpg" />
         <meta name="twitter:image:alt" content="Mika Teknoloji QR Kod PDKS" />
         <meta name="twitter:creator" content="@mikateknoloji" />
         
@@ -236,7 +236,7 @@ export default function QRPDKSPage() {
                 "Temassız personel kontrolü",
                 "Çoklu lokasyon desteği"
               ],
-              "screenshot": "https://mikateknoloji.com/images/slayt/qr-pdks-mobil.jpg"
+              "screenshot": "https://mikateknoloji.com/anasayfa/tr/gc.webp"
             },
             {
               "@type": "BreadcrumbList",
