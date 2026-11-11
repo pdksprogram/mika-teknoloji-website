@@ -10,3 +10,4 @@
 - Üretim build'i iki kez sıfır hatayla geçti; görünür Chrome'da ana sayfa, eğitim merkezi, KVKK ve hizmet şartları doğrulandı.
 - Yayın hedefi: mevcut `mikateknoloji.com` Vercel projesi; ortam değişkenleri ve Neon bağlantısı korunacak.
 - Canlı ilk geçiş sonrası yeni statik sayfalara Google Analytics, Facebook alan doğrulaması ve iletişim sayfasına WhatsApp bağlantısı eklendi.
+- Canlı temiz URL'lerde eski ön-render klasörlerinin öne geçtiği görüldü; dosya silmeden 15 yeni sayfa Vercel route önceliğiyle yeni statik çıktıya bağlandı.

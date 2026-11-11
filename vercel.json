@@ -28,6 +28,66 @@
       "dest": "/api/plaka-anahtar.js"
     },
     {
+      "src": "/hakkimizda/?",
+      "dest": "/hakkimizda.html"
+    },
+    {
+      "src": "/iletisim/?",
+      "dest": "/iletisim.html"
+    },
+    {
+      "src": "/referanslar/?",
+      "dest": "/referanslar.html"
+    },
+    {
+      "src": "/pdks-programi/?",
+      "dest": "/pdks-programi.html"
+    },
+    {
+      "src": "/plaka-okuma/?",
+      "dest": "/plaka-okuma.html"
+    },
+    {
+      "src": "/qr-bekci/?",
+      "dest": "/qr-bekci.html"
+    },
+    {
+      "src": "/urunler/turnike/?",
+      "dest": "/urunler/turnike.html"
+    },
+    {
+      "src": "/en/?",
+      "dest": "/en.html"
+    },
+    {
+      "src": "/en/about/?",
+      "dest": "/en/about.html"
+    },
+    {
+      "src": "/en/contact/?",
+      "dest": "/en/contact.html"
+    },
+    {
+      "src": "/en/references/?",
+      "dest": "/en/references.html"
+    },
+    {
+      "src": "/en/time-attendance/?",
+      "dest": "/en/time-attendance.html"
+    },
+    {
+      "src": "/en/anpr/?",
+      "dest": "/en/anpr.html"
+    },
+    {
+      "src": "/en/guard-tour/?",
+      "dest": "/en/guard-tour.html"
+    },
+    {
+      "src": "/en/turnstiles/?",
+      "dest": "/en/turnstiles.html"
+    },
+    {
       "src": "/cozumler/pdks/?",
       "status": 301,
       "headers": { "Location": "/pdks-programi" }
