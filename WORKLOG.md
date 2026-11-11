@@ -9,3 +9,4 @@
 - 8106 önizlemesindeki 13 taslak takma adres kanonik sayfalara bağlandı.
 - Üretim build'i iki kez sıfır hatayla geçti; görünür Chrome'da ana sayfa, eğitim merkezi, KVKK ve hizmet şartları doğrulandı.
 - Yayın hedefi: mevcut `mikateknoloji.com` Vercel projesi; ortam değişkenleri ve Neon bağlantısı korunacak.
+- Canlı ilk geçiş sonrası yeni statik sayfalara Google Analytics, Facebook alan doğrulaması ve iletişim sayfasına WhatsApp bağlantısı eklendi.

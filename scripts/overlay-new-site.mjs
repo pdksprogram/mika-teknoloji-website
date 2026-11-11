@@ -46,6 +46,11 @@ const turkceEski = '<div><strong>Yasal</strong><a href="https://mikateknoloji.co
 const turkceYeni = '<div><strong>Destek ve Yasal</strong><a href="/videolar">Eğitim Videoları</a><a href="/kvkk">KVKK metni</a><a href="/mobil-gizlilik-sozlesmesi.php">Gizlilik</a><a href="/hizmet-sartlari">Hizmet Şartları</a><a href="/veri-silme">Veri Silme</a></div>';
 const ingilizceKalıp = /<div><strong>Legal<\/strong><a href="https:\/\/mikateknoloji\.com\/kvkk"(?: hreflang="tr")?>[^<]+<\/a><a href="https:\/\/mikateknoloji\.com\/mobil-gizlilik-sozlesmesi\.php"(?: hreflang="tr")?>[^<]+<\/a><\/div>/g;
 const ingilizceYeni = '<div><strong>Support &amp; Legal</strong><a href="/videolar">Training Videos</a><a href="/en/student-data-notice">Data Protection</a><a href="/en/privacy">Privacy</a><a href="/en/terms">Terms</a><a href="/en/data-deletion">Data Deletion</a></div>';
+const disServisBaslik = `
+<meta name="facebook-domain-verification" content="dwux5052kpdh354kzulbtorrtnxezc">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P2PBHE77CY"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-P2PBHE77CY');</script>`;
+const whatsapp = "https://wa.me/905467122296";
 
 let htmlSayisi = 0;
 let footerSayisi = 0;
@@ -55,6 +60,24 @@ for (const dosya of fs.readdirSync(hedef, { recursive: true })) {
   let icerik = fs.readFileSync(tam, "utf8");
   const onceki = icerik;
   icerik = icerik.replaceAll(turkceEski, turkceYeni).replace(ingilizceKalıp, ingilizceYeni);
+  if (!icerik.includes("facebook-domain-verification")) {
+    icerik = icerik.replace("</head>", `${disServisBaslik}\n</head>`);
+  }
+  if (!icerik.includes("G-P2PBHE77CY")) {
+    icerik = icerik.replace("</head>", `${disServisBaslik}\n</head>`);
+  }
+  if (dosya.replaceAll("\\", "/") === "iletisim.html" && !icerik.includes(whatsapp)) {
+    icerik = icerik.replace(
+      '<a class="btn ikincil" href="mailto:info@mikateknoloji.com">info@mikateknoloji.com</a>',
+      `<a class="btn ikincil" href="${whatsapp}" target="_blank" rel="noopener">WhatsApp</a><a class="btn ikincil" href="mailto:info@mikateknoloji.com">info@mikateknoloji.com</a>`,
+    );
+  }
+  if (["en/contact.html", "en_iletisim.html"].includes(dosya.replaceAll("\\", "/")) && !icerik.includes(whatsapp)) {
+    icerik = icerik.replace(
+      '<a class="btn ikincil" href="mailto:info@mikateknoloji.com">info@mikateknoloji.com</a>',
+      `<a class="btn ikincil" href="${whatsapp}" target="_blank" rel="noopener">WhatsApp</a><a class="btn ikincil" href="mailto:info@mikateknoloji.com">info@mikateknoloji.com</a>`,
+    );
+  }
   if (icerik !== onceki) {
     fs.writeFileSync(tam, icerik);
     footerSayisi++;
