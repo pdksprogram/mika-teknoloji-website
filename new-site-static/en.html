@@ -1425,6 +1425,7 @@ html.giris-acik,html.giris-acik body{overflow:hidden}
     </div>
   </div>
 </header>
+<main id="icerik">
 
 <section class="hero ana suit" id="hero">
   <div class="hero-izgara">
@@ -1640,6 +1641,7 @@ html.giris-acik,html.giris-acik body{overflow:hidden}
 var ctx=null,ana=null,muzikZaman=null,kapali=false;function nota(f,t,d){var o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.055,t+.08);g.gain.exponentialRampToValueAtTime(.001,t+d);o.connect(g);g.connect(ana);o.start(t);o.stop(t+d+.05)}function dizi(){if(!ctx||ctx.state==='suspended'||kapali)return;var t=ctx.currentTime+.08,n=[196,246.94,293.66,246.94,220,261.63,329.63,261.63];n.forEach(function(f,k){nota(f,t+k*.78,.72)})}function muzikBaslat(){if(kapali)return;if(!ctx){ctx=new(window.AudioContext||window.webkitAudioContext)();ana=ctx.createGain();ana.gain.value=.42;ana.connect(ctx.destination);dizi();muzikZaman=setInterval(dizi,6240)}else if(ctx.state==='suspended')ctx.resume();muzik.setAttribute('aria-pressed','true');muzik.textContent='Music: On'}function muzikKapat(){kapali=true;if(ctx)ctx.suspend();muzik.setAttribute('aria-pressed','false');muzik.textContent='Music: Off'}if(muzik)muzik.addEventListener('click',function(){if(!ctx||kapali){kapali=false;muzikBaslat()}else muzikKapat()});addEventListener('pointerdown',function ilk(e){if(muzik&&e.target!==muzik)muzikBaslat();removeEventListener('pointerdown',ilk)},{once:true})})();</script>
 <script>(function(){var r=document.querySelector('.s-studyo');if(!r)return;var t=[].slice.call(r.querySelectorAll('[role="tab"]')),p=[].slice.call(r.querySelectorAll('[role="tabpanel"]')),i=0,z=null,g=false,kullanici=false,az=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;function oynat(v){try{var x=v.play();if(x&&x.catch)x.catch(function(){})}catch(e){}}function dur(){p.forEach(function(x){var v=x.querySelector('video');if(v)v.pause()})}function goster(n,odak){i=(n+t.length)%t.length;t.forEach(function(x,k){var a=k===i;x.setAttribute('aria-selected',a?'true':'false');x.tabIndex=a?0:-1});p.forEach(function(x,k){var a=k===i;x.hidden=!a;x.classList.toggle('aktif',a)});dur();if(g&&!az){var v=p[i].querySelector('video');if(v)oynat(v)}if(odak)t[i].focus()}function plan(){clearInterval(z);if(g&&!az&&!kullanici)z=setInterval(function(){goster(i+1,false)},7000)}function eleAl(n,odak){kullanici=true;clearInterval(z);goster(n,odak)}t.forEach(function(x,k){x.addEventListener('click',function(){eleAl(k,false)});x.addEventListener('keydown',function(e){if(e.key==='ArrowDown'||e.key==='ArrowRight'){e.preventDefault();eleAl(i+1,true)}else if(e.key==='ArrowUp'||e.key==='ArrowLeft'){e.preventDefault();eleAl(i-1,true)}})});r.addEventListener('mouseenter',function(){clearInterval(z)});r.addEventListener('mouseleave',plan);if('IntersectionObserver'in window){new IntersectionObserver(function(e){g=e[0].isIntersecting;if(!g)dur();else goster(i,false);plan()},{threshold:.22}).observe(r)}else{g=true;goster(0,false);plan()}})();</script>
 
+</main>
 <footer class="alt">
   <div class="gen">
     <div class="alt-izgara">
