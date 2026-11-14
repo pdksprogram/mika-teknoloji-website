@@ -74,8 +74,7 @@ const ingilizceKalıp = /<div><strong>Legal<\/strong><a href="https:\/\/mikatekn
 const ingilizceYeni = '<div><strong>Support &amp; Legal</strong><a href="/videolar">Training Videos</a><a href="/en/student-data-notice">Data Protection</a><a href="/en/privacy">Privacy</a><a href="/en/terms">Terms</a><a href="/en/data-deletion">Data Deletion</a></div>';
 const disServisBaslik = `
 <meta name="facebook-domain-verification" content="dwux5052kpdh354kzulbtorrtnxezc">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P2PBHE77CY"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-P2PBHE77CY');</script>`;
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-P2PBHE77CY');(function(){function y(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-P2PBHE77CY';document.head.appendChild(s)}if(document.readyState==='complete')setTimeout(y,1500);else addEventListener('load',function(){setTimeout(y,1500)})})();</script>`;
 const iletisimOlcumu = `
 <script>document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href]'):null;if(!a)return;var h=a.getAttribute('href')||'',t=h.indexOf('tel:')===0?'telefon_tikla':h.indexOf('mailto:')===0?'eposta_tikla':h.indexOf('wa.me/')>-1?'whatsapp_tikla':'';if(t&&window.gtag)gtag('event',t,{link_url:h,transport_type:'beacon'})},true);</script>`;
 const whatsapp = "https://wa.me/905467122296";
