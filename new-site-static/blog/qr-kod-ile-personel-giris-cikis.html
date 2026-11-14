@@ -886,6 +886,7 @@ main a:focus-visible,main button:focus-visible,main summary:focus-visible,.btn:f
 @media (max-width:680px){.u-izgara{grid-template-columns:1fr;gap:18px}.u-medya{height:210px}.u-kart{min-height:420px}.u-govde{padding:18px 18px 20px}}
 </style>
 <style>
+.yol{flex-wrap:wrap;row-gap:2px}.yol a{white-space:nowrap}
 .yazi{max-width:760px;margin:0 auto}
 .yazi>:first-child{margin-top:0}
 .yazi h2{font-size:28px;line-height:36px;margin:44px 0 0}
@@ -968,10 +969,8 @@ main a:focus-visible,main button:focus-visible,main summary:focus-visible,.btn:f
 <section class="bolum">
   <div class="gen">
     <article class="yazi">
-<p>Bu yazıda E-SOFT PDKS mobil uygulamasıyla QR giriş-çıkışın nasıl işlediğini ve kurulurken nelere dikkat etmek gerektiğini anlatıyoruz.</p>
-
 <h2>İki yol: kodu okutmak ya da kodu göstermek</h2>
-<p>Telefonla giriş-çıkışın iki ayrı kurgusu vardır. Hangisinin seçileceği kapıda ne bulunduğuna bağlıdır.</p>
+<p>Kapıda basılı kod varsa telefon onu okur; okutma cihazı varsa telefon süreli bir kod üretir ve cihaza gösterilir.</p>
 <ul>
 <li><b>Kapıda basılı bir QR kod varsa:</b> Çalışan uygulamayı açar, kodu kameraya gösterir ve okutma giriş ya da çıkış olarak kaydedilir. Kapıda elektrik ya da cihaz gerekmez.</li>
 <li><b>Kapıda bir QR okuyucu varsa:</b> Çalışan uygulamada QR Üret ekranını açar. Uygulama önce telefonun konumunu doğrular, sonra ekranda bir kod gösterir; çalışan bu kodu kapıdaki okuyucuya tutar. Kod 30 saniye sonra kapanır, gerekirse yenisi alınır.</li>
@@ -990,7 +989,7 @@ main a:focus-visible,main button:focus-visible,main summary:focus-visible,.btn:f
 
 <h2>Konum ne zaman kaydedilir?</h2>
 <p>Uygulama okutma sırasında telefonun konumunu da gönderir. Sahada çalışan ekiplerde kaydın nereden atıldığını görmeyi sağlar. Konumun görünmesini istemeyen iş yerleri için Konum Gizle ayarı vardır; işaretlendiğinde konum raporlarda gösterilmez.</p>
-<p>Konum kullanılacaksa bunu çalışanlara kurulum günü açıkça söyleyin. Neyin, ne zaman kaydedildiğini bilen ekip uygulamayı daha rahat kullanır.</p>
+<p>Konum kullanılacaksa bunu çalışanlara kurulum günü açıkça söyleyin. Konumun hangi işlemde alındığını kurulumdan önce ekranda gösterin.</p>
 <figure class="tel"><img src="img/tr/gc.webp" width="900" height="2000" alt="E-SOFT PDKS mobil uygulamada giriş-çıkış geçmişi" loading="lazy"><figcaption>Mobil uygulamada çalışanın giriş-çıkış geçmişi. Veriler örnektir.</figcaption></figure>
 
 <h2>Molalar ve görev çıkışları</h2>
@@ -1018,8 +1017,8 @@ main a:focus-visible,main button:focus-visible,main summary:focus-visible,.btn:f
 
 <section class="son" id="demo">
   <div class="gen rv">
-    <h2>Kendi yapınızda görelim</h2>
-    <p>Kişi, kapı ya da kamera sayınızı konuşalım, ihtiyacınıza uygun demo ve teklifi hazırlayalım.</p>
+    <h2>QR okutmayı telefonunuzda deneyin</h2>
+    <p>Demoda uygulamayı kendi telefonunuza kuralım, giriş-çıkışın panele düşmesini birlikte izleyelim.</p>
     <div class="son-cta">
       <a class="btn birincil" href="https://mikateknoloji.com/iletisim">Demo Talep Edin</a>
       <a class="btn ikincil" href="tel:+905467122296">0546 712 22 96</a>

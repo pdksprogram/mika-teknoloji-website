@@ -886,6 +886,7 @@ main a:focus-visible,main button:focus-visible,main summary:focus-visible,.btn:f
 @media (max-width:680px){.u-izgara{grid-template-columns:1fr;gap:18px}.u-medya{height:210px}.u-kart{min-height:420px}.u-govde{padding:18px 18px 20px}}
 </style>
 <style>
+.yol{flex-wrap:wrap;row-gap:2px}.yol a{white-space:nowrap}
 .yazi{max-width:760px;margin:0 auto}
 .yazi>:first-child{margin-top:0}
 .yazi h2{font-size:28px;line-height:36px;margin:44px 0 0}
@@ -960,7 +961,7 @@ main a:focus-visible,main button:focus-visible,main summary:focus-visible,.btn:f
   <div class="gen">
     <nav class="yol" aria-label="Konum"><a href="https://mikateknoloji.com/">Ana Sayfa</a><span aria-hidden="true">/</span><a href="https://mikateknoloji.com/blog">Blog</a><span aria-hidden="true">/</span><span>Plaka tanıma sistemi nasıl çalışır?</span></nav>
     <h1>Plaka tanıma sistemi nasıl çalışır?</h1>
-    <p>Plaka tanıma sistemi, girişteki kameranın gördüğü plakayı okuyup aracın kim olduğuna karar veren ve bariyeri bu karara göre çalıştıran yazılımdır. Aracın kapıya gelmesinden rapora düşmesine kadar olan adımları PlateVision üzerinden anlatıyoruz.</p>
+    <p>Plaka tanıma sistemi, girişteki kameranın gördüğü plakayı okuyup aracın kim olduğuna karar veren ve bariyeri bu karara göre çalıştıran yazılımdır.</p>
     <p class="yazi-bilgi">Mika Teknoloji · Güncelleme: <time datetime="2026-11-14">14 Kasım 2026</time></p>
   </div>
 </section>
@@ -978,7 +979,7 @@ main a:focus-visible,main button:focus-visible,main summary:focus-visible,.btn:f
 <figure><img src="img/plaka/canli_ekran.webp" width="1688" height="828" alt="PlateVision Canlı İzleme ekranı" loading="lazy"><figcaption>PlateVision Canlı İzleme: dört kamera ve son okumalar. Plakalar gizlenmiştir.</figcaption></figure>
 
 <h2>Bariyer hangi durumda açılır?</h2>
-<p>Plaka okunduktan sonra bariyerin ne yapacağını ayarlar belirler. Sahada en sık karşılaşılan durumlar şunlar:</p>
+<p>Bariyerin ne yapacağını programdaki ayarlar belirler. Kurulumda en çok sorulan durumlar:</p>
 <div class="yazi-tablo"><table>
 <thead><tr><th>Durum</th><th>Program ne yapar?</th></tr></thead>
 <tbody>
@@ -999,7 +1000,7 @@ main a:focus-visible,main button:focus-visible,main summary:focus-visible,.btn:f
 <li><b>Bariyer bağlantısı:</b> Access Panel ya da 2 çıkışlı Ethernet röle kartı. Bağlantı programın ayar ekranından test edilir.</li>
 <li><b>İsteğe bağlı:</b> Kapıda boş yer sayısını gösteren LED pano. Kart ödeme cihazı programa bağlanmaz; kartla alınan ödeme Kasa ekranında vardiyaya işlenir.</li>
 </ul>
-<p>Okuma başarısını en çok kameranın yeri ve açısı etkiler. Kamera sayısını ve yerleşimini keşifte, kapınızı görerek birlikte belirliyoruz.</p>
+<p>Okumayı en çok kameranın yeri ve açısı bozar; yazılım ayarına bakmadan önce kameranın plakayı nasıl gördüğüne bakılır. Kamera yerini kapıyı görmeden belirlemiyoruz.</p>
 
 <h2>Abone, misafir ve kara liste</h2>
 <p>Abonenin kimliği, aracı, aboneliği ve geçişleri tek kartta tutulur. Bir aboneye üç plaka tanımlanabilir; üyelik yıllık, aylık ya da kontörlü seçilir ve süresi yaklaşan aboneler listede görünür. Misafir kaydında plaka, ad soyad, telefon ve gidilecek yer yazılır; kayıt giriş saatiyle açılır.</p>
@@ -1030,8 +1031,8 @@ main a:focus-visible,main button:focus-visible,main summary:focus-visible,.btn:f
 
 <section class="son" id="demo">
   <div class="gen rv">
-    <h2>Kendi yapınızda görelim</h2>
-    <p>Kişi, kapı ya da kamera sayınızı konuşalım, ihtiyacınıza uygun demo ve teklifi hazırlayalım.</p>
+    <h2>Kapınızın görüntüsüne birlikte bakalım</h2>
+    <p>Kamera yerini ve bariyer bağlantısını keşifte kontrol edip kurulumu netleştirelim.</p>
     <div class="son-cta">
       <a class="btn birincil" href="https://mikateknoloji.com/iletisim">Demo Talep Edin</a>
       <a class="btn ikincil" href="tel:+905467122296">0546 712 22 96</a>
