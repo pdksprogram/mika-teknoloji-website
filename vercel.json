@@ -56,6 +56,10 @@
       "dest": "/urunler/turnike.html"
     },
     {
+      "src": "/urunler/personel-takip/?",
+      "dest": "/urunler/personel-takip.html"
+    },
+    {
       "src": "/en/?",
       "dest": "/en.html"
     },
