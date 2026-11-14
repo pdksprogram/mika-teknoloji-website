@@ -1031,7 +1031,7 @@ section[id]{scroll-margin-top:14px}
   hb.addEventListener('click',function(){mk(!mn.classList.contains('acik-m'))});
   mn.addEventListener('click',function(e){if(e.target.tagName==='A')mk(false)});
   var rv=document.querySelectorAll('.rv');
-  document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[href^="#"]');if(!a||a.getAttribute('href').length<2)return;var h=document.getElementById(a.getAttribute('href').slice(1));if(!h)return;h.querySelectorAll('.rv').forEach(function(e){e.classList.add('on','hemen')})},true);
+  document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[href^="#"]');if(!a||a.getAttribute('href').length<2)return;var h=document.getElementById(a.getAttribute('href').slice(1));if(!h)return;h.querySelectorAll('.rv').forEach(function(e){e.classList.add('on','hemen')});ev.preventDefault();h.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});try{history.pushState(null,'',location.pathname+location.search+a.getAttribute('href'))}catch(e){}},true);
   if(!('IntersectionObserver' in window)){rv.forEach(function(e){e.classList.add('on')});return}
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
   rv.forEach(function(e){io.observe(e)});

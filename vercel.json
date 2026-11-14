@@ -60,6 +60,10 @@
       "dest": "/urunler/personel-takip.html"
     },
     {
+      "src": "/puantaj-programi/?",
+      "dest": "/puantaj-programi.html"
+    },
+    {
       "src": "/en/?",
       "dest": "/en.html"
     },
