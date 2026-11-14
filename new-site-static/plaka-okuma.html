@@ -686,9 +686,13 @@ section[id]{scroll-margin-top:14px}
   .mobil-tel:focus-visible{outline:2px solid var(--dugme);outline-offset:2px}
   .mobil-not{margin-top:24px}
 }
+.atla{position:absolute;left:12px;top:-60px;z-index:1000;background:#102A56;color:#fff;padding:12px 18px;border-radius:8px;font:700 15px/20px Inter,sans-serif}.atla:focus{top:12px}
+main a:focus-visible,main button:focus-visible,main summary:focus-visible,.btn:focus-visible{outline:3px solid #102A56;outline-offset:2px;box-shadow:0 0 0 6px #FFD05A}
+.kanit{margin:14px 0 0;font:600 14px/20px Inter,sans-serif;opacity:.88}
 </style>
 </head>
 <body>
+<a class="atla" href="#icerik">Ana içeriğe geç</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
   <symbol id="mk" viewBox="0 0 40 44">
     <path d="M20 2.5 36.5 12v20L20 41.5 3.5 32V12Z" fill="none" stroke="#F5A800" stroke-width="3" stroke-linejoin="round"/>
@@ -742,14 +746,15 @@ section[id]{scroll-margin-top:14px}
   <div class="hero-izgara">
     <div class="hero-sol">
       <span class="ust-etiket">PlateVision · Mika Teknoloji</span>
-      <h1>Plaka okuma ve otopark yönetimi tek programda</h1>
+      <h1>Plaka tanıma sistemi ve otopark yönetimi tek programda</h1>
       <p class="oz">Kamera plakayı okur, program aracı abone, misafir ya da kara liste kaydıyla eşleştirir; bariyer tanımladığınız kurallara göre açılır. Ücret, kasa ve raporlar aynı programda tutulur.</p>
       <div class="hero-cta">
         <a class="btn birincil" href="https://mikateknoloji.com/iletisim">Demo Talep Edin</a>
         <a class="btn ikincil" href="tel:+905467122296">0546 712 22 96</a>
       </div>
+      <p class="kanit">18 yıllık deneyim · 15.000+ masaüstü kurulum · 650+ bulut firma</p>
       <div class="guven"><span>Plaka Okuma</span><span>Bariyer</span><span>Abone</span><span>Kasa</span><span>Rapor</span></div>
-      <p class="mobil-web">Mobil ve web erişimi ücretsizdir.</p>
+      <p class="mobil-web">Mobil ve web erişimi desteklenir.</p>
     </div>
     <div class="hero-sag">
       <div class="ornek">PlateVision Canlı İzleme. Plakalar gizlenmiştir.</div>
@@ -985,7 +990,7 @@ section[id]{scroll-margin-top:14px}
       <details><summary>Kara listedeki plaka okununca ne olur?</summary><p>Sesli ve görsel alarm çalışır, eşleşme kayda geçer. İlgili ayar açıkken bariyer açılmaz.</p></details>
       <details><summary>Raporlar Excel'e alınabilir mi?</summary><p>Evet. Okumalar ve raporlar Excel (.xlsx) dosyası olarak alınır. Günlük rapor, belirlediğiniz alıcılara her gün e-postayla da gönderilebilir.</p></details>
       <details><summary>Plaka kişisel veri midir?</summary><p>Evet, plaka KVKK kapsamında kişisel veridir. Araç görüntüsü ve sistem günlüğü için saklama süresi tanımlanabilir, süresi dolanlar otomatik silinir. Okuma kayıtlarında otomatik imha yoktur; abone başvurusunda kimlik ve plaka anonimleştirilir.</p></details>
-      <details><summary>Mobil ve web erişimi ücretli mi?</summary><p>Hayır. Mobil ve web erişimi ücretsizdir.</p></details>
+      <details><summary>Mobil ve web erişimi var mı?</summary><p>Evet. Otopark mobil uygulamadan ve web panelinden izlenir.</p></details>
       <details><summary>Sistem için ne gerekir?</summary><p>Windows 10 veya 11 (64 bit) bilgisayar, RTSP destekli IP kamera ve kablolu Gigabit ağ gerekir. Donanım, kamera sayısına göre teklifte belirlenir.</p></details>
     </div>
   </div>
@@ -1006,7 +1011,7 @@ section[id]{scroll-margin-top:14px}
 
 <section class="son" id="demo">
   <div class="gen rv">
-    <h2>Kendi otoparkınızda görelim</h2>
+    <h2>Otoparkınıza göre canlı demo isteyin</h2>
     <p>Kapı sayınızı ve kamera düzeninizi konuşalım, demoyu ve teklifi birlikte çıkaralım.</p>
     <div class="son-cta">
       <a class="btn birincil" href="https://mikateknoloji.com/iletisim">Demo Talep Edin</a>
@@ -1057,7 +1062,7 @@ section[id]{scroll-margin-top:14px}
   if(!V.length||!d)return;
   var sakin=(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)||(navigator.connection&&navigator.connection.saveData);
   var durdu=!!sakin;
-  function yaz(o){y.textContent=o?'Duraklat':'Oynat';d.setAttribute('aria-label',o?'Duraklat, tüm videolar':'Oynat, tüm videolar');k.setAttribute('d',o?'M2 1h4v12H2zM8 1h4v12H8z':'M2 1l11 6-11 6z')}
+  function yaz(o){y.textContent=o?'Duraklat':'Oynat';d.setAttribute('aria-pressed',o?'true':'false');d.setAttribute('aria-label',o?'Duraklat, tüm videolar':'Oynat, tüm videolar');k.setAttribute('d',o?'M2 1h4v12H2zM8 1h4v12H8z':'M2 1l11 6-11 6z')}
   function oyna(v){var p=v.play();if(p&&p.catch)p.catch(function(){})}
   function durum(){yaz(V.some(function(v){return !v.paused}))}
   V.forEach(function(v){v.gor=!('IntersectionObserver' in window);v.addEventListener('play',durum);v.addEventListener('pause',durum)});
@@ -1083,7 +1088,7 @@ section[id]{scroll-margin-top:14px}
   if(!v||!d)return;
   var durdu=!!((window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)||(navigator.connection&&navigator.connection.saveData)),gor=!('IntersectionObserver' in window);
   function oyna(){var p=v.play();if(p&&p.catch)p.catch(function(){})}
-  function yaz(){var o=!v.paused;y.textContent=o?'Duraklat':'Oynat';k.setAttribute('d',o?'M2 1h4v12H2zM8 1h4v12H8z':'M2 1l11 6-11 6z')}
+  function yaz(){var o=!v.paused;y.textContent=o?'Duraklat':'Oynat';d.setAttribute('aria-pressed',o?'true':'false');k.setAttribute('d',o?'M2 1h4v12H2zM8 1h4v12H8z':'M2 1l11 6-11 6z')}
   v.addEventListener('play',yaz);v.addEventListener('pause',yaz);
   d.addEventListener('click',function(){if(!v.paused){durdu=true;v.pause()}else{durdu=false;oyna()}});
   if('IntersectionObserver' in window){
