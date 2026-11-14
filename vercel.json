@@ -80,6 +80,38 @@
       "dest": "/puantaj-programi.html"
     },
     {
+      "src": "/blog/?",
+      "dest": "/blog.html"
+    },
+    {
+      "src": "/blog/pdks-sistemleri-nedir-2025-rehberi/?",
+      "dest": "/blog/pdks-sistemleri-nedir-2025-rehberi.html"
+    },
+    {
+      "src": "/blog/puantaj-nasil-tutulur/?",
+      "dest": "/blog/puantaj-nasil-tutulur.html"
+    },
+    {
+      "src": "/blog/vardiya-plani-nasil-hazirlanir/?",
+      "dest": "/blog/vardiya-plani-nasil-hazirlanir.html"
+    },
+    {
+      "src": "/blog/qr-kod-ile-personel-giris-cikis/?",
+      "dest": "/blog/qr-kod-ile-personel-giris-cikis.html"
+    },
+    {
+      "src": "/blog/plaka-tanima-sistemi-nasil-calisir/?",
+      "dest": "/blog/plaka-tanima-sistemi-nasil-calisir.html"
+    },
+    {
+      "src": "/blog/bekci-tur-takip-sistemi-nasil-kurulur/?",
+      "dest": "/blog/bekci-tur-takip-sistemi-nasil-kurulur.html"
+    },
+    {
+      "src": "/blog/turnike-cesitleri-ve-secimi/?",
+      "dest": "/blog/turnike-cesitleri-ve-secimi.html"
+    },
+    {
       "src": "/en/?",
       "dest": "/en.html"
     },
