@@ -15,7 +15,7 @@
       "continue": true
     },
     {
-      "src": "/(img|plaka/video)/(.*)",
+      "src": "/(img|plaka/video|fonts)/(.*)",
       "headers": {
         "Cache-Control": "public, max-age=31536000, immutable"
       },
