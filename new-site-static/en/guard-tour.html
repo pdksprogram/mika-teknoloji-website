@@ -19,7 +19,7 @@
 <link rel="alternate" hreflang="tr" href="https://mikateknoloji.com/qr-bekci">
 <link rel="alternate" hreflang="en" href="https://mikateknoloji.com/en/guard-tour">
 <link rel="alternate" hreflang="x-default" href="https://mikateknoloji.com/en/guard-tour">
-<script type="application/ld+json" id="ld">[{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://mikateknoloji.com/en/guard-tour#page", "url": "https://mikateknoloji.com/en/guard-tour", "name": "Guard Tour System with QR Checkpoints", "inLanguage": "en", "isPartOf": {"@id": "https://mikateknoloji.com/#organization"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mikateknoloji.com/"}, {"@type": "ListItem", "position": 2, "name": "Guard Tour", "item": "https://mikateknoloji.com/en/guard-tour"}]}]</script>
+<script type="application/ld+json" id="ld">[{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://mikateknoloji.com/en/guard-tour#page", "url": "https://mikateknoloji.com/en/guard-tour", "name": "Guard Tour System with QR Checkpoints", "inLanguage": "en", "isPartOf": {"@id": "https://mikateknoloji.com/#organization"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mikateknoloji.com/en/"}, {"@type": "ListItem", "position": 2, "name": "Guard Tour", "item": "https://mikateknoloji.com/en/guard-tour"}]}]</script>
 <link rel="preload" as="image" media="(max-width:820px)" href="img/bekci/m_hero.webp" fetchpriority="high">
 <link rel="preload" as="image" media="(min-width:821px)" href="img/bekci/hero.webp" fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin-3.woff2" crossorigin><link rel="preload" as="font" type="font/woff2" href="/fonts/inter-tr-2.woff2" crossorigin>
@@ -647,6 +647,7 @@ section[id]{scroll-margin-top:14px}
 .atla{position:absolute;left:12px;top:-60px;z-index:1000;background:#102A56;color:#fff;padding:12px 18px;border-radius:8px;font:700 15px/20px Inter,sans-serif}.atla:focus{top:12px}
 main a:focus-visible,main button:focus-visible,main summary:focus-visible,.btn:focus-visible{outline:3px solid #102A56;outline-offset:2px;box-shadow:0 0 0 6px #FFD05A}
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "@id": "https://mikateknoloji.com/en/guard-tour#faq", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "How does the guard tour system work?", "acceptedAnswer": {"@type": "Answer", "text": "QR tags are placed at the checkpoints and the guard scans them with a phone during the round. Every scan is logged with the checkpoint, time and person, and the software compares the round with its scheduled times and tolerances."}}, {"@type": "Question", "name": "How is an unusually fast round flagged?", "acceptedAnswer": {"@type": "Answer", "text": "The software looks at the time between checkpoints and the share of scans made within one minute, then rates the round as suspicious, hurried, steady or slow. This is a time-based alert; the final call rests with the supervisor."}}, {"@type": "Question", "name": "How are round times and tolerances set?", "acceptedAnswer": {"@type": "Answer", "text": "The round set-up holds the checkpoints, times, early and late tolerances and the minimum and maximum duration. If checkpoints must be scanned in order, the round is marked as sequential."}}, {"@type": "Question", "name": "Does it work with rotating shifts?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A fixed schedule assigns rounds by weekday and a rotating schedule by cycle length. A day left blank counts as leave."}}, {"@type": "Question", "name": "How does the route replay work?", "acceptedAnswer": {"@type": "Answer", "text": "The route is built from the order of QR scans and replayed step by step on a site diagram. The pace rating is an alert; the supervisor makes the final call."}}, {"@type": "Question", "name": "What does a guard do if they see an incident?", "acceptedAnswer": {"@type": "Answer", "text": "They write a note in the mobile app, attach a photo and send it with the location. The incident appears in the reports alongside the scan records."}}, {"@type": "Question", "name": "Where does the supervisor follow the rounds?", "acceptedAnswer": {"@type": "Answer", "text": "The mobile supervisor view shows each round as Completed, Partial or Not done. The management dashboard tracks planned, scanned and missed checkpoints."}}, {"@type": "Question", "name": "Is a separate tour device required?", "acceptedAnswer": {"@type": "Answer", "text": "No. The guard can scan the QR tag at each checkpoint with the app on their own phone; one QR tag per checkpoint is enough. For sites where phones are not used, Mika also manufactures a reader baton and key tag set."}}, {"@type": "Question", "name": "How are the QR tags prepared?", "acceptedAnswer": {"@type": "Answer", "text": "A checkpoint is added in the mobile app, its QR code is generated and printed. Tag positions and numbers are agreed together during installation."}}, {"@type": "Question", "name": "Can reports be exported to Excel?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Web reports export as Excel (.xlsx) files and can be printed."}}, {"@type": "Question", "name": "Are scan records personal data?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The privacy notice, legal basis, retention and deletion are the responsibility of your organisation as the data controller."}}]}</script>
 </head>
 <body>
 <a class="atla" href="#icerik">Skip to main content</a>
@@ -754,7 +755,7 @@ main a:focus-visible,main button:focus-visible,main summary:focus-visible,.btn:f
     <div class="rapor-ust rv">
       <div>
         <span class="etiket">PACE ANALYSIS</span>
-        <h2>Every round gets a pace rating from its scan times</h2>
+        <h2>Each round is rated from the intervals between checkpoint scans</h2>
       </div>
       <div>
         <p>For every round, the software calculates the average time between checkpoints, checkpoints per hour and the share of scans under one minute. A gap of more than 90 minutes starts a new round. The route replay shows the scan order on a site diagram. The rating is an alert; the supervisor makes the final call.</p>
@@ -779,7 +780,7 @@ main a:focus-visible,main button:focus-visible,main summary:focus-visible,.btn:f
     <div class="akis rv">
       <div class="metin">
         <span class="etiket">ROUND SET-UP</span>
-        <h2>Which checkpoint, in what order, at what time?</h2>
+        <h2>Which checkpoints, in what order and at what times?</h2>
         <p>Each round has its own checkpoints and times. Early and late tolerances and the minimum and maximum round duration are stored with the round, and checkpoints can be required in a fixed order.</p>
         <ul class="liste">
           <li><svg class="tik"><use href="#tik"/></svg>Checkpoint and time counts appear in the round list</li>
@@ -796,7 +797,7 @@ main a:focus-visible,main button:focus-visible,main summary:focus-visible,.btn:f
         <p>A fixed schedule assigns rounds to each day of the week; a rotating schedule takes a cycle length and start date. Rotating duty patterns are planned on the same screen.</p>
         <ul class="liste">
           <li><svg class="tik"><use href="#tik"/></svg>Guard &rarr; Shift &rarr; Round link</li>
-          <li><svg class="tik"><use href="#tik"/></svg>A day left blank counts as leave and sends no alerts</li>
+          <li><svg class="tik"><use href="#tik"/></svg>A blank day is treated as leave, so no alerts are sent</li>
         </ul>
       </div>
       <div class="panel"><picture><source media="(max-width:820px)" srcset="img/bekci/m_vardiya.webp" width="535" height="480"><img src="img/bekci/vardiya.webp" width="1332" height="480" alt="Weekly shift schedule with rounds assigned to days" loading="lazy"></picture></div>
@@ -849,7 +850,7 @@ main a:focus-visible,main button:focus-visible,main summary:focus-visible,.btn:f
 
 <section class="bolum" id="tur-seti">
   <div class="gen">
-    <div class="baslik rv"><h2>Phone QR or a tour reader set?</h2></div>
+    <div class="baslik rv"><h2>Phone-based QR scanning or a dedicated tour reader?</h2></div>
     <div class="tset rv">
       <div>
         <div class="gorsel"><svg class="qr-ikon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v1M14 20h1M17 17h4v4h-4"/></svg></div>
@@ -939,7 +940,7 @@ main a:focus-visible,main button:focus-visible,main summary:focus-visible,.btn:f
 
 <section class="son" id="demo">
   <div class="gen rv">
-    <h2>Let's try it on your own rounds</h2>
+    <h2>See how it works on your patrol routes</h2>
     <p>Tell us your checkpoint count and round pattern, and we will put together a demo and a quote with you.</p>
     <div class="son-cta">
       <a class="btn birincil" href="mailto:info@mikateknoloji.com?subject=Demo%20request">Request a Demo</a>
