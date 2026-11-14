@@ -16,8 +16,24 @@
     },
     {
       "src": "/(img|plaka/video)/(.*)",
-      "headers": { "Cache-Control": "public, max-age=31536000, immutable" },
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      },
       "continue": true
+    },
+    {
+      "src": "/en",
+      "status": 301,
+      "headers": {
+        "Location": "/en/"
+      }
+    },
+    {
+      "src": "/((?!en/$)(?!api/)(?!plaka/).+)/",
+      "status": 301,
+      "headers": {
+        "Location": "/$1"
+      }
     },
     {
       "src": "/chat-api\\.php",
@@ -98,42 +114,58 @@
     {
       "src": "/tr/?",
       "status": 301,
-      "headers": { "Location": "/" }
+      "headers": {
+        "Location": "/"
+      }
     },
     {
       "src": "/cozumler/pdks/?",
       "status": 301,
-      "headers": { "Location": "/pdks-programi" }
+      "headers": {
+        "Location": "/pdks-programi"
+      }
     },
     {
       "src": "/personel-devam-kontrol-sistemi/?",
       "status": 301,
-      "headers": { "Location": "/pdks-programi" }
+      "headers": {
+        "Location": "/pdks-programi"
+      }
     },
     {
       "src": "/turnike-sistemleri/?",
       "status": 301,
-      "headers": { "Location": "/urunler/turnike" }
+      "headers": {
+        "Location": "/urunler/turnike"
+      }
     },
     {
       "src": "/cozumler/bekci-kontrol/?",
       "status": 301,
-      "headers": { "Location": "/qr-bekci" }
+      "headers": {
+        "Location": "/qr-bekci"
+      }
     },
     {
       "src": "/urunler/bekci-tur-kontrol/?",
       "status": 301,
-      "headers": { "Location": "/qr-bekci" }
+      "headers": {
+        "Location": "/qr-bekci"
+      }
     },
     {
       "src": "/parmak-izi-takip-sistemi/?",
       "status": 301,
-      "headers": { "Location": "/urunler/parmak-izi-tanima" }
+      "headers": {
+        "Location": "/urunler/parmak-izi-tanima"
+      }
     },
     {
       "src": "/yuz-tanima-sistem/?",
       "status": 301,
-      "headers": { "Location": "/urunler/yuz-tanima" }
+      "headers": {
+        "Location": "/urunler/yuz-tanima"
+      }
     },
     {
       "handle": "filesystem"
