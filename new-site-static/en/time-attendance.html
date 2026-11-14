@@ -301,7 +301,7 @@ h3{font-weight:800;font-size:24px;line-height:32px}
 .rozet{height:54px;padding:0 22px;gap:14px;border:2px solid rgba(245,168,0,.42);background:rgba(10,22,44,.78);font:700 16px/20px Inter,sans-serif;letter-spacing:.07em;color:#fff}
 .rozet i{background:#35C27F}
 .rozet u{text-decoration:none;font-weight:500;letter-spacing:0;color:#FFD97F;padding-left:14px;border-left:1px solid rgba(255,255,255,.3)}
-.hero h1{margin-top:clamp(14px,2.4vh,24px);font-family:Cuprum,Manrope,sans-serif;font-weight:700;font-size:clamp(52px,min(5.2vw,11vh),104px);line-height:1.08;letter-spacing:0}
+.hero h1{margin-top:clamp(14px,2.4vh,24px);font-family:Manrope,Inter,sans-serif;font-weight:800;font-size:clamp(52px,min(5.2vw,11vh),104px);line-height:1.08;letter-spacing:-.02em}
 .hero h1 span{display:inline}
 .hero p.oz{max-width:640px;color:#DCE4F0}
 .hero-sag{--z:1.21;--tg:450px;--pt:clamp(130px,27vh,232px)}
@@ -420,6 +420,11 @@ h3{font-weight:800;font-size:24px;line-height:32px}
 .yontem>div{padding:32px 28px;background:#fff}
 .yontem>div+div{border-left:1px solid var(--kenar)}
 .yontem p{margin-top:8px;color:var(--metin2);font-size:17px;line-height:28px}
+.cihazlar{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.cihazlar figure{margin:0;display:flex;align-items:center;gap:24px;padding:24px 28px;border:1px solid var(--kenar);border-radius:18px;background:#fff}
+.cihazlar img{height:170px;width:auto;flex:none}
+.cihazlar b{display:block;font-size:18px}
+.cihazlar span{display:block;margin-top:6px;color:var(--metin2);font-size:16px;line-height:26px}
 .sss{max-width:860px;margin:0 auto;border-top:1px solid var(--kenar)}
 .sss details{border-bottom:1px solid var(--kenar)}
 .sss summary{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:68px;padding:18px 0;cursor:pointer;list-style:none;font:800 19px/28px Manrope,sans-serif}
@@ -453,6 +458,8 @@ a.marka{min-height:44px}
   .ucluTel{grid-template-columns:1fr}
   .alt-izgara{grid-template-columns:1fr 1fr}
   .yontem{grid-template-columns:1fr}
+  .cihazlar{grid-template-columns:1fr}
+  .cihazlar img{height:130px}
   .yontem>div{padding:22px 20px}
   .yontem>div+div{border-left:0;border-top:1px solid var(--kenar)}
   .yontem p{font-size:16px;line-height:26px}
@@ -466,6 +473,7 @@ a.marka{min-height:44px}
 .ust{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgb(30,20,84)}
 .ust.acik{background:var(--beyaz)}
 .ornek{font-size:13px;font-weight:600;line-height:18px;white-space:nowrap}
+@media (min-width:821px){.ornek{white-space:normal;top:calc(var(--pt) - 42px)}}
 .btn.birincil{background:#102A56;border:2px solid #D9A514;color:#fff;box-shadow:0 8px 20px rgba(10,24,51,.24)}
 .btn.ikincil{background:#fff;border:2px solid #102A56;color:#102A56}
 .hero-cta{gap:12px}
@@ -725,8 +733,8 @@ section[id]{scroll-margin-top:14px}
   <div class="hero-izgara">
     <div class="hero-sol">
       <span class="ust-etiket">E-SOFT PDKS · Mika Teknoloji</span>
-      <h1>Time and attendance software and staff tracking in one place</h1>
-      <p class="oz">Clock-ins, shifts, leave and overtime are kept in one program, and timesheets are calculated from these records. Card reader and QR code records appear in a single list. Managers use it on the desktop; staff use it on their phones.</p>
+      <h1>Time and attendance software for every shift and site</h1>
+      <p class="oz">Timesheets are calculated automatically from clock-in records. Shifts, leave and overtime live in the same software; managers work on the desktop, staff on their phones.</p>
       <div class="hero-cta">
         <a class="btn birincil" href="mailto:info@mikateknoloji.com?subject=Demo%20request">Request a Demo</a>
         <a class="btn ikincil" href="tel:+905467122296">+90 546 712 22 96</a>
@@ -926,6 +934,10 @@ section[id]{scroll-margin-top:14px}
       <div><h3>QR in the app</h3><p>The app verifies the location and shows a QR code for 30 seconds for the reader to scan.</p></div>
       <div><h3>Location</h3><p>Location is added to mobile records. A setting can hide it in reports.</p></div>
     </div>
+    <div class="cihazlar rv">
+      <figure><img src="img/tr/cihaz_dikey.webp" width="514" height="894" alt="Upright card and QR reader" loading="lazy"><figcaption><b>Upright reader</b><span>Card scanning · QR scanning · Wi-Fi rotating QR · Made by Mika</span></figcaption></figure>
+      <figure><img src="img/tr/cihaz_kare.webp" width="770" height="772" alt="Square card and QR reader" loading="lazy"><figcaption><b>Square reader</b><span>Card scanning · QR scanning · Wi-Fi rotating QR · Made by Mika</span></figcaption></figure>
+    </div>
     <details class="bio rv">
       <summary>On request: fingerprint and face recognition devices</summary>
       <div>
@@ -934,7 +946,7 @@ section[id]{scroll-margin-top:14px}
         <div class="dev"><a href="https://mikateknoloji.com/urunler/parmak-izi-tanima" hreflang="tr">Fingerprint devices</a><a href="https://mikateknoloji.com/urunler/yuz-tanima" hreflang="tr">Face recognition devices</a></div>
       </div>
     </details>
-    <details class="gerek rv"><summary>System requirements</summary><ul><li><b>Admin panel</b><span>Opens in a web browser.</span></li><li><b>Mobile app</b><span>Installed on staff and manager phones.</span></li><li><b>Clocking point</b><span>Card reader or QR code.</span></li><li><b>Number of devices</b><span>Confirmed in the quote, based on your number of entrances.</span></li></ul></details>
+    <details class="gerek rv"><summary>System requirements</summary><ul><li><b>Admin panel</b><span>Opens in a web browser.</span></li><li><b>Mobile app</b><span>Installed on staff and manager phones.</span></li><li><b>Scanning point</b><span>Card or QR reader.</span></li><li><b>Number of devices</b><span>Confirmed in the quote, based on your number of entrances.</span></li></ul></details>
   </div>
 </section>
 
@@ -971,6 +983,7 @@ section[id]{scroll-margin-top:14px}
     <div class="baslik rv"><h2>Time and attendance FAQ</h2></div>
     <div class="sss rv">
       <details><summary>What is PDKS?</summary><p>PDKS is the Turkish term for a staff time and attendance system. It records when staff arrive at and leave the workplace using a card reader or QR code, and shifts, overtime, leave and the monthly timesheet are calculated from these records.</p></details>
+      <details><summary>Which devices does it work with?</summary><p>It works with the card and QR readers Mika manufactures; staff cards and key tags are made by Mika too. Staff can also clock in by scanning a QR code with the app on their phone. Fingerprint and face recognition devices can be added on request.</p></details>
       <details><summary>Do fingerprint and face recognition comply with KVKK, Türkiye's data protection law?</summary><p>Under the Board's Principle Decision No. 2026/921, processing biometric data to track working time is not considered proportionate, and explicit consent alone does not make it lawful. We set up working-time tracking with card readers and QR. If you are considering biometric devices for critical-area security, make that decision with your legal adviser.</p></details>
       <details><summary>How are timesheets calculated?</summary><p>The calculation runs in three steps: records are transferred from the devices, entries are reviewed, and the monthly timesheet is calculated. Overtime is split out by the rule you choose for the work group; if the weekly 45-hour rule is on, time above 45 hours counts as overtime. Checked months are locked.</p></details>
       <details><summary>Can shifts be planned?</summary><p>Yes. A shift plan is drawn up per person and per day for the chosen period and sent to an approver, who approves, rejects or asks for changes. Approved plans can be locked. Staff see their shifts in the mobile app.</p></details>

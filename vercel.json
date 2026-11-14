@@ -88,6 +88,11 @@
       "dest": "/en/turnstiles.html"
     },
     {
+      "src": "/tr/?",
+      "status": 301,
+      "headers": { "Location": "/" }
+    },
+    {
       "src": "/cozumler/pdks/?",
       "status": 301,
       "headers": { "Location": "/pdks-programi" }

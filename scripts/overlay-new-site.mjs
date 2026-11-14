@@ -19,7 +19,33 @@ if (!fs.existsSync(path.join(hedef, "kvkk", "index.html"))) {
   throw new Error("KVKK ön-render çıktısı yok");
 }
 
+// prerender.mjs'in ürettiği tam site haritası (eski sitenin ön-render sayfaları) bindirmeden önce okunur;
+// yeni arayüzün sitemap.xml'i onu ezmesin diye ikisi birleştirilir.
+const SITEMAP_SATIRI = /<url>\s*<loc>([^<]+)<\/loc>\s*(?:<lastmod>([^<]+)<\/lastmod>\s*)?<\/url>/g;
+const siteHaritasiOku = (dosya) =>
+  fs.existsSync(dosya) ? [...fs.readFileSync(dosya, "utf8").matchAll(SITEMAP_SATIRI)].map((m) => ({ loc: m[1], lastmod: m[2] })) : [];
+const eskiSiteHaritasi = siteHaritasiOku(path.join(hedef, "sitemap.xml"));
+
 fs.cpSync(kaynak, hedef, { recursive: true, force: true });
+
+// Birleşik site haritası: yeni arayüzün adresleri önce, sonra yeni arayüzde karşılığı olmayan
+// ön-render adresleri. Aynı adres (sonda eğik çizgi farkı dahil) bir kez yazılır.
+{
+  const anahtar = (loc) => loc.replace(/\/+$/, "");
+  const yeniSiteHaritasi = siteHaritasiOku(path.join(hedef, "sitemap.xml"));
+  if (yeniSiteHaritasi.length === 0) throw new Error("new-site-static/sitemap.xml okunamadı");
+  // /tr eski Türkçe ana sayfadır; yeni ana sayfa "/" ile aynı amaçlı olduğu için haritaya girmez.
+  const gorulen = new Set([...yeniSiteHaritasi.map((u) => anahtar(u.loc)), "https://mikateknoloji.com/tr"]);
+  const eklenen = eskiSiteHaritasi.filter((u) => !gorulen.has(anahtar(u.loc)) && gorulen.add(anahtar(u.loc)));
+  const satir = (u) => `  <url><loc>${u.loc}</loc>${u.lastmod ? `<lastmod>${u.lastmod}</lastmod>` : ""}</url>`;
+  fs.writeFileSync(
+    path.join(hedef, "sitemap.xml"),
+    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+      [...yeniSiteHaritasi, ...eklenen].map(satir).join("\n") +
+      `\n</urlset>\n`,
+  );
+  console.log(`[yeni-site] Site haritası birleşti: ${yeniSiteHaritasi.length} yeni + ${eklenen.length} ön-render adresi.`);
+}
 
 // 8106 görünür önizlemesinde sayfalar data-taslak adreslerine geçer. Üretimde kanonik
 // URL'ler kullanılır; bu takma dosyalar yerel kullanıcı akışını da eksiksiz tutar.
@@ -50,6 +76,8 @@ const disServisBaslik = `
 <meta name="facebook-domain-verification" content="dwux5052kpdh354kzulbtorrtnxezc">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2PBHE77CY"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-P2PBHE77CY');</script>`;
+const iletisimOlcumu = `
+<script>document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href]'):null;if(!a)return;var h=a.getAttribute('href')||'',t=h.indexOf('tel:')===0?'telefon_tikla':h.indexOf('mailto:')===0?'eposta_tikla':h.indexOf('wa.me/')>-1?'whatsapp_tikla':'';if(t&&window.gtag)gtag('event',t,{link_url:h,transport_type:'beacon'})},true);</script>`;
 const whatsapp = "https://wa.me/905467122296";
 
 let htmlSayisi = 0;
@@ -65,6 +93,9 @@ for (const dosya of fs.readdirSync(hedef, { recursive: true })) {
   }
   if (!icerik.includes("G-P2PBHE77CY")) {
     icerik = icerik.replace("</head>", `${disServisBaslik}\n</head>`);
+  }
+  if (!icerik.includes("telefon_tikla")) {
+    icerik = icerik.replace("</head>", `${iletisimOlcumu}\n</head>`);
   }
   if (dosya.replaceAll("\\", "/") === "iletisim.html" && !icerik.includes(whatsapp)) {
     icerik = icerik.replace(

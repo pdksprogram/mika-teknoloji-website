@@ -301,7 +301,7 @@ h3{font-weight:800;font-size:24px;line-height:32px}
 .rozet{height:54px;padding:0 22px;gap:14px;border:2px solid rgba(245,168,0,.42);background:rgba(10,22,44,.78);font:700 16px/20px Inter,sans-serif;letter-spacing:.07em;color:#fff}
 .rozet i{background:#35C27F}
 .rozet u{text-decoration:none;font-weight:500;letter-spacing:0;color:#FFD97F;padding-left:14px;border-left:1px solid rgba(255,255,255,.3)}
-.hero h1{margin-top:clamp(14px,2.4vh,24px);font-family:Cuprum,Manrope,sans-serif;font-weight:700;font-size:clamp(52px,min(5.2vw,11vh),104px);line-height:1.08;letter-spacing:0}
+.hero h1{margin-top:clamp(14px,2.4vh,24px);font-family:Manrope,Inter,sans-serif;font-weight:800;font-size:clamp(52px,min(5.2vw,11vh),104px);line-height:1.08;letter-spacing:-.02em}
 .hero h1 span{display:inline}
 .hero p.oz{max-width:640px;color:#DCE4F0}
 .hero-sag{--z:1.21;--tg:450px;--pt:clamp(130px,27vh,232px)}
@@ -420,6 +420,11 @@ h3{font-weight:800;font-size:24px;line-height:32px}
 .yontem>div{padding:32px 28px;background:#fff}
 .yontem>div+div{border-left:1px solid var(--kenar)}
 .yontem p{margin-top:8px;color:var(--metin2);font-size:17px;line-height:28px}
+.cihazlar{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.cihazlar figure{margin:0;display:flex;align-items:center;gap:24px;padding:24px 28px;border:1px solid var(--kenar);border-radius:18px;background:#fff}
+.cihazlar img{height:170px;width:auto;flex:none}
+.cihazlar b{display:block;font-size:18px}
+.cihazlar span{display:block;margin-top:6px;color:var(--metin2);font-size:16px;line-height:26px}
 .sss{max-width:860px;margin:0 auto;border-top:1px solid var(--kenar)}
 .sss details{border-bottom:1px solid var(--kenar)}
 .sss summary{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:68px;padding:18px 0;cursor:pointer;list-style:none;font:800 19px/28px Manrope,sans-serif}
@@ -453,6 +458,8 @@ a.marka{min-height:44px}
   .ucluTel{grid-template-columns:1fr}
   .alt-izgara{grid-template-columns:1fr 1fr}
   .yontem{grid-template-columns:1fr}
+  .cihazlar{grid-template-columns:1fr}
+  .cihazlar img{height:130px}
   .yontem>div{padding:22px 20px}
   .yontem>div+div{border-left:0;border-top:1px solid var(--kenar)}
   .yontem p{font-size:16px;line-height:26px}
@@ -726,7 +733,7 @@ section[id]{scroll-margin-top:14px}
     <div class="hero-sol">
       <span class="ust-etiket">E-SOFT PDKS · Mika Teknoloji</span>
       <h1>PDKS programı ve personel devam kontrolü tek yerde</h1>
-      <p class="oz">Giriş-çıkış, vardiya, izin ve fazla mesai kayıtları aynı programda toplanır; puantaj bu kayıtlardan hesaplanır. Kart okuyucu ve QR kod kayıtları tek listede görünür. Yöneticiniz masaüstünden, personeliniz telefondan kullanır.</p>
+      <p class="oz">Puantaj, giriş-çıkış kayıtlarından kendiliğinden hesaplanır. Vardiya, izin ve fazla mesai aynı programda; yönetici masaüstünden, personel telefondan kullanır.</p>
       <div class="hero-cta">
         <a class="btn birincil" href="https://mikateknoloji.com/iletisim">Demo Talep Edin</a>
         <a class="btn ikincil" href="tel:+905467122296">0546 712 22 96</a>
@@ -871,6 +878,7 @@ section[id]{scroll-margin-top:14px}
         <ul class="liste">
           <li><svg class="tik"><use href="#tik"/></svg>Gün, saat ve ücret</li>
           <li><svg class="tik"><use href="#tik"/></svg>Banka ve nakit ödemeler</li>
+          <li><svg class="tik"><use href="#tik"/></svg>Logo (Excel) ve Luca puantaj aktarımı</li>
         </ul>
         <div class="dev"><a href="https://mikateknoloji.com/blog/puantaj-nasil-tutulur">Puantaj nasıl tutulur?</a></div>
       </div>
@@ -926,6 +934,10 @@ section[id]{scroll-margin-top:14px}
       <div><h3>Uygulamada QR</h3><p>Uygulama konumu doğrular, QR kodu 30 saniye gösterir, okuyucu okur.</p></div>
       <div><h3>Konum</h3><p>Mobil kayda konum eklenir. Raporda konumu gizleme ayarı vardır.</p></div>
     </div>
+    <div class="cihazlar rv">
+      <figure><img src="img/tr/cihaz_dikey.webp" width="514" height="894" alt="Dikey kart ve QR okutma cihazı" loading="lazy"><figcaption><b>Dikey okutma cihazı</b><span>Kart okutma · QR okutma · Wi-Fi ile değişen QR · Mika üretimi</span></figcaption></figure>
+      <figure><img src="img/tr/cihaz_kare.webp" width="770" height="772" alt="Kare kart ve QR okutma cihazı" loading="lazy"><figcaption><b>Kare okutma cihazı</b><span>Kart okutma · QR okutma · Wi-Fi ile değişen QR · Mika üretimi</span></figcaption></figure>
+    </div>
     <details class="bio rv">
       <summary>İstenirse: parmak izi ve yüz tanıma cihazları</summary>
       <div>
@@ -934,7 +946,7 @@ section[id]{scroll-margin-top:14px}
         <div class="dev"><a href="https://mikateknoloji.com/urunler/parmak-izi-tanima">Parmak izi cihazları</a><a href="https://mikateknoloji.com/urunler/yuz-tanima">Yüz tanıma cihazları</a></div>
       </div>
     </details>
-    <details class="gerek rv"><summary>Sistem gereksinimleri</summary><ul><li><b>Yönetim paneli</b><span>Web tarayıcısından açılır.</span></li><li><b>Mobil uygulama</b><span>Personel ve yönetici telefonuna kurulur.</span></li><li><b>Kayıt noktası</b><span>Kart okuyucu ya da QR kod.</span></li><li><b>Cihaz sayısı</b><span>Giriş sayınıza göre teklifte netleşir.</span></li></ul></details>
+    <details class="gerek rv"><summary>Sistem gereksinimleri</summary><ul><li><b>Yönetim paneli</b><span>Web tarayıcısından açılır.</span></li><li><b>Mobil uygulama</b><span>Personel ve yönetici telefonuna kurulur.</span></li><li><b>Okutma noktası</b><span>Kart okutma ya da QR okutma cihazı.</span></li><li><b>Cihaz sayısı</b><span>Giriş sayınıza göre teklifte netleşir.</span></li></ul></details>
   </div>
 </section>
 
@@ -971,6 +983,7 @@ section[id]{scroll-margin-top:14px}
     <div class="baslik rv"><h2>PDKS hakkında sorular</h2></div>
     <div class="sss rv">
       <details><summary>PDKS nedir?</summary><p>PDKS (Personel Devam Kontrol Sistemi), personelin iş yerine giriş-çıkış saatlerini kart okuyucu ya da QR kod ile kaydeder. Bu kayıtlardan vardiya, fazla mesai, izin ve aylık puantaj hesaplanır.</p></details>
+      <details><summary>Hangi cihazlarla çalışır?</summary><p>Mika'nın ürettiği kart ve QR okutma cihazlarıyla çalışır; personel kartları ve anahtarlıklar da Mika üretimidir. Personel, telefonundaki uygulamayla QR okutarak da kayıt verebilir. İstenirse parmak izi ve yüz tanıma cihazları da tanımlanır.</p></details>
       <details><summary>Parmak izi ve yüz tanıma KVKK'ya uygun mu?</summary><p>Kurulun 2026/921 sayılı ilke kararına göre mesai takibi için biyometrik veri işlenmesi ölçülü sayılmıyor; açık rıza da bunu tek başına hukuka uygun kılmıyor. Mesai takibini kart okuyucu ve QR ile kuruyoruz. Kritik alan güvenliği için biyometrik cihaz düşünüyorsanız kararı hukuk danışmanınızla verin.</p></details>
       <details><summary>PDKS programında puantaj nasıl hesaplanır?</summary><p>Hesap üç adımda ilerler: cihazlardaki kayıtlar aktarılır, hareketler düzenlenir, aylık puantaj hesaplanır. Fazla mesai, çalışma grubunda seçtiğiniz kurala göre ayrılır; haftalık 45 saat kuralı açıksa 45 saati aşan süre fazla mesai sayılır. Kontrol edilen ay kilitlenir.</p></details>
       <details><summary>Vardiya planlaması yapılabilir mi?</summary><p>Evet. Seçilen dönem için kişi ve gün bazında vardiya planı hazırlanır, onaycıya gönderilir; onaycı onaylar, reddeder ya da düzeltme ister. Onaylanan plan istenirse kilitlenir. Personel vardiyasını mobil uygulamada görür.</p></details>
@@ -1013,7 +1026,7 @@ section[id]{scroll-margin-top:14px}
     <div class="alt-izgara">
       <div><a class="marka" href="https://mikateknoloji.com/" aria-label="Mika Teknoloji" style="display:flex"><svg width="34" height="37" aria-hidden="true"><use href="#mk"/></svg><span><b>M<i>İKA</i></b><small>TEKNOLOJİ</small></span></a></div>
       <div><strong>PDKS</strong><a href="#urun">PDKS Programı</a><a href="#akis">Puantaj</a><a href="#akis">Vardiya</a><a href="#mobil">Mobil PDKS</a></div>
-      <div><strong>Diğer ürünler</strong><a href="https://mikateknoloji.com/urunler/turnike">Turnike</a><a href="https://mikateknoloji.com/plaka-okuma">Plaka Okuma</a><a href="https://mikateknoloji.com/qr-bekci">Bekçi Saati</a></div>
+      <div><strong>Diğer ürünler</strong><a href="https://mikateknoloji.com/urunler/personel-takip">Personel Takip</a><a href="https://mikateknoloji.com/puantaj-programi">Puantaj</a><a href="https://mikateknoloji.com/urunler/turnike">Turnike</a><a href="https://mikateknoloji.com/plaka-okuma">Plaka Okuma</a><a href="https://mikateknoloji.com/qr-bekci">Bekçi Saati</a></div>
       <div><strong>Kurumsal</strong><a href="https://mikateknoloji.com/hakkimizda">Hakkımızda</a><a href="https://mikateknoloji.com/referanslar">Referanslar</a><a href="https://mikateknoloji.com/iletisim">İletişim</a></div>
       <div><strong>Yasal</strong><a href="https://mikateknoloji.com/kvkk">KVKK metni</a><a href="https://mikateknoloji.com/mobil-gizlilik-sozlesmesi.php">Gizlilik</a></div>
     </div>

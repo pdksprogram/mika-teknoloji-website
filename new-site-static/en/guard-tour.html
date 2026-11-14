@@ -186,6 +186,12 @@ h3{font-weight:800;font-size:24px;line-height:32px}
 .donanim{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:stretch}
 .bos-foto{display:flex;align-items:center;justify-content:center;min-height:400px;border:2px dashed #B9C5D4;border-radius:18px;background:var(--gri);padding:32px;text-align:center;font-size:15px;line-height:24px;font-weight:600;color:var(--metin2)}
 .donanim .panel{height:400px}
+.tset{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.tset>div{display:flex;flex-direction:column;border:1px solid var(--kenar);border-radius:18px;background:#fff;padding:32px 32px 36px}
+.tset p{margin-top:8px;color:var(--metin2);font-size:17px;line-height:28px}
+.tset .gorsel{display:flex;align-items:center;justify-content:center;gap:28px;height:170px;margin-bottom:24px;border-radius:12px;background:var(--gri)}
+.tset .gorsel img{height:auto;filter:drop-shadow(0 8px 12px rgba(20,30,50,.18))}
+.tset .qr-ikon{width:92px;height:92px;color:var(--metin)}
 
 /* sektör */
 .sektor .panel{height:240px;padding:24px 24px 0}
@@ -271,7 +277,7 @@ h3{font-weight:800;font-size:24px;line-height:32px}
   .ucluTel{grid-template-columns:1fr;gap:40px}
   .ucluTel figure{width:260px;margin:0 auto}
   .ucluTel figure:nth-child(2){margin-top:0}
-  .donanim{grid-template-columns:1fr;gap:20px}
+  .donanim{grid-template-columns:1fr;gap:20px}.tset{grid-template-columns:1fr;gap:20px}.tset>div{padding:24px 20px 28px}.tset .gorsel{height:140px}
   .bos-foto{min-height:220px;border-radius:14px}
   .donanim .panel{height:300px}
   .alt-izgara{grid-template-columns:1fr 1fr}
@@ -301,7 +307,7 @@ h3{font-weight:800;font-size:24px;line-height:32px}
 .rozet{height:54px;padding:0 22px;gap:14px;border:2px solid rgba(245,168,0,.42);background:rgba(10,22,44,.78);font:700 16px/20px Inter,sans-serif;letter-spacing:.07em;color:#fff}
 .rozet i{background:#35C27F}
 .rozet u{text-decoration:none;font-weight:500;letter-spacing:0;color:#FFD97F;padding-left:14px;border-left:1px solid rgba(255,255,255,.3)}
-.hero h1{margin-top:clamp(14px,2.4vh,24px);font-family:Cuprum,Manrope,sans-serif;font-weight:700;font-size:clamp(52px,min(5.2vw,11vh),104px);line-height:1.08;letter-spacing:0}
+.hero h1{margin-top:clamp(14px,2.4vh,24px);font-family:Manrope,Inter,sans-serif;font-weight:800;font-size:clamp(52px,min(5.2vw,11vh),104px);line-height:1.08;letter-spacing:-.02em}
 .hero h1 span{display:inline}
 .hero p.oz{max-width:640px;color:#DCE4F0}
 .hero-sag{--z:1.21;--tg:450px;--pt:clamp(130px,27vh,232px)}
@@ -676,16 +682,16 @@ section[id]{scroll-margin-top:14px}
   <div class="hero-izgara">
     <div class="hero-sol">
       <span class="ust-etiket">E-SOFT SECURITY · Mika Teknoloji</span>
-      <h1>Guard tours: was the round completed, and how long did it take?</h1>
-      <p class="oz">The guard scans the QR tag at each checkpoint with a phone. The software compares the round with its scheduled times, calculates the time between checkpoints and flags rounds that are unusually fast or slow. This is a time-based alert; the final call rests with the supervisor.</p>
+      <h1>Guard tour software with QR checkpoints</h1>
+      <p class="oz">Guards scan QR checkpoints with a phone. View completed rounds, missed checkpoints and the time between scans.</p>
       <div class="hero-cta">
         <a class="btn birincil" href="mailto:info@mikateknoloji.com?subject=Demo%20request">Request a Demo</a>
         <a class="btn ikincil" href="tel:+905467122296">+90 546 712 22 96</a>
       </div>
-      <div class="guven"><span>QR Checkpoints</span><span>Round Schedule</span><span>Pace</span><span>Reports</span></div>
+      <div class="guven"><span>QR Checkpoints</span><span>Round Schedules</span><span>Pace Analysis</span><span>Reports</span></div>
     </div>
     <div class="hero-sag">
-      <div class="ornek">Screens are taken from the software, shown in Turkish; names, times, figures and pace ratings are sample data.</div>
+      <div class="ornek">Real product screen · Sample data</div>
       <div class="h-ekran"><picture><source media="(max-width:820px)" srcset="img/bekci/m_hero.webp" width="638" height="295"><img src="img/bekci/hero.webp" width="1332" height="681" alt="Round assessment: duration comparison of two rounds, with round rows below"></picture></div>
     </div>
   </div>
@@ -706,7 +712,7 @@ section[id]{scroll-margin-top:14px}
 
 <section class="bolum gri">
   <div class="gen">
-    <div class="baslik rv"><h2>From the patrol logbook to a pace report</h2></div>
+    <div class="baslik rv"><h2>From a paper logbook to automatic round reports</h2></div>
     <div class="karsi rv">
       <div>
         <h3>Logbook and manual checks</h3>
@@ -735,14 +741,14 @@ section[id]{scroll-margin-top:14px}
     <div class="rapor-ust rv">
       <div>
         <span class="etiket">PACE ANALYSIS</span>
-        <h2>The software assesses the pace of each round using timing data</h2>
+        <h2>Every round gets a pace rating from its scan times</h2>
       </div>
       <div>
-        <p>Average time between checkpoints, checkpoints per hour and the share of rapid scans are calculated for every round. A gap of more than 90 minutes starts a new round. The scan sequence is replayed step by step on a diagram; it is not a GPS track.</p>
+        <p>For every round, the software calculates the average time between checkpoints, checkpoints per hour and the share of scans under one minute. A gap of more than 90 minutes starts a new round. The route replay shows the scan order on a site diagram. The rating is an alert; the supervisor makes the final call.</p>
       </div>
     </div>
     <div class="panel genis rv"><picture><source media="(max-width:820px)" srcset="img/bekci/m_rota.webp" width="533" height="500"><img src="img/bekci/rota.webp" width="1335" height="560" alt="Patrol route replay: scan sequence, status messages and pace analysis" loading="lazy"></picture></div>
-    <h3 class="alt-baslik rv">Four ratings, four thresholds</h3>
+    <h3 class="alt-baslik rv">How rounds are rated</h3>
     <table class="kurulum rv">
       <thead><tr><th scope="col">Pace rating</th><th scope="col">Time between checkpoints</th></tr></thead>
       <tbody>
@@ -828,7 +834,25 @@ section[id]{scroll-margin-top:14px}
   </div>
 </section>
 
-<section class="bolum" id="kurulum">
+<section class="bolum" id="tur-seti">
+  <div class="gen">
+    <div class="baslik rv"><h2>Phone QR or a tour reader set?</h2></div>
+    <div class="tset rv">
+      <div>
+        <div class="gorsel"><svg class="qr-ikon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v1M14 20h1M17 17h4v4h-4"/></svg></div>
+        <h3>Phone QR scanning</h3>
+        <p>The guard scans the QR tag at each checkpoint with the app on their own phone. No extra device is needed; one QR tag per checkpoint is enough.</p>
+      </div>
+      <div>
+        <div class="gorsel"><img src="img/bekci/tom.webp" width="83" height="80" alt="Guard tour key tags" loading="lazy"><img src="img/bekci/okuyucu.webp" width="268" height="121" alt="Guard tour reader baton" loading="lazy"></div>
+        <h3>Reader baton and key tag set</h3>
+        <p>For sites where phones are not used, Mika manufactures and sells the reader baton and the key tags fitted at the checkpoints.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bolum gri" id="kurulum">
   <div class="gen">
     <div class="baslik rv"><h2>Zones, checkpoints and rounds are set up together during installation</h2></div>
     <div class="yontem rv">
@@ -840,7 +864,7 @@ section[id]{scroll-margin-top:14px}
   </div>
 </section>
 
-<section class="bolum gri" id="kvkk">
+<section class="bolum" id="kvkk">
   <div class="gen">
     <div class="baslik rv">
       <span class="etiket">DATA PROTECTION</span>
@@ -856,7 +880,7 @@ section[id]{scroll-margin-top:14px}
   </div>
 </section>
 
-<section class="bolum" id="ozellikler">
+<section class="bolum gri" id="ozellikler">
   <div class="gen">
     <div class="baslik rv"><h2>What's in the software?</h2></div>
     <div class="ozl rv">
@@ -868,7 +892,7 @@ section[id]{scroll-margin-top:14px}
   </div>
 </section>
 
-<section class="bolum gri" id="sss">
+<section class="bolum" id="sss">
   <div class="gen">
     <div class="baslik rv"><h2>Guard tour tracking FAQ</h2></div>
     <div class="sss rv">
@@ -876,9 +900,10 @@ section[id]{scroll-margin-top:14px}
       <details><summary>How is an unusually fast round flagged?</summary><p>The software looks at the time between checkpoints and the share of scans made within one minute, then rates the round as suspicious, hurried, steady or slow. This is a time-based alert; the final call rests with the supervisor.</p></details>
       <details><summary>How are round times and tolerances set?</summary><p>The round set-up holds the checkpoints, times, early and late tolerances and the minimum and maximum duration. If checkpoints must be scanned in order, the round is marked as sequential.</p></details>
       <details><summary>Does it work with rotating shifts?</summary><p>Yes. A fixed schedule assigns rounds by weekday and a rotating schedule by cycle length. A day left blank counts as leave.</p></details>
-      <details><summary>Is the route replay a GPS track?</summary><p>No. The scan sequence is replayed step by step on a diagram; it is not a GPS track.</p></details>
+      <details><summary>How does the route replay work?</summary><p>The route is built from the order of QR scans and replayed step by step on a site diagram. The pace rating is an alert; the supervisor makes the final call.</p></details>
       <details><summary>What does a guard do if they see an incident?</summary><p>They write a note in the mobile app, attach a photo and send it with the location. The incident appears in the reports alongside the scan records.</p></details>
       <details><summary>Where does the supervisor follow the rounds?</summary><p>The mobile supervisor view shows each round as Completed, Partial or Not done. The management dashboard tracks planned, scanned and missed checkpoints.</p></details>
+      <details><summary>Is a separate tour device required?</summary><p>No. The guard can scan the QR tag at each checkpoint with the app on their own phone; one QR tag per checkpoint is enough. For sites where phones are not used, Mika also manufactures a reader baton and key tag set.</p></details>
       <details><summary>How are the QR tags prepared?</summary><p>A checkpoint is added in the mobile app, its QR code is generated and printed. Tag positions and numbers are agreed together during installation.</p></details>
       <details><summary>Can reports be exported to Excel?</summary><p>Yes. Web reports export as Excel (.xlsx) files and can be printed.</p></details>
       <details><summary>Are scan records personal data?</summary><p>Yes. The privacy notice, legal basis, retention and deletion are the responsibility of your organisation as the data controller.</p></details>
@@ -886,7 +911,7 @@ section[id]{scroll-margin-top:14px}
   </div>
 </section>
 
-<section class="bolum" id="kurum">
+<section class="bolum gri" id="kurum">
   <div class="gen">
     <div class="baslik rv"><h2>Sales and support</h2><p>E-SOFT SECURITY is a product of Mika Teknoloji Kontrol Sistemleri.</p></div>
     <div class="yontem rv">
