@@ -11,6 +11,7 @@ Merkez: Perpa Ticaret Merkezi A Blok, Şişli, İstanbul. Telefon: +90 546 712 2
 - [Puantaj Programı](https://mikateknoloji.com/puantaj-programi): Giriş-çıkış kayıtlarından aylık puantaj otomatik hesaplanır; fazla mesai, izin ve devamsızlık tek tabloda, Excel (.xlsx) çıktısı.
 - [Plaka Tanıma Sistemi (PlateVision)](https://mikateknoloji.com/plaka-okuma): Kamera plakayı okur, aracı abone, misafir veya kara liste kaydıyla eşleştirir, bariyeri kurala göre açar; otopark ücreti, kasa ve raporlar aynı sistemde.
 - [Turnike Sistemi ve Geçiş Kontrolü](https://mikateknoloji.com/urunler/turnike): Bel tipi, boy tipi, erişilebilir ve hızlı geçiş turnikeleri; kart, kapı yetkisi, ziyaretçi ve geçiş raporları tek programda.
+- [Kartlı Geçiş Sistemi](https://mikateknoloji.com/kartli-gecis-sistemi): Personel ve ziyaretçi kartlarına kapı yetkisi; her kart okutması, reddedilen deneme ve kayıp kart tek programda; PDKS ile aynı kayıt.
 - [Bekçi Tur Takip Sistemi](https://mikateknoloji.com/qr-bekci): QR noktaları, tur saatleri ve vardiya planıyla güvenlik turları izlenir; eksik, erken veya geç turlar raporda işaretlenir.
 
 ## Şirket
