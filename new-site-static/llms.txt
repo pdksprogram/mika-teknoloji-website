@@ -1,0 +1,39 @@
+# Mika Teknoloji
+
+> Mika Teknoloji (Mika Teknoloji Kontrol Sistemleri), 2008'den bu yana PDKS (personel devam kontrol), puantaj, turnike ve geçiş kontrol, plaka tanıma, bekçi tur takip ve yemekhane yazılımları geliştiren İstanbul merkezli bir yazılım firmasıdır. Ürün ailesinin adı E-SOFT SOLUTION'dır. Masaüstünde 15.000'i aşkın kurulum ve bulutta 650'yi aşkın firma Mika programlarını kullanır. Kurulum, eğitim ve teknik destek Mika'nın kendi ekibi tarafından verilir.
+
+Merkez: Perpa Ticaret Merkezi A Blok, Şişli, İstanbul. Telefon: +90 546 712 22 96. E-posta: info@mikateknoloji.com. Hafta içi 09:00–18:00.
+
+## Ürünler
+
+- [PDKS Programı](https://mikateknoloji.com/pdks-programi): Personel giriş-çıkış, vardiya, izin, fazla mesai ve puantaj tek programda. Kart, QR veya telefonla kayıt; yönetici masaüstünden, personel mobil uygulamadan kullanır.
+- [Personel Takip Sistemi](https://mikateknoloji.com/urunler/personel-takip): Kim geldi, kim gelmedi, geç kalan ve erken çıkan personel tek listede; mobil PDKS uygulamasıyla telefondan giriş-çıkış.
+- [Puantaj Programı](https://mikateknoloji.com/puantaj-programi): Giriş-çıkış kayıtlarından aylık puantaj otomatik hesaplanır; fazla mesai, izin ve devamsızlık tek tabloda, Excel (.xlsx) çıktısı.
+- [Plaka Tanıma Sistemi (PlateVision)](https://mikateknoloji.com/plaka-okuma): Kamera plakayı okur, aracı abone, misafir veya kara liste kaydıyla eşleştirir, bariyeri kurala göre açar; otopark ücreti, kasa ve raporlar aynı sistemde.
+- [Turnike Sistemi ve Geçiş Kontrolü](https://mikateknoloji.com/urunler/turnike): Bel tipi, boy tipi, erişilebilir ve hızlı geçiş turnikeleri; kart, kapı yetkisi, ziyaretçi ve geçiş raporları tek programda.
+- [Bekçi Tur Takip Sistemi](https://mikateknoloji.com/qr-bekci): QR noktaları, tur saatleri ve vardiya planıyla güvenlik turları izlenir; eksik, erken veya geç turlar raporda işaretlenir.
+
+## Şirket
+
+- [Hakkımızda](https://mikateknoloji.com/hakkimizda)
+- [Referanslar](https://mikateknoloji.com/referanslar): Sanayi, sağlık ve perakende sektörlerinden seçili kurulumlar.
+- [İletişim ve demo talebi](https://mikateknoloji.com/iletisim)
+
+## Rehberler
+
+- [PDKS sistemleri nedir?](https://mikateknoloji.com/blog/pdks-sistemleri-nedir-2025-rehberi)
+- [Puantaj nasıl tutulur?](https://mikateknoloji.com/blog/puantaj-nasil-tutulur)
+- [Vardiya planı nasıl hazırlanır?](https://mikateknoloji.com/blog/vardiya-plani-nasil-hazirlanir)
+- [QR kod ile personel giriş-çıkış](https://mikateknoloji.com/blog/qr-kod-ile-personel-giris-cikis)
+- [Plaka tanıma sistemi nasıl çalışır?](https://mikateknoloji.com/blog/plaka-tanima-sistemi-nasil-calisir)
+- [Bekçi tur takip sistemi nasıl kurulur?](https://mikateknoloji.com/blog/bekci-tur-takip-sistemi-nasil-kurulur)
+- [Turnike çeşitleri ve seçimi](https://mikateknoloji.com/blog/turnike-cesitleri-ve-secimi)
+
+## English
+
+- [Mika Teknoloji (English)](https://mikateknoloji.com/en/): Time and attendance, access control, ANPR and guard tour software developed in Istanbul since 2008.
+- [Time and Attendance Software](https://mikateknoloji.com/en/time-attendance)
+- [ANPR and Car Park Software](https://mikateknoloji.com/en/anpr)
+- [Turnstile Access Control](https://mikateknoloji.com/en/turnstiles)
+- [Guard Tour Software](https://mikateknoloji.com/en/guard-tour)
+- [Contact](https://mikateknoloji.com/en/contact)
