@@ -200,6 +200,34 @@
       }
     },
     {
+      "src": "/access-control/?",
+      "status": 301,
+      "headers": {
+        "Location": "/kartli-gecis-sistemi"
+      }
+    },
+    {
+      "src": "/urunler/gecis-kontrol/?",
+      "status": 301,
+      "headers": {
+        "Location": "/kartli-gecis-sistemi"
+      }
+    },
+    {
+      "src": "/qr-gecis/?",
+      "status": 301,
+      "headers": {
+        "Location": "/kartli-gecis-sistemi"
+      }
+    },
+    {
+      "src": "/otopark-otomasyon/?",
+      "status": 301,
+      "headers": {
+        "Location": "/plaka-okuma"
+      }
+    },
+    {
       "handle": "filesystem"
     },
     {
