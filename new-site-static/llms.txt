@@ -25,6 +25,7 @@ Merkez: Perpa Ticaret Merkezi A Blok, Şişli, İstanbul. Telefon: +90 546 712 2
 - [PDKS programı nasıl seçilir? 10 ölçütlü karşılaştırma](https://mikateknoloji.com/blog/pdks-programi-nasil-secilir): Kayıt yöntemi, KVKK, günlük devam, puantaj, fazla mesai, vardiya, izin, raporlar, bordro aktarımı, yetki ve destek ölçütleri; her firmaya sorulacak soru ve demoda beş adımlık sınama senaryosu.
 - [Personel takip sistemi nedir, nasıl seçilir?](https://mikateknoloji.com/blog/personel-takip-sistemi-nedir): Kart, QR ve mobil kayıt, geç kalan ve gelmeyen personel listesi, izin, vardiya, raporlar, KVKK 2026/921 kararı ve seçim soruları.
 - [PDKS sistemleri nedir?](https://mikateknoloji.com/blog/pdks-sistemleri-nedir-2025-rehberi)
+- [Excel puantaj mı, puantaj programı mı? 9 ölçütlü karşılaştırma](https://mikateknoloji.com/blog/excel-puantaj-mi-puantaj-programi-mi): Kayıt kaynağı, çalışma süresi, fazla mesai, izin, ay kilidi, bordro aktarımı ve Excel'den geçiş adımları.
 - [Puantaj nasıl tutulur?](https://mikateknoloji.com/blog/puantaj-nasil-tutulur)
 - [Vardiya planı nasıl hazırlanır?](https://mikateknoloji.com/blog/vardiya-plani-nasil-hazirlanir)
 - [QR kod ile personel giriş-çıkış](https://mikateknoloji.com/blog/qr-kod-ile-personel-giris-cikis)
