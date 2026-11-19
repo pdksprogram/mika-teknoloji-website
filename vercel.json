@@ -100,6 +100,10 @@
       "dest": "/blog/qr-kod-ile-personel-giris-cikis.html"
     },
     {
+      "src": "/blog/personel-takip-sistemi-nedir/?",
+      "dest": "/blog/personel-takip-sistemi-nedir.html"
+    },
+    {
       "src": "/blog/plaka-tanima-sistemi-nasil-calisir/?",
       "dest": "/blog/plaka-tanima-sistemi-nasil-calisir.html"
     },
