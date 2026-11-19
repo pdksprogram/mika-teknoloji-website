@@ -108,6 +108,15 @@ for (const dosya of fs.readdirSync(hedef, { recursive: true })) {
       `<a class="btn ikincil" href="${whatsapp}" target="_blank" rel="noopener">WhatsApp</a><a class="btn ikincil" href="mailto:info@mikateknoloji.com">info@mikateknoloji.com</a>`,
     );
   }
+  // Satış: sayfa sonundaki demo düğmelerinin yanına WhatsApp (iletişim sayfasındaki emsal düğme stili).
+  if (icerik.includes('<div class="son-cta">') && !icerik.includes(`${whatsapp}?text=`)) {
+    const ingilizce = /^en([/\._]|$)/.test(dosya.replaceAll("\\", "/"));
+    const mesaj = ingilizce
+      ? "Hello, I am writing from the Mika Teknoloji website; I would like to request a demo."
+      : "Merhaba, Mika Teknoloji sitesinden yazıyorum; demo talep etmek istiyorum.";
+    const dugme = `<a class="btn ikincil" href="${whatsapp}?text=${encodeURIComponent(mesaj)}" target="_blank" rel="noopener">WhatsApp</a>`;
+    icerik = icerik.replace(/(<div class="son-cta">[\s\S]*?)(\r?\n\s*<\/div>)/, (_, ic, kapanis) => `${ic}\n      ${dugme}${kapanis}`);
+  }
   if (icerik !== onceki) {
     fs.writeFileSync(tam, icerik);
     footerSayisi++;
