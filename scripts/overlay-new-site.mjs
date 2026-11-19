@@ -117,6 +117,12 @@ for (const dosya of fs.readdirSync(hedef, { recursive: true })) {
     const dugme = `<a class="btn ikincil" href="${whatsapp}?text=${encodeURIComponent(mesaj)}" target="_blank" rel="noopener">WhatsApp</a>`;
     icerik = icerik.replace(/(<div class="son-cta">[\s\S]*?)(\r?\n\s*<\/div>)/, (_, ic, kapanis) => `${ic}\n      ${dugme}${kapanis}`);
   }
+  // SEO: Türkçe altbilgi ürün listesine Kartlı Geçiş Sistemi (sayfa yalnız 1 iç bağlantı alıyordu).
+  icerik = icerik.replace(/<div><strong>(?:Ürünler|Diğer ürünler)<\/strong>(?:(?!<\/div>)[\s\S])*<\/div>/g, (blok) =>
+    blok.includes("/kartli-gecis-sistemi") || dosya.replaceAll("\\", "/").startsWith("kartli-gecis-sistemi/")
+      ? blok
+      : blok.replace(/<\/div>$/, '<a href="https://mikateknoloji.com/kartli-gecis-sistemi">Kartlı Geçiş Sistemi</a></div>'),
+  );
   if (icerik !== onceki) {
     fs.writeFileSync(tam, icerik);
     footerSayisi++;
