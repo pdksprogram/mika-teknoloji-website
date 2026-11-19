@@ -28,7 +28,7 @@ Merkez: Perpa Ticaret Merkezi A Blok, Şişli, İstanbul. Telefon: +90 546 712 2
 - [Excel puantaj mı, puantaj programı mı? 9 ölçütlü karşılaştırma](https://mikateknoloji.com/blog/excel-puantaj-mi-puantaj-programi-mi): Kayıt kaynağı, çalışma süresi, fazla mesai, izin, ay kilidi, bordro aktarımı ve Excel'den geçiş adımları.
 - [Puantaj nasıl tutulur?](https://mikateknoloji.com/blog/puantaj-nasil-tutulur)
 - [Vardiya planı nasıl hazırlanır?](https://mikateknoloji.com/blog/vardiya-plani-nasil-hazirlanir)
-- [QR kod ile personel giriş-çıkış](https://mikateknoloji.com/blog/qr-kod-ile-personel-giris-cikis)
+- [QR kodlu personel takip sistemi (QR PDKS): telefonla giriş-çıkış](https://mikateknoloji.com/blog/qr-kod-ile-personel-giris-cikis)
 - [Plaka tanıma sistemi nasıl çalışır?](https://mikateknoloji.com/blog/plaka-tanima-sistemi-nasil-calisir)
 - [Bekçi tur takip sistemi nasıl kurulur?](https://mikateknoloji.com/blog/bekci-tur-takip-sistemi-nasil-kurulur)
 - [Turnike çeşitleri ve seçimi](https://mikateknoloji.com/blog/turnike-cesitleri-ve-secimi)
