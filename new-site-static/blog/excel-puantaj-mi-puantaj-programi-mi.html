@@ -987,6 +987,19 @@ main a:focus-visible,main button:focus-visible,main summary:focus-visible,.btn:f
 <tr><td>Personel erişimi</td><td>Personel kendi puantajını göremez, sorular bordrocuya gelir.</td><td>Personel aylık puantajını, giriş-çıkışını ve vardiyasını mobil uygulamadan görür.</td></tr>
 </tbody></table></div>
 
+<h2>Puantaj Excel tablosunda hangi sütunlar olur?</h2>
+<p>Excel puantaj tablosu örneklerinin çoğu aynı iskeleti kullanır: her personel bir satır, ayın her günü bir sütun. Gün hücresine çalışılan saat ya da kısaltma (Ç çalıştı, HT hafta tatili, İ izin, R rapor, D devamsız) yazılır; satır sonunda toplamlar formülle alınır.</p>
+<div class="yazi-tablo"><table>
+<thead><tr><th>Sütun</th><th>Excel'de</th><th>Puantaj programında</th></tr></thead>
+<tbody>
+<tr><td>Personel, departman</td><td>Elle yazılır, her ay kopyalanır.</td><td>Personel kartından gelir.</td></tr>
+<tr><td>Günlük giriş ve çıkış</td><td>Elle yazılır.</td><td>Okutma cihazından gelir.</td></tr>
+<tr><td>Çalışma süresi</td><td>Çıkış eksi giriş formülü, mola elle düşülür.</td><td>Vardiya kuralına göre hesaplanır.</td></tr>
+<tr><td>Fazla mesai</td><td>Formülle ya da elle toplanır.</td><td>Seçtiğiniz kurala göre hesaplanır.</td></tr>
+<tr><td>İzin, rapor, devamsızlık</td><td>Kısaltma elle girilir.</td><td>Onaylanan izin ve okutma olmayan gün işlenir.</td></tr>
+<tr><td>Ay sonu toplamı</td><td>EĞERSAY ve TOPLA formülleri.</td><td>Ay kilitlenir, Excel (.xlsx) olarak alınır.</td></tr>
+</tbody></table></div>
+
 <h2>Excel puantaj ne zaman yeter?</h2>
 <p>Personel sayısı az, herkesin aynı saatte çalıştığı ve fazla mesainin nadir olduğu bir işletmede Excel çizelgesi iş görebilir. Dönüşümlü ya da gece vardiyası, birden fazla şube, sık izin ve düzenli fazla mesai başladığında her ay aynı toplamalar ve kontroller elle tekrarlanır; hata da çoğunlukla burada çıkar.</p>
 <p>Excel ile devam edecekseniz adımlar <a href="https://mikateknoloji.com/blog/puantaj-nasil-tutulur">puantaj nasıl tutulur</a> yazımızda.</p>
