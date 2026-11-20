@@ -41,6 +41,17 @@ const devices = [
   }
 ];
 
+// SSS şeması: metinler sayfadaki görünür SSS ile birebir aynı
+const KVKK_SORU = "KVKK kararından sonra parmak izi ile mesai takibi yapılabilir mi?";
+const KVKK_CEVAP = "KVKK Kurulu'nun 2026/921 sayılı ilke kararı, mesai takibi amacıyla parmak izi gibi biyometrik veri işlenmesini ölçülü bulmadı; mesai takibi için kart, şifre veya QR gibi yöntemler önerildi. Proximity kart ve şifre destekleyen parmak izi modellerimizle mesai takibi karta taşınabilir.";
+const SSS = [
+  ["Parmak izi okuyucu ne kadar hassas?", "Mika Teknoloji cihazları 500 DPI optik sensör ile çalışır."],
+  ["Yaralı veya kuru parmakta çalışır mı?", "Evet, gelişmiş optik sensörlerimiz kuru, nemli veya hafif yaralı parmak izlerini başarıyla okuyabilir. Alternatif parmak kaydetme özelliği mevcuttur."],
+  ["Kaç kişilik kapasiteye kadar ölçeklenebilir?", "MTFDP200 modelimiz 20.000 parmak izi kapasitesine sahiptir. Çoklu cihaz bağlantısı ile kapasite artırılabilir."],
+  ["Elektrik kesilmesinde ne olur?", "Cihazlarımızda dahili batarya bulunur. Elektrik kesilse bile veriler korunur ve sistem 4-8 saat arası çalışmaya devam eder."],
+  [KVKK_SORU, KVKK_CEVAP],
+];
+
 export default function FingerprintSystemPage() {
   useEffect(() => {
     // Track parmak izi systems page view
@@ -65,6 +76,13 @@ export default function FingerprintSystemPage() {
             "description": "Profesyonel parmak izi okuyucu ve PDKS cihazları. MT1100, MTP50, MTFDP200, MT4051 modelleri.",
             "brand": "Mika Teknoloji",
             "category": "Security Systems"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": SSS.map(([q, a]) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } }))
           })}
         </script>
       </Helmet>
@@ -342,6 +360,11 @@ export default function FingerprintSystemPage() {
                   </p>
                 </div>
               </div>
+              <h4 className="font-semibold text-gray-800 mb-2">{KVKK_SORU}</h4>
+              <p className="text-gray-600">
+                {KVKK_CEVAP}{" "}
+                <a href="/blog/yuz-tanima-parmak-izi-pdks-kvkk" className="text-primary underline">Kararın özeti ve geçiş adımları</a>
+              </p>
             </div>
 
             {/* Call to Action */}

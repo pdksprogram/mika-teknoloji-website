@@ -43,6 +43,17 @@ const devices = [
   }
 ];
 
+// SSS şeması: metinler sayfadaki görünür SSS ile birebir aynı
+const KVKK_SORU = "KVKK kararından sonra yüz tanıma ile mesai takibi yapılabilir mi?";
+const KVKK_CEVAP = "KVKK Kurulu'nun 2026/921 sayılı ilke kararı, mesai takibi amacıyla yüz tanıma gibi biyometrik veri işlenmesini ölçülü bulmadı; mesai takibi için kart, şifre veya QR gibi yöntemler önerildi. Mesai takibi dışındaki kullanımlarda amaç, gereklilik ve hukuki şartlar veri sorumlusunca ayrıca değerlendirilir.";
+const SSS = [
+  ["Yüz tanıma sistemi nasıl çalışır?", "Yüz tanıma teknolojisi, yüzün alın, burun ve çene bölgelerindeki benzersiz geometrik noktaları analiz eder. Bu matematiksel algoritmalar sayesinde her kişi için eşsiz bir kimlik oluşturulur."],
+  ["Makyaj veya gözlük takınca çalışır mı?", "Evet, gelişmiş algoritmalarımız makyaj, gözlük, bıyık veya sakal gibi değişiklikleri tolere edebilir. Sistem yüzün değişmeyen anatomik özelliklerini baz alır."],
+  ["Hangi aydınlatma koşullarında çalışır?", "Mika Teknoloji yüz tanıma cihazları, karanlık ve çok aydınlık ortamlar dahil geniş bir aydınlatma spektrumunda çalışabilir. IR ışık desteği sayesinde gece görüş özelliği sunar."],
+  ["PDKS yazılımı ile nasıl entegre olur?", "Cihazlarımız TCP/IP ve USB bağlantısı ile var olan PDKS yazılımınıza kolayca entegre edilebilir. Real-time data transferi ve raporlama yapabilirsiniz."],
+  [KVKK_SORU, KVKK_CEVAP],
+];
+
 export default function FaceRecognitionSystemPage() {
   useEffect(() => {
     // Track yüz tanıma systems page view
@@ -67,6 +78,13 @@ export default function FaceRecognitionSystemPage() {
             "description": "Gelişmiş yüz tanıma sistemi ve temassız PDKS cihazları. MTFD15, MTFP15, MTFDP50, MTFDP200 modelleri.",
             "brand": "Mika Teknoloji",
             "category": "Security Systems"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": SSS.map(([q, a]) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } }))
           })}
         </script>
       </Helmet>
@@ -319,6 +337,11 @@ export default function FaceRecognitionSystemPage() {
                   </p>
                 </div>
               </div>
+              <h4 className="font-semibold text-gray-800 mb-2">{KVKK_SORU}</h4>
+              <p className="text-gray-600">
+                {KVKK_CEVAP}{" "}
+                <a href="/blog/yuz-tanima-parmak-izi-pdks-kvkk" className="text-primary underline">Kararın özeti ve geçiş adımları</a>
+              </p>
             </div>
 
             {/* Call to Action */}
