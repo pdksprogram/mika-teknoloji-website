@@ -237,6 +237,20 @@
       }
     },
     {
+      "src": "/qr-pdks/?",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/qr-kod-ile-personel-giris-cikis"
+      }
+    },
+    {
+      "src": "/urunler/qr-pdks/?",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/qr-kod-ile-personel-giris-cikis"
+      }
+    },
+    {
       "src": "/otopark-otomasyon/?",
       "status": 301,
       "headers": {
