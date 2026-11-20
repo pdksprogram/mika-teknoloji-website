@@ -104,6 +104,10 @@
       "dest": "/blog/personel-takip-sistemi-nedir.html"
     },
     {
+      "src": "/blog/personel-giris-cikis-takip-sistemi/?",
+      "dest": "/blog/personel-giris-cikis-takip-sistemi.html"
+    },
+    {
       "src": "/blog/excel-puantaj-mi-puantaj-programi-mi/?",
       "dest": "/blog/excel-puantaj-mi-puantaj-programi-mi.html"
     },
