@@ -855,7 +855,7 @@ export default function VideolarPage() {
     "description": video.description,
     "contentUrl": `https://mikateknoloji.com${video.src}`,
     "thumbnailUrl": "https://mikateknoloji.com/images/logos/mika-logo.jpg",
-    "uploadDate": "2025-01-15",
+    "uploadDate": "2025-01-15T00:00:00+03:00",
     "publisher": {
       "@type": "Organization",
       "name": "Mika Teknoloji Kontrol Sistemleri",
@@ -964,7 +964,10 @@ export default function VideolarPage() {
         "video": {
           "@type": "VideoObject",
           "name": "PDKS Sisteme Giriş",
-          "contentUrl": "https://mikateknoloji.com/esoft-pdks-login-sayfasi.mp4"
+          "description": "PDKS sistemine kullanıcı adı ve şifre ile ilk giriş adımları.",
+          "contentUrl": "https://mikateknoloji.com/esoft-pdks-login-sayfasi.mp4",
+          "thumbnailUrl": "https://mikateknoloji.com/images/logos/mika-logo.jpg",
+          "uploadDate": "2025-01-15T00:00:00+03:00"
         }
       },
       {
