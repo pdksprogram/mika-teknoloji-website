@@ -849,7 +849,7 @@ export default function VideolarPage() {
 
   const subcategories = Array.from(new Set(filteredVideos.map(v => v.subcategory)));
 
-  const videoStructuredData = videos.map((video, index) => ({
+  const videoStructuredData = videos.map((video) => ({
     "@type": "VideoObject",
     "name": video.title,
     "description": video.description,
@@ -867,11 +867,6 @@ export default function VideolarPage() {
     },
     "inLanguage": "tr",
     "isFamilyFriendly": true,
-    "interactionStatistic": {
-      "@type": "InteractionCounter",
-      "interactionType": "https://schema.org/WatchAction",
-      "userInteractionCount": 500 + (index * 50)
-    },
     "keywords": video.keywords,
     "about": {
       "@type": "Thing",
