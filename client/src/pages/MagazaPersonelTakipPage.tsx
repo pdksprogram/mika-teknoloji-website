@@ -155,6 +155,13 @@ export default function MagazaPersonelTakipPage() {
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map((faq) => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-white">
