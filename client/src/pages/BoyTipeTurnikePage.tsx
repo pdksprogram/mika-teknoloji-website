@@ -15,6 +15,14 @@ import { Link } from "wouter";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
 import { boyut } from "@/lib/gorselBoyut";
 
+// SSS: görünür liste ve FAQPage şeması aynı diziden
+const SSS: [string, string][] = [
+  ["Boy tipi turnike nedir, bel tipinden farkı ne?", "Boy tipi turnike insan boyu yüksekliğinde döner kollu bir geçiş sistemidir. Bel tipine göre üstünden atlanamaz ve altından geçilemez; bu yüzden havalimanı, metro, fabrika çevresi ve yüksek güvenlik gereken girişlerde tercih edilir."],
+  ["3 kollu mu 4 kollu boy tipi turnike mi seçilmeli?", "3 kollu modeller standart güvenlik ve yoğun geçiş için yeterlidir. 4 kollu modeller daha dar geçiş aralığıyla daha yüksek güvenlik sağlar. Çift yönlü modeller giriş ve çıkışı aynı turnikeden kontrol eder; dar alanlar için kompakt modeller vardır."],
+  ["Boy tipi turnike PDKS programıyla çalışır mı?", "Evet. Turnikeye kartlı veya parmak izli okuyucu bağlanır; her geçiş PDKS programına giriş-çıkış kaydı olarak düşer ve puantaja yansır."],
+  ["Boy tipi turnike fiyatı neye göre değişir?", "Fiyat; kol sayısı (3 veya 4), tek veya çift yönlü geçiş, kompakt, ekonomik ya da kristal panelli model seçimi, bağlanacak okuyucu ve montaj koşullarına göre değişir. Keşif sonrası net teklif verilir."],
+];
+
 export default function BoyTipeTurnikePage() {
   
   const boyTurnikeModelleri = [
@@ -162,6 +170,13 @@ export default function BoyTipeTurnikePage() {
         <meta property="og:url" content="https://mikateknoloji.com/urunler/boy-tipi-turnike" />
         
         <link rel="canonical" href="https://mikateknoloji.com/urunler/boy-tipi-turnike" />
+        <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": SSS.map(([q, a]) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } }))
+        })}
+        </script>
       </Helmet>
 
       {/* Ürün Katalogu */}
@@ -236,6 +251,23 @@ export default function BoyTipeTurnikePage() {
       </div>
 
       <TurnikeReferanslari />
+
+      {/* SSS */}
+      <div className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Sıkça Sorulan Sorular</h2>
+            <div className="space-y-4">
+              {SSS.map(([q, a]) => (
+                <div key={q} className="bg-white rounded-lg p-6 shadow-sm">
+                  <h3 className="font-semibold text-gray-800 mb-2">{q}</h3>
+                  <p className="text-gray-700">{a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Call to Action */}
       <div className="py-16 bg-slate-900 text-white">

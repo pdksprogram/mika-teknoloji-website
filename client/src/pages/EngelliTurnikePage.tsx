@@ -19,6 +19,14 @@ import { Link } from "wouter";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
 import { boyut } from "@/lib/gorselBoyut";
 
+// SSS: görünür liste ve FAQPage şeması aynı diziden
+const SSS: [string, string][] = [
+  ["Engelli turnikesi nedir?", "Tekerlekli sandalye ve baston kullanıcıları ile yaşlı bireylerin rahatça geçebileceği geniş geçişli turnikedir. VIP, yaprak ve kelebek kapılı modeller kapının açılmasıyla geniş bir geçiş alanı sağlar."],
+  ["Engelli turnikesi hangi modellerde olur?", "Geniş geçişli VIP turnike, kristal panelli VIP turnike, dar alanlar için slim VIP turnike, tam otomatik geçiş için motorlu VIP ve G kollu modeller, yaprak ve manyetik kilitli yaprak turnikeler ile kelebek turnikeler bulunur."],
+  ["Engelli turnikesi diğer turnikelerle birlikte kullanılır mı?", "Evet. Genellikle bel veya boy tipi turnike hattının yanına konur; aynı okuyucu ve aynı PDKS programıyla çalışır. Her geçiş giriş-çıkış kaydı olarak düşer ve puantaja yansır."],
+  ["Engelli turnikesi fiyatı neye göre değişir?", "Fiyat; model (VIP, yaprak, kelebek), motorlu veya manuel çalışma, gövde ve panel malzemesi, bağlanacak okuyucu ve montaj koşullarına göre değişir. Keşif sonrası net teklif verilir."],
+];
+
 export default function EngelliTurnikePage() {
   
   const engelliTurnikeModelleri = [
@@ -113,6 +121,13 @@ export default function EngelliTurnikePage() {
         <meta property="og:title" content="Engelli Turnike Sistemleri - VIP Turnikeler | Mika Teknoloji" />
         <meta property="og:description" content="Engelli bireyler için özel tasarlanmış turnike sistemleri. VIP turnikeler, yaprak kapılar ve otomatik geçiş kontrol sistemleri. Tekerlekli sandalye uyumlu." />
         <meta name="keywords" content="engelli turnike, vip turnike, yaprak kapı, otomatik turnike, tekerlekli sandalye, engelli erişim, mika teknoloji" />
+        <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": SSS.map(([q, a]) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } }))
+        })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
@@ -274,6 +289,23 @@ export default function EngelliTurnikePage() {
       </div>
 
       <TurnikeReferanslari />
+
+      {/* SSS */}
+      <div className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Sıkça Sorulan Sorular</h2>
+            <div className="space-y-4">
+              {SSS.map(([q, a]) => (
+                <div key={q} className="bg-white rounded-lg p-6 shadow-sm">
+                  <h3 className="font-semibold text-gray-800 mb-2">{q}</h3>
+                  <p className="text-gray-700">{a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Call to Action */}
       <div className="py-16 bg-slate-900 border-t-4 border-primary text-white">
