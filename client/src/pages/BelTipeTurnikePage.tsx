@@ -15,6 +15,14 @@ import { Link } from "wouter";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
 import { boyut } from "@/lib/gorselBoyut";
 
+// SSS: görünür liste ve FAQPage şeması aynı diziden
+const SSS: [string, string][] = [
+  ["Bel tipi turnike nedir?", "Bel hizasında üç kollu döner mekanizmayla çalışan turnikedir. Yetkili geçişte kol bir tur döner ve tek kişinin geçmesine izin verir; ofis, fabrika ve okul girişlerinde en yaygın kullanılan turnike tipidir."],
+  ["Hangi bel tipi turnike modeli nereye uygun?", "Ofis ve küçük işletmeler için MT 250, fabrikalar ve yoğun trafikli endüstriyel alanlar için MT 345, çift yönlü kontrol gereken binalar için MT 250 A2, dar alanlar için MT 250 S, metro ve hastane gibi çok yoğun girişler için MT 450 uygundur. Ücretli WC geçişleri için jetonlu modeller vardır."],
+  ["Bel tipi turnike PDKS programıyla çalışır mı?", "Evet. Turnikeye kartlı veya şifreli okuyucu bağlanır; her geçiş PDKS programına giriş-çıkış kaydı olarak düşer ve puantaja yansır."],
+  ["Bel tipi turnike fiyatı neye göre değişir?", "Fiyat; model, gövde malzemesi, tek veya çift yönlü kontrol, bağlanacak okuyucu (kart, parmak izi, QR) ve montaj koşullarına göre değişir. Keşif sonrası net teklif verilir."],
+];
+
 export default function BelTipeTurnikePage() {
   
   const belTurnikeModelleri = [
@@ -144,6 +152,13 @@ export default function BelTipeTurnikePage() {
         <meta property="og:url" content="https://mikateknoloji.com/urunler/bel-tipi-turnike" />
         
         <link rel="canonical" href="https://mikateknoloji.com/urunler/bel-tipi-turnike" />
+        <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": SSS.map(([q, a]) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } }))
+        })}
+        </script>
       </Helmet>
 
 
@@ -221,6 +236,23 @@ export default function BelTipeTurnikePage() {
       </div>
 
       <TurnikeReferanslari />
+
+      {/* SSS */}
+      <div className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Sıkça Sorulan Sorular</h2>
+            <div className="space-y-4">
+              {SSS.map(([q, a]) => (
+                <div key={q} className="bg-white rounded-lg p-6 shadow-sm">
+                  <h3 className="font-semibold text-gray-800 mb-2">{q}</h3>
+                  <p className="text-gray-700">{a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Call to Action */}
       <div className="py-16 bg-slate-900 border-t-4 border-primary text-white">
