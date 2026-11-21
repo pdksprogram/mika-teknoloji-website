@@ -19,6 +19,7 @@ Merkez: Perpa Ticaret Merkezi A Blok, Şişli, İstanbul. Telefon: +90 546 712 2
 - [Engelli Turnike](https://mikateknoloji.com/urunler/engelli-turnike): Tekerlekli sandalye ve baston kullanıcıları için geniş geçişli VIP, yaprak ve kelebek kapılı turnikeler.
 - [Hızlı Geçiş Turnike](https://mikateknoloji.com/urunler/hizli-gecis-turnike): Dakikada 20 ile 120 kişi arası kapasiteli kanatlı turnikeler; Chubby (geniş geçiş) ve SLIM (dar alan) modeller.
 - [Kartlı Geçiş Sistemi](https://mikateknoloji.com/kartli-gecis-sistemi): Personel ve ziyaretçi kartlarına kapı yetkisi; her kart okutması, reddedilen deneme ve kayıp kart tek programda; PDKS ile aynı kayıt.
+- [Bariyer Sistemleri](https://mikateknoloji.com/urunler/bariyer-sistemleri): Mantar bariyer, road blocker, tuzak kapanlar, otopark bariyeri ve hidrolik güvenlik sistemleri; 2 yıl garanti.
 - [Bekçi Tur Takip Sistemi](https://mikateknoloji.com/qr-bekci): QR noktaları, tur saatleri ve vardiya planıyla güvenlik turları izlenir; eksik, erken veya geç turlar raporda işaretlenir.
 - [Yüz Tanıma PDKS Cihazları](https://mikateknoloji.com/urunler/yuz-tanima): Temassız yüz tanıma PDKS cihazları (MTFD15, MTFP15, MTFDP50, MTFDP200); 20.000 kapasite, Wi-Fi ve TCP/IP.
 - [Parmak İzi PDKS Cihazları](https://mikateknoloji.com/urunler/parmak-izi-tanima): Parmak izi PDKS cihazları (MT1100, MTP50, MTFDP200, MT4051); 20.000 kapasite, Wi-Fi ve TCP/IP bağlantı.
