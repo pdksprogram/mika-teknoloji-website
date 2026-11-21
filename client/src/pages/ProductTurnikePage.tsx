@@ -11,6 +11,14 @@ import { Helmet } from "react-helmet-async";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
 import { boyut } from "@/lib/gorselBoyut";
 
+// SSS şeması: metinler sayfadaki görünür SSS ile birebir aynı
+const SSS: [string, string][] = [
+  ["Turnike sistemi fiyatları nasıl belirlenir?", "Turnike fiyatları, sistem tipi, malzeme kalitesi, entegrasyon özellikleri ve montaj gereksinimlerine göre değişir. Bel tipi, boy tipi ve hızlı geçiş turnike modellerinin her biri farklı fiyat aralığında sunulur."],
+  ["İstanbul turnike sistemi kurulumu nasıl yapılır?", "İstanbul turnike sistemi kurulumu için önce keşif yapılır, alan analizi gerçekleştirilir. Kurulum ve devreye alma desteği sağlanır."],
+  ["Hangi turnike sistemi benim için uygun?", "Güvenlik turnike sistemi seçimi, kullanım alanının büyüklüğü, güvenlik seviyesi, geçiş yoğunluğu ve bütçe gibi faktörlere bağlıdır. VIP turnike, jetonlu turnike veya erişim kontrolü turnike seçeneklerinden ihtiyacınıza en uygun olanını belirleyebilirsiniz."],
+  ["Turnike PDKS programıyla birlikte çalışır mı?", "Evet. Turnikeye kartlı veya parmak izli okuyucu bağlanır; her geçiş PDKS programına giriş-çıkış kaydı olarak düşer ve puantaja yansır."],
+];
+
 export default function ProductTurnikePage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -141,6 +149,13 @@ export default function ProductTurnikePage() {
             "url": "https://mikateknoloji.com"
           },
           "category": "Security Systems"
+        })}
+        </script>
+        <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": SSS.map(([q, a]) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } }))
         })}
         </script>
         
@@ -488,6 +503,13 @@ export default function ProductTurnikePage() {
                     <strong>Güvenlik turnike sistemi</strong> seçimi, kullanım alanının büyüklüğü, güvenlik seviyesi, geçiş yoğunluğu ve 
                     bütçe gibi faktörlere bağlıdır. VIP turnike, jetonlu turnike veya erişim kontrolü turnike seçeneklerinden 
                     ihtiyacınıza en uygun olanını belirleyebilirsiniz.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <h4 className="font-semibold text-gray-800 mb-2">Turnike PDKS programıyla birlikte çalışır mı?</h4>
+                  <p className="text-gray-700">
+                    Evet. Turnikeye kartlı veya parmak izli okuyucu bağlanır; her geçiş <Link href="/pdks-programi" className="text-blue-600 underline"><strong>PDKS programına</strong></Link> giriş-çıkış kaydı olarak düşer ve puantaja yansır.
                   </p>
                 </div>
               </div>
