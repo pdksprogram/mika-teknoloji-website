@@ -233,7 +233,7 @@ export const SOZLUK: Record<Dil, Sozluk> = {
           ],
           [
             "Geçiş Kontrol",
-            "/urunler/gecis-kontrol"
+            "/kartli-gecis-sistemi"
           ],
           [
             "QR Bekçi",

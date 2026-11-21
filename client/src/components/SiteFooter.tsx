@@ -17,7 +17,7 @@ const SUTUNLAR: [string, [string, string][]][] = [
     ["Bariyer", "/urunler/bariyer-sistemleri"],
     ["Yüz Tanıma", "/urunler/yuz-tanima"],
     ["Parmak İzi", "/urunler/parmak-izi-tanima"],
-    ["Geçiş Kontrol", "/urunler/gecis-kontrol"],
+    ["Geçiş Kontrol", "/kartli-gecis-sistemi"],
     ["QR Bekçi", "/qr-bekci"],
   ]],
   ["Kurumsal", [

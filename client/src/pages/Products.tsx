@@ -47,7 +47,7 @@ const KATEGORILER: { baslik: string; gorsel: string; gorselAlt: string; kalemler
     gorselAlt: "Mika PDKS mobil yönetici ekranı",
     kalemler: [
       { ad: "Personel Takip Programı", yol: "/urunler/personel-takip" },
-      { ad: "QR PDKS Uygulaması", yol: "/urunler/qr-pdks" },
+      { ad: "QR PDKS Uygulaması", yol: "/blog/qr-kod-ile-personel-giris-cikis" },
       { ad: "Web PDKS", yol: "https://pdkspersoneltakip.com/", dis: true },
     ],
   },
@@ -71,7 +71,7 @@ const POPULER: Kalem[] = [
   { ad: "Boy Tipi Turnike", yol: "/urunler/boy-tipi-turnike" },
   { ad: "Hızlı Geçiş Turnike", yol: "/urunler/hizli-gecis-turnike" },
   { ad: "Engelli Turnikesi", yol: "/urunler/engelli-turnike" },
-  { ad: "Geçiş Kontrol Paneli", yol: "/urunler/gecis-kontrol" },
+  { ad: "Geçiş Kontrol Paneli", yol: "/kartli-gecis-sistemi" },
   { ad: "PDKS Programı", yol: "/pdks-programi" },
 ];
 

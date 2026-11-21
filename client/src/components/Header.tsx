@@ -151,7 +151,7 @@ export default function Header() {
       { name: "Puantaj Programı", href: "/puantaj-programi" },
       { name: "Vardiya Takip Programı", href: "/vardiya-takip-programi" },
       { name: "Fazla Mesai Hesaplama", href: "/fazla-mesai-hesaplama" },
-      { name: "QR PDKS Uygulaması", href: "/urunler/qr-pdks" }
+      { name: "QR PDKS Uygulaması", href: "/blog/qr-kod-ile-personel-giris-cikis" }
     ]
   };
 
@@ -160,10 +160,10 @@ export default function Header() {
     "Ürünler": [
       { name: "Parmak İzi Tanıma Sistemleri", href: "/urunler/parmak-izi-tanima" },
       { name: "Yüz Tanıma Sistemleri", href: "/urunler/yuz-tanima" },
-      { name: "Geçiş Kontrol Sistemleri", href: "/urunler/gecis-kontrol" },
+      { name: "Geçiş Kontrol Sistemleri", href: "/kartli-gecis-sistemi" },
       { name: "Turnike Sistemleri", href: "/urunler/turnike" },
       { name: "Personel Takip Sistemleri", href: "/urunler/personel-takip" },
-      { name: "QR Kodlu PDKS Sistemi", href: "/urunler/qr-pdks" },
+      { name: "QR Kodlu PDKS Sistemi", href: "/blog/qr-kod-ile-personel-giris-cikis" },
       { name: "Bariyer Sistemleri", href: "/urunler/bariyer-sistemleri" },
       { name: "Mağaza Personel Takip Programı", href: "/urunler/magaza-personel-takip" },
       { name: "OGS & HGS Geçiş Sistemleri", href: "/urunler/ogs-hgs" },
