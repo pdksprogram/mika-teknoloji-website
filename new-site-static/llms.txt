@@ -11,6 +11,10 @@ Merkez: Perpa Ticaret Merkezi A Blok, Şişli, İstanbul. Telefon: +90 546 712 2
 - [Puantaj Programı](https://mikateknoloji.com/puantaj-programi): Giriş-çıkış kayıtlarından aylık puantaj otomatik hesaplanır; fazla mesai, izin ve devamsızlık tek tabloda, Excel (.xlsx) çıktısı.
 - [Plaka Tanıma Sistemi (PlateVision)](https://mikateknoloji.com/plaka-okuma): Kamera plakayı okur, aracı abone, misafir veya kara liste kaydıyla eşleştirir, bariyeri kurala göre açar; otopark ücreti, kasa ve raporlar aynı sistemde.
 - [Turnike Sistemi ve Geçiş Kontrolü](https://mikateknoloji.com/urunler/turnike): Bel tipi, boy tipi, erişilebilir ve hızlı geçiş turnikeleri; kart, kapı yetkisi, ziyaretçi ve geçiş raporları tek programda.
+- [Bel Tipi Turnike](https://mikateknoloji.com/urunler/bel-tipi-turnike): Paslanmaz çelik bel tipi turnikeler: elektromekanik, jetonlu ve özel tasarım modeller; geçişler PDKS programına giriş-çıkış kaydı olarak düşer.
+- [Boy Tipi Turnike](https://mikateknoloji.com/urunler/boy-tipi-turnike): Single, double, kompakt ve kristal boy tipi turnikeler; havalimanı, metro ve yüksek güvenlik alanları için.
+- [Engelli Turnike](https://mikateknoloji.com/urunler/engelli-turnike): Tekerlekli sandalye ve baston kullanıcıları için geniş geçişli VIP, yaprak ve kelebek kapılı turnikeler.
+- [Hızlı Geçiş Turnike](https://mikateknoloji.com/urunler/hizli-gecis-turnike): Dakikada 20 ile 120 kişi arası kapasiteli kanatlı turnikeler; Chubby (geniş geçiş) ve SLIM (dar alan) modeller.
 - [Kartlı Geçiş Sistemi](https://mikateknoloji.com/kartli-gecis-sistemi): Personel ve ziyaretçi kartlarına kapı yetkisi; her kart okutması, reddedilen deneme ve kayıp kart tek programda; PDKS ile aynı kayıt.
 - [Bekçi Tur Takip Sistemi](https://mikateknoloji.com/qr-bekci): QR noktaları, tur saatleri ve vardiya planıyla güvenlik turları izlenir; eksik, erken veya geç turlar raporda işaretlenir.
 
@@ -25,15 +29,15 @@ Merkez: Perpa Ticaret Merkezi A Blok, Şişli, İstanbul. Telefon: +90 546 712 2
 - [PDKS programı nasıl seçilir? 10 ölçütlü karşılaştırma](https://mikateknoloji.com/blog/pdks-programi-nasil-secilir): Kayıt yöntemi, KVKK, günlük devam, puantaj, fazla mesai, vardiya, izin, raporlar, bordro aktarımı, yetki ve destek ölçütleri; her firmaya sorulacak soru ve demoda beş adımlık sınama senaryosu.
 - [Yüz tanıma ve parmak izi PDKS: KVKK 2026/921 kararından sonra](https://mikateknoloji.com/blog/yuz-tanima-parmak-izi-pdks-kvkk): Mesai takibinde biyometrik veri hakkında Kurul kararının özeti, açık rıza, kart/PIN/RFID/QR alternatifleri, biyometrik PDKS'ten karta geçiş adımları.
 - [Personel takip sistemi nedir, nasıl seçilir?](https://mikateknoloji.com/blog/personel-takip-sistemi-nedir): Kart, QR ve mobil kayıt, geç kalan ve gelmeyen personel listesi, izin, vardiya, raporlar, KVKK 2026/921 kararı ve seçim soruları.
-- [PDKS sistemleri nedir?](https://mikateknoloji.com/blog/pdks-sistemleri-nedir-2025-rehberi)
+- [PDKS sistemleri nedir?](https://mikateknoloji.com/blog/pdks-sistemleri-nedir-2025-rehberi): PDKS'in parçaları, okutmadan aylık puantaja giden yol, kart, QR ve biyometrik okutma farkı, masaüstü ve bulut kurulum, seçmeden önce sorulacaklar.
 - [Personel giriş çıkış takip sistemi: çizelge mi, sistem mi?](https://mikateknoloji.com/blog/personel-giris-cikis-takip-sistemi): İmza çizelgesi, Excel çizelgesi ve takip sistemi karşılaştırması, giriş-çıkış cihazı seçimi, İş Kanunu ve KVKK açısından kayıt, geçiş adımları.
 - [Excel puantaj mı, puantaj programı mı? 9 ölçütlü karşılaştırma](https://mikateknoloji.com/blog/excel-puantaj-mi-puantaj-programi-mi): Kayıt kaynağı, çalışma süresi, fazla mesai, izin, ay kilidi, bordro aktarımı ve Excel'den geçiş adımları.
-- [Puantaj nasıl tutulur?](https://mikateknoloji.com/blog/puantaj-nasil-tutulur)
-- [Vardiya planı nasıl hazırlanır?](https://mikateknoloji.com/blog/vardiya-plani-nasil-hazirlanir)
-- [QR kodlu personel takip sistemi (QR PDKS): telefonla giriş-çıkış](https://mikateknoloji.com/blog/qr-kod-ile-personel-giris-cikis)
-- [Plaka tanıma sistemi nasıl çalışır?](https://mikateknoloji.com/blog/plaka-tanima-sistemi-nasil-calisir)
-- [Bekçi tur takip sistemi nasıl kurulur?](https://mikateknoloji.com/blog/bekci-tur-takip-sistemi-nasil-kurulur)
-- [Turnike çeşitleri ve seçimi](https://mikateknoloji.com/blog/turnike-cesitleri-ve-secimi)
+- [Puantaj nasıl tutulur?](https://mikateknoloji.com/blog/puantaj-nasil-tutulur): Giriş-çıkış kayıtlarından aylık puantaja: tanımlar, kayıt aktarımı, hareket düzeltme, hesaplama, kontrol, ay kilidi ve bordroya giden Excel dosyası.
+- [Vardiya planı nasıl hazırlanır?](https://mikateknoloji.com/blog/vardiya-plani-nasil-hazirlanir): Yoğun saatlere göre ihtiyacı çıkarma, vardiya kalıpları, haftalık plan, onay ve kilit, gerçekleşen giriş-çıkışla karşılaştırma.
+- [QR kodlu personel takip sistemi (QR PDKS): telefonla giriş-çıkış](https://mikateknoloji.com/blog/qr-kod-ile-personel-giris-cikis): Telefonla QR okutarak giriş-çıkış, konum doğrulama, 30 saniyelik kod, mola kayıtları, kurulum adımları ve kayıtların aylık puantaja ulaşması.
+- [Plaka tanıma sistemi nasıl çalışır?](https://mikateknoloji.com/blog/plaka-tanima-sistemi-nasil-calisir): Kamera, okuma, bariyer kararı ve kayıt adımları; kurulum için gerekenler, abone ve kara liste, kasa, dolu-boş takibi ve KVKK.
+- [Bekçi tur takip sistemi nasıl kurulur?](https://mikateknoloji.com/blog/bekci-tur-takip-sistemi-nasil-kurulur): Bölge ve nokta seçimi, QR etiket, tur saati ve toleranslar, vardiya planı, telefon ya da tur seti, tempo raporu ve KVKK.
+- [Turnike çeşitleri ve seçimi](https://mikateknoloji.com/blog/turnike-cesitleri-ve-secimi): Bel tipi, boy tipi, erişilebilir ve hızlı geçiş turnikeleri hangi girişe uyar; kart yetkisi, Anti Passback, ziyaretçi kartı ve seçmeden önce sorulacaklar.
 
 ## İletişim ve demo
 
