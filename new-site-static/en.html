@@ -1298,7 +1298,7 @@ body.video-acik{overflow:hidden}
   </div>
 </section>
 <script>(function(){var p=document.getElementById('video-acilis'),v=document.getElementById('video-acilis-oynatici'),b=document.getElementById('video-acilis-kapat');if(!p||!v||!b)return;function sesAc(){v.muted=false;removeEventListener('pointerdown',sesAc,true);removeEventListener('keydown',sesAc,true)}function ac(){if(!p.hidden)return;p.hidden=false;document.body.classList.add('video-acik');v.defaultMuted=false;v.removeAttribute('muted');v.muted=false;try{b.focus({preventScroll:true})}catch(e){}var o=v.play();if(o&&o.catch)o.catch(function(){v.muted=true;var q=v.play();if(q&&q.catch)q.catch(function(){});addEventListener('pointerdown',sesAc,true);addEventListener('keydown',sesAc,true)})}function kapat(){if(p.hidden)return;v.pause();p.hidden=true;document.body.classList.remove('video-acik')}b.addEventListener('click',kapat);addEventListener('keydown',function(e){if(e.key==='Escape')kapat()},true);window.mikaVideoAc=ac})();</script>
-<div class="gfilm" id="giris">
+<div class="gfilm" id="giris" role="dialog" aria-modal="true" aria-label="Mika Teknoloji intro film">
 <style>
 .gfilm{display:none}
 html.js .gfilm{display:block;position:fixed;inset:0;z-index:9999;background:#080B1A;cursor:pointer;transition:opacity .7s ease}
@@ -1306,14 +1306,13 @@ html.js .gfilm.kapan{opacity:0;pointer-events:none}
 html.giris-acik,html.giris-acik body{overflow:hidden}
 .gfilm video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#080B1A}
 @media (max-aspect-ratio:1/1){.gfilm video{object-fit:contain}}
-.gfilm .g-gec{position:absolute;z-index:2;right:max(16px,3vw);bottom:max(16px,4vh);min-height:44px;padding:9px 18px;border:2px solid rgba(245,168,13,.55);border-radius:8px;background:rgba(8,11,26,.35);color:#FCFCFB;font:600 13px/1 Inter,sans-serif;cursor:pointer;opacity:0;animation:gfBelir .4s .6s forwards}
+.gfilm .g-gec{position:absolute;z-index:2;right:max(16px,3vw);bottom:max(16px,4vh);min-height:44px;padding:9px 18px;border:2px solid rgba(245,168,13,.55);border-radius:8px;background:rgba(8,11,26,.35);color:#FCFCFB;font:600 13px/1 Inter,sans-serif;cursor:pointer}
 .gfilm .g-gec:hover,.gfilm .g-gec:focus-visible{border-color:#F5A80D;outline:none}
-@keyframes gfBelir{to{opacity:1}}
 @media (prefers-reduced-motion:reduce){html.js .gfilm{display:none}}
 </style>
 <video id="giris-video" muted playsinline preload="auto" poster="img/giris/mika-acilis.webp" aria-hidden="true"></video>
 <button type="button" class="g-gec" aria-label="Skip intro">Skip</button>
-<script>(function(){var g=document.getElementById('giris'),v=document.getElementById('giris-video'),h=document.documentElement,d=false,z=/[?&]giris/.test(location.search);function bitir(){if(d)return;d=true;g.classList.add('kapan');h.classList.remove('giris-acik');try{v.pause()}catch(e){}setTimeout(function(){if(g.parentNode)g.parentNode.removeChild(g)},800)}var gor=false;try{gor=sessionStorage.getItem('esoftGiris')==='1';sessionStorage.setItem('esoftGiris','1')}catch(e){}if(z)gor=false;if(gor||(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){g.parentNode.removeChild(g);return}h.classList.add('giris-acik');g.addEventListener('click',bitir);document.addEventListener('keydown',function(e){if(e.key==='Escape'||e.key==='Enter'||e.key===' ')bitir()},{once:true});v.addEventListener('ended',bitir);v.addEventListener('error',bitir);v.src=(innerWidth<=900?'img/giris/mika-acilis-720.mp4':'img/giris/mika-acilis.mp4');var p=v.play();if(p&&p.catch)p.catch(bitir);setTimeout(bitir,9000)})();</script>
+<script>(function(){var g=document.getElementById('giris'),v=document.getElementById('giris-video'),h=document.documentElement,d=false,z=/[?&]giris/.test(location.search);function bitir(){if(d)return;d=true;g.classList.add('kapan');h.classList.remove('giris-acik');document.removeEventListener('keydown',tus);kapat(0);try{v.pause()}catch(e){}setTimeout(function(){if(g.parentNode)g.parentNode.removeChild(g)},800)}var gor=false;try{gor=sessionStorage.getItem('esoftGiris')==='1';sessionStorage.setItem('esoftGiris','1')}catch(e){}if(z)gor=false;if(gor||(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){g.parentNode.removeChild(g);return}h.classList.add('giris-acik');g.addEventListener('click',bitir);function tus(e){if(e.key==='Escape'||e.key==='Enter'||e.key===' '){e.preventDefault();bitir()}}document.addEventListener('keydown',tus);function kapat(a){var c=document.body.children;for(var i=0;i<c.length;i++)if(c[i]!==g){if(a)c[i].setAttribute('inert','');else c[i].removeAttribute('inert')}}kapat(1);document.addEventListener('DOMContentLoaded',function(){if(!d)kapat(1)});try{g.querySelector('.g-gec').focus({preventScroll:true})}catch(e){}v.addEventListener('ended',bitir);v.addEventListener('error',bitir);v.src=(innerWidth<=900?'img/giris/mika-acilis-720.mp4':'img/giris/mika-acilis.mp4');var p=v.play();if(p&&p.catch)p.catch(bitir);setTimeout(bitir,9000)})();</script>
 </div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
   <symbol id="mk" viewBox="0 0 40 44">
