@@ -132,7 +132,24 @@ function sonDegisiklikTarihi() {
 // kayitlar: [{ rota, kanonik, noindex }] (ön-render çıktısından). Haritaya yalnız canonical'ı
 // KENDİSİ olan, noindex olmayan adresler girer; diğer her adresin canonical'ı haritadaki bir adresi
 // göstermek zorundadır, göstermiyorsa derleme düşer.
-function siteHaritasiYaz(kayitlar, kanonikAdres) {
+// vercel.json'da kalıcı/geçici yönlendirmeyle (301/302/307/308) başka adrese giden rotalar haritaya
+// GİRMEZ: Google yönlendiren adresi site haritasında görünce "yönlendirmeli sayfa" uyarısı verir.
+function yonlendirilenRotaKaliplari() {
+  try {
+    const v = JSON.parse(fs.readFileSync(path.join(kok, "vercel.json"), "utf8"));
+    return (v.routes || [])
+      .filter((r) => r.src && [301, 302, 307, 308].includes(r.status))
+      .map((r) => new RegExp(`^${r.src}$`));
+  } catch {
+    return [];
+  }
+}
+
+function siteHaritasiYaz(tumKayitlar, kanonikAdres) {
+  const kaliplar = yonlendirilenRotaKaliplari();
+  const kayitlar = tumKayitlar.filter((k) => !kaliplar.some((r) => r.test(k.rota)));
+  const atlanan = tumKayitlar.length - kayitlar.length;
+  if (atlanan) console.log(`[site-haritası] vercel.json'da yönlendirilen ${atlanan} rota haritaya alınmadı.`);
   const dosyasi = bilesenDosyalari();
   const tarih = sonDegisiklikTarihi();
   const girenler = kayitlar.filter((k) => !k.noindex && k.kanonik === kanonikAdres(k.rota));
