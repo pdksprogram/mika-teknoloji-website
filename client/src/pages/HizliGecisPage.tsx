@@ -20,6 +20,14 @@ import { Link } from "wouter";
 import CtaDugmeleri from "@/components/CtaDugmeleri";
 import { boyut } from "@/lib/gorselBoyut";
 
+// SSS: görünür liste ve FAQPage şeması aynı diziden
+const SSS: [string, string][] = [
+  ["Hızlı geçiş turnike nedir?", "Kol yerine açılıp kapanan kanatlarla çalışan, yoğun girişlerde dakikada çok sayıda kişinin hızlıca geçmesini sağlayan turnikedir. Kart veya yetki okutulduğunda kanatlar açılır, geçiş tamamlanınca kapanır."],
+  ["Hızlı geçiş turnike dakikada kaç kişi geçirir?", "Modele göre değişir: HG20 modelleri dakikada 20, HG40 40, HG60 60, HG120 modelleri 120 kişiye kadar geçiş kapasitesine sahiptir."],
+  ["Chubby ve SLIM hızlı geçiş turnike arasındaki fark nedir?", "Chubby modellerin geçiş alanı daha geniştir; valiz, çanta veya ekipmanla geçilen girişler için uygundur. SLIM modeller ince kasalıdır, dar alanlara ve az yer kaplaması gereken girişlere uygundur."],
+  ["Hızlı geçiş turnike PDKS ile çalışır mı?", "Evet. Turnikeye bağlanan kart okuyucu üzerinden yapılan her geçiş, PDKS programına giriş-çıkış kaydı olarak düşer ve puantaja yansır."],
+];
+
 export default function HizliGecisPage() {
   
   const hizliGecisTurnikeModelleri = [
@@ -114,6 +122,13 @@ export default function HizliGecisPage() {
         <meta property="og:title" content="Hızlı Geçiş Turnike Sistemleri – Yüksek Kapasiteli | Mika" />
         <meta property="og:description" content="Hızlı geçiş turnike sistemleri. 20-120 kişi/dakika kapasiteli, havaalanı, metro, alışveriş merkezi için profesyonel çözümler." />
         <meta name="keywords" content="hızlı geçiş turnike, yüksek kapasiteli turnike, havaalanı turnike, metro turnike, chubby turnike, slim turnike, mika teknoloji" />
+        <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": SSS.map(([q, a]) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } }))
+        })}
+        </script>
       </Helmet>
 
       {/* Breadcrumb */}
@@ -279,6 +294,23 @@ export default function HizliGecisPage() {
       </div>
 
       <TurnikeReferanslari />
+
+      {/* SSS */}
+      <div className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Sıkça Sorulan Sorular</h2>
+            <div className="space-y-4">
+              {SSS.map(([q, a]) => (
+                <div key={q} className="bg-white rounded-lg p-6 shadow-sm">
+                  <h3 className="font-semibold text-gray-800 mb-2">{q}</h3>
+                  <p className="text-gray-700">{a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* CTA Section */}
       <div className="py-16 bg-primary text-white">
