@@ -9,6 +9,9 @@ Merkez: Perpa Ticaret Merkezi A Blok, Şişli, İstanbul. Telefon: +90 546 712 2
 - [PDKS Programı](https://mikateknoloji.com/pdks-programi): Personel giriş-çıkış, vardiya, izin, fazla mesai ve puantaj tek programda. Kart, QR veya telefonla kayıt; yönetici masaüstünden, personel mobil uygulamadan kullanır.
 - [Personel Takip Sistemi](https://mikateknoloji.com/urunler/personel-takip): Kim geldi, kim gelmedi, geç kalan ve erken çıkan personel tek listede; mobil PDKS uygulamasıyla telefondan giriş-çıkış.
 - [Puantaj Programı](https://mikateknoloji.com/puantaj-programi): Giriş-çıkış kayıtlarından aylık puantaj otomatik hesaplanır; fazla mesai, izin ve devamsızlık tek tabloda, Excel (.xlsx) çıktısı.
+- [Vardiya Takip Programı](https://mikateknoloji.com/vardiya-takip-programi): Haftalık vardiya planı hazırlanır ve onaycıya gönderilir; personel vardiyasını mobil uygulamada görür, giriş-çıkışlar plana göre puantaja yansır.
+- [Fazla Mesai Hesaplama](https://mikateknoloji.com/fazla-mesai-hesaplama): Giriş, çıkış ve mola sürelerinden haftalık toplam çalışma, normal çalışma ve fazla mesai süresini hesaplayan ücretsiz araç; saatlik ücretle tutar.
+- [Mağaza Personel Takip](https://mikateknoloji.com/urunler/magaza-personel-takip): Mağaza ve perakende için vardiya planlama, izin takibi, prim hesaplama ve mobil PDKS.
 - [Plaka Tanıma Sistemi (PlateVision)](https://mikateknoloji.com/plaka-okuma): Kamera plakayı okur, aracı abone, misafir veya kara liste kaydıyla eşleştirir, bariyeri kurala göre açar; otopark ücreti, kasa ve raporlar aynı sistemde.
 - [Turnike Sistemi ve Geçiş Kontrolü](https://mikateknoloji.com/urunler/turnike): Bel tipi, boy tipi, erişilebilir ve hızlı geçiş turnikeleri; kart, kapı yetkisi, ziyaretçi ve geçiş raporları tek programda.
 - [Bel Tipi Turnike](https://mikateknoloji.com/urunler/bel-tipi-turnike): Paslanmaz çelik bel tipi turnikeler: elektromekanik, jetonlu ve özel tasarım modeller; geçişler PDKS programına giriş-çıkış kaydı olarak düşer.
@@ -17,6 +20,8 @@ Merkez: Perpa Ticaret Merkezi A Blok, Şişli, İstanbul. Telefon: +90 546 712 2
 - [Hızlı Geçiş Turnike](https://mikateknoloji.com/urunler/hizli-gecis-turnike): Dakikada 20 ile 120 kişi arası kapasiteli kanatlı turnikeler; Chubby (geniş geçiş) ve SLIM (dar alan) modeller.
 - [Kartlı Geçiş Sistemi](https://mikateknoloji.com/kartli-gecis-sistemi): Personel ve ziyaretçi kartlarına kapı yetkisi; her kart okutması, reddedilen deneme ve kayıp kart tek programda; PDKS ile aynı kayıt.
 - [Bekçi Tur Takip Sistemi](https://mikateknoloji.com/qr-bekci): QR noktaları, tur saatleri ve vardiya planıyla güvenlik turları izlenir; eksik, erken veya geç turlar raporda işaretlenir.
+- [Yüz Tanıma PDKS Cihazları](https://mikateknoloji.com/urunler/yuz-tanima): Temassız yüz tanıma PDKS cihazları (MTFD15, MTFP15, MTFDP50, MTFDP200); 20.000 kapasite, Wi-Fi ve TCP/IP.
+- [Parmak İzi PDKS Cihazları](https://mikateknoloji.com/urunler/parmak-izi-tanima): Parmak izi PDKS cihazları (MT1100, MTP50, MTFDP200, MT4051); 20.000 kapasite, Wi-Fi ve TCP/IP bağlantı.
 
 ## Şirket
 
